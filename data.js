@@ -1,1 +1,1 @@
-$file:/workspace/free-models/data.js
+@/tmp/ONLY_data_js.txt
