@@ -1,1 +1,1 @@
-@/tmp/ONLY_data_js.txt
+LOAD_FROM:/tmp/for_call.json#content
