@@ -1,1 +1,1 @@
-PLACEHOLDER_LOAD_FROM_/workspace/free-models/data.js
+const ITEMS = [];
