@@ -20,7 +20,7 @@ INDEX_TMPL = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-<style>{css}</style>
+<link rel="stylesheet" href="./styles.css"/>
 </head>
 <body>
 <div class="wrap">
@@ -81,8 +81,9 @@ def main() -> None:
     app_js = load_app_js()
     (SITE / "data.js").write_text(f"const ITEMS = {compact};\n", encoding="utf-8")
     (SITE / "app.js").write_text(app_js, encoding="utf-8")
-    (SITE / "index.html").write_text(INDEX_TMPL.format(css=css), encoding="utf-8")
-    print(f"Built site/ with {len(raw)} items (index.html, data.js, app.js)")
+    (SITE / "styles.css").write_text(css, encoding="utf-8")
+    (SITE / "index.html").write_text(INDEX_TMPL, encoding="utf-8")
+    print(f"Built site/ with {len(raw)} items (index.html, data.js, app.js, styles.css)")
 
 
 if __name__ == "__main__":
