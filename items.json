@@ -837,5 +837,46 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "opencode-zen-exo-free-20261010",
+    "title": "OpenCode Zen：Exo Free 限时免费推理模型（约 1M 上下文，$0）",
+    "model": "Exo Free",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/orangercat/status/2108685425040650278",
+    "summary": "OpenCode Zen 文档与模型列表已上架 Exo Free（model id：exo-free）：输入/输出/缓存读均为 $0，约 100 万 token 上下文，支持图片与工具调用，推理力度固定为 high。社区帖称约 10 月 6 日上线，结束时间未公布。用法：登录 OpenCode Zen 拿 API Key，在 OpenCode 里 /models 选 Exo Free，或配置 opencode/exo-free；也可直调 https://opencode.ai/zen/v1/chat/completions。注意：免费期内请求可能被用于改进模型，不适合公司代码/客户数据。",
+    "source": "orangercat",
+    "collected_at": "2026-10-10T06:44:25+08:00",
+    "expired": false,
+    "source_post_id": "2108685425040650278",
+    "free_terms": "OpenCode Zen 限时免费；无公布截止日期；免费期请求可能用于改进模型。",
+    "product": "OpenCode Zen · Exo Free (opencode/exo-free)",
+    "providers": [
+      {
+        "name": "OpenCode Zen",
+        "action_url": "https://opencode.ai/zen"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Exo Free (exo-free)",
+        "action_url": "https://opencode.ai/docs/zen/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "need_client"
+    ]
   }
 ]
