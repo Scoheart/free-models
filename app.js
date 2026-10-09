@@ -1,1 +1,1 @@
-{{file:/tmp/app_js_content_only.txt}}
+LOAD_FROM_/tmp/exact_app_args_compact.json
