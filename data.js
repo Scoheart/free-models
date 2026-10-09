@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/for_call.json#content
+$file:/workspace/free-models/data.js
