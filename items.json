@@ -638,5 +638,85 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "vercel-glyph-cluster-stealth-free-20261007",
+    "title": "Vercel AI Gateway：stealth/glyph-cluster 隐身期限时免费",
+    "model": "Glyph Cluster (stealth/glyph-cluster)",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/vercel_dev/status/2107892677887004845",
+    "summary": "Vercel 官方 Changelog（10/7）与 @vercel_dev 宣布：AI Gateway 上线隐身推理模型 Glyph Cluster（模型名 stealth/glyph-cluster），面向已购买 AI Gateway credits 的 Pro / Enterprise 团队，隐身期内调用免费。定位编码与长上下文分析，支持函数调用与流式；仅文本输入，无图像/文件，无结构化输出，无 ZDR，提示与回复可能用于模型改进。可通过 AI SDK / OpenAI 兼容 API，或 vercel ai-gateway setup 接入 Claude Code、Codex、Cursor 等。隐身结束时间未公布。",
+    "source": "vercel_dev",
+    "collected_at": "2026-10-10T00:07:34+08:00",
+    "expired": false,
+    "source_post_id": "2107892677887004845",
+    "providers": [
+      {
+        "name": "Vercel AI Gateway",
+        "action_url": "https://vercel.com/docs/ai-gateway"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Claude Code",
+        "action_url": "https://vercel.com/docs/ai-gateway/coding-agents/claude-code"
+      },
+      {
+        "name": "Codex",
+        "action_url": "https://vercel.com/docs/ai-gateway/coding-agents/openai-codex"
+      }
+    ],
+    "models": [
+      {
+        "name": "Glyph Cluster",
+        "action_url": "https://vercel.com/changelog/glyph-cluster-is-now-available-in-stealth-for-free-on-ai-gateway"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "atomic-agent-desktop-local-free-20261008",
+    "title": "Atomic Agent Desktop：本地优先免费开源 Agent（Qwen / Gemma / Llama）",
+    "model": "本地开源模型（Qwen / Gemma / Llama 等）",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/atomicagent_io/status/2108325479082270746",
+    "summary": "Atomic Agent 官方发布 Desktop：Mac / Windows / Linux 本地优先 AI Agent，MIT 开源，无需注册账号即可用本地模型（llama.cpp / TurboQuant），无按 token 账单；可选云端模型时才走云。支持更大本地上下文与 Atomic Fusion（本地+云编排）。下载页与 GitHub 源码公开。社区今日中英文帖再次传播。硬件需能跑所选量化模型。",
+    "source": "atomicagent_io",
+    "collected_at": "2026-10-10T00:07:34+08:00",
+    "expired": false,
+    "source_post_id": "2108325479082270746",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Atomic Agent",
+        "action_url": "https://atomicagent.io/"
+      }
+    ],
+    "models": [
+      {
+        "name": "GitHub 源码",
+        "action_url": "https://github.com/AtomicBot-ai/atomic-agent"
+      },
+      {
+        "name": "本地模型文档",
+        "action_url": "https://atomicagent.io/docs/features/models/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup",
+      "need_client"
+    ]
   }
 ]
