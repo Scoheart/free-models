@@ -14,7 +14,7 @@ INDEX_TMPL = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<meta name="description" content="免费 AI 模型额度与活动汇总 — 来自公开 X 帖子"/>
+<meta name="description" content="免费 AI 模型额度与活动汇总 — 按 Provider / Agent / Model 分类，一键领取"/>
 <meta name="color-scheme" content="light dark"/>
 <title>免费模型 · Free Models</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -27,20 +27,22 @@ INDEX_TMPL = """<!DOCTYPE html>
 <header class="hero">
 <div class="hero-text">
 <h1>免费模型</h1>
-<p>汇总公开 X 帖子中的免费 AI 模型额度与限时活动。最新在上，可按模型 / 类型筛选。</p>
+<p>汇总公开 X 帖子中的免费 AI 额度与限时活动。按 Provider / Agent / Model 找入口，一点直达创建 Key 或下载客户端。</p>
 </div>
 <div class="hero-actions">
 <button type="button" class="btn btn-icon" id="themeToggle" title="切换主题" aria-label="切换主题">◐</button>
 </div>
 </header>
 <div class="stats" id="stats"></div>
+<nav class="view-tabs" id="viewTabs" aria-label="视图"></nav>
 <section class="filters" aria-label="筛选">
-<div class="filter-row"><span class="filter-label">模型</span><div class="chips" id="modelChips"></div></div>
-<div class="filter-row"><span class="filter-label">类型</span><div class="chips" id="typeChips"></div></div>
+<div class="filter-row" id="entityRow" hidden><span class="filter-label" id="entityLabel">渠道</span><div class="chips" id="entityChips"></div></div>
+<div class="filter-row"><span class="filter-label">场景</span><div class="chips" id="sceneChips"></div></div>
+<div class="filter-row"><span class="filter-label">门槛</span><div class="chips" id="barrierChips"></div></div>
 <div class="filter-row"><span class="filter-label">状态</span><label class="toggle"><input type="checkbox" id="onlyActive" checked/>只看未过期</label></div>
 </section>
 <main class="list" id="list" aria-live="polite"></main>
-<footer class="site-footer">数据来自公开 X 帖子，仅汇总不担保可用性。<br/>原始数据：<a href="./items.json">items.json</a> · 内容自动更新</footer>
+<footer class="site-footer">数据来自公开 X 帖子，仅汇总不担保可用性。领取前请自行核对官网条款。<br/>原始数据：<a href="./items.json">items.json</a> · 内容自动更新</footer>
 </div>
 <script src="./data.js"></script>
 <script src="./app.js"></script>
