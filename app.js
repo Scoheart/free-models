@@ -1,1 +1,1 @@
-PLACEHOLDER_LOAD_FROM_DISK
+{{file:/tmp/app_js_content_only.txt}}
