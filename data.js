@@ -1,1 +1,1 @@
-const ITEMS = [];
+LOAD_FROM_/workspace/free-models/data.js
