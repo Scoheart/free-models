@@ -754,5 +754,54 @@
       "need_key",
       "cn_account"
     ]
+  },
+  {
+    "id": "cline-solar-mini4-free-20261010",
+    "title": "Cline：Upstage Solar Mini 4 限时免费（cline-free/solar-mini4）",
+    "model": "Solar Mini 4",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/cline/status/2108630302381994318",
+    "summary": "Cline 官方宣布：韩国 Upstage 的 Solar Mini 4 现可在 Cline 里免费用。35B MoE（约 3B 激活）、约 524K 上下文、偏 agent/编码场景。用法：登录 Cline 账号，API Provider 选 Cline（usage-billing），在模型列表找标 FREE 的 Solar Mini 4，或直接选 cline-free/solar-mini4。仅 IDE 扩展与 CLI 可用，不走 Cline API；额度用完需转 ClinePass / 按量计费 / 自备 Key。免费名单会轮换，窗口期未公布。",
+    "source": "cline",
+    "collected_at": "2026-10-10T03:46:23+08:00",
+    "expired": false,
+    "source_post_id": "2108630302381994318",
+    "free_terms": "Cline 账号 + Provider=Cline 选 FREE 标签 Solar Mini 4；轮换限时额度，仅 IDE/CLI。",
+    "product": "Cline Free Models · Solar Mini 4",
+    "providers": [
+      {
+        "name": "Cline",
+        "action_url": "https://app.cline.bot"
+      },
+      {
+        "name": "Upstage Console",
+        "action_url": "https://console.upstage.ai/docs/models/solar-mini-4"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      },
+      {
+        "name": "Cline CLI",
+        "action_url": "https://docs.cline.bot/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Solar Mini 4 (cline-free/solar-mini4)",
+        "action_url": "https://docs.cline.bot/getting-started/free-models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "need_key"
+    ]
   }
 ]
