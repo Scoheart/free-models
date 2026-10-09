@@ -3,37 +3,35 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<meta name="description" content="免费 AI 模型额度与活动汇总 — 来自公开 X 帖子"/>
+<meta name="description" content="免费 AI 模型额度与活动汇总 — 按 Provider / Agent / Model 分类，一键领取"/>
 <meta name="color-scheme" content="light dark"/>
 <title>免费模型 · Free Models</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-<style>:root{--bg:#f4f6f9;--bg-elevated:#fff;--bg-muted:#eef1f6;--text:#0f172a;--text-secondary:#475569;--text-muted:#94a3b8;--border:#e2e8f0;--accent:#4f46e5;--accent-soft:#eef2ff;--accent-hover:#4338ca;--success:#059669;--success-soft:#d1fae5;--danger:#dc2626;--danger-soft:#fee2e2;--warning:#d97706;--warning-soft:#fef3c7;--chip:#f1f5f9;--chip-active:#4f46e5;--chip-active-text:#fff;--shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06);--radius:14px;--radius-sm:10px;--font:"DM Sans","PingFang SC","Noto Sans SC",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
-@media(prefers-color-scheme:dark){:root{--bg:#0b0f1a;--bg-elevated:#121826;--bg-muted:#1a2234;--text:#e8eef8;--text-secondary:#94a3b8;--text-muted:#64748b;--border:#243044;--accent:#818cf8;--accent-soft:#1e1b4b;--accent-hover:#a5b4fc;--success:#34d399;--success-soft:#064e3b;--danger:#f87171;--danger-soft:#7f1d1d;--warning:#fbbf24;--warning-soft:#78350f;--chip:#1a2234;--chip-active:#6366f1;--chip-active-text:#fff;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35)}}
-html.theme-light{--bg:#f4f6f9;--bg-elevated:#fff;--bg-muted:#eef1f6;--text:#0f172a;--text-secondary:#475569;--text-muted:#94a3b8;--border:#e2e8f0;--accent:#4f46e5;--accent-soft:#eef2ff;--accent-hover:#4338ca;--success:#059669;--success-soft:#d1fae5;--danger:#dc2626;--danger-soft:#fee2e2;--warning:#d97706;--warning-soft:#fef3c7;--chip:#f1f5f9;--chip-active:#4f46e5;--chip-active-text:#fff;--shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06)}
-html.theme-dark{--bg:#0b0f1a;--bg-elevated:#121826;--bg-muted:#1a2234;--text:#e8eef8;--text-secondary:#94a3b8;--text-muted:#64748b;--border:#243044;--accent:#818cf8;--accent-soft:#1e1b4b;--accent-hover:#a5b4fc;--success:#34d399;--success-soft:#064e3b;--danger:#f87171;--danger-soft:#7f1d1d;--warning:#fbbf24;--warning-soft:#78350f;--chip:#1a2234;--chip-active:#6366f1;--chip-active-text:#fff;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35)}
-*,*::before,*::after{box-sizing:border-box}body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.55;min-height:100vh;-webkit-font-smoothing:antialiased}.wrap{max-width:920px;margin:0 auto;padding:1.25rem 1rem 3rem}header.hero{padding:1.75rem 0 1.25rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;justify-content:space-between}.hero-text h1{margin:0 0 .35rem;font-size:clamp(1.5rem,4vw,1.9rem);font-weight:700;letter-spacing:-.02em}.hero-text p{margin:0;color:var(--text-secondary);font-size:.95rem;max-width:36rem}.hero-actions{display:flex;gap:.5rem;align-items:center;flex-shrink:0}.btn{appearance:none;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text);border-radius:999px;padding:.45rem .9rem;font:inherit;font-size:.85rem;font-weight:500;cursor:pointer;transition:border-color .15s,color .15s}.btn:hover{border-color:var(--accent);color:var(--accent)}.btn-icon{width:2.25rem;height:2.25rem;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:50%}.stats{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem}.stat{background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.55rem .9rem;font-size:.8rem;color:var(--text-secondary);box-shadow:var(--shadow)}.stat strong{color:var(--text);font-weight:600;margin-right:.25rem}.filters{background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin-bottom:1.25rem;box-shadow:var(--shadow)}.filter-row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:.75rem}.filter-row:last-child{margin-bottom:0}.filter-label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted);min-width:3.5rem}.chips{display:flex;flex-wrap:wrap;gap:.4rem;flex:1}.chip{appearance:none;border:1px solid var(--border);background:var(--chip);color:var(--text-secondary);border-radius:999px;padding:.35rem .75rem;font:inherit;font-size:.8rem;font-weight:500;cursor:pointer;transition:all .15s}.chip:hover{border-color:var(--accent);color:var(--accent)}.chip.active{background:var(--chip-active);border-color:var(--chip-active);color:var(--chip-active-text)}.toggle{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--text-secondary);cursor:pointer;user-select:none}.toggle input{width:1rem;height:1rem;accent-color:var(--accent)}.list{display:flex;flex-direction:column;gap:.85rem}.card{background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.2rem;box-shadow:var(--shadow);transition:border-color .15s}.card:hover{border-color:color-mix(in srgb,var(--accent) 40%,var(--border))}.card.expired{opacity:.72}.card-top{display:flex;flex-wrap:wrap;gap:.5rem;align-items:flex-start;justify-content:space-between;margin-bottom:.55rem}.card-title{margin:0;font-size:1.05rem;font-weight:600;letter-spacing:-.01em;flex:1;min-width:12rem}.card-title a{color:inherit;text-decoration:none}.card-title a:hover{color:var(--accent)}.badges{display:flex;flex-wrap:wrap;gap:.35rem}.badge{font-size:.7rem;font-weight:600;padding:.2rem .55rem;border-radius:999px;background:var(--bg-muted);color:var(--text-secondary);white-space:nowrap}.badge.type{background:var(--accent-soft);color:var(--accent)}.badge.model{font-family:var(--mono);font-size:.68rem}.badge.ok{background:var(--success-soft);color:var(--success)}.badge.dead{background:var(--danger-soft);color:var(--danger)}.badge.warn{background:var(--warning-soft);color:var(--warning)}.summary{margin:0 0 .75rem;color:var(--text-secondary);font-size:.9rem}.meta{display:flex;flex-wrap:wrap;gap:.65rem 1.1rem;font-size:.78rem;color:var(--text-muted)}.meta a{color:var(--accent);text-decoration:none;font-weight:500}.meta a:hover{text-decoration:underline}.empty{text-align:center;padding:3.5rem 1.5rem;background:var(--bg-elevated);border:1px dashed var(--border);border-radius:var(--radius);color:var(--text-secondary)}.empty .emoji{font-size:2.5rem;margin-bottom:.75rem;line-height:1}.empty h2{margin:0 0 .4rem;font-size:1.15rem;color:var(--text)}.empty p{margin:0;font-size:.9rem}footer.site-footer{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.78rem;color:var(--text-muted);text-align:center;line-height:1.6}footer.site-footer a{color:var(--accent);text-decoration:none}@media(max-width:560px){.wrap{padding:1rem .85rem 2.5rem}.card{padding:.95rem 1rem}.filter-label{width:100%;min-width:0;margin-bottom:.15rem}}</style>
+<link rel="stylesheet" href="./styles.css"/>
 </head>
 <body>
 <div class="wrap">
 <header class="hero">
 <div class="hero-text">
 <h1>免费模型</h1>
-<p>汇总公开 X 帖子中的免费 AI 模型额度与限时活动。最新在上，可按模型 / 类型筛选。</p>
+<p>汇总公开 X 帖子中的免费 AI 额度与限时活动。按 Provider / Agent / Model 找入口，一点直达创建 Key 或下载客户端。</p>
 </div>
 <div class="hero-actions">
 <button type="button" class="btn btn-icon" id="themeToggle" title="切换主题" aria-label="切换主题">◐</button>
 </div>
 </header>
 <div class="stats" id="stats"></div>
+<nav class="view-tabs" id="viewTabs" aria-label="视图"></nav>
 <section class="filters" aria-label="筛选">
-<div class="filter-row"><span class="filter-label">模型</span><div class="chips" id="modelChips"></div></div>
-<div class="filter-row"><span class="filter-label">类型</span><div class="chips" id="typeChips"></div></div>
+<div class="filter-row" id="entityRow" hidden><span class="filter-label" id="entityLabel">渠道</span><div class="chips" id="entityChips"></div></div>
+<div class="filter-row"><span class="filter-label">场景</span><div class="chips" id="sceneChips"></div></div>
+<div class="filter-row"><span class="filter-label">门槛</span><div class="chips" id="barrierChips"></div></div>
 <div class="filter-row"><span class="filter-label">状态</span><label class="toggle"><input type="checkbox" id="onlyActive" checked/>只看未过期</label></div>
 </section>
 <main class="list" id="list" aria-live="polite"></main>
-<footer class="site-footer">数据来自公开 X 帖子，仅汇总不担保可用性。<br/>原始数据：<a href="./items.json">items.json</a> · 内容自动更新</footer>
+<footer class="site-footer">数据来自公开 X 帖子，仅汇总不担保可用性。领取前请自行核对官网条款。<br/>原始数据：<a href="./items.json">items.json</a> · 内容自动更新</footer>
 </div>
 <script src="./data.js"></script>
 <script src="./app.js"></script>

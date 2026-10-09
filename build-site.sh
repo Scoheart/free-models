@@ -19,11 +19,11 @@ python3 -c "import json; json.load(open('$ITEMS_FILE'))" || {
 cp "$ITEMS_FILE" "$SITE_DIR/items.json"
 python3 "$ROOT/build_index.py"
 
-for f in index.html data.js app.js items.json; do
+for f in index.html data.js app.js items.json styles.css; do
   if [[ -f "$SITE_DIR/$f" ]]; then
     cp "$SITE_DIR/$f" "$ROOT/$f"
   fi
 done
 
-echo "OK: $SITE_DIR/{index.html,data.js,app.js,items.json}"
+echo "OK: $SITE_DIR/{index.html,data.js,app.js,items.json,styles.css}"
 echo "Also mirrored to $ROOT/ for Pages root deploy"
