@@ -1296,5 +1296,76 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "claude-artifact-usage-50pct-20261010",
+    "title": "Claude Artifact：创建/编辑后接下来用量 5 折（含 Free，至 10/15）",
+    "model": "Claude（Artifacts / Docs / Slides / Design）",
+    "type": "额度",
+    "deadline": "2026-10-16T14:59:00+08:00",
+    "url": "https://x.com/NiuOnAI/status/2108927705437933965",
+    "summary": "Anthropic 官方 Artifact 用量促销：在 Claude 或 Claude Cowork（云端）创建/编辑 artifact（含文档、幻灯片、设计）后，后续一段工作按 5 小时额度的 50% 计费。聊天里一般是接下来 10 条消息（单条回复最多约前 15 步）；从 Output 菜单选 Document/Presentation/Design 开新聊则首条起折扣。Cowork 云端任务另有约 45 分钟或最多约 80 步规则。Pro/Max/Team 自 10/1、Free 自 10/7 自动生效，无需领券；至 2026-10-15 23:59 PT（约北京 10/16 14:59）。不含 Claude Code、API、Enterprise、本地 Cowork、用量积分计费等。官方：https://support.claude.com/en/articles/17274727-artifact-usage-promotion",
+    "source": "x @NiuOnAI",
+    "collected_at": "2026-10-10T22:48:52+08:00",
+    "expired": false,
+    "source_post_id": "2108927705437933965",
+    "free_terms": "创建/编辑 artifact 后一段对话/任务按 50% 计入 5 小时额度；Free/Pro/Max/Team；至 10/15 PT；自动生效；不含 Code/API/Enterprise。",
+    "product": "Claude Artifact usage promotion",
+    "providers": [
+      {
+        "name": "Claude",
+        "action_url": "https://claude.ai"
+      },
+      {
+        "name": "官方说明",
+        "action_url": "https://support.claude.com/en/articles/17274727-artifact-usage-promotion"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
+  },
+  {
+    "id": "claude-reset-for-free-opus55-20261010",
+    "title": "Claude：一次「Reset for free」免费额度重置（Pro/Max/Team，约至 10/22）",
+    "model": "Claude（App / Claude Code 共用额度）",
+    "type": "额度",
+    "deadline": "2026-10-22T23:59:59+08:00",
+    "url": "https://x.com/NiuOnAI/status/2108927705437933965",
+    "summary": "随 Opus 5.5 等活动发放的一次性 Limit Reset：Pro / Max / Team 账号若在 Settings → Usage → Resets 看到「Reset for free」，点一次即可把五小时或周额度立刻回满（以页面显示的重置类型为准），网页版与 Claude Desktop 可用，手机端与终端/IDE 里的 Claude Code 无按钮，但额度账号共用、重置后别处也回满。点了不可撤销；降级/取消订阅会失去未用重置。截止以你账号 Usage 页显示的过期时间为准（社区多称约至 10/22，部分账号更早）。不退已购超额、不改 API credit 余额。官方：https://support.claude.com/en/articles/17007452-what-is-a-limit-reset ；快捷入口 https://clau.de/reset",
+    "source": "x @NiuOnAI",
+    "collected_at": "2026-10-10T22:48:52+08:00",
+    "expired": false,
+    "source_post_id": "2108927705437933965",
+    "free_terms": "Pro/Max/Team 一次性免费额度重置；须账号已有 Reset 按钮；以 Usage 页过期时间为准；网页/桌面端操作。",
+    "product": "Claude limit reset (Reset for free)",
+    "providers": [
+      {
+        "name": "Claude Settings Usage",
+        "action_url": "https://claude.ai/settings/usage"
+      },
+      {
+        "name": "Reset 快捷入口",
+        "action_url": "https://clau.de/reset"
+      },
+      {
+        "name": "官方说明",
+        "action_url": "https://support.claude.com/en/articles/17007452-what-is-a-limit-reset"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
