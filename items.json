@@ -878,5 +878,40 @@
       "need_key",
       "need_client"
     ]
+  },
+  {
+    "id": "empero-qwen38-27b-free-api-20261010",
+    "title": "Empero：Qwen3.8-27B-FP8 免费社区 API（免 Key，当前维护中）",
+    "model": "Qwen3.8-27B-FP8",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/Oluwaphilemon1/status/2108729382323822826",
+    "summary": "社区整理 Empero 免费社区端点：Base URL 为 https://free.empero.org/v1，API Key 填 free，模型 ID 为 Qwen/Qwen3.8-27B-FP8，OpenAI 兼容。落地页标题写明 free community endpoint，德国独立实验室 Empero 运营。实测采集时接口返回维护错误（endpoint offline / quick restart），页面提示稍后恢复并让关注 @EmperoAI 获取更多免费端点。同帖还提到 TokenHarbor，但官网模型表多为标价调用，未核实免费，故不列入。条件：免注册，Key=free；有速率/可用性限制；当前维护中。",
+    "source": "Oluwaphilemon1",
+    "collected_at": "2026-10-10T09:46:06+08:00",
+    "expired": false,
+    "source_post_id": "2108729382323822826",
+    "free_terms": "free.empero.org 免 Key（Authorization: Bearer free）；采集时维护中，恢复后可用。",
+    "product": "Empero free community endpoint · Qwen3.8-27B-FP8",
+    "providers": [
+      {
+        "name": "Empero Free API",
+        "action_url": "https://free.empero.org/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Qwen3.8-27B-FP8",
+        "action_url": "https://free.empero.org/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
