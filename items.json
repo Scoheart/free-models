@@ -1038,5 +1038,162 @@
       "need_key",
       "need_client"
     ]
+  },
+  {
+    "id": "tokenharbor-free-haiku-deepseek-mimo-20261010",
+    "title": "Token Harbor：Haiku 5.5 / DeepSeek V4.1 Flash / MiMo V2.6 Flash 三条 :free 免费路由",
+    "model": "Claude Haiku 5.5 / DeepSeek V4.1 Flash / MiMo V2.6 Flash",
+    "type": "限时",
+    "deadline": "2026-10-15T23:59:59+08:00",
+    "url": "https://x.com/Two9ngle/status/2108820586009174299",
+    "summary": "Token Harbor（tokenharbor.ai）模型页现提供三条 :free 路由：claude-haiku-5.5:free（标 Limited time，社区称约一周/下周三前）、deepseek-v4.1-flash:free、mimo-v2.6-flash:free（多模态）。注册免绑卡，仪表盘自动发 Universal Key（thk_live_…）；Base URL https://tokenharbor.ai/v1，OpenAI 兼容，可接 Claude Code / Cline / Cursor 等。:free 模型走免费额度、不扣余额；额度与名单可能变动，生产勿依赖。官方 Quickstart / Blog 已写明。条件：需注册拿 Key；Haiku 限时，DeepSeek/MiMo 当前亦标 Free。",
+    "source": "x @Two9ngle",
+    "collected_at": "2026-10-10T15:42:23+08:00",
+    "expired": false,
+    "source_post_id": "2108820586009174299",
+    "free_terms": "注册免卡拿 Universal Key；model id 以 :free 结尾走免费额度不扣余额；Haiku 限时（约至 10/15），名单可能变动。",
+    "product": "Token Harbor free routes",
+    "providers": [
+      {
+        "name": "Token Harbor",
+        "action_url": "https://tokenharbor.ai/"
+      },
+      {
+        "name": "Token Harbor Docs",
+        "action_url": "https://tokenharbor.ai/docs/getting-started/quickstart"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      }
+    ],
+    "models": [
+      {
+        "name": "claude-haiku-5.5:free",
+        "action_url": "https://tokenharbor.ai/models?category=free"
+      },
+      {
+        "name": "deepseek-v4.1-flash:free",
+        "action_url": "https://tokenharbor.ai/models?category=free"
+      },
+      {
+        "name": "mimo-v2.6-flash:free",
+        "action_url": "https://tokenharbor.ai/models?category=free"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "freebuff-free-coding-agent-20261010",
+    "title": "Freebuff：广告资助的永久免费编程 Agent（桌面 / Web / CLI）",
+    "model": "DeepSeek V4 Pro 等（站内托管）",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/alwinaugustin/status/2108817637991936294",
+    "summary": "Freebuff（freebuff.com）自称「唯一 100% 免费的强力编程 Agent」，由广告资助、$0 forever；提供 Mac / Windows / Linux 桌面端下载，以及 Web / CLI / 聊天。社区称可免费用 DeepSeek V4 Pro（长上下文、可调推理强度），无需自备 API Key 或订阅。有登录与 gift/bucket 活动；额度与限速随广告负载变化。适合个人试用，敏感代码慎用广告资助通道。条件：下载客户端或用 Web；免自备 Key，可能需账号登录。",
+    "source": "x @alwinaugustin",
+    "collected_at": "2026-10-10T15:42:23+08:00",
+    "expired": false,
+    "source_post_id": "2108817637991936294",
+    "free_terms": "$0 forever，广告资助；无需自备 API Key；限速/额度可能变动。",
+    "product": "Freebuff",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Freebuff",
+        "action_url": "https://freebuff.com/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "anthropic-claude-startups-1k-team-20261010",
+    "title": "Anthropic Claude Startups：初创可申 $1000 API 额度 + 一年 Team（目前额度紧张）",
+    "model": "Claude（Platform API / Team）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/sunsanchao/status/2108811360889090486",
+    "summary": "Anthropic 扩大 Claude for Startups（约 10/6 宣布）：符合条件的初创可申一次性约 $1000 Claude API 额度 + 新 Team 用户一年免费（最多约 5 个 Premium 席位），另有 Startup Stack 合作方折扣（最高约 $45k 面值）与 Applied AI office hours。资格：近 5 年创立或近 2 年融资；自举/pre-seed/VC 均可；需 Console 账号与公司邮箱。重要：官网 FAQ 称近几日申请量极大，Team/$1k 额度目前 over capacity，已领取不受影响，未领取可能重审；Startup Stack 等仍开放。额度仅限 Anthropic 官方 API，不可用于 Bedrock/Vertex。申请页：https://claude.com/programs/startups",
+    "source": "x @sunsanchao",
+    "collected_at": "2026-10-10T15:42:23+08:00",
+    "expired": false,
+    "source_post_id": "2108811360889090486",
+    "free_terms": "初创申请；$1000 API + 一年 Team（目前额度紧张/可能重审）；Startup Stack 仍开放。排除部分地区。",
+    "product": "Claude for Startups",
+    "providers": [
+      {
+        "name": "Anthropic",
+        "action_url": "https://console.anthropic.com/"
+      },
+      {
+        "name": "Claude Startups",
+        "action_url": "https://claude.com/programs/startups"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "aws-free-plan-200-credits-bedrock-20261010",
+    "title": "AWS Free Plan：新用户最高约 $200 积分（可用于 Bedrock 等）",
+    "model": "Amazon Bedrock 等（AWS 账单抵扣）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/likeDesigning/status/2108822068217172434",
+    "summary": "AWS 官方 Free Plan：新客户开户即送约 $100 积分，完成关键服务探索任务可再攒约 $100，合计最高约 $200，约 6 个月内有效；Free Plan 期间不意外扣费（除非升 Paid 或开仅付费服务）。社区实测用 Budgets/Lambda/EC2/Bedrock playground/RDS 等任务攒满，积分可抵 Bedrock 等模型调用账单。注意：须保持 Free Plan、别误升 Paid；账号到期或积分用尽后 Free Plan 会关闭。入口：https://aws.amazon.com/free/ 。条件：新 AWS 账号；积分规则以官网为准。",
+    "source": "x @likeDesigning",
+    "collected_at": "2026-10-10T15:42:23+08:00",
+    "expired": false,
+    "source_post_id": "2108822068217172434",
+    "free_terms": "新用户最高约 $200 积分（开户 $100 + 任务最多 $100），约 6 个月；可抵 Bedrock 等。须 Free Plan。",
+    "product": "AWS Free Plan credits",
+    "providers": [
+      {
+        "name": "AWS Free Tier",
+        "action_url": "https://aws.amazon.com/free/"
+      },
+      {
+        "name": "Amazon Bedrock",
+        "action_url": "https://console.aws.amazon.com/bedrock"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
