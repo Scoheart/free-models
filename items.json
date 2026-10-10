@@ -1195,5 +1195,59 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "openrouter-ming-image-design-free-20261010",
+    "title": "OpenRouter：蚂蚁百灵 Ming Image 0.1 Design / Design-Layer 免费生图与拆层 API",
+    "model": "inclusionai/ming-image-0.1-design、inclusionai/ming-image-0.1-design-layer",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/Huouo908070/status/2108835362957119743",
+    "summary": "inclusionAI（蚂蚁百灵）在 OpenRouter 上把两款约 6B 设计向图像模型标为 Free（NovitaAI 托管）：Ming Image 0.1 Design 文生图（强调图内可读文字/海报稿，输出 PNG/JPEG/WebP，尺寸由模型决定）；Ming Image 0.1 Design-Layer 图生图拆层（需 1 张参考图 + 图层说明，输出多 RGBA 层，PNG/WebP）。OpenRouter 页面写明定价为 $0。权重亦在 Hugging Face / ModelScope 开源，可本地跑。领取：注册 OpenRouter → 建 API Key → 调 /api/v1/images，model 填 inclusionai/ming-image-0.1-design 或 inclusionai/ming-image-0.1-design-layer。注意：免费档可能随时调整；Design 不接受参考图，Layer 必须带参考图。",
+    "source": "x @Huouo908070",
+    "collected_at": "2026-10-10T16:44:06+08:00",
+    "expired": false,
+    "source_post_id": "2108835362957119743",
+    "free_terms": "OpenRouter 标价 Free（$0）；Design 文生图、Design-Layer 拆层；需 OpenRouter API Key。",
+    "product": "Ming Image 0.1 Design / Design-Layer on OpenRouter",
+    "providers": [
+      {
+        "name": "OpenRouter",
+        "action_url": "https://openrouter.ai/keys"
+      },
+      {
+        "name": "OpenRouter 控制台",
+        "action_url": "https://openrouter.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Ming Image 0.1 Design",
+        "action_url": "https://openrouter.ai/inclusionai/ming-image-0.1-design"
+      },
+      {
+        "name": "Ming Image 0.1 Design Layer",
+        "action_url": "https://openrouter.ai/inclusionai/ming-image-0.1-design-layer"
+      },
+      {
+        "name": "HF Design 权重",
+        "action_url": "https://huggingface.co/inclusionAI/Ming-Image-0.1-Design"
+      },
+      {
+        "name": "HF Design-Layer 权重",
+        "action_url": "https://huggingface.co/inclusionAI/Ming-Image-0.1-Design-Layer"
+      },
+      {
+        "name": "ModelScope Design",
+        "action_url": "https://www.modelscope.cn/models/inclusionAI/Ming-Image-0.1-Design"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
