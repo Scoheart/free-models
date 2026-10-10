@@ -1411,5 +1411,97 @@
       "need_key",
       "cn_account"
     ]
+  },
+  {
+    "id": "qoder-qwen38-flash-free-extended-20261010",
+    "title": "Qoder：Qwen3.8-Flash 个人用户限时免 Credits（已延期，结束日待公告）",
+    "model": "Qwen3.8-Flash",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/Forhanvv/status/2108971809324625951",
+    "summary": "阿里 Qoder（国际版/CN）官方活动页确认：个人用户调用 Qwen3.8-Flash 计费系数 0.0×、不消耗 Credits；原定 2026-09-30 结束已延期，10/1 起继续免费，结束日将提前在活动页公告。免费/零余额账号可用，团队/企业订阅除外。适用 Qoder IDE/CLI/插件/Cloud Agents/网页/移动端等。无需领取，模型选择器选 Qwen3.8-Flash 即可。多模态+工具调用，适合编码/长文档/看图。活动页：https://docs.qoder.com/events/flashoffer 与 https://docs.qoder.cn/events/flashoffer 。",
+    "source": "x @Forhanvv / docs.qoder.com",
+    "collected_at": "2026-10-11T01:40:41+08:00",
+    "expired": false,
+    "source_post_id": "2108971809324625951",
+    "free_terms": "个人用户限时 0.0× Credits；原 9/30 截止已延期，结束日待公告；团队/企业除外；零余额可用。",
+    "product": "Qoder Qwen3.8-Flash",
+    "providers": [
+      {
+        "name": "Qoder International 活动页",
+        "action_url": "https://docs.qoder.com/events/flashoffer"
+      },
+      {
+        "name": "Qoder CN 活动页",
+        "action_url": "https://docs.qoder.cn/events/flashoffer"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Qoder",
+        "action_url": "https://qoder.com/"
+      },
+      {
+        "name": "Cline",
+        "action_url": "https://cline.bot/"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Qwen3.8-Flash",
+        "action_url": "https://docs.qoder.com/events/flashoffer"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_client",
+      "zero_signup"
+    ]
+  },
+  {
+    "id": "heygen-voice-free-preview-20261010",
+    "title": "HeyGen Voice：自研 TTS #1，平台/API 免费预览（Instant Clone 免创建费）",
+    "model": "HeyGen Voice",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/PaulDerrington/status/2108973111022354646",
+    "summary": "HeyGen 于 2026-10-09 发布自研语音模型 HeyGen Voice，Artificial Analysis Controlled Voice 榜首（约 Elo 1201）。官方新闻稿称平台与 API 可免费使用；开发者文档确认 Instant Voice Clone 创建在 preview 期间免费（单段录音、秒级就绪），Professional Clone 需购买 slot（约 $99/月）且合成 0.6 API credits/分钟。需注册并建 API Key（X-Api-Key）。文档：https://developers.heygen.com/docs/models/heygen-voice ；TTS：POST /v3/models/audio/tts。注意第三方榜单换算价与「免费」表述并存，实际以官方账单/文档为准。",
+    "source": "x @PaulDerrington / @likeDesigning / PR Newswire",
+    "collected_at": "2026-10-11T01:40:41+08:00",
+    "expired": false,
+    "source_post_id": "2108973111022354646",
+    "free_terms": "新闻稿：平台与 API 免费可用；文档：Instant Clone 创建 preview 免费；Professional 付费。需 API Key。",
+    "product": "HeyGen Voice",
+    "providers": [
+      {
+        "name": "HeyGen",
+        "action_url": "https://www.heygen.com/"
+      },
+      {
+        "name": "HeyGen Developers",
+        "action_url": "https://developers.heygen.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "HeyGen Voice",
+        "action_url": "https://developers.heygen.com/docs/models/heygen-voice"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
