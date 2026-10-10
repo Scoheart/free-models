@@ -1367,5 +1367,49 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "unisound-u2-flash-free-api-20261010",
+    "title": "云知声 U2 Flash：MaaS API 限时免费（新老用户，至 10/31）",
+    "model": "U2 Flash",
+    "type": "限时",
+    "deadline": "2026-10-31T23:59:59+08:00",
+    "url": "https://x.com/Ailookeyes/status/2108952734707724301",
+    "summary": "云知声（Unisound）官方确认 U2 Flash API 自 2026-09-30 至 2026-10-31 限时免费：活动期内输入/缓存命中/输出均为 ¥0/1M tokens，新老登录用户可调，偏 Agent/Coding。兼容 OpenAI（https://maas-api.unisound.com/v1）与 Anthropic（…/anthropic）接口，模型名 u2-flash；有 RPM/TPM 限速。领取：注册并实名 → 控制台「计量与资源包 → API Key 管理」建 Key。模型页 https://maas.unisound.com/model-hub/u2-flash ；价格说明 https://maas.unisound.com/docs/price/overview ；官方推文 https://x.com/Unisound_AI/status/2104919114602905767 。同帖另提 TokenHub 新人包与 Claude Max/Team 月度 API 额度、Zed 学生免费，前两项已在目录中。",
+    "source": "x @Ailookeyes / @Unisound_AI",
+    "collected_at": "2026-10-11T00:44:48+08:00",
+    "expired": false,
+    "source_post_id": "2108952734707724301",
+    "free_terms": "2026-09-30 至 2026-10-31 限时免费，新老用户；需登录建 API Key；有 RPM/TPM 限速；国内手机号注册/实名。",
+    "product": "Unisound U2 Flash (u2-flash)",
+    "providers": [
+      {
+        "name": "云知声 MaaS",
+        "action_url": "https://maas.unisound.com/"
+      },
+      {
+        "name": "快速上手（含建 Key）",
+        "action_url": "https://maas.unisound.com/docs/guide/quickstart"
+      },
+      {
+        "name": "价格页（活动说明）",
+        "action_url": "https://maas.unisound.com/docs/price/overview"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "U2 Flash",
+        "action_url": "https://maas.unisound.com/model-hub/u2-flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account"
+    ]
   }
 ]
