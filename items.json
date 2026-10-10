@@ -1503,5 +1503,46 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "nous-missingno-free-limited-20261011",
+    "title": "Nous Research MISSINGNO：Nous Portal 限时免费（Hermes Agent 可直接用）",
+    "model": "MISSINGNO",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/NousResearch/status/2109012611555840069",
+    "summary": "Nous Research 官方宣布神秘编码/Agent 推理模型 MISSINGNO（宝可梦乱码梗）限时在 Nous Portal 免费：Portal 模型列表标价 $0.00/1M，面向写代码与 agentic reasoning，主打省 token。社区指引：Hermes 中 hermes setup --portal 登录后执行 /model stealth/missingno（可加 --global）；约 262K 上下文并支持工具调用。免费截止日期未公布。条件：需 Nous Portal 账号；经 Hermes Agent 或 Portal 免费档调用。",
+    "source": "NousResearch",
+    "collected_at": "2026-10-11T04:49:01+08:00",
+    "expired": false,
+    "source_post_id": "2109012611555840069",
+    "free_terms": "Nous Portal 限时免费（$0.00/1M）；Hermes Agent /model stealth/missingno；截止日未公布。",
+    "product": "Nous Research MISSINGNO (stealth/missingno)",
+    "providers": [
+      {
+        "name": "Nous Portal",
+        "action_url": "https://portal.nousresearch.com/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Hermes Agent",
+        "action_url": "https://hermes-agent.nousresearch.com/"
+      }
+    ],
+    "models": [
+      {
+        "name": "MISSINGNO",
+        "action_url": "https://portal.nousresearch.com/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "need_client"
+    ]
   }
 ]
