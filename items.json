@@ -1249,5 +1249,52 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "zenmux-haiku55-1m-gift-20261010",
+    "title": "ZenMux：Claude Haiku 5.5 限时礼物，每个 100 万 token（共 1000 份）",
+    "model": "anthropic/claude-haiku-5.5",
+    "type": "额度",
+    "deadline": "2026-10-16T14:18:59+08:00",
+    "url": "https://x.com/ZenMuxAI/status/2108493632999469530",
+    "summary": "ZenMux 官方发放 1000 份 Claude Haiku 5.5 token 礼物，每份 100 万 token。打开礼物中心领取后，可用统一 API（OpenAI/Anthropic 兼容，Base URL https://zenmux.ai/api/v1）或平台对话调用 anthropic/claude-haiku-5.5；社区称免绑卡。领取：登录 ZenMux → 打开礼物链接/礼物中心 → 领额度 → 在 platform/api-keys 建 Key。注意：仅 1000 份，领完即止；礼物链接参数 expiresAt 约至 2026-10-16 14:18 北京时间，以页面为准；中转平台额度与稳定性可能变化。",
+    "source": "x @ZenMuxAI",
+    "collected_at": "2026-10-10T17:48:05+08:00",
+    "expired": false,
+    "source_post_id": "2108493632999469530",
+    "free_terms": "官方 1000×1M Haiku 5.5 token 礼物；限时/领完即止；礼物链接约至 2026-10-16；需注册拿 API Key。",
+    "product": "ZenMux Haiku 5.5 token gift",
+    "providers": [
+      {
+        "name": "ZenMux 礼物中心",
+        "action_url": "https://zenmux.ai/platform/gift-center?activityCode=ACT1787713569898&batchId=2641CGBOMCRUE14613690&channel=&expiresAt=1792131539000&sign=eEsT7O6t2XJf3rMBd2kyfyGXHkdNt1B3v01uMtcQSwU"
+      },
+      {
+        "name": "ZenMux 登录",
+        "action_url": "https://zenmux.ai/login"
+      },
+      {
+        "name": "ZenMux API Keys",
+        "action_url": "https://zenmux.ai/platform/api-keys"
+      },
+      {
+        "name": "ZenMux Docs Quickstart",
+        "action_url": "https://zenmux.ai/docs/guide/quickstart"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Claude Haiku 5.5",
+        "action_url": "https://zenmux.ai/anthropic/claude-haiku-5.5"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
