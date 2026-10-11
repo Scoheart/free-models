@@ -1714,5 +1714,84 @@
       "need_key",
       "need_client"
     ]
+  },
+  {
+    "id": "payperq-nano-banana-veo-free-nov-20261011",
+    "title": "PayPerQ：Nano Banana / Veo 3.1 等 Google 图像与视频模型限时 $0 至 11 月初",
+    "model": "Nano Banana 2.1 / Pro / Lite · Veo 3.1 / Fast / Lite · Gemini Omni 1.1 Flash",
+    "type": "限时",
+    "deadline": "2026-11-07T23:59:59+08:00",
+    "url": "https://x.com/Israfilv2/status/2109292727905255659",
+    "summary": "PayPerQ（ppq.ai）官方活动：账户有余额（最低约 $0.10）即可在网页或 API 以 $0 调用 Google Nano Banana 全家桶（2.1 / 2 Lite / Pro，含图编辑）、Veo 3.1 / Fast / Lite（含图生视频与首尾帧）以及 Gemini Omni 1.1 Flash。免费调用不扣余额，活动至 11 月初或促销额度耗尽。条件：账户需有余额（充值可低至约 $0.10）；网页与 API 均可。",
+    "source": "Israfilv2 / ppq.ai",
+    "collected_at": "2026-10-11T22:47:08+08:00",
+    "expired": false,
+    "source_post_id": "2109292727905255659",
+    "free_terms": "账户有余额即可 $0 调用；免费调用不扣余额；至 11 月初或促销额度耗尽。",
+    "product": "PayPerQ 上的 Google Nano Banana / Veo 3.1 / Gemini Omni 1.1 Flash",
+    "providers": [
+      {
+        "name": "PayPerQ",
+        "action_url": "https://ppq.ai/"
+      },
+      {
+        "name": "PayPerQ API",
+        "action_url": "https://ppq.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Nano Banana / Veo 3.1 免费说明",
+        "action_url": "https://ppq.ai/blog/free-google-image-and-video-generation"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "deposit_hold",
+      "need_key"
+    ]
+  },
+  {
+    "id": "perch-qwen38-starter-promo-20261011",
+    "title": "Perch AI Starter：Qwen 3.8 Max / Flash 限时免费至 10/14 北京时间凌晨",
+    "model": "Qwen 3.8 Max 0902 / Qwen 3.8 Flash",
+    "type": "限时",
+    "deadline": "2026-10-14T02:30:00+08:00",
+    "url": "https://x.com/kunal_twts/status/2109218405723304267",
+    "summary": "Perch AI Cloud Agents 上线活动：免费 Starter 计划在额度内可额外选用 Qwen 3.8 Max 0902 与 Qwen 3.8 Flash（命令 /model qwen-3.8-max、/model qwen-3.8-flash），截止 2026-10-13 14:30 美东（北京时间 10/14 02:30）。Starter 无需绑卡，用量仍计入每月免费额度。结束后两款 Qwen 退回 Pro。条件：Starter 免费计划额度内可用；无需信用卡。",
+    "source": "kunal_twts / perchai.app",
+    "collected_at": "2026-10-11T22:47:08+08:00",
+    "expired": false,
+    "source_post_id": "2109218405723304267",
+    "free_terms": "Starter 计划额度内免费；至 2026-10-13 14:30 EDT；结束后 Qwen 退回 Pro。",
+    "product": "Perch AI Starter 上的 Qwen 3.8 Max / Flash",
+    "providers": [
+      {
+        "name": "Perch AI",
+        "action_url": "https://www.perchai.app/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Perch Desktop / CLI",
+        "action_url": "https://www.perchai.app/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Model promotions",
+        "action_url": "https://www.perchai.app/docs/plans/model-promotions"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
