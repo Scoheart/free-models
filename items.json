@@ -1674,5 +1674,45 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "cursor-pro-mlh-ghw-hacktoberfest-20261011",
+    "title": "Cursor Pro：MLH Global Hack Week 报名可领免费 Pro 兑换码",
+    "model": "Cursor Pro",
+    "type": "限时",
+    "deadline": "2026-10-16T01:00:00+08:00",
+    "url": "https://x.com/lishishen7i/status/2109252497017803129",
+    "summary": "MLH Global Hack Week: Hacktoberfest（2026-10-09 10:00–10-15 13:00 EDT，北京时间约 10/16 01:00 结束）官方挑战「Sign up for a Cursor Pro Account」：报名活动后等 MLH 邮件发来的兑换码，在 Cursor Billing & Invoices 手动升级到 Pro 以使用免费额度。需安装 Cursor 客户端并注册账号；报名本身不会自动开通。官方未承诺每位报名者都能收到码，也未写明额度时长/金额（有用户反馈约 $22 信用）。挑战页：https://www.mlh.com/events/global-hack-week-open-source-90/challenges/01a11d20-ae76-fc13-f55f-3f3158847e88 ；活动报名：https://events.mlh.com/events/14553-global-hack-week-open-source ；GHW 入口：https://ghw.mlh.com/events/open-source 。",
+    "source": "MLH / lishishen7i",
+    "collected_at": "2026-10-11T20:44:37+08:00",
+    "expired": false,
+    "source_post_id": "2109252497017803129",
+    "free_terms": "报名 MLH GHW Hacktoberfest 后邮件领 Cursor Pro 兑换码；须在 Billing 手动升级；活动约至 2026-10-15 13:00 EDT；码与额度不保证人人有。",
+    "product": "Cursor Pro (MLH GHW promo)",
+    "providers": [
+      {
+        "name": "MLH 挑战页（领码说明）",
+        "action_url": "https://www.mlh.com/events/global-hack-week-open-source-90/challenges/01a11d20-ae76-fc13-f55f-3f3158847e88"
+      },
+      {
+        "name": "活动报名",
+        "action_url": "https://events.mlh.com/events/14553-global-hack-week-open-source"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cursor 下载",
+        "action_url": "https://cursor.com/downloads"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "need_client"
+    ]
   }
 ]
