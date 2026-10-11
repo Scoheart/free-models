@@ -1828,5 +1828,49 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "iteracompute-qwen38-27b-free-30m-20261012",
+    "title": "IteraCompute：Qwen3.8-27B 每月最高 3000 万 tokens 免费 API（免绑卡）",
+    "model": "Qwen3.8-27B",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/IteraCompute/status/2109316511026536956",
+    "summary": "IteraCompute 官方推出 OpenAI 兼容推理 API：免费档每月最高 3000 万 tokens 调用 Qwen3.8-27B（输入/缓存/输出均为 $0），32K 上下文、4 万 TPM，支持工具调用与流式。注册并验证邮箱或 Google 登录即可创建 API Key，无需信用卡。充值累计满 $10/$50 可升 Starter/Pro（更高月额度与上下文，模型仍 $0）。免费容量繁忙时可能排队，无 SLA；额度按 UTC 月初重置。条件：免费档无需绑卡；需注册拿 API Key；公平使用限速。",
+    "source": "IteraCompute",
+    "collected_at": "2026-10-12T00:43:01+08:00",
+    "expired": false,
+    "source_post_id": "2109316511026536956",
+    "free_terms": "免费档每月最高 30M tokens、32K 上下文、40K TPM；Qwen3.8-27B 全 $0；无需信用卡；繁忙可排队；月初 UTC 重置。",
+    "product": "IteraCompute Free · qwen/qwen3.8-27b",
+    "providers": [
+      {
+        "name": "IteraCompute",
+        "action_url": "https://platform.iteracompute.com/sign-up"
+      },
+      {
+        "name": "API Keys",
+        "action_url": "https://platform.iteracompute.com/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Qwen3.8-27B 免费说明",
+        "action_url": "https://iteracompute.com/free/"
+      },
+      {
+        "name": "模型页",
+        "action_url": "https://iteracompute.com/models/qwen3-8-27b/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "zero_signup"
+    ]
   }
 ]
