@@ -1544,5 +1544,96 @@
       "need_key",
       "need_client"
     ]
+  },
+  {
+    "id": "vercel-laya-free-oct31-20261011",
+    "title": "Vercel AI Gateway：Laya 决策模型限时免费至 10/31",
+    "model": "Laya (convaiinnovations/laya-free)",
+    "type": "限时",
+    "deadline": "2026-10-31T23:59:59+08:00",
+    "url": "https://x.com/Wavequester/status/2109225786133868996",
+    "summary": "Convai Innovations 的 Laya 决策/评估模型在 Vercel AI Gateway 经 Boundless 托管限时免费至 2026-10-31：模型 ID convaiinnovations/laya 与 convaiinnovations/laya-free，面向分流、客服分类、护栏检查、量表打分等结构化 yes/no/choice/score，不生成长文。可用 AI SDK evaluate、HTTP /v1/evaluate、TypeSafe 或 AI CLI。免费结束后 -free 停服，标准 ID 开始计费。需 AI Gateway API Key。",
+    "source": "Wavequester",
+    "collected_at": "2026-10-11T18:46:48+08:00",
+    "expired": false,
+    "source_post_id": "2109225786133868996",
+    "free_terms": "Vercel AI Gateway Boundless 路径免费至 2026-10-31；laya 与 laya-free 均可；结束后 -free 停服、标准 ID 计费。",
+    "product": "Convai Innovations Laya on Vercel AI Gateway",
+    "providers": [
+      {
+        "name": "Vercel AI Gateway",
+        "action_url": "https://vercel.com/docs/ai-gateway"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Laya Free",
+        "action_url": "https://vercel.com/ai-gateway/models/laya-free"
+      },
+      {
+        "name": "Changelog（至 10/31）",
+        "action_url": "https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "openrouter-poolside-laguna-free-20261011",
+    "title": "OpenRouter：Poolside Laguna S / XS 2.1 :free 限时免费至 10/31",
+    "model": "Laguna S 2.1 / Laguna XS 2.1 (:free)",
+    "type": "限时",
+    "deadline": "2026-10-31T23:59:59+08:00",
+    "url": "https://x.com/Wavequester/status/2109225786133868996",
+    "summary": "Poolside 编码 Agent 模型 Laguna S 2.1（约 118B 总参 / 8B 激活）与 Laguna XS 2.1（约 33B-A3B）在 OpenRouter 提供 :free 端点，页面标明 Going away October 31, 2026。模型 ID：poolside/laguna-s-2.1:free、poolside/laguna-xs-2.1:free；约 262K 上下文，支持工具调用，适合 Coding Agent / 代码分析。受 OpenRouter 免费档日请求与 RPM 限制；免费调用输入输出可能用于改进模型。需 OpenRouter API Key。",
+    "source": "Wavequester",
+    "collected_at": "2026-10-11T18:46:48+08:00",
+    "expired": false,
+    "source_post_id": "2109225786133868996",
+    "free_terms": "OpenRouter :free 至 2026-10-31；日请求/RPM 受限；免费流量可能用于训练。",
+    "product": "Poolside Laguna S/XS 2.1 on OpenRouter",
+    "providers": [
+      {
+        "name": "OpenRouter",
+        "action_url": "https://openrouter.ai/keys"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      },
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      }
+    ],
+    "models": [
+      {
+        "name": "Laguna S 2.1 (free)",
+        "action_url": "https://openrouter.ai/poolside/laguna-s-2.1:free"
+      },
+      {
+        "name": "Laguna XS 2.1 (free)",
+        "action_url": "https://openrouter.ai/poolside/laguna-xs-2.1:free"
+      },
+      {
+        "name": "Poolside 入口",
+        "action_url": "https://openrouter.ai/poolside/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
