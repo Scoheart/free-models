@@ -1793,5 +1793,40 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "dolphin-inference-api-30-credits-20261011",
+    "title": "Dolphin Inference API：前 1000 名注册送 $30 额度（DeepSeek V4.1 Flash）",
+    "model": "DeepSeek V4.1 Flash",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/dphnAI/status/2109297046780055762",
+    "summary": "Dolphin AI 推理 API 上线活动：前 1000 名注册用户可领 $30 API 额度，可调用 DeepSeek V4.1 Flash。先到先得，需要用钱包加 Telegram 兑换 coupon。条件：前 1000 名；需钱包 + Telegram 兑换。",
+    "source": "dphnAI",
+    "collected_at": "2026-10-11T23:40:00+08:00",
+    "expired": false,
+    "source_post_id": "2109297046780055762",
+    "free_terms": "前 1000 名注册送 $30 额度；需钱包 + Telegram 兑换 coupon",
+    "product": "Dolphin Inference API",
+    "providers": [
+      {
+        "name": "Dolphin AI",
+        "action_url": "https://app.dphn.ai"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Coupon credits 文档",
+        "action_url": "https://dphn.ai/docs/coupon-credits"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
