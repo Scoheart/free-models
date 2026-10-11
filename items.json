@@ -1908,5 +1908,48 @@
       "need_client",
       "zero_signup"
     ]
+  },
+  {
+    "id": "river-inference-25-credits-20261012",
+    "title": "River Inference：新用户注册送 $25 免费额度（DeepSeek V4.1 Flash / GLM-5.3 Flash）",
+    "model": "DeepSeek V4.1 Flash / GLM-5.3 Flash",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/ibab/status/2109384284171911342",
+    "summary": "River AI 联创 Igor Babuschkin 宣布开源模型生产推理上线：当前注册即送 $25 平台免费额度。已上架 DeepSeek V4.1 Flash 与 GLM-5.3 Flash，官称比 DeepSeek / Z.ai 官方价低约 20%，并对标 Fireworks / Together 时 DeepSeek 输入输出价可低约 60%。支持约 1M 上下文、视觉与流式，OpenAI 兼容 API（api.river.ai）。在 Console 创建 API Key 后即可调用。条件：新用户注册领取；$25 额度；无公开截止日期，以平台为准。",
+    "source": "ibab",
+    "collected_at": "2026-10-12T05:43:44+08:00",
+    "expired": false,
+    "source_post_id": "2109384284171911342",
+    "free_terms": "当前注册送 $25 免费额度；无公开截止日期，以 Console 到账为准。",
+    "product": "River Inference",
+    "providers": [
+      {
+        "name": "River Console",
+        "action_url": "https://console.river.ai"
+      },
+      {
+        "name": "River AI",
+        "action_url": "https://river.ai"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Inference 文档",
+        "action_url": "https://docs.river.ai/guides/inference/"
+      },
+      {
+        "name": "DeepSeek V4.1 Flash",
+        "action_url": "https://docs.river.ai/guides/inference/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
