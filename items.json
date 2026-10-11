@@ -1635,5 +1635,44 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "odyssey-3-free-research-preview-20261011",
+    "title": "Odyssey-3：世界模型公开研究预览免费可玩（浏览器）",
+    "model": "Odyssey-3 Flash",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/greek2240/status/2109241057539932298",
+    "summary": "Odyssey（加州世界模型实验室，创始人 Oliver Cameron / Jeff Hawke）开放 Odyssey-3 公开研究预览：浏览器里用文字提示实时生成可探索、可互动的 3D/视频世界（第一人称/第三人称/独立相机），预览跑更快的 Odyssey-3 Flash；完整 Odyssey-3 约 14B，Pro 支持更高分辨率。官方称 Pro 在 Physics-IQ Verified 等基准领先（自评有 caveat）。权重未开源；开发者可申请 API。免费预览：https://experience.odyssey.systems ；介绍：https://odyssey.systems/meet-odyssey-3 ；开发者：https://developer.odyssey.ml 。截止日未公布。",
+    "source": "greek2240 / Odyssey",
+    "collected_at": "2026-10-11T19:48:43+08:00",
+    "expired": false,
+    "source_post_id": "2109241057539932298",
+    "free_terms": "浏览器公开研究预览免费试用 Odyssey-3 Flash；API 需申请；截止日未公布。",
+    "product": "Odyssey-3 (Flash research preview)",
+    "providers": [
+      {
+        "name": "Odyssey",
+        "action_url": "https://odyssey.systems/meet-odyssey-3"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Odyssey-3 Flash 预览",
+        "action_url": "https://experience.odyssey.systems"
+      },
+      {
+        "name": "Developer / API 申请",
+        "action_url": "https://developer.odyssey.ml"
+      }
+    ],
+    "scenes": [
+      "image",
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
