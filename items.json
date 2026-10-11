@@ -1951,5 +1951,92 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "kiro-free-tier-sonnet45-20261012",
+    "title": "AWS Kiro Free：永久免费档 50 credits，可用 Claude Sonnet 4.5 与开源编码模型",
+    "model": "Claude Sonnet 4.5 / Qwen3 Coder Next / DeepSeek 3.2 / MiniMax M2.1",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/JMkernt/status/2109409464516538509",
+    "summary": "社区实测 AWS 编码代理 Kiro 的永久 Free 档：社交账号或 AWS Builder ID 登录即可，无需绑卡，每月约 50 credits；免费档可用 Claude Sonnet 4.5，以及 Qwen3 Coder Next、DeepSeek 3.2、MiniMax M2.1 等开源权重模型（有速率与周配额限制）。官网定价页确认 Free 含上述模型；首次从 Free 升到付费档另返约 $20 订阅抵扣（约 1000 credits）。条件：社交登录或 Builder ID；Free 档不支持 Enterprise / GovCloud。",
+    "source": "JMkernt",
+    "collected_at": "2026-10-12T06:44:13+08:00",
+    "expired": false,
+    "source_post_id": "2109409464516538509",
+    "free_terms": "永久 Free 档约 50 credits/月；含 Sonnet 4.5 与开源编码模型；有速率/周配额限制；首次付费升级约 $20 抵扣。",
+    "product": "AWS Kiro Free",
+    "providers": [
+      {
+        "name": "Kiro",
+        "action_url": "https://kiro.dev/pricing/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Kiro",
+        "action_url": "https://kiro.dev/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Models 文档",
+        "action_url": "https://kiro.dev/docs/models/"
+      },
+      {
+        "name": "Claude Sonnet 4.5",
+        "action_url": "https://kiro.dev/docs/models/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client",
+      "zero_signup"
+    ]
+  },
+  {
+    "id": "munito-launch-free-tier-20261012",
+    "title": "Munito：欧洲开源模型推理平台上线，Launch 日开放 Free tier",
+    "model": "开源模型（如 qwen/qwen3.8-27b、zai-org/glm-5.3-flash 等）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/munitoai/status/2109409403611054184",
+    "summary": "Munito 官方宣布面向欧洲的开源模型推理平台上线：默认隐私、零数据留存，OpenAI / Anthropic 兼容 API，可在 EU/US 区域主机上调用。官网与条款写明 Launch offer / Free tier；邮箱验证可进 Console，有手机验证时通过滥用检查后激活免费档。文档示例模型含 qwen/qwen3.8-27b、zai-org/glm-5.3-flash 等；在 Console 创建 Inference API Key 后即可调用。条件：注册并完成验证；免费档具体额度以 Console 为准，无公开硬截止日。",
+    "source": "munitoai",
+    "collected_at": "2026-10-12T06:44:13+08:00",
+    "expired": false,
+    "source_post_id": "2109409403611054184",
+    "free_terms": "Launch 日开放 Free tier；手机验证（可用时）激活；额度以 Console 为准。",
+    "product": "Munito Inference",
+    "providers": [
+      {
+        "name": "Munito Console",
+        "action_url": "https://console.munito.ai/keys"
+      },
+      {
+        "name": "Munito",
+        "action_url": "https://munito.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "API 文档",
+        "action_url": "https://docs.munito.ai/"
+      },
+      {
+        "name": "Quickstart",
+        "action_url": "https://docs.munito.ai/quickstart"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
