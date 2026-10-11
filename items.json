@@ -1872,5 +1872,41 @@
       "need_key",
       "zero_signup"
     ]
+  },
+  {
+    "id": "workbuddy-deepseek-hy3-free-oct31-20261012",
+    "title": "WorkBuddy 国际版：DeepSeek V4.1 Flash / 混元 Hy3 限时 0 积分至 10/31",
+    "model": "DeepSeek V4.1 Flash / Hy3",
+    "type": "限时",
+    "deadline": "2026-10-31T23:59:59+08:00",
+    "url": "https://x.com/msbr_dev/status/2109338795229548560",
+    "summary": "腾讯 WorkBuddy 国际版（workbuddy.ai）将 DeepSeek V4.1 Flash 与混元 Hy3 限时设为 0 积分倍率（聊天/编程不扣日常积分），社区与促销站称延至 2026-10-31，活动期无明确日额度上限。需注册并登录客户端/网页，在模型列表选对应模型；账户积分清零时免费模型也可能无法调用，建议留少量积分。本条针对国际版，国服规则另算。条件：限时至 10/31；需 WorkBuddy 账号与客户端；国际版。",
+    "source": "msbr_dev",
+    "collected_at": "2026-10-12T01:43:30+08:00",
+    "expired": false,
+    "source_post_id": "2109338795229548560",
+    "free_terms": "DeepSeek V4.1 Flash 与 Hy3 0 积分至 10/31；聊天/编程；建议账户留少量积分；国际版。",
+    "product": "WorkBuddy International · DeepSeek-V4.1-Flash / Hy3",
+    "providers": [],
+    "agents": [
+      {
+        "name": "WorkBuddy",
+        "action_url": "https://www.workbuddy.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "DeepSeek V4.1 Flash / Hy3（应用内选择）",
+        "action_url": "https://www.workbuddy.ai/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "zero_signup"
+    ]
   }
 ]
