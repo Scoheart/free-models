@@ -2889,5 +2889,57 @@
       "cn_account",
       "zero_signup"
     ]
+  },
+  {
+    "id": "llmtr-claude-haiku-55-free-until-1014-20261013",
+    "title": "LLMTR：Claude Haiku 5.5 限时免费 API（至 10/14 土耳其时间）",
+    "model": "anthropic/claude-haiku-5.5-free",
+    "type": "限时",
+    "deadline": "2026-10-15T04:59:00+08:00",
+    "url": "https://x.com/NiuOnAI/status/2109751672260190579",
+    "summary": "土耳其 OpenAI 兼容网关 LLMTR 将 Claude Haiku 5.5 挂为免费模型：ID anthropic/claude-haiku-5.5-free，端点 https://llmtr.com/v1，输入/输出 $0、不扣余额；新账号零余额可调。每账号每日有用量上限（未公布数字），免费池用完可能提前结束。上下文 100K、单次输出最多约 32K，支持思考档位、看图、工具调用。截止：2026-10-14 23:59 TRT（UTC+3）≈ 北京时间 10/15 04:59；到期后该模型 ID 可能返回 410。官方模型页与博客已核实；追踪站 awesome-free-ai-coding 于 10/12 探测仍可用。注意：第三方网关，内容可能被用于改进模型，敏感代码勿走；需注册创建 API Key。",
+    "source": "NiuOnAI",
+    "collected_at": "2026-10-13T05:54:17+08:00",
+    "expired": false,
+    "source_post_id": "2109751672260190579",
+    "free_terms": "限时至 2026-10-14 23:59 TRT；$0/百万 token；每日账号上限未公布；零余额可调；需 API Key",
+    "product": "LLMTR Claude Haiku 5.5 free",
+    "providers": [
+      {
+        "name": "LLMTR",
+        "action_url": "https://llmtr.com/"
+      },
+      {
+        "name": "LLMTR API Keys",
+        "action_url": "https://llmtr.com/dashboard/api-keys"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Claude Haiku 5.5 Free",
+        "action_url": "https://llmtr.com/en/models/anthropic/claude-haiku-5.5-free"
+      },
+      {
+        "name": "官方说明博客",
+        "action_url": "https://llmtr.com/en/blog/claude-haiku-5-5-ucretsiz-api"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
