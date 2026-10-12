@@ -2251,5 +2251,56 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "google-embeddinggemma2-foresight-free-20261012",
+    "title": "Google EmbeddingGemma 2：开源多模态嵌入 + Foresight Mac 免费离线笔记",
+    "model": "EmbeddingGemma 2",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/yyyole/status/2109491487260172695",
+    "summary": "Google 于约 10/6 发布 EmbeddingGemma 2（Apache-2.0）：约 740M 多模态嵌入，文本/代码/图像/视频/音频统一到 768 维，权重在 Hugging Face 免费下载，可本地跑语义检索与 RAG。配套实验性 Mac 应用 Google AI Edge Foresight：Apple Silicon、完全端侧、免费无订阅，会议转写与笔记/本地文件检索不出本机；首次启动需下载端侧模型。社区今日仍在传播该免费离线方案。条件：权重自托管需算力；Foresight 需 Apple Silicon Mac 直接下载安装。",
+    "source": "yyyole",
+    "collected_at": "2026-10-12T12:46:41+08:00",
+    "expired": false,
+    "source_post_id": "2109491487260172695",
+    "free_terms": "EmbeddingGemma 2 开源权重按 Apache-2.0 免费下载；Foresight Mac 实验应用免费、无云订阅；端侧推理。",
+    "product": "EmbeddingGemma 2 / Google AI Edge Foresight",
+    "providers": [
+      {
+        "name": "Hugging Face",
+        "action_url": "https://huggingface.co/google/embeddinggemma-2"
+      },
+      {
+        "name": "Google AI Edge Foresight",
+        "action_url": "https://developers.google.com/edge/foresight"
+      },
+      {
+        "name": "开发者博客",
+        "action_url": "https://developers.googleblog.com/en/google-ai-edge-with-embeddinggemma-2/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "EmbeddingGemma 2",
+        "action_url": "https://huggingface.co/google/embeddinggemma-2"
+      },
+      {
+        "name": "模型卡",
+        "action_url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2"
+      },
+      {
+        "name": "Foresight 下载页",
+        "action_url": "https://developers.google.com/edge/foresight"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "zero_signup"
+    ]
   }
 ]
