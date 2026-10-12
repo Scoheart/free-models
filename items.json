@@ -2561,5 +2561,44 @@
       "need_client",
       "zero_signup"
     ]
+  },
+  {
+    "id": "cleanapis-5m-free-tokens-monthly-20261012",
+    "title": "Clean APIs：每月 5M 免费 token（无需绑卡），33 模型 OpenAI 兼容端点",
+    "model": "33 模型（含 Claude Fable 5 等第三方命名）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/HmaWebdesign/status/2109626540992467125",
+    "summary": "Clean APIs 提供每月 5M 免费 token（无需信用卡），同一 OpenAI 兼容端点可调用其目录内 33 个模型；付费档从 $3.50/50M 起。官网写明可接 Cline、OpenCode、Cursor、Kilo Code、Claude Code 等。注意：模型名如 Claude Fable 5 为第三方命名，非 Anthropic 官方渠道；付费支持加密货币。条件：需注册拿 API Key；免费档有月配额与速率限制。",
+    "source": "HmaWebdesign",
+    "collected_at": "2026-10-12T20:58:00+08:00",
+    "expired": false,
+    "source_post_id": "2109626540992467125",
+    "free_terms": "每月 5M token 免费档；无需绑卡；重置按月",
+    "product": "Clean APIs",
+    "providers": [
+      {
+        "name": "Clean APIs",
+        "action_url": "https://cleanapis.com"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
