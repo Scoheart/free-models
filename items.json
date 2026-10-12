@@ -2806,5 +2806,88 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "autoclaw-weekly-perks-glm53-flash-20261013",
+    "title": "智谱 AutoClaw Weekly Perks：10/13–16 每天登录领 800 万 GLM-5.3-Flash tokens（当天午夜作废）",
+    "model": "GLM-5.3-Flash",
+    "type": "限时",
+    "deadline": "2026-10-16T23:59:59+08:00",
+    "url": "https://x.com/Ailookeyes/status/2109739471851917466",
+    "summary": "智谱 AutoClaw「Weekly Perks / 返工季」官方活动（UTC+8）：10/12 全员登录领 1 亿 GLM-5.3-Flash tokens（当天午夜作废）；10/13–16 全员每天登录领 800 万 tokens（800 Credits），各自当天午夜作废；同期付费会员（AutoClaw 月订 / GLM Coding Plan 个人档）按档位再领一份（多会员只取最高档不叠加）。需安装并登录 AutoClaw 客户端，每日 0 点后领取。官方博客已核实。",
+    "source": "Ailookeyes",
+    "collected_at": "2026-10-13T04:55:45+08:00",
+    "expired": false,
+    "source_post_id": "2109739471851917466",
+    "free_terms": "10/13–16 每天登录 800 万 GLM-5.3-Flash tokens，当天午夜作废；付费会员按档位额外一份；需 AutoClaw 客户端",
+    "product": "AutoClaw (智谱澳龙)",
+    "providers": [],
+    "agents": [
+      {
+        "name": "AutoClaw",
+        "action_url": "https://autoclaw.zhipuai.cn/"
+      }
+    ],
+    "models": [
+      {
+        "name": "GLM-5.3-Flash",
+        "action_url": "https://autoclaw.z.ai/blog/news/Weekly-Perks-M10W2/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "cn_account"
+    ]
+  },
+  {
+    "id": "antdigital-token-plan-free-1000-credit-20261013",
+    "title": "蚂蚁数科 DTMaaS Token Plan 免费版：新客限领一次 1000 Credit（约 1 个月）",
+    "model": "多模型共用 Credit（Ling/Qwen/DeepSeek/GLM 等）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/Ailookeyes/status/2109739471851917466",
+    "summary": "蚂蚁数科大模型服务平台（maas.antdigital.com）Token Plan 免费版：¥0 / 1000 Credit，新客限领一次，支付宝扫码登录即可，一般无需绑卡。额度跨文本/代码/图像/视频/语音/向量模型按 Credit 倍率扣减，约 1 个月有效、到期清零。领取后需创建「Token Plan for Agent」类型 API Key，端点兼容 OpenAI（如 maas-api.antdigital.com/v1）。定价页可见免费档；限时免费模型列表可能变动，以控制台为准。",
+    "source": "Ailookeyes",
+    "collected_at": "2026-10-13T04:55:45+08:00",
+    "expired": false,
+    "source_post_id": "2109739471851917466",
+    "free_terms": "新客限 1 次；1000 Credit；约 1 个月有效到期清零；支付宝登录；需 Token Plan for Agent API Key",
+    "product": "蚂蚁数科 DTMaaS Token Plan 免费版",
+    "providers": [
+      {
+        "name": "蚂蚁数科 DTMaaS",
+        "action_url": "https://maas.antdigital.com/pricing"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Token Plan 模型矩阵",
+        "action_url": "https://maas.antdigital.com/pricing"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account",
+      "zero_signup"
+    ]
   }
 ]
