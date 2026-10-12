@@ -2433,5 +2433,84 @@
       "zero_signup",
       "need_client"
     ]
+  },
+  {
+    "id": "freellmapi-free-gateway-20261012",
+    "title": "FreeLLMAPI：34 家免费 Provider 聚合成一条 OpenAI 兼容本地网关",
+    "model": "多 Provider 免费档聚合",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/BonoDJblack/status/2109552130713432551",
+    "summary": "开源自托管网关 FreeLLMAPI：把 Google、Groq、Cerebras、智谱、NVIDIA、HuggingFace 等约 34 家免费档接到同一个 /v1 端点，带智能路由与限流自动切换，宣称合计约 74 亿 token/月、600+ 模型端点。需本机安装（Docker 推荐）并自行填入各家 API Key；可接 Claude Code、Codex、Cursor 等 OpenAI 兼容客户端。",
+    "source": "BonoDJblack",
+    "collected_at": "2026-10-12T16:45:24+08:00",
+    "expired": false,
+    "source_post_id": "2109552130713432551",
+    "free_terms": "开源自托管；聚合各家 free tier；需自备上游 Key；官网 freellmapi.co",
+    "product": "FreeLLMAPI",
+    "providers": [
+      {
+        "name": "FreeLLMAPI",
+        "action_url": "https://freellmapi.co/about"
+      }
+    ],
+    "agents": [
+      {
+        "name": "FreeLLMAPI GitHub",
+        "action_url": "https://github.com/tashfeenahmed/freellmapi"
+      }
+    ],
+    "models": [
+      {
+        "name": "模型目录",
+        "action_url": "https://freellmapi.co/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "need_key"
+    ]
+  },
+  {
+    "id": "free-claude-code-gateway-20261012",
+    "title": "Free Claude Code：约 61 家 Provider / 13 亿+ 免费 token 月聚合，接 11 个编码 Agent",
+    "model": "多 Provider 免费档聚合（编码 Agent）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/VaibhavSisinty/status/2109551634032603457",
+    "summary": "开源项目 Free Claude Code（非 Anthropic 官方）：把多家免费/订阅/本地 Provider 收成统一目录，宣称合计约 13 亿+ 免费 token/月，可从终端驱动 Claude Code、Codex、Pi、OpenCode、Cline、Hermes、Grok Build、Muse Code 等约 11 个编码 Agent。需自备各上游 Key 或本地模型，并自行安装代理。",
+    "source": "VaibhavSisinty",
+    "collected_at": "2026-10-12T16:45:24+08:00",
+    "expired": false,
+    "source_post_id": "2109551634032603457",
+    "free_terms": "开源代理；聚合各家 free tier；需自备上游 Key/本地模型；GitHub Alishahryar1/free-claude-code",
+    "product": "Free Claude Code",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Free Claude Code",
+        "action_url": "https://github.com/Alishahryar1/free-claude-code"
+      },
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client",
+      "need_key"
+    ]
   }
 ]
