@@ -2169,5 +2169,87 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "workbuddy-step5-preview-free-oct25-20261012",
+    "title": "WorkBuddy：Step-5-Preview 限时免费至 10/25（国服/国际版）",
+    "model": "Step-5-Preview",
+    "type": "限时",
+    "deadline": "2026-10-25T23:59:59+08:00",
+    "url": "https://x.com/DenysDeng/status/2109476422729564160",
+    "summary": "多条社区帖（含截图）称腾讯 WorkBuddy 与 WorkBuddy AI 已上线 Step-5-Preview，限时免费体验窗口约 2026-10-12 至 10-25；与 OpenRouter/OpenCode 上一周限免（约至 10/15）是不同渠道。国际版另有 DeepSeek V4.1 Flash 0 积分至月底（已单列）。需注册并登录 WorkBuddy，在模型列表选择 Step-5-Preview；社区反馈速度偏慢。条件：限时至 10/25；需客户端/网页账号。",
+    "source": "DenysDeng",
+    "collected_at": "2026-10-12T11:38:51+08:00",
+    "expired": false,
+    "source_post_id": "2109476422729564160",
+    "free_terms": "Step-5-Preview 在 WorkBuddy / WorkBuddy AI 限免至约 10/25；社区报道，非阶跃官方渠道说明。",
+    "product": "WorkBuddy · Step-5-Preview",
+    "providers": [],
+    "agents": [
+      {
+        "name": "WorkBuddy",
+        "action_url": "https://www.workbuddy.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Step-5-Preview（应用内选择）",
+        "action_url": "https://www.workbuddy.ai/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "zero_signup"
+    ]
+  },
+  {
+    "id": "jetbrains-mellum21-open-weights-20261012",
+    "title": "JetBrains Mellum2.1：12B MoE 开源编码代理模型（Apache-2.0）",
+    "model": "Mellum2.1-12B-A2.5B-Thinking",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/NaveenKumar__T/status/2109481110875099604",
+    "summary": "JetBrains 发布 Mellum2.1：约 12B 总参 / 2.5B 激活的 MoE，Apache-2.0，权重在 Hugging Face 可免费下载（含 Thinking 与 GGUF）。架构与 Mellum2 相同，主要加强仓库内强化学习后训练；官方自评 SWE-bench Verified 约 47%（相对 Mellum2 约 2%）。面向自托管编码代理/子代理，无托管免费 API；可用 vLLM 本地服务。条件：自备算力本地或私有部署。",
+    "source": "NaveenKumar__T",
+    "collected_at": "2026-10-12T11:38:51+08:00",
+    "expired": false,
+    "source_post_id": "2109481110875099604",
+    "free_terms": "开源权重按 Apache-2.0 免费下载与商用；自托管，无平台赠送 API 额度。",
+    "product": "Mellum2.1",
+    "providers": [
+      {
+        "name": "Hugging Face",
+        "action_url": "https://huggingface.co/JetBrains"
+      },
+      {
+        "name": "JetBrains 博客",
+        "action_url": "https://blog.jetbrains.com/ai/2026/10/mellum2-1-gets-to-work-a-fast-open-model-for-coding-agents/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Mellum2.1 Thinking",
+        "action_url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking"
+      },
+      {
+        "name": "Mellum2.1 Thinking GGUF",
+        "action_url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF"
+      },
+      {
+        "name": "JetBrains 发布博客",
+        "action_url": "https://blog.jetbrains.com/ai/2026/10/mellum2-1-gets-to-work-a-fast-open-model-for-coding-agents/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
