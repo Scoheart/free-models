@@ -2941,5 +2941,88 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "trustedrouter-1m-free-tokens-deepseek-20261013",
+    "title": "TrustedRouter：新用户 100 万免费 token（DeepSeek 等，无需绑卡）",
+    "model": "DeepSeek 等（数百路由，OpenAI 兼容）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/TrustedRouter/status/2109767398194917522",
+    "summary": "TrustedRouter 是隐私优先的 OpenAI 兼容 AI 网关（base_url https://api.trustedrouter.com/v1），官网写明无需信用卡、新用户起步赠送 100 万免费 token（帖文强调可用于 DeepSeek）。目录含数百模型路由，支持零保留/机密计算等隐私标签，可从 OpenRouter 改一行 base_url 迁移；文档称可接 Codex、Claude Code、Cursor 等。条件：邮箱注册创建 API Key；免费额度用完后按量计费（约供应商成本 +5.5%）。",
+    "source": "TrustedRouter",
+    "collected_at": "2026-10-13T06:46:23+08:00",
+    "expired": false,
+    "source_post_id": "2109767398194917522",
+    "free_terms": "新用户约 1M 免费 token；无需绑卡；用完后按量付费",
+    "product": "TrustedRouter",
+    "providers": [
+      {
+        "name": "TrustedRouter",
+        "action_url": "https://trustedrouter.com/"
+      },
+      {
+        "name": "TrustedRouter Docs",
+        "action_url": "https://trustedrouter.com/docs"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "DeepSeek（TrustedRouter 路由页）",
+        "action_url": "https://trustedrouter.com/providers/deepseek"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "freebuff-claude-haiku-55-free-us-20261013",
+    "title": "Freebuff：Claude Haiku 5.5 永久免费（美国约每天 2 小时，广告资助）",
+    "model": "Claude Haiku 5.5",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/jahooma/status/2109768462688235592",
+    "summary": "Freebuff 创始人 James Grugett 宣布：编码 Agent 内 Claude Haiku 5.5 永久免费，美国用户约每天 2 小时，由广告资助以维持可持续。沿用 Freebuff 桌面 / Web / CLI（freebuff.com）。注意：第三方广告资助通道，非 Anthropic 官方免费 API；地区与额度可能调整；敏感代码慎用。条件：使用 Freebuff 客户端；美国可用额度约 2h/天。",
+    "source": "jahooma",
+    "collected_at": "2026-10-13T06:46:23+08:00",
+    "expired": false,
+    "source_post_id": "2109768462688235592",
+    "free_terms": "永久免费；美国约每天 2 小时 Haiku；广告资助",
+    "product": "Freebuff Claude Haiku 5.5",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Freebuff",
+        "action_url": "https://freebuff.com/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Claude Haiku 5.5（经 Freebuff）",
+        "action_url": "https://freebuff.com/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
