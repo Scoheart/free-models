@@ -2708,5 +2708,39 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "wavecode-muse-wonder-ad-free-20261013",
+    "title": "Wave Code：看广告免费用编码 Agent，首日接入 Meta Muse Wonder",
+    "model": "Muse Wonder",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/trywavecode/status/2109694756351803881",
+    "summary": "Meta 10/12 发布新旗舰 Muse Wonder（OpenRouter 上 $4/$20 每百万 token，官方无免费档）。小型初创 Wave Code（桌面编码 Agent，支持 Windows/macOS/Linux）宣布首日接入 Muse Wonder，靠在配套手机 App 里看赞助广告解锁 Agent 执行，无订阅、号称不限量；此前也上线了 Grok 4.7、Astra 等模型。注意：账号很小（约 50 粉），条款写明可能限速、延迟或作废广告解锁，Muse Wonder 是否真的可用请自行验证。",
+    "source": "trywavecode",
+    "collected_at": "2026-10-13T01:55:00+08:00",
+    "expired": false,
+    "source_post_id": "2109694756351803881",
+    "free_terms": "看广告解锁执行，无订阅；需桌面客户端 + 手机 App",
+    "product": "Wave Code",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Wave Code",
+        "action_url": "https://thewavecode.com/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Muse Wonder",
+        "action_url": "https://openrouter.ai/meta/muse-wonder"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
