@@ -2742,5 +2742,34 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "raphael-ai-free-image-no-login-20261013",
+    "title": "Raphael AI：免注册免绑卡的免费 AI 生图站",
+    "model": "Seedream 3.5（免费档）/ Nano Banana 2.1、Seedream 5.0 等（付费档）",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/lksmlabc/status/2109464822593278216",
+    "summary": "中文圈热帖（15 万+浏览、1700 收藏）推荐 Raphael AI：打开网页输入提示词即可出图，不用注册、不用绑卡，另带图片编辑、去背景、扩图、高清放大等工具。官网首页写明「100% Free · No Login Required · Unlimited」，默认免费档为 Seedream 3.5（0 积分、0.5K 分辨率）；Nano Banana、Seedream 5.0 等高阶模型和更高分辨率需要积分或付费套餐，帖子里说「随便用」偏夸张。站点另有免注册的免费 AI 视频（MiniMax H3 Turbo）入口。",
+    "source": "lksmlabc（另见 lynlng40217191 转述）",
+    "collected_at": "2026-10-13T02:58:00+08:00",
+    "expired": false,
+    "source_post_id": "2109464822593278216",
+    "free_terms": "免费档免登录、不限次（Seedream 3.5，0.5K）；高阶模型需积分/订阅",
+    "product": "Raphael AI",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Raphael AI（网页生图）",
+        "action_url": "https://raphael.app/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
