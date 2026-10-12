@@ -2771,5 +2771,40 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "nace-console-drex-25-credit-20261013",
+    "title": "Nace Console：新账号送 $25 API 额度（Drex 决策模型 + 文档智能 NDI）",
+    "model": "Drex 2.0 / Drex 1.5（开源权重）、Nace Document Intelligence 1.0",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/MAXdeg0/status/2109731683326980216",
+    "summary": "Nace 的开发者控制台 Console 一个 API Key 同时调用 Drex（给每个选项输出校准概率的小型决策模型，适合路由、分类、工具选择）和 NDI（解析/拆分/分类/抽取/溯源 36 种文件）。官网 FAQ 写明：新账号自带 $25 额度，创建后 30 天过期，之后按量充值；Drex 1.5 权重已在 GitHub/Hugging Face 开放可自部署。可通过 MCP、CLI、Python/TS SDK 接入 Claude Code、Codex、Cursor、opencode。帖主附的优惠码 MAX-1 称可再加 $10，未经官方核实。",
+    "source": "MAXdeg0（官网 nace.ai/developers 核实 $25 额度条款）",
+    "collected_at": "2026-10-13T03:55:00+08:00",
+    "expired": false,
+    "source_post_id": "2109731683326980216",
+    "free_terms": "新账号 $25 额度，30 天内有效；Drex 1.5 权重可免费自部署",
+    "product": "Nace Console",
+    "providers": [
+      {
+        "name": "Nace Console（创建 API Key）",
+        "action_url": "https://console.nace.ai/login"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Drex / NDI（官网介绍页）",
+        "action_url": "https://www.nace.ai/developers"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
