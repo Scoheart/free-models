@@ -3024,5 +3024,39 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "x-subscription-free-tier-grok-20261013",
+    "title": "The X Subscription 上线：含 $0 免费档（Grok Chat / Imagine / Build 有限额度）",
+    "model": "Grok",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/soloOS8/status/2109789963634032881",
+    "summary": "SpaceXSI 推出 The X Subscription，把 Grok、Grok Bot、Cursor 与 X Premium 合成一个订阅，共用一个 AI 用量池，额度每周刷新。分 Free $0 / Plus $8 / Premium $30 / Super $100 / Ultra $200 五档。免费档：有限的 Grok Chat 与 Agent 请求，Imagine 生图与 Grok Build 也是有限额度；Grok API 和 Cursor 需 Plus 起，Grok Bot、视频生成需 Premium 起。新用户今天起可用，全球几天内陆续开放。注意：免费档额度很小，主要价值在付费档打包降价（Premium $30 约等于原先 SuperGrok+Cursor Pro+X Premium+ 合计 $90）；第三方模型在 Cursor 中按 API 原价另计。",
+    "source": "soloOS8",
+    "collected_at": "2026-10-13T07:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2109789963634032881",
+    "free_terms": "Free 档 $0/月：Chat、Agent、Imagine、Grok Build 均为有限额度，每周刷新",
+    "product": "The X Subscription",
+    "providers": [
+      {
+        "name": "SpaceXSI（x.ai 定价页）",
+        "action_url": "https://x.ai/pricing"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Grok（grok.com）",
+        "action_url": "https://grok.com/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "image",
+      "coding"
+    ],
+    "barriers": []
   }
 ]
