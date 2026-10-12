@@ -2600,5 +2600,113 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "nous-portal-free-tier-11-models-20261013",
+    "title": "Nous Portal 免费档：11 个模型 $0（LongCat 2.5 Preview / Step 5 Preview / Laguna S 2.1 等）",
+    "model": "LongCat 2.5 Preview、LongCat 2.0、Step 5 Preview、Step 3.7 Flash、Laguna S/XS 2.1、Solar Mini 4、Ling 3.1 Flash、Ling 3.0 Flash Fin/Sante、MISSINGNO",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/dextune/status/2109676718877458501",
+    "summary": "Nous Portal 免费档当前有 11 个模型标价 $0（已用 Portal 公开模型接口核对）：美团 LongCat 2.5 Preview（1M 上下文，社区称 Portal 日用量第一）、LongCat 2.0、阶跃 Step 5 Preview（1M 上下文）、Step 3.7 Flash、Poolside Laguna S/XS 2.1（免费截止 10/31）、Upstage Solar Mini 4、inclusionAI Ling 3.1 Flash / Ling 3.0 Flash Fin / Sante，以及 stealth/missingno。在 Hermes Agent 里运行 hermes model 选 Nous Portal 即可用。条件：需 Nous Portal 账号与 API Key；除 Laguna 外未公布截止日，随时可能调整。",
+    "source": "dextune",
+    "collected_at": "2026-10-13T01:05:00+08:00",
+    "expired": false,
+    "source_post_id": "2109676718877458501",
+    "free_terms": "Portal 模型列表 $0/1M；Laguna S/XS 2.1 免费至 2026-10-31；其他未公布截止日",
+    "product": "Nous Portal free tier",
+    "providers": [
+      {
+        "name": "Nous Portal",
+        "action_url": "https://portal.nousresearch.com/models"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Hermes Agent",
+        "action_url": "https://hermes-agent.nousresearch.com/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Nous Portal 模型列表",
+        "action_url": "https://portal.nousresearch.com/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "subq-snap-100m-free-tokens-20261013",
+    "title": "SubQ Snap：长上下文决策模型上线，前 1 万名注册送 1 亿免费输入 token",
+    "model": "SubQ Snap",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/alex_whedon/status/2109676361371824229",
+    "summary": "SubQ 发布企业决策模型 Snap：384K 多模态上下文，Decision Index v0.2.1 得分 61.7（Jev 为 57.9），100K token 不到 1 秒出决策。定价输入 $0.05/百万 token、输出免费；前 10,000 名注册用户送 1 亿免费输入 token（官网同样写明）。官方提醒容量可能很快满额，延迟会波动。注意：这是输出结构化决策的模型，不是通用聊天/编码 LLM。条件：需注册；名额先到先得。",
+    "source": "alex_whedon",
+    "collected_at": "2026-10-13T01:05:00+08:00",
+    "expired": false,
+    "source_post_id": "2109676361371824229",
+    "free_terms": "前 10,000 名注册送 100M 输入 token；输出 token 免费；输入 $0.05/MM",
+    "product": "SubQ Snap",
+    "providers": [
+      {
+        "name": "SubQ",
+        "action_url": "https://subq.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "SubQ Snap",
+        "action_url": "https://subq.ai/"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "zcode-referral-glm53-flash-tokens-20261013",
+    "title": "智谱 ZCode 邀请活动：GLM-5.3-Flash 夜间每天 1 亿 token，新用户 5 天每天 800 万（至 11/13）",
+    "model": "GLM-5.3-Flash",
+    "type": "限时",
+    "deadline": "2026-11-13T23:59:59+08:00",
+    "url": "https://x.com/zcode_ai/status/2109678026971861370",
+    "summary": "ZCode（智谱 GLM-5.3 官方编码客户端）官方宣布 10/12–11/13 邀请活动，细则在客户端「奖励中心」。社区整理：每成功邀请 1 人得 1 张夜间卡（当晚 GLM-5.3-Flash 1 亿 token）；一周内邀请 2 人得周末卡（3 亿 token）；累计 10 人得周重置卡；被邀请新用户 5 天每天 800 万 token 加 1 张夜间卡；订阅用户可随机体验 GLM-5.3-HighSpeed（每次 15 分钟）。条件：需下载最新版 ZCode 客户端并登录；仅限官方客户端，开源自打包版不享受。",
+    "source": "zcode_ai",
+    "collected_at": "2026-10-13T01:05:00+08:00",
+    "expired": false,
+    "source_post_id": "2109678026971861370",
+    "free_terms": "10/12–11/13；邀请 1 人＝夜间 1 亿 Flash token；新用户 800 万/天 ×5 天；仅官方客户端",
+    "product": "ZCode",
+    "providers": [],
+    "agents": [
+      {
+        "name": "ZCode",
+        "action_url": "https://zcode.z.ai/cn"
+      }
+    ],
+    "models": [
+      {
+        "name": "GLM-5.3-Flash",
+        "action_url": "https://zcode.z.ai/cn"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
