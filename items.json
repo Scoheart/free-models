@@ -2512,5 +2512,54 @@
       "need_client",
       "need_key"
     ]
+  },
+  {
+    "id": "antigravity-free-claude46-until-nov2-20261012",
+    "title": "Google Antigravity 免费档：Claude Opus/Sonnet 4.6 与 GPT-OSS-120b 可用至 11/2",
+    "model": "Claude Opus 4.6 / Sonnet 4.6 / GPT-OSS-120b / Gemini 3.x",
+    "type": "限时",
+    "deadline": "2026-11-02T23:59:59+08:00",
+    "url": "https://x.com/orangercat/status/2109570145030971730",
+    "summary": "Google Antigravity 个人免费档（$0）现可用 Claude Opus 4.6、Sonnet 4.6（thinking）、GPT-OSS-120b，以及 Gemini 3.8/3.7/3.6 Flash 与 Gemini 3.1 Pro。官网模型页标注 Claude 4.6 与 GPT-OSS-120b 将于 2026-11-02 从免费档移除，之后免费档仅保留 Gemini。额度按周刷新，官方未公布具体数字；需个人 Google 账号、满 18 岁且在支持地区。勿用 Antigravity 登录态接第三方工具（如 OpenClaw），条款可能封号。条件：免费档有基础每周限额；Gemini 免费继续，Claude/GPT-OSS 限时至 11/2。",
+    "source": "orangercat",
+    "collected_at": "2026-10-12T17:47:08+08:00",
+    "expired": false,
+    "source_post_id": "2109570145030971730",
+    "free_terms": "免费档含 Claude 4.6 / GPT-OSS-120b 至 2026-11-02；Gemini 持续免费；每周刷新额度，数字未公开。",
+    "product": "Google Antigravity Free",
+    "providers": [
+      {
+        "name": "Google Antigravity",
+        "action_url": "https://antigravity.google/pricing"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Antigravity",
+        "action_url": "https://antigravity.google/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Models 文档",
+        "action_url": "https://antigravity.google/docs/models/"
+      },
+      {
+        "name": "Claude Opus 4.6",
+        "action_url": "https://antigravity.google/docs/models/"
+      },
+      {
+        "name": "Claude Sonnet 4.6",
+        "action_url": "https://antigravity.google/docs/models/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "zero_signup"
+    ]
   }
 ]
