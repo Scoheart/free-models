@@ -2038,5 +2038,136 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "bailian-decision-model-preview-free-20261012",
+    "title": "阿里云百炼：decision-model-preview 决策模型限时免费（北京/新加坡）",
+    "model": "decision-model-preview（TypeSafe System One）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/ListenJet/status/2109472007960072503",
+    "summary": "百炼上线结构化决策模型 decision-model-preview：一次请求对业务状态并行做 choice（多选一）、noul（是非）与 score（量表），返回概率与置信度，不生成长文。官方模型页与 Token Plan 文档均标北京、新加坡限时免费，调用可不消耗 Token Plan Credits。走 POST /compatible-mode/v1/systemone（需 WorkspaceId），需百炼 API Key；不能当普通 Chat Completions 用。截止日未公布，以控制台为准。注意：协议兼容 TypeSafe System One，文档未声明底层即 Jev。",
+    "source": "ListenJet",
+    "collected_at": "2026-10-12T10:48:23+08:00",
+    "expired": false,
+    "source_post_id": "2109472007960072503",
+    "free_terms": "华北2（北京）与新加坡标限时免费；Token Plan 下调用不消耗 Credits；无公开硬截止日。",
+    "product": "阿里云百炼 decision-model-preview",
+    "providers": [
+      {
+        "name": "百炼控制台",
+        "action_url": "https://bailian.console.aliyun.com/"
+      },
+      {
+        "name": "获取 API Key",
+        "action_url": "https://help.aliyun.com/zh/model-studio/get-api-key"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "decision-model-preview",
+        "action_url": "https://help.aliyun.com/zh/model-studio/decision-model-preview/"
+      },
+      {
+        "name": "决策模型 API",
+        "action_url": "https://help.aliyun.com/zh/model-studio/decision-model-api"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account"
+    ]
+  },
+  {
+    "id": "vllm-sr-decision-30-open-20261012",
+    "title": "vLLM Semantic Router：Decision 3.0 开源决策模型族（Apache-2.0）",
+    "model": "d3 / d3-flash / d3-mini / d3-nano / d3-lite / d3-edge",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/vllm_project/status/2109210324985622960",
+    "summary": "vLLM Semantic Router（vllm-sr）开源 Decision 3.0：六档多模态决策模型（约 0.6B–27B），输入文本/JSON，可选图像与视频，一次前向返回 choice / yes-no / score 的概率，不生成长文。权重在 Hugging Face（vllm-sr/d3 等），Apache-2.0，可用 transformers（trust_remote_code）本地加载。适合网关路由、工具筛选、质检等结构化判断；无托管免费 API 承诺，需自备算力。",
+    "source": "vllm_project",
+    "collected_at": "2026-10-12T10:48:23+08:00",
+    "expired": false,
+    "source_post_id": "2109210324985622960",
+    "free_terms": "开源权重可免费下载与按 Apache-2.0 使用；自托管，无平台赠送 API 额度。",
+    "product": "Decision 3.0",
+    "providers": [
+      {
+        "name": "Hugging Face",
+        "action_url": "https://huggingface.co/vllm-sr"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Decision 3.0 合集",
+        "action_url": "https://huggingface.co/collections/vllm-sr/decision-30"
+      },
+      {
+        "name": "d3 (27B)",
+        "action_url": "https://huggingface.co/vllm-sr/d3"
+      },
+      {
+        "name": "d3-flash",
+        "action_url": "https://huggingface.co/vllm-sr/d3-flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "viorant-jev-builder-credits-20261012",
+    "title": "Viorant：Builder Credits，前 1000 名可用免费档额度跑托管 JEV MCP",
+    "model": "JEV（TypeSafe，经 Viorant MCP）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/viorant_ai/status/2109472976370573757",
+    "summary": "Viorant 官方宣布 Builder Credits Program：一般 JEV 需付费档，现对前 1000 名符合条件的新注册用户开放例外——可用 Free Plan 自带的 2500 一次性 Vio Credits 调用托管 JEV MCP（经 Vercel AI Gateway）。按发布价 100 credits / 百万 input tokens，理论最高约 2500 万 JEV input tokens（非额外赠送、非保证量，受取整与其他消耗影响）。需 Google 账号注册并激活 JEV MCP；名额有限，条款见官网。",
+    "source": "viorant_ai",
+    "collected_at": "2026-10-12T10:48:23+08:00",
+    "expired": false,
+    "source_post_id": "2109472976370573757",
+    "free_terms": "前 1000 名新用户可用 Free Plan 2500 credits 跑 JEV；理论最高约 25M input tokens；非额外额度。",
+    "product": "Viorant JEV MCP",
+    "providers": [
+      {
+        "name": "Viorant 注册",
+        "action_url": "https://viorant.ai/jev"
+      },
+      {
+        "name": "Viorant JEV",
+        "action_url": "https://viorant.ai/jev"
+      },
+      {
+        "name": "Credits 条款",
+        "action_url": "https://viorant.ai/terms-credit-program"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "JEV 文档",
+        "action_url": "https://docs.viorant.ai/connectors/jev"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
