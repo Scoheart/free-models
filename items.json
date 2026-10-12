@@ -2302,5 +2302,136 @@
       "need_client",
       "zero_signup"
     ]
+  },
+  {
+    "id": "artex-coder-7b-open-20261012",
+    "title": "Artex Coder 7B：开源精简编码模型（Apache-2.0）+ 官网免费试用",
+    "model": "artex-coder-7b",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/Artex_llm/status/2109549631013007380",
+    "summary": "Artex 官方发布 artex-coder-7b：基于 Qwen2.5-Coder-7B-Instruct 微调的 7B 编码助手，倾向用代码而非长文回答，支持英/印尼语。权重在 Hugging Face（0XARTEX/artex-coder-7b）按 Apache-2.0 免费下载；约 4-bit MLX 可在 Mac 本地跑（约 4GB）。官网 artexllm.com 提供在线免费试用（经 Surplus API，勿贴密钥）。无托管 API 额度承诺，适合本地 snippet/小修。",
+    "source": "Artex_llm",
+    "collected_at": "2026-10-12T15:45:39+08:00",
+    "expired": false,
+    "source_post_id": "2109549631013007380",
+    "free_terms": "开源权重 Apache-2.0 可免费下载；官网提供免费网页试用；本地运行无需 Key。",
+    "product": "Artex Coder 7B",
+    "providers": [
+      {
+        "name": "Hugging Face",
+        "action_url": "https://huggingface.co/0XARTEX/artex-coder-7b"
+      },
+      {
+        "name": "Artex 官网",
+        "action_url": "https://artexllm.com"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "artex-coder-7b",
+        "action_url": "https://huggingface.co/0XARTEX/artex-coder-7b"
+      },
+      {
+        "name": "Artex 官网 Demo",
+        "action_url": "https://artexllm.com"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "zero_signup",
+      "need_client"
+    ]
+  },
+  {
+    "id": "cloudflare-clef-open-decision-20261012",
+    "title": "Cloudflare Clef：开源决策模型 + Workers AI 托管（Apache-2.0）",
+    "model": "Clef / Clef-flash / Clef-omni",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/braincramps/status/2109541046262575177",
+    "summary": "Cloudflare 开源 Clef 决策模型族（约 27B，自 Qwen3.8-27B 后训练）：输入状态（文本/JSON/图像/视频）与结构化问题，一次前向返回各选项概率，不生成长文；兼容 Jev/SystemOne API。权重在 Hugging Face（Cloudflare/clef 等）Apache-2.0 可下；Workers AI 提供托管（@cf/cloudflare/clef、clef-flash、clef-omni），可用 Workers AI 免费 Neurons 额度试用。适合路由、工单分流、质检等结构化判断。",
+    "source": "braincramps",
+    "collected_at": "2026-10-12T15:45:39+08:00",
+    "expired": false,
+    "source_post_id": "2109541046262575177",
+    "free_terms": "开源权重可免费下载；Workers AI 托管可走平台免费 Neurons 额度（有日限额）。",
+    "product": "Cloudflare Clef",
+    "providers": [
+      {
+        "name": "Hugging Face",
+        "action_url": "https://huggingface.co/Cloudflare/clef"
+      },
+      {
+        "name": "Cloudflare 博客",
+        "action_url": "https://blog.cloudflare.com/clef-decision-models/"
+      },
+      {
+        "name": "Workers AI Changelog",
+        "action_url": "https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Clef",
+        "action_url": "https://huggingface.co/Cloudflare/clef"
+      },
+      {
+        "name": "Clef-flash",
+        "action_url": "https://huggingface.co/Cloudflare/clef-flash"
+      },
+      {
+        "name": "Cloudflare 发布博客",
+        "action_url": "https://blog.cloudflare.com/clef-decision-models/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key",
+      "need_client"
+    ]
+  },
+  {
+    "id": "railway-free-vm-agents-20261012",
+    "title": "Railway：免注册免费 VM + 内置编码 Agent 与 AI 额度（ssh railway.new）",
+    "model": null,
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/hiwise_aigc/status/2109547944152289659",
+    "summary": "Railway 提供免账号免绑卡试用：终端执行 ssh railway.new 约 1.4 秒得到 2 核 2G Linux VM，预装 Railway Agent、Claude Code、Codex、OpenCode、Cursor CLI、Grok、pi 等，并附带起步 AI 预算。免费构建窗口约 60 分钟，之后 24 小时内可认领保留，否则自动删除；每 IP 每日约 3 台、共享 AI 预算有限。适合一次性沙盒/原型，不当长期服务器。条件：需本机 SSH 密钥；高峰可能暂时关闭匿名试用。",
+    "source": "hiwise_aigc",
+    "collected_at": "2026-10-12T15:45:39+08:00",
+    "expired": false,
+    "source_post_id": "2109547944152289659",
+    "free_terms": "免注册免费 VM（约 60 分钟构建）+ 预装编码 Agent 与共享 AI 预算；认领需注册。",
+    "product": "Railway Free VM",
+    "providers": [
+      {
+        "name": "Railway Free VM",
+        "action_url": "https://railway.com/free-vm"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "zero_signup",
+      "need_client"
+    ]
   }
 ]
