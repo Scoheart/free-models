@@ -3700,5 +3700,91 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "fish-audio-drama3-open-weights-20261014",
+    "title": "Fish Audio Drama 3：开源权重 TTS 模型（年收入 50 万美元以下可免费商用）",
+    "model": "fishaudio/drama-3",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/FishAudio/status/2110038429199450126",
+    "summary": "Fish Audio 发布 Drama 3 并开放权重（Hugging Face fishaudio/drama-3）：35B MoE（每 token 激活 3B）的多角色 TTS，支持逐词控制情绪/语气、单段文本最多 16 个角色、声音克隆与长文本流式。许可为 Fish Audio Community License：研究与非商用免费，年收入低于 50 万美元的个人/公司可免费商用；托管服务（Hosted Service）需另签协议。可用 SGLang-Omni 本地部署（sgl-omni serve --model-path fishaudio/drama-3）。官方同时有 API 八折等发布福利（非免费）。本地跑需较大显存。",
+    "source": "FishAudio 官方 + Hugging Face 模型卡/LICENSE",
+    "collected_at": "2026-10-14T05:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2110038429199450126",
+    "free_terms": "权重免费下载；研究/非商用免费；年收入 < $500K 可免费商用；托管服务需单独授权。",
+    "product": "Fish Audio Drama 3",
+    "providers": [
+      {
+        "name": "Fish Audio 官网",
+        "action_url": "https://fish.audio/"
+      },
+      {
+        "name": "Fish Audio 模型与定价文档",
+        "action_url": "https://docs.fish.audio/developer-guide/models-pricing/models-overview"
+      }
+    ],
+    "agents": [
+      {
+        "name": "SGLang-Omni 部署指南（Drama 3）",
+        "action_url": "https://sgl-project.github.io/sglang-omni/cookbook/fishaudio_drama3.html"
+      }
+    ],
+    "models": [
+      {
+        "name": "Drama 3 权重（Hugging Face）",
+        "action_url": "https://huggingface.co/fishaudio/drama-3"
+      },
+      {
+        "name": "许可协议",
+        "action_url": "https://huggingface.co/fishaudio/drama-3/blob/main/LICENSE"
+      }
+    ],
+    "scenes": [
+      "tts",
+      "voice"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "duck-ai-free-no-account-chat-20261014",
+    "title": "Duck.ai：免注册免绑卡免费用 Claude Haiku 4.5 / GPT-5.4 mini 等模型对话",
+    "model": "Claude 4.5 Haiku / GPT-5.4 mini / GPT-5.4 nano / Mistral Small 4 / gpt-oss-120b / Gemma 4 31B",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/melophile0646/status/2110113904114446347",
+    "summary": "DuckDuckGo 的 Duck.ai 可匿名免费和第三方模型对话，无需账号、无需信用卡。官方帮助页列出的免费模型：Claude 4.5 Haiku、Mistral Small 4、GPT-5.4 nano、GPT-5.4 mini，以及由 Tinfoil.sh 托管的 gpt-oss-120b 和 Gemma 4 31B；订阅用户另有高级模型。有每日消息上限。社区帖称还能用 GPT-6 Luna，官方页未列出，以实际界面为准。只有网页对话，没有 API。",
+    "source": "melophile0646 + DuckDuckGo 帮助页",
+    "collected_at": "2026-10-14T05:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2110113904114446347",
+    "free_terms": "长期免费；免注册免绑卡；有每日消息上限；无 API。",
+    "product": "Duck.ai",
+    "providers": [
+      {
+        "name": "Duck.ai（直接开聊）",
+        "action_url": "https://duck.ai/"
+      },
+      {
+        "name": "Duck.ai 帮助页（模型与限额）",
+        "action_url": "https://duckduckgo.com/duckduckgo-help-pages/duckai"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Duck.ai 免费模型列表",
+        "action_url": "https://duckduckgo.com/duckduckgo-help-pages/duckai"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
