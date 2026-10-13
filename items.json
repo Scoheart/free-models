@@ -3058,5 +3058,46 @@
       "coding"
     ],
     "barriers": []
+  },
+  {
+    "id": "batchrate-10m-free-tokens-20261013",
+    "title": "Batchrate：新账号邮箱验证后送 1000 万免费 token（无需绑卡）",
+    "model": "Qwen3.6 35B / Qwen3.8 27B（批量推理）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/batchrate/status/2109835882882822211",
+    "summary": "Batchrate（batchrate.ai）提供 OpenAI 兼容的 Files/Batches 批量推理：适合可等待数小时的分类、抽取、摘要、读图等任务。官方与定价页确认：邮箱验证后新账号一次性获得 10,000,000 免费 token（输入+输出共用），先扣免费额度，无需绑卡；免费 token 仅适用于 chat 模型，不含 Whisper 转写。付费后按完成请求计费（如 qwen3.6-35b-a3b 约 $0.05/$0.40 每百万输入/输出），base_url 为 https://api.batchrate.ai/v1。",
+    "source": "batchrate",
+    "collected_at": "2026-10-13T10:44:53+08:00",
+    "expired": false,
+    "source_post_id": "2109835882882822211",
+    "free_terms": "新账号邮箱验证后一次性 10M token；无需绑卡；仅 chat 模型；非限时试用",
+    "product": "Batchrate Batch Inference",
+    "providers": [
+      {
+        "name": "Batchrate",
+        "action_url": "https://batchrate.ai/signup"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Qwen3.6 35B (qwen3.6-35b-a3b)",
+        "action_url": "https://batchrate.ai/pricing"
+      },
+      {
+        "name": "Qwen3.8 27B (qwen3.8-27b)",
+        "action_url": "https://batchrate.ai/pricing"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "image"
+    ],
+    "barriers": [
+      "need_key",
+      "zero_signup"
+    ]
   }
 ]
