@@ -3636,5 +3636,69 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "beatapi-free-models-limited-20261014",
+    "title": "BeatAPI：7 个限时免费模型 API（免绑卡，OpenAI 兼容）",
+    "model": "gpt-6.1-sol-free / deepseek-v4.1-flash-free / deepseek-v4-flash-0731-free / gemini-3.8-flash-free / glm-5.3-free / glm-5.3-flash-free / jev-1.13-free",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/0xsweet_amelie/status/2110093354696585383",
+    "summary": "BeatAPI（beatapi.io）聚合网关限时开放 7 个免费模型：GPT-6.1 Sol、DeepSeek V4.1 Flash、DeepSeek V4 Flash、Gemini 3.8 Flash、GLM 5.3、GLM 5.3 Flash、JEV 1.13（决策专用）。注册拿 API Key 即可调用，免绑卡、免充值；base URL https://api.beatapi.io，OpenAI 兼容（/v1/chat/completions 等）。限速：首充前每账号每分钟 1 次成功请求，任意充值后升至 10 次/分钟（免费额度与付费限速分开计）。官方写明限时优惠、名单可能变更，可用 capabilities/search 查当前免费模型。",
+    "source": "0xsweet_amelie + beatapi.io 官网/文档",
+    "collected_at": "2026-10-14T03:44:00+08:00",
+    "expired": false,
+    "source_post_id": "2110093354696585383",
+    "free_terms": "限时免费；免绑卡；首充前 1 RPM、充值后 10 RPM；名单可变。",
+    "product": "BeatAPI free models",
+    "providers": [
+      {
+        "name": "BeatAPI 控制台（拿 Key）",
+        "action_url": "https://beatapi.io/dashboard/get-started"
+      },
+      {
+        "name": "BeatAPI 文档",
+        "action_url": "https://docs.beatapi.io/quick-guide"
+      },
+      {
+        "name": "BeatAPI 定价",
+        "action_url": "https://beatapi.io/pricing"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      },
+      {
+        "name": "WorkBuddy",
+        "action_url": "https://www.workbuddy.ai/"
+      },
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      }
+    ],
+    "models": [
+      {
+        "name": "免费模型说明",
+        "action_url": "https://beatapi.io/skill-refs/free-models.md"
+      },
+      {
+        "name": "GPT-6.1 Sol (Free)",
+        "action_url": "https://beatapi.io/gpt-6-1-sol-api?variant=gpt-6.1-sol-free"
+      },
+      {
+        "name": "模型目录",
+        "action_url": "https://beatapi.io/model"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
