@@ -3786,5 +3786,53 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "liquid-lfm25-24b-a2b-open-weights-20261014",
+    "title": "Liquid AI LFM2.5-24B-A2B：开源权重本地 MoE（年收入约 1000 万美元以下可免费商用）+ Console 送 $2",
+    "model": "LFM2.5-24B-A2B / LFM2.5-24B-A2B-Base",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/liquidai/status/2110055807194931348",
+    "summary": "Liquid AI 发布 LFM2.5 家族最大成员 LFM2.5-24B-A2B：总参 24B、每 token 激活约 2B，上下文 131K，面向本地/端侧 agent。Base 与后训练权重均已开源上架 Hugging Face，支持 llama.cpp/GGUF、MLX、vLLM、SGLang、ONNX。许可为 LFM Open License（与 d1 同系：低营收可免费商用，超出需付费许可）。另可在 Liquid Console 注册获 $2 API 试用额度（输入约 $0.10/1M、输出约 $1.00/1M）。",
+    "source": "Liquid AI (@liquidai)",
+    "collected_at": "2026-10-14T06:46:57+08:00",
+    "expired": false,
+    "source_post_id": "2110055807194931348",
+    "free_terms": "开源权重可下载；LFM Open License（低营收免费商用）；Console 新用户约 $2 试用额度。",
+    "product": "Liquid AI LFM2.5-24B-A2B",
+    "providers": [
+      {
+        "name": "Liquid Console（API Key / $2 试用）",
+        "action_url": "https://console.liquid.ai"
+      },
+      {
+        "name": "Hugging Face（LiquidAI）",
+        "action_url": "https://huggingface.co/LiquidAI"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "LFM2.5-24B-A2B（HF 权重）",
+        "action_url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+      },
+      {
+        "name": "官方博客与文档",
+        "action_url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b"
+      },
+      {
+        "name": "模型文档",
+        "action_url": "https://docs.liquid.ai/lfm/models/lfm25-24b-a2b"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "need_key"
+    ]
   }
 ]
