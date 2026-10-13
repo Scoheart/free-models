@@ -3180,5 +3180,47 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "udgamlabs-chitra-tiny-open-image-20261013",
+    "title": "Chitra Tiny：212M 开源文生图模型（Apache-2.0），官网免登录免费试用",
+    "model": "Chitra Tiny（212M 参数，英文文生图，256×256）",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/udgamlabs/status/2109880292416930225",
+    "summary": "印度初创 Udgam Labs 发布从零训练的小型文生图模型 Chitra Tiny：约 2.12 亿参数，用约 470 万张公有领域 / CC0 图片训练，输出 256×256 图片，官方称笔记本上约 3 秒出一张。权重以 Apache-2.0 开源（Hugging Face / GitHub），官网和 Hugging Face Space 可免登录免费在线试用。画质定位入门级，适合本地实验、教学和轻量生图；发帖账号很新、关注者极少，属于小团队发布。",
+    "source": "udgamlabs",
+    "collected_at": "2026-10-13T13:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2109880292416930225",
+    "free_terms": "开源权重 Apache-2.0；官网 / HF Space 在线试用免费、无需登录",
+    "product": "Udgam Labs – Chitra Tiny",
+    "providers": [
+      {
+        "name": "Udgam Labs 官网试用",
+        "action_url": "https://udgamlabs.com/models/chitra-tiny"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Chitra Tiny 权重（Hugging Face）",
+        "action_url": "https://huggingface.co/UdgamLabs/Chitra-Tiny"
+      },
+      {
+        "name": "Chitra Tiny 在线 Space",
+        "action_url": "https://huggingface.co/spaces/jiteshkprasad/Chitra-Tiny"
+      },
+      {
+        "name": "Chitra Tiny 源码（GitHub）",
+        "action_url": "https://github.com/UdgamLabs/chitra-tiny"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
