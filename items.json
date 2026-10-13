@@ -3454,5 +3454,47 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "sarashina-free-beta-api-20261013",
+    "title": "软银旗下 SB Intuitions 开放 Sarashina 免费公测：6 个日语模型 API + 网页对话全免费",
+    "model": "Sarashina3 mini / nano / guard / embedding / rerank / translate",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/durantimi/status/2110019718610669666",
+    "summary": "软银子公司 SB Intuitions 于 10 月 13 日开放「Sarashina 服务」免费 Beta：可用 Google 账号直接登录，无需申请，API 和网页聊天都免费。提供 6 个模型：对话用 sarashina3-mini（128k 上下文，支持工具调用、结构化输出）和 sarashina3-nano（轻量高速），另有安全审核 guard、向量 embedding、重排 rerank、日英互译 translate。Chat Completions 接口为 OpenAI 风格（https://api.sarashina.ai/v1，Bearer Key）。有速率限制：mini/guard/translate 每分钟 6 次，nano/embedding/rerank 每分钟 60 次。官方未定结束时间；注意 Beta 期间输入输出可能被用于改进模型，别传敏感内容。日语能力强，适合日语对话、翻译、RAG。",
+    "source": "x @durantimi + SB Intuitions 官方新闻稿（PR TIMES）+ docs.sarashina.ai",
+    "collected_at": "2026-10-13T22:58:00+08:00",
+    "expired": false,
+    "source_post_id": "2110019718610669666",
+    "free_terms": "免费 Beta，结束时间未定；按模型限速（6 或 60 RPM）。",
+    "product": "Sarashina 服务（SB Intuitions）",
+    "providers": [
+      {
+        "name": "Sarashina（SB Intuitions）",
+        "action_url": "https://sarashina.ai/"
+      },
+      {
+        "name": "Sarashina API 文档",
+        "action_url": "https://docs.sarashina.ai/introduction"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Sarashina3 模型列表",
+        "action_url": "https://docs.sarashina.ai/models"
+      },
+      {
+        "name": "Chat Completions API",
+        "action_url": "https://docs.sarashina.ai/api-reference/chat-completions"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
