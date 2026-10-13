@@ -3222,5 +3222,84 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "opencode-zen-cat-jam-free-20261013",
+    "title": "OpenCode Zen：新隐身模型 Cat Jam Free（cat-jam-free）限时免费",
+    "model": "Cat Jam Free（cat-jam-free，隐身模型，提供方未公开）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/FOMAnews/status/2109894568548196781",
+    "summary": "OpenCode Zen 新上架隐身模型 Cat Jam Free（model id：cat-jam-free），已出现在公开的 /v1/models 列表和官方 Zen 文档里，输入/输出/缓存读均标为免费。官方说明：限时免费，团队借这段时间收集反馈改进模型，背后提供方未公开，结束时间未公布。注意：免费期内请求数据可能被用于改进模型，别喂公司代码或客户数据。用法：登录 OpenCode Zen 拿 API Key，在 OpenCode 里 /models 选 Cat Jam Free，或用 OpenAI 兼容端点 https://opencode.ai/inference/v1/chat/completions 调 cat-jam-free。",
+    "source": "x @FOMAnews",
+    "collected_at": "2026-10-13T14:55:00+08:00",
+    "expired": false,
+    "source_post_id": "2109894568548196781",
+    "free_terms": "OpenCode Zen 限时免费；截止未公布；免费期数据可能用于改进模型。",
+    "product": "OpenCode Zen · Cat Jam Free (opencode/cat-jam-free)",
+    "providers": [
+      {
+        "name": "OpenCode Zen",
+        "action_url": "https://opencode.ai/zen"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/download"
+      }
+    ],
+    "models": [
+      {
+        "name": "Cat Jam Free 文档与定价（OpenCode Zen Docs）",
+        "action_url": "https://opencode.ai/docs/zen/"
+      },
+      {
+        "name": "Zen 公开模型列表（/v1/models）",
+        "action_url": "https://opencode.ai/zen/v1/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "need_client"
+    ]
+  },
+  {
+    "id": "codex-day8-global-usage-reset-20261013",
+    "title": "Codex：「28 天每日改进或重置」第 8 天，全员用量再次免费重置",
+    "model": "Codex / ChatGPT Work（GPT-6.1 Sol 等，付费档共用额度）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/thsottiaux/status/2109812216212099456",
+    "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）10 月初立下规则：连续 28 天，每天要么上线一项多数人用得上的改进，要么给大家重置用量。10/13 第 8 天他只发了「Day 8/ Reset」，随后确认全局重置已在美西时间当天生效，已完成推送。之前第 2、3、6 天也做过重置，第 7 天是把 GPT-6.1 Sol 在 Codex 里的默认上下文提到 500K。重置对象是 ChatGPT 付费账号在 Codex / ChatGPT Work 里的五小时和周额度，不是 API 余额；免费档不一定受益。接下来还有约 20 天，可能还会再重置，值得关注他的帖子。",
+    "source": "x @thsottiaux",
+    "collected_at": "2026-10-13T14:55:00+08:00",
+    "expired": false,
+    "source_post_id": "2109812216212099456",
+    "free_terms": "ChatGPT 付费档 Codex 用量一次性全局重置（已生效）；不改 API 余额；后续是否再重置看每日公告。",
+    "product": "OpenAI Codex usage reset (Day 8)",
+    "providers": [
+      {
+        "name": "Codex（ChatGPT 网页入口）",
+        "action_url": "https://chatgpt.com/codex"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Codex 官方文档与下载",
+        "action_url": "https://developers.openai.com/codex"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
