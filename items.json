@@ -3335,5 +3335,78 @@
     "barriers": [
       "cn_account"
     ]
+  },
+  {
+    "id": "zhipuai-glm-47-flash-free-api-20261013",
+    "title": "智谱 GLM-4.7-Flash：开放平台长期免费 API（限并发不限总量）",
+    "model": "glm-4.7-flash",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/bb833dong/status/2109972481184546871",
+    "summary": "社区 10 月清单再次核对：智谱开放平台把 GLM-4.7-Flash（30B-A3B 混合思考）标在官方免费模型文档页，属长期免费档而非新用户试用包；需注册并创建 API Key，受并发/速率限制，不按 token 扣余额。上下文约 200K、最大输出约 128K；Base URL https://open.bigmodel.cn/api/paas/v4，模型名 glm-4.7-flash。旧版 glm-4.5-flash 已于 2026-01-30 下线并自动路由到本模型。权重亦已开源（Hugging Face / ModelScope）。",
+    "source": "x @bb833dong + docs.bigmodel.cn",
+    "collected_at": "2026-10-13T19:45:31+08:00",
+    "expired": false,
+    "source_post_id": "2109972481184546871",
+    "free_terms": "长期免费 API；限并发/速率，不限总量；需 API Key；具体限流以控制台为准。",
+    "product": "Zhipu GLM-4.7-Flash free API",
+    "providers": [
+      {
+        "name": "智谱开放平台",
+        "action_url": "https://open.bigmodel.cn/"
+      },
+      {
+        "name": "免费模型文档",
+        "action_url": "https://docs.bigmodel.cn/cn/guide/models/free/glm-4.7-flash"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "GLM-4.7-Flash（HF）",
+        "action_url": "https://huggingface.co/zai-org/GLM-4.7-Flash"
+      },
+      {
+        "name": "GLM-4.7-Flash（ModelScope）",
+        "action_url": "https://modelscope.cn/models/ZhipuAI/GLM-4.7-Flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account"
+    ]
+  },
+  {
+    "id": "vgenv-minimax-h3-free-credits-20261013",
+    "title": "vgenv：MiniMax H3 文生视频 / 图生视频，登录送免费额度",
+    "model": "MiniMax H3",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/cySG20/status/2109966579190632743",
+    "summary": "vgenv.com 提供基于 MiniMax H3 的云端视频生成（文生视频、图生视频、人物替换、2× 放大等，约 4–15 秒）。官网写明登录即可用免费额度生成，无订阅/预付；用尽后按量约 $0.003/秒起（768p）。OpenAI 兼容风格的开发者 REST API 亦提供低价按量接入。具体每日免费条数与登录方式以官网控制台为准。",
+    "source": "x @cySG20 + vgenv.com",
+    "collected_at": "2026-10-13T19:45:31+08:00",
+    "expired": false,
+    "source_post_id": "2109966579190632743",
+    "free_terms": "登录送免费额度生成 MiniMax H3 视频；无订阅预付；超额按量约 $0.003/秒起。",
+    "product": "vgenv MiniMax H3 free credits",
+    "providers": [
+      {
+        "name": "vgenv",
+        "action_url": "https://vgenv.com"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
