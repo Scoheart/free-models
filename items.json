@@ -3099,5 +3099,50 @@
       "need_key",
       "zero_signup"
     ]
+  },
+  {
+    "id": "infron-free-models-roster-20261013",
+    "title": "Infron：9 个 :free 模型 $0/百万 token（DeepSeek V4 Flash、Qwen3.8 等）",
+    "model": "DeepSeek V4 Flash / Qwen3.8 Flash / Qwen3.8 27B / Atria Dawn / Ling 3.1 / Apodex 1.1 Mini 等",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/InfronAI/status/2109840531266134444",
+    "summary": "Infron（OpenAI 兼容的模型路由，base_url https://llm.onerouter.pro/v1）官方称目前有 9 个带 :free 后缀的免费模型，输入输出均 $0，不扣 credit，如 deepseek/deepseek-v4-flash:free（1M 上下文）、qwen/qwen3.8-flash:free、qwen/qwen3.8-27b:free。官方文档写明：标准免费模型要求账户余额 ≥ $5（只做门槛不扣费，新账号余额为 0，充值另收 5%+$0.35 手续费），所有免费模型合计每账号每天 1000 次请求，UTC 0 点重置；免费池共享、无 SLA，部分走 Infron(CN) 节点。",
+    "source": "InfronAI",
+    "collected_at": "2026-10-13T11:40:22+08:00",
+    "expired": false,
+    "source_post_id": "2109840531266134444",
+    "free_terms": "$0/token 不扣余额；需账户余额 ≥$5（押着不花）；每天共 1000 次请求，00:00 UTC 重置；无 SLA",
+    "product": "Infron :free models",
+    "providers": [
+      {
+        "name": "Infron",
+        "action_url": "https://infron.ai/login"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "DeepSeek V4 Flash (Free)",
+        "action_url": "https://infron.ai/models/deepseek/deepseek-v4-flash:free"
+      },
+      {
+        "name": "Qwen3.8 Flash (Free)",
+        "action_url": "https://infron.ai/models/qwen/qwen3.8-flash:free"
+      },
+      {
+        "name": "Qwen3.8 27B (Free)",
+        "action_url": "https://infron.ai/models/qwen/qwen3.8-27b:free/quick-start"
+      }
+    ],
+    "docs_url": "https://infron.ai/docs/overview/free-models",
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "deposit_hold"
+    ]
   }
 ]
