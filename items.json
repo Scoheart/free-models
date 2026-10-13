@@ -3548,5 +3548,53 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "antigravity-scientists-argon-6mo-free-20261014",
+    "title": "Google Antigravity：1 万名科研人员最高用量档免费 6 个月（含 Gemini 4 Argon）",
+    "model": "Gemini 4 Argon（最高用量档）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/pushmeet/status/2110049822397055440",
+    "summary": "Google DeepMind（Pushmeet Kohli）与官网 Gemini for Science 同步宣布：向最多 1 万名入选科研人员，在 Google Antigravity 提供最高用量档免费 6 个月，含前沿模型 Gemini 4 Argon。主要面向高校、学位授予机构、非营利研究所或国家实验室的非商业科研；凭机构或个人 Google 账号填意向表申请，按科研资历与潜在影响筛选。普通免费档与 API 免费档不含 Argon。条件：需通过筛选；获批后免费用 6 个月；面向科研身份。",
+    "source": "pushmeet",
+    "collected_at": "2026-10-14T00:59:49+08:00",
+    "expired": false,
+    "source_post_id": "2110049822397055440",
+    "free_terms": "最多 1 万名入选科研人员：Antigravity 最高用量档 + Gemini 4 Argon 免费 6 个月；需申请筛选；非商业科研。",
+    "product": "Google Antigravity · Scientists program",
+    "providers": [
+      {
+        "name": "申请表（Interest form）",
+        "action_url": "https://forms.gle/WvmBbPvRbpKG1BPn9"
+      },
+      {
+        "name": "Gemini for Science",
+        "action_url": "https://ai.google/gemini-for-science/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Google Antigravity",
+        "action_url": "https://antigravity.google/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Gemini 4 Argon（获批后在 Antigravity 内）",
+        "action_url": "https://antigravity.google/"
+      },
+      {
+        "name": "开发者博文（付费 API 对照）",
+        "action_url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
