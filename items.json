@@ -3301,5 +3301,39 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "tencent-lightvela-free-month-20261013",
+    "title": "腾讯 LightVela：云端 Hermes Agent 首月免费，送 2 核 8G 云主机 + 每月 4500 模型积分",
+    "model": "LightVela 内置模型（按积分计费，具体模型未公开列出）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/ai_fengshou/status/2109921330258903428",
+    "summary": "LightVela 是腾讯轻量云团队新推出的个人 AI 助理（云端托管 Hermes Agent），可接入微信、QQ、企业微信、飞书。多位用户 10/13 发帖称：现在登录就送约 68 元的 Launch 会员，首单免费 1 个月，包含一台 2 核 8G、50G 存储的云端虚拟机（出口 IP 在上海，可访问外网）和每月 4500 模型积分，定时任务可以挂在云上跑，电脑关机也照常执行。目前只有网页版；国内产品需实名，多号基本行不通。官方页面为前端渲染，活动截止时间与积分对应的具体模型暂未查到，以官网套餐页为准。",
+    "source": "x @ai_fengshou / @qouiqwwp / @LiFeng61532",
+    "collected_at": "2026-10-13T16:46:03+08:00",
+    "expired": false,
+    "source_post_id": "2109921330258903428",
+    "free_terms": "新用户首单免费 1 个月（约 68 元 Launch 会员）：2C8G/50G 云端 VM + 每月 4500 模型积分；需实名；截止时间未公布。",
+    "product": "Tencent LightVela personal agent free first month",
+    "providers": [
+      {
+        "name": "LightVela 套餐页",
+        "action_url": "https://lightvela.com/subscribe/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "LightVela 官网（网页版）",
+        "action_url": "https://lightvela.com"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "cn_account"
+    ]
   }
 ]
