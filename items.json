@@ -3408,5 +3408,51 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "scaledown-50m-free-tokens-openrouter-20261013",
+    "title": "ScaleDown：任务专用小模型新账号送 5000 万免费 token，并已上线 OpenRouter（输出免费）",
+    "model": "ScaleDown Summarize / Extract / Classify / Compress",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/pengsonal/status/2109983552427495683",
+    "summary": "ScaleDown 推出四个任务专用的约束解码小模型（摘要 summarize、结构化抽取 extract、分类 classify、上下文压缩 compress），1M 上下文、支持文本和图片。官方博客写明托管 API 给每个 agent / 新账号 5000 万免费 token；X 上有帖称“前 50 小时免费、周四早上结束”，但官方页面未给出具体截止时间，以官网为准。直连 API 的 Key 目前需联系销售；另一个入口是 OpenRouter，已上架 scaledown/summarize、scaledown/extract 等，输入约 $0.04/百万 token、输出 $0。适合在大模型前做摘要、抽取、分类以省 token，不是通用聊天模型。",
+    "source": "x @pengsonal + @painn_x + @OpenRouter + docs.scaledown.ai",
+    "collected_at": "2026-10-13T20:54:17+08:00",
+    "expired": false,
+    "source_post_id": "2109983552427495683",
+    "free_terms": "新账号 / 每个 agent 送 5000 万免费 token（托管 API）；OpenRouter 上输出免费、输入按量计费。",
+    "product": "ScaleDown task-specific SLMs",
+    "providers": [
+      {
+        "name": "ScaleDown",
+        "action_url": "https://scaledown.ai/"
+      },
+      {
+        "name": "OpenRouter（ScaleDown）",
+        "action_url": "https://openrouter.ai/scaledown"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "scaledown/summarize",
+        "action_url": "https://openrouter.ai/scaledown/summarize"
+      },
+      {
+        "name": "scaledown/classify",
+        "action_url": "https://openrouter.ai/scaledown/classify"
+      },
+      {
+        "name": "ScaleDown 文档",
+        "action_url": "https://docs.scaledown.ai/introduction"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
