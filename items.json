@@ -3596,5 +3596,45 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "nvidia-nim-kimi-k3-free-endpoint-20261014",
+    "title": "NVIDIA NIM：Kimi K3 免费 API endpoint（OpenAI 兼容）",
+    "model": "Kimi K3",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/ji_she46383/status/2110052887544115666",
+    "summary": "社区教程指出 NVIDIA NIM（build.nvidia.com）提供 Moonshot AI 的 Kimi K3 免费推理 endpoint：注册拿 API Key（帖称手机验证、不绑卡），一个 key 可调目录内多模型；OpenAI 兼容调用，model 填 moonshotai/kimi-k3。官方模型页确认 Free Endpoint: Available，规格约 2.8T MoE / 104B 激活、1M 上下文、多模态；试用受 NVIDIA API Trial 条款与速率限制约束。",
+    "source": "ji_she46383",
+    "collected_at": "2026-10-14T01:53:59+08:00",
+    "expired": false,
+    "source_post_id": "2110052887544115666",
+    "free_terms": "build.nvidia.com 免费 endpoint；需 NVIDIA API Key；受 Trial 条款与限速约束。",
+    "product": "NVIDIA NIM moonshotai/kimi-k3 free endpoint",
+    "providers": [
+      {
+        "name": "NVIDIA NIM",
+        "action_url": "https://build.nvidia.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Kimi K3",
+        "action_url": "https://build.nvidia.com/moonshotai/kimi-k3"
+      },
+      {
+        "name": "Kimi-K3 (Hugging Face)",
+        "action_url": "https://huggingface.co/moonshotai/Kimi-K3"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
