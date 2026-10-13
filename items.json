@@ -3144,5 +3144,41 @@
       "need_key",
       "deposit_hold"
     ]
+  },
+  {
+    "id": "flock-this-that-model-free-20261013",
+    "title": "FLock API Platform：THIS / THAT 决策模型 1.2 免费调用（$0/百万 token）",
+    "model": "THIS / THAT Model 1.2（Qwen3.5 2B 后训练，开源决策模型）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/flock_io/status/2109856170571862076",
+    "summary": "FLock.io 官方宣布其开源决策模型 THIS / THAT Model 1.2（基于 Qwen3.5 2B 后训练，专做决策、路由、分类、打分，官方称 1,710 次决策测试胜过所有托管模型、响应约 31ms）现可在 FLock API Platform 免费调用。平台模型列表（platform.flock.io/api/models）显示 this-that-model-1.0 输入/输出均 $0。OpenAI 兼容端点 https://api.flock.io/v1，需注册并创建 API Key；该模型仅接受 response_format.json_schema 枚举式的“类型化决策”请求，不生成长文本，适合做 Agent 路由/分类器，不是通用聊天模型。",
+    "source": "flock_io",
+    "collected_at": "2026-10-13T12:55:00+08:00",
+    "expired": false,
+    "source_post_id": "2109856170571862076",
+    "free_terms": "$0/百万 token（输入输出）；需注册 + API Key；仅支持 json_schema 枚举决策输出；未见公开限额说明",
+    "product": "FLock API Platform – THIS / THAT Model",
+    "providers": [
+      {
+        "name": "FLock API Platform",
+        "action_url": "https://platform.flock.io/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "THIS / THAT Model（$0）",
+        "action_url": "https://platform.flock.io/models"
+      }
+    ],
+    "docs_url": "https://docs.flock.io/flock-products/api-platform/api-endpoint",
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
