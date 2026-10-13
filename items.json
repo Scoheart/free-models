@@ -3496,5 +3496,57 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "codecraft-api-free-tier-1m-20261013",
+    "title": "CodeCraft API：永久免费档每月 100 万 token，免绑卡，33 模型全开",
+    "model": "33 模型合集（含 Claude / DeepSeek / Qwen 等）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/technoa5bar1/status/2110023406309548536",
+    "summary": "CodeCraft API 是 OpenAI 兼容聚合网关（base URL https://codecraftapi.com/v1）。永久免费档：每月 1M token（输入+输出合计），60 RPM / 100K TPM，免绑卡；所有套餐（含免费）均可调用全部约 33 个聊天模型，并支持流式、工具调用、视觉与推理。超额后按模型标价从账户余额扣费，余额为空返回 HTTP 402。可接 Cline、OpenCode、Cursor、Kilo Code、Claude Code 等。条件：注册拿 Key；每月额度重置且不结转。",
+    "source": "technoa5bar1",
+    "collected_at": "2026-10-14T00:00:18+08:00",
+    "expired": false,
+    "source_post_id": "2110023406309548536",
+    "free_terms": "永久免费档每月 1M token，免绑卡；额度按月重置不结转；限速 60 RPM。",
+    "product": "CodeCraft API",
+    "providers": [
+      {
+        "name": "CodeCraft 注册",
+        "action_url": "https://codecraftapi.com/register"
+      },
+      {
+        "name": "CodeCraft 定价",
+        "action_url": "https://codecraftapi.com/pricing"
+      },
+      {
+        "name": "CodeCraft 文档",
+        "action_url": "https://codecraftapi.com/docs"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "模型目录",
+        "action_url": "https://codecraftapi.com/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
