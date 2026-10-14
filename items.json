@@ -3942,5 +3942,163 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "firecrawl-student-10k-credits-20261014",
+    "title": "Firecrawl 学生计划：学校邮箱领 10,000 免费 API credits（免绑卡）",
+    "model": "Firecrawl scrape/crawl/search/extract API",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/ShawWhile/status/2110223107629998350",
+    "summary": "Firecrawl 官方学生计划：用有效学校/学术邮箱注册后，在 Settings → Billing 输入学生优惠码（公开码多为 STUDENTEDU），即时到账 10,000 API credits，免绑卡。面向在校大学生/研究生等教育用途；官网称持续有效。Firecrawl 为 AI 应用常用的网页抓取/搜索 API（含 scrape、crawl、map、search、extract 等）。另有普通免费档每月约 1,000 credits。",
+    "source": "ShawWhile",
+    "collected_at": "2026-10-14T12:48:55+08:00",
+    "expired": false,
+    "source_post_id": "2110223107629998350",
+    "free_terms": "学生学术邮箱 + Billing 兑换码领 10,000 credits；免绑卡；持续有效计划。",
+    "product": "Firecrawl Student Program 10k credits",
+    "providers": [
+      {
+        "name": "Firecrawl 学生计划",
+        "action_url": "https://www.firecrawl.dev/student-program"
+      },
+      {
+        "name": "Firecrawl 控制台",
+        "action_url": "https://www.firecrawl.dev/app"
+      },
+      {
+        "name": "Firecrawl Billing 文档",
+        "action_url": "https://docs.firecrawl.dev/billing"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "deepgram-200-free-credits-20261014",
+    "title": "Deepgram：新账号送 $200 免费语音 API 额度（免绑卡）",
+    "model": "Nova-3 / Flux STT / Aura TTS / Voice Agent API",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/wiretap_ai/status/2110215367956336987",
+    "summary": "Deepgram 官方定价页确认：新账号 Pay As You Go 送 $200 免费额度，免绑卡、无最低消费；官方写明信用额用完前可用（约合 Nova 转录数万分钟量级）。覆盖语音转写（Nova/Flux）、TTS、Voice Agent 等公开模型 endpoint。适合会议纪要、语音 Agent 原型。用完后按量付费。",
+    "source": "wiretap_ai",
+    "collected_at": "2026-10-14T12:48:55+08:00",
+    "expired": false,
+    "source_post_id": "2110215367956336987",
+    "free_terms": "新账号 $200 免费额度；免绑卡；用完为止（官方称无 12 个月强制过期类限制，以控制台为准）。",
+    "product": "Deepgram $200 signup credit",
+    "providers": [
+      {
+        "name": "Deepgram 定价",
+        "action_url": "https://deepgram.com/pricing"
+      },
+      {
+        "name": "Deepgram Console 注册",
+        "action_url": "https://console.deepgram.com/signup"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Deepgram 模型/文档",
+        "action_url": "https://developers.deepgram.com/"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "zero_signup"
+    ]
+  },
+  {
+    "id": "assemblyai-50-free-credits-20261014",
+    "title": "AssemblyAI：新账号送 $50 免费语音 API 额度（免绑卡）",
+    "model": "Universal-3.5 Pro / Universal-2 / Universal Streaming / Voice Agent API",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/wiretap_ai/status/2110215367956336987",
+    "summary": "AssemblyAI 官方定价确认：新账号送 $50 免费额度，免绑卡；可用于预录/实时语音转写、Speech Understanding、Guardrails、Voice Agent API 等（不含 LLM Gateway，Gateway 从余额另计）。免费档流式并发较低（约 5 新流/分钟）。适合语音转写与会议纪要试用。",
+    "source": "wiretap_ai",
+    "collected_at": "2026-10-14T12:48:55+08:00",
+    "expired": false,
+    "source_post_id": "2110215367956336987",
+    "free_terms": "新账号 $50 免费额度；免绑卡；官方称 credits 不过期，升级绑卡后未用完仍保留。",
+    "product": "AssemblyAI $50 signup credit",
+    "providers": [
+      {
+        "name": "AssemblyAI 定价",
+        "action_url": "https://www.assemblyai.com/pricing/"
+      },
+      {
+        "name": "AssemblyAI Dashboard",
+        "action_url": "https://www.assemblyai.com/dashboard/signup"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Billing 文档",
+        "action_url": "https://www.assemblyai.com/docs/billing-and-pricing"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "zero_signup"
+    ]
+  },
+  {
+    "id": "sakana-chat-fugu-max-free-20261014",
+    "title": "Sakana Chat：网页免费用 Fugu Max 编排模型（免 API Key）",
+    "model": "Fugu Max / Namazu",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/cutetoxicguy/status/2110229344752681204",
+    "summary": "Sakana AI 将编排旗舰 Fugu Max 放入 Sakana Chat（chat.sakana.ai）供全用户试用：浏览器对话即可，无需 API Key；可在模型选择器选 Fugu Max。官方介绍其为多开源/专用模型编排、表现接近前沿单模型。Chat 目前免费并有用量上限；第三方资料称服务偏日本地区。付费 OpenAI 兼容 API（console.sakana.ai）另计，与 Chat 额度无关。",
+    "source": "cutetoxicguy",
+    "collected_at": "2026-10-14T12:48:55+08:00",
+    "expired": false,
+    "source_post_id": "2110229344752681204",
+    "free_terms": "Sakana Chat 网页免费试用 Fugu Max；无需 API Key；有用量上限；API 另付费。",
+    "product": "Sakana Chat Fugu Max free web",
+    "providers": [
+      {
+        "name": "Sakana Chat",
+        "action_url": "https://chat.sakana.ai/"
+      },
+      {
+        "name": "官方公告",
+        "action_url": "https://sakana.ai/chat-fugumax/"
+      },
+      {
+        "name": "Sakana API Console",
+        "action_url": "https://console.sakana.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Fugu Max",
+        "action_url": "https://sakana.ai/fugu-max-release/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
