@@ -4100,5 +4100,54 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "intern-inkstone-monthly-free-tokens-20261014",
+    "title": "书生·端砚（Intern InkStone）：测试期每月免费墨点，最高约 5 亿 Tokens；三款自研模型限时不扣点",
+    "model": "DeepSeek V4 / Qwen3.8-27B / GLM-5.3 / 书生-S2 / Atria-Dawn-Preview / Agents-A1 等",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://discovery.intern-ai.org.cn/token-plan/home",
+    "summary": "上海人工智能实验室书生·端砚测试期开放墨点计划：注册后每月可领免费墨点（社区反馈约 10 墨点；官方称 1 墨点最多可抵约 5000 万 Tokens，以 DeepSeek-V4-Flash 计则约最高 5 亿）。书生-S2、Atria-Dawn-Preview、Agents-A1 限时不扣墨点；DeepSeek V4、Qwen3.8-27B、GLM-5.3、Kimi、MiniMax 等按墨点计费。OpenAI 兼容 https://discovery-api.intern-ai.org.cn/v1 ，亦可 Anthropic 兼容。需 GitHub/账号注册并创建 API Key；墨点按月周期清空。本轮由 @CallMeCSZ 帖与 RT 触发收录。",
+    "source": "x.com/@CallMeCSZ/status/2110279450189545612",
+    "collected_at": "2026-10-14T17:48:44+08:00",
+    "expired": false,
+    "source_post_id": "2110279450189545612",
+    "free_terms": "测试期按月发放免费墨点；一次性墨点到期日 24:00 清空；自研三款限时 0 墨点；第三方模型扣墨点。无总截止日公告。",
+    "product": "Intern InkStone Token Plan",
+    "providers": [
+      {
+        "name": "书生·端砚 Token Plan",
+        "action_url": "https://discovery.intern-ai.org.cn/token-plan/home"
+      },
+      {
+        "name": "书生·端砚首页",
+        "action_url": "https://discovery.intern-ai.org.cn"
+      }
+    ],
+    "agents": [
+      {
+        "name": "WorkBuddy",
+        "action_url": "https://www.workbuddy.cn/"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "科研模型控制台",
+        "action_url": "https://discovery.intern-ai.org.cn/token-plan/home"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account"
+    ]
   }
 ]
