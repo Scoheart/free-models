@@ -3869,5 +3869,40 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "freebuff-gemini-4-argon-free-1h-20261014",
+  "title": "Freebuff：Gemini 4 Argon 免费用（Tier 1 国家每天 1 小时，广告资助）",
+  "model": "Gemini 4 Argon",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/jahooma/status/2110171193848537399",
+  "summary": "Freebuff 创始人 James Grugett 宣布：Gemini 4 Argon 已在 Freebuff 编码 Agent 内免费开放，Tier 1 国家用户每天可用 1 小时。官方 Gemini 免费档与免费 API Key 目前都没有 Argon，这是少见的免费试用入口。注意：第三方广告资助通道，非 Google 官方免费 API；地区范围与时长可能调整；敏感代码慎用。条件：使用 Freebuff 客户端（桌面 / Web / CLI）。",
+  "source": "jahooma",
+  "collected_at": "2026-10-14T09:39:59+08:00",
+  "expired": false,
+  "source_post_id": "2110171193848537399",
+  "free_terms": "免费；Tier 1 国家每天 1 小时；广告资助",
+  "product": "Freebuff Gemini 4 Argon",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Freebuff",
+    "action_url": "https://freebuff.com/"
+   }
+  ],
+  "models": [
+   {
+    "name": "Gemini 4 Argon（经 Freebuff）",
+    "action_url": "https://freebuff.com/"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
