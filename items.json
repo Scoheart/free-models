@@ -4149,5 +4149,86 @@
       "need_key",
       "cn_account"
     ]
+  },
+  {
+    "id": "vercel-nemotron35-lightning-free-20261015",
+    "title": "Vercel AI Gateway：NVIDIA Nemotron 3.5 Lightning 免费调用（nvidia/nemotron-3.5-lightning-free）",
+    "model": "NVIDIA Nemotron 3.5 Lightning（30B / 3B 激活，1M 上下文）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://vercel.com/changelog/nemotron-3-5-lightning-now-available-on-ai-gateway-for-free",
+    "summary": "Vercel 官方 Changelog（10/14）与 @vercel_dev 宣布：NVIDIA Nemotron 3.5 Lightning 在 AI Gateway 上免费提供，模型名 nvidia/nemotron-3.5-lightning-free，由 NVIDIA 托管。开放权重推理/对话模型，30B 总参、每 token 3B 激活（Mamba-2 + MoE 混合），1M 上下文，支持工具调用与结构化输出，适合长程 Agent、子代理、RAG。可走 AI SDK、Chat Completions / Responses / Messages API，或运行 npx vercel ai-gateway setup 接入 Claude Code、Codex、Cursor 等。注意：提供方可能保留提示词用于模型改进，勿传敏感数据。未公布截止时间。",
+    "source": "x.com/@vercel_dev/status/2110424759251136834",
+    "collected_at": "2026-10-15T07:40:28+08:00",
+    "expired": false,
+    "source_post_id": "2110424759251136834",
+    "free_terms": "免费模型 ID nvidia/nemotron-3.5-lightning-free；需 Vercel 账号与 AI Gateway API Key；提示词可能被保留；无公布截止日。",
+    "product": "Vercel AI Gateway",
+    "providers": [
+      {
+        "name": "Vercel AI Gateway",
+        "action_url": "https://vercel.com/docs/ai-gateway"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Claude Code（经 AI Gateway）",
+        "action_url": "https://vercel.com/docs/ai-gateway/coding-agents/claude-code"
+      },
+      {
+        "name": "Codex（经 AI Gateway）",
+        "action_url": "https://vercel.com/docs/ai-gateway/coding-agents/openai-codex"
+      }
+    ],
+    "models": [
+      {
+        "name": "nvidia/nemotron-3.5-lightning-free",
+        "action_url": "https://vercel.com/ai-gateway/models/nemotron-3.5-lightning-free"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "bolt-builders-week-glm53-flash-free-weekend-20261015",
+    "title": "Bolt Builders Week：10/17–18 周末所有用户免费用 GLM 5.3 Flash 建站",
+    "model": "GLM 5.3 Flash",
+    "type": "限时",
+    "deadline": "2026-10-18T23:59:00-07:00",
+    "url": "https://bolt.new/builders-week",
+    "summary": "bolt.new 官方宣布 Builders Week：太平洋时间 10/17 周六 00:00 至 10/18 周日 23:59（北京时间约 10/17 15:00 至 10/19 14:59），所有 Bolt 用户（免费、个人付费、Teams 每人独立）在模型选择器选 GLM 5.3 Flash 即可免费构建，无需换套餐或兑换码。额度按 6 小时一个区块发放（打开 Bolt 时开始计时，错过不累计），付费用户每块 5 倍额度，有速率限制；周末仅 GLM 5.3 Flash 免费。另有 10/13–10/20 投稿的创业比赛，头奖 $10,000。",
+    "source": "x.com/@boltdotnew/status/2110415341998191027",
+    "collected_at": "2026-10-15T07:40:28+08:00",
+    "expired": false,
+    "source_post_id": "2110415341998191027",
+    "free_terms": "PT 10/17 00:00–10/18 23:59；仅 GLM 5.3 Flash；6 小时一块额度，付费 5 倍；有速率限制；需 Bolt 账号。",
+    "product": "Bolt Builders Week",
+    "providers": [
+      {
+        "name": "Bolt",
+        "action_url": "https://bolt.new/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Bolt（网页版）",
+        "action_url": "https://bolt.new/"
+      }
+    ],
+    "models": [
+      {
+        "name": "GLM 5.3 Flash（Bolt 模型选择器）",
+        "action_url": "https://bolt.new/builders-week"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": []
   }
 ]
