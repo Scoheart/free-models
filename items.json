@@ -4903,5 +4903,51 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "kilo-cline-nemotron35-super-vl-free-20261016",
+    "title": "Kilo / Cline：NVIDIA Nemotron 3.5 Super VL 限时免费（编码 Agent 内直接用）",
+    "model": "NVIDIA Nemotron 3.5 Super VL",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/kilocode/status/2110792238456623109",
+    "summary": "Kilo 官方宣布 NVIDIA Nemotron 3.5 Super VL 已上线 Kilo，在 Kilo Desktop、CLI、VS Code 与 JetBrains 插件中均可使用，限时完全免费；Cline 官方同日也宣布该模型可在 Cline 中免费使用。模型为 120B 总参、12B 激活的开放权重多模态 MoE，能看截图、图表、文档和视频，官方称输出速度约为 Nemotron 3 Ultra 的 5 倍。截止时间未公布。",
+    "source": "x.com/@kilocode/status/2110792238456623109",
+    "collected_at": "2026-10-16T02:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2110792238456623109",
+    "related_post_urls": [
+      "https://x.com/cline/status/2110784104488980727"
+    ],
+    "free_terms": "Kilo：限时免费（未写截止日）；Cline：官方称 available for free，具体期限未说明。",
+    "product": "Nemotron 3.5 Super VL in Kilo / Cline",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Kilo",
+        "action_url": "https://kilo.ai/install"
+      },
+      {
+        "name": "Cline",
+        "action_url": "https://cline.bot/install"
+      }
+    ],
+    "models": [
+      {
+        "name": "HF BF16 权重",
+        "action_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+      },
+      {
+        "name": "NVIDIA 技术博客",
+        "action_url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "image"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
