@@ -4949,5 +4949,48 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "openai-rosalind-academic-plan-20261016",
+    "title": "OpenAI Rosalind Academic Plan：美国大学实验室免费领最多 30 个 Business Standard 席位 + GPT-Rosalind（12 个月）",
+    "model": "GPT-Rosalind",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/OpenAI/status/2110841898076418336",
+    "summary": "OpenAI 官号宣布 Rosalind Academic Plan：符合条件的美国大学生命科学实验室可由 PI/实验室负责人申请，获批后最多 30 个 ChatGPT Business Standard 席位免费使用最长 12 个月，并在 trusted-access 审批后使用 GPT-Rosalind（ChatGPT/Codex）。不含 API 额度；开通需绑卡；需提名机构 biosafety 联系人。申请说明见帮助中心。",
+    "source": "OpenAI",
+    "collected_at": "2026-10-16T05:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110841898076418336",
+    "free_terms": "获批后最多 30 席 Business Standard 免费 12 个月 + GPT-Rosalind（需 trusted-access）；不含 API credits；开通需绑卡。",
+    "product": "Rosalind Academic Plan",
+    "providers": [
+      {
+        "name": "OpenAI Rosalind Academic Plan 说明",
+        "action_url": "https://help.openai.com/en/articles/20001602-rosalind-academic-plan"
+      },
+      {
+        "name": "OpenAI Rosalind 产品页",
+        "action_url": "https://openai.com/rosalind/"
+      },
+      {
+        "name": "GPT-Rosalind 帮助中心",
+        "action_url": "https://help.openai.com/en/articles/20001193-gpt-rosalind-for-life-sciences-research"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "GPT-Rosalind",
+        "action_url": "https://openai.com/rosalind/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "deposit_hold"
+    ]
   }
 ]
