@@ -4230,5 +4230,127 @@
       "coding"
     ],
     "barriers": []
+  },
+  {
+    "id": "inworld-deepseek-flash-free-models-20261015",
+    "title": "Inworld Inference：DeepSeek V4.1 Flash / V4 Flash :free 免费 API（OpenAI 兼容）",
+    "model": "DeepSeek V4.1 Flash:free / DeepSeek V4 Flash 0731:free",
+    "type": "API",
+    "deadline": null,
+    "url": "https://inworld.ai/models",
+    "summary": "Inworld 开放 Inference API 给所有开发者，模型页列出 deepseek-v4.1-flash:free 与 deepseek-v4-flash-0731:free，标价为 —（$0）。OpenAI 兼容端点 https://api.inworld.ai/v1，需在门户创建 API Key；免费 On-Demand 档可评估试用（并发等有限额）。付费模型另计，部分高级模型可能要绑卡。",
+    "source": "x.com/@Oops007_X/status/2110546474870214937",
+    "collected_at": "2026-10-15T10:41:11+08:00",
+    "expired": false,
+    "source_post_id": "2110546474870214937",
+    "free_terms": "模型 ID：inworld/models/deepseek-v4.1-flash:free、inworld/models/deepseek-v4-flash-0731:free；需 Inworld 账号与 API Key；On-Demand 免费档有速率/并发限制。",
+    "product": "Inworld Inference",
+    "providers": [
+      {
+        "name": "Inworld",
+        "action_url": "https://platform.inworld.ai/"
+      },
+      {
+        "name": "Inworld Models",
+        "action_url": "https://inworld.ai/models"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "deepseek-v4.1-flash:free",
+        "action_url": "https://inworld.ai/models"
+      },
+      {
+        "name": "deepseek-v4-flash-0731:free",
+        "action_url": "https://inworld.ai/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "claude-for-open-source-max-6mo-20261015",
+    "title": "Claude for Open Source：开源贡献者可申领 6 个月 Claude Max 20x（约 $1200）",
+    "model": "Claude Max 20x",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://claude.com/contact-sales/claude-for-oss",
+    "summary": "Anthropic 官方 Claude for Open Source 计划：符合条件的开源维护者/核心贡献者/活跃贡献者等可申请，获赠 6 个月 Claude Max 20x。门槛包括包依赖量、基金会项目、近 12 个月合并 PR 数等；不完全符合也可说明依赖关系后申请。期满后付费订阅恢复或回到免费档。",
+    "source": "x.com/@KevinWwwrz/status/2110556798851940860",
+    "collected_at": "2026-10-15T10:41:11+08:00",
+    "expired": false,
+    "source_post_id": "2110556798851940860",
+    "free_terms": "需申请审核；面向开源维护者与贡献者；赠送 6 个月 Claude Max 20x；期满自动结束。",
+    "product": "Claude for Open Source",
+    "providers": [
+      {
+        "name": "Anthropic Claude",
+        "action_url": "https://claude.com/contact-sales/claude-for-oss"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Claude（网页/App）",
+        "action_url": "https://claude.ai/"
+      },
+      {
+        "name": "Claude Code",
+        "action_url": "https://www.anthropic.com/claude-code"
+      }
+    ],
+    "models": [
+      {
+        "name": "Claude Max 20x",
+        "action_url": "https://claude.com/contact-sales/claude-for-oss"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "docker-sandboxes-250-credit-20261015",
+    "title": "Docker Cloud Sandboxes：新注册送 $250 算力额度（至 10/31）",
+    "model": null,
+    "type": "额度",
+    "deadline": "2026-10-31T23:59:00-07:00",
+    "url": "https://www.docker.com/c/sbx-promo/",
+    "summary": "Docker Agentic Platform 限时：2026-09-22 至 10/31 PT 23:59 新注册用户一次性获 $250 Cloud Sandbox 算力额度（替代默认 $25）。按秒计费沙箱 CPU/内存；额度领取后 6 个月有效。需绑卡，超出额度才扣款。模型 API 与 Agent 订阅另计，不含在 $250 内。每用户/账号限一次。",
+    "source": "x.com/@KevinWwwrz/status/2110556921828950406",
+    "collected_at": "2026-10-15T10:41:11+08:00",
+    "expired": false,
+    "source_post_id": "2110556921828950406",
+    "free_terms": "新注册限时至 PT 2026-10-31 23:59；需绑卡；$250 沙箱算力，领取后 6 个月过期；不含模型 API 费用。",
+    "product": "Docker Cloud Sandboxes",
+    "providers": [
+      {
+        "name": "Docker",
+        "action_url": "https://www.docker.com/c/sbx-promo/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Docker Agentic Platform",
+        "action_url": "https://www.docker.com/c/sbx-promo/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "deposit_hold",
+      "need_key"
+    ]
   }
 ]
