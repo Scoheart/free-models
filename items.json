@@ -4628,5 +4628,41 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "google-deep-review-2-free-weekly-20261015",
+    "title": "Google Deep Review 公开上线：每周 2 次免费 AI 文档审阅（Gemini 4 Argon）",
+    "model": "Gemini 4 Argon（Deep Review 多智能体审阅系统）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/JeremyNguyenPhD/status/2110687723908714892",
+    "summary": "Google Research 于 10/14 把 Deep Review 向全球公开：一个专门“找茬”的多智能体审阅系统，会把论文/技术文档拆段检查逻辑漏洞、数学错误和论断依据，已在 STOC、ICML、NeurIPS、ICLR 试点 16,000+ 篇投稿。官方博客写明每位用户每周 2 次免费审阅，现已接入 Gemini 4 Argon；需要更多次数可接自己的 Gemini API Key 走 Deep Review API。首发支持 PDF 和纯文本，需 Google 账号登录。社区转述：上传文件不用于训练，但会保存一年供用户在界面查看，机密文件慎传。",
+    "source": "x.com/@JeremyNguyenPhD/status/2110687723908714892",
+    "collected_at": "2026-10-15T19:42:55+08:00",
+    "expired": false,
+    "source_post_id": "2110687723908714892",
+    "free_terms": "每用户每周 2 次免费文档审阅；超出可接 Gemini API Key 付费；支持 PDF/纯文本；需 Google 登录。",
+    "product": "Google Research · Deep Review",
+    "providers": [
+      {
+        "name": "Google Deep Review",
+        "action_url": "https://research.google/deepreview/"
+      },
+      {
+        "name": "Google AI Studio（Gemini API Key，超额用）",
+        "action_url": "https://aistudio.google.com/apikey"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Deep Review 官方博客（Gemini 4 Argon 支持）",
+        "action_url": "https://research.google/blog/analyzing-technical-documents-with-deep-review/"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": []
   }
 ]
