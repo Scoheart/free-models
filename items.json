@@ -4740,5 +4740,134 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "openrouter-nemotron35-super-vl-free-20261015",
+    "title": "OpenRouter：NVIDIA Nemotron 3.5 Super VL 免费调用（1M 上下文）",
+    "model": "nvidia/nemotron-3.5-super-vl:free",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/OpenRouter/status/2110755137023246567",
+    "summary": "OpenRouter 官方宣布 NVIDIA Nemotron 3.5 Super VL 上线，模型页 nvidia/nemotron-3.5-super-vl:free 标价 $0/$0。120B 总参、12B 激活的多模态 MoE，支持文本/图片/文档/GUI/视频输入、1M 上下文与工具调用，面向长程 Agent。权重亦已开源至 Hugging Face（BF16/NVFP4）。免费档受 OpenRouter :free 限速（未充值约 20 RPM / 50 RPD）。",
+    "source": "x.com/@OpenRouter/status/2110755137023246567",
+    "collected_at": "2026-10-15T23:50:43+08:00",
+    "expired": false,
+    "source_post_id": "2110755137023246567",
+    "free_terms": "OpenRouter :free 端点 $0/M；受免费档日请求与速率限制；权重可本地部署（NVIDIA Open License）。",
+    "product": "NVIDIA Nemotron 3.5 Super VL (OpenRouter free)",
+    "providers": [
+      {
+        "name": "OpenRouter",
+        "action_url": "https://openrouter.ai/keys"
+      },
+      {
+        "name": "OpenRouter 模型页",
+        "action_url": "https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "HF BF16 权重",
+        "action_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+      },
+      {
+        "name": "HF NVFP4 权重",
+        "action_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "bfl-flux3-image-klein-open-weights-20261015",
+    "title": "Black Forest Labs：FLUX 3 Image Klein 开源权重（5.6B，消费级 GPU 可跑）",
+    "model": "FLUX 3 Image Klein",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/bfl_ai/status/2110751201105256925",
+    "summary": "BFL 发布 FLUX 3 Image Klein 开源权重：约 5.6B 参数，支持文生图、编辑与多参考（最多约 10 张），原生 4K 与 bounding-box 布局；宣称可在单张消费级 GPU（低至约 8GB VRAM）运行。Hugging Face 提供 base/distilled 及 FP8/NVFP4 等变体。产品内商用需另行商业授权；研究/自托管按 HF 许可证条款。",
+    "source": "x.com/@bfl_ai/status/2110751201105256925",
+    "collected_at": "2026-10-15T23:50:43+08:00",
+    "expired": false,
+    "source_post_id": "2110751201105256925",
+    "free_terms": "开源权重可下载自托管；产品内规模化商用需 BFL 商业许可；具体以 HF 模型卡许可证为准。",
+    "product": "FLUX 3 Image Klein",
+    "providers": [
+      {
+        "name": "BFL 产品页",
+        "action_url": "https://bfl.ai/models/flux-3-image-klein"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "HF 合集",
+        "action_url": "https://huggingface.co/collections/black-forest-labs/flux-3-image-klein"
+      },
+      {
+        "name": "HF distilled",
+        "action_url": "https://huggingface.co/black-forest-labs/flux-3-image-klein"
+      },
+      {
+        "name": "HF base",
+        "action_url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-base"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "atria-dawn-official-free-api-20261015",
+    "title": "Atria Dawn 正式版：上海 AI 实验室 Agent 模型免费 API（512K）",
+    "model": "Atria-Dawn",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/AtriaASI/status/2110756557118115864",
+    "summary": "上海人工智能实验室 Atria Dawn 正式版上线（模型 ID Atria-Dawn），上下文提升至 512K，面向科研/工程/长程 Agent。国际站 api.atria-asi.ai 可用 Google/邮箱注册并创建 API Key，无需绑卡；官方称网站 API 配额已收紧，大陆或更高用量建议转端砚 Token 方案。免费额度与限速以控制台实时显示为准（Preview 期曾有约 1 亿 Token 报道）。",
+    "source": "x.com/@AtriaASI/status/2110756557118115864",
+    "collected_at": "2026-10-15T23:50:43+08:00",
+    "expired": false,
+    "source_post_id": "2110756557118115864",
+    "free_terms": "注册即可创建 Key；免费配额/限速以控制台为准；大陆或高用量建议端砚方案。",
+    "product": "Atria Dawn",
+    "providers": [
+      {
+        "name": "Atria API 控制台",
+        "action_url": "https://api.atria-asi.ai/"
+      },
+      {
+        "name": "API 文档",
+        "action_url": "https://api.atria-asi.ai/docs"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "官网",
+        "action_url": "https://atria-asi.ai/"
+      },
+      {
+        "name": "GitHub Preview 仓库",
+        "action_url": "https://github.com/atria-asi/Atria-Dawn-Preview"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
