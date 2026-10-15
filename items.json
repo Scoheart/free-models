@@ -4664,5 +4664,81 @@
       "chat"
     ],
     "barriers": []
+  },
+  {
+    "id": "openbmb-minicpm-v47-open-weights-20261015",
+    "title": "面壁 MiniCPM-V 4.7：35B-A3B 端侧多模态开源权重（Apache-2.0）",
+    "model": "MiniCPM-V 4.7（35B-A3B / 1B）",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
+    "summary": "OpenBMB/面壁智能于 10/15 公开 MiniCPM-V 4.7 权重：35B 总参 / 约 3B 激活的多模态 MoE，支持图像、文档、图表与视频理解，官方称手机端约 3GB 内存可跑（iPhone 17 Pro Max 约 13+ tok/s）；另有 1B 小模型。Hugging Face 已上架 35B-A3B、1B 及 GGUF / FP8 / AWQ / GPTQ / int4 等量化版，许可 Apache-2.0，免费下载可商用。社区反馈 Ollama 暂未支持加载。",
+    "source": "x.com/@lexbing28/status/2110730572431835290 + Hugging Face openbmb",
+    "collected_at": "2026-10-15T22:47:00+08:00",
+    "expired": false,
+    "source_post_id": "2110730572431835290",
+    "free_terms": "开源权重免费下载，Apache-2.0；本地/端侧自托管。",
+    "product": "OpenBMB MiniCPM-V 4.7",
+    "providers": [
+      {
+        "name": "Hugging Face（openbmb）",
+        "action_url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "MiniCPM-V-4.7-35B-A3B（HF）",
+        "action_url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B"
+      },
+      {
+        "name": "MiniCPM-V-4.7-35B-A3B-gguf（HF）",
+        "action_url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B-gguf"
+      },
+      {
+        "name": "MiniCPM-V-4.7-1B（HF）",
+        "action_url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-1B"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup",
+      "need_client"
+    ]
+  },
+  {
+    "id": "freepi-coding-agent-15k-daily-credits-20261015",
+    "title": "free-pi：广告补贴的免费终端编码 Agent，每天 15k 免费额度",
+    "model": "free-pi 托管模型（额度用尽降级为较慢模型）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/DennisonBertram/status/2110742244701491304",
+    "summary": "free-pi 是基于 Pi agent harness（Mario Zechner / earendil-works）预配置的终端编码 Agent，推理费用由终端内小广告承担，用户无需 API Key、无需支付信息。作者 10/15 宣布：所有用户每天 15k 免费额度、各国相同；用完不会断，而是降级到较慢模型。用法：npx free-pi-cli，GitHub 设备码登录。注意：会话数据可能被用于训练模型；仍属早期实验。",
+    "source": "x.com/@DennisonBertram/status/2110742244701491304",
+    "collected_at": "2026-10-15T22:47:00+08:00",
+    "expired": false,
+    "source_post_id": "2110742244701491304",
+    "free_terms": "每日 15k 免费额度，超额降级为较慢模型；广告补贴；会话可能用于训练；需 GitHub 登录。",
+    "product": "free-pi",
+    "providers": [],
+    "agents": [
+      {
+        "name": "free-pi 官网",
+        "action_url": "https://freepi.ai"
+      },
+      {
+        "name": "free-pi-cli（npm）",
+        "action_url": "https://www.npmjs.com/package/free-pi-cli"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
