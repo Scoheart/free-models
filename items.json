@@ -4869,5 +4869,39 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "meta-muse-spark-open-weights-20261016",
+    "title": "Meta Muse Spark Open：816B 开放权重多模态模型，可免费下载（Muse Model License）",
+    "model": "Muse Spark Open",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/AIatMeta/status/2110779758334386491",
+    "summary": "Meta 发布开放权重模型 Muse Spark Open（816B 总参 / 42B 激活，1M 上下文，支持文本、图像、视频、音频输入，工具调用 MCP-Atlas 89.2）。权重可在 Hugging Face、SageMaker、Vertex Model Garden、Microsoft Foundry 免费下载，Muse Model License 允许多数开发者免费使用（需标注 Built with Muse Spark Open；年收入超 2000 万美元且转售 API 需另签协议）。托管 API 在 Baseten、Fireworks、Groq、Modal、Nebius、OpenRouter、Together 上线，均为付费调用，非免费额度。自托管约需 700GB 显存（NVFP4）或两台 M5 Ultra Mac Studio。",
+    "source": "x.com/@AIatMeta/status/2110779758334386491",
+    "collected_at": "2026-10-16T01:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110779758334386491",
+    "free_terms": "权重免费下载与使用（Muse Model License，含商用限制与署名要求）；托管 API 按量付费。",
+    "product": "Muse Spark Open",
+    "providers": [],
+    "agents": [],
+    "models": [
+      {
+        "name": "Hugging Face 权重合集",
+        "action_url": "https://huggingface.co/collections/meta-models/muse-spark-open"
+      },
+      {
+        "name": "Meta 研究博客",
+        "action_url": "https://research.meta.ai/blog/muse-spark-open"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
