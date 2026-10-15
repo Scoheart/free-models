@@ -4352,5 +4352,56 @@
       "deposit_hold",
       "need_key"
     ]
+  },
+  {
+    "id": "ling-3.1-flash-mit-open-weights-20261015",
+    "title": "蚂蚁百灵 Ling-3.1-flash：MIT 开源权重（HF / 魔搭可下）",
+    "model": "Ling-3.1-flash",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://huggingface.co/inclusionAI/Ling-3.1-flash",
+    "summary": "蚂蚁 inclusionAI 正式开源 Ling-3.1-flash 权重，MIT 协议可商用。总参约 560B、每 token 激活约 25B，混合推理 MoE，官方标称最长约 1M 上下文（OpenRouter/SGLang 常见配置约 262K）。面向 agent、编码、办公与搜索；官方演示强调粗略需求可直接出网页/移动 UI/可交互原型。权重已上 Hugging Face 与 ModelScope；SGLang 提供 Day-0 镜像，vLLM 也可部署。自托管门槛高（官方示例约 8×H200 或 4×GB300；量化后约 4 卡）。此前各平台限时免费 API（约至 10/13）已结束；OpenRouter 现为付费（约 $0.075/$0.225 每百万 token，NovitaAI 有折扣）。",
+    "source": "x.com/@AntLingAGI/status/2110390124743970952",
+    "collected_at": "2026-10-15T11:41:32+08:00",
+    "expired": false,
+    "source_post_id": "2110390124743970952",
+    "free_terms": "MIT 开源权重可自由下载与商用；自托管需多卡 GPU。付费 API（OpenRouter 等）另计，限时免费已结束。",
+    "product": "Ling-3.1-flash",
+    "providers": [
+      {
+        "name": "Hugging Face（inclusionAI）",
+        "action_url": "https://huggingface.co/inclusionAI/Ling-3.1-flash"
+      },
+      {
+        "name": "ModelScope 魔搭",
+        "action_url": "https://modelscope.cn/models/inclusionAI/Ling-3.1-flash"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Ling-3.1-flash（HF 权重）",
+        "action_url": "https://huggingface.co/inclusionAI/Ling-3.1-flash"
+      },
+      {
+        "name": "Ling-3.1-flash（魔搭）",
+        "action_url": "https://modelscope.cn/models/inclusionAI/Ling-3.1-flash"
+      },
+      {
+        "name": "Ant Ling 官方开源公告",
+        "action_url": "https://x.com/AntLingAGI/status/2110390124743970952"
+      },
+      {
+        "name": "OpenRouter（付费 API）",
+        "action_url": "https://openrouter.ai/inclusionai/ling-3.1-flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
