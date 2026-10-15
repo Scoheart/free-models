@@ -4992,5 +4992,79 @@
     "barriers": [
       "deposit_hold"
     ]
+  },
+  {
+    "id": "zellige-tessera-27b-b-cjk-open-weights-20261016",
+    "title": "Zellige Tessera-27B-B-CJK：开源编码 Agent 模型，思考 token 约减半（Apache-2.0）",
+    "model": "Tessera-27B-B-CJK",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/ai_hakase_/status/2110871350122357097",
+    "summary": "Zellige AI 发布 Tessera-27B-B-CJK：基于 Qwen3.8-27B 的编码 Agent 微调，用压缩 CJK 风格思考，在持出 Agent 任务上每轮思考 token 约 0.50–0.64× 基座；Apache-2.0。Hugging Face 提供合并 bf16（约 55.6GB）、LoRA、GGUF、NVFP4；量化版未评测。适合 coding-agent 循环（reasoning_effort=xhigh）；竞赛数学/硬算法弱于基座。",
+    "source": "x.com/@ai_hakase_/status/2110871350122357097 + Zellige AI / Hugging Face",
+    "collected_at": "2026-10-16T07:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110871350122357097",
+    "free_terms": "Apache-2.0 开源权重可免费下载自托管；需本地 GPU；GGUF/NVFP4 未官方评测。",
+    "product": "Zellige Tessera-27B-B-CJK",
+    "providers": [],
+    "agents": [],
+    "models": [
+      {
+        "name": "Tessera-27B-B-CJK（HF bf16）",
+        "action_url": "https://huggingface.co/ZelligeAI/Tessera-27B-B-CJK"
+      },
+      {
+        "name": "Tessera-27B-B-CJK-LoRA",
+        "action_url": "https://huggingface.co/ZelligeAI/Tessera-27B-B-CJK-LoRA"
+      },
+      {
+        "name": "Zellige 研究页",
+        "action_url": "https://zellige.ai/research/tessera-27b-b-cjk"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "tether-qvac-transcribepsy-open-weights-20261016",
+    "title": "Tether QVAC TranscribePsy：254M 端侧多语 ASR 开源权重（Apache-2.0）",
+    "model": "QVAC TranscribePsy-250M",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/Velox530/status/2110865932323090918",
+    "summary": "Tether AI Research（QVAC）发布 TranscribePsy：约 254M 参数端侧多语语音识别，笔记本版支持 25 种欧洲语言，手机 GGUF/Core ML 版侧重 8 语；Apache-2.0 权重可下。Hugging Face 有 PyTorch/NeMo、GGUF、Core ML 变体；配 qvac-fabric-speech 引擎。纯离线、不上云；非 LLM 文本模型。",
+    "source": "x.com/@Velox530/status/2110865932323090918 + QVAC / Hugging Face",
+    "collected_at": "2026-10-16T07:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110865932323090918",
+    "free_terms": "Apache-2.0 开源权重可免费下载；训练代码与数据未开源；面向研究与教育用途以许可证为准。",
+    "product": "QVAC TranscribePsy",
+    "providers": [],
+    "agents": [],
+    "models": [
+      {
+        "name": "TranscribePsy-250M-EU（HF）",
+        "action_url": "https://huggingface.co/qvac/TranscribePsy-250M-EU"
+      },
+      {
+        "name": "TranscribePsy HF 合集",
+        "action_url": "https://huggingface.co/collections/qvac/transcribepsy"
+      },
+      {
+        "name": "QVAC 博客",
+        "action_url": "https://qvac.tether.io/blog/on-device-speech-recognition-transcribepsy"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
