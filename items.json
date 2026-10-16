@@ -5832,5 +5832,46 @@
       "chat"
     ],
     "barriers": []
+  },
+  {
+    "id": "together-muse-spark-open-free-promo-20261016",
+    "title": "Together AI：Muse Spark Open 限时免费至 10/18 12:00 PT（约北京 10/19 03:00）",
+    "model": "Muse Spark Open",
+    "type": "限时",
+    "deadline": "2026-10-19T03:00:00+08:00",
+    "url": "https://x.com/lchng17661/status/2111115620217725435",
+    "summary": "Together AI 对 Meta Muse Spark Open（816B/42B 激活，1M 上下文）开放 Serverless 限时免费，截止 2026-10-18 12:00 PT（北京时间约 10/19 03:00）。端点 meta-models/Muse-Spark-Open-816B-A42B-promo，活动期内 input/output 均为 $0；结束后按 $1.25/$4.25 每百万 token 计费。新账号需绑定支付方式并至少充值 $15 才能激活，但免费期内不消耗该余额。与已收录的 HF 开放权重下载、Wally $5 试用额度不同：此处为 Together 托管 API 限时 $0。官方可提前结束活动。",
+    "source": "x.com/lchng17661 + together.ai/models/muse-spark-open-promo",
+    "collected_at": "2026-10-16T23:52:00+08:00",
+    "expired": false,
+    "source_post_id": "2111115620217725435",
+    "free_terms": "至 2026-10-18 12:00 PT Serverless API $0；新号需绑卡并购买 ≥$15 额度（免费期内不扣）；结束后 $1.25/$4.25 per 1M；官方可提前终止。",
+    "product": "Together AI Muse Spark Open promo (meta-models/Muse-Spark-Open-816B-A42B-promo)",
+    "post_time_bj": "2026-10-16T23:22:41+08:00",
+    "providers": [
+      {
+        "name": "Together",
+        "action_url": "https://api.together.ai/settings/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Muse Spark Open (promo)",
+        "action_url": "https://www.together.ai/models/muse-spark-open-promo"
+      },
+      {
+        "name": "Hugging Face 权重合集",
+        "action_url": "https://huggingface.co/collections/meta-models/muse-spark-open"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "deposit_hold"
+    ]
   }
 ]
