@@ -5477,5 +5477,41 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "deepseek-outage-7day-refund-credit-20261015",
+    "title": "DeepSeek API 故障补偿：10/8–10/14 七天 API 消费全额返还为赠金",
+    "model": "DeepSeek V4.1 Flash / V4 Pro（DeepSeek 开放平台 API）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/tianyi/status/2110663080246132855",
+    "summary": "DeepSeek 开放平台 10 月 15 日 8:11–13:04（北京时间）API 故障近 5 小时。官方补偿通知：按每个账号 10 月 8 日至 14 日 7 天内的实际 API 消耗金额，以赠金形式全额返还，自动到账，之后 API 扣费优先扣赠金。只有这 7 天有消费的老用户能拿到，统计窗口已关，现在刷用量无效；可到开放平台用量/账单页查看赠金是否到账。帖子作者是 DeepSeek 产品部门员工，转发的是官方通知原文。",
+    "source": "x.com/@tianyi/status/2110663080246132855（DeepSeek 官方补偿通知原文）",
+    "collected_at": "2026-10-16T13:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110663080246132855",
+    "free_terms": "仅限 10/8–10/14 有 API 消费的账号；返还金额 = 该 7 天消耗；赠金自动到账、优先抵扣；未见官方写明有效期。",
+    "product": "DeepSeek 开放平台",
+    "post_time_bj": "2026-10-15T17:24:27+08:00",
+    "providers": [
+      {
+        "name": "DeepSeek 开放平台",
+        "action_url": "https://platform.deepseek.com/usage"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "DeepSeek API 文档",
+        "action_url": "https://api-docs.deepseek.com/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
