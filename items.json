@@ -6021,5 +6021,35 @@
    "need_client",
    "cn_account"
   ]
+ },
+ {
+  "id": "tabbit-browser-free-claude-sonnet-haiku-20261017",
+  "title": "Tabbit AI 浏览器：免费周额度可用 Claude Sonnet / Haiku 等模型，设为默认浏览器解锁 10 倍用量",
+  "model": "Claude Sonnet 5.5 / Haiku 5.5（另含 GPT、Gemini、DeepSeek、Kimi、GLM 等）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/jarvis11x/status/2110946849167163812",
+  "summary": "Tabbit 是 Lumina Lab（新加坡）出品的 AI 浏览器，X 上多位用户称是美团系内测产品。官网 FAQ 写明：浏览器永久免费，AI 功能有每周重置的免费额度（Trial），把 Tabbit 设为系统默认浏览器可免费升级到 Standard 档、用量为 10 倍；Pro 是付费档，用于顶级模型和高频 Agent。用户实测免费档能用 Claude Sonnet 5.5 和 Haiku 5.5，Opus 5.5 需 Pro（约 $30/月）。目前支持 macOS 和 Windows。很多推广帖附带邀请链接，直接走官网下载即可。",
+  "source": "x.com/jarvis11x/status/2110946849167163812 + x.com/solaoqo8956/status/2111206324386341349；核实 tabbit.ai 官网 FAQ、x.com/TabbitBrowser/status/2108494899968614595（Haiku 5.5 上线）",
+  "collected_at": "2026-10-17T05:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2110946849167163812",
+  "free_terms": "下载 Tabbit 桌面版即有每周免费 AI 额度；设为默认浏览器后免费解锁 Standard（10 倍用量，按周重置）；顶级模型与高频 Agent 需付费 Pro。无截止时间。",
+  "product": "Tabbit Browser",
+  "post_time_bj": "2026-10-16T12:12:02+08:00",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Tabbit Browser",
+    "action_url": "https://www.tabbit.ai/"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
