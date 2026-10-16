@@ -5113,5 +5113,106 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "vercel-cat-jam-stealth-free-20261016",
+    "title": "Vercel AI Gateway：隐身模型 Cat Jam 隐身期免费（stealth/cat-jam，1M 上下文）",
+    "model": "Cat Jam（stealth/cat-jam，隐身推理模型）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://vercel.com/changelog/cat-jam-is-now-available-in-stealth-for-free-on-ai-gateway",
+    "summary": "Vercel 官方 Changelog（10/15）宣布：隐身编程/Agent 推理模型 Cat Jam 已上线 AI Gateway，隐身期内免费调用，模型名 stealth/cat-jam。支持函数调用、JSON Schema 结构化输出，推理强度 low/medium/high/xhigh/max，仅文本输入，上下文约 1M；可走 AI SDK、Chat Completions/Responses、Anthropic Messages，或 npx vercel ai-gateway setup 接入 Claude Code、Codex、Cursor、fx 等。注意：无 Zero Data Retention，提示词可能因安全原因被保留；背后提供方未公开，隐身期结束即可能收费，截止未写死。与此前 OpenCode Zen 上的 cat-jam-free 为不同接入渠道。",
+    "source": "vercel.com/changelog + x.com/@ygqz666/status/2110895508537385214",
+    "collected_at": "2026-10-16T09:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110895508537385214",
+    "related_post_urls": [
+      "https://x.com/ygqz666/status/2110895508537385214",
+      "https://x.com/KevinWwwrz/status/2110909494901502124"
+    ],
+    "free_terms": "隐身期内免费；模型 ID stealth/cat-jam；需 Vercel 账号与 AI Gateway API Key；无 ZDR；截止随隐身期结束，未公布具体日期。",
+    "product": "Vercel AI Gateway Cat Jam (stealth)",
+    "providers": [
+      {
+        "name": "Vercel AI Gateway",
+        "action_url": "https://vercel.com/docs/ai-gateway"
+      },
+      {
+        "name": "Changelog 原文",
+        "action_url": "https://vercel.com/changelog/cat-jam-is-now-available-in-stealth-for-free-on-ai-gateway"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Claude Code（经 AI Gateway）",
+        "action_url": "https://vercel.com/docs/ai-gateway/coding-agents/claude-code"
+      },
+      {
+        "name": "fx",
+        "action_url": "https://fx.sh/docs/getting-started/authentication"
+      }
+    ],
+    "models": [
+      {
+        "name": "stealth/cat-jam",
+        "action_url": "https://vercel.com/changelog/cat-jam-is-now-available-in-stealth-for-free-on-ai-gateway"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "opencode-nemotron35-super-vl-free-20261016",
+    "title": "OpenCode：NVIDIA Nemotron 3.5 Super VL 限时免费（120B/12B 激活，多模态）",
+    "model": "NVIDIA Nemotron 3.5 Super VL",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/opencode/status/2110819994238066934",
+    "summary": "OpenCode 官号宣布 Nemotron 3.5 Super VL 已在 OpenCode 上免费：120B 总参、12B 激活的开放权重多模态 MoE，面向长程 Agent。与 OpenRouter :free、Kilo/Cline 限时免费为不同产品入口；需 OpenCode 客户端。截止时间未在官帖写明。",
+    "source": "x.com/@opencode/status/2110819994238066934",
+    "collected_at": "2026-10-16T09:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110819994238066934",
+    "related_post_urls": [
+      "https://x.com/Moblacksoil/status/2110843154626912531",
+      "https://x.com/KevinWwwrz/status/2110909409127981105"
+    ],
+    "free_terms": "OpenCode 内限时免费；官帖未写截止日；具体额度/速率以产品内为准。",
+    "product": "Nemotron 3.5 Super VL on OpenCode",
+    "providers": [
+      {
+        "name": "OpenCode Zen / Console",
+        "action_url": "https://opencode.ai/v2/docs/console/models/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Nemotron 3.5 Super VL（OpenCode）",
+        "action_url": "https://opencode.ai/v2/docs/console/models/"
+      },
+      {
+        "name": "OpenRouter :free 对照",
+        "action_url": "https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
