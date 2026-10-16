@@ -5758,5 +5758,46 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "nvidia-nim-step5-preview-free-endpoint-20261016",
+    "title": "NVIDIA NIM：Step 5 Preview 免费 API endpoint（1M 上下文）",
+    "model": "阶跃 Step 5 Preview（stepfun-ai/step-5-preview）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/AndarkFomo/status/2111057081729990684",
+    "summary": "社区指出阶跃 Step 5 Preview（约 600B MoE / 27B 激活、1M 上下文、图文多模态）已在 NVIDIA NIM（build.nvidia.com）提供 Free Endpoint。官方模型页确认 Free Endpoint: Available，model id 为 stepfun-ai/step-5-preview，OpenAI 兼容调用 https://integrate.api.nvidia.com/v1/chat/completions；需注册 NVIDIA 拿 API Key，受 Trial 条款与限速约束。与此前 OpenRouter/OpenCode/Nous Portal 限免及开源权重是不同渠道。",
+    "source": "x.com/@AndarkFomo/status/2111057081729990684（build.nvidia.com/stepfun-ai/step-5-preview 核实）",
+    "collected_at": "2026-10-16T19:48:51+08:00",
+    "expired": false,
+    "source_post_id": "2111057081729990684",
+    "free_terms": "build.nvidia.com 免费 endpoint；需 NVIDIA API Key；受 Trial 条款与限速约束；截止未公布。",
+    "product": "NVIDIA NIM stepfun-ai/step-5-preview free endpoint",
+    "post_time_bj": "2026-10-16T19:30:04+08:00",
+    "providers": [
+      {
+        "name": "NVIDIA NIM",
+        "action_url": "https://build.nvidia.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Step 5 Preview",
+        "action_url": "https://build.nvidia.com/stepfun-ai/step-5-preview"
+      },
+      {
+        "name": "Step-5-Preview (Hugging Face)",
+        "action_url": "https://huggingface.co/stepfun-ai/Step-5-Preview"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
