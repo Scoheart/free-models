@@ -5711,5 +5711,52 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "devin-swe2-free-extend-20261016",
+    "title": "Devin SWE-2：Pro/Max/Teams 免费期再延至约 11/1（仅 Desktop / CLI）",
+    "model": "Cognition SWE-2（Medium / High / Max）",
+    "type": "限时",
+    "deadline": "2026-11-01T23:59:59+08:00",
+    "url": "https://x.com/Himalayas1989/status/2111019169240297948",
+    "summary": "社区多源称 Devin 官方 Discord（veritas）通知：自研编程模型 SWE-2 对 Pro / Max / Teams 用户在 Desktop（原 Windsurf）与 CLI 的免费促销再次延期，约用到 10 月底或 11 月 1 日；同时上线付费加速档 SWE-2 Lightning。注意：官网定价页仍写免费到 2026-10-16、文档写到 10-15，X 无官推，以端内模型列表 Free 标签为准。Cloud 会话不计入此次免费。条件：需有效 Pro（$20/月起）/ Max / Teams；仅 Desktop 与 CLI。",
+    "source": "x.com/@Himalayas1989/status/2111019169240297948（同日 @ScarletKc/@noah_z_zhang/@markfenner/@chneqi1 等；定价页 https://devin.ai/pricing 与 docs.devin.ai/desktop/models 尚未同步新截止日）",
+    "collected_at": "2026-10-16T18:42:10+08:00",
+    "expired": false,
+    "source_post_id": "2111019169240297948",
+    "free_terms": "Pro/Max/Teams 在 Devin Desktop 与 CLI 免费用 SWE-2，社区称延至约 11/1；官网页仍写 10/16。不含 Cloud。另有付费 SWE-2 Lightning。",
+    "product": "Devin Desktop / CLI — SWE-2",
+    "providers": [
+      {
+        "name": "Devin",
+        "action_url": "https://devin.ai/pricing"
+      },
+      {
+        "name": "Devin Docs（模型表）",
+        "action_url": "https://docs.devin.ai/desktop/models"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Devin Desktop",
+        "action_url": "https://devin.ai/pricing"
+      },
+      {
+        "name": "Devin CLI",
+        "action_url": "https://docs.devin.ai/cli/index"
+      }
+    ],
+    "models": [
+      {
+        "name": "SWE-2",
+        "action_url": "https://docs.devin.ai/desktop/models"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
