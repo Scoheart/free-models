@@ -6051,5 +6051,46 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "antigravity-argon-gemini-quota-reset-20261017",
+  "title": "Google Antigravity：全员重置 Gemini 4 Argon 与 Gemini 模型额度，周末继续用",
+  "model": "Gemini 4 Argon / Gemini 系列（Antigravity 内）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/_mohansolo/status/2111220356178751860",
+  "summary": "Antigravity 负责人 Varun Mohan 发帖称，因本周 Argon 和 Gemini 在 Antigravity 上使用火爆，已给所有人重置 Argon 和 Gemini 模型额度，鼓励周末继续开发。社区用户确认额度已回满，并吐槽 Pro 档的 Argon 周额度很快就会用完。这是一次性重置，不是额度上调；打开 Antigravity 应用、CLI 或 IDE 插件即可直接用上回满的额度。",
+  "source": "x.com/_mohansolo/status/2111220356178751860 + x.com/thtbee_/status/2111230123076927947",
+  "collected_at": "2026-10-17T07:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111220356178751860",
+  "free_terms": "一次性全员重置，Antigravity 现有用户（含 Pro）的 Argon 与 Gemini 模型额度回满；需 Google 账号登录 Antigravity；额度用完后按原周期再重置。",
+  "product": "Google Antigravity",
+  "post_time_bj": "2026-10-17T06:18:52+08:00",
+  "providers": [
+   {
+    "name": "Google Antigravity 套餐与额度",
+    "action_url": "https://antigravity.google/pricing"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Antigravity 下载（App / CLI / IDE 插件）",
+    "action_url": "https://antigravity.google/download"
+   }
+  ],
+  "models": [
+   {
+    "name": "Antigravity 模型文档",
+    "action_url": "https://antigravity.google/docs/models/"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
