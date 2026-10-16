@@ -5582,5 +5582,50 @@
       "coding"
     ],
     "barriers": []
+  },
+  {
+    "id": "opencode-glm53-flash-free-20261016",
+    "title": "OpenCode Zen：GLM-5.3-Flash Free 限时免费（glm-5.3-flash-free）",
+    "model": "智谱 GLM-5.3-Flash Free（免费档约 200K 上下文）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/opencode/status/2110986357539754114",
+    "summary": "OpenCode 官方宣布智谱 GLM 5.3 Flash 现已在 OpenCode 免费可用，这是继 DeepSeek V4.1 Flash、Nemotron 3.5 Super VL 之后两天内又一个免费模型。公开 /v1/models 已列出 glm-5.3-flash-free，Zen 文档写明限时免费，提供方零数据留存、不用于训练，未公布截止日。用法：打开 OpenCode 在 /models 选 GLM-5.3-Flash Free，或用 OpenCode Zen API Key 调 https://opencode.ai/inference/openai/v1/chat/completions。社区反馈免费档上下文约 200K、高峰期容易 429，有用户称每天约 200 次请求。",
+    "source": "x.com/@opencode/status/2110986357539754114（OpenCode Zen 文档与公开 /v1/models 核实）",
+    "collected_at": "2026-10-16T15:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110986357539754114",
+    "free_terms": "限时免费；模型 id glm-5.3-flash-free；零数据留存、不用于训练；截止未公布；免费档约 200K 上下文，限速未官方公布。",
+    "product": "OpenCode Zen · GLM-5.3-Flash Free (opencode/glm-5.3-flash-free)",
+    "post_time_bj": "2026-10-16T14:49:02+08:00",
+    "providers": [
+      {
+        "name": "OpenCode Zen",
+        "action_url": "https://opencode.ai/zen"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/download"
+      }
+    ],
+    "models": [
+      {
+        "name": "GLM-5.3-Flash Free（Zen 文档）",
+        "action_url": "https://opencode.ai/docs/zen/"
+      },
+      {
+        "name": "Zen 公开模型列表（/v1/models）",
+        "action_url": "https://opencode.ai/zen/v1/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
