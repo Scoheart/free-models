@@ -5214,5 +5214,116 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "runanywhere-wally-5usd-credits-muse-spark-20261016",
+    "title": "RunAnywhere Wally：注册送 $5 免费额度，Day-0 上线 Muse Spark Open（OpenAI 兼容）",
+    "model": "Muse Spark Open / GLM-5.3 Flash / DeepSeek V4.1 Flash / Qwen3.8-27B / MiMo-V2.6-Pro 等",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://runanywhere.ai",
+    "summary": "RunAnywhere（YC W26）托管推理栈 Wally 宣布 Muse Spark Open Day-0 上线，官方称约 370 tok/s。新用户注册送 $5 免费额度、无需绑卡；之后按 token 预付费。OpenAI 兼容端点（inference.runanywhere.ai/v1），可用 wally CLI（wally account login / wally opencode --cloud）接入 OpenCode、Claude Code 等。控制台 console.runanywhere.ai；另有 onboard 技能 https://runanywhere.ai/SKILL.md。与已收录的 Meta Muse Spark 开放权重下载不同：此处为托管 API 免费试用额度。",
+    "source": "x.com/@RunAnywhereAI/status/2110918058189717579 + runanywhere.ai / YC",
+    "collected_at": "2026-10-16T10:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110918058189717579",
+    "related_post_urls": [
+      "https://x.com/RunAnywhereAI/status/2110918058189717579",
+      "https://x.com/RunAnywhereAI/status/2110918069539450914",
+      "https://x.com/RunAnywhereAI/status/2110918072127410673"
+    ],
+    "free_terms": "注册送 $5 免费额度，无需绑卡；额度用完后按量计费。有效期官方未写死。",
+    "product": "RunAnywhere Wally Cloud",
+    "providers": [
+      {
+        "name": "RunAnywhere / Wally",
+        "action_url": "https://runanywhere.ai"
+      },
+      {
+        "name": "Wally 控制台",
+        "action_url": "https://console.runanywhere.ai"
+      },
+      {
+        "name": "Wally Cloud Quickstart",
+        "action_url": "https://docs.runanywhere.ai/wally-cloud/quickstart"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode（经 wally）",
+        "action_url": "https://runanywhere.ai/SKILL.md"
+      },
+      {
+        "name": "Claude Code（经 wally）",
+        "action_url": "https://runanywhere.ai/SKILL.md"
+      }
+    ],
+    "models": [
+      {
+        "name": "muse-spark（Wally）",
+        "action_url": "https://x.com/RunAnywhereAI/status/2110918058189717579"
+      },
+      {
+        "name": "模型目录（控制台）",
+        "action_url": "https://console.runanywhere.ai"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "zero_signup"
+    ]
+  },
+  {
+    "id": "prismml-bonsai2-darkbloom-250m-tokens-20261016",
+    "title": "PrismML Bonsai 2（2B/4B/9B）开源权重 + Darkbloom 前 100 名送 2.5 亿免费 token",
+    "model": "Ternary Bonsai 2 2B / 4B / 9B（另有既有 27B）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://prismml.com/news/bonsai-2-family",
+    "summary": "PrismML 发布基于 Qwen3.5 的三值量化 Bonsai 2 小规格（2B≈0.43GB / 4B≈0.95GB / 9B≈2GB），Apache-2.0，支持推理、视觉与工具调用，可走 llama.cpp / MLX；权重见 Hugging Face prism-ml/Bonsai-2 合集。官方同时提供 Darkbloom（console.darkbloom.dev）在线试用 Bonsai 2 9B，并写明前 100 名用户可获 2.5 亿免费 token。适合端侧/本地 Agent；在线免费额度名额有限，先到先得。",
+    "source": "prismml.com/news/bonsai-2-family + x.com/@PrismML/status/2110823964650164348 + @MichaelWaitze/status/2110907375305863264",
+    "collected_at": "2026-10-16T10:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110907375305863264",
+    "related_post_urls": [
+      "https://x.com/PrismML/status/2110823964650164348",
+      "https://x.com/MichaelWaitze/status/2110907375305863264"
+    ],
+    "free_terms": "权重 Apache-2.0 免费下载；Darkbloom 前 100 名用户送 2.5 亿免费 token（名额有限，截止未写死日期）。",
+    "product": "PrismML Bonsai 2 + Darkbloom",
+    "providers": [
+      {
+        "name": "Darkbloom 控制台",
+        "action_url": "https://console.darkbloom.dev"
+      },
+      {
+        "name": "PrismML 公告",
+        "action_url": "https://prismml.com/news/bonsai-2-family"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Hugging Face Bonsai-2 合集",
+        "action_url": "https://huggingface.co/collections/prism-ml/bonsai-2"
+      },
+      {
+        "name": "下载文档",
+        "action_url": "https://docs.prismml.com/download/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key",
+      "need_client"
+    ]
   }
 ]
