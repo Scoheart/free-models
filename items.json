@@ -5873,5 +5873,67 @@
       "need_key",
       "deposit_hold"
     ]
+  },
+  {
+    "id": "reflection-beam-free-hosted-ollama-opencode-vercel-20261017",
+    "title": "Reflection Beam 免费托管调用：Ollama beam:cloud / OpenCode Zen beam-free / Vercel reflection/beam-free",
+    "model": "Reflection Beam 1.0（501B MoE / 23B 激活）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/ollama/status/2111087699574903061",
+    "summary": "Reflection 开源 Beam 1.0 后，多家平台同步上线免费托管版本：Ollama 官方宣布 beam:cloud 限时免费（美国托管、零数据保留，可用 `ollama launch claude --model beam:cloud` 接入 Claude Code，也支持 OpenCode / Hermes / OpenClaw）；OpenCode Zen 新增 Beam Free（beam-free），输入输出与缓存均免费，但不对中国大陆及港澳等地区开放，数据保留 30 天；Vercel AI Gateway 上架 reflection/beam-free（1M 上下文，最大输出 131K）。均未公布截止时间和额度上限。与已收录的 HF 开源权重条目不同，这里无需自备算力。",
+    "source": "x.com/ollama/status/2111087699574903061 + x.com/EastSavin/status/2111124822394847299 + x.com/aiptsd/status/2111130775160537397；核实 ollama.com/library/beam、opencode.ai/docs/zen、vercel.com/ai-gateway/models/beam-free",
+    "collected_at": "2026-10-17T00:58:00+08:00",
+    "expired": false,
+    "source_post_id": "2111087699574903061",
+    "free_terms": "限时免费，未公布截止时间与额度；Ollama 需登录账号使用 cloud 模型；OpenCode Zen 需 Console API Key，且不对中国大陆/港澳等地区开放；Vercel AI Gateway 需 Vercel 账号与 AI Gateway Key。",
+    "product": "Ollama Cloud beam:cloud / OpenCode Zen beam-free / Vercel AI Gateway reflection/beam-free",
+    "post_time_bj": "2026-10-16T21:31:44+08:00",
+    "providers": [
+      {
+        "name": "Ollama",
+        "action_url": "https://ollama.com/settings/keys"
+      },
+      {
+        "name": "OpenCode Zen",
+        "action_url": "https://opencode.ai/zen"
+      },
+      {
+        "name": "Vercel AI Gateway",
+        "action_url": "https://vercel.com/docs/ai-gateway"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Ollama",
+        "action_url": "https://ollama.com/download"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/download"
+      }
+    ],
+    "models": [
+      {
+        "name": "beam:cloud (Ollama)",
+        "action_url": "https://ollama.com/library/beam"
+      },
+      {
+        "name": "reflection/beam-free (Vercel)",
+        "action_url": "https://vercel.com/ai-gateway/models/beam-free"
+      },
+      {
+        "name": "Beam Free (OpenCode Zen)",
+        "action_url": "https://opencode.ai/docs/zen/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "need_client"
+    ]
   }
 ]
