@@ -5799,5 +5799,38 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "reflection-beam-501b-open-weights-20261016",
+    "title": "Reflection Beam 1.0：501B MoE 开源权重（Apache-2.0，1M 上下文）",
+    "model": "Reflection Beam 1.0（Beam-1.0-501B-A23B）",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/reflection_ai/status/2111079965529968798",
+    "summary": "Reflection 官方宣布 Beam 开源权重，Apache-2.0 许可：501B 总参 / 23B 激活的 MoE，1M 上下文，主打编码、推理与工具调用。同步放出 BF16、FP8、NVFP4 权重和 DFlash2 投机解码草稿模型，Hugging Face 可免费下载；官方称有 40+ 合作伙伴陆续提供推理与微调。自部署需大量显存，暂未见官方免费 API 端点。",
+    "source": "x.com/@reflection_ai/status/2111079965529968798（huggingface.co/reflection/Beam-1.0-501B-A23B 核实，license: apache-2.0）",
+    "collected_at": "2026-10-16T21:52:00+08:00",
+    "expired": false,
+    "source_post_id": "2111079965529968798",
+    "free_terms": "开源权重免费下载，Apache-2.0 可商用；需自备算力部署。",
+    "product": "Reflection Beam 1.0 open weights",
+    "post_time_bj": "2026-10-16T21:01:00+08:00",
+    "providers": [],
+    "agents": [],
+    "models": [
+      {
+        "name": "Beam-1.0-501B-A23B (Hugging Face)",
+        "action_url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B"
+      },
+      {
+        "name": "Beam-1.0-501B-A23B-FP8 (Hugging Face)",
+        "action_url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B-FP8"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": []
   }
 ]
