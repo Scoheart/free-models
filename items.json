@@ -5066,5 +5066,52 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "anthropic-claude-code-review-enterprise-credits-20261016",
+    "title": "Claude Enterprise：Code Review 促销额度至少 $10,000（可至 $50,000），领后 30 天有效",
+    "model": "Claude Code Review",
+    "type": "额度",
+    "deadline": "2027-01-15T23:59:00Z",
+    "url": "https://x.com/ClaudeDevs/status/2110866213266203118",
+    "summary": "Anthropic 官号 ClaudeDevs 宣布：符合条件的付费 Claude Enterprise 组织可在 2027-01-15 23:59 UTC 前由 Owner/Primary Owner 在 Code Review 设置页领取促销额度；金额按活跃 Claude Code 席位在领取时定为 $10,000–$50,000，领取后 30 天内或用完前优先抵扣 github.com 上的 Code Review（按 token 计价）。不含 Team/Pro/Max/Free、经销商账单、GHES/GHEC 数据驻留、试用/欠费组织；不覆盖自托管 Action、CLI /code-review、API 等。官方条款见 Help Center。",
+    "source": "ClaudeDevs",
+    "collected_at": "2026-10-16T08:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110866213266203118",
+    "free_terms": "仅付费 Claude Enterprise；Owner 领取一次；$10k–$50k（按席位）；领后 30 天或用完孰先；申领截止 2027-01-15 23:59 UTC；仅抵 Code Review on github.com。",
+    "product": "Claude Code Review promotional credits (Enterprise)",
+    "providers": [
+      {
+        "name": "Anthropic Claude Console",
+        "action_url": "https://console.anthropic.com/"
+      },
+      {
+        "name": "Code Review GA 说明",
+        "action_url": "https://claude.com/resources/articles/code-review-is-now-generally-available"
+      },
+      {
+        "name": "促销额度条款（Help Center）",
+        "action_url": "https://support.claude.com/en/articles/17603594-free-code-review-promotional-credits-for-claude-enterprise"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Claude Code",
+        "action_url": "https://www.anthropic.com/claude-code"
+      }
+    ],
+    "models": [
+      {
+        "name": "Claude Code Review",
+        "action_url": "https://claude.com/resources/articles/code-review-is-now-generally-available"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
