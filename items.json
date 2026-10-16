@@ -5325,5 +5325,157 @@
       "need_key",
       "need_client"
     ]
+  },
+  {
+    "id": "openrouter-startup-program-5k-20261016",
+    "title": "OpenRouter for Startups：合作伙伴推荐可申最高 $5,000 推理额度 + 12 个月 0% 手续费",
+    "model": "OpenRouter 全站 500+ 模型（通用推理额度）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://openrouter.ai/startup-program",
+    "summary": "OpenRouter 初创计划：经 approved partner 推荐的 Pre-Series B、全职做 AI 产品的团队，可申最高 $5,000 通用推理额度（可用于站上 500+ 模型）+ 12 个月 0% platform/BYOK 手续费。门槛：公开公司网站、公司域名个人邮箱、OpenRouter 账号终身消费 <$500、未领过 startup credits。多数额度发放后约 6 个月过期；滚动接受申请、无固定截止日。无 partner 推荐通常无法自行通过。申请页与条款见官网。",
+    "source": "x.com/@m0nle0z/status/2110931036968550582 + openrouter.ai/startup-program",
+    "collected_at": "2026-10-16T11:48:46+08:00",
+    "expired": false,
+    "source_post_id": "2110931036968550582",
+    "related_post_urls": [
+      "https://x.com/m0nle0z/status/2110931036968550582",
+      "https://x.com/m0nle0z/status/2110931039933853759"
+    ],
+    "free_terms": "最高 $5K 推理额度（多数约 6 个月过期）+ 12 个月 0% 手续费；需 approved partner 推荐；Pre-Series B；公司邮箱与网站；账号终身消费 <$500；每人仅一次。",
+    "product": "OpenRouter for Startups",
+    "providers": [
+      {
+        "name": "OpenRouter Startup Program",
+        "action_url": "https://openrouter.ai/startup-program"
+      },
+      {
+        "name": "OpenRouter 控制台",
+        "action_url": "https://openrouter.ai/"
+      },
+      {
+        "name": "计划条款",
+        "action_url": "https://openrouter.ai/startup-program-terms"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cline",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "OpenRouter 模型目录",
+        "action_url": "https://openrouter.ai/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "runware-grant-program-30k-20261016",
+    "title": "Runware Grant：Pre-Series A 可直申最高 $30,000 API 额度（图像/视频等，12 个月）",
+    "model": "Runware 多模态 API（图像 / 视频 / 音频 / LLM / 3D / Avatar 等）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://runware.ai/grant-program",
+    "summary": "Runware Grant Program：有真实产品或可信 MVP、Series A 前（自举也可）的团队可直接申请，无需 VC/投资人介绍；需计划 6 个月内在 Runware 上构建或上线，并用公司/产品相关商务邮箱。获批后最高 $30,000 API 额度、12 个月有效（官方称约等于 75 万+ 次生图或 90+ 小时视频，按平均标价估算），跑生产平台而非沙箱。滚动审核，约两周内回复。与 OpenRouter 初创计划不同：此处可免推荐直接申请。",
+    "source": "x.com/@m0nle0z/status/2110931039933853759 + runware.ai/grant-program",
+    "collected_at": "2026-10-16T11:48:46+08:00",
+    "expired": false,
+    "source_post_id": "2110931039933853759",
+    "related_post_urls": [
+      "https://x.com/m0nle0z/status/2110931036968550582",
+      "https://x.com/m0nle0z/status/2110931039933853759"
+    ],
+    "free_terms": "最高 $30K API 额度，12 个月；需真实产品/MVP、Pre-Series A、6 个月内上线 Runware；商务邮箱；无需投资人推荐；滚动申请、约两周回复。",
+    "product": "Runware Grant Program",
+    "providers": [
+      {
+        "name": "Runware Grant",
+        "action_url": "https://runware.ai/grant-program"
+      },
+      {
+        "name": "Runware 文档",
+        "action_url": "https://runware.ai/docs"
+      },
+      {
+        "name": "Runware Playground",
+        "action_url": "https://my.runware.ai/playground"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Runware 模型与能力",
+        "action_url": "https://runware.ai/grant-program"
+      }
+    ],
+    "scenes": [
+      "image",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "unorouter-free-models-gemini4-argon-20261016",
+    "title": "UnoRouter：注册免绑卡，:free 后缀模型 $0 调用（网传含 Gemini 4 Argon Free）",
+    "model": "Gemini 4 Argon（:free，网传）/ Claude Haiku 5.5:free / MiMo v2.6 Flash:free / Ling 3.1 Flash:free / MiniCPM5 2B:free 等",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/mdaman010/status/2110941606970863621",
+    "summary": "UnoRouter 是 OpenAI 兼容的多模型 API 聚合路由，注册无需信用卡，名字带 :free 的模型输入输出均 $0（已核实 claude-haiku-5-5:free、mimo-v2.6-flash:free 页面标价 $0.00）。X 帖称 Gemini 4 Argon Free 也免费可用，站内排行榜确有 gemini-4-argon:free 调用量，但该模型独立页面目前打不开，可能已下架或限量。官方说明免费模型走上游共享免费层，高峰期会排队、变慢或失败，需要重试。",
+    "source": "x.com/@mdaman010/status/2110941606970863621 + unorouter.com",
+    "collected_at": "2026-10-16T12:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2110941606970863621",
+    "free_terms": "注册免绑卡；:free 后缀模型 $0；共享上游免费层，可能拥挤或失败；无明确截止时间。",
+    "product": "UnoRouter",
+    "post_time_bj": "2026-10-16T11:51:13+08:00",
+    "providers": [
+      {
+        "name": "UnoRouter",
+        "action_url": "https://unorouter.com/en"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "UnoRouter 模型列表",
+        "action_url": "https://unorouter.com/en/models"
+      },
+      {
+        "name": "claude-haiku-5-5:free",
+        "action_url": "https://unorouter.com/en/models/anthropic/claude-haiku-5-5:free"
+      },
+      {
+        "name": "mimo-v2.6-flash:free",
+        "action_url": "https://unorouter.com/en/models/xiaomi/mimo-v2.6-flash:free"
+      },
+      {
+        "name": "gemini-4-argon（付费页）",
+        "action_url": "https://unorouter.com/en/models/google/gemini-4-argon"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
