@@ -5513,5 +5513,74 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "monkeycode-free-10m-tokens-daily-20261016",
+    "title": "长亭 MonkeyCode 免费档：每天 10M Token + 1 核 4G 云端开发环境",
+    "model": "MonkeyCode 基础档模型（内置 DeepSeek V4.1 Flash 等）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/aiptsd/status/2110976646543036598",
+    "summary": "长亭科技开源的云端 AI 编程平台 MonkeyCode，个人免费会员每天发 1000 万 Token，可调用基础档模型，并附带一台 1 vCPU/4GB 云端开发机，浏览器注册就能派编程任务，额度每日重置，签到还可多领 100 积分。部分第三方模型和增强能力另扣积分，不是所有模型都无限用。已对照 GitHub 仓库 README 与公开定价页核实免费档存在。",
+    "source": "x.com/@aiptsd/status/2110976646543036598（转引 AI Promo Now；已对照 chaitin/MonkeyCode 官方仓库核实）",
+    "collected_at": "2026-10-16T14:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110976646543036598",
+    "free_terms": "注册即用；每日 10M Token、额度隔天刷新；部分第三方模型/增强能力需积分；官方提示权益可能调整。",
+    "product": "MonkeyCode（长亭科技）",
+    "post_time_bj": "2026-10-16T14:10:27+08:00",
+    "providers": [
+      {
+        "name": "MonkeyCode 在线版",
+        "action_url": "https://monkeycode-ai.com/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "MonkeyCode（GitHub 开源仓库）",
+        "action_url": "https://github.com/chaitin/MonkeyCode"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "cn_account"
+    ]
+  },
+  {
+    "id": "verizon-google-ai-pro-6-months-free-20261016",
+    "title": "Verizon 用户可免费领 6 个月 Google AI Pro（含 Gemini Pro 额度）",
+    "model": "Google AI Pro（Gemini 应用 Pro 模型等）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/sammygurus/status/2110973677655204338",
+    "summary": "Verizon 10 月 14 日起给符合条件的用户送 6 个月 Google AI Pro（原价 19.99 美元/月），面向 Simplicity、myPlan 和 Verizon 家庭宽带用户，仅限首次开通 Google AI Pro 的个人 Google 账号，含 5TB 存储和更高的 Gemini 用量。6 个月后按 10 美元/月续费，不想付费需提前取消。只适用于美国 Verizon 用户，国内用户基本用不上。",
+    "source": "x.com/@sammygurus/status/2110973677655204338（Android Authority 10/14 报道与 Verizon 官方条款核实）",
+    "collected_at": "2026-10-16T14:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2110973677655204338",
+    "free_terms": "需美国 Verizon 合格套餐用户、18 岁以上、个人 Google 账号且首次开通；已有 Google One 付费订阅需先取消；6 个月后 10 美元/月自动续费；官方称活动可能随时结束。",
+    "product": "Verizon × Google AI Pro",
+    "post_time_bj": "2026-10-16T13:58:39+08:00",
+    "providers": [
+      {
+        "name": "Verizon Google AI Pro 条款",
+        "action_url": "https://www.verizon.com/support/google-one-ai-perk-legal/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Gemini 应用",
+        "action_url": "https://gemini.google.com/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": []
   }
 ]
