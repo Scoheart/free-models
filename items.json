@@ -5978,17 +5978,17 @@
  },
  {
   "id": "deepseek-search-api-claude-code-codex-free-2weeks-20261017",
-  "title": "DeepSeek Search API 上线：经 Claude Code / Codex 发起的网页搜索前两周免收 Search 费用",
+  "title": "DeepSeek Search/Fetch API：经 DeepSeek Harness / Claude Code / Codex 调用免费至 10/31（北京 11/1 00:00 开始计费）",
   "model": "DeepSeek API（Search / Fetch 接口）",
   "type": "限时",
-  "deadline": null,
+  "deadline": "2026-11-01T00:00:00+08:00",
   "url": "https://x.com/ak12kpoot/status/2111175764204773869",
-  "summary": "DeepSeek API 新上线独立的网页 Search 和 Fetch 接口，标准价各 5 元/千次成功请求（海外 $0.75/千次），失败或无结果不扣费，每账号各 5 QPS。官方定价页写明：通过 Claude Code 的 Web Search 工具或 Codex 的 web_search 功能（接 DeepSeek API）发起的搜索，在 Search API 上线后的前两周内免收 Search 请求费，之后按标准价计费，开始计费时间另行通知。按 10/16 上线推算，免费期大约到 10/30 前后，以官方通知为准。模型 token 费用照常收取，直接调用 Search/Fetch 接口不免费。",
+  "summary": "DeepSeek 开放自研搜索引擎的 Search 和 Fetch 接口，标准价各 $0.75/千次（国内 5 元/千次），失败或无结果不扣费。DeepSeek 官方 10/17 在 X 上确认：DeepSeek API 用户通过 DeepSeek Harness、Claude Code、Codex 的服务端工具发起的 Search/Fetch 调用目前免费，2026-10-31 16:00 UTC（北京时间 11/1 00:00）开始计费。模型 token 费用照常收取；直接调用 Search/Fetch 接口不在免费范围内。用现有 DeepSeek API Key 即可，接入说明见官方文档「Search & Fetch」。",
   "source": "x.com/ak12kpoot/status/2111175764204773869 + x.com/zhouG1n/status/2111137354392195347；核实 api-docs.deepseek.com/zh-cn/quick_start/pricing",
   "collected_at": "2026-10-17T03:52:00+08:00",
   "expired": false,
   "source_post_id": "2111175764204773869",
-  "free_terms": "仅限 Claude Code Web Search / Codex web_search 经 DeepSeek API 发起的搜索请求免 Search 费，为期上线后两周（约至 10/30，官方另行通知）；模型 token 照常计费；需 DeepSeek API Key 且账户有余额。",
+  "free_terms": "仅经 DeepSeek Harness / Claude Code / Codex 服务端工具发起的 Search/Fetch 调用免费；北京时间 2026-11-01 00:00 起计费；token 照收。",
   "product": "DeepSeek API Search（Claude Code / Codex 网页搜索）",
   "post_time_bj": "2026-10-17T03:21:40+08:00",
   "providers": [
@@ -6020,7 +6020,10 @@
    "need_key",
    "need_client",
    "cn_account"
-  ]
+  ],
+  "official_url": "https://x.com/deepseek_ai/status/2111375650414309859",
+  "updated_at": "2026-10-17T17:50:00+08:00",
+  "update_note": "DeepSeek 官方确认免费截止：2026-10-31 16:00 UTC（北京 11/1 00:00），并新增 DeepSeek Harness。"
  },
  {
   "id": "tabbit-browser-free-claude-sonnet-haiku-20261017",
