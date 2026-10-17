@@ -6453,5 +6453,40 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "deepseek-v41-flash-1017-mit-open-weights-20261017",
+  "title": "DeepSeek V4.1-Flash-1017：MIT 开源权重免费下载（官网/App/API 同步换新）",
+  "model": "DeepSeek-V4.1-Flash-1017",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/deepseek_ai/status/2111375653069259247",
+  "summary": "DeepSeek 10/17 发布 V4.1-Flash 新版 checkpoint「1017」，权重以 MIT 许可在 Hugging Face 和魔搭 ModelScope 开放，可免费下载自部署。官方称跑分更强、完成任务更快、输出更短，网页、App 和 API 已同步切换（API 继续用 deepseek-flash，价格不变，API 本身仍收费）。另有官方 Search/Fetch API 免费期见单独条目。",
+  "source": "x.com/deepseek_ai 官方发布帖（4/4 开源下载链接）",
+  "collected_at": "2026-10-17T21:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111375653069259247",
+  "free_terms": "开源权重 MIT 许可，免费下载；托管 API 按原价计费。",
+  "product": "DeepSeek V4.1-Flash-1017",
+  "post_time_bj": "2026-10-17T16:35:57+08:00",
+  "providers": [],
+  "agents": [],
+  "models": [
+   {
+    "name": "DeepSeek-V4.1-Flash-1017 · Hugging Face",
+    "action_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   {
+    "name": "DeepSeek-V4.1-Flash-1017 · ModelScope",
+    "action_url": "https://modelscope.cn/models/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
  }
 ]
