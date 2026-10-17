@@ -6170,5 +6170,35 @@
    "need_client",
    "cn_account"
   ]
+ },
+ {
+  "id": "coralbricks-free-trial-20usd-20261017",
+  "title": "Coral Bricks 新账号试用额度从 $5 提到 $20（可跑 DeepSeek V4.1 Flash / GLM 5.3）",
+  "model": "DeepSeek V4.1 Flash、GLM 5.3",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/coralbricksdev/status/2111310266168172587",
+  "summary": "推理平台 Coral Bricks 官方号宣布：新注册账号的免费试用额度从 $5 提高到 $20，可换成数百万 tokens 的 DeepSeek V4.1 Flash 或 GLM 5.3，OpenAI 兼容接口，拿 Key 改 base URL 即可接入编码 Agent。官网称缓存输入 token 按 $0 计费。未写截止时间；$20 额度仅见于官方推文，官网页面未单独列出。",
+  "source": "x.com/coralbricksdev（Coral Bricks 官方号）",
+  "collected_at": "2026-10-17T00:41:00+08:00",
+  "expired": false,
+  "source_post_id": "2111310266168172587",
+  "free_terms": "新账号注册即送 $20 试用额度（原 $5），未写有效期/截止时间。",
+  "product": "Coral Bricks",
+  "post_time_bj": "2026-10-17T12:16:08+08:00",
+  "providers": [
+   {
+    "name": "Coral Bricks",
+    "action_url": "https://www.coralbricks.ai/register"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
