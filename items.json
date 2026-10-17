@@ -6524,5 +6524,70 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "perplexity-computer-rea-free-10k-credits-oct31-20261017",
+  "title": "Perplexity Computer：/reverse-engineer 逆向任务免费，每人最多 1 万 credits（至 10/31）",
+  "model": "Perplexity Computer（Light 档 GPT-6.1 Sol / Standard 档 Opus 5.5）",
+  "type": "限时",
+  "deadline": "2026-10-31T23:59:59+08:00",
+  "url": "https://x.com/AskPerplexity/status/2111120664543596957",
+  "summary": "Perplexity 官方宣布把开源的 REA（Reverse Engineer Anything）做成 Computer 内置技能：输入 /reverse-engineer 并指定一个 App，它会在没有源码的情况下分析其工作方式并重建可运行版本。使用该技能的任务 10 月 31 日前免费，每人上限 10,000 credits，CEO Aravind Srinivas 也发帖确认送额度。社区实测 Google 登录即可、不用绑卡；按官方技能说明，只应用于有授权的应用。截止时区官方未注明，按北京时间 10/31 当天保守标注。",
+  "source": "x.com/AskPerplexity 官方帖；CEO x.com/AravSrinivas/status/2111124769450135880；社区帖 x.com/qwerty__cs/status/2111471744422924307",
+  "collected_at": "2026-10-17T23:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111120664543596957",
+  "free_terms": "/reverse-engineer 任务免费，每人最多 10,000 credits；需 Perplexity 账号（社区称不绑卡）；截止 10/31。",
+  "product": "Perplexity Computer",
+  "post_time_bj": "2026-10-16T23:42:43+08:00",
+  "providers": [
+   {
+    "name": "Perplexity Computer",
+    "action_url": "https://www.perplexity.ai/computer"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": []
+ },
+ {
+  "id": "hermes-desktop-free-trial-model-nous-welcome-20261017",
+  "title": "Hermes Desktop（Nous Research）：首次安装自带免费试用模型 nous/welcome，免 API Key",
+  "model": "nous/welcome",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/witcheer/status/2111472304240886204",
+  "summary": "Nous Research 的开源 Agent Hermes Agent v0.22.0 起，新电脑首次打开 Hermes Desktop 桌面版会进入引导式设置对话，全程跑在免费试用模型 nous/welcome 上，不需要 API Key、Nous 账号或绑卡，装完就能直接聊、连 Gmail/Linear/Notion 等。限制：每个系统用户只有一次，只给桌面版首次安装（没配置过模型提供方），CLI、TUI、消息网关和远程后端拿不到；已安装的用户可在 Settings > Advanced > Desktop & startup > Run onboarding again 重跑引导。试用额度上限官方未公布。之后可一键切到本地模型（llama.cpp）继续免费用。",
+  "source": "x.com/witcheer 帖；官方发布 x.com/NousResearch/status/2110385143643091204；GitHub PR NousResearch/hermes-agent#137807",
+  "collected_at": "2026-10-17T23:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111472304240886204",
+  "free_terms": "桌面版首次安装一次性免费试用，每个系统用户一次；无需账号/Key；额度上限未公布；无截止时间。",
+  "product": "Hermes Desktop",
+  "post_time_bj": "2026-10-17T23:00:01+08:00",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Hermes Desktop",
+    "action_url": "https://hermes-agent.nousresearch.com/desktop"
+   }
+  ],
+  "models": [
+   {
+    "name": "nous/welcome 试用说明（GitHub PR）",
+    "action_url": "https://github.com/NousResearch/hermes-agent/pull/137807"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "zero_signup",
+   "need_client"
+  ]
  }
 ]
