@@ -6310,5 +6310,148 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "google-ai-plus-student-12-months-free-20261017",
+  "title": "Google AI Plus 学生版：全球 140+ 地区大学生免费 12 个月（12/31 前领取，美国学生为 AI Pro）",
+  "model": "Gemini（Google AI Plus：2 倍用量、Gemini Omni 视频生成）",
+  "type": "限时",
+  "deadline": "2026-12-31T23:59:59+08:00",
+  "url": "https://x.com/mollicksoif9/status/2111430791758532629",
+  "summary": "Google 官方学生优惠：18 岁以上在读大学生经 SheerID 验证后，可免费用 12 个月 Google AI Plus（Gemini 用量提高 2 倍、400GB 存储、Gemini Omni 视频生成、NotebookLM 等）；美国学生对应的是 Google AI Pro。帖子以印度为例，官方博客写明覆盖 140 多个市场（不含美国、加拿大、香港、澳门、玻利维亚、阿尔巴尼亚、突尼斯）。必须用个人 Google 账号并绑定付款方式，12 个月后自动按月扣费（印度 ₹399/月），不想续费要提前取消。领取截止 2026-12-31（官方未写时区）。",
+  "source": "x.com/mollicksoif9；官方条款见 one.google.com/offer/studentoffer8 与 Google 博客",
+  "collected_at": "2026-10-17T20:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111430791758532629",
+  "free_terms": "在读大学生 SheerID 验证，免费 12 个月；需绑付款方式，到期自动续费；2026-12-31 前领取。",
+  "product": "Google AI Plus 学生优惠",
+  "post_time_bj": "2026-10-17T20:15:03+08:00",
+  "providers": [
+   {
+    "name": "Google One 学生优惠",
+    "action_url": "https://one.google.com/ai-student"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Gemini 学生计划介绍",
+    "action_url": "https://gemini.google/in/students/?hl=en-IN"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "image"
+  ],
+  "barriers": [
+   "deposit_hold"
+  ]
+ },
+ {
+  "id": "meta-model-api-muse-spark-20usd-credits-20261017",
+  "title": "Meta Model API：新账号送 $20 免费额度，可调用 Muse Spark（仅限美国公开预览）",
+  "model": "Muse Spark（muse-spark-1.3 / 1.2 / 1.1）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/hmt6866/status/2111432042126708847",
+  "summary": "Meta 自家的 Model API 给每个新账号一次性 $20 免费额度，可调用 Muse Spark 系列模型（用完后标准价 $1.25 输入 / $4.25 输出每百万 tokens）。接口兼容 OpenAI 和 Anthropic SDK，base URL https://api.meta.ai/v1，OpenCode 已内置 Meta provider。目前只对美国开发者公开预览；$20 额度来自 Quartz 等报道与发帖人，官方定价页没单独写，以控制台显示为准。帖子提醒官方没说明提示词是否会被拿去训练。没有截止日期。",
+  "source": "x.com/hmt6866；Meta 官方文档 dev.meta.ai",
+  "collected_at": "2026-10-17T20:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111432042126708847",
+  "free_terms": "新账号一次性 $20 额度；仅美国公开预览；用完按量付费。",
+  "product": "Meta Model API",
+  "post_time_bj": "2026-10-17T20:20:02+08:00",
+  "providers": [
+   {
+    "name": "Meta Model API",
+    "action_url": "https://dev.meta.ai/docs/quickstart"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Muse Spark",
+    "action_url": "https://dev.meta.ai/resources/blog/build-with-muse-spark"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "deepseek-harness-6rmb-credit-round2-20261017",
+  "title": "DeepSeek Harness 0.2.1：新一轮 6 元体验赠金，首次登录即领（到账 7 天有效）",
+  "model": "DeepSeek V4.1-Flash-1017",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/hodu382759/status/2111426653293609034",
+  "summary": "DeepSeek Harness 桌面端 10/17 更新到 0.2.1，适配新发布的 V4.1-Flash-1017，同时重开 6 元体验赠金：活动前已注册的 DeepSeek 用户，或活动后用 +86 大陆手机号（不含虚拟号段）新注册的用户，第一次登录 Harness 就能领，不用充值；到账后 7 天有效，限量送完即止。上一轮（9/29–10/6）领过的账号这次一般领不到；之前登录过的要先退出再登录。只支持 macOS（Apple 芯片）和 Windows 64 位，请从 deepseek.com 官方下载。官方没写活动截止时间。",
+  "source": "x.com/hodu382759；规则参考 linux.do 讨论与 AI Promo Now 整理",
+  "collected_at": "2026-10-17T20:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111426653293609034",
+  "free_terms": "首次登录 Harness 领 6 元赠金，7 天有效，限量；新注册需 +86 手机号；每号一次。",
+  "product": "DeepSeek Harness",
+  "post_time_bj": "2026-10-17T19:58:37+08:00",
+  "providers": [],
+  "agents": [
+   {
+    "name": "DeepSeek Harness",
+    "action_url": "https://www.deepseek.com/harness/"
+   }
+  ],
+  "models": [
+   {
+    "name": "DeepSeek V4.1 Flash",
+    "action_url": "https://www.deepseek.com/harness/"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client",
+   "cn_account"
+  ]
+ },
+ {
+  "id": "huawei-codearts-daily-10m-tokens-20261017",
+  "title": "华为云码道 CodeArts：每天 1000 万免费 Token，可用 DeepSeek V4.1 Flash / GLM-5.3-Flash",
+  "model": "deepseek-v4.1-flash、glm-5.3-flash、deepseek-v4-flash-0731、deepseek-v4-pro-0813",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/mjjwiki/status/2110933659100606574",
+  "summary": "华为云码道（CodeArts）代码智能体限时福利：所有用户每天登录码道 IDE、VS Code / JetBrains 插件、桌面端、网页端或小程序后自动到账 1000 万 Token，当天 24:00 清零不累计，只能在码道里用这几款福利模型（deepseek-v4.1-flash、glm-5.3-flash、deepseek-v4-flash-0731、deepseek-v4-pro-0813），不能导出成 API Key 给第三方工具。官方写结束时间“另行通知”。注意：有第三方核验称码道计费已改为积分制，以客户端显示为准。原帖还提到报名华为开发者大赛·小红书 Skill 创新赛可领 200 元代金券。",
+  "source": "x.com/mjjwiki；官方规则见华为云码道活动说明页",
+  "collected_at": "2026-10-17T20:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2110933659100606574",
+  "free_terms": "每天 1000 万 Token，当日清零；仅限码道内福利模型；结束时间另行通知。",
+  "product": "华为云码道 CodeArts",
+  "post_time_bj": "2026-10-16T11:19:38+08:00",
+  "providers": [
+   {
+    "name": "华为云码道活动规则",
+    "action_url": "https://support.huaweicloud.com/offers-codeartsagent/codeartsagent_offers_0001.html"
+   }
+  ],
+  "agents": [
+   {
+    "name": "华为云码道 CodeArts",
+    "action_url": "https://activity.huaweicloud.com/codearts_agent.html"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
