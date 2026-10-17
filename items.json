@@ -6092,5 +6092,46 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "commandcode-beam1-free-all-plans-20261017",
+  "title": "Command Code：Reflection Beam 1.0 全套餐免费用（reflection/beam:free）",
+  "model": "Reflection Beam 1.0",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/CommandCodeAI/status/2111266968951251046",
+  "summary": "编程 Agent Command Code 官方宣布 Reflection 的开源模型 Beam 1.0 在所有套餐、所有订阅里免费使用：1M 上下文、推理模型，主打编程和 Agent 工作流。官网定价页写明 Beam 1.0 请求“在容量允许期间不消耗积分”，模型 ID 为 reflection/beam:free。注意 Command Code 没有零元档，最低是每月 1 美元的 Go 套餐，需先订阅再用。",
+  "source": "x.com/CommandCodeAI/status/2111266968951251046 + commandcode.ai/pricing",
+  "collected_at": "2026-10-16T21:46:00+08:00",
+  "expired": false,
+  "source_post_id": "2111266968951251046",
+  "free_terms": "所有 Command Code 套餐（最低 Go $1/月起）内 Beam 1.0 请求不扣积分，官方写明“容量允许期间”免费，未公布截止日期；通过 Command Code CLI（npm i -g command-code）选择 reflection/beam:free 使用。",
+  "product": "Command Code",
+  "post_time_bj": "2026-10-17T09:24:05+08:00",
+  "providers": [
+   {
+    "name": "Command Code 套餐与定价",
+    "action_url": "https://commandcode.ai/pricing"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Command Code 快速上手（CLI 安装）",
+    "action_url": "https://commandcode.ai/docs/quickstart"
+   }
+  ],
+  "models": [
+   {
+    "name": "Command Code 模型列表（reflection/beam:free）",
+    "action_url": "https://commandcode.ai/docs/reference/cli/models"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client",
+   "deposit_hold"
+  ]
  }
 ]
