@@ -6235,5 +6235,77 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "inception-mercury-100m-free-tokens-20261017",
+  "title": "Inception Mercury：新 API Key 免费额度从 1000 万涨到 1 亿 Tokens，免费层限速提高 10 倍",
+  "model": "Mercury 2.5（Mercury 2 系列扩散大模型）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/mollicksoif9/status/2111370773126316277",
+  "summary": "扩散语言模型 Mercury 的厂商 Inception 官方博客宣布：每个新 API Key 送 1 亿免费 Tokens（原来 1000 万），免费层速率限制提高 10 倍。官方文档写明是新账号一次性赠送、所有模型共用、不自动补充，注册不用填付款信息；接口兼容 OpenAI（base URL https://api.inceptionlabs.ai/v1，模型名 mercury-2.5）。未写截止时间。",
+  "source": "x.com/mollicksoif9（转述 Inception 官方博客）",
+  "collected_at": "2026-10-17T16:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111370773126316277",
+  "free_terms": "新账号一次性 1 亿 Tokens，全模型共用，不补充；无需付款信息；免费层限速提高 10 倍。",
+  "product": "Inception Platform",
+  "post_time_bj": "2026-10-17T16:16:34+08:00",
+  "providers": [
+   {
+    "name": "Inception",
+    "action_url": "https://platform.inceptionlabs.ai/dashboard/api-keys"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Mercury 2.5",
+    "action_url": "https://www.inceptionlabs.ai/blog/mercury-2-10x-free-tokens"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "agnes-30-flash-free-api-20261017",
+  "title": "Agnes 3.0 Flash API 当前 $0 调用（512K 上下文，兼容 OpenAI/Anthropic 接口）",
+  "model": "Agnes 3.0 Flash、Agnes 2.5 Flash",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/EastSavin/status/2111368756614361287",
+  "summary": "新加坡团队 Agnes AI 的 agnes-3.0-flash 托管 API 目前缓存输入、输入、输出全部 $0（刊例价 $0.05/$0.15 每百万 tokens），agnes-2.5-flash 同样免费，官方定价页没写截止时间。512K 上下文、最多 65,536 输出 tokens，支持 Chat Completions、Responses、Anthropic Messages 三种接口，base URL https://apihub.agnes-ai.com/v1。发帖人称邮箱或 GitHub 注册即可建 Key、不用绑卡、免费 Key 限 20 次/分钟（这几点官方文档未写明，以账号内显示为准）。",
+  "source": "x.com/EastSavin；官方定价见 wiki.agnes-ai.com",
+  "collected_at": "2026-10-17T16:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111368756614361287",
+  "free_terms": "agnes-3.0-flash / agnes-2.5-flash 当前价格 $0，官方未写截止日期；限速以账号 Key 为准（帖子称 20 次/分钟）。",
+  "product": "Agnes AI API",
+  "post_time_bj": "2026-10-17T16:08:33+08:00",
+  "providers": [
+   {
+    "name": "Agnes AI",
+    "action_url": "https://platform.agnes-ai.com/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Agnes 3.0 Flash",
+    "action_url": "https://wiki.agnes-ai.com/en/docs/agnes-30-flash"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
