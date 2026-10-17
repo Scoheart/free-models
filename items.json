@@ -6488,5 +6488,41 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "orcarouter-deepseek-v41-flash-free-20261017",
+  "title": "OrcaRouter：DeepSeek V4.1 Flash 免费版上线（$0/token，限速）",
+  "model": "deepseek/deepseek-v4.1-flash-free",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/OrcaRouter/status/2111457245003477202",
+  "summary": "AI 网关 OrcaRouter 把 DeepSeek V4.1 Flash（已更新到 10/17 新权重）加入免费层，模型 ID 为 deepseek/deepseek-v4.1-flash-free，OpenAI 兼容接口 https://api.orcarouter.ai/v1。官方模型页写明输入输出均 $0、不扣余额，但有速率限制，超限返回 HTTP 429；注册拿 API Key 不需要绑卡。未公布结束时间。",
+  "source": "x.com/OrcaRouter 官方帖；模型页 orcarouter.ai/models/deepseek/deepseek-v4.1-flash-free",
+  "collected_at": "2026-10-17T22:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111457245003477202",
+  "free_terms": "$0/百万 token，限速（超限 429）；无需绑卡；无截止时间。",
+  "product": "OrcaRouter",
+  "post_time_bj": "2026-10-17T22:00:10+08:00",
+  "providers": [
+   {
+    "name": "OrcaRouter",
+    "action_url": "https://www.orcarouter.ai/offers"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "DeepSeek V4.1 Flash (Free) · OrcaRouter",
+    "action_url": "https://www.orcarouter.ai/models/deepseek/deepseek-v4.1-flash-free"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
