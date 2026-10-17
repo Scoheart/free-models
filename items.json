@@ -6661,5 +6661,40 @@
    "need_key",
    "deposit_hold"
   ]
+ },
+ {
+  "id": "codex-day13-global-usage-reset-20261018",
+  "title": "Codex：「28 天每日改进或重置」第 13 天，全员用量再次免费重置",
+  "model": "Codex / ChatGPT Work（付费档共用额度）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/thsottiaux/status/2111492673890824348",
+  "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）在北京时间 10/18 00:20 发帖「Day 13/ Le limit reset」，是他「连续 28 天每天一项改进或一次重置」计划的第 13 天，再次给大家重置用量（此前第 2、3、6、8、10 天也重置过）。他随后回复说会在美西时间当天结束前推送完成，北京时间 05:12 又单独发了一条「Done」，大概率表示已推送，但帖子没明说。重置的是 ChatGPT 付费账号在 Codex / ChatGPT Work 里的五小时和周额度，不是 API 余额；免费档不一定受益。同时有不少用户反映最近 Codex 用量消耗明显变快，重置后建议自己看一下额度。",
+  "source": "x @thsottiaux",
+  "collected_at": "2026-10-18T06:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111492673890824348",
+  "free_terms": "ChatGPT 付费档 Codex 用量一次性全局重置；不改 API 余额；官方称美西 10/17 当天内推送完成。",
+  "product": "OpenAI Codex usage reset (Day 13)",
+  "post_time_bj": "2026-10-18T00:20:57+08:00",
+  "providers": [
+   {
+    "name": "Codex（ChatGPT 网页入口）",
+    "action_url": "https://chatgpt.com/codex"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Codex 官方文档与下载",
+    "action_url": "https://developers.openai.com/codex"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
