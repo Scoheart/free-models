@@ -6133,5 +6133,42 @@
    "need_client",
    "deposit_hold"
   ]
+ },
+ {
+  "id": "autoclaw-v210-upgrade-200m-tokens-20261017",
+  "title": "智谱 AutoClaw v2.1.0 升级福利：10/15–21 任选一天登录领 2 亿 Tokens（7 天有效）",
+  "model": "智谱 GLM（AutoClaw 积分）",
+  "type": "限时",
+  "deadline": "2026-10-21T23:59:59+08:00",
+  "url": "https://x.com/NiuOnAI/status/2111290580164915315",
+  "summary": "智谱 AutoClaw（澳龙）发布 v2.1.0，官方博客写明：10/15–10/21 期间任意一天登录 AutoClaw，每个账号可一次性领取 2 亿 Tokens（20,000 积分），领取后 7 天内有效；另外 10/15–10/25 每天登录还能领积分，普通用户每天 500、付费会员（含 GLM Coding Plan 个人套餐）每天 800。需安装并登录 AutoClaw 客户端。",
+  "source": "x.com/NiuOnAI/status/2111290580164915315 + autoclaw.zhipuai.cn 官方博客",
+  "collected_at": "2026-10-16T23:48:00+08:00",
+  "expired": false,
+  "source_post_id": "2111290580164915315",
+  "free_terms": "10/15–10/21 任意一天登录领 2 亿 Tokens（20,000 积分），每账号限一次，领取后 7 天有效；10/15–10/25 每日登录普通用户 500 积分、付费会员 800 积分。官方博客未写具体截止时刻，按 10/21 当天计。",
+  "product": "AutoClaw (智谱澳龙)",
+  "post_time_bj": "2026-10-17T10:57:54+08:00",
+  "providers": [],
+  "agents": [
+   {
+    "name": "AutoClaw",
+    "action_url": "https://autoclaw.zhipuai.cn/"
+   }
+  ],
+  "models": [
+   {
+    "name": "AutoClaw v2.1.0 升级福利（官方博客）",
+    "action_url": "https://autoclaw.zhipuai.cn/blog/news/Weekly-Perks-M10W3/"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_client",
+   "cn_account"
+  ]
  }
 ]
