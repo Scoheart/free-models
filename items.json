@@ -6200,5 +6200,40 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "tinyfish-free-search-fetch-api-20261017",
+  "title": "TinyFish：Search 与 Fetch API 永久免费（无需绑卡），已接入 treg 开源 WebAccess",
+  "model": "TinyFish Search API、Fetch API",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/Tiny_Fish/status/2111130139874795828",
+  "summary": "面向 AI Agent 的网页基础设施 TinyFish 官方号宣布：Search（网页搜索）和 Fetch（任意 URL 转干净正文）免费开放，注册不用绑卡，并成为 treg 开源 WebAccess 的首选免费通道。官网定价页写明两者 $0：Search 限 30 次/分钟、500 次/小时，Fetch 限 150 个 URL/分钟、1000 个/天；Agent、Browser 等其他接口仍按钱包余额计费。适合给编码 Agent 配免费联网搜索/抓取，不是大模型本身。",
+  "source": "x.com/Tiny_Fish（TinyFish 官方号）",
+  "collected_at": "2026-10-17T13:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2111130139874795828",
+  "free_terms": "Search 30 次/分钟、500 次/小时；Fetch 150 URL/分钟、1000 URL/天；均 $0，无需绑卡，未写截止时间。",
+  "product": "TinyFish",
+  "post_time_bj": "2026-10-17T00:20:22+08:00",
+  "providers": [
+   {
+    "name": "TinyFish",
+    "action_url": "https://agent.tinyfish.ai/api-keys"
+   }
+  ],
+  "agents": [
+   {
+    "name": "treg WebAccess",
+    "action_url": "https://treg.to/web-access"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
