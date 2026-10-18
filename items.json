@@ -7214,5 +7214,40 @@
    "image"
   ],
   "barriers": []
+ },
+ {
+  "id": "openai-codex-students-100-credits-20261019",
+  "title": "Codex for Students：美国/加拿大在校大学生免费领 $100 Codex 额度（2,500 credits，12 个月有效）",
+  "model": "Codex（ChatGPT credits）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/dayaoqtfzn/status/2111865466956501447",
+  "summary": "OpenAI 给美国和加拿大在读大学生发 $100 的 Codex 使用额度（显示为 2,500 credits）。用 ChatGPT Free / Go / Plus / Pro 账号登录领取页，通过 SheerID 用学校邮箱验证学生身份后自动到账，可在套餐自带限额之外继续用 Codex，发放后 12 个月过期。每位学生限领一次；这是 ChatGPT credits，不是 API 额度；需在美国或加拿大就读并居住。",
+  "source": "x @dayaoqtfzn；OpenAI 官方 Codex for Students 页与帮助中心条款核实",
+  "collected_at": "2026-10-19T01:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2111865466956501447",
+  "free_terms": "美国/加拿大学位制大学在读且居住于当地；ChatGPT 任意个人套餐（含免费版）+ SheerID 学生验证；每人一次，额度 12 个月有效。",
+  "product": "OpenAI Codex",
+  "post_time_bj": "2026-10-19T01:02:18+08:00",
+  "providers": [
+   {
+    "name": "OpenAI Codex for Students（领取说明）",
+    "action_url": "https://developers.openai.com/community/students"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Codex",
+    "action_url": "https://chatgpt.com/codex"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
