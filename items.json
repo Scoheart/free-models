@@ -7044,5 +7044,77 @@
    "need_key",
    "cn_account"
   ]
+ },
+ {
+  "id": "groq-free-tier-gpt-oss-qwen-whisper-20261018",
+  "title": "Groq 免费层：gpt-oss-120b / Qwen3.8-27B / Whisper 免费调用，速度极快",
+  "model": "openai/gpt-oss-120b、openai/gpt-oss-20b、qwen/qwen3.8-27b、whisper-large-v3(-turbo)",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/hodu382759/status/2111755643308966194",
+  "summary": "Groq 云推理有长期 Free tier，注册拿 API Key 即可免费调用，不用绑卡；官方限速页显示 gpt-oss-120b、gpt-oss-20b、qwen3.8-27b 每个模型约 30 RPM、每天 1K 次请求、每分钟 8K / 每天 200K token，另有 Whisper 语音转写。帖子夸它延迟极低、适合跑开源模型；想要更高额度可升级按量付费的 Developer 层。",
+  "source": "x @hodu382759；Groq 官方文档 console.groq.com/docs/rate-limits、billing-faqs",
+  "collected_at": "2026-10-18T18:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2111755643308966194",
+  "free_terms": "Free tier 长期免费，按模型限速（如 gpt-oss-120b：30 RPM / 1K RPD / 8K TPM / 200K TPD）；升级 Developer 层才需绑定付款方式。",
+  "product": "GroqCloud",
+  "post_time_bj": "2026-10-18T17:45:54+08:00",
+  "providers": [
+   {
+    "name": "Groq",
+    "action_url": "https://console.groq.com/keys"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Groq 免费层限速表",
+    "action_url": "https://console.groq.com/docs/rate-limits"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "fikra-api-free-deepseek-v4-flash-20261018",
+  "title": "Fikra API 上线 fikra-free-deepseek：DeepSeek V4 Flash 1M 上下文 $0 调用",
+  "model": "fikra-free-deepseek（deepseek-v4-flash-0731）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/jamesmian0/status/2111766471646806475",
+  "summary": "肯尼亚的 OpenAI 兼容聚合平台 Fikra API 把 fikra-free-deepseek 设为免费层主力模型，底层跑 deepseek-v4-flash-0731，1M 上下文，输入输出都按 $0 计费；免费上游额度用完会自动切到其他供应商。需要注册拿 Fikra Key，接口地址 https://api.fikraapi.co.ke/v1。平台支持 M-Pesa/银行卡、最低充值 $1，免费模型是否必须先充值官网没写明。小平台，量大或敏感数据慎用。",
+  "source": "x @jamesmian0；Fikra API 模型页 fikraapi.co.ke/models/fikra-free-deepseek",
+  "collected_at": "2026-10-18T18:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2111766471646806475",
+  "free_terms": "模型单价 $0（输入/输出），需 Fikra 账号与 API Key；平台最低充值 $1，免费模型是否需先充值未说明。",
+  "product": "Fikra API",
+  "post_time_bj": "2026-10-18T18:28:56+08:00",
+  "providers": [
+   {
+    "name": "Fikra API",
+    "action_url": "https://fikraapi.co.ke/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "fikra-free-deepseek",
+    "action_url": "https://fikraapi.co.ke/models/fikra-free-deepseek"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
