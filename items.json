@@ -6898,5 +6898,41 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "coursera-google-career-cert-google-ai-pro-3months-20261018",
+  "title": "Coursera：报名任意 Google 职业证书课程，送 3 个月 Google AI Pro（2027/1/1 前兑换）",
+  "model": "Google AI Pro（Gemini 高级模型、Deep Research、Flow、Gemini Notebook、AI Studio 等）",
+  "type": "限时",
+  "deadline": "2027-01-01T00:00:00+08:00",
+  "url": "https://x.com/alannnfx/status/2111412640232661339",
+  "summary": "Coursera 官方页写着限时活动：报名任意一门 Google 职业证书课程（数据分析、项目管理、UX、网络安全、IT 支持、AI 专业证书等），就能领 3 个月免费的 Google AI Pro。原帖说学到第 2 模块中段会出现领取链接。Google One 条款要求绑定付款方式，到期自动按月扣费，想不花钱要在 3 个月内取消；每人只能领一次，不能和其他 Google One 优惠叠加，已有更高档订阅或第三方渠道订阅的不能用；必须在 2027 年 1 月 1 日前兑换。中国大陆不在可用地区。Coursera 课程本身是订阅制（美加 $49/月，页面显示可免费试用），试用期内能否领到以实际为准。",
+  "source": "x @alannnfx；Coursera 官方页 coursera.org/google-career-certificates；Google One 条款 one.google.com/offer/terms-and-conditions/google-career-certificates",
+  "collected_at": "2026-10-18T13:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111412640232661339",
+  "free_terms": "报名 Google 职业证书课程后领取 3 个月 Google AI Pro；需绑定付款方式、到期自动续费；2027/1/1 前兑换；每人一次；中国大陆不可用。",
+  "product": "Google AI Pro × Coursera Google Career Certificates",
+  "post_time_bj": "2026-10-17T19:02:56+08:00",
+  "providers": [
+   {
+    "name": "Coursera Google 职业证书",
+    "action_url": "https://www.coursera.org/google-career-certificates"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Gemini",
+    "action_url": "https://gemini.google.com/"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "image"
+  ],
+  "barriers": [
+   "deposit_hold"
+  ]
  }
 ]
