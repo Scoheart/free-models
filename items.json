@@ -7179,5 +7179,40 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "jio-google-ai-pro-18-months-free-20261018",
+  "title": "Reliance Jio × Google：印度 Jio 用户免费领 18 个月 Google AI Pro（10/29 前领取）",
+  "model": "Gemini（Google AI Pro 档）/ Veo / Nano Banana / NotebookLM",
+  "type": "限时",
+  "deadline": "2026-10-29T23:59:59+05:30",
+  "url": "https://x.com/haige2330/status/2111800065614651775",
+  "summary": "印度运营商 Reliance Jio 与谷歌合作：18 岁以上 Jio 用户，开通月费 ₹349 及以上的不限量 5G 套餐（2026/2/11 起 ₹299 以上 1.5GB/天套餐也可），在 MyJio 或 jio.com 领取并绑定 Gmail，即可免费用 18 个月 Google AI Pro（官方标价约 ₹35,100），含更高额度的 Gemini 高级模型、Deep Research、NotebookLM、Gemini CLI/Code Assist 更高调用上限和云存储。活动领取期截至 2026/10/29，每个号码限领一次，到期不自动续费；期间须一直保持符合条件的套餐。仅限印度 Jio SIM。",
+  "source": "x @haige2330；Jio 官方活动页与条款（jio.com）核实",
+  "collected_at": "2026-10-18T21:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111800065614651775",
+  "free_terms": "需印度 Jio SIM、18 岁以上、保持 ₹349+ 不限量 5G（或 ₹299+ 1.5GB/天）套餐；2026/10/29 前在 MyJio/jio.com 领取，免费 18 个月，每号限一次。",
+  "product": "Google AI Pro",
+  "post_time_bj": "2026-10-18T20:42:25+08:00",
+  "providers": [
+   {
+    "name": "Jio Google Gemini 活动页",
+    "action_url": "https://www.jio.com/google-gemini-offer/"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Gemini 应用",
+    "action_url": "https://gemini.google.com/"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "chat",
+   "coding",
+   "image"
+  ],
+  "barriers": []
  }
 ]
