@@ -6741,5 +6741,45 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "dolphin-api-deepseek-v41-flash-1017-10usd-5000-20261018",
+  "title": "Dolphin API：上线 DeepSeek-V4.1-Flash-1017，接下来 5000 名注册各送 $10 额度",
+  "model": "DeepSeek-V4.1-Flash-1017（deepseek-ai/DeepSeek-V4.1-Flash）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/dphnAI/status/2111643228705628303",
+  "summary": "Dolphin AI 官方（@dphnAI）在北京时间 10/18 10:19 发帖：DeepSeek 昨天发布的 V4.1-Flash-1017 已上线 Dolphin API，接下来 5000 名注册用户每人送 $10 免费 API 额度，先到先得；平时价格为每百万 token 输入 $0.01、输出 $0.07。这是继 10/11「前 1000 名送 $30」之后的新一轮活动。按官方文档，领取流程是在 app.dphn.ai 连接钱包签名验证（免费、不发交易），再到 Telegram 机器人兑换码，然后创建 API Key 调用，OpenAI 兼容。需要加密钱包和 Telegram，门槛偏高。",
+  "source": "x @dphnAI",
+  "collected_at": "2026-10-18T10:55:00+08:00",
+  "expired": false,
+  "source_post_id": "2111643228705628303",
+  "free_terms": "接下来 5000 名注册各送 $10 API 额度，先到先得，帖子没写截止时间；需钱包签名验证 + Telegram 兑换。",
+  "product": "Dolphin API $10 signup credits",
+  "post_time_bj": "2026-10-18T10:19:12+08:00",
+  "providers": [
+   {
+    "name": "Dolphin API（$10 额度活动页）",
+    "action_url": "https://dphn.ai/API"
+   },
+   {
+    "name": "Dolphin 控制台（连接钱包、创建 API Key）",
+    "action_url": "https://app.dphn.ai"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Coupon credits 快速上手（模型 ID 与价格）",
+    "action_url": "https://dphn.ai/docs/coupon-credits"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
