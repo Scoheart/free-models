@@ -6971,5 +6971,78 @@
    "need_client",
    "zero_signup"
   ]
+ },
+ {
+  "id": "sensenova-token-plan-free-beta-1500-per-5h-20261018",
+  "title": "商汤日日新 Token Plan 公测免费：每个模型每 5 小时 1500 次调用，含 U1.5 Lite 4K 生图",
+  "model": "SenseNova U1.5 Lite（sensenova-u1.5-lite，生图/改图）、SenseNova U1 Fast、SenseNova 6.8 Flash Lite（对话）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/JaygoAI/status/2111753234637611163",
+  "summary": "商汤日日新 Token Plan 目前是免费公测档（官网标 0 元/月），每个模型每 5 小时 1500 次调用（特殊模型除外）。生图模型 sensenova-u1.5-lite 支持文生图和参考图编辑、最高 4096×4096，公测期设 watermark=false 可免费出无水印图；对话模型有 sensenova-6.8-flash-lite。在 platform.sensenova.cn 注册后创建 sk- 开头的 API Key，Base URL 用 https://token.sensenova.cn/v1（兼容 OpenAI 接口）。官方说无水印等能力之后会转付费，截止时间未公布。",
+  "source": "x @JaygoAI；商汤官网公告 sensetime.com/cn/news/sensenova-u1-5-lite-token-plan-20260911-1741；商汤 FAQ sensetime.com/en/faq/",
+  "collected_at": "2026-10-18T17:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111753234637611163",
+  "free_terms": "公测期免费，每模型每 5 小时 1500 次（特殊模型除外）；需注册商汤日日新平台并实名验证后创建 API Key；Lite/Pro 付费档未上线，公测结束时间未公布。",
+  "product": "商汤日日新 SenseNova Token Plan",
+  "post_time_bj": "2026-10-18T17:36:20+08:00",
+  "providers": [
+   {
+    "name": "商汤日日新 SenseNova",
+    "action_url": "https://platform.sensenova.cn/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "SenseNova U1.5 Lite",
+    "action_url": "https://www.sensetime.com/cn/news/sensenova-u1-5-lite-token-plan-20260911-1741"
+   }
+  ],
+  "scenes": [
+   "image",
+   "chat"
+  ],
+  "barriers": [
+   "need_key",
+   "cn_account"
+  ]
+ },
+ {
+  "id": "iflytek-spark-lite-api-permanently-free-20261018",
+  "title": "讯飞星火 Spark Lite API 长期免费：Token 不限量，QPS 2",
+  "model": "Spark Lite（model=lite）",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/hodu382759/status/2111744423117881759",
+  "summary": "讯飞星火的轻量模型 Spark Lite 的 API 一直免费开放、不限时，适合小项目和练手；官方文档写明 Lite「支持免费使用」，社区汇总标注为 Token 总量不限、QPS 限 2。到讯飞开放平台控制台领取 Lite 免费额度并拿到 APIPassword，就能用兼容 OpenAI 的 HTTP 接口 https://spark-api-open.xf-yun.com/v1/chat/completions（model 填 lite）调用。Lite 最大输入 8K、输出 4K，不支持联网搜索插件。",
+  "source": "x @hodu382759；讯飞开放平台 HTTP 接口文档 xfyun.cn/doc/spark/HTTP调用文档.html",
+  "collected_at": "2026-10-18T17:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111744423117881759",
+  "free_terms": "Spark Lite 免费、不限时，QPS 2；需注册讯飞开放平台（国内账号）并在控制台领取免费额度后获取 APIPassword。",
+  "product": "讯飞星火认知大模型 Spark Lite",
+  "post_time_bj": "2026-10-18T17:01:19+08:00",
+  "providers": [
+   {
+    "name": "讯飞开放平台",
+    "action_url": "https://console.xfyun.cn/services/cbm"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Spark Lite",
+    "action_url": "https://www.xfyun.cn/doc/spark/HTTP%E8%B0%83%E7%94%A8%E6%96%87%E6%A1%A3.html"
+   }
+  ],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": [
+   "need_key",
+   "cn_account"
+  ]
  }
 ]
