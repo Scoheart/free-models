@@ -6696,5 +6696,50 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "cloudflare-workers-ai-free-10k-neurons-daily-20261018",
+  "title": "Cloudflare Workers AI：免费版每天 1 万 Neurons，超额只报错不扣钱",
+  "model": "Workers AI 目录模型（如 @cf/zai-org/glm-4.7-flash、gpt-oss、Llama、Gemma 等）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/yunhengmao/status/2111628328184472013",
+  "summary": "@yunhengmao 在北京时间 10/18 09:20 提醒：Cloudflare Workers AI 免费版每天有 10,000 Neurons 额度，用超了只会报错、不会扣钱，每天 UTC 0 点（北京时间 8 点）重置。按官方价目表，glm-4.7-flash 每百万输出 token 约 36,400 Neurons，全用它一天大约能出 27 万输出 token。官方文档同时注明 Kimi K2.6/K2.7 Code、GLM-5.2/5.3/5.3-Flash、DeepSeek V4 Flash/Pro 等部分模型必须绑付费方式才能调用，免费额度用不了。需要 Cloudflare 账号和 API Token，走 REST API 或 OpenAI 兼容端点。",
+  "source": "x @yunhengmao",
+  "collected_at": "2026-10-18T09:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2111628328184472013",
+  "free_terms": "Workers Free/Paid 计划都含每天 10,000 Neurons 免费额度；超额在免费计划下请求失败不计费；每日 00:00 UTC 重置；部分前沿模型需付费方式。",
+  "product": "Cloudflare Workers AI free allocation",
+  "post_time_bj": "2026-10-18T09:20:00+08:00",
+  "providers": [
+   {
+    "name": "Cloudflare Workers AI（REST API 快速上手，创建 API Token）",
+    "action_url": "https://developers.cloudflare.com/workers-ai/get-started/rest-api/"
+   },
+   {
+    "name": "Workers AI 价目与免费额度说明",
+    "action_url": "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "GLM-4.7-Flash（@cf/zai-org/glm-4.7-flash）",
+    "action_url": "https://developers.cloudflare.com/workers-ai/models/glm-4.7-flash/"
+   },
+   {
+    "name": "Workers AI 模型目录",
+    "action_url": "https://developers.cloudflare.com/workers-ai/models/"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding",
+   "image"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
