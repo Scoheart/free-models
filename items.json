@@ -6781,5 +6781,49 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "bilibili-index-translate-35b-free-public-api-20261018",
+  "title": "B站 Index-Translate：35B-A3B 翻译模型免费公开 API，免注册免 Key，OpenAI 兼容",
+  "model": "Index-Translate-35B-A3B（另有 2B / 9B 开源权重）",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/ARTJUNKIEinc/status/2109978599981986204",
+  "summary": "B站（bilibili）开源的多语言翻译模型 Index-Translate 提供免费公开 API：地址 https://index-translate.bilibili.com/v1，模型名 Index-Translate-35B-A3B，兼容 OpenAI Chat Completions 和 Responses，不需要注册也不需要 API Key（实测 /v1/models 可直接访问），支持 150 种语言文本翻译和图片翻译（无需 OCR），上下文约 24K，不支持工具调用。官方 README 写 10/4 开放免费 API、10/10 加图片翻译；也可配合沉浸式翻译等插件通过官方脚本本地代理使用。2B/9B/35B 权重在 Hugging Face 和 ModelScope 开源，可本地跑。只适合翻译，不是通用对话模型；官方没写免费期限和限流规则。",
+  "source": "x @ARTJUNKIEinc；官方 GitHub bilibili/Index-Translate",
+  "collected_at": "2026-10-18T11:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2109978599981986204",
+  "free_terms": "公开 API 免费、免 Key；未写截止时间与限流。",
+  "product": "Index-Translate free public API",
+  "post_time_bj": "2026-10-13T20:04:34+08:00",
+  "providers": [
+   {
+    "name": "Index-Translate 免费 API（在线 Demo / API 入口）",
+    "action_url": "https://index-translate.bilibili.com/"
+   },
+   {
+    "name": "API 快速上手（GitHub README）",
+    "action_url": "https://github.com/bilibili/Index-Translate#option-1-free-online-api-zero-gpu-setup"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Index-Translate 权重（Hugging Face）",
+    "action_url": "https://huggingface.co/collections/IndexTeam/index-translate"
+   },
+   {
+    "name": "Index-Translate 权重（ModelScope）",
+    "action_url": "https://modelscope.cn/collections/IndexTeam/Index-Translate"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "translate"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
  }
 ]
