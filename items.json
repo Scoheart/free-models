@@ -7284,5 +7284,39 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "openai-codex-ambassadors-pro-credits-20261019",
+  "title": "OpenAI Codex Ambassadors 招募：入选送 ChatGPT Pro 订阅 + Codex/API 额度（11/1 截止申请）",
+  "model": "ChatGPT Pro、Codex",
+  "type": "限时",
+  "deadline": "2026-11-01T23:59:59+08:00",
+  "url": "https://x.com/WojakTheDev/status/2111899402088640781",
+  "summary": "OpenAI 的 Codex Ambassador 项目重新开放申请，为期六个月，入选者可获得 ChatGPT Pro 订阅以及 Codex 和 API 额度，还有专属周边、办活动时的参会者额度支持等。申请需填表、录一段约 30 秒自我介绍视频，并附上用 Codex 做的公开项目或过往活动/内容链接；入选后每月至少办一次活动或产出一篇内容。申请 11 月 1 日截止，需审核，名额不保证，优先北美、中美、非洲、中东、东欧等地区。",
+  "source": "x @WojakTheDev（另见 @0xranjeet）；OpenAI Developers Codex Ambassadors 官方页与官方社区公告核实",
+  "collected_at": "2026-10-19T03:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2111899402088640781",
+  "free_terms": "提交申请（表格 + 约 30 秒视频 + 作品链接），经审核入选后享六个月计划内的 Pro 订阅与 Codex/API 额度；需每月至少一次活动或内容贡献；11/1 截止申请。",
+  "product": "OpenAI Codex Ambassadors",
+  "post_time_bj": "2026-10-19T03:17:09+08:00",
+  "providers": [
+   {
+    "name": "OpenAI Codex Ambassadors（申请页）",
+    "action_url": "https://developers.openai.com/community/codex-ambassadors"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Codex",
+    "action_url": "https://chatgpt.com/codex"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": []
  }
 ]
