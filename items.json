@@ -6825,5 +6825,78 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "ovhcloud-ai-endpoints-anonymous-free-200usd-credit-20261018",
+  "title": "OVHcloud AI Endpoints：不注册不填 Key 也能直接调 gpt-oss-120b、Qwen3.5-397B 等，新账号另送 $200 公有云额度",
+  "model": "gpt-oss-120b、gpt-oss-20b、Qwen3.5-397B-A17B、Qwen3.8-27B、Llama 3.3 70B、Mistral Small 3.2、Qwen2.5-VL-72B、Whisper 等 22 个",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/mollicksoif9/status/2111674424818864318",
+  "summary": "欧洲云厂商 OVHcloud 的 AI Endpoints 提供 OpenAI 兼容接口，匿名模式不用注册也不用 API Key，按 IP、按模型限流，只适合原型测试。实测 https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions 不带 Key 调 gpt-oss-120b 能正常返回，/v1/models 列出 22 个模型（LLM、视觉、语音、向量、SDXL）。另外新账号在第一个 Public Cloud 项目可领 $200 一次性额度，有效期一个月，需要绑卡或 PayPal 验证身份；正式用（带 Key）是按 token 计费。数据在欧盟托管、不用于训练。",
+  "source": "x @mollicksoif9；OVHcloud 官网 AI Endpoints 与 Public Cloud 免费试用页（已实测匿名调用）",
+  "collected_at": "2026-10-18T12:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111674424818864318",
+  "free_terms": "匿名调用免费、免注册免 Key，按 IP 限流；新账号 $200 公有云额度一次性、一个月有效，需绑卡/PayPal 验证。",
+  "product": "OVHcloud AI Endpoints",
+  "post_time_bj": "2026-10-18T12:23:10+08:00",
+  "providers": [
+   {
+    "name": "OVHcloud AI Endpoints 模型目录 / Playground",
+    "action_url": "https://endpoints.ai.cloud.ovh.net/catalog"
+   },
+   {
+    "name": "OVHcloud Public Cloud $200 免费试用",
+    "action_url": "https://www.ovhcloud.com/en/public-cloud/free-trial/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "AI Endpoints 产品页（模型与用法）",
+    "action_url": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat",
+   "image"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
+ },
+ {
+  "id": "meta-global-ai-hackathon-model-api-credits-20261018",
+  "title": "Meta 全球 AI 开发者黑客松：入选者可免费用 Muse Spark / Muse Image / SAM 3.1（Meta Model API），10/25 截止报名",
+  "model": "Muse Spark 系列、Muse Image、SAM 3.1、Meta 开源权重模型、Muse Code",
+  "type": "限时",
+  "deadline": "2026-10-26T11:59:00+08:00",
+  "url": "https://x.com/popcorn63106421/status/2111674760761319507",
+  "summary": "Meta 办的线上黑客松，10/26–11/4 共十天，总奖金 100 万美元，分个人/学生组和初创组，全球限 2 万人、滚动录取、满额提前关。入选者可以通过 Meta Model API 用 Muse Spark、Muse Image、SAM 3.1 和 Muse Code。帖子说入选者每人发 $150 API 积分，但官方活动页没写具体金额，以官方为准。不是注册就给，要提交项目构想并通过审核；中国大陆、俄罗斯等地区不能参加。报名截止美东 10/25 23:59（北京时间 10/26 11:59）。",
+  "source": "x @popcorn63106421；Meta 官方活动页 dev.meta.ai/events/global-hackathon",
+  "collected_at": "2026-10-18T12:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111674760761319507",
+  "free_terms": "免费报名，需审核入选；入选者获 Meta Model API 使用权（帖称 $150 积分，官方页未写金额）；中国大陆不可参加。",
+  "product": "Meta Global AI Developer Hackathon",
+  "post_time_bj": "2026-10-18T12:24:30+08:00",
+  "providers": [
+   {
+    "name": "Meta 黑客松报名页",
+    "action_url": "https://dev.meta.ai/events/global-hackathon"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding",
+   "chat",
+   "image"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
