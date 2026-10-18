@@ -6934,5 +6934,42 @@
   "barriers": [
    "deposit_hold"
   ]
+ },
+ {
+  "id": "hf-llama-windows-free-local-llamacpp-tray-20261018",
+  "title": "Hugging Face Llama Windows：免费开源的 Windows 11 托盘应用，一键下载并本地运行开源模型",
+  "model": "Hugging Face Hub 上的 GGUF 开源模型（经 llama.cpp 本地运行）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/Jason8640741231/status/2111728396099285198",
+  "summary": "Hugging Face 10/13 发布的 Llama Windows 是免费开源（ggml-org 维护）的 Windows 11 托盘应用：从 Hugging Face Hub 一键下载 GGUF 模型，在本机用 llama.cpp 运行，不用终端、不要管理员权限，按 Alt+Space 就能调出聊天窗口。它还会在本地 http://localhost:9931/v1 开一个 OpenAI 兼容接口，自己的脚本和编码 Agent 也能直接接。推理完全在本机，不用 API Key、不花 token 钱，但吃本地显卡/内存；支持 Windows on Arm。",
+  "source": "x @Jason8640741231；Hugging Face 官方博客 huggingface.co/blog/huggingface/llama-windows；GitHub ggml-org/Llama-Windows",
+  "collected_at": "2026-10-18T16:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111728396099285198",
+  "free_terms": "免费开源，本地运行不收费；需 Windows 11 电脑和足够的本地算力；下载受限（gated）模型需填 Hugging Face token。",
+  "product": "Llama Windows（Hugging Face / ggml-org）",
+  "post_time_bj": "2026-10-18T15:57:38+08:00",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Llama Windows",
+    "action_url": "https://github.com/ggml-org/Llama-Windows/releases"
+   }
+  ],
+  "models": [
+   {
+    "name": "Hugging Face Hub GGUF 模型",
+    "action_url": "https://huggingface.co/models?library=gguf"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_client",
+   "zero_signup"
+  ]
  }
 ]
