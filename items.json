@@ -7318,5 +7318,41 @@
    "chat"
   ],
   "barriers": []
+ },
+ {
+  "id": "nvidia-nim-deepseek-v41-flash-free-endpoint-20261019",
+  "title": "NVIDIA NIM：DeepSeek V4.1 Flash 免费 API endpoint（OpenAI 兼容）",
+  "model": "DeepSeek V4.1 Flash（deepseek-ai/deepseek-v4.1-flash）",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/EastSavin/status/2111912229562122697",
+  "summary": "社区提到 NVIDIA build.nvidia.com 上有一批可免费调 API 的模型，其中包括 DeepSeek V4.1 Flash。已核实官方模型页标注 Free Endpoint，NIM 公开模型列表中有 deepseek-ai/deepseek-v4.1-flash，用 OpenAI 兼容接口 https://integrate.api.nvidia.com/v1 调用。需注册 NVIDIA 账号生成 API Key，属长期试用档，受 NVIDIA API Trial 条款与调用频率限制，未公布截止时间；适合跑小 Agent 或当备用 key。",
+  "source": "x @EastSavin；build.nvidia.com 模型页（Free Endpoint）与 integrate.api.nvidia.com/v1/models 核实",
+  "collected_at": "2026-10-19T04:43:20+08:00",
+  "expired": false,
+  "source_post_id": "2111912229562122697",
+  "post_time_bj": "2026-10-19T04:08:07+08:00",
+  "free_terms": "build.nvidia.com 免费 endpoint；需 NVIDIA API Key；受 Trial 条款与限速约束；截止未公布。",
+  "product": "NVIDIA NIM deepseek-ai/deepseek-v4.1-flash free endpoint",
+  "providers": [
+   {
+    "name": "NVIDIA NIM",
+    "action_url": "https://build.nvidia.com/settings/api-keys"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "DeepSeek V4.1 Flash（NIM）",
+    "action_url": "https://build.nvidia.com/deepseek-ai/deepseek-v4.1-flash"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
