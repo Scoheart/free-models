@@ -7249,5 +7249,40 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "adcode-free-models-no-key-20261019",
+  "title": "ADCode：开源免费 AI 代码编辑器，内置 GLM 5.3 Flash / Qwen3.8 27B / MiMo V2.6 Flash 免费模型，无需 API Key",
+  "model": "GLM 5.3 Flash（Uncensored）、Qwen3.8 27B、Xiaomi MiMo V2.6 Flash、Tagflow 编码模型",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/chaitanyamkj/status/2111883355558207555",
+  "summary": "ADCode 是 Apache-2.0 开源、靠角落赞助卡片盈利的 AI 代码编辑器（Windows/Linux），没有订阅和付费档。用 Google 或 GitHub 登录并验证邮箱后，即可免 Key 使用合作方 Tagflow AI 和 Heabsy 提供的免费模型；10/13 的 2.3.1 版新增 Heabsy 的 Qwen3.8 27B、GLM 5.3 Flash Uncensored、MiMo V2.6 Flash，这几款另有每天 1000 万 token 的独立额度，主免费额度按官网说明定期重置并有每周上限。广告收入的一半会分给用户。模型由第三方转发，敏感代码请谨慎。",
+  "source": "x @chaitanyamkj；ADCode 官网与 2.3.1 更新日志核实",
+  "collected_at": "2026-10-19T02:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2111883355558207555",
+  "free_terms": "下载 ADCode 客户端，用 Google/GitHub 登录并验证邮箱；Heabsy 模型每天 1000 万 token，主免费额度有重置周期和每周上限；无需信用卡。",
+  "product": "ADCode",
+  "post_time_bj": "2026-10-19T02:13:23+08:00",
+  "providers": [],
+  "agents": [
+   {
+    "name": "ADCode",
+    "action_url": "https://adcode.bluethenics.com/versions"
+   }
+  ],
+  "models": [
+   {
+    "name": "GLM-5.3-Flash",
+    "action_url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
