@@ -7116,5 +7116,68 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "dify-education-free-yearly-pro-20261018",
+  "title": "Dify 教育版：在校师生认证后免费用一年 Professional 版（含 200 次一次性模型额度）",
+  "model": "Dify 内置模型额度（OpenAI / Anthropic / Gemini / xAI / 通义等）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/taiyanghere/status/2111794376859169138",
+  "summary": "Dify for Education：年满 18 岁的在校学生、教师或学校管理人员，用学校邮箱注册并完成教育认证后，可免费订阅一年 Professional 年付版（原价 $590/年），拥有 Pro 全部功能和资源配额。注意内置模型额度只按免费版给：总共 200 次、一次性、不按月重置，用完需要接自己的模型 API Key。到期不自动续费，需每年重新认证。",
+  "source": "x @taiyanghere；Dify 官方 dify.ai/education 与计费文档",
+  "collected_at": "2026-10-18T20:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2111794376859169138",
+  "free_terms": "需 18 岁以上、在校学生/教职工、学校发放的邮箱（个人/校友邮箱不行）；免费一年 Pro 年付版，每年重新认证；模型额度仅 200 次一次性。",
+  "product": "Dify",
+  "post_time_bj": "2026-10-18T20:19:49+08:00",
+  "providers": [
+   {
+    "name": "Dify for Education",
+    "action_url": "https://dify.ai/education"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": []
+ },
+ {
+  "id": "elevenlabs-free-10k-credits-eleven-v4-20261018",
+  "title": "ElevenLabs 免费版：每月 10,000 credits，可用最新 Eleven v4 语音模型，含免费 API Key",
+  "model": "Eleven v4 / Flash v2.5 / Multilingual v2",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/mollicksoif9/status/2111793756500328636",
+  "summary": "ElevenLabs 免费版每月送 10,000 credits（文本转语音约 1 字符 1 credit，约 10 分钟音频），无需信用卡，每月重置；可在网页/App 用最新的 Eleven v4，也能生成免费 API Key 调用 TTS、语音识别、音效等接口。免费版仅限个人非商用，商用需付费套餐。",
+  "source": "x @mollicksoif9；ElevenLabs 官方定价页与开发者 API 页",
+  "collected_at": "2026-10-18T20:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2111793756500328636",
+  "free_terms": "注册即得，每月 10,000 credits 重置，无需信用卡；仅限个人非商用。",
+  "product": "ElevenLabs",
+  "post_time_bj": "2026-10-18T20:17:21+08:00",
+  "providers": [
+   {
+    "name": "ElevenLabs",
+    "action_url": "https://join.elevenlabs.io/api/developer-api"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Eleven v4（定价与额度）",
+    "action_url": "https://elevenlabs.io/pricing"
+   }
+  ],
+  "scenes": [
+   "audio"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
