@@ -7354,5 +7354,93 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "orcarouter-free-lineup-glm53-hy4-20261019",
+  "title": "OrcaRouter 免费模型扩到 6 个：GLM 5.3 Flash、腾讯 Hy4 preview 等 $0 调用",
+  "model": "GLM 5.3 Flash（z-ai/glm-5.3-flash-free）、Tencent Hy4 preview / Hy3、DeepSeek V4 Flash、OrcaVerify Text 1.0、orcarouter/free",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/autoro_tech/status/2111962908594753843",
+  "summary": "OrcaRouter 免费层除已收录的 DeepSeek V4.1 Flash 外，又可免费调 GLM 5.3 Flash（320B/18B 激活、1M 上下文、图像视频输入）、腾讯 Hy4 preview（770B MoE、1M 上下文）和 Hy3、DeepSeek V4 Flash、AI 文本检测模型 OrcaVerify，以及按难度自动分流的 orcarouter/free。已核实公开 /v1/models 列表含这些 -free 模型，模型页标注 Free rate-limited、$0 用量；OpenAI 兼容接口 https://api.orcarouter.ai/v1，注册拿 key 不用绑卡，限速随套餐，未公布截止时间。",
+  "source": "x @autoro_tech；api.orcarouter.ai/v1/models 与 orcarouter.ai 模型页核实",
+  "collected_at": "2026-10-19T07:48:00+08:00",
+  "expired": false,
+  "source_post_id": "2111962908594753843",
+  "post_time_bj": "2026-10-19T07:29:30+08:00",
+  "free_terms": "$0 调用不扣余额；免费档限速（Free rate-limited）；需 OrcaRouter API Key，无需绑卡；截止未公布。",
+  "product": "OrcaRouter free models",
+  "providers": [
+   {
+    "name": "OrcaRouter",
+    "action_url": "https://www.orcarouter.ai/offers"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "GLM 5.3 Flash (Free) · OrcaRouter",
+    "action_url": "https://www.orcarouter.ai/models/z-ai/glm-5.3-flash-free"
+   },
+   {
+    "name": "Hy4 preview (Free) · OrcaRouter",
+    "action_url": "https://www.orcarouter.ai/models/tencent/hy4-preview-free"
+   },
+   {
+    "name": "Hy3 (Free) · OrcaRouter",
+    "action_url": "https://www.orcarouter.ai/models/tencent/hy3-free"
+   },
+   {
+    "name": "DeepSeek V4 Flash (Free) · OrcaRouter",
+    "action_url": "https://www.orcarouter.ai/models/deepseek/deepseek-v4-flash-free"
+   },
+   {
+    "name": "OrcaVerify Text 1.0 (Free)",
+    "action_url": "https://www.orcarouter.ai/models/orca/orcaverify-text1.0-free"
+   },
+   {
+    "name": "OrcaRouter Free（自动分流）",
+    "action_url": "https://www.orcarouter.ai/models/orcarouter/free"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "opencrabs-builtin-free-deepseek-v41-flash-20261019",
+  "title": "OpenCrabs 内置免费 DeepSeek V4.1 Flash：免注册、免 API Key",
+  "model": "DeepSeek V4.1 Flash（200k 上下文，文本+识图）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/opencrabs/status/2111043576419295287",
+  "summary": "开源终端 AI Agent OpenCrabs 从 v0.5.10 起在程序里自带一个免费 provider，下载二进制即可直接用 DeepSeek V4.1 Flash（200k 上下文，支持文本和图片附件），不用注册账号、不用填 API Key；官方 Release 说明写明默认开启识图与生图。目前最新版为 v0.5.11。未公布额度上限或截止时间，适合零门槛试用 Agent。",
+  "source": "x @opencrabs 官方帖；GitHub opencrabs/opencrabs v0.5.10 Release 说明核实",
+  "collected_at": "2026-10-19T07:48:00+08:00",
+  "expired": false,
+  "source_post_id": "2111043576419295287",
+  "post_time_bj": "2026-10-16T18:36:24+08:00",
+  "free_terms": "内置 provider 免费；无需账号与 API Key；需安装 OpenCrabs 客户端；额度上限与截止未公布。",
+  "product": "OpenCrabs built-in provider",
+  "providers": [],
+  "agents": [
+   {
+    "name": "OpenCrabs",
+    "action_url": "https://github.com/opencrabs/opencrabs/releases/latest"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "zero_signup",
+   "need_client"
+  ]
  }
 ]
