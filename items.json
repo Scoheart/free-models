@@ -7565,5 +7565,50 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "nvidia-nemotron35-bolt-74b-a9b-open-weights-20261019",
+  "title": "NVIDIA Nemotron 3.5 Bolt 74B-A9B 开源：2-bit 原生量化塞进 24GB 显存，本地免费跑多模态 Agent 模型",
+  "model": "NVIDIA-Nemotron-3.5-Bolt-74B-A9B（24GB / GGUF / BF16）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/mumutanuki/status/2110938943722295794",
+  "summary": "NVIDIA 10/15 在 Hugging Face 发布 Nemotron 3.5 Bolt：总参 74B、每 token 激活 9B 的 Mamba-2/Transformer 混合 MoE 视觉语言模型，训练时就按 2-bit 量化，打包后约 24GB，单张 24GB 显卡即可本地运行；支持文本/图片/视频输入、最长 256K 上下文、工具调用和思考模式，主打本地 Agent（工具调用、浏览、终端）。权重免费下载，许可证 OpenMDW-1.1，可商用；Ollama 一条命令 ollama run nemotron-3.5-bolt 即可跑，llama.cpp 用 GGUF 版。注意：目前不支持 Mac 的 Metal。",
+  "source": "x @mumutanuki（Ollama 上线速报）、@AIDailyNews_2x 10/19 汇总、@EngMSamara 等转述；Hugging Face nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB 模型卡与 ollama.com/library/nemotron-3.5-bolt 已核实",
+  "collected_at": "2026-10-19T15:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2110938943722295794",
+  "post_time_bj": "2026-10-16T11:40:38+08:00",
+  "free_terms": "权重免费下载，OpenMDW-1.1 许可，模型卡写明可商用和非商用；本地运行需约 24GB 显存（vLLM 需 Ampere/Hopper/Blackwell，llama.cpp 建议 32GB+ 显存或 64GB 统一内存方案）。",
+  "product": "Nemotron 3.5 Bolt",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Ollama（nemotron-3.5-bolt）",
+    "action_url": "https://ollama.com/library/nemotron-3.5-bolt"
+   }
+  ],
+  "models": [
+   {
+    "name": "Nemotron-3.5-Bolt-74B-A9B-24GB（HF）",
+    "action_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB"
+   },
+   {
+    "name": "Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF（llama.cpp）",
+    "action_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF"
+   },
+   {
+    "name": "Nemotron-3.5-Bolt-74B-A9B-BF16",
+    "action_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "zero_signup",
+   "need_client"
+  ]
  }
 ]
