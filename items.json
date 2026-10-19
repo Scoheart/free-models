@@ -7879,5 +7879,86 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "openrouter-minimax-m31-flash-free-72h-20261019",
+  "title": "OpenRouter：MiniMax M3.1 Flash 免费 72 小时（原 Space Bunny）",
+  "model": "MiniMax-M3.1-Flash（OpenRouter：minimax/minimax-m3.1-flash:free）",
+  "type": "限时",
+  "deadline": "2026-10-22T20:01:00+08:00",
+  "url": "https://x.com/OpenRouter/status/2112152045461680591",
+  "summary": "OpenRouter 官方揭晓：此前连续 10 天登顶、跑了 56.7T tokens 的隐身模型 Space Bunny 就是 MiniMax M3.1 Flash，今天以真名回归，接下来 72 小时免费。OpenRouter 模型列表已上架 minimax/minimax-m3.1-flash:free，输入输出均为 $0，1M 上下文。免费期后据转述为每百万 token 输入 $0.15、输出 $0.60。另外 OpenCode 里的模型 id 已从 space-bunny-free 改名为 minimax-m3.1-flash-free。",
+  "source": "x @OpenRouter 官宣帖；@MATKA_r（OpenCode 改名）、@thehypedotnews 等转述；openrouter.ai/api/v1/models 与 opencode.ai/zen/v1/models 已核实",
+  "collected_at": "2026-10-19T20:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112152045461680591",
+  "post_time_bj": "2026-10-19T20:01:04+08:00",
+  "free_terms": "OpenRouter 账号 + API Key 即可调用 :free 版本，受 OpenRouter 免费模型限速；官方说免费 72 小时（从发帖时间推算约到北京时间 10/22 20:00，非官方精确时刻）。",
+  "product": "OpenRouter · MiniMax M3.1 Flash (free)",
+  "providers": [
+   {
+    "name": "OpenRouter",
+    "action_url": "https://openrouter.ai/settings/keys"
+   }
+  ],
+  "agents": [
+   {
+    "name": "OpenCode",
+    "action_url": "https://opencode.ai/download"
+   }
+  ],
+  "models": [
+   {
+    "name": "MiniMax M3.1 Flash (free)",
+    "action_url": "https://openrouter.ai/minimax/minimax-m3.1-flash:free"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "vercel-ai-gateway-minimax-m31-flash-free-oct20-20261019",
+  "title": "Vercel AI Gateway：MiniMax M3.1 Flash 免费到 10/20",
+  "model": "MiniMax-M3.1-Flash（minimax/minimax-m3.1-flash）",
+  "type": "限时",
+  "deadline": "2026-10-20T23:59:59-07:00",
+  "url": "https://x.com/skytuhua1/status/2112156385349701711",
+  "summary": "Vercel 官方 changelog：MiniMax M3.1 Flash 在 AI Gateway 上免费到 10 月 20 日，模型名 minimax/minimax-m3.1-flash。只有由 MiniMax 自己提供服务时才免费，需要在 provider options 里把 MiniMax 排在第一；优惠结束后按 MiniMax 标准价计费。可通过 AI SDK、Chat Completions、Responses、Anthropic Messages 接口调用，也能用 npx vercel ai-gateway setup 接到 Claude Code、Codex、Cursor 等工具。",
+  "source": "x @skytuhua1 转述；vercel.com/changelog 官方公告与 ai-gateway.vercel.sh/v1/models（价格为 0）已核实",
+  "collected_at": "2026-10-19T20:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112156385349701711",
+  "post_time_bj": "2026-10-19T20:19:46+08:00",
+  "free_terms": "需 Vercel 账号和 AI Gateway API Key；必须把 provider 顺序设为 MiniMax 优先才走免费价；截至 10/20（官方未写时区，按美西当天结束估算，约北京时间 10/21 下午）。",
+  "product": "Vercel AI Gateway · MiniMax M3.1 Flash",
+  "providers": [
+   {
+    "name": "Vercel AI Gateway",
+    "action_url": "https://vercel.com/docs/ai-gateway"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "MiniMax M3.1 Flash",
+    "action_url": "https://vercel.com/ai-gateway/models/minimax-m3.1-flash"
+   },
+   {
+    "name": "Changelog（免费至 10/20）",
+    "action_url": "https://vercel.com/changelog/minimax-m3-1-flash-now-available-on-ai-gateway-for-free"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
