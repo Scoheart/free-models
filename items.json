@@ -7473,5 +7473,47 @@
    "zero_signup",
    "need_client"
   ]
+ },
+ {
+  "id": "moss-image-open-weights-apache2-20261019",
+  "title": "MOSS-Image 开源：5B 文生图模型（Base + SFT）Apache 2.0 权重免费下载，HF Space 可免费试用",
+  "model": "MOSS-Image-Base、MOSS-Image-SFT（5B DiT）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/PhospheneserXu/status/2111164452263334177",
+  "summary": "OpenMOSS 团队（模思智能）开源 5B 参数单流 DiT 文生图模型 MOSS-Image，放出 Base 和 SFT 两版权重、推理代码与技术报告，Apache 2.0 协议可商用。主打中英文字渲染、JSON 布局坐标控制和最长 4K tokens 提示词，ComfyUI 已有节点，单卡可本地跑；也可在 Hugging Face Space 在线免费试玩。Hugging Face 与 GitHub 页面已核实。",
+  "source": "x @PhospheneserXu（MOSS-Image 核心开发者）原帖；@MosiAI_Official 转发；Hugging Face OpenMOSS-Team 与 GitHub OpenMOSS/MOSS-Image 核实（Apache-2.0）",
+  "collected_at": "2026-10-19T13:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111164452263334177",
+  "post_time_bj": "2026-10-17T02:36:43+08:00",
+  "free_terms": "开源权重 Apache 2.0，免费下载本地部署；HF Space 在线试用免费（排队/限额以页面为准）。",
+  "product": "MOSS-Image",
+  "providers": [],
+  "agents": [],
+  "models": [
+   {
+    "name": "MOSS-Image-SFT",
+    "action_url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT"
+   },
+   {
+    "name": "MOSS-Image-Base",
+    "action_url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base"
+   },
+   {
+    "name": "MOSS-Image 在线试玩（HF Space）",
+    "action_url": "https://huggingface.co/spaces/OpenMOSS-Team/MOSS-Image"
+   },
+   {
+    "name": "MOSS-Image GitHub",
+    "action_url": "https://github.com/OpenMOSS/MOSS-Image"
+   }
+  ],
+  "scenes": [
+   "image"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
  }
 ]
