@@ -7442,5 +7442,36 @@
    "zero_signup",
    "need_client"
   ]
+ },
+ {
+  "id": "eaon-code-free-gateway-no-signin-20261019",
+  "title": "Eaon Code 1.1.5 内置免费网关：GPT-6-Luna / MiMo v2.6 Flash / Muse Spark 1.3 Contributor，免注册免 Key",
+  "model": "GPT-6-Luna、MiMo v2.6 Flash、Muse Spark 1.3 Contributor（64K 上下文）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/tryeaon/status/2111987831187083765",
+  "summary": "开源终端编程 Agent Eaon Code（基于 Pi harness，MIT 协议）在 v1.1.5 加入 Eaon Free Gateway：在 /setup 选 Eaon 或运行 /login eaon 即可直接使用，无需账号和 API Key，默认选 GPT-6-Luna，可用 /model 切到 MiMo v2.6 Flash 或 Muse Spark 1.3 Contributor。GitHub 提交与 providers 文档已核实，网关为 OpenAI 兼容接口，上下文 64K。项目很新、规模小，未公布额度上限和截止时间。",
+  "source": "x @tryeaon 官方帖；GitHub eaonlabs/eaon-code v1.1.5 提交与 docs/providers.md 核实",
+  "collected_at": "2026-10-19T09:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2111987831187083765",
+  "post_time_bj": "2026-10-19T09:08:32+08:00",
+  "free_terms": "内置免费网关，无需账号与 API Key；需安装 Eaon Code 客户端；额度上限与截止未公布。",
+  "product": "Eaon Code / Eaon Free Gateway",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Eaon Code",
+    "action_url": "https://github.com/eaonlabs/eaon-code"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "zero_signup",
+   "need_client"
+  ]
  }
 ]
