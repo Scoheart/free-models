@@ -7730,5 +7730,114 @@
    "need_client",
    "cn_account"
   ]
+ },
+ {
+  "id": "chatgpt-students-plus-4-months-free-oct31-20261019",
+  "title": "ChatGPT for Students：美国在校大学生免费领 4 个月 ChatGPT Plus（10/31 前领取）",
+  "model": "ChatGPT Plus（OpenAI）",
+  "type": "限时",
+  "deadline": "2026-10-31T23:59:59+08:00",
+  "url": "https://x.com/anya_yfa7/status/2109864861719265611",
+  "summary": "OpenAI 返校季活动：美国学位制大学在读学生（含研究生）可免费领 4 个月 ChatGPT Plus（约 $80），新用户和直接在 ChatGPT 按月订阅 Plus 的老用户都可参加。打开 chatgpt.com/students/2026 登录后用 SheerID 验证学籍，再绑定付款方式（免费期内不扣费），到期自动续 $20/月，不想续记得提前取消。10/31 前领取。",
+  "source": "x @anya_yfa7、@nex_ify、@mzhid0x、@xiaoke949 等多帖；官方活动页 chatgpt.com/students/2026（X 链接卡片标题「ChatGPT for students - 4 months free」）",
+  "collected_at": "2026-10-19T18:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2109864861719265611",
+  "post_time_bj": "2026-10-13T12:32:37+08:00",
+  "free_terms": "仅限美国学位制大学在读学生，SheerID 验证；需绑卡，免费 4 个月后自动续费；2026-10-31 前领取。",
+  "product": "ChatGPT for Students",
+  "providers": [
+   {
+    "name": "ChatGPT 学生优惠领取页",
+    "action_url": "https://chatgpt.com/students/2026/"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "chat",
+   "coding",
+   "image"
+  ],
+  "barriers": [
+   "deposit_hold"
+  ]
+ },
+ {
+  "id": "whatstoken-deepseek-v41-flash-1017-night-free-20261019",
+  "title": "WhatsToken.AI：DeepSeek V4.1 Flash 1017 每晚 22:00–08:00（北京时间）免费调用",
+  "model": "DeepSeek-V4.1-Flash-1017",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/WhatsTokenAI/status/2112117362644365754",
+  "summary": "第三方 API 聚合平台 WhatsToken.AI 宣布 DeepSeek-V4.1-Flash-1017（模型 ID deepseek-v4.1-flash-1017，标注走火山引擎官方渠道）每天 22:00–次日 08:00（UTC+8）免费，其余时段按官方价约 2.5 折起计费。模型页已核实该时段倍率为「Free」。注意：该平台同时售卖「逆向渠道」「自建卡池」和远低于官方价的 GPT/Claude/Grok，属灰色中转，建议只用免费时段、别充大额、别放敏感数据。",
+  "source": "x @WhatsTokenAI；whatstoken.ai 模型页计费规则已核实",
+  "collected_at": "2026-10-19T18:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2112117362644365754",
+  "post_time_bj": "2026-10-19T17:43:15+08:00",
+  "free_terms": "仅每天 22:00–08:00（北京时间）免费，需注册拿 API Key；第三方中转平台，有灰色渠道风险。",
+  "product": "WhatsToken.AI",
+  "providers": [
+   {
+    "name": "WhatsToken.AI",
+    "action_url": "https://www.whatstoken.ai/home/models?tab=models&provider=51&model=Deepseek-V4.1-Flash-1017"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "DeepSeek-V4.1-Flash-1017（WhatsToken 模型页）",
+    "action_url": "https://www.whatstoken.ai/home/models?tab=models&provider=51&model=Deepseek-V4.1-Flash-1017"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "alibabacloud-intl-model-studio-free-tokens-20261019",
+  "title": "阿里云国际站 Free Trial：Model Studio 新用户免费 tokens（400+ 模型含 Qwen/Wan）+ 2000 张图免费",
+  "model": "Qwen / Wan / Qwen-Image-Max 等（Alibaba Cloud Model Studio 国际版）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/hiwise_aigc/status/2112119262798311718",
+  "summary": "阿里云国际站（alibabacloud.com）免费试用页列出 Model Studio「Free Tokens · 400+ Models」，可用 Qwen、Wan 等模型，另有「2,000 Images Free」（Qwen-Image-Max、Z-Image-Turbo）及 ECS $90 额度等。博主称新用户还有 $200 额度、60 天有效，但官网页面未见 $200 字样，且博主本人卡在手机接码没领到，以控制台实际显示为准。与国内百炼的新用户额度是两套账号。",
+  "source": "x @hiwise_aigc；alibabacloud.com/en/free 官方试用页已核实（$200/60 天未核实）",
+  "collected_at": "2026-10-19T18:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2112119262798311718",
+  "post_time_bj": "2026-10-19T17:50:48+08:00",
+  "free_terms": "阿里云国际站新用户；需注册并验证手机（有人反馈收不到验证码）；额度及有效期以控制台为准。",
+  "product": "Alibaba Cloud Model Studio（国际版）",
+  "providers": [
+   {
+    "name": "Alibaba Cloud Model Studio 控制台",
+    "action_url": "https://modelstudio.console.alibabacloud.com/"
+   },
+   {
+    "name": "阿里云国际站免费试用页",
+    "action_url": "https://www.alibabacloud.com/en/free"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Model Studio 产品页",
+    "action_url": "https://www.alibabacloud.com/en/product/modelstudio"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding",
+   "image"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
