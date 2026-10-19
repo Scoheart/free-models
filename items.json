@@ -7650,5 +7650,85 @@
    "zero_signup",
    "need_client"
   ]
+ },
+ {
+  "id": "opencode-space-bunny-is-minimax-m31-flash-free-20261019",
+  "title": "OpenCode 免费的 Space Bunny 揭晓：就是 MiniMax-M3.1-Flash，现在仍可免费试用",
+  "model": "MiniMax-M3.1-Flash（OpenCode Zen：space-bunny-free）",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/MiniMax_AI/status/2112111925975032241",
+  "summary": "MiniMax 官方 10/19 发帖认领：OpenCode 里一直免费的隐身模型 Space Bunny 就是 MiniMax-M3.1-Flash（官方文案为 is coming）。MiniMax 文档已把 M3.1-Flash 列为首选文本模型，1M 上下文、多模态、主打编程，思考深度可调。OpenCode Zen 公开模型列表目前仍挂着 space-bunny-free，在 OpenCode 的 /models 里选 Space Bunny Free 就能免费测这个模型；免费期截止日未公布。社区传可能会开源权重，但官方尚未确认。",
+  "source": "x @MiniMax_AI 官方认领帖、@Haleeeemahh（OpenCode 仍免费）、@RyanLeeMiniMax；opencode.ai/zen/v1/models 列有 space-bunny-free、MiniMax 文档 models-intro 列有 M3.1-Flash，均已核实",
+  "collected_at": "2026-10-19T17:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2112111925975032241",
+  "post_time_bj": "2026-10-19T17:21:38+08:00",
+  "free_terms": "OpenCode Zen 限时免费（模型 id space-bunny-free），截止未公布；免费期数据可能用于改进模型，敏感代码慎用。MiniMax 官方 API 为付费调用。",
+  "product": "OpenCode Zen · Space Bunny Free = MiniMax-M3.1-Flash",
+  "providers": [
+   {
+    "name": "OpenCode Zen",
+    "action_url": "https://opencode.ai/zen"
+   },
+   {
+    "name": "MiniMax 开放平台（M3.1-Flash 文档）",
+    "action_url": "https://platform.minimax.io/docs/guides/models-intro"
+   }
+  ],
+  "agents": [
+   {
+    "name": "OpenCode",
+    "action_url": "https://opencode.ai/download"
+   }
+  ],
+  "models": [
+   {
+    "name": "Zen 公开模型列表（space-bunny-free）",
+    "action_url": "https://opencode.ai/zen/v1/models"
+   },
+   {
+    "name": "MiniMax-M3.1-Flash（官方模型介绍）",
+    "action_url": "https://platform.minimax.io/docs/guides/models-intro"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_client"
+  ]
+ },
+ {
+  "id": "workbuddy-education-teachers-2000-credits-12mo-20261019",
+  "title": "WorkBuddy 教育公益版上线：全国在职教师每月免费 2000 积分，连送 12 个月",
+  "model": "WorkBuddy 教育公益版（腾讯 AI 办公智能体）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/woshipm/status/2112086158846959948",
+  "summary": "腾讯 SSV 数字教育实验室联合 WorkBuddy 推出教育公益版，面向全国教师开放，不限地区和学段：审核通过后用申请手机号登录、选择「WorkBuddy 教育公益版」，每月可领 2000 积分，连续 12 个月，独立账号、专属积分，内置 100 多位教育专家智能体，可做课件、教学设计、班级主页等。社区估算约合每月 100 元额度。申请需提交教师身份佐证，社区称入口在「腾讯 SSV」/ WorkBuddy 公众号表单。",
+  "source": "x @woshipm（人人都是产品经理文章）、@hongjinlin、@ai_fengshou、@leo114119 等；woshipm.com/ai/6480615.html 已核实",
+  "collected_at": "2026-10-19T17:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2112086158846959948",
+  "post_time_bj": "2026-10-19T15:39:15+08:00",
+  "free_terms": "仅限在职教师，需提交身份佐证审核；每月 2000 积分，连续 12 个月；需中国手机号登录。",
+  "product": "WorkBuddy 教育公益版",
+  "providers": [],
+  "agents": [
+   {
+    "name": "WorkBuddy 国内版",
+    "action_url": "https://www.workbuddy.cn/"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": [
+   "need_client",
+   "cn_account"
+  ]
  }
 ]
