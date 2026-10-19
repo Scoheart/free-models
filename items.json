@@ -7960,5 +7960,41 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "akashml-new-signup-free-credits-25-20261019",
+  "title": "AkashML：新用户注册送免费 API 额度（帖称 $25），可试 Qwen3.8/GLM 5.3/Kimi K3 等",
+  "model": "Qwen3.8 27B、GLM 5.3、Qwen3.6 35B A3B、Kimi K3、GPT OSS 120B 等开源模型",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/AndarkFomo/status/2112174518445699259",
+  "summary": "AkashML 是基于 Akash Network 去中心化 GPU 的开源模型推理服务（OpenAI 兼容接口）。帖子称每个新注册用户送 $25 免费 API 额度，无需预付；官网 FAQ 确认新用户注册后自动获得免费额度（未写具体金额），官网首页的 Qwen3.8 27B、GLM 5.3、Kimi K3、GPT OSS 120B 等模型均标注 Limited Trial。",
+  "source": "x @AndarkFomo；akashml.com 官网 FAQ（新用户自动获得免费额度）已核实，$25 金额仅见于帖子",
+  "collected_at": "2026-10-19T21:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112174518445699259",
+  "post_time_bj": "2026-10-19T21:30:22+08:00",
+  "free_terms": "新用户注册即自动到账免费额度（帖称 $25，官网未写金额）；需注册账号并创建 API Key；无截止时间。",
+  "product": "AkashML",
+  "providers": [
+   {
+    "name": "AkashML Playground（注册/API Key）",
+    "action_url": "https://playground.akashml.com"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "AkashML 模型列表",
+    "action_url": "https://akashml.com/models"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
