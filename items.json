@@ -7610,5 +7610,45 @@
    "zero_signup",
    "need_client"
   ]
+ },
+ {
+  "id": "internscience-mlexpert-35b-moe-open-weights-20261019",
+  "title": "InternScience MLExpert 开源：35B MoE 自动机器学习工程 Agent 模型，Apache 2.0 权重免费下载",
+  "model": "MLExpert（35B MoE）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/threerouter/status/2112098043315020152",
+  "summary": "InternScience 开源 MLExpert：35B 参数的 MoE Agent 模型，专做自动机器学习工程（规划实验、写代码、看结果、迭代）。官方称在 MLE-Bench Lite 上把基座模型的奖牌率从 37.9% 提到 72.7%，与 GLM-5.3、Kimi-K3 持平；接 Claude Code 时从 42.4% 提到 69.7%。权重在 Hugging Face 免费下载，Apache 2.0 可商用，最长 256K 上下文，可用 vLLM / SGLang 本地起 OpenAI 兼容接口（官方示例为两卡张量并行）。",
+  "source": "x @threerouter；GitHub InternScience/MLExpert README 与 Hugging Face InternScience/MLExpert 模型卡（apache-2.0、未设门槛）已核实",
+  "collected_at": "2026-10-19T16:48:00+08:00",
+  "expired": false,
+  "source_post_id": "2112098043315020152",
+  "post_time_bj": "2026-10-19T16:26:29+08:00",
+  "free_terms": "权重免费下载，Apache 2.0 许可，可商用；无需申请。本地部署需多卡 GPU（官方示例 2 卡张量并行）。",
+  "product": "MLExpert",
+  "providers": [],
+  "agents": [
+   {
+    "name": "MLExpert（GitHub：Harness 与部署说明）",
+    "action_url": "https://github.com/InternScience/MLExpert"
+   }
+  ],
+  "models": [
+   {
+    "name": "InternScience/MLExpert（HF 权重）",
+    "action_url": "https://huggingface.co/InternScience/MLExpert"
+   },
+   {
+    "name": "论文 arXiv 2610.22344",
+    "action_url": "https://arxiv.org/abs/2610.22344"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "zero_signup",
+   "need_client"
+  ]
  }
 ]
