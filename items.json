@@ -7515,5 +7515,55 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "mistral-timestral-open-weights-20261019",
+  "title": "Mistral Timestral 开源：时间序列预测基础模型（5M–209M 四档）权重免费下载，CPU 可跑",
+  "model": "Timestral-5M、Timestral-28M、Timestral-123M、Timestral-209M",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/AI_Parliament/status/2110902097390538878",
+  "summary": "Mistral 10/15 发布时间序列预测基础模型 Timestral，分 5M/28M/123M/209M 四档，零样本即可预测销量、用电、服务器负载等数值曲线，输出 21 个分位数的概率预测，支持多变量和节假日、排产计划等已知未来信息，普通 CPU 就能推理。权重在 Hugging Face 免费下载（无需申请），GitHub 有推理代码。注意它不是聊天/写代码的大语言模型。",
+  "source": "x @AI_Parliament 原帖（附官方链接）；@aiwithbasanth、@cutetoxicguy 等 10/19 转述；mistral.ai/news/timestral、Hugging Face mistralai/Timestral-* 与 GitHub mistralai/timestral 已核实",
+  "collected_at": "2026-10-19T14:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2110902097390538878",
+  "post_time_bj": "2026-10-16T09:14:13+08:00",
+  "free_terms": "权重采用 Modified MIT 许可，免费下载、本地部署、可商用；但公司（或雇主）上月全球合并月收入超过 2000 万美元的需另向 Mistral 申请商业许可。",
+  "product": "Timestral",
+  "providers": [],
+  "agents": [],
+  "models": [
+   {
+    "name": "Timestral-209M",
+    "action_url": "https://huggingface.co/mistralai/Timestral-209M"
+   },
+   {
+    "name": "Timestral-123M",
+    "action_url": "https://huggingface.co/mistralai/Timestral-123M"
+   },
+   {
+    "name": "Timestral-28M",
+    "action_url": "https://huggingface.co/mistralai/Timestral-28M"
+   },
+   {
+    "name": "Timestral-5M",
+    "action_url": "https://huggingface.co/mistralai/Timestral-5M"
+   },
+   {
+    "name": "Timestral GitHub",
+    "action_url": "https://github.com/mistralai/timestral"
+   },
+   {
+    "name": "Mistral 官方介绍",
+    "action_url": "https://mistral.ai/news/timestral/"
+   }
+  ],
+  "scenes": [
+   "forecasting"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
  }
 ]
