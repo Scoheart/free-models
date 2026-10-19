@@ -8037,5 +8037,73 @@
       "zero_signup",
       "need_client"
     ]
+  },
+  {
+    "id": "qoder-deepseek-v41-flash-1017-free-oct24-20261020",
+    "title": "Qoder：DeepSeek V4.1-Flash-1017 限时免费到 10/24（0.0× Credits）",
+    "model": "DeepSeek V4.1-Flash-1017",
+    "type": "限时",
+    "deadline": "2026-10-24T23:59:59+08:00",
+    "url": "https://x.com/qoder_ai_ide/status/2112211366954344459",
+    "summary": "Qoder 官方账号宣布：DeepSeek V4.1-Flash-1017 在 Qoder 里免费到 10 月 24 日，免费和付费用户调用都按 0.0× Credits 计、不扣额度，在模型选择器里选它即可。帖子没写具体时区，截止时间按北京时间 10/24 当天结束暂记；官方活动页暂未找到对应页面。",
+    "source": "x @qoder_ai_ide（Qoder 官方）",
+    "collected_at": "2026-10-20T00:05:00+08:00",
+    "expired": false,
+    "source_post_id": "2112211366954344459",
+    "post_time_bj": "2026-10-19T23:56:47+08:00",
+    "free_terms": "免费与付费用户均可；0.0× Credits 不扣额度；截止 10/24（时区未注明）；需登录 Qoder 账号并使用 Qoder 客户端。",
+    "product": "Qoder",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Qoder",
+        "action_url": "https://qoder.com/download"
+      }
+    ],
+    "models": [
+      {
+        "name": "DeepSeek V4.1-Flash-1017（官方发布说明）",
+        "action_url": "https://api-docs.deepseek.com/news/news261017/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "viggle-jst2-world-model-free-tier-20261020",
+    "title": "Viggle 发布 JST-2 3D 世界基础模型，有免费档可试",
+    "model": "Viggle JST-2",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/RadianceFields/status/2112208147666321444",
+    "summary": "Viggle 今天发布 JST-2，号称首个全栈物理原生的 3D 世界基础模型，可几秒生成 3D 场景并实时扩展，也能生成自带动作的角色。@RadianceFields 实测后说有免费档；Viggle 官网首页也有「Try for free」入口。免费档具体额度帖子和官网首页都没写明。",
+    "source": "x @RadianceFields（引用 @ViggleAI 官方发布帖 2112202242048528540）；viggle.ai 首页有 Try JST-2 / Try for free 入口",
+    "collected_at": "2026-10-20T00:05:00+08:00",
+    "expired": false,
+    "source_post_id": "2112208147666321444",
+    "post_time_bj": "2026-10-19T23:43:59+08:00",
+    "free_terms": "有免费档，额度未公开说明；需在 Viggle 网页端注册使用。",
+    "product": "Viggle JST-2",
+    "providers": [
+      {
+        "name": "Viggle 官网",
+        "action_url": "https://viggle.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "JST-2 官方发布帖",
+        "action_url": "https://x.com/ViggleAI/status/2112202242048528540"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": []
   }
 ]
