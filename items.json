@@ -8411,5 +8411,74 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "eigent-free-plan-1000-credits-gpt6-20261020",
+  "title": "Eigent：免费版注册送 1,000 积分、邀请每人再送 500，可用 GPT-6 Astra/Sol 等 16 个模型",
+  "model": "GPT-6 Astra、GPT-6 Sol、GPT-6 Luna、Gemini 3.8 Flash、Qwen3.8 Max、Kimi K3、GLM 5.3 等",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/nex_ify/status/2112419188492980330",
+  "summary": "CAMEL-AI 出品的开源桌面 Agent「Eigent」免费版：新用户注册送 1,000 积分，每成功邀请一人再送 500，可调用含 GPT-6 Astra/Sol/Luna、Gemini 3.8 Flash、Qwen3.8 Max、Kimi K3 在内的 16 个模型；也可以自带 API Key 或接本地模型免费用。官网定价页已核实，支持 Mac/Windows，也可自托管。",
+  "source": "x @nex_ify、@itsjdraven；官网 eigent.ai 定价页核实",
+  "collected_at": "2026-10-20T13:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112419188492980330",
+  "post_time_bj": "2026-10-20T13:42:36+08:00",
+  "free_terms": "Free 计划：注册送 1,000 积分，邀请成功每人 +500 积分；自带 Key 或本地模型不限。无明确截止时间。",
+  "product": "Eigent",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Eigent 桌面版下载",
+    "action_url": "https://www.eigent.ai/download"
+   },
+   {
+    "name": "Eigent 定价（Free 计划）",
+    "action_url": "https://www.eigent.ai/pricing"
+   },
+   {
+    "name": "Eigent 开源仓库（自托管）",
+    "action_url": "https://github.com/eigent-ai/eigent"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_client"
+  ]
+ },
+ {
+  "id": "freebuff-deepseek-v41-flash-minimax-m31-flash-free-20261020",
+  "title": "Freebuff：DeepSeek V4.1 Flash 永久免费，MiniMax M3.1 Flash 等也已上架免费用",
+  "model": "DeepSeek V4.1 Flash、MiniMax M3.1 Flash、GLM 5.3 Flash、Solar Pro 4 等",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/jahooma/status/2112279845732483384",
+  "summary": "广告资助的免费编程 Agent Freebuff 把新版 DeepSeek V4.1 Flash 设为永久免费，创始人称额度比其他地方更高；另有帖子列出 MiniMax M3.1 Flash、GLM 5.3 Flash、Solar Pro 4/Mini 4、Nemotron 3.5 Lightning 等免费模型，免费用量每晚零点刷新，不用绑卡。仍在测试期，具体免费时长登录后可见。",
+  "source": "x @jahooma（Freebuff 创始人）、@kawaidgaf",
+  "collected_at": "2026-10-20T13:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112279845732483384",
+  "post_time_bj": "2026-10-20T04:28:54+08:00",
+  "free_terms": "登录即可免费用，广告资助，免费用量每晚零点刷新，无需绑卡；测试期免费时长可能调整，Glyph Cluster 为促销可能不长期免费。",
+  "product": "Freebuff",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Freebuff（桌面/Web/CLI 下载）",
+    "action_url": "https://freebuff.com"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
