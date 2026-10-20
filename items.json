@@ -9138,5 +9138,77 @@
    "audio"
   ],
   "barriers": []
+ },
+ {
+  "id": "ornith-1.5-122b-open-weights-mit-20261020",
+  "title": "Ornith 开源 Ornith-1.5-122B，MIT 许可免费下载，已上 Ollama",
+  "model": "Ornith-1.5-122B（含 FP8 / GGUF / MLX 等量化版）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/ornith_/status/2112553477457268799",
+  "summary": "Ornith 官方发布 122B 参数开源模型 Ornith-1.5-122B，主打强指令遵循与高推理效率，权重以 MIT 许可放在 Hugging Face，并提供 FP8、GGUF 等量化版，可直接用 Ollama 本地运行，无调用费。",
+  "source": "x @ornith_（官方）；Hugging Face 许可 MIT、Ollama 页面已核实",
+  "collected_at": "2026-10-21T00:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2112553477457268799",
+  "post_time_bj": "2026-10-20T22:36:13+08:00",
+  "free_terms": "开源权重免费下载，本地运行无调用费；MIT 许可可商用。",
+  "product": "Ornith 1.5",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Ollama（ornith-1.5:122b）",
+    "action_url": "https://ollama.com/library/ornith-1.5:122b"
+   }
+  ],
+  "models": [
+   {
+    "name": "Ornith-1.5-122B（Hugging Face）",
+    "action_url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B"
+   },
+   {
+    "name": "Ornith-1.5-122B-GGUF（Hugging Face）",
+    "action_url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-GGUF"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": []
+ },
+ {
+  "id": "bria-fibo-2-open-weights-20261020",
+  "title": "Bria 发布 Fibo 2.0 图像生成/编辑模型，开放权重可在 Hugging Face 下载",
+  "model": "Fibo 2.0（Dev / Edit Turbo）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/bria_ai_/status/2112559473458045305",
+  "summary": "Bria 官方发布 Fibo 2.0，被 Artificial Analysis 评为图像编辑榜第一的开放权重模型，仅用授权数据训练；权重放在 Hugging Face（需登录并同意 Bria 自定义许可后下载），也可在 Bria API、fal 付费调用。",
+  "source": "x @bria_ai_（官方）；Hugging Face briaai/Fibo-2.0-dev、Fibo-2.0-edit-turbo 已核实（gated，许可 bria-fibo）",
+  "collected_at": "2026-10-21T00:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2112559473458045305",
+  "post_time_bj": "2026-10-20T23:00:02+08:00",
+  "free_terms": "权重免费下载，需 Hugging Face 账号并同意 bria-fibo 自定义许可；商用条件以许可为准，API 调用另行收费。",
+  "product": "Bria Fibo 2.0",
+  "providers": [],
+  "agents": [],
+  "models": [
+   {
+    "name": "Fibo-2.0-dev（Hugging Face）",
+    "action_url": "https://huggingface.co/briaai/Fibo-2.0-dev"
+   },
+   {
+    "name": "Fibo-2.0-edit-turbo（Hugging Face）",
+    "action_url": "https://huggingface.co/briaai/Fibo-2.0-edit-turbo"
+   }
+  ],
+  "scenes": [
+   "image"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
