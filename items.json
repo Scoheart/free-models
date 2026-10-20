@@ -9210,5 +9210,40 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "videogen-model-1-1m-free-credits-20261020",
+  "title": "VideoGen 发布 Model 1 长视频模型，开放 100 万美元免费额度申请",
+  "model": "VideoGen Model 1",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/VideoGenApp/status/2112581158173024636",
+  "summary": "VideoGen 官方发布首个视频模型 Model 1，一句提示词可生成最长 10 分钟的多镜头成片；同时开放共享的 100 万美元免费额度池，创作者、学生和业余爱好者都可申请，按项目审核分配。",
+  "source": "x @VideoGenApp（官方）；videogen.io/model-1 官方页已核实",
+  "collected_at": "2026-10-21T01:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2112581158173024636",
+  "post_time_bj": "2026-10-21T00:26:12+08:00",
+  "free_terms": "需登录 VideoGen 并提交早期访问申请（描述项目、分发计划和所需生成量），按创作质量与分发计划审核，额度按项目规模分配，计划发放到 2026 年底；10 月 20 日起先向私有合作伙伴小范围开放，不保证人人获批。",
+  "product": "VideoGen Model 1",
+  "providers": [
+   {
+    "name": "VideoGen（申请免费额度/早期访问）",
+    "action_url": "https://videogen.io/model-1"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "VideoGen Model 1",
+    "action_url": "https://videogen.io/model-1"
+   }
+  ],
+  "scenes": [
+   "video"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
