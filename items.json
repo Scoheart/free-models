@@ -8480,5 +8480,45 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "requesty-free-tier-13-free-models-200rpd-20261020",
+  "title": "Requesty 免费档：13 个免费模型，每天 200 次请求，不用绑卡",
+  "model": "Nemotron 3 Ultra 550B、Nemotron 3.5 Lightning（1M 上下文）、Gemma 4 31B、Ling 3.1 Flash、Laguna M.1、Leanstral 1.5 等 13 个",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/freeaidog123/status/2112431722818421232",
+  "summary": "欧洲 AI 网关 Requesty 的免费档：邮箱注册建 Key 即可调用全部免费模型（目前 13 个，含 NVIDIA Nemotron 3 系列、Google Gemma 4 31B、InclusionAI Ling 3.1 Flash、Poolside Laguna、Mistral Leanstral 1.5），每天 200 次请求，不用绑卡，兼容 OpenAI/Anthropic 接口，可直接接 Claude Code、Cline、Cursor。官网定价页和免费模型页已核实；帖子说的「$10 赠金」官网没写，以账号内为准。",
+  "source": "x @freeaidog123；官网 requesty.ai 定价页与免费模型页核实",
+  "collected_at": "2026-10-20T14:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112431722818421232",
+  "post_time_bj": "2026-10-20T14:32:24+08:00",
+  "free_terms": "Free 计划 $0：仅限免费模型，每天 200 次请求，无需信用卡，无试用期限；base URL https://router.requesty.ai/v1。",
+  "product": "Requesty",
+  "providers": [
+   {
+    "name": "Requesty（注册/创建 API Key）",
+    "action_url": "https://www.requesty.ai/free-models"
+   },
+   {
+    "name": "Requesty 定价（Free 计划）",
+    "action_url": "https://www.requesty.ai/pricing"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Requesty 免费模型列表",
+    "action_url": "https://www.requesty.ai/models/free"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
