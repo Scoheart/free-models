@@ -4588,11 +4588,11 @@
  {
   "id": "opencode-deepseek-v41-flash-free-20261015",
   "title": "OpenCode Zen：DeepSeek V4.1 Flash Free 限时免费（deepseek-v4.1-flash-free）",
-  "model": "DeepSeek V4.1 Flash Free（社区实测免费档约 200k 上下文；付费档 1M）",
+  "model": "DeepSeek V4.1 Flash Free（已升级至 1017 版；社区实测免费档约 200k 上下文；付费档 1M）",
   "type": "限时",
   "deadline": null,
   "url": "https://x.com/opencode/status/2110635747648909472",
-  "summary": "OpenCode 官方宣布 DeepSeek V4.1 Flash 现已在 OpenCode 免费可用。公开 /v1/models 与官方 Zen 文档均已列出模型 id：deepseek-v4.1-flash-free，定价表 Input/Output/Cached Read 均为 Free。文档写明限时免费，提供方零数据留存、不用于训练；未公布确切截止日。用法：下载/打开 OpenCode，在 /models 选 DeepSeek V4.1 Flash Free，或经 OpenCode Zen API Key 调 https://opencode.ai/inference/v1/chat/completions。社区反馈免费档上下文约 200k，完整 1M 为付费 deepseek-v4.1-flash。",
+  "summary": "OpenCode 官方宣布 DeepSeek V4.1 Flash 现已在 OpenCode 免费可用。公开 /v1/models 与官方 Zen 文档均已列出模型 id：deepseek-v4.1-flash-free，定价表 Input/Output/Cached Read 均为 Free。文档写明限时免费，提供方零数据留存、不用于训练；未公布确切截止日。用法：下载/打开 OpenCode，在 /models 选 DeepSeek V4.1 Flash Free，或经 OpenCode Zen API Key 调 https://opencode.ai/inference/v1/chat/completions。社区反馈免费档上下文约 200k，完整 1M 为付费 deepseek-v4.1-flash。 更新（10/20）：OpenCode 官方 10/20 00:34（北京时间）发帖称 OpenCode Go 与免费档的 DeepSeek V4.1 Flash 已升级到 1017 版本，用户无需任何改动，仍免费。",
   "source": "x.com/@opencode/status/2110635747648909472",
   "collected_at": "2026-10-15T16:47:33+08:00",
   "expired": false,
@@ -4627,7 +4627,9 @@
   ],
   "barriers": [
    "need_client"
-  ]
+  ],
+  "updated_at": "2026-10-20T15:44:00+08:00",
+  "update_source": "https://x.com/opencode/status/2112220734768779441"
  },
  {
   "id": "google-deep-review-2-free-weekly-20261015",
@@ -8519,6 +8521,91 @@
   ],
   "barriers": [
    "need_key"
+  ]
+ },
+ {
+  "id": "deepseek-search-fetch-free-claude-code-codex-nov1-20261020",
+  "title": "DeepSeek Search/Fetch 联网工具：经 Claude Code / Codex / DeepSeek Harness 调用免费至 11/1",
+  "model": "DeepSeek Search API、Fetch API（配合 DeepSeek V4.1 Flash / V4 Pro 等模型）",
+  "type": "限时",
+  "deadline": "2026-11-01T00:00:00+08:00",
+  "url": "https://x.com/suntao8023/status/2112440799283810595",
+  "summary": "DeepSeek 把自家 App 背后的搜索引擎开放给开发者：Search 返回排序后的网页结果，Fetch 把任意网页转成 Markdown，正常价每千次成功请求 $0.75（失败、空结果、超时不计费）。官方文档写明：通过 DeepSeek Harness、Claude Code 或 Codex 使用 DeepSeek API 时，模型在服务端自动发起的 Search/Fetch 调用目前免费，北京时间 2026-11-01 00:00 起才按次计费。注意只免搜索和抓取，模型 token 照常扣余额；自己写代码直接调这两个接口也照常收费。",
+  "source": "x @suntao8023；DeepSeek 官方文档 Search & Fetch 与定价页核实",
+  "collected_at": "2026-10-20T15:44:00+08:00",
+  "expired": false,
+  "source_post_id": "2112440799283810595",
+  "post_time_bj": "2026-10-20T15:08:28+08:00",
+  "free_terms": "仅限经 DeepSeek Harness / Claude Code / Codex 走 DeepSeek API 时服务端自动发起的 Search/Fetch 调用免费，至北京时间 2026-11-01 00:00；模型 token 仍按量计费，需账户有余额。",
+  "product": "DeepSeek API · Search & Fetch",
+  "providers": [
+   {
+    "name": "DeepSeek 开放平台（创建 API Key）",
+    "action_url": "https://platform.deepseek.com/api_keys"
+   },
+   {
+    "name": "DeepSeek Search & Fetch 文档",
+    "action_url": "https://api-docs.deepseek.com/guides/search/"
+   },
+   {
+    "name": "DeepSeek 定价页",
+    "action_url": "https://api-docs.deepseek.com/quick_start/pricing/"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Claude Code",
+    "action_url": "https://github.com/anthropics/claude-code"
+   },
+   {
+    "name": "Codex CLI",
+    "action_url": "https://github.com/openai/codex"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key",
+   "need_client"
+  ]
+ },
+ {
+  "id": "vllm-sr-d3-turbo-free-decision-api-20261020",
+  "title": "vLLM Semantic Router d3-turbo：27B 多模态决策模型开源（Apache-2.0）+ 免注册免费 API",
+  "model": "d3-turbo（27B，文本/图片/视频输入）；免费 API 同时提供 d3-flash 9B、d3-mini 4B、d3-nano、d3-lite、d3-edge",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/de2pressed/status/2112437748678394008",
+  "summary": "vLLM Semantic Router 团队的 Decision 3.0 新模型 d3-turbo：输入文本/JSON/图片/视频和一组问题（选择、是非、打分、图中定位框、视频跟踪），直接返回每个答案的概率，不生成文本，适合做路由、分类、审核。权重 Apache-2.0 已在 Hugging Face 开源；官方免费 API 在 decision.vllm-sr.ai 首页一键领 Key、无需注册账号。免费 API 限制：每请求最多 64 个问题、约 13 万 token，每 IP 每天最多领 20 个 Key；注意它不是 OpenAI 兼容的聊天接口，且服务端开启了日志。",
+  "source": "x @de2pressed；Hugging Face 模型页与 decision.vllm-sr.ai/api/info 核实",
+  "collected_at": "2026-10-20T15:44:00+08:00",
+  "expired": false,
+  "source_post_id": "2112437748678394008",
+  "post_time_bj": "2026-10-20T14:56:21+08:00",
+  "free_terms": "免费 API：首页一键生成 Key，无需账号；d3-turbo 每 Key 每分钟 540 次请求、每天 5.4 亿 token；每 IP 每小时 5 个、每天 20 个 Key；日志开启。权重 Apache-2.0 可自部署。",
+  "product": "vLLM Semantic Router · Decision API",
+  "providers": [
+   {
+    "name": "Decision API（一键领免费 Key）",
+    "action_url": "https://decision.vllm-sr.ai"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "d3-turbo（Hugging Face 权重）",
+    "action_url": "https://huggingface.co/vllm-sr/d3-turbo"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "image"
+  ],
+  "barriers": [
+   "zero_signup"
   ]
  }
 ]
