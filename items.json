@@ -8301,5 +8301,39 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "contextdev-9m-raise-50k-free-credits-12h-20261020",
+  "title": "Context.dev 融资 900 万美元庆祝：12 小时内注册自动送 50,000 免费 API 额度",
+  "model": "Context.dev 网页数据 API（搜索/抓取/爬取/结构化提取，给 AI Agent 用）",
+  "type": "限时",
+  "deadline": "2026-10-20T16:05:56+08:00",
+  "url": "https://x.com/getcontextdev/status/2112274067625828482",
+  "summary": "Context.dev 官方宣布完成 900 万美元融资（General Catalyst 领投），送给 Agent 开发者 50,000 免费 credits：发帖后 12 小时内注册，额度自动加到账户。Context.dev 是给 AI Agent 用的网页数据 API，可以搜索、抓取网页转 Markdown/JSON、整站爬取和监控。窗口按发帖时间推算约到北京时间 10/20 16:05。",
+  "source": "x @getcontextdev（官方）；转述 @AIDropDaily",
+  "collected_at": "2026-10-20T10:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112274067625828482",
+  "post_time_bj": "2026-10-20T04:05:56+08:00",
+  "free_terms": "发帖后 12 小时内（约北京时间 10/20 16:05 前）新注册账户，自动获得 50,000 credits，无需输码。",
+  "product": "Context.dev Web Data API",
+  "providers": [
+   {
+    "name": "Context.dev 注册",
+    "action_url": "https://www.context.dev/signup"
+   },
+   {
+    "name": "Context.dev 定价与额度说明",
+    "action_url": "https://www.context.dev/pricing"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
