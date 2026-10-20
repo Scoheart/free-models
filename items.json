@@ -7655,20 +7655,28 @@
  },
  {
   "id": "opencode-space-bunny-is-minimax-m31-flash-free-20261019",
-  "title": "OpenCode：Space Bunny 揭晓为 MiniMax M3.1 Flash，正式版免费 3 天",
+  "title": "MiniMax M3.1 Flash（原 Space Bunny）多平台限时免费：OpenRouter 72 小时 API、OpenCode 3 天，Cline / Command Code 同步免费",
   "model": "MiniMax-M3.1-Flash（OpenCode Zen：minimax-m3.1-flash-free）",
   "type": "限时",
   "deadline": "2026-10-22T20:17:00+08:00",
   "url": "https://x.com/opencode/status/2112156205938626954",
-  "summary": "OpenCode 官方 10/19 宣布：此前在 OpenCode 连续 12 天排第一、累计 106T tokens 的隐身模型 Space Bunny 就是 MiniMax M3.1 Flash，正式版已上线并免费 3 天；MiniMax 官方 10/20 凌晨也转发确认“finished M3.1 Flash is live, free on OpenCode for 3 days”。OpenCode Zen 模型列表已改名为 minimax-m3.1-flash-free（已核实）。1M 上下文、多模态、主打编程。截止时间按官方发帖时间推算约北京时间 10/22 20:00，非官方精确时刻。",
-  "source": "x @opencode 官宣帖、@MiniMax_AI 转发确认（2112282114150547819）、@Quotadex 转述；opencode.ai/zen/v1/models 已核实",
+  "summary": "OpenCode 官方 10/19 宣布：此前在 OpenCode 连续 12 天排第一、累计 106T tokens 的隐身模型 Space Bunny 就是 MiniMax M3.1 Flash，正式版已上线并免费 3 天；MiniMax 官方 10/20 凌晨也转发确认“finished M3.1 Flash is live, free on OpenCode for 3 days”。OpenCode Zen 模型列表已改名为 minimax-m3.1-flash-free（已核实）。1M 上下文、多模态、主打编程。截止时间按官方发帖时间推算约北京时间 10/22 20:00，非官方精确时刻。 补充：OpenRouter 官方 10/19 20:01（北京时间）同步宣布 Space Bunny 即 MiniMax M3.1 Flash，免费 72 小时，模型 ID minimax/minimax-m3.1-flash:free（已在 OpenRouter 模型接口核实，价格 0、1M 上下文，免费端点有限速），约至 10/22 20:00 北京时间；MiniMax 官方也确认 Cline 里现可免费用，Command Code 对所有订阅用户限时免费。",
+  "source": "x @opencode 官宣帖、@MiniMax_AI 转发确认（2112282114150547819）、@Quotadex 转述；opencode.ai/zen/v1/models 已核实；x @OpenRouter（2112152045461680591）、@MiniMax_AI 致谢 OpenRouter（2112287025361801272）、Cline（2112220504258224605）、Command Code（2112188292078952773）；@mr_spyboy 转述；openrouter.ai/api/v1/models 已核实",
   "collected_at": "2026-10-19T17:52:00+08:00",
   "expired": false,
   "source_post_id": "2112156205938626954",
   "post_time_bj": "2026-10-19T20:17:36+08:00",
-  "free_terms": "在 OpenCode 里选 MiniMax M3.1 Flash Free 即可免费用，限时 3 天（约至 10/22 20:00 北京时间，推算）；受 OpenCode 免费模型限速。",
+  "free_terms": "在 OpenCode 里选 MiniMax M3.1 Flash Free 即可免费用，限时 3 天（约至 10/22 20:00 北京时间，推算）；受 OpenCode 免费模型限速。 OpenRouter：用 minimax/minimax-m3.1-flash:free，需 OpenRouter API Key，免费 72 小时（约至 10/22 20:00 北京时间），有限速。Cline：免费用（未说截止）。Command Code：订阅用户限时免费。",
   "product": "OpenCode Zen · Space Bunny Free = MiniMax-M3.1-Flash",
   "providers": [
+   {
+    "name": "OpenRouter（minimax-m3.1-flash:free 模型页）",
+    "action_url": "https://openrouter.ai/minimax/minimax-m3.1-flash:free"
+   },
+   {
+    "name": "OpenRouter 创建 API Key",
+    "action_url": "https://openrouter.ai/settings/keys"
+   },
    {
     "name": "OpenCode Zen",
     "action_url": "https://opencode.ai/zen"
@@ -7682,9 +7690,21 @@
    {
     "name": "OpenCode",
     "action_url": "https://opencode.ai/download"
+   },
+   {
+    "name": "Cline",
+    "action_url": "https://cline.bot"
+   },
+   {
+    "name": "Command Code",
+    "action_url": "https://commandcode.ai"
    }
   ],
   "models": [
+   {
+    "name": "minimax/minimax-m3.1-flash:free（OpenRouter）",
+    "action_url": "https://openrouter.ai/minimax/minimax-m3.1-flash:free"
+   },
    {
     "name": "Zen 公开模型列表（space-bunny-free）",
     "action_url": "https://opencode.ai/zen/v1/models"
@@ -7699,9 +7719,10 @@
    "chat"
   ],
   "barriers": [
-   "need_client"
+   "need_client",
+   "need_key"
   ],
-  "updated_at": "2026-10-20T05:50:00+08:00"
+  "updated_at": "2026-10-20T18:52:00+08:00"
  },
  {
   "id": "workbuddy-education-teachers-2000-credits-12mo-20261019",
@@ -8641,6 +8662,42 @@
   ],
   "barriers": [
    "need_client"
+  ]
+ },
+ {
+  "id": "praex-velox2-free-daily-no-signup-20261020",
+  "title": "Praex Velox II：独立团队自训模型，网页免注册、终端 CLI 每天免费用",
+  "model": "Velox II（Praex 自研后训练模型）；Pro 版 Faber II",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/ai_fengshou/status/2112487489340428672",
+  "summary": "Praex 是一个从开源模型自行后训练、自己部署的 AI 编程/对话助手，不转接第三方 API。免费档模型 Velox II 每天可免费用，网页聊天无需注册按回车就能问；终端 CLI 是 opencode 的开源分支（MIT），也能接自己的 Key 免费跑其他模型。Pro 版 20 美元/月，解锁更大的 Faber II 和 5 倍每日额度；Max 档 Lucia II 尚未开放。官网写明免费档有每日额度，具体数字未公开。",
+  "source": "x @ai_fengshou；praex.ai 官网核实",
+  "collected_at": "2026-10-20T18:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2112487489340428672",
+  "post_time_bj": "2026-10-20T18:14:00+08:00",
+  "free_terms": "Velox II 每天免费（有每日额度，数字未公开），网页免注册即用；CLI 开源，可自带 Key 用任意模型免费。",
+  "product": "Praex（Velox II / Faber II）",
+  "providers": [
+   {
+    "name": "Praex 网页聊天（免注册）",
+    "action_url": "https://praex.ai/chat"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Praex CLI / App 下载（官网）",
+    "action_url": "https://praex.ai"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "zero_signup"
   ]
  }
 ]
