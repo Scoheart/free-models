@@ -9316,5 +9316,40 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "kilo-minimax-m31-flash-free-20261021",
+  "title": "Kilo：MiniMax M3.1 Flash 限时免费（原隐身模型 Space Bunny）",
+  "model": "MiniMax M3.1 Flash",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/kilocode/status/2112617251979620569",
+  "summary": "Kilo（AI 编程插件/CLI，官方号 @kilocode）宣布 MiniMax M3.1 Flash 在 Kilo 内限时免费。该模型此前以隐身名 Space Bunny 在 OpenRouter 上跑了 50 万亿+ tokens；正式价为每百万 tokens 输入 $0.15、输出 $0.60。原帖未写截止时间，其它平台（OpenRouter/Vercel/Ollama）的同款免费大多在 10/22–10/23 结束，可参考。",
+  "source": "x @kilocode（Kilo 官方）",
+  "collected_at": "2026-10-21T03:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2112617251979620569",
+  "post_time_bj": "2026-10-21T02:49:38+08:00",
+  "free_terms": "在 Kilo 内选择 MiniMax M3.1 Flash 即可免费使用，限时，截止时间原帖未公布。",
+  "product": "Kilo（Kilo Code）",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Kilo",
+    "action_url": "https://kilo.ai/install"
+   }
+  ],
+  "models": [
+   {
+    "name": "MiniMax-M3.1-Flash（官方模型介绍）",
+    "action_url": "https://platform.minimax.io/docs/guides/models-intro"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
