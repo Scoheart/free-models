@@ -8956,5 +8956,116 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "maximo-atlas-1.5-api-5usd-free-credits-20261020",
+  "title": "Maximo Atlas 1.5 发布：注册 Maximo AI API 送 $5 免费额度（OpenAI 兼容）",
+  "model": "Maximo Atlas 1.5（maximo-atlas-1.5）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/AskMaximoAI/status/2112553578279915692",
+  "summary": "Maximo AI 发布首个稀疏模型 Atlas 1.5，官方称比 1.4 快至 3 倍、agentic 编码和 UI 更强，1M 上下文；注册 Maximo AI 平台即送 $5 API 免费额度，接口 OpenAI 兼容（https://api.maximoai.co/v1），也可在其 Syntax 编码 CLI/桌面端使用。额度用完后按 $0.20/$1.00 每百万输入/输出 token 计费。",
+  "source": "x @AskMaximoAI（官方）；maximoai.co 发布页已核实（$5 free credits when you sign up、base_url api.maximoai.co/v1）",
+  "collected_at": "2026-10-20T22:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112553578279915692",
+  "post_time_bj": "2026-10-20T22:36:37+08:00",
+  "free_terms": "新注册 Maximo AI 平台账号送 $5 API 额度。",
+  "product": "Maximo AI API",
+  "providers": [
+   {
+    "name": "Maximo AI Platform（获取 API Key）",
+    "action_url": "https://maximoai.co/platform"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Maximo Syntax（CLI / Desktop）",
+    "action_url": "https://maximoai.co/syntax/"
+   }
+  ],
+  "models": [
+   {
+    "name": "Maximo Atlas 1.5",
+    "action_url": "https://maximoai.co/news/introducing-maximo-atlas-1-5"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "moss-image-api-free-20261020",
+  "title": "MOSS-Image API 上线，官方宣布免费调用",
+  "model": "MOSS-Image",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/MOSS_Global/status/2112553676439163165",
+  "summary": "OpenMOSS / 模思（MOSI）官方宣布 MOSS-Image 图像生成 API 上线并免费开放，在 Moss 开放平台控制台创建 API Key 即可调用；平台同时提供 MOSS-TTS、MOSS-VL 等多模态模型 API。官方未写免费截止时间和用量上限。",
+  "source": "x @MOSS_Global（官方）；platform.mosi.cn 控制台可访问",
+  "collected_at": "2026-10-20T22:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112553676439163165",
+  "post_time_bj": "2026-10-20T22:37:00+08:00",
+  "free_terms": "官方称 MOSS-Image API 免费；未说明期限与限额。",
+  "product": "Moss 开放平台",
+  "providers": [
+   {
+    "name": "Moss 开放平台（API Key 控制台）",
+    "action_url": "https://platform.mosi.cn/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "MOSS-Image",
+    "action_url": "https://platform.mosi.cn/"
+   }
+  ],
+  "scenes": [
+   "image"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "modulate-audio-api-1000-free-credits-20261020",
+  "title": "Modulate 语音 AI API：注册送 1,000 免费额度，无需绑卡（转写约 400 小时）",
+  "model": "Velma（转写 / 深度伪造检测 / PII 脱敏 / 通话分级）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/modulate_ai/status/2112544557959147906",
+  "summary": "Modulate 的音频 AI API（Velma）提供多语种转写、深度伪造与 AI 音乐检测、PII/PHI 脱敏、通话风险分级等，支持批量和流式；官网写明新用户送 1,000 免费 credits、无需信用卡，单算转写约等于 400 小时音频，免费档限速面向开发测试。",
+  "source": "x @modulate_ai（官方）；modulate.ai/api-overview 已核实（1,000 free credits、no card required、约 400 小时转写）",
+  "collected_at": "2026-10-20T22:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112544557959147906",
+  "post_time_bj": "2026-10-20T22:00:46+08:00",
+  "free_terms": "新注册送 1,000 credits，无需绑卡；免费档有开发级限速。",
+  "product": "Modulate API",
+  "providers": [
+   {
+    "name": "Modulate API",
+    "action_url": "https://www.modulate.ai/api-overview"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Velma / Transcription Multilingual v3",
+    "action_url": "https://www.modulate.ai/api-overview"
+   }
+  ],
+  "scenes": [
+   "audio"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
