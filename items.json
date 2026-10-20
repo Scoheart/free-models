@@ -9245,5 +9245,76 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "tencent-yuanbao-search-api-2000-free-monthly-20261020",
+  "title": "腾讯元宝搜索开放给开发者：API / MCP / Skill 接入，每月 2000 次免费调用（限时）",
+  "model": "元宝搜索（Tencent Yuanbao Search，WSA）极速版 / 标准版 / 旗舰版",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/shaoxiao_si/status/2112509011950236079",
+  "summary": "腾讯 10 月 20 日把内部 Agent 在用的联网搜索引擎「元宝搜索」通过腾讯云开放给个人开发者和企业，可用 API、MCP（streamableHttp 地址加 API Key 即可，工具 SearchPro，支持限站点、限时间、指定新闻/学术/财经等垂类）或 Skill 三种方式接入，适合给自己的 Agent 加联网搜索。官方推出每月 2000 次的限时免费福利；超出后按量计费，极速版 14 元/千次、标准版 20 元/千次、旗舰版 26 元/千次，调用失败不计费。",
+  "source": "x @shaoxiao_si；腾讯云元宝搜索产品页、元宝搜索 MCP 页与极客公园报道已核实",
+  "collected_at": "2026-10-21T02:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112509011950236079",
+  "post_time_bj": "2026-10-20T19:39:31+08:00",
+  "free_terms": "需腾讯云账号（实名）开通元宝搜索服务并创建 API Key，到活动专区领取每月 2000 次免费额度；福利为限时，具体发放规则以腾讯云活动专区页面为准，截止时间未公布。只免搜索调用，不含大模型 token。",
+  "product": "腾讯云 元宝搜索（WSA）",
+  "providers": [
+   {
+    "name": "腾讯云 元宝搜索（开通服务/查看计费）",
+    "action_url": "https://cloud.tencent.com/product/wsa"
+   },
+   {
+    "name": "元宝搜索 MCP 接入说明",
+    "action_url": "https://cloud.tencent.com/developer/mcp/server/11764"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key",
+   "cn_account"
+  ]
+ },
+ {
+  "id": "codex-40k-accounts-wrong-limits-credit-compensation-20261021",
+  "title": "Codex：约 4 万个账号被错误套用用量上限，OpenAI 将给受影响用户补发 credits",
+  "model": "Codex / ChatGPT 付费档",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/thsottiaux/status/2112592264686149749",
+  "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）确认：上周末部分用户反映用量掉得异常快，排查发现约 40,000 个账号实际套用的用量上限与所选套餐不符。问题已修复，OpenAI 会逐一联系这些用户，受影响的账号会获得补发的 credits，并为此道歉。不是全员福利，只针对被错误限额的账号。",
+  "source": "x @thsottiaux（OpenAI Codex 负责人）",
+  "collected_at": "2026-10-21T02:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112592264686149749",
+  "post_time_bj": "2026-10-21T01:10:20+08:00",
+  "free_terms": "仅限被识别为受影响的约 4 万个 ChatGPT 付费账号，由 OpenAI 主动联系并直接加 credits，无需申请；补发数额未在原帖公布。",
+  "product": "OpenAI Codex usage-limit compensation",
+  "providers": [
+   {
+    "name": "Codex（ChatGPT 网页入口）",
+    "action_url": "https://chatgpt.com/codex"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Codex 官方文档与下载",
+    "action_url": "https://developers.openai.com/codex"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
