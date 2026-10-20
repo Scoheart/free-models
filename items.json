@@ -9387,5 +9387,91 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "nous-portal-ornith-15-122b-free-48h-20261021",
+  "title": "Nous Portal：Ornith-1.5-122B 限时免费 48 小时，Hermes Agent 可直接用",
+  "model": "Ornith-1.5-122B",
+  "type": "限时",
+  "deadline": "2026-10-23T06:53:00+08:00",
+  "url": "https://x.com/yeahfortommy/status/2112678686763970919",
+  "summary": "Nous Research 的 Tommy 宣布：Ornith 新开源的 122B 模型 Ornith-1.5-122B 现在可在 Nous Portal 免费调用 48 小时，可直接接 Hermes Agent。截止时间按发帖时间加 48 小时推算，约为北京时间 10/23 06:53，官方未给出精确结束时刻。",
+  "source": "x @yeahfortommy（Nous Research 成员），@ornith_ 官方回帖致谢",
+  "collected_at": "2026-10-21T07:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112678686763970919",
+  "post_time_bj": "2026-10-21T06:53:45+08:00",
+  "free_terms": "发帖起 48 小时内，在 Nous Portal 免费调用 Ornith-1.5-122B（需 Nous Portal 账号与 API Key）。",
+  "product": "Nous Portal",
+  "providers": [
+   {
+    "name": "Nous Portal",
+    "action_url": "https://portal.nousresearch.com/models"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Hermes Agent",
+    "action_url": "https://hermes-agent.nousresearch.com/"
+   }
+  ],
+  "models": [
+   {
+    "name": "Ornith-1.5-122B（Hugging Face）",
+    "action_url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "commandcode-ornith-15-122b-free-all-plans-20261021",
+  "title": "Command Code：Ornith-1.5-122B 全套餐限时免费",
+  "model": "Ornith-1.5-122B",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/CommandCodeAI/status/2112650593877766522",
+  "summary": "Command Code 官方宣布 Ornith-1.5-122B 已上线并对所有套餐、所有订阅用户免费，262K 上下文、默认零数据留存；Ornith 官方转发确认是限时免费，并专门针对编码做了优化。未公布截止时间。",
+  "source": "x @CommandCodeAI（官方）+ @ornith_ 官方转发",
+  "collected_at": "2026-10-21T07:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112650593877766522",
+  "post_time_bj": "2026-10-21T05:02:07+08:00",
+  "free_terms": "Command Code 所有套餐的订阅用户限时免费使用 Ornith-1.5-122B，截止时间未公布。",
+  "product": "Command Code",
+  "providers": [
+   {
+    "name": "Command Code 套餐与定价",
+    "action_url": "https://commandcode.ai/pricing"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Command Code 快速上手（CLI 安装）",
+    "action_url": "https://commandcode.ai/docs/quickstart"
+   }
+  ],
+  "models": [
+   {
+    "name": "Command Code 模型列表",
+    "action_url": "https://commandcode.ai/docs/reference/cli/models"
+   },
+   {
+    "name": "Ornith-1.5-122B（Hugging Face）",
+    "action_url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client",
+   "deposit_hold"
+  ]
  }
 ]
