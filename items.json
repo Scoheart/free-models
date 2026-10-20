@@ -8739,5 +8739,133 @@
    "zero_signup",
    "need_client"
   ]
+ },
+ {
+  "id": "inclusionai-ming3-speech-5-models-mit-open-weights-20261020",
+  "title": "蚂蚁百灵 Ming-3.0 语音模型开源：TTS / 音频理解 / ASR 共 5 个，MIT 许可免费下载",
+  "model": "Ming-3.0-tts-0.5B；Ming-3.0-tts-tiny（7.9B-A1.3B）；Ming-3.0-audio-flash（126B-A6.5B）；Ming-3.0-audio-tiny（9.3B-A2.7B）；Ming-3.0-asr-tiny（8.6B-A2B）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/AntLingAGI/status/2112210811997540475",
+  "summary": "蚂蚁 inclusionAI（百灵）官方宣布开源 Ming-3.0 三大语音系列共 5 个模型：TTS 有 0.5B 声音设计与副语言（笑声、语气）版和 Tiny 长文本朗读版；音频理解有 Flash（126B，激活 6.5B，支持工具调用）和 Tiny 对话版；ASR Tiny 主打方言与上下文识别。5 个仓库已在 Hugging Face 公开，均为 MIT 许可，可本地免费部署做配音、语音对话和转写。",
+  "source": "x @AntLingAGI 官方；Hugging Face inclusionAI/Ming-3.0-* 5 个仓库已核实公开、license:mit",
+  "collected_at": "2026-10-20T20:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2112210811997540475",
+  "post_time_bj": "2026-10-19T23:54:35+08:00",
+  "free_terms": "权重免费下载（MIT 许可），需自备 GPU 本地部署；Flash 总参 126B，Tiny 系列激活 1.3B–2.7B 门槛较低。",
+  "product": "Ming-3.0 语音模型（inclusionAI 百灵）",
+  "providers": [],
+  "agents": [],
+  "models": [
+   {
+    "name": "Ming-3.0-audio-flash（HF）",
+    "action_url": "https://huggingface.co/inclusionAI/Ming-3.0-audio-flash"
+   },
+   {
+    "name": "Ming-3.0-audio-tiny（HF）",
+    "action_url": "https://huggingface.co/inclusionAI/Ming-3.0-audio-tiny"
+   },
+   {
+    "name": "Ming-3.0-tts-0.5B（HF）",
+    "action_url": "https://huggingface.co/inclusionAI/Ming-3.0-tts-0.5B"
+   },
+   {
+    "name": "Ming-3.0-tts-tiny（HF）",
+    "action_url": "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny"
+   },
+   {
+    "name": "Ming-3.0-asr-tiny（HF）",
+    "action_url": "https://huggingface.co/inclusionAI/Ming-3.0-asr-tiny"
+   }
+  ],
+  "scenes": [
+   "audio",
+   "chat"
+  ],
+  "barriers": [
+   "zero_signup",
+   "need_client"
+  ]
+ },
+ {
+  "id": "paddleocr-free-api-20000-pages-daily-20261020",
+  "title": "PaddleOCR 官网免费 API：每天文档解析上限提到 20,000 页，支持批量 PDF、MCP 与 Skills",
+  "model": "PaddleOCR-VL-1.6（0.9B）/ PP-OCRv6 / PP-StructureV3",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/seve156/status/2112510345906724879",
+  "summary": "百度飞桨 PaddleOCR 官方文档写明：官网免费 API 调用的每日文档解析上限已提升到 20,000 页，支持大批量 PDF 解析，并提供 MCP 和 Agent Skills，可直接接进 Claude Code 等 AI 工具做扫描件转文字、表格公式识别。需登录（百度 AI Studio 账号），额度以官网当天显示为准。",
+  "source": "x @seve156；PaddleOCR 官方文档首页 Tips 已核实（每日 20,000 页免费）",
+  "collected_at": "2026-10-20T20:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2112510345906724879",
+  "post_time_bj": "2026-10-20T19:44:49+08:00",
+  "free_terms": "免费调用，每日文档解析上限 20,000 页；需登录百度 AI Studio 获取 Token。",
+  "product": "PaddleOCR 官网 API（百度飞桨）",
+  "providers": [
+   {
+    "name": "PaddleOCR 官网（在线使用 / API）",
+    "action_url": "https://www.paddleocr.com"
+   },
+   {
+    "name": "百度 AI Studio PaddleOCR",
+    "action_url": "https://aistudio.baidu.com/paddleocr"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "PaddleOCR 文档",
+    "action_url": "https://www.paddleocr.ai/main/index.html"
+   },
+   {
+    "name": "PaddleOCR GitHub",
+    "action_url": "https://github.com/PaddlePaddle/PaddleOCR"
+   }
+  ],
+  "scenes": [
+   "ocr",
+   "coding"
+  ],
+  "barriers": [
+   "need_key",
+   "cn_account"
+  ]
+ },
+ {
+  "id": "indicstack-2000inr-free-api-credits-qwen38-20261020",
+  "title": "IndicStack：注册送 ₹2,000 免费 API 额度，可调 Qwen3.8 27B（OpenAI 兼容）",
+  "model": "Qwen3.8 27B（qwen38-27b）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/IndicStack/status/2112514928452227088",
+  "summary": "印度推理平台 IndicStack 官方号宣布：新用户注册即送 ₹2,000（约 24 美元）免费 API 额度，可用于 Qwen3.8 27B 跑编码 Agent。官网显示接口为 OpenAI 兼容（base_url 改成 api.indicstack.ai/v1 即可），推理在印度本地机房，按 INR 计费。",
+  "source": "x @IndicStack 官方；indicstack.ai 官网（OpenAI 兼容接口、qwen38-27b 模型）已核实，额度数额来自官方帖",
+  "collected_at": "2026-10-20T20:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2112514928452227088",
+  "post_time_bj": "2026-10-20T20:03:02+08:00",
+  "free_terms": "新账户注册送 ₹2,000 API 额度（官方帖所述），未写截止时间。",
+  "product": "IndicStack",
+  "providers": [
+   {
+    "name": "IndicStack 控制台注册",
+    "action_url": "https://console.indicstack.ai/signup"
+   },
+   {
+    "name": "IndicStack 官网",
+    "action_url": "https://indicstack.ai"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
