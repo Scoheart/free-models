@@ -8607,5 +8607,40 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "codex-day15-global-usage-reset-20261020",
+  "title": "Codex：「28 天每日改进或重置」第 15 天，全员用量再次免费重置",
+  "model": "Codex / ChatGPT Work（付费档共用额度）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/thsottiaux/status/2112432076767289678",
+  "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）北京时间 10/20 03:45 先发「Day 15/ We're cooked」，14:33 又改口发「Day 15/ Nevermind, we're still cooking... and reset. Enjoy.」，即第 15 天再次给大家重置 Codex 用量（此前第 8、10、13 天等也重置过）。多位用户随后确认额度已刷新。重置的是 ChatGPT 付费账号在 Codex 里的五小时和周额度，不是 API 余额；免费档不一定受益。也有用户反映最近消耗变快、重置给的额度偏少，建议重置后自己看一下余量。",
+  "source": "x @thsottiaux",
+  "collected_at": "2026-10-20T17:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112432076767289678",
+  "post_time_bj": "2026-10-20T14:33:48+08:00",
+  "free_terms": "ChatGPT 付费档 Codex 用量一次性全局重置；不改 API 余额；无截止时间（一次性）。",
+  "product": "OpenAI Codex usage reset (Day 15)",
+  "providers": [
+   {
+    "name": "Codex（ChatGPT 网页入口）",
+    "action_url": "https://chatgpt.com/codex"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Codex 官方文档与下载",
+    "action_url": "https://developers.openai.com/codex"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
