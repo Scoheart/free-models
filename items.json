@@ -9351,5 +9351,41 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "0g-private-computer-minimax-m31-flash-free-3days-20261021",
+  "title": "0G Private Computer：MiniMax M3.1 Flash 免费 3 天（10/21 21:00 起，免余额只要 API Key）",
+  "model": "MiniMax M3.1 Flash",
+  "type": "限时",
+  "deadline": "2026-10-24T21:00:00+08:00",
+  "url": "https://x.com/0G_labs/status/2112651128911589725",
+  "summary": "0G Labs 官宣：MiniMax M3.1 Flash 在 0G Private Computer 上免费 3 天，从北京时间 10 月 21 日 21:00（13:00 UTC）开始，账户无需余额，只要一个 API Key 就能调用，官方建议接 Hermes Agent 跑长任务。截止时间按「3 天」推算约为 10/24 21:00（官方未写明确结束时刻）；窗口结束后恢复每百万 tokens 输入 $0.15、输出 $0.60。",
+  "source": "x @0G_labs（0G Labs 官方）",
+  "collected_at": "2026-10-21T06:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112651128911589725",
+  "post_time_bj": "2026-10-21T05:04:14+08:00",
+  "free_terms": "10/21 21:00（北京时间）起 3 天内，在 0G Private Computer 用 API Key 调用 MiniMax M3.1 Flash 免费，无需充值余额。",
+  "product": "0G Private Computer",
+  "providers": [
+   {
+    "name": "0G Private Computer",
+    "action_url": "https://pc.0g.ai/models/minimax-m3.1-flash"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "MiniMax-M3.1-Flash（0G 模型页）",
+    "action_url": "https://pc.0g.ai/models/minimax-m3.1-flash"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
