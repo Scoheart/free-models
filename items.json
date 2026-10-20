@@ -8699,5 +8699,45 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "memtensor-memt1-open-weights-20261020",
+  "title": "记忆张量 MemT 1.0 开源：记忆原生大模型 Flash（288B）/ Nano（36B）权重免费下载",
+  "model": "MemT-1.0-Flash（288B-A17B，基座 DeepSeek-V4-Flash）；MemT-1.0-Nano（36B-A3B，基座 Qwen3.6-35B-A3B）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/Velox530/status/2112498749410775537",
+  "summary": "国内团队记忆张量（MemTensor）10/20 发布并开源「记忆原生」基础模型 MemT 1.0：把历史信息写进模型内部固定大小的记忆状态，不用每次重新塞完整上下文。官方称 11 项记忆基准位列参数化记忆方法前两名，256K 历史下端到端推理提速约 4 倍、每会话记忆存储约 40 MiB。两款权重已上 Hugging Face：Flash 用 MIT 许可，Nano 用 Apache-2.0（基座组件保留原许可），可用 Transformers 本地加载，Nano 激活 3B，门槛相对低。",
+  "source": "x @Velox530；Hugging Face MemTensor/MemT-1.0-Flash、MemT-1.0-Nano 模型卡与网易科技 10/20 报道已核实",
+  "collected_at": "2026-10-20T19:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2112498749410775537",
+  "post_time_bj": "2026-10-20T18:58:44+08:00",
+  "free_terms": "权重免费下载：Flash 为 MIT 许可，Nano 为 Apache-2.0；需自备 GPU 本地部署（Flash 总参 288B，Nano 36B）。",
+  "product": "MemT 1.0（MemTensor 记忆张量）",
+  "providers": [],
+  "agents": [],
+  "models": [
+   {
+    "name": "MemT-1.0-Flash（HF）",
+    "action_url": "https://huggingface.co/MemTensor/MemT-1.0-Flash"
+   },
+   {
+    "name": "MemT-1.0-Nano（HF）",
+    "action_url": "https://huggingface.co/MemTensor/MemT-1.0-Nano"
+   },
+   {
+    "name": "MemT-1 合集（HF）",
+    "action_url": "https://huggingface.co/collections/MemTensor/memt-1"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "zero_signup",
+   "need_client"
+  ]
  }
 ]
