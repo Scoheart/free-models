@@ -8335,5 +8335,81 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "ollama-cloud-minimax-m31-flash-free-3days-20261020",
+  "title": "Ollama Cloud：MiniMax M3.1 Flash 免费 3 天（到北京时间 10/23 07:59）",
+  "model": "MiniMax M3.1 Flash（minimax-m3.1-flash:cloud，1M 上下文，支持图像理解）",
+  "type": "限时",
+  "deadline": "2026-10-23T07:59:00+08:00",
+  "url": "https://x.com/ollama/status/2112358514228363362",
+  "summary": "Ollama 官方与 MiniMax 合作，MiniMax M3.1 Flash 在 Ollama Cloud 上免费 3 天，美国托管、零数据留存。模型页标注免费到 2026-10-22 23:59 UTC（北京时间 10/23 07:59），之后按 $0.15/$0.60 每百万 tokens 计费。用 `ollama run minimax-m3.1-flash:cloud` 直接跑，也能通过 `ollama launch claude` 接进 Claude Code，或接 OpenCode/Codex。",
+  "source": "x @ollama（官方）；转述 @MATKA_r、@shengguo7051",
+  "collected_at": "2026-10-20T12:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112358514228363362",
+  "post_time_bj": "2026-10-20T09:41:30+08:00",
+  "free_terms": "登录 Ollama 账号后通过 Ollama Cloud 调用 minimax-m3.1-flash:cloud 免费，截止 2026-10-22 23:59 UTC。",
+  "product": "Ollama Cloud",
+  "providers": [
+   {
+    "name": "Ollama 注册/登录",
+    "action_url": "https://ollama.com/signup"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Ollama 客户端下载",
+    "action_url": "https://ollama.com/download"
+   }
+  ],
+  "models": [
+   {
+    "name": "MiniMax M3.1 Flash（Ollama 模型页）",
+    "action_url": "https://ollama.com/library/minimax-m3.1-flash"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key",
+   "need_client"
+  ]
+ },
+ {
+  "id": "swarms-cloud-5usd-free-api-credits-20261020",
+  "title": "Swarms Cloud：新账户注册送 $5 免费 API 额度",
+  "model": "Swarms Cloud 多智能体编排 API（按用量计费的 Free 计划）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/jaenanft/status/2112386118008373707",
+  "summary": "Swarms Cloud 新账户默认送 $5 API 额度，可用来跑多 Agent 工作流；官网 Stack 页确认「新账户获得 $5 API credits」，Free 计划只按用量付费，免费额度优先于付费额度扣减。适合想试多智能体编排 API 的开发者，不是单一大模型的免费调用。",
+  "source": "x @jaenanft；官网 swarms.ai/stack 与 /pricing 核实",
+  "collected_at": "2026-10-20T12:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112386118008373707",
+  "post_time_bj": "2026-10-20T11:31:11+08:00",
+  "free_terms": "新注册 Swarms Cloud 账户自动获得 $5 API credits，无明确截止时间。",
+  "product": "Swarms Cloud",
+  "providers": [
+   {
+    "name": "Swarms Cloud 定价与 Free 计划",
+    "action_url": "https://www.swarms.ai/pricing"
+   },
+   {
+    "name": "Swarms Stack（注册入口）",
+    "action_url": "https://www.swarms.ai/stack"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
