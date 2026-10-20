@@ -9067,5 +9067,76 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "somark-oxr-free-api-no-signup-20261020",
+  "title": "SoMark OXR 文档解析模型开源，另有免注册、免 API Key 的免费 API",
+  "model": "OXR-1.0（1.3B 文档解析/OCR）",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/Thea1113818/status/2112566370827403343",
+  "summary": "SoMark 团队开源 1.3B 文档解析模型 OXR，可把 PDF/图片转成带版面坐标的 Markdown/JSON；官方 README 提供免费 API，无需注册和 API Key（api-key 填任意值即可），排队处理、不保证稳定，官方称会一直开放到负担不起为止，不建议生产使用。",
+  "source": "x @Thea1113818；github.com/SoMarkAI/OXR README「Free API」章节已核实",
+  "collected_at": "2026-10-20T23:48:00+08:00",
+  "expired": false,
+  "source_post_id": "2112566370827403343",
+  "post_time_bj": "2026-10-20T23:27:27+08:00",
+  "free_terms": "免费 API 免注册、免 Key；无明确截止，官方称维持到负担不起为止；请求排队、不保证稳定。",
+  "product": "SoMark OXR Free API",
+  "providers": [
+   {
+    "name": "SoMark OXR Free API（在线 Demo）",
+    "action_url": "https://free-oxr.somark.ai/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "OXR-1.0（Hugging Face 权重）",
+    "action_url": "https://huggingface.co/SoMarkAI/OXR-1.0"
+   },
+   {
+    "name": "OXR（GitHub）",
+    "action_url": "https://github.com/SoMarkAI/OXR"
+   }
+  ],
+  "scenes": [
+   "document"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
+ },
+ {
+  "id": "gradium-phonon-tts-open-source-20261020",
+  "title": "Gradium 开源 Phonon 端侧 TTS 模型，Phonon-31m 以 Apache 2.0 免费商用",
+  "model": "Phonon-31m / Phonon-40m（TTS）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/GradiumAI/status/2112563128487514512",
+  "summary": "语音 API 公司 Gradium 官方开源 Phonon 系列文本转语音模型（参数均低于 5000 万），可在本地/端侧运行、无调用费用，覆盖多语种；其中 Phonon-31m 采用 Apache 2.0 许可，权重已上 Hugging Face。",
+  "source": "x @GradiumAI（官方）；gradium.ai/phonon 与 huggingface.co/gradium 已核实",
+  "collected_at": "2026-10-20T23:48:00+08:00",
+  "expired": false,
+  "source_post_id": "2112563128487514512",
+  "post_time_bj": "2026-10-20T23:14:34+08:00",
+  "free_terms": "开源权重免费下载，本地运行无调用费；Phonon-31m 为 Apache 2.0。",
+  "product": "Gradium Phonon",
+  "providers": [],
+  "agents": [],
+  "models": [
+   {
+    "name": "Phonon（官方页）",
+    "action_url": "https://gradium.ai/phonon"
+   },
+   {
+    "name": "phonon-31m-en（Hugging Face）",
+    "action_url": "https://huggingface.co/gradium/phonon-31m-en"
+   }
+  ],
+  "scenes": [
+   "audio"
+  ],
+  "barriers": []
  }
 ]
