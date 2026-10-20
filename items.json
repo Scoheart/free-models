@@ -8867,5 +8867,94 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "nous-portal-reflection-beam-free-1week-20261020",
+  "title": "Nous Portal：Reflection Beam 1.0（501B）限时免费一周，Hermes Agent 可直接用",
+  "model": "Reflection Beam 1.0（501B 总参 / 23B 激活）",
+  "type": "限时",
+  "deadline": "2026-10-27T21:28:00+08:00",
+  "url": "https://x.com/yeahfortommy/status/2112536403200323783",
+  "summary": "Nous Portal 上架 Reflection 的开源权重 Agent 模型 Beam 1.0 免费版，为期一周（Nous Research 官方号已转发）。免费版 262k 上下文、自带工具调用、推理强度可调；Hermes Agent 里用 `hermes chat --provider nous -m reflection/beam-1.0-501b-a23b:free`，或 `hermes model` 里直接选。",
+  "source": "x @yeahfortommy（@NousResearch 官方转发）；@witcheer 补充模型 ID 与参数",
+  "collected_at": "2026-10-20T21:55:00+08:00",
+  "expired": false,
+  "source_post_id": "2112536403200323783",
+  "post_time_bj": "2026-10-20T21:28:22+08:00",
+  "free_terms": "Nous Portal 免费档可用 reflection/beam-1.0-501b-a23b:free，限时一周（截止时间按发帖时间 +7 天估算，官方未给精确时刻）。",
+  "product": "Nous Portal · Reflection Beam",
+  "providers": [
+   {
+    "name": "Nous Portal",
+    "action_url": "https://portal.nousresearch.com/models"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Hermes Agent",
+    "action_url": "https://hermes-agent.nousresearch.com/"
+   }
+  ],
+  "models": [
+   {
+    "name": "Nous Portal 模型列表",
+    "action_url": "https://portal.nousresearch.com/models"
+   },
+   {
+    "name": "beam:cloud (Ollama 模型页)",
+    "action_url": "https://ollama.com/library/beam"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "kiro-students-1000-credits-monthly-1year-20261020",
+  "title": "Kiro 学生计划：合格高校学生每月 1,000 Credits，免费一年，无需绑卡",
+  "model": "Kiro 内置模型（含部分付费档模型）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/alleywu270684/status/2112532196124918029",
+  "summary": "AWS 旗下 Kiro 的学生档：名单内高校的在读学生（18 岁以上）用学校邮箱注册 Kiro 账号，在 Usage 页通过 SheerID 认证后，每月 1,000 Credits，连续一年，不用信用卡；额度每月重置不累计、不能加购，到期自动降回免费档。官网名单约 130 所高校，暂未见中国大陆高校。",
+  "source": "x @alleywu270684；kiro.dev/students 官方页面已核实（1,000 credits/月、一年、无需信用卡、SheerID 认证、高校名单）",
+  "collected_at": "2026-10-20T21:55:00+08:00",
+  "expired": false,
+  "source_post_id": "2112532196124918029",
+  "post_time_bj": "2026-10-20T21:11:39+08:00",
+  "free_terms": "名单内高校在读学生、年满 18 岁、账号关联学校邮箱并通过 SheerID 认证；每月 1,000 credits，为期一年。",
+  "product": "Kiro Students",
+  "providers": [
+   {
+    "name": "Kiro 学生计划",
+    "action_url": "https://kiro.dev/students/"
+   },
+   {
+    "name": "Kiro 账号 Usage 页（认证入口）",
+    "action_url": "https://app.kiro.dev"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Kiro",
+    "action_url": "https://kiro.dev/"
+   }
+  ],
+  "models": [
+   {
+    "name": "Kiro 模型文档",
+    "action_url": "https://kiro.dev/docs/models/"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
