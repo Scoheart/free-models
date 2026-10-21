@@ -9628,5 +9628,40 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "fastvideo-fasth3-omni-open-weights-20261021",
+  "title": "FastH3-Omni 开放权重：基于 MiniMax H3 的音画同步视频生成，RTX 5090 可本地跑",
+  "model": "FastH3-Omni (MiniMax H3 微调)",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/threerouter/status/2112799166908825610",
+  "summary": "UCSD Hao AI Lab 的 FastVideo 团队把 MiniMax 实时视频模型 H3 后训练成 FastH3-Omni：按文本加图片/视频/音频参考生成带同步音频的视频，只需 8 步。BF16、FP8、NVFP4 和 ComfyUI、MLX 权重都在 Hugging Face 免费下载，训练代码开源，DGX Spark 和 RTX 5090 有本地推理方案。许可证是 MiniMax H3 社区协议，商用前先看条款。",
+  "source": "X @threerouter；模型卡 https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1",
+  "collected_at": "2026-10-21T15:50:00+08:00",
+  "expired": false,
+  "providers": [],
+  "agents": [
+   {
+    "name": "FastVideo",
+    "action_url": "https://github.com/hao-ai-lab/FastVideo"
+   }
+  ],
+  "models": [
+   {
+    "name": "FastH3-Omni 8-Step (BF16)",
+    "action_url": "https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1"
+   },
+   {
+    "name": "FastH3-Omni ComfyUI",
+    "action_url": "https://huggingface.co/FastVideo/FastH3-Omni-Comfy"
+   }
+  ],
+  "scenes": [
+   "video"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
