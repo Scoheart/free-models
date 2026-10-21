@@ -10128,5 +10128,44 @@
    "coding"
   ],
   "barriers": []
+ },
+ {
+  "id": "xiaomi-mimo-v25-tts-free-20261022",
+  "title": "小米 MiMo-V2.5-TTS 语音合成 API 限时免费（含声音克隆、音色设计）",
+  "model": "mimo-v2.5-tts / mimo-v2.5-tts-voiceclone / mimo-v2.5-tts-voicedesign",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/aiptsd/status/2112983242827550725",
+  "summary": "小米 MiMo 开放平台的 TTS 三件套目前标注「限时免费」：预置音色合成、数秒参考音频即可复刻的声音克隆、文字描述生成音色都不扣费。OpenAI 兼容接口（base_url https://api.xiaomimimo.com/v1），注册拿普通 API Key 即可调用，克隆模型 RPM 100。官方定价页 10/21 更新时仍为限时免费，未写截止时间。",
+  "source": "X @aiptsd 优惠汇总 + 小米 MiMo 官方定价/文档页",
+  "collected_at": "2026-10-22T03:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112983242827550725",
+  "post_time_bj": "2026-10-22T03:03:57+08:00",
+  "free_terms": "按量计费 API 下 TTS 系列限时免费，需注册小米 MiMo 开放平台并创建 API Key；截止时间未公布。",
+  "product": "Xiaomi MiMo 开放平台",
+  "providers": [
+   {
+    "name": "Xiaomi MiMo API 定价（TTS 限时免费）",
+    "action_url": "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
+   },
+   {
+    "name": "MiMo 语音合成使用指南",
+    "action_url": "https://mimo.mi.com/docs/zh-CN/quick-start/usage-guide/audio/speech-synthesis-v2.5"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "MiMo-V2.5-TTS-VoiceClone",
+    "action_url": "https://mimo.mi.com/models/zh-CN/mimo-v2.5-tts-voiceclone"
+   }
+  ],
+  "scenes": [
+   "audio"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
