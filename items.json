@@ -10202,5 +10202,41 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "fireworks-muse-glimmer-30b-free-sft-nov30-20261022",
+  "title": "Fireworks：Meta Muse Glimmer 30B 免费 SFT 微调（至 11/30）",
+  "model": "Meta Muse Glimmer 30B",
+  "type": "限时",
+  "deadline": "2026-11-30T23:59:59-08:00",
+  "url": "https://x.com/chahvivi/status/2113021286524076331",
+  "summary": "Fireworks 训练产品负责人发帖：作为「Free Weights Club」首期活动，Meta 开源的 Muse Glimmer 30B 在 Fireworks 上用 SFT 微调免费，到 11 月 30 日，无需信用卡。可走托管训练（上传样本由平台跑）、Serverless Training API 自写循环，或装训练 skill 让编程 Agent 代劳。注意只免训练费，部署推理另计。",
+  "source": "X @chahvivi（Fireworks 训练产品负责人）帖，另有多位用户帖佐证至 11 月底免费",
+  "collected_at": "2026-10-22T05:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113021286524076331",
+  "post_time_bj": "2026-10-22T05:35:07+08:00",
+  "free_terms": "Muse Glimmer 30B 的 SFT 微调免费，至 11/30（时区未说明，按美西时间估），无需信用卡；推理/部署费用另计。",
+  "product": "Fireworks AI",
+  "providers": [
+   {
+    "name": "Fireworks AI",
+    "action_url": "https://app.fireworks.ai/dashboard/fine-tuning"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Fireworks 模型库",
+    "action_url": "https://fireworks.ai/models"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
