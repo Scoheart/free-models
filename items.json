@@ -10238,5 +10238,35 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "freebuff-deepseek-flash-unlimited-16-countries-20261022",
+  "title": "Freebuff：DeepSeek Flash 在 16 国 100% 免费且不限量",
+  "model": "DeepSeek V4.1 Flash",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/jahooma/status/2113022788550492507",
+  "summary": "Freebuff 创始人宣布放宽限额：在美国、加拿大、英国、澳大利亚、新西兰、爱尔兰、挪威、瑞典、丹麦、芬兰、荷兰、奥地利、卢森堡、冰岛、德国、瑞士这 16 个国家，通过 Freebuff 编程 Agent 使用 DeepSeek Flash 完全免费、不限量（广告资助）；其他地区仍是每日限时免费额度。只能在 Freebuff 客户端内用，不能当 API 转出。",
+  "source": "X @jahooma（Freebuff 创始人）官方帖，@grok 与 @HenyJone 帖佐证",
+  "collected_at": "2026-10-22T06:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113022788550492507",
+  "post_time_bj": "2026-10-22T05:41:05+08:00",
+  "free_terms": "名单内 16 国不限量免费（广告资助），网页/桌面/CLI 可用，免绑卡免 Key；其他地区及 VPN 用户为每日限时免费额度；仅限 Freebuff 内使用。截止时间未公布。",
+  "product": "Freebuff",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Freebuff（桌面/Web/CLI 下载）",
+    "action_url": "https://freebuff.com"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
