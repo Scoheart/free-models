@@ -9952,5 +9952,117 @@
    "need_client",
    "deposit_hold"
   ]
+ },
+ {
+  "id": "baseten-mammoth1-elephant1-free-week-20261022",
+  "title": "Baseten：Base Labs 决策模型 mammoth-1 / elephant-1 免费一周（到 10/28 14:59）",
+  "model": "mammoth-1（27B）、elephant-1（9B）",
+  "type": "限时",
+  "deadline": "2026-10-28T14:59:00+08:00",
+  "url": "https://x.com/baseten/status/2112955524207825053",
+  "summary": "Baseten 官方宣布 Base Labs 训练的两个开源决策模型 mammoth-1（27B）和 elephant-1（9B）在 Baseten Model APIs 上免费一周，截止太平洋时间 10/27 23:59（北京时间 10/28 14:59）。mammoth-1 在 Jev Decision Index 排第一，适合工单路由、钓鱼识别这类快速判断任务；需注册 Baseten 拿 API Key。",
+  "source": "X @baseten 官方",
+  "collected_at": "2026-10-22T01:48:00+08:00",
+  "expired": false,
+  "source_post_id": "2112955524207825053",
+  "post_time_bj": "2026-10-22T01:13:48+08:00",
+  "free_terms": "Baseten Model APIs 免费调用一周，截止 2026-10-27 23:59 PT。",
+  "product": "Baseten Model APIs",
+  "providers": [
+   {
+    "name": "Baseten API Key",
+    "action_url": "https://app.baseten.co/settings/api_keys"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "mammoth-1",
+    "action_url": "https://www.baseten.co/library/mammoth-1/"
+   },
+   {
+    "name": "elephant-1",
+    "action_url": "https://www.baseten.co/library/elephant-1/"
+   }
+  ],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "heygen-voice-turbo-api-free-nov30-20261022",
+  "title": "HeyGen Voice Turbo：TTS 榜第一，API 的 Turbo 端点免费到 11/30",
+  "model": "HeyGen Voice Turbo（文本转语音）",
+  "type": "限时",
+  "deadline": "2026-11-30T23:59:00+08:00",
+  "url": "https://x.com/HeyGen/status/2112960858624078265",
+  "summary": "HeyGen 官方称自家 Voice Turbo 和 Voice 占 Artificial Analysis 文本转语音榜前两名。Turbo 是更快更便宜的模式，已上线 API，Turbo 端点免费用到 11 月 30 日（官方没写时区，按北京时间 11/30 当天结束算比较稳）。需要 HeyGen 账号和 API Key。",
+  "source": "X @HeyGen 官方",
+  "collected_at": "2026-10-22T01:48:00+08:00",
+  "expired": false,
+  "source_post_id": "2112960858624078265",
+  "post_time_bj": "2026-10-22T01:35:00+08:00",
+  "free_terms": "API 的 Voice Turbo 端点免费至 11/30（时区未说明）。",
+  "product": "HeyGen API",
+  "providers": [
+   {
+    "name": "HeyGen API 设置",
+    "action_url": "https://app.heygen.com/settings?nav=API"
+   },
+   {
+    "name": "HeyGen API 文档",
+    "action_url": "https://docs.heygen.com/"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "audio"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "recursive-flint-open-weights-free-20261022",
+  "title": "Flint：Recursive 开源 40B MoE 本地编程模型，权重免费下载，OpenCode / Pi 可免费试",
+  "model": "Flint（40B MoE，Apache 2.0）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/RichardSocher/status/2112944385415426249",
+  "summary": "Richard Socher 的 Recursive 发布首个模型 Flint，主打本地快速编程，MacBook Pro 上 125+ tokens/s，权重以 Apache 2.0 放在 Hugging Face，可用 Ollama、LM Studio、llama.cpp、vLLM 跑；官方还说可以在 OpenCode 和 Pi 里免费试用。免费试用时长未说明。",
+  "source": "X @RichardSocher（Recursive 官方发布）",
+  "collected_at": "2026-10-22T01:48:00+08:00",
+  "expired": false,
+  "source_post_id": "2112944385415426249",
+  "post_time_bj": "2026-10-22T00:29:32+08:00",
+  "free_terms": "开源权重 Apache 2.0 免费；OpenCode / Pi 上免费试用（期限未说明）。",
+  "product": "Flint",
+  "providers": [],
+  "agents": [
+   {
+    "name": "OpenCode",
+    "action_url": "https://opencode.ai/download"
+   },
+   {
+    "name": "Pi",
+    "action_url": "https://pi.dev"
+   }
+  ],
+  "models": [
+   {
+    "name": "RecursiveSI/flint",
+    "action_url": "https://huggingface.co/RecursiveSI/flint"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
