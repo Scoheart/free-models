@@ -10064,5 +10064,69 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "openai-codex-for-oss-chatgpt-pro-6mo-20261022",
+  "title": "Codex for Open Source：开源维护者可申请 6 个月 ChatGPT Pro（含 Codex）+ API 额度",
+  "model": "ChatGPT Pro / Codex（另有 Codex Security）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/daqiyun/status/2112962692218855771",
+  "summary": "OpenAI 官方的 Codex for Open Source 计划：开源项目核心维护者或广泛使用的公开项目可申请 6 个月 ChatGPT Pro（含 Codex，按 $200/月约值 $1200），用 Codex 做 PR 审查、自动化等的项目还能拿 Codex Open Source Fund 的 API 额度，有写权限的核心维护者可按个案申请 Codex Security。申请制、滚动审核，入选后邮件通知；认准 openai.com 官方表单，别点来路不明的短链。",
+  "source": "X @daqiyun（转述 OpenAI 官方页面）",
+  "collected_at": "2026-10-22T02:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112962692218855771",
+  "post_time_bj": "2026-10-22T01:42:17+08:00",
+  "free_terms": "需申请审核，面向公开开源项目的核心/活跃维护者；无固定截止时间。",
+  "product": "Codex for Open Source",
+  "providers": [
+   {
+    "name": "Codex for Open Source 申请表",
+    "action_url": "https://openai.com/form/codex-for-oss/"
+   },
+   {
+    "name": "Codex for Open Source 介绍页",
+    "action_url": "https://developers.openai.com/community/codex-for-oss"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": []
+ },
+ {
+  "id": "claude-security-enterprise-25k-credits-20261022",
+  "title": "Claude Security 公测：Enterprise 组织每月最高 $25,000 免费额度，连送两个月（到 12/31）",
+  "model": "Claude Security（扫描用 Claude Mythos）",
+  "type": "额度",
+  "deadline": "2027-01-01T07:59:59+08:00",
+  "url": "https://x.com/claudeai/status/2112962248218148878",
+  "summary": "Claude 官方宣布 Claude Security 改为持续扫描：连一次仓库先做深度基线扫描，之后随提交自动复扫并跟踪修复，在 Claude Enterprise 公测。Help Center 写明首发优惠：符合条件的 Enterprise 组织每月最多 $25,000 免费用量额度，连续两个月，自动抵扣、当月不结转，优惠截至 2026/12/31（UTC）。门槛高：需要 Enterprise 计划、每人 premium seat，并开启按量计费。",
+  "source": "X @claudeai 官方 + Claude Help Center",
+  "collected_at": "2026-10-22T02:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112962248218148878",
+  "post_time_bj": "2026-10-22T01:40:31+08:00",
+  "free_terms": "仅限 Claude Enterprise 组织（含 AWS Marketplace 购买）；每月最高 $25,000 × 2 个月，截至 2026/12/31 UTC；只适用新版 Claude Security 项目。",
+  "product": "Claude Security",
+  "providers": [
+   {
+    "name": "Claude Security 管理设置",
+    "action_url": "https://claude.ai/admin-settings/claude-security"
+   },
+   {
+    "name": "Claude Security 使用说明（Help Center）",
+    "action_url": "https://support.claude.com/en/articles/14661296-use-claude-security"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": []
  }
 ]
