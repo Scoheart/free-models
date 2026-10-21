@@ -9567,5 +9567,66 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "xhtoken-spark-x26-4b-open-weights-20261021",
+  "title": "讯飞星火 Spark-X2.6-4B 开源：4B 端侧 Agent 模型，Apache 2.0 免费下载",
+  "model": "Spark-X2.6-4B",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/shaoxiao_si/status/2112780733450490140",
+  "summary": "星火团队（XHToken）发布 4B 端侧模型 Spark-X2.6-4B，主打真实任务里的端侧 Agent 能力，Apache 2.0 许可可商用。Hugging Face 已提供原版、GGUF 和 FP8 权重，免费下载本地跑，支持中英文。",
+  "source": "X @shaoxiao_si；模型卡 https://huggingface.co/XHToken/Spark-X2.6-4B",
+  "collected_at": "2026-10-21T14:50:00+08:00",
+  "expired": false,
+  "providers": [],
+  "agents": [],
+  "models": [
+   {
+    "name": "Spark-X2.6-4B",
+    "action_url": "https://huggingface.co/XHToken/Spark-X2.6-4B"
+   },
+   {
+    "name": "Spark-X2.6-4B-GGUF",
+    "action_url": "https://huggingface.co/XHToken/Spark-X2.6-4B-GGUF"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
+ },
+ {
+  "id": "tess-45-27b-qwen38-coding-agent-open-weights-20261021",
+  "title": "Tess-4.5-27B 开源：基于 Qwen3.8-27B 的编码 Agent 微调，Apache 2.0",
+  "model": "Tess-4.5-27B",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/spectrumwebco/status/2112790485698040173",
+  "summary": "migtissera 发布 Tess-4.5-27B，是 Qwen3.8-27B 面向编码 Agent 和工具调用的微调版，Apache 2.0 开放权重。作者自测 BenchLocal 与基座持平（133/150）但少用约 25% token；Q4 GGUF 约 16.5 GB，单卡可本地免费跑。",
+  "source": "X @spectrumwebco；模型卡 https://huggingface.co/migtissera/Tess-4.5-27B",
+  "collected_at": "2026-10-21T14:50:00+08:00",
+  "expired": false,
+  "providers": [],
+  "agents": [],
+  "models": [
+   {
+    "name": "Tess-4.5-27B",
+    "action_url": "https://huggingface.co/migtissera/Tess-4.5-27B"
+   },
+   {
+    "name": "Tess-4.5-27B-GGUF",
+    "action_url": "https://huggingface.co/migtissera/Tess-4.5-27B-GGUF"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
  }
 ]
