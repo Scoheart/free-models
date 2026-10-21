@@ -9708,5 +9708,83 @@
    "need_key",
    "deposit_hold"
   ]
+ },
+ {
+  "id": "deepworks-open-signup-1000-credits-20261021",
+  "title": "滴普 DeepWorks 智能体平台取消邀请制：新用户注册送 1000 积分（30 天有效）",
+  "model": "DeepWorks 个人版（内置专家/专家团/Skills，按 Token 计费）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/alistyun1x/status/2112882441472143807",
+  "summary": "滴普科技（01384）公告：DeepWorks 企业智能体平台自 10/15 起结束申请试用，任何人下载客户端注册即可用，无需邀请码。新号默认进个人版免费体验档，官方文档写明注册赠送 1,000 积分，到账后 30 天有效、每个用户主体只发一次；用完需买积分或订阅（标准版 ¥89/月）。",
+  "source": "X @alistyun1x；港交所公告与 DeepWorks 订阅方案文档核实",
+  "collected_at": "2026-10-21T20:55:00+08:00",
+  "expired": false,
+  "source_post_id": "2112882441472143807",
+  "post_time_bj": "2026-10-21T20:23:24+08:00",
+  "free_terms": "新注册用户一次性 1,000 积分，30 天内有效；不可购买加量包。",
+  "product": "DeepWorks（滴普科技）",
+  "providers": [],
+  "agents": [
+   {
+    "name": "DeepWorks 客户端下载",
+    "action_url": "https://deepworks.cn/"
+   }
+  ],
+  "models": [
+   {
+    "name": "DeepWorks 订阅方案（免费体验版说明）",
+    "action_url": "https://deepworks.deepexi.com/deepworks-docs/billing/plans/"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_client",
+   "cn_account"
+  ]
+ },
+ {
+  "id": "nebius-builder-program-25-token-factory-20261021",
+  "title": "Nebius AI Builder Program：免费加入送 $25 Token Factory 推理额度（90 天有效）",
+  "model": "Nebius Token Factory 开源模型（DeepSeek、GLM 等）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/nic0203/status/2112884858150080983",
+  "summary": "Nebius 开发者计划免费加入，验证邮箱后发 $25 Token Factory 推理额度（可调 DeepSeek、GLM 等开源模型），另送 $25 Tavily 搜索、$100 LangSmith 等合作方额度。额度 90 天过期；Token Factory 开户必须绑银行卡，临时邮箱会被拦，同 IP 24 小时限注册一次。参加 Devpost 黑客松（10/30 截止）还能再领 $25。",
+  "source": "X @nic0203；Nebius Builder 页面与条款核实",
+  "collected_at": "2026-10-21T20:55:00+08:00",
+  "expired": false,
+  "source_post_id": "2112884858150080983",
+  "post_time_bj": "2026-10-21T20:33:00+08:00",
+  "free_terms": "$25 Token Factory 额度为促销码，发放后 90 天过期，需绑卡完成 Token Factory 开户。",
+  "product": "Nebius Builder Program / Token Factory",
+  "providers": [
+   {
+    "name": "Nebius Builder Program 报名",
+    "action_url": "https://dev.nebius.com/builders"
+   },
+   {
+    "name": "Nebius Token Factory 控制台",
+    "action_url": "https://tokenfactory.nebius.com/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "项目条款（额度说明）",
+    "action_url": "https://nebius.com/builders-terms-and-conditions"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key",
+   "deposit_hold"
+  ]
  }
 ]
