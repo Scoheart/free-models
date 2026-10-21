@@ -10167,5 +10167,40 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "openrouter-recursive-flint-free-20261022",
+  "title": "OpenRouter：Recursive Flint (free) 编程模型免费上线",
+  "model": "recursive/flint-v1.0:free",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/OpenRouter/status/2113007405563052313",
+  "summary": "OpenRouter 官方宣布上架 Recursive 首个模型 Flint：开源权重 40B MoE（约 2.5B 激活），专为编程 Agent 打造，262K 上下文，支持推理和工具调用。OpenRouter 上的 flint-v1.0:free 版本输入输出均为 $0，注册拿 API Key 即可调用；未公布免费截止时间。",
+  "source": "X @OpenRouter 官方帖 + OpenRouter 模型列表（价格 0/0 已核实）",
+  "collected_at": "2026-10-22T04:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2113007405563052313",
+  "post_time_bj": "2026-10-22T04:39:57+08:00",
+  "free_terms": "OpenRouter 免费模型（:free 后缀），需 OpenRouter 账号与 API Key，受免费模型限速约束；截止时间未公布。",
+  "product": "OpenRouter",
+  "providers": [
+   {
+    "name": "OpenRouter",
+    "action_url": "https://openrouter.ai/settings/keys"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Recursive: Flint (free)",
+    "action_url": "https://openrouter.ai/recursive/flint-v1.0:free"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
