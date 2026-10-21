@@ -9663,5 +9663,50 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "iteracompute-kimi-k3-free-route-20261021",
+  "title": "IteraCompute 上线 Kimi K3 Free：零 token 费调用 Kimi K3（需累计充值 $10，很慢）",
+  "model": "Kimi K3 (moonshotai/kimi-k3-free)",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/beingsalluu/status/2112850482435961126",
+  "summary": "IteraCompute 免费页（目录更新于 10/21）新增 Kimi K3 Free 路由：输入、缓存、输出都是 $0，1M 上下文，支持工具调用、推理、视觉和流式，OpenAI 兼容。但前提是账户累计净充值至少 $10（赠送额和手续费不算，退款低于 $10 会被停用），官方明说这条免费线路特别慢、要排队；想要速度得用付费 Kimi K3。原有的 Qwen3.8-27B 每月 3000 万免费 tokens（免绑卡）照旧，现在上下文是 128K。",
+  "source": "X @beingsalluu；IteraCompute 免费页 https://iteracompute.com/free/ 核实",
+  "collected_at": "2026-10-21T18:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2112850482435961126",
+  "post_time_bj": "2026-10-21T18:16:24+08:00",
+  "free_terms": "Kimi K3 Free 需累计净充值 ≥ $10，之后 token 免费但线路很慢、无 SLA；Qwen3.8-27B 免费档每月 30M tokens、无需绑卡。",
+  "product": "IteraCompute · moonshotai/kimi-k3-free",
+  "providers": [
+   {
+    "name": "IteraCompute",
+    "action_url": "https://platform.iteracompute.com/sign-up"
+   },
+   {
+    "name": "API Keys",
+    "action_url": "https://platform.iteracompute.com/api-keys"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Kimi K3 Free 模型页",
+    "action_url": "https://iteracompute.com/models/kimi-k3-free/"
+   },
+   {
+    "name": "免费 API 说明",
+    "action_url": "https://iteracompute.com/free/"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key",
+   "deposit_hold"
+  ]
  }
 ]
