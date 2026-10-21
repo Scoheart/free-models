@@ -9786,5 +9786,51 @@
    "need_key",
    "deposit_hold"
   ]
+ },
+ {
+  "id": "antseed-p2p-free-models-zero-signup-20261021",
+  "title": "Antseed P2P 推理网络：免费模型无需账号、无需充值即可调用",
+  "model": "Antseed 网络上标记 Free 的开源模型（如 DeepSeek V4 Flash，以实时列表为准）",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/AntSeed/status/2112899802643960079",
+  "summary": "Antseed 是类似 BitTorrent 的点对点 AI 推理市场，官方发文解释为什么提供免费 AI。装 CLI（npm i -g @antseed/cli，antseed buyer start）或桌面 App 后，本地起一个 OpenAI/Anthropic 兼容接口（localhost:8377），免费模型不用账号、不用 Key、不用充值就能直接调，可接 Claude Code、Codex、OpenCode；付费模型才需用 USDC（Base）或银行卡充值。免费模型由独立节点提供，速度和可用性不保证。",
+  "source": "X @AntSeed；Antseed 官方文档核实",
+  "collected_at": "2026-10-21T21:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2112899802643960079",
+  "post_time_bj": "2026-10-21T21:32:00+08:00",
+  "free_terms": "标记 Free 的模型免费、无账号；付费模型按请求用 USDC 结算。",
+  "product": "Antseed",
+  "providers": [
+   {
+    "name": "Antseed 本地 buyer 代理文档（免费模型直接用）",
+    "action_url": "https://antseed.com/docs/api/"
+   },
+   {
+    "name": "Antseed 官网",
+    "action_url": "https://antseed.com/"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Antseed 桌面 App / CLI 文档",
+    "action_url": "https://antseed.com/docs/"
+   }
+  ],
+  "models": [
+   {
+    "name": "模型列表与 Free 筛选说明",
+    "action_url": "https://antseed.com/docs/gateway/models/"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "zero_signup",
+   "need_client"
+  ]
  }
 ]
