@@ -10593,5 +10593,103 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "gonkarouter-20usd-free-credit-20261022",
+  "title": "GonkaRouter 新用户注册送 20 美元 API 额度，免绑卡",
+  "model": "GLM-5.3-Flash、DeepSeek-V4-Flash、MiniMax-M2.7 等",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/7nlrPkiB1t86494/status/2113248214933557464",
+  "summary": "GonkaRouter（Gonka 网络上的模型路由）新账号用邮箱或 Google 登录即自动到账一次性 20 美元额度，不用绑卡也不用充值；接口兼容 OpenAI 和 Anthropic，可接 OpenCode、Claude Code 等工具。官网未写活动截止时间。",
+  "source": "X @7nlrPkiB1t86494",
+  "collected_at": "2026-10-22T20:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2113248214933557464",
+  "post_time_bj": "2026-10-22T20:36:00+08:00",
+  "free_terms": "新用户一次性 $20 免费额度，免绑卡；用完需用加密货币充值。",
+  "product": "GonkaRouter",
+  "providers": [
+   {
+    "name": "GonkaRouter",
+    "action_url": "https://gonkarouter.io/docs"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "zhipu-glm-coding-plan-7day-trial-card-20261022",
+  "title": "智谱 GLM Coding Plan 7 天体验卡（2000 积分）免费领，可接 Claude Code",
+  "model": "GLM-5.3、GLM-5.3-Flash",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/alleywu270684/status/2113245023211061277",
+  "summary": "从未订阅过 GLM Coding Plan 的用户可通过体验卡链接免费领 7 天、2000 积分，在「个人套餐 > 套餐概览」建专用 Key 后用 npx @z_ai/coding-helper 一键接入 Claude Code 等工具。积分只能在官方支持的编码工具里用，不能调标准 API；领卡需要分享链接，部分链接已失效，可能要实名。",
+  "source": "X @alleywu270684",
+  "collected_at": "2026-10-22T20:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2113245023211061277",
+  "post_time_bj": "2026-10-22T20:24:00+08:00",
+  "free_terms": "新用户每人限领一次，领取后 7 天有效、2000 积分；工作日 14-18 点外调用积分减半扣。",
+  "product": "GLM Coding Plan 体验卡",
+  "providers": [
+   {
+    "name": "智谱 BigModel",
+    "action_url": "https://docs.bigmodel.cn/cn/coding-plan/quick-start"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Claude Code",
+    "action_url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_key",
+   "need_client",
+   "cn_account"
+  ]
+ },
+ {
+  "id": "xiaomi-mimo-claw-daily-3h-free-20261022",
+  "title": "小米 MiMo Claw 云端 Agent 每天免费用 3 小时（1024 福利合集提及）",
+  "model": "MiMo-V2.6-Pro",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/yedabinbinah/status/2113240954614227282",
+  "summary": "1024 程序员节福利合集提到小米 MiMo Claw 每天免费用 3 小时。按小米官方更新日志，免费版单次体验时长为 3 小时并有算力上限；用小米账号登录 MiMo Studio 即可创建云端 Claw 实例，免绑卡。",
+  "source": "X @yedabinbinah",
+  "collected_at": "2026-10-22T20:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2113240954614227282",
+  "post_time_bj": "2026-10-22T20:08:00+08:00",
+  "free_terms": "小米账号登录，每天免费 3 小时体验时长（有算力上限），免绑卡。",
+  "product": "Xiaomi MiMo Claw",
+  "providers": [
+   {
+    "name": "Xiaomi MiMo",
+    "action_url": "https://mimo.mi.com/docs/zh-CN/updates/feature/claw"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": [
+   "cn_account"
+  ]
  }
 ]
