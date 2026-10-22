@@ -10268,5 +10268,45 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "krafton-raon-1-mini-api-free-limited-20261022",
+  "title": "KRAFTON Raon-1 mini API 限时免费（填表领 Console 邀请，OpenAI/Anthropic 兼容）",
+  "model": "Raon-1 mini preview (raon-1-mini-preview)",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/Kangwook_Lee/status/2113060181429178873",
+  "summary": "KRAFTON 为庆祝 Raon-1 mini 发布，托管 API 限时免费：在官网填姓名、邮箱、单位、角色和用途后会立即收到 Raon Console 邀请，验证邮箱设密码即可创建 API Key、试 Playground。预览期模型价格为 0，但有按用户的 token 和请求数限额；接口地址 https://raon-api.krafton.ai/v1，兼容 OpenAI Chat Completions，也接受 Anthropic SDK 鉴权。之后是否收费另行公告，截止时间未公布。",
+  "source": "X @Kangwook_Lee 帖；官网 https://raon-mini.krafton.ai/en FAQ 与 /en/docs",
+  "collected_at": "2026-10-22T08:55:00+08:00",
+  "expired": false,
+  "source_post_id": "2113060181429178873",
+  "post_time_bj": "2026-10-22T08:09:40+08:00",
+  "free_terms": "预览期 API 免费（价格为 0），有每用户 token/请求数限制；需填申请表获取 Console 邀请；截止时间未公布。",
+  "product": "Raon Console",
+  "providers": [
+   {
+    "name": "Raon Console（申请/创建 API Key）",
+    "action_url": "https://raon-mini.krafton.ai/en#apply"
+   },
+   {
+    "name": "Raon Console API Keys",
+    "action_url": "https://raon-console.krafton.ai/api-keys"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Raon-1-mini-preview",
+    "action_url": "https://huggingface.co/KRAFTON/Raon-1-mini-preview"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
