@@ -10308,5 +10308,35 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "qoder-intl-1024-community-boost-sota-credits-20261022",
+  "title": "Qoder 国际版「1024｜创造力集结」：先领 1,024 SOTA Credits，助力最高 10,240",
+  "model": "Sonus（Qoder 国际版 SOTA 模型）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/leo114119/status/2113094100995961149",
+  "summary": "Qoder 国际版开启 1024 程序员节「创造力集结」活动：Pro 及以上个人会员自动加入，免费会员可申请、审核通过后加入。加入即得 1,024 SOTA Credits 见面礼（只能用于国际版的 Sonus 模型），之后每天助力一次，社区总助力达到 2 万、3 万、5 万时逐轮解锁 2,048、3,072、4,096 Credits，活动期内最多 10,240。帖子给的活动页 qoder.com/community-boost 未登录访问返回 404，可能要在客户端或登录后进入；活动截止时间未公布。",
+  "source": "X @leo114119 帖及活动截图（未找到 Qoder 官方账号同步公告）",
+  "collected_at": "2026-10-22T10:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113094100995961149",
+  "post_time_bj": "2026-10-22T10:24:27+08:00",
+  "free_terms": "Pro 及以上自动加入；免费会员需申请审核；Credits 仅限 Sonus 模型；需每天助力解锁后续轮次；截止时间未公布。",
+  "product": "Qoder 国际版",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Qoder（下载客户端）",
+    "action_url": "https://qoder.com/download"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
