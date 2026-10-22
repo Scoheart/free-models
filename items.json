@@ -7660,10 +7660,10 @@
   "type": "限时",
   "deadline": "2026-10-22T20:17:00+08:00",
   "url": "https://x.com/opencode/status/2112156205938626954",
-  "summary": "OpenCode 官方 10/19 宣布：此前在 OpenCode 连续 12 天排第一、累计 106T tokens 的隐身模型 Space Bunny 就是 MiniMax M3.1 Flash，正式版已上线并免费 3 天；MiniMax 官方 10/20 凌晨也转发确认“finished M3.1 Flash is live, free on OpenCode for 3 days”。OpenCode Zen 模型列表已改名为 minimax-m3.1-flash-free（已核实）。1M 上下文、多模态、主打编程。截止时间按官方发帖时间推算约北京时间 10/22 20:00，非官方精确时刻。 补充：OpenRouter 官方 10/19 20:01（北京时间）同步宣布 Space Bunny 即 MiniMax M3.1 Flash，免费 72 小时，模型 ID minimax/minimax-m3.1-flash:free（已在 OpenRouter 模型接口核实，价格 0、1M 上下文，免费端点有限速），约至 10/22 20:00 北京时间；MiniMax 官方也确认 Cline 里现可免费用，Command Code 对所有订阅用户限时免费。",
+  "summary": "OpenCode 官方 10/19 宣布：此前在 OpenCode 连续 12 天排第一、累计 106T tokens 的隐身模型 Space Bunny 就是 MiniMax M3.1 Flash，正式版已上线并免费 3 天；MiniMax 官方 10/20 凌晨也转发确认“finished M3.1 Flash is live, free on OpenCode for 3 days”。OpenCode Zen 模型列表已改名为 minimax-m3.1-flash-free（已核实）。1M 上下文、多模态、主打编程。截止时间按官方发帖时间推算约北京时间 10/22 20:00，非官方精确时刻。 补充：OpenRouter 官方 10/19 20:01（北京时间）同步宣布 Space Bunny 即 MiniMax M3.1 Flash，免费 72 小时，模型 ID minimax/minimax-m3.1-flash:free（已在 OpenRouter 模型接口核实，价格 0、1M 上下文，免费端点有限速），约至 10/22 20:00 北京时间；MiniMax 官方也确认 Cline 里现可免费用，Command Code 对所有订阅用户限时免费。 更新（10/23 01:40）：OpenCode Zen 模型列表已不再有 minimax-m3.1-flash-free，免费期已结束（@marolabs_ 帖 + 官方文档核实）。",
   "source": "x @opencode 官宣帖、@MiniMax_AI 转发确认（2112282114150547819）、@Quotadex 转述；opencode.ai/zen/v1/models 已核实；x @OpenRouter（2112152045461680591）、@MiniMax_AI 致谢 OpenRouter（2112287025361801272）、Cline（2112220504258224605）、Command Code（2112188292078952773）；@mr_spyboy 转述；openrouter.ai/api/v1/models 已核实",
   "collected_at": "2026-10-19T17:52:00+08:00",
-  "expired": false,
+  "expired": true,
   "source_post_id": "2112156205938626954",
   "post_time_bj": "2026-10-19T20:17:36+08:00",
   "free_terms": "在 OpenCode 里选 MiniMax M3.1 Flash Free 即可免费用，限时 3 天（约至 10/22 20:00 北京时间，推算）；受 OpenCode 免费模型限速。 OpenRouter：用 minimax/minimax-m3.1-flash:free，需 OpenRouter API Key，免费 72 小时（约至 10/22 20:00 北京时间），有限速。Cline：免费用（未说截止）。Command Code：订阅用户限时免费。",
@@ -10797,6 +10797,72 @@
   ],
   "barriers": [
    "need_client"
+  ]
+ },
+ {
+  "id": "zed-student-plan-pro-free-1yr-20261023",
+  "title": "Zed：在读大学生免费用一年 Zed Pro，每月 $10 AI 额度",
+  "model": "Zed 托管模型（不含 Claude Fable、Claude Opus、GPT-6 Astra、GPT Pro 系列）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/ai_fengshou/status/2113325763785109763",
+  "summary": "Zed 编辑器的学生计划：在读大学生、满 18 岁可免费用 12 个月 Zed Pro，包含每月 $10 AI token 额度和无限编辑预测。用满 30 天的 GitHub 账号登录并验证学校邮箱即可申请，通常秒批，人工审核 72 小时内回复；一年后自动降回免费版。Claude Fable、Claude Opus、GPT-6 Astra 和 GPT Pro 系列模型不包含在内。",
+  "source": "X @ai_fengshou；Zed 官网 Education 页与官方文档",
+  "collected_at": "2026-10-23T02:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2113325763785109763",
+  "post_time_bj": "2026-10-23T01:45:00+08:00",
+  "free_terms": "在读大学生、满 18 岁，GitHub 账号满 30 天＋学校邮箱验证；免费 12 个月，每月 $10 额度用完即止。",
+  "product": "Zed",
+  "providers": [
+   {
+    "name": "Zed",
+    "action_url": "https://zed.dev/education"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Zed",
+    "action_url": "https://zed.dev/download"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
+ },
+ {
+  "id": "spacexsi-grok-for-startups-credits-20261023",
+  "title": "Grok for Startups：初创公司可申请 6–12 个月 Grok 额度，消费还按 1:1 返额度",
+  "model": "Grok / Grok API（含 Grok Build、Grok Bot）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/ns123abc/status/2113337172031943128",
+  "summary": "SpaceXSI 推出 Grok for Startups 计划：初创公司申请后可获得约 6–12 个月的额度，可用于 Grok、Grok Build、Grok Bot 和 Grok API；帖子称此后每月花的钱会在下个月按 1:1 返还免费额度，连续六个月。需要提交公司和融资信息审核，额度按阶段和用量核定，官方条款写明额度一般在发放后 6 个月过期。",
+  "source": "X @ns123abc；SpaceXSI 官网 Grok for Startups 页与计划条款",
+  "collected_at": "2026-10-23T02:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2113337172031943128",
+  "post_time_bj": "2026-10-23T02:30:20+08:00",
+  "free_terms": "面向初创公司，需在官网申请并通过公司和融资审核，额度数额由官方核定；额度发放后约 6 个月过期。",
+  "product": "Grok for Startups",
+  "providers": [
+   {
+    "name": "SpaceXSI Grok for Startups",
+    "action_url": "https://x.ai/startups/apply"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
   ]
  }
 ]
