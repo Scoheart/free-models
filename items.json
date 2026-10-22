@@ -10864,5 +10864,45 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "perch-minimax-m31-flash-stays-free-20261023",
+  "title": "Perch AI：MiniMax M3.1 Flash 其他平台免费期结束后，仍留在 Starter 免费档",
+  "model": "MiniMax M3.1 Flash、DeepSeek V4.1 Flash（1017）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/PerchTerminal/status/2113369564990046376",
+  "summary": "Perch AI 官方更新：OpenRouter、OpenCode 等平台的 MiniMax M3.1 Flash 免费期已经结束，但 Perch 的免费 Starter 计划会继续提供 MiniMax M3.1 Flash，同时还有 DeepSeek V4.1 Flash（1017）。官网定价页已核实：Starter 免费阵容为 Laguna S 2.1、DeepSeek V4.1 Flash、GLM 5.3 Flash、Beam 1.0（至 10/23）以及“限时”的 MiniMax M3.1 Flash，用量计入 Starter 每月约 $20 的免费额度。官方没给 M3.1 Flash 的截止时间。",
+  "source": "x @PerchTerminal（Perch AI 官方）；perchai.app/pricing 官网已核实",
+  "collected_at": "2026-10-23T05:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113369564990046376",
+  "post_time_bj": "2026-10-23T04:39:03+08:00",
+  "free_terms": "注册 Perch 免费 Starter 即可，无需绑卡；用量计入每月约 $20（20000 PT）免费额度；MiniMax M3.1 Flash 标注为限时，未公布截止时间；仅 Web/Desktop/CLI，无公开 API。",
+  "product": "Perch AI Starter",
+  "providers": [
+   {
+    "name": "Perch AI 定价页",
+    "action_url": "https://www.perchai.app/pricing"
+   },
+   {
+    "name": "Perch AI 官网",
+    "action_url": "https://www.perchai.app/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Perch 模型限时活动说明",
+    "action_url": "https://www.perchai.app/docs/plans/model-promotions"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
  }
 ]
