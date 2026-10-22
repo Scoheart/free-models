@@ -10904,5 +10904,44 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "canva-craft-image-model-free-20261023",
+  "title": "Canva 发布首个自研生图模型 Canva Craft，免费用户也能在 Dream Lab 里用",
+  "model": "Canva Craft（API 模型名 craft_v1_2k）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/ivanainai/status/2113390939179749662",
+  "summary": "Canva 10/22 发布自研图像模型 Canva Craft，最高 2K、30+ 种比例，擅长海报/信息图等带文字的设计图，DesignArena 排名靠前。官方新闻稿说面向全球所有 Canva 用户开放（含免费用户），在 Dream Lab 里使用；免费档走 Canva 每月 AI 额度（最多 200 次标准或 20 次高级 AI 使用），Craft 具体按哪档扣费官方未写明。也可通过 Canva Connect API（model 填 craft_v1_2k）调用，同样消耗用户 AI 额度。",
+  "source": "x @ivanainai；canva.com 官方新闻稿与 Canva 开发者社区公告已核实",
+  "collected_at": "2026-10-23T06:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113390939179749662",
+  "post_time_bj": "2026-10-23T06:03:59+08:00",
+  "free_terms": "注册 Canva 免费账号即可在 Dream Lab 使用；受免费档每月 AI 额度限制（最多 200 次标准/20 次高级），无公布截止时间。API 调用需 OAuth 用户令牌并消耗用户 AI 额度。",
+  "product": "Canva Dream Lab / Connect API",
+  "providers": [
+   {
+    "name": "Canva Craft 官方介绍",
+    "action_url": "https://www.canva.com/newsroom/news/canva-craft/"
+   },
+   {
+    "name": "Canva 定价（免费档 AI 额度）",
+    "action_url": "https://www.canva.com/en_us/pricing/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Canva Craft API 公告（craft_v1_2k）",
+    "action_url": "https://community.canva.dev/t/connect-api-canva-craft-is-now-available-for-image-generation/8999"
+   }
+  ],
+  "scenes": [
+   "image"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
