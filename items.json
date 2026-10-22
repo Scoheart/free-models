@@ -10495,5 +10495,103 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "claude-duet-preview-free-limit-reset-nov30-20261022",
+  "title": "Claude Duet 预览：获准后送一次免费额度全重置（11/30 前用）",
+  "model": "Claude（Pro/Max 订阅额度，Duet 基于 Opus 5.5）",
+  "type": "额度",
+  "deadline": "2026-11-30T23:59:59+08:00",
+  "url": "https://x.com/clauderesets/status/2113219014529032697",
+  "summary": "Anthropic 10/21 推出个人 Agent「Claude Duet」研究预览（美国 Pro/Max 用户排队申请）。拿到预览资格的账号会额外得到一次免费的完整额度重置，5 小时额度和周额度一起清零，可在 11/30 前任选时间在 Claude 网页或桌面端「设置 → 用量 → Reset for free」使用。注意 Duet 本身也消耗套餐额度；截止日按北京时间保守记为 11/30，以账号内显示为准。",
+  "source": "X @clauderesets",
+  "collected_at": "2026-10-22T19:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113219014529032697",
+  "post_time_bj": "2026-10-22T18:40:49+08:00",
+  "free_terms": "仅限进入 Claude Duet 预览的美国 Pro/Max 账号；一次性重置 5 小时+周额度；11/30 前使用。",
+  "product": "Claude Duet preview bonus reset",
+  "providers": [
+   {
+    "name": "Claude 用量设置",
+    "action_url": "https://claude.ai/settings/usage"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "antdigital-lingdt-decision-1-dtmaas-free-trial-20261022",
+  "title": "蚂蚁数科 LingDT-Decision-1.0 决策模型：DTMaaS 平台限时免费试用",
+  "model": "LingDT-Decision-1.0（4B / 27B）",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/ataosky/status/2113227580455415857",
+  "summary": "蚂蚁 10/22 发布决策模型 LingDT-Decision-1.0，不输出长文而是直接在给定选项里做判断（支持多选和按序决策），有 4B 和 27B 两档。官方称在客服、风控场景比通用大模型省九成以上 Token。目前可在蚂蚁数科 DTMaaS 模型平台限时免费试用，截止时间未公布。",
+  "source": "X @ataosky",
+  "collected_at": "2026-10-22T19:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113227580455415857",
+  "post_time_bj": "2026-10-22T19:14:51+08:00",
+  "free_terms": "DTMaaS 平台限时免费试用，具体额度与截止时间未公布。",
+  "product": "Ant Digital LingDT-Decision-1.0",
+  "providers": [
+   {
+    "name": "蚂蚁数科 DTMaaS 模型广场",
+    "action_url": "https://maas.antdigital.com/models"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "LingDT-Decision-1.0",
+    "action_url": "https://maas.antdigital.com/models"
+   }
+  ],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": [
+   "need_key",
+   "cn_account"
+  ]
+ },
+ {
+  "id": "arena-kibitz-kalmia-kimi-k31-qwen4-mystery-free-20261022",
+  "title": "Arena 上线两个匿名新模型 kibitz / kalmia（疑似 Kimi K3.1 / Qwen 4），可免费试",
+  "model": "kibitz（疑似 Kimi K3.1）、kalmia（疑似 Qwen 4）",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/pengsonal/status/2113231142362964234",
+  "summary": "Arena 对战区新出现两个匿名模型 kibitz 和 kalmia，发帖人推测分别是 Kimi K3.1 和 Qwen 4（身份未经官方确认）。打开 Arena 进入对战模式（代码对战效果最好）即可免费随机遇到它们，不保证每次都能抽中。",
+  "source": "X @pengsonal",
+  "collected_at": "2026-10-22T19:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113231142362964234",
+  "post_time_bj": "2026-10-22T19:29:00+08:00",
+  "free_terms": "Arena 对战模式免费使用，随机匹配到匿名模型；模型身份为推测。",
+  "product": "Arena mystery models kibitz / kalmia",
+  "providers": [
+   {
+    "name": "Arena",
+    "action_url": "https://arena.ai/"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
  }
 ]
