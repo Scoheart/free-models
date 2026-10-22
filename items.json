@@ -10338,5 +10338,45 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "xfyun-maas-1024-spark-x26-4b-free-api-20261022",
+  "title": "讯飞星辰 MaaS：Spark-X2.6-4B API 限时免费，1024 开发者节据称首页送 10 亿 tokens",
+  "model": "Spark-X2.6-4B（另：Spark-X2.6 293B-A30B 限时 6 折）",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/xiangxiang103/status/2113140173538205953",
+  "summary": "科大讯飞 10/22 在 1024 开发者节主论坛发布星火 X2.6（293B-A30B MoE，1M 上下文，主打代码和智能体）。官方星火 API 页写明端侧 4B 版 Spark-X2.6-4B 的 API「限时免费」，大模型 Spark-X2.6 则是限时 6 折（输入 0.9 元、输出 3.6 元/百万 tokens），不是免费。X 帖称星辰 MaaS 平台首页直接送 10 亿 tokens，但这一点目前只有这条帖子，官方页面没能核实到，领取前请以控制台为准。截止时间未公布。",
+  "source": "X @xiangxiang103 帖；官方 https://xinghuo.xfyun.cn/sparkapi 价格说明（10 亿 tokens 未经官方核实）",
+  "collected_at": "2026-10-22T13:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113140173538205953",
+  "post_time_bj": "2026-10-22T13:27:32+08:00",
+  "free_terms": "Spark-X2.6-4B API 限时免费；10 亿 tokens 赠送为单一帖子说法未核实；需注册讯飞开放平台/星辰 MaaS 创建 Key；截止时间未公布。",
+  "product": "讯飞星辰 MaaS",
+  "providers": [
+   {
+    "name": "讯飞星辰 MaaS 平台",
+    "action_url": "https://maas.xfyun.cn/"
+   },
+   {
+    "name": "讯飞星火 API（价格与开通）",
+    "action_url": "https://xinghuo.xfyun.cn/sparkapi"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Spark-X2.6-4B",
+    "action_url": "https://huggingface.co/XHToken/Spark-X2.6-4B"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
