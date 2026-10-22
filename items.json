@@ -10346,13 +10346,13 @@
   "type": "限时",
   "deadline": null,
   "url": "https://x.com/xiangxiang103/status/2113140173538205953",
-  "summary": "科大讯飞 10/22 在 1024 开发者节主论坛发布星火 X2.6（293B-A30B MoE，1M 上下文，主打代码和智能体）。官方星火 API 页写明端侧 4B 版 Spark-X2.6-4B 的 API「限时免费」，大模型 Spark-X2.6 则是限时 6 折（输入 0.9 元、输出 3.6 元/百万 tokens），不是免费。X 帖称星辰 MaaS 平台首页直接送 10 亿 tokens，但这一点目前只有这条帖子，官方页面没能核实到，领取前请以控制台为准。截止时间未公布。",
+  "summary": "科大讯飞 10/22 在 1024 开发者节主论坛发布星火 X2.6（293B-A30B MoE，1M 上下文，主打代码和智能体）。官方星火 API 页写明端侧 4B 版 Spark-X2.6-4B 的 API「限时免费」，大模型 Spark-X2.6 则是限时 6 折（输入 0.9 元、输出 3.6 元/百万 tokens），不是免费。X 帖称星辰 MaaS 平台首页直接送 10 亿 tokens，但这一点目前只有这条帖子，官方页面没能核实到，领取前请以控制台为准。截止时间未公布。 补充（21:00 后多条 X 帖）：多位用户称在星辰 MaaS 首页可领 Spark-X2.6 的 10 亿 tokens，需实名认证、免绑卡、有效期 31 天、只能用于讯飞自家模型；官方页面仍未直接核实，以控制台为准。",
   "source": "X @xiangxiang103 帖；官方 https://xinghuo.xfyun.cn/sparkapi 价格说明（10 亿 tokens 未经官方核实）",
   "collected_at": "2026-10-22T13:50:00+08:00",
   "expired": false,
   "source_post_id": "2113140173538205953",
   "post_time_bj": "2026-10-22T13:27:32+08:00",
-  "free_terms": "Spark-X2.6-4B API 限时免费；10 亿 tokens 赠送为单一帖子说法未核实；需注册讯飞开放平台/星辰 MaaS 创建 Key；截止时间未公布。",
+  "free_terms": "Spark-X2.6-4B API 限时免费；10 亿 tokens 赠送为单一帖子说法未核实；需注册讯飞开放平台/星辰 MaaS 创建 Key；截止时间未公布。 多帖称 10 亿 tokens 需实名、31 天有效、仅限讯飞模型。",
   "product": "讯飞星辰 MaaS",
   "providers": [
    {
@@ -10377,7 +10377,8 @@
   ],
   "barriers": [
    "need_key"
-  ]
+  ],
+  "updated_at": "2026-10-22T21:50:00+08:00"
  },
  {
   "id": "vercel-baseten-mammoth-elephant-free-oct27-20261022",
@@ -10690,6 +10691,77 @@
   ],
   "barriers": [
    "cn_account"
+  ]
+ },
+ {
+  "id": "openrouter-dots3-note-preview-free-dec31-20261022",
+  "title": "OpenRouter：Dots3-Note Preview（280B MoE，512K 上下文）免费到 12/31",
+  "model": "Dots3-Note Preview",
+  "type": "限时",
+  "deadline": "2026-12-31T23:59:59+08:00",
+  "url": "https://x.com/Xyz_Tox/status/2113257033554071588",
+  "summary": "Dots Studio 的开源权重 MoE 模型 Dots3-Note Preview（总参 280B、激活 16B，512K 上下文，支持图文输入和工具调用）在 OpenRouter 以 :free 版本 0 元提供。OpenRouter 模型接口显示该免费版到期日为 2026-12-31（按 UTC 日期，北京时间约为 2027-01-01 早上前后），注册 OpenRouter 创建 Key 即可调用，免费版有频率限制。",
+  "source": "X @Xyz_Tox；OpenRouter 模型接口（expiration_date 2026-12-31）",
+  "collected_at": "2026-10-22T21:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113257033554071588",
+  "post_time_bj": "2026-10-22T21:11:53+08:00",
+  "free_terms": "OpenRouter 账号 + API Key 调用 dots-studio/dots-3-note-preview:free，0 元，免费版有频率限制，到期日 2026-12-31。",
+  "product": "OpenRouter",
+  "providers": [
+   {
+    "name": "OpenRouter",
+    "action_url": "https://openrouter.ai/settings/keys"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Dots3-Note Preview (free)",
+    "action_url": "https://openrouter.ai/dots-studio/dots-3-note-preview:free"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "commandcode-glyph-cluster-free-100-per-day-20261022",
+  "title": "Command Code：隐身推理模型 Glyph Cluster 每天 100 次免费",
+  "model": "Glyph Cluster (glyph-cluster:free)",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/dsoch8c/status/2113255910441394205",
+  "summary": "Command Code 上线隐身推理模型 Glyph Cluster 的 glyph-cluster:free 版本。官方文档页的优惠栏写明每天最多 100 次请求免费、不消耗额度，期限是隐身预览期内，结束时间未公布。之前 Vercel AI Gateway 也免费提供过同一隐身模型。",
+  "source": "X @dsoch8c；Command Code 官方文档优惠栏",
+  "collected_at": "2026-10-22T21:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113255910441394205",
+  "post_time_bj": "2026-10-22T21:07:26+08:00",
+  "free_terms": "Command Code 账号内选 glyph-cluster:free，每天最多 100 次请求不扣额度，隐身预览期内有效。",
+  "product": "Command Code",
+  "providers": [
+   {
+    "name": "Command Code",
+    "action_url": "https://commandcode.ai/docs"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Command Code",
+    "action_url": "https://commandcode.ai/docs"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
   ]
  }
 ]
