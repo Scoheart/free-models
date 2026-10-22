@@ -7911,10 +7911,10 @@
   "type": "限时",
   "deadline": "2026-10-22T20:01:00+08:00",
   "url": "https://x.com/OpenRouter/status/2112152045461680591",
-  "summary": "OpenRouter 官方揭晓：此前连续 10 天登顶、跑了 56.7T tokens 的隐身模型 Space Bunny 就是 MiniMax M3.1 Flash，今天以真名回归，接下来 72 小时免费。OpenRouter 模型列表已上架 minimax/minimax-m3.1-flash:free，输入输出均为 $0，1M 上下文。免费期后据转述为每百万 token 输入 $0.15、输出 $0.60。另外 OpenCode 里的模型 id 已从 space-bunny-free 改名为 minimax-m3.1-flash-free。",
+  "summary": "OpenRouter 官方揭晓：此前连续 10 天登顶、跑了 56.7T tokens 的隐身模型 Space Bunny 就是 MiniMax M3.1 Flash，今天以真名回归，接下来 72 小时免费。OpenRouter 模型列表已上架 minimax/minimax-m3.1-flash:free，输入输出均为 $0，1M 上下文。免费期后据转述为每百万 token 输入 $0.15、输出 $0.60。另外 OpenCode 里的模型 id 已从 space-bunny-free 改名为 minimax-m3.1-flash-free。 更新：OpenRouter 已于北京时间 10/22 20:00 结束免费档，:free 型号名已无法调用，需改用收费版（据 X @dsoch8c）。",
   "source": "x @OpenRouter 官宣帖；@MATKA_r（OpenCode 改名）、@thehypedotnews 等转述；openrouter.ai/api/v1/models 与 opencode.ai/zen/v1/models 已核实",
   "collected_at": "2026-10-19T20:50:00+08:00",
-  "expired": false,
+  "expired": true,
   "source_post_id": "2112152045461680591",
   "post_time_bj": "2026-10-19T20:01:04+08:00",
   "free_terms": "OpenRouter 账号 + API Key 即可调用 :free 版本，受 OpenRouter 免费模型限速；官方说免费 72 小时（从发帖时间推算约到北京时间 10/22 20:00，非官方精确时刻）。",
@@ -10175,7 +10175,7 @@
   "type": "模型",
   "deadline": null,
   "url": "https://x.com/OpenRouter/status/2113007405563052313",
-  "summary": "OpenRouter 官方宣布上架 Recursive 首个模型 Flint：开源权重 40B MoE（约 2.5B 激活），专为编程 Agent 打造，262K 上下文，支持推理和工具调用。OpenRouter 上的 flint-v1.0:free 版本输入输出均为 $0，注册拿 API Key 即可调用；未公布免费截止时间。",
+  "summary": "OpenRouter 官方宣布上架 Recursive 首个模型 Flint：开源权重 40B MoE（约 2.5B 激活），专为编程 Agent 打造，262K 上下文，支持推理和工具调用。OpenRouter 上的 flint-v1.0:free 版本输入输出均为 $0，注册拿 API Key 即可调用；未公布免费截止时间。 更新：编码 Agent Traycer 已通过 OpenRouter 接入免费 Flint（据 X @TraycerAI）。",
   "source": "X @OpenRouter 官方帖 + OpenRouter 模型列表（价格 0/0 已核实）",
   "collected_at": "2026-10-22T04:52:00+08:00",
   "expired": false,
@@ -10189,7 +10189,12 @@
     "action_url": "https://openrouter.ai/settings/keys"
    }
   ],
-  "agents": [],
+  "agents": [
+   {
+    "name": "Traycer",
+    "action_url": "https://traycer.ai/"
+   }
+  ],
   "models": [
    {
     "name": "Recursive: Flint (free)",
@@ -10754,6 +10759,36 @@
    {
     "name": "Command Code",
     "action_url": "https://commandcode.ai/docs"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
+ },
+ {
+  "id": "omnirush-gpt6-astra-free-daily-20261023",
+  "title": "OmniRush：免费编程 Agent，默认 GPT-6 Astra，每日额度",
+  "model": "GPT-6 Astra / GPT-6.1 Sol / GPT-6 Sol",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/wang_boris2023/status/2113296260589642222",
+  "summary": "OmniRush 是免费的桌面端 + 命令行编程 Agent（基于 opencode），默认模型 GPT-6 Astra，也可切 GPT-6.1 Sol、GPT-6 Sol。无需绑卡、没有付费档，每天额度刷新（帖子称 00:00 UTC 刷新、周一重置周上限）。注册需满 7 天的 GitHub 账号，少数账号需人工审核；靠品牌广告和数据使用维持免费。",
+  "source": "X @wang_boris2023；OmniRush 官网与文档",
+  "collected_at": "2026-10-23T00:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113296260589642222",
+  "post_time_bj": "2026-10-22T23:47:46+08:00",
+  "free_terms": "GitHub 账号满 7 天即可注册，无需绑卡，每日免费额度，无付费档。",
+  "product": "OmniRush",
+  "providers": [],
+  "agents": [
+   {
+    "name": "OmniRush",
+    "action_url": "https://omnirush.ai/docs"
    }
   ],
   "models": [],
