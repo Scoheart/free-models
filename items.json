@@ -11904,5 +11904,36 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "minimax-m31-flash-open-weights-20261024",
+    "title": "MiniMax M3.1 Flash（原 Space Bunny）开放权重：428B MoE 可在 Hugging Face 免费下载",
+    "model": "MiniMax M3.1 Flash",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/DegenOfWallSt/status/2113713136985419864",
+    "summary": "MiniMax 把 M3.1 Flash（此前匿名的 Space Bunny）权重放上 Hugging Face：总参 428B、每 token 激活 23B 的 MoE，最长 1M 上下文，支持文本/图像/视频输入。权重免费下载可自部署，但用的是 MiniMax 自定义社区许可（非 Apache，商用需署名，营收超 2000 万美元要另行授权）。",
+    "source": "X @DegenOfWallSt",
+    "collected_at": "2026-10-24T05:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2113713136985419864",
+    "post_time_bj": "2026-10-24T03:24:17+08:00",
+    "free_terms": "开放权重免费下载；MiniMax Community License，有署名与营收门槛要求。",
+    "product": "MiniMax M3.1 Flash 开放权重",
+    "providers": [],
+    "agents": [],
+    "models": [
+      {
+        "name": "MiniMax-M3.1-Flash（Hugging Face）",
+        "action_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
