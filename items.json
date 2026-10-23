@@ -11693,5 +11693,87 @@
       "need_key",
       "deposit_hold"
     ]
+  },
+  {
+    "id": "zcode-1024-5b-tokens-glm53-weekend-20261023",
+    "title": "智谱 ZCode 1024：免费领 5 亿 Token（含 GLM-5.3 / Flash），用到 10/26 09:00",
+    "model": "GLM-5.3 / GLM-5.3-Flash",
+    "type": "限时",
+    "deadline": "2026-10-26T09:00:00+08:00",
+    "url": "https://x.com/xiangxiang103/status/2113621368852120002",
+    "summary": "1024 程序员节：10/23 20:00 起不限 Coding Plan，登录最新版官方 ZCode 客户端端内弹窗可领 5 亿 Tokens（含旗舰 GLM-5.3 与 Flash），共 20 万份先到先得；额度 23:00 生效，用到 10/26 09:00。端内额度默认不出标准 API，外接 Agent 需自备网关。",
+    "source": "X @xiangxiang103（社区报道，细则与 zcode.z.ai/cn / UIED 转载一致）",
+    "collected_at": "2026-10-23T21:42:48+08:00",
+    "expired": false,
+    "source_post_id": "2113621368852120002",
+    "post_time_bj": "2026-10-23T21:19:38+08:00",
+    "free_terms": "20 万份×5 亿 Tokens；领取窗 10/23 20:00 起；可用 10/23 23:00–10/26 09:00；含 GLM-5.3 与 GLM-5.3-Flash；需最新版 ZCode 客户端弹窗领取。",
+    "product": "智谱 ZCode",
+    "providers": [
+      {
+        "name": "ZCode 下载",
+        "action_url": "https://zcode.z.ai/cn"
+      }
+    ],
+    "agents": [
+      {
+        "name": "ZCode",
+        "action_url": "https://zcode.z.ai/cn"
+      }
+    ],
+    "models": [
+      {
+        "name": "GLM-5.3",
+        "action_url": "https://zcode.z.ai/cn"
+      },
+      {
+        "name": "GLM-5.3-Flash",
+        "action_url": "https://zcode.z.ai/cn"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "cn_account"
+    ]
+  },
+  {
+    "id": "orcaterm-1024-pro-3mo-screenshot-20261023",
+    "title": "腾讯云 OrcaTerm：10/24 终端敲「1024」晒图，免费领专业版 3 个月（AI 助手 6000 次/月）",
+    "model": "OrcaTerm AI 助手（可接 DeepSeek / Kimi / GLM 等自定义模型）",
+    "type": "限时",
+    "deadline": "2026-10-24T23:59:59+08:00",
+    "url": "https://x.com/yedabinbinah/status/2113618796917465334",
+    "summary": "1024 当天（10/24 00:00–23:59 北京）在 OrcaTerm 终端敲出「1024」并截图，连同账号 ID 发到官方活动帖评论区，有效参与者人人获 3 个月专业版（约值 60 元）；专业版 AI 助手约 6000 次/月请求并可接自定义模型。活动结束后 15 个工作日内开通，免绑卡。",
+    "source": "X @yedabinbinah",
+    "collected_at": "2026-10-23T21:42:48+08:00",
+    "expired": false,
+    "source_post_id": "2113618796917465334",
+    "post_time_bj": "2026-10-23T21:09:24+08:00",
+    "free_terms": "仅 10/24 当天评论有效；每人每账号一次；晒终端「1024」截图+账号 ID；专业版 3 个月，结束后 15 个工作日内开通。",
+    "product": "腾讯云 OrcaTerm（遨驰终端）",
+    "providers": [
+      {
+        "name": "OrcaTerm",
+        "action_url": "https://orcaterm.cloud.tencent.com/"
+      },
+      {
+        "name": "1024 活动帖",
+        "action_url": "https://cnb.cool/orcatermfans/feedback/-/issues/1020"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "cn_account"
+    ]
   }
 ]
