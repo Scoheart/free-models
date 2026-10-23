@@ -11935,5 +11935,41 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "experiential-labs-glm53-uncensored-free-20261024",
+    "title": "Experiential Labs 限时免费上线 GLM-5.3 Uncensored（1.05M 上下文）",
+    "model": "GLM-5.3 Uncensored",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/silennai/status/2113761839691505955",
+    "summary": "YC S26 的开源 AI 网关 Experiential Labs 新增 GLM-5.3 去审查版，限时免费：输入 1.05M token 上下文、约 60 tok/s；模型页标价已从 $1.40/$4.40 每百万 token 降到 $0。需登录获取 API Key，官方主打网络安全能力，请合规使用；未公布截止时间。",
+    "source": "X @silennai",
+    "collected_at": "2026-10-24T06:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2113761839691505955",
+    "post_time_bj": "2026-10-24T06:37:49+08:00",
+    "free_terms": "限时免费（$0/1M tokens），需注册拿 API Key，截止时间未公布。",
+    "product": "Experiential Labs 平台",
+    "providers": [
+      {
+        "name": "Experiential Labs",
+        "action_url": "https://platform.experientiallabs.ai/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "GLM-5.3 Uncensored（Experiential 模型列表）",
+        "action_url": "https://platform.experientiallabs.ai/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
