@@ -11971,5 +11971,75 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "digitalocean-managed-agents-5usd-trial-20261024",
+    "title": "DigitalOcean Managed Agents：新用户免绑卡送 $5 额度，可跑 Kimi K3 / GLM 5.3 / DeepSeek V4 Flash",
+    "model": "Kimi K3 / GLM 5.3 / DeepSeek V4 Flash",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/knightleijun/status/2113766522476728483",
+    "summary": "DigitalOcean Managed Agents（公开预览）给新客户一次性 $5 试用额度、无需信用卡，可用于其托管模型推理（Kimi K3、GLM 5.3、DeepSeek V4 Flash 等，约 450 万 token）以及 Harness Runtime 和工具调用。官方定价页已核实；仅限新客户，Claude/GPT 等非托管模型按原价计费不在覆盖内，闲置会话记得暂停。",
+    "source": "X @knightleijun",
+    "collected_at": "2026-10-24T07:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2113766522476728483",
+    "post_time_bj": "2026-10-24T06:56:25+08:00",
+    "free_terms": "新客户一次性 $5 促销额度，无需绑卡；用完需订阅或充值。",
+    "product": "DigitalOcean Managed Agents / Serverless Inference",
+    "providers": [
+      {
+        "name": "DigitalOcean Managed Agents",
+        "action_url": "https://www.digitalocean.com/products/managed-agents"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Agent Droplets 定价（含免费试用说明）",
+        "action_url": "https://www.digitalocean.com/pricing/agent-droplets"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "tencent-hy-nomas-open-weights-20261024",
+    "title": "腾讯混元开源交互式视频世界模型 Hy-Nomas（Apache-2.0，可免费商用）",
+    "model": "Hy-Nomas",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/dsoch8c/status/2113769802481467497",
+    "summary": "腾讯混元开源 Hy-Nomas：用文字指令加镜头轨迹连续生成可延展视频（720×1280、24FPS），带世界记忆，附机器人/电影风格 LoRA 和 280 例评测集。权重在 Hugging Face 免费下载，Apache-2.0 可商用；官方默认 8 卡，也支持单张 RTX 4090 生成。参数量与技术报告尚未公布。",
+    "source": "X @dsoch8c",
+    "collected_at": "2026-10-24T07:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2113769802481467497",
+    "post_time_bj": "2026-10-24T07:09:27+08:00",
+    "free_terms": "开源权重免费下载，Apache-2.0 许可可免费商用；需自备 GPU。",
+    "product": "Hy-Nomas 开源权重",
+    "providers": [],
+    "agents": [],
+    "models": [
+      {
+        "name": "Hy-Nomas（Hugging Face）",
+        "action_url": "https://huggingface.co/tencent/Hy-Nomas"
+      },
+      {
+        "name": "Hy-Nomas（GitHub）",
+        "action_url": "https://github.com/Tencent-Hunyuan/Hy-Nomas"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
