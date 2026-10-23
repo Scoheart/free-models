@@ -11207,5 +11207,79 @@
       "cn_account",
       "zero_signup"
     ]
+  },
+  {
+    "id": "codex-day18-global-usage-reset-20261023",
+    "title": "Codex：「28 天挑战」第 18 天，全员用量再次重置",
+    "model": "Codex / ChatGPT（付费档共用额度）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/thsottiaux/status/2113492187770175603",
+    "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）北京时间 10/23 12:46 发帖「Day 18/ Decisions API is GA, OpenResponses joined the Linux Foundation, we shipped some performance improvements and Uber is going all-in on codex & work. But yes… that’s a reset!」，即第 18 天再次全局重置 Codex 用量（此前第 8、10、13、15、17 天也重置过）。同日还宣布 Decisions API 正式 GA、OpenResponses 加入 Linux Foundation。重置的是 ChatGPT 付费账号在 Codex 里的五小时和周额度，不是 API 余额。",
+    "source": "X @thsottiaux",
+    "collected_at": "2026-10-23T15:41:25+08:00",
+    "expired": false,
+    "source_post_id": "2113492187770175603",
+    "post_time_bj": "2026-10-23T12:46:19+08:00",
+    "free_terms": "ChatGPT 付费档 Codex 用量一次性全局重置；不改 API 余额；一次性，无截止时间。",
+    "product": "OpenAI Codex usage reset (Day 18)",
+    "providers": [
+      {
+        "name": "Codex（ChatGPT 网页入口）",
+        "action_url": "https://chatgpt.com/codex"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Codex 官方文档与下载",
+        "action_url": "https://developers.openai.com/codex"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "exa-free-tier-10usd-monthly-20261023",
+    "title": "Exa Free Tier：每月 $10 API 额度（免绑卡），完成新手引导再送一次性 $10",
+    "model": "Exa Search / Contents / Answer / Agent API",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/xinxianxing/status/2113527504782680117",
+    "summary": "社区汇总并经 Exa 官方定价页核实：Free Tier 注册当天即送 $10 免费额度（约合最多 2500 次 Lite 搜索），每月 1 号把免费余额重置回 $10（不累积、不结转）；完成控制台新手引导后，用户的第一个团队再获一次性 $10 奖励（不过期）。无需绑卡，可调 Search / Contents / Answer / Monitors / Agent 等全部端点，限速约 10 QPS。同帖提醒 Browser Use 注册现只送 $1、Together AI 已取消免费试用，老教程数字多半过期。",
+    "source": "X @xinxianxing；exa.ai/pricing 与 Billing 文档已核实",
+    "collected_at": "2026-10-23T15:41:25+08:00",
+    "expired": false,
+    "source_post_id": "2113527504782680117",
+    "post_time_bj": "2026-10-23T15:06:39+08:00",
+    "free_terms": "注册即送 $10，每月 1 号重置回 $10（不结转）；首个团队完成 onboarding 再送一次性 $10；免绑卡；长期政策无截止时间。",
+    "product": "Exa API Free Tier",
+    "providers": [
+      {
+        "name": "Exa 定价（Free Tier）",
+        "action_url": "https://exa.ai/pricing"
+      },
+      {
+        "name": "Exa Dashboard API Keys",
+        "action_url": "https://dashboard.exa.ai/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Exa Billing / Free tier 说明",
+        "action_url": "https://exa.ai/docs/admin/billing"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
