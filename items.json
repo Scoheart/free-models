@@ -11406,5 +11406,125 @@
       "need_client",
       "zero_signup"
     ]
+  },
+  {
+    "id": "runinfra-cached-input-free-oct31-20261023",
+    "title": "RunInfra：DeepSeek / GLM 等模型 Cached Input 免费至 10/31（Agent 友好）",
+    "model": "DeepSeek V4.1 Flash / GLM 5.3 Flash / GLM 5.3 等",
+    "type": "限时",
+    "deadline": "2026-11-01T07:59:00+08:00",
+    "url": "https://x.com/runinfrai/status/2113577145520054571",
+    "summary": "YC F26 项目 RunInfra 官方宣布：DeepSeek V4.1 Flash、GLM 5.3 Flash、GLM 5.3 等模型的 Cached Input 按 $0/1M tokens 计费，至 2026-10-31 23:59 UTC；Agent 重放上下文时缓存命中率可达约 98–99%，新输入与输出仍按价计费。OpenAI / Anthropic 兼容，可接 OpenCode、Claude Code、Cline 等；定价页另写注册可获 $1 试用额。",
+    "source": "X @runinfrai（官方认证）；runinfra.ai/pricing 与模型页已核实",
+    "collected_at": "2026-10-23T18:43:15+08:00",
+    "expired": false,
+    "source_post_id": "2113577145520054571",
+    "post_time_bj": "2026-10-23T18:23:54+08:00",
+    "free_terms": "Cached input $0/1M 至 2026-10-31 23:59 UTC；新 input/output 仍计费；另有 $1 试用额。",
+    "product": "RunInfra Model APIs",
+    "providers": [
+      {
+        "name": "RunInfra 定价（Cached Input Free）",
+        "action_url": "https://runinfra.ai/pricing"
+      },
+      {
+        "name": "RunInfra 模型库",
+        "action_url": "https://runinfra.ai/inference-api"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cline",
+        "action_url": "https://cline.bot"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai"
+      }
+    ],
+    "models": [
+      {
+        "name": "GLM 5.3 Flash（Cached Free 至 10/31）",
+        "action_url": "https://runinfra.ai/inference-api/glm-5-3-flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "sambanova-cloud-free-tier-20261023",
+    "title": "SambaNova Cloud Free Tier：免绑卡，每模型每天 20 次请求 / 20 万 tokens",
+    "model": "DeepSeek-V3.1 / Llama-3.3-70B / gpt-oss-120b 等",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/hodu382759/status/2113571589279089058",
+    "summary": "社区汇总并经 SambaNova 官方限速文档核实：未绑定支付方式即进入 Free Tier；生产模型 DeepSeek-V3.1、Meta-Llama-3.3-70B-Instruct、gpt-oss-120b 以及预览模型 DeepSeek-V3.2、gemma-4-31B-it 等，每模型约 20 RPM、20 RPD、200,000 TPD，按天重置。OpenAI 兼容接口（api.sambanova.ai/v1），适合当 Groq 等限流时的备用。",
+    "source": "X @hodu382759；docs.sambanova.ai rate-limits 已核实",
+    "collected_at": "2026-10-23T18:43:15+08:00",
+    "expired": false,
+    "source_post_id": "2113571589279089058",
+    "post_time_bj": "2026-10-23T18:01:49+08:00",
+    "free_terms": "免绑卡 Free Tier；每模型约 20 RPM / 20 RPD / 200k TPD，按天重置；长期政策无截止。",
+    "product": "SambaNova Cloud Free Tier",
+    "providers": [
+      {
+        "name": "SambaNova Cloud",
+        "action_url": "https://cloud.sambanova.ai/"
+      },
+      {
+        "name": "SambaNova 限速文档（Free Tier）",
+        "action_url": "https://docs.sambanova.ai/docs/en/models/rate-limits"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "nvidia-nim-minimax-m31-flash-free-endpoint-20261023",
+    "title": "NVIDIA NIM：MiniMax M3.1 Flash 免费 API endpoint（约 40 RPM）",
+    "model": "MiniMax M3.1 Flash（minimaxai/minimax-m3.1-flash）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/airplanestar_/status/2113570806370550080",
+    "summary": "社区指路 NVIDIA build.nvidia.com 已上架 MiniMax M3.1 Flash 免费 endpoint（模型页标注 Start building with a free API endpoint），OpenAI 兼容调用 https://integrate.api.nvidia.com/v1/chat/completions，模型 id 为 minimaxai/minimax-m3.1-flash。需注册 NVIDIA 账号生成 API Key；社区称约 40 RPM，属 Trial 长期试用档，未公布截止时间。",
+    "source": "X @airplanestar_（引用 @NVIDIAAIInfra）；build.nvidia.com 模型页已核实",
+    "collected_at": "2026-10-23T18:43:15+08:00",
+    "expired": false,
+    "source_post_id": "2113570806370550080",
+    "post_time_bj": "2026-10-23T17:58:43+08:00",
+    "free_terms": "build.nvidia.com Free Endpoint；需 NVIDIA API Key；受 Trial 限速；截止未公布。",
+    "product": "NVIDIA NIM minimaxai/minimax-m3.1-flash free endpoint",
+    "providers": [
+      {
+        "name": "NVIDIA NIM API Keys",
+        "action_url": "https://build.nvidia.com/settings/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "MiniMax M3.1 Flash（NIM）",
+        "action_url": "https://build.nvidia.com/minimaxai/minimax-m3.1-flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
