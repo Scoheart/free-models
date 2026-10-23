@@ -11526,5 +11526,79 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "modal-starter-30usd-monthly-compute-20261023",
+    "title": "Modal Starter：每月含 $30 算力额度（GPU/CPU 按秒计费，免月费）",
+    "model": null,
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/hodu382759/status/2113590461231423789",
+    "summary": "社区帖并经 Modal 官方定价页核实：Starter 计划 $0/月，工作区每月含 $30 Included compute（GPU/CPU/Memory 按秒），额度按月重置；注册即可用，超额度才付费。A100/H100/L40S 等均可按秒租。注意 Shared Endpoints 的 token 计费不在这 $30 内（自 2026-09-01 起首请求即计费）。适合挂 Whisper、Flux、轻量推理等 serverless 任务。",
+    "source": "X @hodu382759；modal.com/pricing 已核实",
+    "collected_at": "2026-10-23T19:46:50+08:00",
+    "expired": false,
+    "source_post_id": "2113590461231423789",
+    "post_time_bj": "2026-10-23T19:16:49+08:00",
+    "free_terms": "Starter：$0/月 + 每月 $30 included compute，按月重置；超用/Shared Endpoints token 另计；长期政策无截止。",
+    "product": "Modal Starter included compute",
+    "providers": [
+      {
+        "name": "Modal Pricing",
+        "action_url": "https://modal.com/pricing"
+      },
+      {
+        "name": "Modal Signup",
+        "action_url": "https://modal.com/signup"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "cookstudio-cook-lite-free-100-credits-20261023",
+    "title": "Cook Studio：免费档 Cook Lite + 每月 100 Credits（约 2 分钟视频）",
+    "model": "Cook Lite",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/cookstudio_ai/status/2113582663483220126",
+    "summary": "官方 @cookstudio_ai 宣布首个免费模型 Cook Lite，并经 cookstudio.ai 定价页核实：Free 档 $0/月，每月 100 credits（约合 2 分钟视频，1 分钟≈50 credits），含 Cook Lite 访问、1080p、英/土语配音；Google 登录即可。付费订阅可对 Cook Lite 不限量生成；更高成片仍推荐 Michelin / HeyTuber。面向 YouTube 一句话出片，非 LLM API。",
+    "source": "X @cookstudio_ai 官方；cookstudio.ai 定价已核实",
+    "collected_at": "2026-10-23T19:46:50+08:00",
+    "expired": false,
+    "source_post_id": "2113582663483220126",
+    "post_time_bj": "2026-10-23T18:45:50+08:00",
+    "free_terms": "Free：$0/月，每月 100 credits + Cook Lite；订阅档可对 Cook Lite 不限量；长期政策无截止。",
+    "product": "Cook Studio Free / Cook Lite",
+    "providers": [
+      {
+        "name": "Cook Studio",
+        "action_url": "https://cookstudio.ai/"
+      },
+      {
+        "name": "Cook Studio App",
+        "action_url": "https://app.cookstudio.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Cook Lite",
+        "action_url": "https://cookstudio.ai/"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
