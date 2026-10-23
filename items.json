@@ -11323,5 +11323,88 @@
       "need_client",
       "zero_signup"
     ]
+  },
+  {
+    "id": "trae-cn-1024-checkin-1m-credits-lottery-20261023",
+    "title": "TRAE 中国区 1024：每日签到领积分/月卡券，抽 100 万积分锦鲤（至 10/24 18:00）",
+    "model": null,
+    "type": "限时",
+    "deadline": "2026-10-24T18:00:00+08:00",
+    "url": "https://x.com/mspd4100/status/2113563633796157709",
+    "summary": "字节 TRAE 中国区（trae.cn）为 1024 程序员节办签到抽奖：北京时间 10/19 00:00–10/24 18:00 每日登录 IDE 签到一次，随机得 88/888 积分或 10/20 元连续包月券；签到账号自动进候选池，10/24 19:00 在「AI Builder Day」直播抽出 1 人送 100 万积分（一年有效）。限中国区客户端与账号，国际版 trae.ai 不参与；无需绑卡。官方规则见 docs.trae.cn。",
+    "source": "mspd4100",
+    "collected_at": "2026-10-23T17:43:22+08:00",
+    "expired": false,
+    "source_post_id": "2113563633796157709",
+    "related_post_urls": [
+      "https://x.com/ShineWinsu/status/2113562876669763809",
+      "https://x.com/MiguCHN/status/2113463284057928141"
+    ],
+    "free_terms": "每日签到随机积分/月卡券；签到即入围 100 万积分锦鲤（仅 1 名）；截止 10/24 18:00，开奖 19:00；限 TRAE 中国区。",
+    "product": "TRAE CN · 1024 签到锦鲤",
+    "providers": [],
+    "agents": [
+      {
+        "name": "TRAE 中国区",
+        "action_url": "https://www.trae.cn/"
+      },
+      {
+        "name": "活动规则",
+        "action_url": "https://docs.trae.cn/ide_million-credits-giveaway-on-oct-24"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "cn_account",
+      "zero_signup"
+    ]
+  },
+  {
+    "id": "xiaohuanxiong-deepseek-1017-free-oct31-20261023",
+    "title": "商汤小浣熊：DeepSeek-1017 限时 0× 积分至 10/31",
+    "model": "DeepSeek-1017",
+    "type": "限时",
+    "deadline": "2026-10-31T23:59:59+08:00",
+    "url": "https://x.com/mspd4100/status/2113563633796157709",
+    "summary": "社区与 FreeEgg 等情报站核验：商汤小浣熊客户端内可选 DeepSeek-1017，活动期倍率 0×、不扣积分，约至 2026-10-31。免费版另有每日 300 积分（登录可延长有效期）。需下载/打开小浣熊客户端并登录，在模型列表选 DeepSeek-1017；官方活动页未单独公告，截止时区按北京时间暂记。",
+    "source": "mspd4100",
+    "collected_at": "2026-10-23T17:43:22+08:00",
+    "expired": false,
+    "source_post_id": "2113563633796157709",
+    "related_post_urls": [
+      "https://x.com/mspd4100/status/2113563746392272920"
+    ],
+    "free_terms": "DeepSeek-1017 0× 不扣积分至约 10/31；需小浣熊客户端；免费版另有每日 300 积分。",
+    "product": "商汤小浣熊 · DeepSeek-1017",
+    "providers": [],
+    "agents": [
+      {
+        "name": "商汤小浣熊",
+        "action_url": "https://xiaohuanxiong.com/"
+      },
+      {
+        "name": "下载客户端",
+        "action_url": "https://xiaohuanxiong.com/download"
+      }
+    ],
+    "models": [
+      {
+        "name": "DeepSeek-1017（应用内选择）",
+        "action_url": "https://xiaohuanxiong.com/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "zero_signup"
+    ]
   }
 ]
