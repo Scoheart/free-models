@@ -11868,5 +11868,41 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "voyage-ai-200m-free-embedding-tokens-20261024",
+    "title": "Voyage AI：每个账号免费 2 亿 token，用 voyage-4 系列嵌入和 rerank 模型",
+    "model": "voyage-4-large / voyage-4 / voyage-4-lite / voyage-context-4 / rerank-3",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/Avatar8Ops/status/2113708133356859488",
+    "summary": "Voyage AI 官方定价页写明：voyage-4 系列文本嵌入、voyage-multimodal-3.5 和 rerank 模型每个账号前 2 亿 token 免费（多模态另送 1500 亿像素），旧版 multilingual/law/finance 模型送 5000 万。Batch API 不吃免费额度。做 RAG/向量检索可以白嫖很久。",
+    "source": "X @Avatar8Ops",
+    "collected_at": "2026-10-24T03:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2113708133356859488",
+    "post_time_bj": "2026-10-24T03:04:24+08:00",
+    "free_terms": "每账号一次性：voyage-4 系列/rerank 前 2 亿 token 免费；Batch API 不适用。",
+    "product": "Voyage AI Embeddings API",
+    "providers": [
+      {
+        "name": "Voyage AI",
+        "action_url": "https://dashboard.voyageai.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Voyage 定价与免费额度",
+        "action_url": "https://docs.voyageai.com/docs/pricing"
+      }
+    ],
+    "scenes": [
+      "rag",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
