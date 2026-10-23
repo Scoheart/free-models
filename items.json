@@ -11166,5 +11166,46 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "todayai-cn-300m-tokens-3mo-pro-20261023",
+    "title": "Today AI（国内站）：新用户注册送 3 亿 Tokens + 3 个月 Pro，基础版永久免费",
+    "model": "Today 个人 AI 助理（Pro 多模型；基础版免费）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/SSNQT/status/2113516729984782699",
+    "summary": "齐俊元（Teambition 创始人、前豆包 PC 负责人）团队的个人 AI Agent「Today」国内站 todayai.cn 官宣：新用户注册即领 3 亿 Tokens、畅享 3 个月 Pro，基础版永久免费、免绑卡。可连飞书/钉钉/邮件/日历等，带记忆与云端电脑；客户端产品，不提供对外 API Key。官方未公布 Tokens 有效期与活动截止日。",
+    "source": "X @SSNQT；官网 https://todayai.cn（首页公示文案已核实）",
+    "collected_at": "2026-10-23T14:45:37+08:00",
+    "expired": false,
+    "source_post_id": "2113516729984782699",
+    "post_time_bj": "2026-10-23T14:23:50+08:00",
+    "free_terms": "国内站 todayai.cn 新用户注册自动到账；免绑卡。基础版永久免费；Pro 3 个月后不自动扣款。无对外 API。截止日未公布。",
+    "product": "Today AI",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Today AI 官网/注册",
+        "action_url": "https://todayai.cn"
+      },
+      {
+        "name": "登录页",
+        "action_url": "https://todayai.cn/login"
+      },
+      {
+        "name": "客户端下载",
+        "action_url": "https://todayai.cn/downloads"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_client",
+      "cn_account",
+      "zero_signup"
+    ]
   }
 ]
