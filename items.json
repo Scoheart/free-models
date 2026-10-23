@@ -11600,5 +11600,98 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "mistral-api-free-mode-no-card-20261023",
+    "title": "Mistral API Free mode：注册即可建 Key，免绑卡调用（限速/月额度）",
+    "model": "Mistral API（Free mode）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/AionVoid/status/2113605265639530681",
+    "summary": "社区提醒并经 Mistral 官方文档核实：新账号默认 Free mode，无需绑卡即可在 Studio 创建 API Key 调用 api.mistral.ai；有用量与速率限制（RPS/每分钟 token/每月 token，具体数字仅在 Admin→Limits 页可见）。官方写明免费模式可能用于训练，适合原型与试 prompt，敏感数据勿用。定价页曾写的「$10/月 API credits」文案已于 10/7 前后撤下，当前以账户 Limits 为准。",
+    "source": "X @AionVoid；docs.mistral.ai Free mode 已核实",
+    "collected_at": "2026-10-23T20:45:15+08:00",
+    "expired": false,
+    "source_post_id": "2113605265639530681",
+    "post_time_bj": "2026-10-23T20:15:38+08:00",
+    "free_terms": "Free mode 默认开启，免绑卡；限速与月用量见账户 Limits；无公布截止。",
+    "product": "Mistral AI Studio / API Free mode",
+    "providers": [
+      {
+        "name": "Mistral Console",
+        "action_url": "https://console.mistral.ai/"
+      },
+      {
+        "name": "Mistral Docs：创建 API Key",
+        "action_url": "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "mistral-small-latest（示例）",
+        "action_url": "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "nomask-minimax-m31-flash-free-plus-20261023",
+    "title": "NoMask：MiniMax M3.1 Flash 等 Free+ 模型 $0 调用（需 Key，预充值）",
+    "model": "MiniMax M3.1 Flash / Nemotron 3 Ultra Free / North Mini Code Free / Nemotron 3 Nano Omni",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/tredzzbr/status/2113599448169504816",
+    "summary": "社区称 MiniMax M3.1 Flash 已在 NoMask 免费且标 private；经 nomask.ai 模型目录核实：minimax-m3.1_flash 输入/输出均为 $0（1M 上下文），另有 Free+ 档 nemotron-3-ultra_free、north-mini-code-free、nemotron-3-nano-omni 同为 $0。OpenAI 兼容基址 https://nomask.ai/api/v1。需注册并创建 nmk_live_… Key；官方 Quickstart 要求预充 USD 余额（最低 $10，加密货币最低 $20）才走 API，免费模型是否允许 0 余额文档未写明。OpenRouter 上同模型限免已结束，NoMask 仍标 $0。",
+    "source": "X @tredzzbr；nomask.ai/api/doc/models 与 quickstart 已核实",
+    "collected_at": "2026-10-23T20:45:15+08:00",
+    "expired": false,
+    "source_post_id": "2113599448169504816",
+    "post_time_bj": "2026-10-23T19:52:31+08:00",
+    "free_terms": "模型页 Free+ 标价 $0；需 API Key；Quickstart 要求预充余额（最低 $10）；截止未公布。",
+    "product": "NoMask Free+ models",
+    "providers": [
+      {
+        "name": "NoMask 注册",
+        "action_url": "https://nomask.ai/register"
+      },
+      {
+        "name": "NoMask API Quickstart",
+        "action_url": "https://nomask.ai/api/doc/quickstart"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "MiniMax M3.1 Flash",
+        "action_url": "https://nomask.ai/api/doc/models"
+      },
+      {
+        "name": "Nemotron 3 Ultra Free",
+        "action_url": "https://nomask.ai/api/doc/models"
+      },
+      {
+        "name": "North Mini Code Free",
+        "action_url": "https://nomask.ai/api/doc/models"
+      },
+      {
+        "name": "Nemotron 3 Nano Omni",
+        "action_url": "https://nomask.ai/api/doc/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "deposit_hold"
+    ]
   }
 ]
