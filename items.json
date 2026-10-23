@@ -10943,5 +10943,45 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "cohere-trial-key-free-1000-calls-20261023",
+  "title": "Cohere 免费试用 Key：每月 1000 次调用，Command A / Embed / Rerank 都能用",
+  "model": "Command A / Command R+ / Embed / Rerank",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/hodu382759/status/2113433724159414652",
+  "summary": "注册 Cohere 账号会自动生成免费的 Trial API Key，无需绑卡；全部端点合计每月 1000 次调用，Chat 模型每分钟 20 次、Rerank 每分钟 10 次、Embed 每分钟 2000 条输入。仅限测试，不能用于生产或商用，适合练手和做 RAG 小项目。",
+  "source": "x @hodu382759；Cohere 官方定价页与 rate limits 文档已核实",
+  "collected_at": "2026-10-23T09:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113433724159414652",
+  "post_time_bj": "2026-10-23T08:54:00+08:00",
+  "free_terms": "注册即送 Trial Key，免费；每月 1000 次调用上限，按端点限速；禁止生产/商用。长期政策，无截止时间。",
+  "product": "Cohere API",
+  "providers": [
+   {
+    "name": "Cohere 控制台 API Keys",
+    "action_url": "https://dashboard.cohere.com/api-keys"
+   },
+   {
+    "name": "Cohere 试用 Key 限额说明",
+    "action_url": "https://docs.cohere.com/docs/rate-limits"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Cohere 定价（Trial vs Production）",
+    "action_url": "https://cohere.com/pricing"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "rag"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
