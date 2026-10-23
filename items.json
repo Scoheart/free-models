@@ -11281,5 +11281,47 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "oc-ferry-opencode-free-to-workbuddy-20261023",
+    "title": "OC Ferry：把 OpenCode 免费模型摆渡进 WorkBuddy（免登录免 Key）",
+    "model": null,
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/ChinaAIDaily/status/2113545761002856903",
+    "summary": "开源托盘工具 OC Ferry（MIT）在本机隔离跑 OpenCode，按价格筛出真正免费的模型并探测工具调用兼容性，一键写入 WorkBuddy 的 models.json，再起本机 OpenAI 兼容转发口；免登录、不用 API Key。需先装 WorkBuddy，macOS/Windows 有安装包；退出时会摘掉自己导入的条目。",
+    "source": "ChinaAIDaily",
+    "collected_at": "2026-10-23T16:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2113545761002856903",
+    "related_post_urls": [
+      "https://x.com/QingQ77/status/2110363745805385833"
+    ],
+    "free_terms": "免登录/免 API Key；依赖 OpenCode 当前免费模型池可用性；需安装 WorkBuddy + OC Ferry 客户端",
+    "product": "OC Ferry (RuiC-oc-ferry)",
+    "providers": [],
+    "agents": [
+      {
+        "name": "OC Ferry",
+        "action_url": "https://github.com/HRuiCcc/RuiC-oc-ferry"
+      },
+      {
+        "name": "WorkBuddy",
+        "action_url": "https://www.workbuddy.ai/"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "zero_signup"
+    ]
   }
 ]
