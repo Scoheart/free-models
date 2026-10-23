@@ -11775,5 +11775,36 @@
       "need_client",
       "cn_account"
     ]
+  },
+  {
+    "id": "jina-reader-free-api-key-10m-tokens-20261023",
+    "title": "Jina Reader API：免注册 20 RPM，免费 API Key 500 RPM 并送免费 token",
+    "model": "Jina Reader / Embedding / Reranker（ReaderLM-v2 等）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/hodu382759/status/2113642349603553746",
+    "summary": "在网址前加 r.jina.ai 即可把网页转成干净 Markdown 喂给模型；不注册每分钟 20 次，申请免费 API Key 后 Reader 每分钟 500 次、搜索 s.jina.ai 每分钟 100 次。官方页确认新用户自动生成的 Key 自带免费 token（帖子称新 Key 送 1000 万 token），可通用于 Embedding/Reranker 等 API，适合 RAG、爬虫和 Agent 查资料。",
+    "source": "X @hodu382759",
+    "collected_at": "2026-10-23T23:41:57+08:00",
+    "expired": false,
+    "source_post_id": "2113642349603553746",
+    "post_time_bj": "2026-10-23T22:43:00+08:00",
+    "free_terms": "无 Key 20 RPM；免费 Key 500 RPM（Reader）/100 RPM（搜索）；新 Key 自带免费 token（帖称 1000 万），用完需购买。",
+    "product": "Jina AI Reader API",
+    "providers": [
+      {
+        "name": "Jina AI",
+        "action_url": "https://jina.ai/reader/"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
