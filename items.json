@@ -10983,5 +10983,124 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "liquid-console-2usd-free-credit-d1-20261023",
+  "title": "Liquid AI 控制台：新组织送 $2 免费 API 额度，可调 d1 / d1-ultra 决策模型",
+  "model": "d1 / d1-ultra / LFM2.5-24B-A2B",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/melvindvivas/status/2113459801984495728",
+  "summary": "在 Liquid Console 注册并加入组织即一次性获得 $2 免费额度，可通过 API 调用 d1、d1-ultra 决策模型（分类/路由/打分，只按输入计费、输出免费，d1 每百万输入 $0.02）以及 LFM2.5-24B-A2B。按 d1 价格算 $2 能处理约 1 亿输入 token，做 agent 路由、审核、质检很够用。",
+  "source": "x @melvindvivas；Liquid AI 官方定价页与文档已核实",
+  "collected_at": "2026-10-23T10:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113459801984495728",
+  "post_time_bj": "2026-10-23T10:37:37+08:00",
+  "free_terms": "每个新组织一次性 $2 免费额度；之后按量付费。无截止时间。",
+  "product": "Liquid AI API",
+  "providers": [
+   {
+    "name": "Liquid Console（创建 API Key）",
+    "action_url": "https://console.liquid.ai/"
+   },
+   {
+    "name": "Liquid AI 定价（$2 免费额度说明）",
+    "action_url": "https://www.liquid.ai/pricing"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "d1 文档",
+    "action_url": "https://docs.liquid.ai/lfm/models/d1"
+   },
+   {
+    "name": "Decision Models 总览",
+    "action_url": "https://docs.liquid.ai/lfm/models/decision-models"
+   }
+  ],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "ollama-cloud-free-plan-monthly-starter-credits-20261023",
+  "title": "Ollama Cloud 免费账号：每月送入门额度，可用入门云模型并直连 Claude Code / Codex",
+  "model": "Ollama Cloud 入门模型（如 gpt-oss、gemma4、glm-5.3-flash 等，以官网为准）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/hodu382759/status/2113448823590990305",
+  "summary": "Ollama 免费账号除本地无限跑模型外，还附带一份云端入门额度，只能用部分入门模型，从注册日起每月刷新、不结转，同时只能跑 1 个请求。可用 ollama launch claude 等命令一键接入 Claude Code、Codex、OpenCode，适合本地显卡不够时试用。充值后可解锁全部云模型。",
+  "source": "x @hodu382759；Ollama 官方定价页已核实",
+  "collected_at": "2026-10-23T10:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113448823590990305",
+  "post_time_bj": "2026-10-23T09:54:00+08:00",
+  "free_terms": "免费账号含入门用量额度（具体额度官网未写明），按注册日每月重置；仅入门模型；并发 1。长期政策。",
+  "product": "Ollama Cloud",
+  "providers": [
+   {
+    "name": "Ollama 定价与免费额度说明",
+    "action_url": "https://ollama.com/pricing"
+   },
+   {
+    "name": "Ollama 注册/登录",
+    "action_url": "https://ollama.com/signup"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Ollama 下载",
+    "action_url": "https://ollama.com/download"
+   }
+  ],
+  "models": [
+   {
+    "name": "Ollama 云模型列表",
+    "action_url": "https://ollama.com/search?c=cloud"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key",
+   "need_client"
+  ]
+ },
+ {
+  "id": "antigravity-promo-ai-pro-opus55-argon-20261023",
+  "title": "Antigravity：赠送的 Google AI Pro（Pixel/Jio/学生/Lenny's）也能用 Claude Opus 5.5 和 Gemini 4 Argon",
+  "model": "Claude Opus 5.5 / Claude Sonnet 5.5 / Gemini 4 Argon",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/hodu382759/status/2113438746431697158",
+  "summary": "多名用户 10/23 上午反馈：通过 Pixel、Jio、学生认证、Lenny's Product Pass 等渠道免费拿到的 Google AI Pro，在 Antigravity 模型列表里出现了 Gemini 4 Argon（Low/Medium/High）以及 Claude Opus 5.5、Sonnet 5.5。暂未见 Google 官方公告，属于用户实测；有用户反映 Opus 5.5 的 5 小时与周额度消耗很快。",
+  "source": "x @hodu382759、@xiangxiang103、@jayzhangdev、@wanglv666 等多名用户实测；未见官方公告",
+  "collected_at": "2026-10-23T10:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2113438746431697158",
+  "post_time_bj": "2026-10-23T09:13:57+08:00",
+  "free_terms": "需持有 Google AI Pro（含各类免费赠送渠道）；受 Antigravity 5 小时/每周额度限制。无明确截止时间，未经官方确认，可能随时调整。",
+  "product": "Google Antigravity",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Google Antigravity 下载",
+    "action_url": "https://antigravity.google/download"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
