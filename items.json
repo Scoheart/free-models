@@ -11806,5 +11806,67 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "ccode-free-plan-25-credits-monthly-20261024",
+    "title": "CCode 终端编程 Agent：GitHub 注册免费档每月送 $25 额度，可用 GLM-5.3 Flash / DeepSeek Flash",
+    "model": "GLM-5.3 Flash、DeepSeek-V4.1-Flash（CCode Pro 还接 Claude/GPT）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/Ccode_si/status/2113682393198711276",
+    "summary": "CCode 官方号发帖称免费送 GLM-5.3 Flash 5000 万 token、DeepSeek-V4.1-Flash 2000 万 token；官网写明用 GitHub 注册即得 Free 档，每月 $25 额度。步骤：官网注册并连 GitHub、创建 API Key、npm 安装 CLI，在设置里连接 provider 选 CCode Pro。新产品，代码和密钥谨慎交给它。",
+    "source": "X @Ccode_si",
+    "collected_at": "2026-10-24T01:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2113682393198711276",
+    "post_time_bj": "2026-10-24T01:22:07+08:00",
+    "free_terms": "GitHub 注册 Free 档每月 $25 额度（官网）；帖称折合 GLM-5.3 Flash 50M / DeepSeek-V4.1-Flash 20M token。",
+    "product": "CCode",
+    "providers": [],
+    "agents": [
+      {
+        "name": "CCode",
+        "action_url": "https://ccode.si/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_key",
+      "need_client"
+    ]
+  },
+  {
+    "id": "hf-zerogpu-free-5min-daily-20261024",
+    "title": "Hugging Face ZeroGPU：免费账号每天 5 分钟共享 GPU，跑 Spaces 上的生图等模型",
+    "model": "Hugging Face ZeroGPU Spaces（各类开源生图/AI 模型）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/awe0_io/status/2113673417941737664",
+    "summary": "没有显卡也能免费跑 Hugging Face 上 ZeroGPU 的 Spaces 应用。官方文档：未登录每天 2 分钟、免费账号每天 5 分钟、PRO 40 分钟，额度每天重置，余量越多排队越优先。适合尝鲜生图和开源模型 demo。",
+    "source": "X @awe0_io",
+    "collected_at": "2026-10-24T01:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2113673417941737664",
+    "post_time_bj": "2026-10-24T00:46:27+08:00",
+    "free_terms": "未登录 2 分钟/天，免费账号 5 分钟/天，每日重置。",
+    "product": "Hugging Face ZeroGPU",
+    "providers": [
+      {
+        "name": "Hugging Face",
+        "action_url": "https://huggingface.co/spaces/enzostvs/zero-gpu-spaces"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "image",
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
