@@ -12442,5 +12442,53 @@
       "cn_account",
       "deposit_hold"
     ]
+  },
+  {
+    "id": "oxion-ai-free-0-5m-tokens-monthly-20261024",
+    "title": "Oxion AI：免费档每月 0.5M Token（免绑卡，33 模型全开）+ 限时码 DEVWEEK 领 Pro",
+    "model": "Oxion AI（Claude Fable 5 / GPT-5.6 Luna / DeepSeek-V4-Flash 等 33 模型）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/Israfilv2/status/2113908827422937493",
+    "summary": "Oxion AI（oxionai.com）官网定价写明 Free 档每月 50 万 Token、免绑卡，且含全部 33 个模型（含 Claude Fable 5、GPT-5.6 Luna、DeepSeek-V4-Flash 等），OpenAI 兼容 Base URL 为 https://oxionai.com/v1。社区同时流传结账码 DEVWEEK 可免费开 Pro（约 2 亿 Token/月），以结账页是否仍接受为准。第三方聚合，勿传敏感数据。",
+    "source": "X @Israfilv2 / @YYKdao / @Eliopyr；官网 oxionai.com/pricing 核实",
+    "collected_at": "2026-10-24T17:41:27+08:00",
+    "expired": false,
+    "source_post_id": "2113908827422937493",
+    "post_time_bj": "2026-10-24T16:21:53+08:00",
+    "free_terms": "注册免绑卡：每月 0.5M Token，额度月重置；含全部 33 模型与 streaming/tool calling/vision。另：社区称结账填 DEVWEEK 可免费拿 Pro（200M Token/月），截止未公布、以结账页为准。",
+    "product": "Oxion AI",
+    "providers": [
+      {
+        "name": "Oxion AI",
+        "action_url": "https://oxionai.com"
+      },
+      {
+        "name": "注册 / 选套餐",
+        "action_url": "https://oxionai.com/register"
+      },
+      {
+        "name": "定价页",
+        "action_url": "https://oxionai.com/pricing"
+      },
+      {
+        "name": "控制台 / API Key",
+        "action_url": "https://oxionai.com/dashboard"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "模型目录（首页）",
+        "action_url": "https://oxionai.com"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
