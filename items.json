@@ -12490,5 +12490,57 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "inferx-deepseek-v41-flash-1017-free-weekend-20261024",
+    "title": "InferX：DeepSeek-V4.1 Flash-1017 周末限时免费（OpenAI 兼容 API）",
+    "model": "DeepSeek-V4.1 Flash-1017",
+    "type": "限时",
+    "deadline": "2026-10-26T23:59:59+08:00",
+    "url": "https://x.com/InferXai/status/2113831075667665163",
+    "summary": "InferX 官方宣布 DeepSeek-V4.1 Flash-1017 周末限时免费（约几天），OpenAI 兼容 Base URL 为 https://model.inferx.net/v1（或 /endpoints/v1），需注册拿 API Key；高峰可能触达容量上限。平台另有 InferX Free 档可试用托管模型。",
+    "source": "X @InferXai",
+    "collected_at": "2026-10-24T18:48:00+08:00",
+    "expired": false,
+    "source_post_id": "2113831075667665163",
+    "post_time_bj": "2026-10-24T11:12:56+08:00",
+    "free_terms": "官方：周末几天内 DeepSeek-V4.1 Flash-1017 免费；模型 ID 可用 deepseek-v4.1-flash / deepseek-v4.1-flash-1017。需 InferX 账号与 API Key。免费周末高峰可能 capacity limit。截止约本周末（以官网/控制台为准）。",
+    "product": "InferX Public Endpoints",
+    "providers": [
+      {
+        "name": "InferX",
+        "action_url": "https://inferx.net"
+      },
+      {
+        "name": "定价 / Free",
+        "action_url": "https://inferx.net/pricing"
+      },
+      {
+        "name": "Endpoint 定价",
+        "action_url": "https://inferx.net/pricing/endpoints"
+      },
+      {
+        "name": "模型目录",
+        "action_url": "https://model.inferx.net/catalog/endpoints"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "deepseek-v4.1-flash-1017",
+        "action_url": "https://model.inferx.net/catalog/endpoints/deepseek-v4.1-flash"
+      },
+      {
+        "name": "DeepSeek V4.1 Flash 页",
+        "action_url": "https://inferx.net/models/deepseek-v4.1-flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
