@@ -12923,5 +12923,40 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "heygen-video-1-free-2-clips-daily-20261025",
+    "title": "HeyGen Video 1 视频模型：网页版每天免费 2 条 5 秒带声音短片",
+    "model": "heygen-video-1",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/lovejing0306/status/2114135299815006212",
+    "summary": "HeyGen 新视频模型 Video 1（画面、对白和音效一次生成）在官方模型页可直接试用：登录 HeyGen 账号即可每天免费生成 2 条 5 秒、768p、带声音的短片，有黏土、实拍、动漫、丝网印四种风格。更长片段、用自己的图和 2K 需付费；API 按 $0.01/秒计费（10 月首发价），不免费。官方模型页已核实。",
+    "source": "X @lovejing0306；HeyGen 官方模型页",
+    "collected_at": "2026-10-25T07:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2114135299815006212",
+    "post_time_bj": "2026-10-25T07:21:48+08:00",
+    "free_terms": "登录 HeyGen 账号，模型页每天 2 条（5 秒、768p、带声音）；API 不免费",
+    "product": "HeyGen Video 1",
+    "providers": [
+      {
+        "name": "HeyGen",
+        "action_url": "https://www.heygen.com/models/heygen-video-1"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "HeyGen Video 1",
+        "action_url": "https://www.heygen.com/models/heygen-video-1"
+      }
+    ],
+    "scenes": [
+      "video"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
