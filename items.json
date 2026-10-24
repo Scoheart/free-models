@@ -12771,5 +12771,37 @@
       "need_key",
       "zero_signup"
     ]
+  },
+  {
+    "id": "google-colab-free-tier-gpu-20261025",
+    "title": "Google Colab 免费档：浏览器里直接跑 Jupyter，可蹭 T4 GPU",
+    "model": "Colab 免费 GPU（一般为 NVIDIA T4）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/hodu382759/status/2114033193296834583",
+    "summary": "Google Colab 免费档只需谷歌账号即可在浏览器里写 Jupyter 笔记本，预装 PyTorch/TensorFlow，笔记本可存 Google Drive。免费档可分到 GPU（通常是 T4），单次会话最长约 12 小时，闲置会断开，额度不公开、视资源排队。适合学生和开发者跑小模型推理、微调实验。",
+    "source": "hodu382759",
+    "collected_at": "2026-10-25T00:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2114033193296834583",
+    "post_time_bj": "2026-10-25T00:36:04+08:00",
+    "free_terms": "免费档长期可用；GPU 视资源分配，通常 T4；单次会话最长约 12 小时，闲置断线；用量上限不公开（以官方为准）。",
+    "product": "Google Colab Free",
+    "providers": [
+      {
+        "name": "Google Colab",
+        "action_url": "https://colab.research.google.com/"
+      },
+      {
+        "name": "Colab 方案对比",
+        "action_url": "https://colab.research.google.com/signup"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": []
   }
 ]
