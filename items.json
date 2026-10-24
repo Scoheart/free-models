@@ -12041,5 +12041,49 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "cline-reflection-beam-laguna-s21-free-20261024",
+    "title": "Cline 新上 5 个免费模型：Reflection Beam（501B）、Poolside Laguna S 2.1 等",
+    "model": "Reflection Beam / Poolside Laguna S 2.1 / Nemotron 3.5 Super VL / Nemotron 3.5 Lightning / Solar Mini 4",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/cline/status/2113356814322651618",
+    "summary": "Cline 官方宣布新增 5 个免费模型，其中新面孔是 Reflection Beam（501B，Terminal-Bench 2.1 约 80.1）和 Poolside Laguna S 2.1（118B），另含 Nemotron 3.5 Super VL / Lightning 与 Solar Mini 4。需登录 Cline 账号，在 IDE 插件或 CLI 内使用、有用量配额，不走 API；免费使用数据可能用于改进模型。",
+    "source": "X @cline",
+    "collected_at": "2026-10-24T09:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2113356814322651618",
+    "post_time_bj": "2026-10-23T03:48:23+08:00",
+    "free_terms": "登录 Cline 账号即可在插件/CLI 内免费用，含用量配额；未公布截止时间。",
+    "product": "Cline 免费模型",
+    "providers": [
+      {
+        "name": "Cline",
+        "action_url": "https://app.cline.bot"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cline",
+        "action_url": "https://cline.bot/install"
+      },
+      {
+        "name": "Cline（VS Code 插件）",
+        "action_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev"
+      }
+    ],
+    "models": [
+      {
+        "name": "Cline 免费模型说明",
+        "action_url": "https://docs.cline.bot/getting-started/free-models"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
