@@ -12392,5 +12392,55 @@
       "need_key",
       "cn_account"
     ]
+  },
+  {
+    "id": "scnet-maas-newuser-01yuan-50m-tokens-20261024",
+    "title": "超算互联网 MaaS：新客注册领 1000 万 Token + ¥0.1 秒杀 5000 万（DeepSeek-V4.1-Flash / GLM-5.3-Flash，至 11/10）",
+    "model": "DeepSeek-V4.1-Flash-1017 / GLM-5.3-Flash / Qwen3.8-Flash 等",
+    "type": "限时",
+    "deadline": "2026-11-10T23:59:00+08:00",
+    "url": "https://x.com/ai_fengshou/status/2113913133337391293",
+    "summary": "国家超算互联网（SCNet）MaaS 特惠：活动期内新注册用户可领 1000 万 Token（GLM-5.3-Flash 等、30 天有效）；另可 ¥0.1 秒杀 DeepSeek-V4.1-Flash-1017 或 GLM-5.3-Flash 的 5000 万 Token 量包（每人限购 1 次、每天 10:00 开抢、售完即止）。OpenAI/Anthropic 兼容，Base URL https://api.scnet.cn/api/llm/v1 ；需实名/人脸，赠送额度用尽后会扣余额。",
+    "source": "X @ai_fengshou / @BonoDJblack；官网 scnet.cn/home/subject/maas 与帮助文档核实",
+    "collected_at": "2026-10-24T16:41:00+08:00",
+    "expired": false,
+    "source_post_id": "2113913133337391293",
+    "post_time_bj": "2026-10-24T16:39:00+08:00",
+    "free_terms": "活动 2026-08-13～2026-11-10；新客尝鲜 1000 万 Token 限领 1 次、30 天有效；新客首单特惠 6 款秒杀商品合计限购 1 次（含 ¥0.1/5000 万 DeepSeek-V4.1-Flash-1017、¥0.1/5000 万 GLM-5.3-Flash 等），每日 10:00 开抢。同一自然人多账号合并判定。赠送 token 优先消耗，用尽后自动扣现金余额。",
+    "product": "超算互联网 SCNet MaaS",
+    "providers": [
+      {
+        "name": "超算互联网 MaaS 特惠",
+        "action_url": "https://www.scnet.cn/home/subject/maas/index.html"
+      },
+      {
+        "name": "超算互联网控制台",
+        "action_url": "https://www.scnet.cn/ui/mall/"
+      },
+      {
+        "name": "入门指南 / API",
+        "action_url": "https://www.scnet.cn/help/docs/mainsite/mass/tutorial/quickstart.html"
+      },
+      {
+        "name": "API Key 管理",
+        "action_url": "https://www.scnet.cn/help/docs/mainsite/mass/tutorial/apikeymgt.html"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "模型广场",
+        "action_url": "https://www.scnet.cn/ui/mall/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account",
+      "deposit_hold"
+    ]
   }
 ]
