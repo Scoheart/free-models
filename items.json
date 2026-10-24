@@ -10320,15 +10320,15 @@
     "title": "Qoder 国际版「1024｜创造力集结」：先领 1,024 SOTA Credits，助力最高 10,240",
     "model": "Sonus（Qoder 国际版 SOTA 模型）",
     "type": "额度",
-    "deadline": null,
+    "deadline": "2026-10-30T23:59:00+08:00",
     "url": "https://x.com/leo114119/status/2113094100995961149",
-    "summary": "Qoder 国际版开启 1024 程序员节「创造力集结」活动：Pro 及以上个人会员自动加入，免费会员可申请、审核通过后加入。加入即得 1,024 SOTA Credits 见面礼（只能用于国际版的 Sonus 模型），之后每天助力一次，社区总助力达到 2 万、3 万、5 万时逐轮解锁 2,048、3,072、4,096 Credits，活动期内最多 10,240。帖子给的活动页 qoder.com/community-boost 未登录访问返回 404，可能要在客户端或登录后进入；活动截止时间未公布。",
-    "source": "X @leo114119 帖及活动截图（未找到 Qoder 官方账号同步公告）",
+    "summary": "Qoder 国际版「1024｜创造力集结」：Pro 及以上自动参与，Free 需活动页申请审核（Lite 不支持）。见面礼 1,024 SOTA Credits，三轮补给包（社区助力达标）2,048 / 3,072 / 4,096，活动期内最多 10,240；Credits 仅限 Sonus 模型。据社区同步，三轮补给包已全部解锁；领取截止北京时间 2026-10-30 23:59。",
+    "source": "X @leo114119 原帖；@Dazzle_sys 同步三轮已解锁与截止时间",
     "collected_at": "2026-10-22T10:50:00+08:00",
     "expired": false,
     "source_post_id": "2113094100995961149",
     "post_time_bj": "2026-10-22T10:24:27+08:00",
-    "free_terms": "Pro 及以上自动加入；免费会员需申请审核；Credits 仅限 Sonus 模型；需每天助力解锁后续轮次；截止时间未公布。",
+    "free_terms": "Pro+自动加入；Free 申请审核；仅限 Sonus；领取截止 2026-10-30 23:59（北京时间）。",
     "product": "Qoder 国际版",
     "providers": [],
     "agents": [
@@ -12152,6 +12152,46 @@
       {
         "name": "MiniMax-M3.1-Flash 权重（Hugging Face）",
         "action_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "apinex-free-models-3m-daily-20261024",
+    "title": "APInex：免费档模型每天 3M tokens（免绑卡）",
+    "model": "free/gpt-6-luna · free/deepseek-v4.1-flash · free/gemini-3.8-flash 等",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/punchw45k/status/2113867979326926971",
+    "summary": "第三方 OpenAI 兼容聚合站 APInex（apinex.bond）对 free/* 免费档模型提供每账号每天 3M tokens，官网写明免订阅即可用；官推曾限时把默认免费 RPM 从 5 提到 15。首页列出的免费模型包括 free/gpt-6-luna、free/deepseek-v4.1-flash、free/gemini-3.8-flash；Base URL 为 https://api.apinex.bond/v1，控制台创建 sk-apx… Key。属第三方代理，勿传敏感数据，免费额度与机型名单可能随时变。",
+    "source": "X @punchw45k / @Rivonn；官网 apinex.bond；官推 @APInex_ai（RPM 15）",
+    "collected_at": "2026-10-24T13:47:44+08:00",
+    "expired": false,
+    "source_post_id": "2113867979326926971",
+    "post_time_bj": "2026-10-24T13:39:34+08:00",
+    "free_terms": "注册拿 API Key，无需绑卡；免费档模型共享每天 3M tokens；默认免费 RPM 官推称限时 15；截止未定。",
+    "product": "APInex",
+    "providers": [
+      {
+        "name": "APInex",
+        "action_url": "https://apinex.bond/"
+      },
+      {
+        "name": "APInex 文档",
+        "action_url": "https://apinex.bond/docs"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Models & Pricing",
+        "action_url": "https://apinex.bond/models"
       }
     ],
     "scenes": [
