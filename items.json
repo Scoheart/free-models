@@ -12542,5 +12542,190 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "stark-relay-20usd-new-user-credit-20261024",
+    "title": "Stark Relay：新用户连 Starknet 钱包送 $20 额度（含 DeepSeek-V4.1 Flash-1017）",
+    "model": "Stark Relay（Claude / GPT / Grok / Gemini / GLM / DeepSeek 等）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/StarkRelayHQ/status/2113988922778825045",
+    "summary": "Stark Relay（starkrelay.bond）是 Starknet 原生 AI 中继：用钱包注册即可获 $20 用量额度，一个 Relay Key 可调 Claude、GPT、Grok、Gemini、GLM、DeepSeek 等。官方刚把 deepseek-v4.1-flash 升级到 flash-1017（旧 ID 仍可用）。支付走 STRK 等 Starknet 资产，免传统绑卡，但需钱包。",
+    "source": "X @StarkRelayHQ；官网 starkrelay.bond 核实",
+    "collected_at": "2026-10-24T21:49:33+08:00",
+    "expired": false,
+    "source_post_id": "2113988922778825045",
+    "post_time_bj": "2026-10-24T21:40:09+08:00",
+    "free_terms": "新用户用 Starknet 钱包注册送 $20 用量额度；另有充值赠送与 GPT 折扣活动。截止未公布，以官网为准。",
+    "product": "Stark Relay",
+    "providers": [
+      {
+        "name": "Stark Relay",
+        "action_url": "https://starkrelay.bond/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "DeepSeek / Claude / GPT 等（首页模型区）",
+        "action_url": "https://starkrelay.bond/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "larprouter-daily-free-deepseek-glm-20261024",
+    "title": "LarpRouter：DeepSeek-V4.1 Flash / GLM-5.3 Flash 日免费用量（OpenAI 兼容）",
+    "model": "deepseek-v4.1-flash / glm-5.3-flash",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/guxiaochun888/status/2113981801513505163",
+    "summary": "LarpRouter（larprouter.com）公开目录把 deepseek-v4.1-flash、glm-5.3-flash 标为 Free tier：日免费用量用完后按标价扣费；Base URL https://larprouter.com/v1。邀请页另写首次登录可领 100 万 Gift tokens（限 clef-flash / deepseek-v4.1-flash / glm-5.3-flash）。社区流传的 2M/10M/20M 数字不一致，以控制台与邀请页为准。",
+    "source": "X @guxiaochun888 等；官网 /models 与邀请页核实",
+    "collected_at": "2026-10-24T21:49:33+08:00",
+    "expired": false,
+    "source_post_id": "2113981801513505163",
+    "post_time_bj": "2026-10-24T21:11:52+08:00",
+    "free_terms": "公开目录 Free tier：日免费用量覆盖 deepseek-v4.1-flash、glm-5.3-flash（用尽后按正常价扣费，不设截止日期）。邀请码首次登录另赠 1M Gift tokens（限指定模型）。",
+    "product": "LarpRouter",
+    "providers": [
+      {
+        "name": "LarpRouter",
+        "action_url": "https://larprouter.com"
+      },
+      {
+        "name": "注册 / 登录",
+        "action_url": "https://larprouter.com/sign-in"
+      },
+      {
+        "name": "模型目录",
+        "action_url": "https://larprouter.com/models"
+      },
+      {
+        "name": "Docs",
+        "action_url": "https://larprouter.com/docs"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "deepseek-v4.1-flash",
+        "action_url": "https://larprouter.com/models"
+      },
+      {
+        "name": "glm-5.3-flash",
+        "action_url": "https://larprouter.com/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "blazerail-free-models-1usd-deposit-20261024",
+    "title": "BlazeRail：充 $1 解锁 :free 模型（Claude / GPT / DeepSeek / GLM 等 $0）",
+    "model": "BlazeRail :free（含 deepseek/deepseek-v4.1-flash:free 等）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/guxiaochun888/status/2113981801513505163",
+    "summary": "BlazeRail（blazerail.com）Free Models 页写明：一次性充 $1（计入余额、非订阅）即可调用目录里 $0/token 的 :free 模型 ID（如 deepseek/deepseek-v4.1-flash:free），有速率限制；普通 ID 仍按价计费。Base URL https://api.blazerail.com/v1。注意：网上流传「$1 送 Gemini 4 Argon 2M」已被证伪，以 /free 页为准。",
+    "source": "X 社区合集帖；官网 blazerail.com/free 与 /v1/models 核实",
+    "collected_at": "2026-10-24T21:49:33+08:00",
+    "expired": false,
+    "source_post_id": "2113981801513505163",
+    "post_time_bj": "2026-10-24T21:11:52+08:00",
+    "free_terms": "一次性 $1 充值（可花在请求上）解锁 :free 模型；$0/token、有 rate limit。无固定截止日，以 /free 与目录为准。",
+    "product": "BlazeRail",
+    "providers": [
+      {
+        "name": "BlazeRail",
+        "action_url": "https://www.blazerail.com"
+      },
+      {
+        "name": "Free Models",
+        "action_url": "https://www.blazerail.com/free"
+      },
+      {
+        "name": "API Keys",
+        "action_url": "https://www.blazerail.com/dashboard/api-keys"
+      },
+      {
+        "name": "Docs",
+        "action_url": "https://www.blazerail.com/docs"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Free Models 目录",
+        "action_url": "https://www.blazerail.com/free"
+      },
+      {
+        "name": "全量模型",
+        "action_url": "https://www.blazerail.com/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "deposit_hold"
+    ]
+  },
+  {
+    "id": "alysis-code-50-credits-monthly-20261024",
+    "title": "Alysis Code：免绑卡每 30 天 50 积分托管模型（DeepSeek / GLM / Luna / Haiku）",
+    "model": "Alysis Code 托管（DeepSeek V4.1 Flash / GLM-5.3 Flash / GPT-6 Luna / Claude Haiku 5.5）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/0xRemakw/status/2113941499964481936",
+    "summary": "开源终端编程 Agent Alysis Code（alysiscode.com）：注册后 `alysis login` 可得每 30 天 50 托管积分（100 积分≈$1），免绑卡；滚动限额约每 5 小时 10、每周 25。也可 BYOK 不走平台额度。属客户端/Agent，非独立 LLM API 聚合。",
+    "source": "X @0xRemakw；官网 pricing/FAQ 核实",
+    "collected_at": "2026-10-24T21:49:33+08:00",
+    "expired": false,
+    "source_post_id": "2113941499964481936",
+    "post_time_bj": "2026-10-24T18:31:43+08:00",
+    "free_terms": "每 30 天重置为 50 积分，未用完不结转；公平使用滚动限额。无固定活动截止日。",
+    "product": "Alysis Code",
+    "providers": [
+      {
+        "name": "Alysis Code",
+        "action_url": "https://alysiscode.com"
+      },
+      {
+        "name": "定价",
+        "action_url": "https://alysiscode.com/pricing"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Alysis Code 安装",
+        "action_url": "https://alysiscode.com/docs/getting-started/installation"
+      },
+      {
+        "name": "GitHub",
+        "action_url": "https://github.com/AlysisAi/AlysisCode"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client",
+      "need_key"
+    ]
   }
 ]
