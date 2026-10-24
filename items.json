@@ -12803,5 +12803,43 @@
       "coding"
     ],
     "barriers": []
+  },
+  {
+    "id": "qdrant-cloud-free-tier-20261025",
+    "title": "Qdrant Cloud 免费档：免绑卡单节点向量库，约可装百万级向量",
+    "model": "Qdrant Cloud Free Tier（向量库 + 部分免费 Cloud Inference）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/hodu382759/status/2114043238734860738",
+    "summary": "Qdrant Cloud 永久免费档无需绑卡：单节点 0.5 vCPU / 1GB 内存 / 4GB 磁盘，官方称约可服务约 100 万条 768 维向量；含部分免费 Cloud Inference。闲置约 1 周会暂停、约 4 周删除。适合 RAG 小项目和练手，与本地开源 Qdrant 同一套 API。",
+    "source": "hodu382759",
+    "collected_at": "2026-10-25T01:42:00+08:00",
+    "expired": false,
+    "source_post_id": "2114043238734860738",
+    "post_time_bj": "2026-10-25T01:15:59+08:00",
+    "free_terms": "Free forever；免绑卡；单节点 0.5 vCPU / 1GB RAM / 4GB Disk；闲置约 1 周暂停、约 4 周未恢复则删除（以官方为准）。",
+    "product": "Qdrant Cloud Free Tier",
+    "providers": [
+      {
+        "name": "Qdrant Cloud",
+        "action_url": "https://cloud.qdrant.io/"
+      },
+      {
+        "name": "Pricing",
+        "action_url": "https://qdrant.tech/pricing/"
+      },
+      {
+        "name": "Create cluster docs",
+        "action_url": "https://qdrant.tech/documentation/cloud/create-cluster/"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
