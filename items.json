@@ -12879,5 +12879,49 @@
     "post_time_bj": "2026-10-25T03:07:25+08:00",
     "free_terms": "截至 2026-11-08；仅限 2 人及以上的组织；每组织最高 $5,000 Deep Scan 用量；总池 $100 万先到先得（以官方为准）。",
     "product": "CodeRabbit Deep Scan"
+  },
+  {
+    "id": "opencode-go-iceman-contributor-free-20261025",
+    "title": "OpenCode Go 上新匿名模型 Iceman Contributor Free：限时免费、不限次数",
+    "model": "iceman-contributor-free",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/FOMAnews/status/2114101335846981744",
+    "summary": "OpenCode 在 Go 订阅的模型清单里加入未署名厂商的 Iceman Contributor Free（iceman-contributor-free），限时免费、不限请求次数，纯文本，支持工具调用和推理，262K 上下文 / 131K 输出。已在 Go 的 /v1/models 接口里出现。需要 OpenCode Go 订阅（$10/月起）才能用；免费期内提示词可能被用于训练（非零数据保留），截止时间未公布。",
+    "source": "FOMAnews",
+    "collected_at": "2026-10-25T05:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2114101335846981744",
+    "related_post_urls": [
+      "https://x.com/FOMAnews/status/2114101338309005337",
+      "https://x.com/dsoch8c/status/2114102553764049100"
+    ],
+    "free_terms": "OpenCode Go 订阅内限时免费、不限次数、不占额度；需 Go 订阅；可能用于训练",
+    "product": "OpenCode Go",
+    "providers": [
+      {
+        "name": "OpenCode Go",
+        "action_url": "https://opencode.ai/docs/go/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Iceman Contributor Free",
+        "action_url": "https://opencode.ai/inference/go/v1/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
