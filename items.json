@@ -12346,5 +12346,51 @@
       "need_key",
       "deposit_hold"
     ]
+  },
+  {
+    "id": "qiniu-conatus-free-1e8-tokens-daily-20261024",
+    "title": "七牛云 Conatus Free：实名每天 1 亿 Token（充值≥¥100 可到每天 10 亿，至 11/30）",
+    "model": "qiniu/conatus-free",
+    "type": "限时",
+    "deadline": "2026-11-30T23:59:00+08:00",
+    "url": "https://x.com/EastSavin/status/2113889683340243127",
+    "summary": "七牛云 1024 限时融合模型 Conatus Free（Model ID qiniu/conatus-free），10/24–11/30。完成实名认证后每日 1 亿 Token，任意一笔已到账充值＞¥100（历史计入、多笔不累加）可升至每日 10 亿；每日 00:00（北京时间）重置、不结转。仅消耗活动免费额度，用尽即拒、不扣余额也不切付费模型。兼容 Completions/Messages，Base URL https://api.qnaigc.com/v1；官方写明可接工具调用/深度思考/图像理解。",
+    "source": "X @EastSavin / @hodu382759；官网 qiniu.com/ai/free-models/conatus-2026",
+    "collected_at": "2026-10-24T15:42:07+08:00",
+    "expired": false,
+    "source_post_id": "2113889683340243127",
+    "post_time_bj": "2026-10-24T15:05:01+08:00",
+    "free_terms": "登录并实名认证 → 控制台建 API Key → 调 qiniu/conatus-free；认证用户每天 1 亿 Token，认证且单笔充值＞¥100 每天 10 亿；活动至 2026-11-30 23:59（北京时间）。",
+    "product": "七牛云 AI / Conatus Free",
+    "providers": [
+      {
+        "name": "七牛云 Conatus 活动页",
+        "action_url": "https://www.qiniu.com/ai/free-models/conatus-2026"
+      },
+      {
+        "name": "七牛云控制台（AI）",
+        "action_url": "https://portal.qiniu.com/ai"
+      },
+      {
+        "name": "API Key",
+        "action_url": "https://portal.qiniu.com/developer/user/key"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "模型广场",
+        "action_url": "https://www.qiniu.com/ai/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account"
+    ]
   }
 ]
