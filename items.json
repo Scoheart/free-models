@@ -12727,5 +12727,49 @@
       "need_client",
       "need_key"
     ]
+  },
+  {
+    "id": "speechmatics-100usd-free-credit-20261024",
+    "title": "Speechmatics：新账号送 $100 免费语音 API 额度（免绑卡）",
+    "model": "Melia 1 / Enhanced / Oak 1 / Linden 1 STT + TTS",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/hodu382759/status/2113995425481150890",
+    "summary": "Speechmatics 官方文档与定价页确认：Free 计划新账号赠送 $100 额度（1 credit=$1），免绑卡；可同时 2 路实时转写，并支持批量上传。覆盖 Speech-to-Text（预录/实时）与 TTS 等。额度约 12 个月内有效，用尽后需绑卡转 Pro 按量付费。可与 Deepgram 免费额度对照测字幕/会议纪要。",
+    "source": "hodu382759",
+    "collected_at": "2026-10-24T22:48:29+08:00",
+    "expired": false,
+    "source_post_id": "2113995425481150890",
+    "post_time_bj": "2026-10-24T22:06:00+08:00",
+    "free_terms": "新账号一次性 $100 额度；免绑卡；Free 计划最多 2 路实时转写；额度约 12 个月有效（以官方为准）；用尽后绑卡转 Pro PAYG。",
+    "product": "Speechmatics $100 signup credit",
+    "providers": [
+      {
+        "name": "Speechmatics 定价",
+        "action_url": "https://www.speechmatics.com/pricing"
+      },
+      {
+        "name": "Speechmatics Portal 注册",
+        "action_url": "https://portal.speechmatics.com/signup"
+      },
+      {
+        "name": "Plans 文档",
+        "action_url": "https://docs.speechmatics.com/administration/plans"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Speechmatics 文档",
+        "action_url": "https://docs.speechmatics.com/"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "zero_signup"
+    ]
   }
 ]
