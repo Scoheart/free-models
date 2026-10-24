@@ -12201,5 +12201,150 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "tavily-researcher-1000-credits-monthly-20261024",
+    "title": "Tavily Researcher：每月 1000 免费 API Credits（免绑卡，月初重置）",
+    "model": "Tavily Search / Extract / Crawl / Research（AI Agent 联网检索）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/hodu382759/status/2113884015946043674",
+    "summary": "Tavily 面向 AI Agent 的联网搜索 API：Researcher 免费档每月 1000 credits，免绑卡，每月 1 日重置；基础搜索 1 credit/次，高级搜索 2 credits。LangChain / LlamaIndex / CrewAI 等有官方集成。官网与文档已确认条款。",
+    "source": "X @hodu382759；官网定价与 docs 核实",
+    "collected_at": "2026-10-24T14:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2113884015946043674",
+    "post_time_bj": "2026-10-24T14:43:18+08:00",
+    "free_terms": "Researcher 免费档：每月 1000 API credits，无需信用卡；credits 每月 1 日重置；用尽即停直到重置或升级。",
+    "product": "Tavily API",
+    "providers": [
+      {
+        "name": "Tavily 控制台",
+        "action_url": "https://app.tavily.com"
+      },
+      {
+        "name": "Tavily 定价",
+        "action_url": "https://www.tavily.com/pricing"
+      },
+      {
+        "name": "Credits 文档",
+        "action_url": "https://docs.tavily.com/documentation/api-credits"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "minimax-code-1024-checkin-bonus-20261024",
+    "title": "MiniMax Code：1024 程序员节签到加赠 1024 积分（仅 10/24，合计约 1424）",
+    "model": "MiniMax Code 积分",
+    "type": "限时",
+    "deadline": "2026-10-24T23:59:59+08:00",
+    "url": "https://x.com/mspd4100/status/2113804314175213780",
+    "summary": "MiniMax Code 客户端签到弹窗显示「1024积分加赠」：当日签到在日常 400 基础上额外 +1024，按钮显示「签到得 1,424」。社区多帖确认仅今天有效；官方文档仍写日常签到 400（连续第 4/7 天 1000），以客户端当日弹窗为准。",
+    "source": "X @mspd4100（截图）；转述 @luojiuyue @grok",
+    "collected_at": "2026-10-24T14:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2113804314175213780",
+    "post_time_bj": "2026-10-24T09:26:35+08:00",
+    "free_terms": "仅 2026-10-24（北京）签到可领额外 1024 积分；日常底 400 + 加赠 1024 ≈ 1424；积分到账后 30 天有效。过期不补。",
+    "product": "MiniMax Code",
+    "providers": [
+      {
+        "name": "MiniMax 平台",
+        "action_url": "https://platform.minimax.io/subscribe/coding-plan"
+      }
+    ],
+    "agents": [
+      {
+        "name": "MiniMax Code（MiniMax Agent）",
+        "action_url": "https://agent.minimax.io/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "contextdev-free-tier-1000-monthly-20261024",
+    "title": "Context.dev Free Tier：每月 1000 免费 API Credits（免绑卡）",
+    "model": "Context.dev 网页数据 API（搜索/抓取/爬取，给 AI Agent 用）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/xinxianxing/status/2113881376759902263",
+    "summary": "Context.dev 官网定价确认：Free Tier 每月 1000 credits、免绑卡，标准 scrape 约 1 credit/次，适合 Agent 联网抓取。此前 10/20 的 5 万 credits 限时赠送已过窗；本条记录常驻免费档。",
+    "source": "X @xinxianxing；官网定价核实",
+    "collected_at": "2026-10-24T14:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2113881376759902263",
+    "post_time_bj": "2026-10-24T14:32:48+08:00",
+    "free_terms": "Free Tier：每月 1000 API credits，无需信用卡；无超额；并发 2。用尽后需等月度重置或升级。",
+    "product": "Context.dev Web Data API",
+    "providers": [
+      {
+        "name": "Context.dev 注册",
+        "action_url": "https://www.context.dev/signup"
+      },
+      {
+        "name": "Context.dev 定价",
+        "action_url": "https://www.context.dev/pricing"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "yeta-platform-1-for-10-credits-20261024",
+    "title": "Yeta Platform：充 $1 送 $10 试用额度（OpenAI 兼容 API）",
+    "model": "Yeta Platform（含 DeepSeek V4.1 Flash 等）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/pengsonal/status/2113879225644273717",
+    "summary": "Yeta Platform 为 OpenAI 兼容聚合 API（playground + key）。官网写明：充值 $1 即可获得 $10 免费试用额度（非零成本注册）。社区曾有 LINUXDO20 送 $30 活动，10/22 因算力满载已暂停。API 基址实测为 https://platform.yeta.ai/v1 。",
+    "source": "X @pengsonal；官网 platform.yeta.ai 核实",
+    "collected_at": "2026-10-24T14:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2113879225644273717",
+    "post_time_bj": "2026-10-24T14:24:16+08:00",
+    "free_terms": "注册后需充值至少 $1，到账 $10 试用额度；$30 优惠券活动已暂停。条款以平台账单页为准。",
+    "product": "Yeta Platform",
+    "providers": [
+      {
+        "name": "Yeta Platform",
+        "action_url": "https://platform.yeta.ai"
+      },
+      {
+        "name": "Yeta Labs",
+        "action_url": "https://yeta.ai"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "deposit_hold"
+    ]
   }
 ]
