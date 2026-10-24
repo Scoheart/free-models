@@ -12841,5 +12841,43 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "coderabbit-deep-scan-5000usd-free-nov8-20261025",
+    "title": "CodeRabbit Deep Scan：每个组织最高 $5,000 免费 AI 安全扫描额度（至 11/8）",
+    "model": "CodeRabbit Deep Scan（AI 代码安全扫描 + Fix with AI）",
+    "type": "限时",
+    "deadline": "2026-11-08T23:59:59+08:00",
+    "url": "https://x.com/aiptsd/status/2114071280970305818",
+    "summary": "CodeRabbit 拿出总计 $100 万，11 月 8 日前为两人及以上的组织（开源项目、新老用户都算）报销最高 $5,000 的 Deep Scan 用量，先到先得。登录或注册后连接仓库直接跑 Deep Scan 即可，发现的问题还能一键生成修复 PR。",
+    "source": "aiptsd",
+    "collected_at": "2026-10-25T03:50:00+08:00",
+    "expired": false,
+    "providers": [],
+    "agents": [
+      {
+        "name": "CodeRabbit 活动说明",
+        "action_url": "https://www.coderabbit.ai/blog/one-million-security-scans-and-fixes"
+      },
+      {
+        "name": "CodeRabbit 登录",
+        "action_url": "https://app.coderabbit.ai/login"
+      },
+      {
+        "name": "Deep Scan 文档",
+        "action_url": "https://docs.coderabbit.ai/security"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "source_post_id": "2114071280970305818",
+    "post_time_bj": "2026-10-25T03:07:25+08:00",
+    "free_terms": "截至 2026-11-08；仅限 2 人及以上的组织；每组织最高 $5,000 Deep Scan 用量；总池 $100 万先到先得（以官方为准）。",
+    "product": "CodeRabbit Deep Scan"
   }
 ]
