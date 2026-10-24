@@ -8097,7 +8097,8 @@
     ],
     "barriers": [
       "need_client"
-    ]
+    ],
+    "superseded_by": "qoder-deepseek-v41-flash-1017-free-nov1-20261024"
   },
   {
     "id": "viggle-jst2-world-model-free-tier-20261020",
@@ -12084,6 +12085,81 @@
     ],
     "barriers": [
       "need_client"
+    ]
+  },
+  {
+    "id": "qoder-deepseek-v41-flash-1017-free-nov1-20261024",
+    "title": "Qoder：DeepSeek V4.1-Flash-1017 免费延长到 11/1（0× Credits）",
+    "model": "DeepSeek V4.1-Flash-1017",
+    "type": "限时",
+    "deadline": "2026-11-01T00:00:00+08:00",
+    "url": "https://x.com/qoder_ai_ide/status/2113850799474520402",
+    "summary": "Qoder 官方宣布 DeepSeek V4.1-Flash-1017 的免费窗口延长：在 Qoder 里继续按 0× Credits 计费、不扣额度，截止 11 月 1 日 0 点（北京时间），原定 10/24 结束。需登录 Qoder 并在客户端模型选择器里选它；有用户反馈高峰期会排队。",
+    "source": "X @qoder_ai_ide（Qoder 官方）",
+    "collected_at": "2026-10-24T12:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2113850799474520402",
+    "post_time_bj": "2026-10-24T12:31:18+08:00",
+    "free_terms": "登录 Qoder 账号即可，0× Credits 不扣额度；截止 2026-11-01 00:00（UTC+8）。",
+    "product": "Qoder",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Qoder",
+        "action_url": "https://qoder.com/download"
+      }
+    ],
+    "models": [
+      {
+        "name": "DeepSeek V4.1-Flash-1017（官方发布说明）",
+        "action_url": "https://api-docs.deepseek.com/news/news261017/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "anyrouter-minimax-m31-flash-free-20261024",
+    "title": "AnyRouter：MiniMax M3.1 Flash API 免费、无每日上限",
+    "model": "MiniMax M3.1 Flash",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/Rahmanbarik/status/2113788116691787839",
+    "summary": "API 聚合平台 AnyRouter 官方博客写明 minimax/minimax-m3.1-flash 在所有套餐上免费：输入输出都是 $0、不扣 credits、没有每日上限，免费模型共享每个 Key 每分钟 2400 次请求，暂未定结束时间。OpenAI 兼容接口，base URL 为 https://anyrouter.dev/api/v1，模型名加 :free 锁定免费路由；需登录拿 API Key。",
+    "source": "X @Rahmanbarik；AnyRouter 官方博客",
+    "collected_at": "2026-10-24T12:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2113788116691787839",
+    "post_time_bj": "2026-10-24T08:22:13+08:00",
+    "free_terms": "登录 AnyRouter 并创建 API Key；$0、无每日上限，每 Key 每分钟 2400 次（免费模型共享）；官方未设截止时间。",
+    "product": "AnyRouter",
+    "providers": [
+      {
+        "name": "AnyRouter",
+        "action_url": "https://anyrouter.dev"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "MiniMax M3.1 Flash 免费说明（AnyRouter 博客）",
+        "action_url": "https://anyrouter.dev/blog/minimax-m3-1-flash-free"
+      },
+      {
+        "name": "MiniMax-M3.1-Flash 权重（Hugging Face）",
+        "action_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
     ]
   }
 ]
