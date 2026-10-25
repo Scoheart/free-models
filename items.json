@@ -13257,5 +13257,41 @@
       "coding"
     ],
     "barriers": []
+  },
+  {
+    "id": "nscale-new-user-5usd-credit-glm53-20261026",
+    "title": "Nscale 新用户免费领 $5 额度，可调用 GLM 5.3 等开源模型（OpenAI 兼容 API）",
+    "model": "GLM 5.3 / Qwen3.8-27B / Qwen3.8-Flash-Next",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/aiptsd/status/2114449467520778342",
+    "summary": "欧洲 GPU 云 Nscale 的 Serverless Inference 给每个新账号 $5 免费额度，OpenAI 兼容接口，新上架 GLM 5.3（$1.40/$4.40 每百万 token）、Qwen3.8-27B 等；10/26 起旧模型（gpt-oss、Llama、Qwen3 等）陆续下线，需在 11/2 前切换。",
+    "free_terms": "入口：console.nscale.com 注册账号 → 在控制台领取 $5 free credit（官方说明领取不需先绑卡，超出后才需加卡充值）→ AI Services 里生成 Service Token → 调 https://inference.api.nscale.com/v1（OpenAI 兼容），模型选 GLM 5.3 等。每个新账号一次；按 token 计费，$5 约够 GLM 5.3 百万级 token。",
+    "source": "X @aiptsd 优惠汇总帖 + Nscale 官方博客/文档",
+    "collected_at": "2026-10-26T04:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2114449467520778342",
+    "post_time_bj": "2026-10-26T04:10:12+08:00",
+    "product": "Nscale Serverless Inference",
+    "providers": [
+      {
+        "name": "Nscale",
+        "action_url": "https://console.nscale.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Nscale 可用模型列表（GLM 5.3 等）",
+        "action_url": "https://docs.nscale.com/docs/ai-services/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
