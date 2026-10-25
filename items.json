@@ -13035,5 +13035,42 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "workbuddy-kimi-k31-pro-free-credits-20261025",
+    "title": "WorkBuddy 上线 Kimi K3.1 Pro，个人免费版也能用免费积分调用（会限流）",
+    "model": "Kimi K3.1 Pro / K3.1 Pro 高速版",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/0xfaheng/status/2114143421762027865",
+    "summary": "腾讯 WorkBuddy 10/24 官宣接入月之暗面 Kimi K3.1 Pro（含输出快 2–3 倍的高速版）。多位用户实测：个人免费版可直接用注册/每日赠送的免费积分调用，倍率约 0.97x，比 K3 省近一半；高峰会限流，免费积分有限，适合体验 Office/编程类 Agent 任务。属积分消耗而非 0 积分限免，无明确截止时间。",
+    "source": "X @0xfaheng、@leaf_sanren、@cheery9998；WorkBuddy 官方 @WorkBuddy_AI 公告",
+    "collected_at": "2026-10-25T11:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2114143421762027865",
+    "post_time_bj": "2026-10-25T07:54:05+08:00",
+    "free_terms": "WorkBuddy 个人免费版用免费积分即可调用，倍率约 0.97x；会限流",
+    "product": "WorkBuddy · Kimi K3.1 Pro",
+    "providers": [],
+    "agents": [
+      {
+        "name": "WorkBuddy",
+        "action_url": "https://www.workbuddy.cn/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Kimi K3.1 Pro（应用内选择）",
+        "action_url": "https://www.workbuddy.cn/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "cn_account"
+    ]
   }
 ]
