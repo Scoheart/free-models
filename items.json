@@ -13293,5 +13293,46 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "kimi-k31-pro-plan-one-time-25pct-usage-reset-20261026",
+    "title": "Kimi K3.1 Pro 订阅全员一次性用量重置：返还 25% 月额度（约一周用量）",
+    "model": "Kimi K3.1 Pro",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/Kimi_Moonshot/status/2114450610724708492",
+    "summary": "Kimi 官方为 K3.1 Pro 订阅计划的限流和额度异常消耗道歉：所有档位订阅用户获得一次性用量重置，返还 25% 月额度（已用不足 25% 的直接清零），相当于一周用量；同时调整计划参数、减少不必要的子代理调用和输出长度，让额度更耐用。",
+    "free_terms": "无需领取：已订阅 Kimi 任一档会员计划的账号自动生效，官方称太平洋时间 10/25 当天结束前（约北京 10/26 15:00）用量条会更新。到 kimi.com 登录 → 会员/Kimi Code 页面查看用量条确认。仅限现有付费订阅用户、每账号一次，免费账号不适用；不需额外绑卡或填码。",
+    "source": "X @Kimi_Moonshot 官方帖",
+    "collected_at": "2026-10-26T05:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2114450610724708492",
+    "post_time_bj": "2026-10-26T04:14:44+08:00",
+    "product": "Kimi 会员订阅（K3.1 Pro 计划）",
+    "providers": [
+      {
+        "name": "Kimi 会员与定价",
+        "action_url": "https://www.kimi.com/membership/pricing"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Kimi Code",
+        "action_url": "https://www.kimi.com/code"
+      }
+    ],
+    "models": [
+      {
+        "name": "Kimi（K3.1 Pro）",
+        "action_url": "https://www.kimi.com/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
