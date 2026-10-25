@@ -13223,5 +13223,39 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "onespace-free-deepseek-v41-flash-unlimited-20261026",
+    "title": "OneSpace Free：限时无限量免费用 DeepSeek V4.1 Flash（不耗积分）",
+    "model": "DeepSeek V4.1 Flash 1017",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/getonespace/status/2114239508107469274",
+    "summary": "多模型 AI 助手 OneSpace 官方宣布：限时内「OneSpace Free」模型改跑 DeepSeek V4.1 Flash 1017，不消耗积分、不限量（有合理使用限制），免费档也能用；免费计划不绑卡，结束时间未公布。",
+    "source": "X @getonespace 官方帖 + @jpdevxz 补充 + getonespace.com 定价页",
+    "collected_at": "2026-10-26T02:42:12+08:00",
+    "expired": false,
+    "source_post_id": "2114239508107469274",
+    "post_time_bj": "2026-10-25T14:15:54+08:00",
+    "free_terms": "入口：getonespace.com → 注册免费账号（Free 计划永久免费，无需绑卡）→ 进入对话，在模型选择里选「OneSpace Free」即为 DeepSeek V4.1 Flash 1017，调用不扣积分、不限次数（有 fair-use 限制）。网页聊天形式，非 API；限时活动，官方未给截止日期，随时可能结束。",
+    "product": "OneSpace",
+    "providers": [
+      {
+        "name": "OneSpace",
+        "action_url": "https://getonespace.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "OneSpace Free（DeepSeek V4.1 Flash）",
+        "action_url": "https://getonespace.com/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": []
   }
 ]
