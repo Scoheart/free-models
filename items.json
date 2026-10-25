@@ -12958,5 +12958,45 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "hi3d-v1-open-source-3d-model-20261025",
+    "title": "Hi3D V1.0 开源：图片引导的高精度 3D 几何模型，权重可免费下载",
+    "model": "Hi3D v1.0",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/andyliuhang/status/2114168184261771691",
+    "summary": "北京团队 Hi3D 于 10/23 开源 Hi3D V1.0（原 Sparc3D）：参考一张图片把粗糙网格精修成最高 1536³ 的高精度 3D 几何，适合 3D 打印等场景。代码在 GitHub、权重在 Hugging Face，可免费下载本地部署（需 Linux + NVIDIA GPU，仅出几何不含贴图），也可在 Hugging Face Space 在线试用；官网另可免费生成 3D 模型。官方 HF 页与新闻稿已核实。",
+    "source": "X @andyliuhang；Hugging Face 官方模型页；PR Newswire 新闻稿",
+    "collected_at": "2026-10-25T09:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2114168184261771691",
+    "post_time_bj": "2026-10-25T09:32:29+08:00",
+    "free_terms": "开源代码与权重免费下载（按项目许可）；HF Space 在线试用",
+    "product": "Hi3D V1.0",
+    "providers": [
+      {
+        "name": "Hi3D",
+        "action_url": "https://www.hi3d.ai/hi3d-1-0-open-source"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Hi3D v1.0（Hugging Face 权重）",
+        "action_url": "https://huggingface.co/hi3d-official/Hi3Dv1.0"
+      },
+      {
+        "name": "Hi3D v1.0（GitHub 代码）",
+        "action_url": "https://github.com/hi3d-official/Hi3Dv1.0"
+      }
+    ],
+    "scenes": [
+      "3d",
+      "image"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
