@@ -12998,5 +12998,42 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "deapi-5usd-free-credits-new-users-20261025",
+    "title": "deAPI 新用户注册送 $5 免费额度，免绑卡调用生图/语音/视频 API",
+    "model": "deAPI 开源模型（生图、TTS、转写、视频、Embedding）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/Kashcol_com/status/2114180979560431672",
+    "summary": "deAPI 新注册账号立即到账 $5 免费额度，无需信用卡，Basic 档限速用于测试；可调用开源模型做文生图、图像编辑/OCR、TTS、音视频转写、视频生成和向量 Embedding，并提供 OpenAI 兼容端点 https://oai.deapi.ai/v1。额度用完按次付费，任意充值升级 Premium。官方文档与定价页已核实。",
+    "source": "X @Kashcol_com；deAPI 官方 Quickstart 与定价页",
+    "collected_at": "2026-10-25T10:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2114180979560431672",
+    "post_time_bj": "2026-10-25T10:23:19+08:00",
+    "free_terms": "新用户注册即送 $5，无需绑卡；Basic 档限速",
+    "product": "deAPI",
+    "providers": [
+      {
+        "name": "deAPI（创建 API Key）",
+        "action_url": "https://app.deapi.ai/dashboard/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "deAPI 定价与模型列表",
+        "action_url": "https://deapi.ai/pricing"
+      }
+    ],
+    "scenes": [
+      "image",
+      "audio",
+      "video"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
