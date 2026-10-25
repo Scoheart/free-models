@@ -13072,5 +13072,40 @@
       "need_client",
       "cn_account"
     ]
+  },
+  {
+    "id": "exa-promo-codes-40usd-credits-20261025",
+    "title": "Exa 搜索 API 两个优惠码叠加送 $40 额度（EXA20FREEBUFF + EXA20FIRESHIP）",
+    "model": "Exa Search / Contents / Answer API",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/dragono64v/status/2114203102085886249",
+    "summary": "在 Exa 控制台 Billing 页分别输入 EXA20FREEBUFF 和 EXA20FIRESHIP，每个码加 $20，同一团队可叠加共 $40，可抵扣 Search、Contents、Answer 等接口，适合给 Agent 做联网搜索/RAG。叠加在 Free Tier 每月 $10 之上；部分账号需先验证支付方式才能使用赠额。码为第三方汇总、官方文档未列出，未写截止时间，可能随时失效。",
+    "source": "X @dragono64v、@KevinWwwrz；aipromonow.com、jidan.si 汇总",
+    "collected_at": "2026-10-25T12:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2114203102085886249",
+    "post_time_bj": "2026-10-25T11:51:14+08:00",
+    "free_terms": "每个码每团队限兑一次，双码共 $40；部分账号需绑卡验证",
+    "product": "Exa Search API",
+    "providers": [
+      {
+        "name": "Exa",
+        "action_url": "https://dashboard.exa.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Exa API 定价",
+        "action_url": "https://exa.ai/docs/admin/pricing"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
