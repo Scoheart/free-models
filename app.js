@@ -84,8 +84,12 @@
   }
 
   function blurbOf(item) {
+    // Prefer free_terms as how-to-claim; keep enough length for concrete steps.
     var raw = item.free_terms || item.summary || item.desc || item.description || "";
-    return firstSentence(raw, 60);
+    var s = String(raw || "").replace(/\s+/g, " ").trim();
+    if (!s) return "";
+    if (s.length <= 220) return s;
+    return s.slice(0, 220).replace(/[，,、\s]+$/, "") + "…";
   }
 
   function renderCard(item, now) {
