@@ -13183,5 +13183,45 @@
       "need_client",
       "cn_account"
     ]
+  },
+  {
+    "id": "sandbase-ai-city-remix-5usd-daily-minimax-m31-flash-20261026",
+    "title": "SandBase AI City Remix：每天领 $5 MiniMax M3.1 Flash 创作额度（至 10/28）",
+    "model": "MiniMax M3.1 Flash",
+    "type": "限时",
+    "deadline": "2026-10-29T07:59:59+08:00",
+    "url": "https://x.com/SandbaseAI/status/2114356556611330150",
+    "summary": "SandBase 与 MiniMax 联合活动 AI City Remix：活动页每天可领 $5 MiniMax M3.1 Flash 创作额度（每账号每天一次，数量有限），用任意 agent 经 SandBase API 调用；投稿城市主题短视频截止 UTC 10/28 23:59（北京 10/29 07:59），奖池 $11,500（平台余额）。",
+    "source": "X @SandbaseAI + sandbase.ai/lab/event/aicityremix 官方活动页",
+    "collected_at": "2026-10-26T00:49:31+08:00",
+    "expired": false,
+    "source_post_id": "2114356556611330150",
+    "post_time_bj": "2026-10-25T22:01:00+08:00",
+    "free_terms": "入口：sandbase.ai/lab/event/aicityremix → 注册/登录账号 → 点「Claim $5 free & create」（无 API Key 时弹窗可直接创建）→ 系统每天自动兑 $5 MiniMax M3.1 Flash 创作额度（每账号每天 1 次，数量有限领完即止，额度约 7 天有效；不绑卡）→ 任意 agent 经 SandBase 调模型。投稿截止北京时间 10/29 07:59。",
+    "product": "SandBase Lab",
+    "providers": [
+      {
+        "name": "SandBase",
+        "action_url": "https://www.sandbase.ai/lab/event/aicityremix"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "MiniMax M3.1 Flash（活动说明）",
+        "action_url": "https://www.sandbase.ai/docs/guides/skills/ai-city-remix"
+      },
+      {
+        "name": "AI City Remix 活动页",
+        "action_url": "https://www.sandbase.ai/lab/event/aicityremix"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
