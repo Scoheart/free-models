@@ -13448,5 +13448,45 @@
     "barriers": [
       "zero_signup"
     ]
+  },
+  {
+    "id": "replicate-try-for-free-collection-20261026",
+    "title": "Replicate「Try for free」合集：Imagen 4、FLUX 1.1 Pro 等生图/视频模型注册即可免费跑",
+    "model": "Imagen 4 / FLUX 1.1 Pro / FLUX.2 Pro / FLUX Kontext Pro / Ideogram V3 Turbo / MiniMax video-01",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/hodu382759/status/2114565934677680383",
+    "summary": "Replicate 官方「Try for free」合集列出一批注册后无需购买额度就能直接运行的模型，包括 Google Imagen 4、FLUX 1.1 Pro / FLUX.2 Pro / Kontext Pro、Ideogram V3 Turbo、MiniMax video-01、Topaz 图像/视频超分等。官方说明每个模型只给有限次数，用完需绑卡充值。",
+    "free_terms": "如何领取：打开 replicate.com/collections/try-for-free，用 GitHub 或邮箱注册登录 Replicate，选合集里的模型（如 google/imagen-4、black-forest-labs/flux-1.1-pro）在网页 Playground 直接运行，也可在账户里建 API Token 调用。无需绑卡；每个模型免费次数有限（官方未公布具体数），用完需添加账单并购买额度。",
+    "source": "X @hodu382759；官方合集 https://replicate.com/collections/try-for-free",
+    "collected_at": "2026-10-26T12:47:00+08:00",
+    "expired": false,
+    "providers": [
+      {
+        "name": "Replicate",
+        "action_url": "https://replicate.com/account/api-tokens"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Try for free 合集",
+        "action_url": "https://replicate.com/collections/try-for-free"
+      },
+      {
+        "name": "Imagen 4",
+        "action_url": "https://replicate.com/google/imagen-4"
+      },
+      {
+        "name": "FLUX 1.1 Pro",
+        "action_url": "https://replicate.com/black-forest-labs/flux-1.1-pro"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
