@@ -14047,5 +14047,43 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "tencent-hy-simulmt-open-weights-20261027",
+  "title": "腾讯混元开源中英实时同传模型 Hy-SimulMT（30B-A3B，Apache-2.0 可免费商用）",
+  "model": "Hy-SimulMT-30B-A3B",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/TencentHunyuan/status/2114701815807947159",
+  "summary": "腾讯混元开源 Hy-SimulMT：中英双向实时同声传译模型，边听边译、同时输出译文文字和语音，可实时克隆说话人音色，官方称长音频延迟约 3 秒。权重（含 Interleave 版与 GGUF）在 Hugging Face / ModelScope 免费下载，Apache-2.0 可商用；GitHub 附推理服务和训练工具。",
+  "free_terms": "如何领取：打开 Hugging Face 合集 huggingface.co/collections/tencent/hy-simulmt（或 ModelScope 合集）直接下载权重，不用注册不绑卡；按 GitHub 仓库 Tencent-Hunyuan/Hy-SimulMT 的说明部署推理服务。需自备 GPU；语音输出和音色克隆要另配 TTS 服务。Apache-2.0，可免费商用。",
+  "source": "X @TencentHunyuan；Hugging Face 模型卡 https://huggingface.co/tencent/Hy-SimulMT-30B-A3B",
+  "collected_at": "2026-10-27T04:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2114701815807947159",
+  "post_time_bj": "2026-10-26T20:52:56+08:00",
+  "product": "Hy-SimulMT 开源权重",
+  "providers": [],
+  "agents": [],
+  "models": [
+   {
+    "name": "Hy-SimulMT（Hugging Face）",
+    "action_url": "https://huggingface.co/collections/tencent/hy-simulmt"
+   },
+   {
+    "name": "Hy-SimulMT（ModelScope）",
+    "action_url": "https://www.modelscope.cn/collections/Tencent-Hunyuan/Hy-SimulMT"
+   },
+   {
+    "name": "Hy-SimulMT（GitHub）",
+    "action_url": "https://github.com/Tencent-Hunyuan/Hy-SimulMT"
+   }
+  ],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
  }
 ]
