@@ -13915,5 +13915,40 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "databricks-genie-one-free-usage-until-20270131",
+    "title": "Databricks Genie One / Genie Agents：用户用量免费至 2027-01-31（含 MCP 接入 Claude/ChatGPT）",
+    "model": "Genie One（Databricks 数据分析 Agent）",
+    "type": "限时",
+    "deadline": "2027-01-31T23:59:59-08:00",
+    "url": "https://x.com/fpastack/status/2114740690361934192",
+    "summary": "Databricks 官方文档：Genie One 和 Genie Agents 的用户用量免费到 2027 年 1 月 31 日，期间不计预算。可通过 Genie One MCP server 接到 Claude、ChatGPT、Cursor 等客户端，用自然语言问企业数据。免费只覆盖 Genie 的 LLM 用量，SQL 仓库等计算照常收费；Genie Code 不在活动内，仍是每人每月 150 DBU 免费额度。",
+    "free_terms": "如何领取：需已有 Databricks 工作区（计算资源另计费）→ 在工作区里直接用 Genie One / Genie Agents，自动按免费计（账单 SKU 显示 GENIE_FREE_USAGE），无需领码。MCP 接入：URL 为 https://<工作区域名>/ai-gateway/mcp-services/system.ai.genie_one_mcp，OAuth 需 ai-gateway scope。服务主体（service principal）调用照常收费。",
+    "source": "X @fpastack；官方 https://docs.databricks.com/aws/en/ai-bi/release-notes/2026 ；https://docs.databricks.com/aws/en/genie/monitor-cost",
+    "collected_at": "2026-10-26T23:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2114740690361934192",
+    "post_time_bj": "2026-10-26T23:27:25+08:00",
+    "product": "Databricks Genie One",
+    "providers": [
+      {
+        "name": "Databricks",
+        "action_url": "https://www.databricks.com/try-databricks"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Genie One MCP server 文档",
+        "action_url": "https://docs.databricks.com/aws/en/agents/mcp-tools/genie-mcp"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
