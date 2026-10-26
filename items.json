@@ -13721,5 +13721,47 @@
       "need_client",
       "cn_account"
     ]
+  },
+  {
+    "id": "google-developer-program-ai-pro-ultra-monthly-cloud-credits-20261026",
+    "title": "Google AI Pro / Ultra 订阅附赠：每月 $10 / $40 / $100 GenAI 与 Cloud 开发者额度",
+    "model": "Gemini API（AI Studio / Vertex AI）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/testingcatalog/status/2114673426459738303",
+    "summary": "Google Developer Program Premium 权益：订阅 Google AI Pro 每人每月得 $10、AI Ultra（20TB）$40、AI Ultra（30TB）$100 的 GenAI & Cloud 开发者额度，可在 Google AI Studio、Vertex AI 等调用 Gemini 等模型。属订阅附赠，不是零门槛免费；没领的话额度不会自动用上。",
+    "free_terms": "如何领取：用已订阅 Google AI Pro/Ultra 的 Google 账号打开 https://developers.google.com/program 加入 Google Developer Program（免费）→ 到权益页 https://me.developers.google.com/benefits 找到「GenAI and Cloud credit」点领取/激活 → 绑定一个 Google Cloud 结算账号（一般需要绑卡）→ 在 AI Studio 或 Vertex AI 里用该项目调用。每人每月一次，金额按订阅档位；只能用于 Google AI Studio / Cloud 相关产品，以权益页为准。",
+    "source": "X @testingcatalog；@NNiksin；官方 https://developers.google.com/program/plans-and-pricing",
+    "collected_at": "2026-10-26T19:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2114673426459738303",
+    "post_time_bj": "2026-10-26T19:00:08+08:00",
+    "product": "Google Developer Program Premium",
+    "providers": [
+      {
+        "name": "Google AI Studio",
+        "action_url": "https://aistudio.google.com/apikey"
+      },
+      {
+        "name": "Google Developer Program 权益页",
+        "action_url": "https://me.developers.google.com/benefits"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Gemini API 文档",
+        "action_url": "https://ai.google.dev/gemini-api/docs"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "image"
+    ],
+    "barriers": [
+      "need_key",
+      "deposit_hold"
+    ]
   }
 ]
