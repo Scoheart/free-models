@@ -13570,5 +13570,39 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "huggingfacebio-carbon-x-open-weights-20261026",
+    "title": "Carbon-X 开放权重：14.8B DNA+文本聊天模型，Apache 2.0 免费下载",
+    "model": "Carbon-X（14.8B）",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/BeiBei520_NFT/status/2114614283694944424",
+    "summary": "Hugging Face Bio 发布 Carbon-X：14.8B 解码器模型，可在普通对话里读原始 DNA 并用英文回答（变异致病性、调控区、物种分类、下一碱基等）。Apache 2.0，HF 未 gated；BF16 约需单卡 80GB，另有官方 GGUF（Q4_K_M≈9.6GB）。非临床用途，遗传数据敏感需本地自托管。",
+    "free_terms": "如何领取：打开 https://huggingface.co/HuggingFaceBio/Carbon-X 直接下载 safetensors（transformers≥v5，trust_remote_code=True），无需注册/绑卡；显存不够用 https://huggingface.co/HuggingFaceBio/Carbon-X-GGUF 的 Q4_K_M/Q8_0（需 llama.cpp≥b11742）。Apache 2.0；需自备算力；不可作医疗决策。",
+    "source": "X @BeiBei520_NFT 福利摘要；模型卡 https://huggingface.co/HuggingFaceBio/Carbon-X",
+    "collected_at": "2026-10-26T15:46:00+08:00",
+    "expired": false,
+    "source_post_id": "2114614283694944424",
+    "post_time_bj": "2026-10-26T15:05:07+08:00",
+    "product": "HuggingFaceBio Carbon-X",
+    "providers": [],
+    "agents": [],
+    "models": [
+      {
+        "name": "Carbon-X",
+        "action_url": "https://huggingface.co/HuggingFaceBio/Carbon-X"
+      },
+      {
+        "name": "Carbon-X-GGUF",
+        "action_url": "https://huggingface.co/HuggingFaceBio/Carbon-X-GGUF"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
