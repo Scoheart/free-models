@@ -14012,5 +14012,40 @@
    "need_key",
    "deposit_hold"
   ]
+ },
+ {
+  "id": "empero-kojo-free-chat-20261027",
+  "title": "Empero 新模型 Kojo 上线：网页免登录免费聊天（按小时限额，API 需付费/内测）",
+  "model": "Kojo",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/EmperoAI/status/2114780086067220529",
+  "summary": "Empero AI 发布自家新模型 Kojo，官网 kojo.sh 可免费聊天，支持联网搜索、识图、生成网页/小游戏。免费档按小时限额，登录 Empero 账号额度翻倍。OpenAI 兼容 API（api.kojo.sh/v1）的 Key 目前要付费套餐或按量付费，或仅限内测用户，API 不算免费。",
+  "free_terms": "如何领取：打开 kojo.sh 直接对话，不用注册不绑卡（聊天记录存在本浏览器）；点 Sign in 登录 Empero 账号可同步记录、每小时额度翻倍。额度按小时滚动，用满会提示多久后恢复。API Key 在 kojo.sh/platform 创建，但需付费套餐或按量付费（目前也仅对内测开放），免费档不含 API。",
+  "source": "X @EmperoAI；官网 https://kojo.sh ；API 文档 https://kojo.sh/docs",
+  "collected_at": "2026-10-27T02:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2114780086067220529",
+  "post_time_bj": "2026-10-27T02:03:57+08:00",
+  "product": "Kojo（Empero AI）",
+  "providers": [
+   {
+    "name": "Empero AI（Kojo）",
+    "action_url": "https://kojo.sh"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Kojo",
+    "action_url": "https://kojo.sh"
+   }
+  ],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
  }
 ]
