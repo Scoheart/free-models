@@ -13086,13 +13086,7 @@
     "expired": false,
     "source_post_id": "2114203102085886249",
     "post_time_bj": "2026-10-25T11:51:14+08:00",
-    "free_terms": "打开并登录 dashboard.exa.ai\n进入 Billing（账单）页\n分别输入 EXA20FREEBUFF 与 EXA20FIRESHIP（各 $20，可叠加共 $40）\n每团队每码限一次；部分账号需先绑卡验证；码可能随时失效",
-    "claim_steps": [
-      "打开并登录 dashboard.exa.ai",
-      "进入 Billing（账单）页",
-      "分别输入 EXA20FREEBUFF 与 EXA20FIRESHIP（各 $20，可叠加共 $40）",
-      "每团队每码限一次；部分账号需先绑卡验证；码可能随时失效"
-    ],
+    "free_terms": "登录 dashboard.exa.ai → Billing → 分别输入 EXA20FREEBUFF 与 EXA20FIRESHIP（各 $20，可叠共 $40）；每团队每码一次；部分账号需先绑卡验证；码可能随时失效",
     "product": "Exa Search API",
     "providers": [
       {
@@ -13609,6 +13603,47 @@
     ],
     "barriers": [
       "zero_signup"
+    ]
+  },
+  {
+    "id": "iquest-q1-320b-moe-open-weights-20261026",
+    "title": "IQuest-Q1 开放权重：320B MoE（15B 激活）Agent 编程模型，免费下载",
+    "model": "IQuest-Q1（320B MoE / 15B active）",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/0xAnto/status/2114635141075378645",
+    "summary": "IQuestLab 发布 IQuest-Q1：约 320B 稀疏 MoE（每 token 激活约 15B），512K 上下文，面向 Agent CLI / 编程与多步工具调用。权重在 Hugging Face 免费下载；Modified MIT（商用需界面标注 IQuest-Q1）。BF16 约 640GB，建议 8×H200 + SGLang/vLLM 自托管。",
+    "free_terms": "如何领取：打开 https://huggingface.co/IQuestLab/IQuest-Q1 ，用 hf download IQuestLab/IQuest-Q1 下载权重（未 gated，无需绑卡）；需自备大显存（约 8×H200）用官方 SGLang/vLLM 镜像部署。也可经网关接 Claude Code / Codex。许可为 Modified MIT，商用产品须界面显著标注「IQuest-Q1」。",
+    "source": "X @0xAnto；模型卡 https://huggingface.co/IQuestLab/IQuest-Q1；论文 https://huggingface.co/papers/2610.30949",
+    "collected_at": "2026-10-26T16:46:54+08:00",
+    "expired": false,
+    "source_post_id": "2114635141075378645",
+    "post_time_bj": "2026-10-26T16:28:00+08:00",
+    "product": "IQuestLab IQuest-Q1",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Claude Code",
+        "action_url": "https://huggingface.co/IQuestLab/IQuest-Q1"
+      },
+      {
+        "name": "Codex",
+        "action_url": "https://huggingface.co/IQuestLab/IQuest-Q1"
+      }
+    ],
+    "models": [
+      {
+        "name": "IQuest-Q1",
+        "action_url": "https://huggingface.co/IQuestLab/IQuest-Q1"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup",
+      "need_client"
     ]
   }
 ]
