@@ -13416,5 +13416,37 @@
       "need_key",
       "cn_account"
     ]
+  },
+  {
+    "id": "nanbeige43-33b-open-weights-20261026",
+    "title": "Nanbeige4.3-33B 开源：主打 Agent 编程的 33B 模型，Apache 2.0 免费下载",
+    "model": "Nanbeige4.3-33B",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/YisoIA/status/2114560847242781002",
+    "summary": "南北阁 Nanbeige 发布 Nanbeige4.3-33B 开放权重（另有 Base 版），定位 ~30B 级 Agent 编程与办公协作旗舰，模型卡显示 Terminal-Bench、DeepSWE 等多数基准领先 Qwen3.8-27B、Gemma4-31B。Apache 2.0 可商用，社区已出 GGUF 量化版。",
+    "free_terms": "如何领取：打开 Hugging Face 模型页 Nanbeige/Nanbeige4.3-33B，直接下载 safetensors 权重（transformers 加载），无需注册、无需绑卡；显存不够可用社区 AtomicChat/Nanbeige4.3-33B-GGUF 量化版在 llama.cpp 本地跑。Apache 2.0 许可，可商用，无次数限制；需自备算力。",
+    "source": "X @YisoIA；模型卡 https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
+    "collected_at": "2026-10-26T11:40:00+08:00",
+    "expired": false,
+    "providers": [],
+    "agents": [],
+    "models": [
+      {
+        "name": "Nanbeige4.3-33B",
+        "action_url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B"
+      },
+      {
+        "name": "Nanbeige4.3-33B-GGUF",
+        "action_url": "https://huggingface.co/AtomicChat/Nanbeige4.3-33B-GGUF"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
