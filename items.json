@@ -13645,5 +13645,44 @@
       "zero_signup",
       "need_client"
     ]
+  },
+  {
+    "id": "viggle-api-100-free-credits-20261026",
+    "title": "Viggle API：新账号送 100 免费 Credits（约 $1）试 JST-2 / H3 等",
+    "model": "Viggle API（JST-2 / JST-1 / MiniMax H3 等）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/AIishere_art/status/2114646757682598394",
+    "summary": "Viggle 开发者 API 门户明确：新账号注册即送 100 free credits（1 credit=$0.01，约 $1），可用于 Video Remix、3D Character/Motion、Scene、Viggle Image 与 MiniMax H3 视频等。与网页端「Try for free」不同，这是可拿 Key 的 API 试用额度；失败/取消任务不扣费。",
+    "free_terms": "如何领取：打开 https://portal.viggle.ai/getting-started 注册/登录 → 在 Dashboard 创建 API Key；新账号自动到账 100 credits（约 $1），无需绑卡即可试。1 credit=$0.01；H3 约 $0.01/秒；失败或取消不结算。额度用完后需充值；非无限。",
+    "source": "X @AIishere_art；官方 https://portal.viggle.ai/getting-started ；定价 https://docs.viggle.ai/pricing",
+    "collected_at": "2026-10-26T17:40:00+08:00",
+    "expired": false,
+    "source_post_id": "2114646757682598394",
+    "post_time_bj": "2026-10-26T17:14:09+08:00",
+    "product": "Viggle API 100 free credits",
+    "providers": [
+      {
+        "name": "Viggle API",
+        "action_url": "https://portal.viggle.ai/getting-started"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "JST-2",
+        "action_url": "https://viggle.ai/developers"
+      },
+      {
+        "name": "MiniMax H3 (via Viggle)",
+        "action_url": "https://docs.viggle.ai/pricing"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
