@@ -13847,5 +13847,73 @@
       "need_key",
       "cn_account"
     ]
+  },
+  {
+    "id": "qoder-efficient-tier-free-paid-users-20261026",
+    "title": "Qoder：Efficient 模型档位对付费用户限时 0 积分（0.3x→0.0x）",
+    "model": "Qoder Efficient 档（原生多模态、标准推理）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/WuRichard_/status/2114722827324584228",
+    "summary": "Qoder 官方活动：付费用户在模型选择器选 Efficient 档时倍率从 0.3x 降到 0.0x，不扣 Credits；覆盖 IDE、CLI、JetBrains 插件、QoderWake、移动/网页端。自 2026-09-03 起，结束时间待定（官方承诺提前通知），高峰期可能限速。",
+    "free_terms": "如何领取：需 Qoder 付费订阅（Lite/Pro/Pro+/Ultra 或 Teams/Enterprise 席位；免费用户在 Pro 试用期且有 Credits 也可）→ 把 Qoder 更新到最新版 → 在模型档位选择器选 Efficient（显示 0.0x）即自动生效，无需兑换码或设置。仅 Efficient 档免费，Auto/Ultimate/Performance 照常计费；Service Account 集成调用仍按 0.3x。",
+    "source": "X @WuRichard_；官方活动页 https://docs.qoder.com/events/efficientunlimited.md",
+    "collected_at": "2026-10-26T22:52:00+08:00",
+    "expired": false,
+    "source_post_id": "2114722827324584228",
+    "post_time_bj": "2026-10-26T22:16:26+08:00",
+    "product": "Qoder Efficient",
+    "providers": [],
+    "agents": [
+      {
+        "name": "Qoder",
+        "action_url": "https://qoder.com/download"
+      },
+      {
+        "name": "活动说明",
+        "action_url": "https://docs.qoder.com/events/efficientunlimited.md"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "xgoose-chrome-hosted-luna-trial-credit-20261026",
+    "title": "xGoose：开源 Chrome 网页 AI 插件，邮箱登录送托管模型试用额度",
+    "model": "Hosted Luna（xGoose 托管）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/mingzi206/status/2114714916494172513",
+    "summary": "开源 Chrome 插件 xGoose，在当前网页侧边开小窗问 AI，内置论坛等网站技能。邮箱登录即可用托管模型 Luna，无需自备 Key；帖主称每天约 $5 免费额度，官方文档只写「试用额度」，具体数额未公开。也支持 OpenAI 兼容/Gemini 自带 Key。",
+    "free_terms": "如何领取：Chrome 138+ 打开 Chrome 应用商店安装 xGoose → 扩展详情页开启「Allow User Scripts」（自定义技能需要）→ 插件设置里填邮箱点 Send sign-in email，10 分钟内点邮件链接自动建号登录（无密码、不绑卡）→ 选 Hosted Luna 即可用试用额度。每日 $5 为帖主说法，以插件内显示为准。",
+    "source": "X @mingzi206；官方 https://xgoose.org/chrome/ ；GitHub https://github.com/xGoose-dev/xgoose",
+    "collected_at": "2026-10-26T22:52:00+08:00",
+    "expired": false,
+    "source_post_id": "2114714916494172513",
+    "post_time_bj": "2026-10-26T21:45:00+08:00",
+    "product": "xGoose",
+    "providers": [],
+    "agents": [
+      {
+        "name": "xGoose（Chrome 应用商店）",
+        "action_url": "https://chromewebstore.google.com/detail/hbjpifhapanibalmodofhnaldjkmhbdp"
+      },
+      {
+        "name": "xGoose 官网",
+        "action_url": "https://xgoose.org/chrome/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
