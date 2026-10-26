@@ -13189,5 +13189,426 @@
       "need_client",
       "cn_account"
     ]
+  },
+  {
+    "id": "sandbase-ai-city-remix-5usd-daily-minimax-m31-flash-20261026",
+    "title": "SandBase AI City Remix：每天领 $5 MiniMax M3.1 Flash 创作额度（至 10/28）",
+    "model": "MiniMax M3.1 Flash",
+    "type": "限时",
+    "deadline": "2026-10-29T07:59:59+08:00",
+    "url": "https://x.com/SandbaseAI/status/2114356556611330150",
+    "summary": "SandBase 与 MiniMax 联合活动 AI City Remix：活动页每天可领 $5 MiniMax M3.1 Flash 创作额度（每账号每天一次，数量有限），用任意 agent 经 SandBase API 调用；投稿城市主题短视频截止 UTC 10/28 23:59（北京 10/29 07:59），奖池 $11,500（平台余额）。",
+    "source": "X @SandbaseAI + sandbase.ai/lab/event/aicityremix 官方活动页",
+    "collected_at": "2026-10-26T00:49:31+08:00",
+    "expired": false,
+    "source_post_id": "2114356556611330150",
+    "post_time_bj": "2026-10-25T22:01:00+08:00",
+    "free_terms": "入口：sandbase.ai/lab/event/aicityremix → 注册/登录账号 → 点「Claim $5 free & create」（无 API Key 时弹窗可直接创建）→ 系统每天自动兑 $5 MiniMax M3.1 Flash 创作额度（每账号每天 1 次，数量有限领完即止，额度约 7 天有效；不绑卡）→ 任意 agent 经 SandBase 调模型。投稿截止北京时间 10/29 07:59。",
+    "product": "SandBase Lab",
+    "providers": [
+      {
+        "name": "SandBase",
+        "action_url": "https://www.sandbase.ai/lab/event/aicityremix"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "MiniMax M3.1 Flash（活动说明）",
+        "action_url": "https://www.sandbase.ai/docs/guides/skills/ai-city-remix"
+      },
+      {
+        "name": "AI City Remix 活动页",
+        "action_url": "https://www.sandbase.ai/lab/event/aicityremix"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "onespace-free-deepseek-v41-flash-unlimited-20261026",
+    "title": "OneSpace Free：限时无限量免费用 DeepSeek V4.1 Flash（不耗积分）",
+    "model": "DeepSeek V4.1 Flash 1017",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/getonespace/status/2114239508107469274",
+    "summary": "多模型 AI 助手 OneSpace 官方宣布：限时内「OneSpace Free」模型改跑 DeepSeek V4.1 Flash 1017，不消耗积分、不限量（有合理使用限制），免费档也能用；免费计划不绑卡，结束时间未公布。",
+    "source": "X @getonespace 官方帖 + @jpdevxz 补充 + getonespace.com 定价页",
+    "collected_at": "2026-10-26T02:42:12+08:00",
+    "expired": false,
+    "source_post_id": "2114239508107469274",
+    "post_time_bj": "2026-10-25T14:15:54+08:00",
+    "free_terms": "入口：getonespace.com → 注册免费账号（Free 计划永久免费，无需绑卡）→ 进入对话，在模型选择里选「OneSpace Free」即为 DeepSeek V4.1 Flash 1017，调用不扣积分、不限次数（有 fair-use 限制）。网页聊天形式，非 API；限时活动，官方未给截止日期，随时可能结束。",
+    "product": "OneSpace",
+    "providers": [
+      {
+        "name": "OneSpace",
+        "action_url": "https://getonespace.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "OneSpace Free（DeepSeek V4.1 Flash）",
+        "action_url": "https://getonespace.com/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": []
+  },
+  {
+    "id": "nscale-new-user-5usd-credit-glm53-20261026",
+    "title": "Nscale 新用户免费领 $5 额度，可调用 GLM 5.3 等开源模型（OpenAI 兼容 API）",
+    "model": "GLM 5.3 / Qwen3.8-27B / Qwen3.8-Flash-Next",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/aiptsd/status/2114449467520778342",
+    "summary": "欧洲 GPU 云 Nscale 的 Serverless Inference 给每个新账号 $5 免费额度，OpenAI 兼容接口，新上架 GLM 5.3（$1.40/$4.40 每百万 token）、Qwen3.8-27B 等；10/26 起旧模型（gpt-oss、Llama、Qwen3 等）陆续下线，需在 11/2 前切换。",
+    "free_terms": "入口：console.nscale.com 注册账号 → 在控制台领取 $5 free credit（官方说明领取不需先绑卡，超出后才需加卡充值）→ AI Services 里生成 Service Token → 调 https://inference.api.nscale.com/v1（OpenAI 兼容），模型选 GLM 5.3 等。每个新账号一次；按 token 计费，$5 约够 GLM 5.3 百万级 token。",
+    "source": "X @aiptsd 优惠汇总帖 + Nscale 官方博客/文档",
+    "collected_at": "2026-10-26T04:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2114449467520778342",
+    "post_time_bj": "2026-10-26T04:10:12+08:00",
+    "product": "Nscale Serverless Inference",
+    "providers": [
+      {
+        "name": "Nscale",
+        "action_url": "https://console.nscale.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Nscale 可用模型列表（GLM 5.3 等）",
+        "action_url": "https://docs.nscale.com/docs/ai-services/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "kimi-k31-pro-plan-one-time-25pct-usage-reset-20261026",
+    "title": "Kimi K3.1 Pro 订阅全员一次性用量重置：返还 25% 月额度（约一周用量）",
+    "model": "Kimi K3.1 Pro",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/Kimi_Moonshot/status/2114450610724708492",
+    "summary": "Kimi 官方为 K3.1 Pro 订阅计划的限流和额度异常消耗道歉：所有档位订阅用户获得一次性用量重置，返还 25% 月额度（已用不足 25% 的直接清零），相当于一周用量；同时调整计划参数、减少不必要的子代理调用和输出长度，让额度更耐用。",
+    "free_terms": "无需领取：已订阅 Kimi 任一档会员计划的账号自动生效，官方称太平洋时间 10/25 当天结束前（约北京 10/26 15:00）用量条会更新。到 kimi.com 登录 → 会员/Kimi Code 页面查看用量条确认。仅限现有付费订阅用户、每账号一次，免费账号不适用；不需额外绑卡或填码。",
+    "source": "X @Kimi_Moonshot 官方帖",
+    "collected_at": "2026-10-26T05:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2114450610724708492",
+    "post_time_bj": "2026-10-26T04:14:44+08:00",
+    "product": "Kimi 会员订阅（K3.1 Pro 计划）",
+    "providers": [
+      {
+        "name": "Kimi 会员与定价",
+        "action_url": "https://www.kimi.com/membership/pricing"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Kimi Code",
+        "action_url": "https://www.kimi.com/code"
+      }
+    ],
+    "models": [
+      {
+        "name": "Kimi（K3.1 Pro）",
+        "action_url": "https://www.kimi.com/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "claude-code-cloud-session-credit-expire-nov4-20261026",
+    "title": "Claude Code 云端会话赠送额度 11/4 到期提醒：Pro $100 / Max $250，没用完作废",
+    "model": "Claude（Claude Code 云端会话）",
+    "type": "额度",
+    "deadline": "2026-11-04T23:59:00-08:00",
+    "url": "https://x.com/knightleijun/status/2114426372890218809",
+    "summary": "Anthropic 在 Claude Code 云端会话正式上线时，给 9/23 时在订 Pro/Max 的个人用户一次性送了云端会话专用额度（Pro $100、Max $250），先扣这笔再扣套餐限额。领取已于 10/7 截止，已领到的余额在太平洋时间 11/4 23:59（北京 11/5 15:59）作废，不结转。",
+    "free_terms": "领取窗口已关（10/7 截止），只有已领或被自动发放的账号能用。用法：登录 claude.ai/code，连上 GitHub 并选仓库，开云端会话即自动先扣赠额，不需绑卡或开付费额度；在设置的用量页可看余额。仅限 9/23 时有效的个人 Pro/Max，Team/Enterprise/试用不适用；本地 Claude Code、Projects、Routines、聊天不消耗此额度。",
+    "source": "X @knightleijun（另见 BleepingComputer 等报道）",
+    "collected_at": "2026-10-26T08:40:00+08:00",
+    "expired": false,
+    "source_post_id": "2114426372890218809",
+    "post_time_bj": "2026-10-26T02:38:26+08:00",
+    "product": "Claude Code 云端会话（claude.ai/code）",
+    "providers": [
+      {
+        "name": "Claude Code（网页版）",
+        "action_url": "https://claude.ai/code"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Claude Code",
+        "action_url": "https://claude.com/product/claude-code"
+      }
+    ],
+    "models": [
+      {
+        "name": "Claude",
+        "action_url": "https://claude.ai/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "qiniu-kimi-k3-free-api-20261026",
+    "title": "七牛云上架 Kimi-K3 Free：API 调用 0 元（moonshotai/kimi-k3-free，1M 上下文）",
+    "model": "Kimi K3（moonshotai/kimi-k3-free）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/Dazzle_sys/status/2114529965643366827",
+    "summary": "七牛云 AI 大模型广场新增 Kimi-K3 Free 免费版，模型广场标注「免费调用，不计费」，公开模型列表已能查到 moonshotai/kimi-k3-free。1M 上下文，支持视觉理解、工具调用和深度思考；与 Conatus Free 是两个不同的免费模型。截止时间和限速官方未写明。",
+    "free_terms": "在 qiniu.com 注册并完成实名认证 → 控制台「API Key」页新建密钥 → Base URL 填 https://api.qnaigc.com/v1（OpenAI 兼容），模型 ID 填 moonshotai/kimi-k3-free 即可调用，不计费、不需绑卡。需国内实名；限速/每日上限官方未公布，免费期可能随时调整。",
+    "source": "X @Dazzle_sys；七牛云模型广场 qiniu.com/ai/models、api.qnaigc.com/v1/models 已核实",
+    "collected_at": "2026-10-26T09:40:00+08:00",
+    "expired": false,
+    "source_post_id": "2114529965643366827",
+    "post_time_bj": "2026-10-26T09:30:04+08:00",
+    "product": "七牛云 AI 大模型推理",
+    "providers": [
+      {
+        "name": "七牛云 API Key",
+        "action_url": "https://portal.qiniu.com/developer/user/key"
+      },
+      {
+        "name": "七牛云模型广场",
+        "action_url": "https://www.qiniu.com/ai/models"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Kimi-K3 Free（七牛云模型广场）",
+        "action_url": "https://www.qiniu.com/ai/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account"
+    ]
+  },
+  {
+    "id": "nanbeige43-33b-open-weights-20261026",
+    "title": "Nanbeige4.3-33B 开源：主打 Agent 编程的 33B 模型，Apache 2.0 免费下载",
+    "model": "Nanbeige4.3-33B",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/YisoIA/status/2114560847242781002",
+    "summary": "南北阁 Nanbeige 发布 Nanbeige4.3-33B 开放权重（另有 Base 版），定位 ~30B 级 Agent 编程与办公协作旗舰，模型卡显示 Terminal-Bench、DeepSWE 等多数基准领先 Qwen3.8-27B、Gemma4-31B。Apache 2.0 可商用，社区已出 GGUF 量化版。",
+    "free_terms": "如何领取：打开 Hugging Face 模型页 Nanbeige/Nanbeige4.3-33B，直接下载 safetensors 权重（transformers 加载），无需注册、无需绑卡；显存不够可用社区 AtomicChat/Nanbeige4.3-33B-GGUF 量化版在 llama.cpp 本地跑。Apache 2.0 许可，可商用，无次数限制；需自备算力。",
+    "source": "X @YisoIA；模型卡 https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
+    "collected_at": "2026-10-26T11:40:00+08:00",
+    "expired": false,
+    "providers": [],
+    "agents": [],
+    "models": [
+      {
+        "name": "Nanbeige4.3-33B",
+        "action_url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B"
+      },
+      {
+        "name": "Nanbeige4.3-33B-GGUF",
+        "action_url": "https://huggingface.co/AtomicChat/Nanbeige4.3-33B-GGUF"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
+  },
+  {
+    "id": "replicate-try-for-free-collection-20261026",
+    "title": "Replicate「Try for free」合集：Imagen 4、FLUX 1.1 Pro 等生图/视频模型注册即可免费跑",
+    "model": "Imagen 4 / FLUX 1.1 Pro / FLUX.2 Pro / FLUX Kontext Pro / Ideogram V3 Turbo / MiniMax video-01",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/hodu382759/status/2114565934677680383",
+    "summary": "Replicate 官方「Try for free」合集列出一批注册后无需购买额度就能直接运行的模型，包括 Google Imagen 4、FLUX 1.1 Pro / FLUX.2 Pro / Kontext Pro、Ideogram V3 Turbo、MiniMax video-01、Topaz 图像/视频超分等。官方说明每个模型只给有限次数，用完需绑卡充值。",
+    "free_terms": "如何领取：打开 replicate.com/collections/try-for-free，用 GitHub 或邮箱注册登录 Replicate，选合集里的模型（如 google/imagen-4、black-forest-labs/flux-1.1-pro）在网页 Playground 直接运行，也可在账户里建 API Token 调用。无需绑卡；每个模型免费次数有限（官方未公布具体数），用完需添加账单并购买额度。",
+    "source": "X @hodu382759；官方合集 https://replicate.com/collections/try-for-free",
+    "collected_at": "2026-10-26T12:47:00+08:00",
+    "expired": false,
+    "providers": [
+      {
+        "name": "Replicate",
+        "action_url": "https://replicate.com/account/api-tokens"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Try for free 合集",
+        "action_url": "https://replicate.com/collections/try-for-free"
+      },
+      {
+        "name": "Imagen 4",
+        "action_url": "https://replicate.com/google/imagen-4"
+      },
+      {
+        "name": "FLUX 1.1 Pro",
+        "action_url": "https://replicate.com/black-forest-labs/flux-1.1-pro"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "freemilk-iphone-coding-agent-daily-free-20261026",
+    "title": "FreeMilk：iPhone 端免费 coding agent，每日额度 DeepSeek V4.1 Flash / GLM 5.3 Flash / GPT 6 Luna",
+    "model": "DeepSeek V4.1 Flash / GLM 5.3 Flash / GPT 6 Luna",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/neeeel/status/2114425316135567634",
+    "summary": "FreeMilk（原 Milq）是跑在 iPhone 上的免费 coding agent：Agent 本机读写文件、本地 git、连 GitHub/MCP，模型走远端。官方 freemilk.ai 与 App Store 说明广告赞助每日模型额度，覆盖 DeepSeek V4.1 Flash、GLM 5.3 Flash、GPT 6 Luna，每日自动回填，无订阅、无按 token 计费；也可绑定自己的 ChatGPT 订阅。需 iOS 26+；非开放 LLM API。",
+    "free_terms": "如何领取：打开 App Store 搜 FreeMilk（或 apps.apple.com/.../id6767423666）下载（需 iPhone、iOS 26+），用 Apple ID 安装，打开 App 即可用免费档——每日额度覆盖 DeepSeek V4.1 Flash / GLM 5.3 Flash / GPT 6 Luna，广告赞助、每日回填，无需绑卡/订阅。用完等次日回填或连接自有 ChatGPT 订阅。仅 App 内可用，无对外 API Key。",
+    "source": "X @neeeel（官方）；@tvytlx 转述；https://www.freemilk.ai/",
+    "collected_at": "2026-10-26T14:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2114425316135567634",
+    "post_time_bj": "2026-10-26T02:34:14+08:00",
+    "providers": [
+      {
+        "name": "FreeMilk",
+        "action_url": "https://www.freemilk.ai/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "FreeMilk（App Store）",
+        "action_url": "https://apps.apple.com/us/app/freemilk-ai-code-ide-agents/id6767423666"
+      }
+    ],
+    "models": [
+      {
+        "name": "DeepSeek V4.1 Flash",
+        "action_url": "https://www.freemilk.ai/"
+      },
+      {
+        "name": "GLM 5.3 Flash",
+        "action_url": "https://www.freemilk.ai/"
+      },
+      {
+        "name": "GPT 6 Luna",
+        "action_url": "https://www.freemilk.ai/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "codex-day21-global-usage-reset-20261026",
+    "title": "Codex：「28 天挑战」第 21 天，全员用量再次重置",
+    "model": "Codex / ChatGPT（付费档共用额度）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/thsottiaux/status/2114588174249071102",
+    "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）北京时间 10/26 13:21 发帖「Day 21/ Wonder what happens the remaining seven days. But today is a reset.」，即「28 天挑战」第 21 天再次全局重置 Codex 用量（此前第 8、10、13、15、17、18、20 天也重置过）。挑战还剩 7 天。重置的是 ChatGPT 付费账号在 Codex 里的五小时/周额度，不是 API 余额；可在 Codex 里 /status 确认。",
+    "free_terms": "如何领取：已是 ChatGPT 付费档（Plus/Pro 等）用户打开 chatgpt.com/codex 或 Codex 客户端，用量已由官方全局重置，无需额外领取码或绑卡；敲 /status 可看是否回满。一次性重置、无截止；不改 API 余额；免费档不适用。",
+    "source": "X @thsottiaux；社区 @knightleijun / @DevAdventur3s 等确认到账",
+    "collected_at": "2026-10-26T14:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2114588174249071102",
+    "post_time_bj": "2026-10-26T13:21:22+08:00",
+    "product": "OpenAI Codex usage reset (Day 21)",
+    "providers": [
+      {
+        "name": "Codex（ChatGPT 网页入口）",
+        "action_url": "https://chatgpt.com/codex"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Codex 官方文档与下载",
+        "action_url": "https://developers.openai.com/codex"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "huggingfacebio-carbon-x-open-weights-20261026",
+    "title": "Carbon-X 开放权重：14.8B DNA+文本聊天模型，Apache 2.0 免费下载",
+    "model": "Carbon-X（14.8B）",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://x.com/BeiBei520_NFT/status/2114614283694944424",
+    "summary": "Hugging Face Bio 发布 Carbon-X：14.8B 解码器模型，可在普通对话里读原始 DNA 并用英文回答（变异致病性、调控区、物种分类、下一碱基等）。Apache 2.0，HF 未 gated；BF16 约需单卡 80GB，另有官方 GGUF（Q4_K_M≈9.6GB）。非临床用途，遗传数据敏感需本地自托管。",
+    "free_terms": "如何领取：打开 https://huggingface.co/HuggingFaceBio/Carbon-X 直接下载 safetensors（transformers≥v5，trust_remote_code=True），无需注册/绑卡；显存不够用 https://huggingface.co/HuggingFaceBio/Carbon-X-GGUF 的 Q4_K_M/Q8_0（需 llama.cpp≥b11742）。Apache 2.0；需自备算力；不可作医疗决策。",
+    "source": "X @BeiBei520_NFT 福利摘要；模型卡 https://huggingface.co/HuggingFaceBio/Carbon-X",
+    "collected_at": "2026-10-26T15:46:00+08:00",
+    "expired": false,
+    "source_post_id": "2114614283694944424",
+    "post_time_bj": "2026-10-26T15:05:07+08:00",
+    "product": "HuggingFaceBio Carbon-X",
+    "providers": [],
+    "agents": [],
+    "models": [
+      {
+        "name": "Carbon-X",
+        "action_url": "https://huggingface.co/HuggingFaceBio/Carbon-X"
+      },
+      {
+        "name": "Carbon-X-GGUF",
+        "action_url": "https://huggingface.co/HuggingFaceBio/Carbon-X-GGUF"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
   }
 ]
