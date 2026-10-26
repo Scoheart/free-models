@@ -13763,5 +13763,89 @@
       "need_key",
       "deposit_hold"
     ]
+  },
+  {
+    "id": "pojiaai-dp41-flash-24h-free-20261026",
+    "title": "破甲 POJIAAI：DeepSeek V4.1 Flash 故障补偿 24 小时全免费",
+    "model": "deepseek-v4.1-flash",
+    "type": "限时",
+    "deadline": "2026-10-27T21:15:00+08:00",
+    "url": "https://x.com/pojia_ai/status/2114709612478025747",
+    "summary": "POJIAAI（破甲 AI）官方因服务中断补偿：北京时间 10/26 21:15—10/27 21:15 共 24 小时，指定分组令牌调用 deepseek-v4.1-flash 费用全免；若新注册踊跃可能再延长一天。其他分组仍按原倍率计费。",
+    "free_terms": "如何领取：打开 https://pojia.ai/register 注册（或 https://pojia.ai/login 登录）→ 到 https://pojia.ai/keys 创建令牌，分组选「POJIAAI-DP4.1补偿活动」→ 客户端 Base URL 填 https://api.pojia.ai ，模型名填 deepseek-v4.1-flash。活动窗 10/26 21:15—10/27 21:15（北京时间）；国模高速组及其他分组仍计费；官方称新用户多或再延一天，以站内为准。",
+    "source": "X @pojia_ai（官方）；站点 https://pojia.ai ；API https://api.pojia.ai",
+    "collected_at": "2026-10-26T21:46:20+08:00",
+    "expired": false,
+    "source_post_id": "2114709612478025747",
+    "post_time_bj": "2026-10-26T21:23:55+08:00",
+    "product": "POJIAAI DP4.1 补偿免费",
+    "providers": [
+      {
+        "name": "POJIAAI",
+        "action_url": "https://pojia.ai/register"
+      },
+      {
+        "name": "POJIAAI 令牌/Keys",
+        "action_url": "https://pojia.ai/keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "deepseek-v4.1-flash",
+        "action_url": "https://pojia.ai/model-plaza"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "infini-genstudio-embedding-rerank-free-20261026",
+    "title": "无问芯穹 GenStudio：Embedding / Rerank API 暂不收费（LLM 已按量）",
+    "model": "bge-m3 / bge-reranker-v2-m3",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/hodu382759/status/2114713154928132228",
+    "summary": "官方 FAQ 写明：自 2026-03-30 起预置 LLM API 按 Token 计费，但向量嵌入与重排序 API 仍暂不收费；网页体验中心也不计费。适合做 RAG 缺向量/重排的场景。有 RPM/RPD/TPM 限频。",
+    "free_terms": "如何领取：打开 https://cloud.infini-ai.com 注册/登录智算云（需绑手机）→ 控制台创建 sk- 开头 API Key → Base URL 用 https://cloud.infini-ai.com/maas/v1 ；Embedding 调 /embeddings（模型 bge-m3），Rerank 调 /rerank（模型 bge-reranker-v2-m3）。无需为这两类接口充值；LLM 对话 API 已收费。单 Key 约 RPM 1000 / RPD 25万，超限 429。政策以 https://docs.infini-ai.com/support/faq.html 为准。",
+    "source": "X @hodu382759；官方 FAQ https://docs.infini-ai.com/support/faq.html ；Embeddings https://docs.infini-ai.com/gen-studio/api/retrieval/tutorial-embeddings.html",
+    "collected_at": "2026-10-26T21:46:20+08:00",
+    "expired": false,
+    "source_post_id": "2114713154928132228",
+    "post_time_bj": "2026-10-26T21:38:00+08:00",
+    "product": "无问芯穹 GenStudio Embedding/Rerank",
+    "providers": [
+      {
+        "name": "无问芯穹智算云",
+        "action_url": "https://cloud.infini-ai.com"
+      },
+      {
+        "name": "GenStudio FAQ",
+        "action_url": "https://docs.infini-ai.com/support/faq.html"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "bge-m3",
+        "action_url": "https://docs.infini-ai.com/gen-studio/api/retrieval/tutorial-embeddings.html"
+      },
+      {
+        "name": "bge-reranker-v2-m3",
+        "action_url": "https://docs.infini-ai.com/gen-studio/api/retrieval/tutorial-rerank.html"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account"
+    ]
   }
 ]
