@@ -13488,5 +13488,87 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "freemilk-iphone-coding-agent-daily-free-20261026",
+    "title": "FreeMilk：iPhone 端免费 coding agent，每日额度 DeepSeek V4.1 Flash / GLM 5.3 Flash / GPT 6 Luna",
+    "model": "DeepSeek V4.1 Flash / GLM 5.3 Flash / GPT 6 Luna",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/neeeel/status/2114425316135567634",
+    "summary": "FreeMilk（原 Milq）是跑在 iPhone 上的免费 coding agent：Agent 本机读写文件、本地 git、连 GitHub/MCP，模型走远端。官方 freemilk.ai 与 App Store 说明广告赞助每日模型额度，覆盖 DeepSeek V4.1 Flash、GLM 5.3 Flash、GPT 6 Luna，每日自动回填，无订阅、无按 token 计费；也可绑定自己的 ChatGPT 订阅。需 iOS 26+；非开放 LLM API。",
+    "free_terms": "如何领取：打开 App Store 搜 FreeMilk（或 apps.apple.com/.../id6767423666）下载（需 iPhone、iOS 26+），用 Apple ID 安装，打开 App 即可用免费档——每日额度覆盖 DeepSeek V4.1 Flash / GLM 5.3 Flash / GPT 6 Luna，广告赞助、每日回填，无需绑卡/订阅。用完等次日回填或连接自有 ChatGPT 订阅。仅 App 内可用，无对外 API Key。",
+    "source": "X @neeeel（官方）；@tvytlx 转述；https://www.freemilk.ai/",
+    "collected_at": "2026-10-26T14:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2114425316135567634",
+    "post_time_bj": "2026-10-26T02:34:14+08:00",
+    "providers": [
+      {
+        "name": "FreeMilk",
+        "action_url": "https://www.freemilk.ai/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "FreeMilk（App Store）",
+        "action_url": "https://apps.apple.com/us/app/freemilk-ai-code-ide-agents/id6767423666"
+      }
+    ],
+    "models": [
+      {
+        "name": "DeepSeek V4.1 Flash",
+        "action_url": "https://www.freemilk.ai/"
+      },
+      {
+        "name": "GLM 5.3 Flash",
+        "action_url": "https://www.freemilk.ai/"
+      },
+      {
+        "name": "GPT 6 Luna",
+        "action_url": "https://www.freemilk.ai/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "codex-day21-global-usage-reset-20261026",
+    "title": "Codex：「28 天挑战」第 21 天，全员用量再次重置",
+    "model": "Codex / ChatGPT（付费档共用额度）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/thsottiaux/status/2114588174249071102",
+    "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）北京时间 10/26 13:21 发帖「Day 21/ Wonder what happens the remaining seven days. But today is a reset.」，即「28 天挑战」第 21 天再次全局重置 Codex 用量（此前第 8、10、13、15、17、18、20 天也重置过）。挑战还剩 7 天。重置的是 ChatGPT 付费账号在 Codex 里的五小时/周额度，不是 API 余额；可在 Codex 里 /status 确认。",
+    "free_terms": "如何领取：已是 ChatGPT 付费档（Plus/Pro 等）用户打开 chatgpt.com/codex 或 Codex 客户端，用量已由官方全局重置，无需额外领取码或绑卡；敲 /status 可看是否回满。一次性重置、无截止；不改 API 余额；免费档不适用。",
+    "source": "X @thsottiaux；社区 @knightleijun / @DevAdventur3s 等确认到账",
+    "collected_at": "2026-10-26T14:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2114588174249071102",
+    "post_time_bj": "2026-10-26T13:21:22+08:00",
+    "product": "OpenAI Codex usage reset (Day 21)",
+    "providers": [
+      {
+        "name": "Codex（ChatGPT 网页入口）",
+        "action_url": "https://chatgpt.com/codex"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Codex 官方文档与下载",
+        "action_url": "https://developers.openai.com/codex"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
