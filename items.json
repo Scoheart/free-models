@@ -13684,5 +13684,42 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "codar-deepseek-v41-flash-7day-free-20261026",
+    "title": "科搭 Codar：新用户领 7 天免费 DeepSeek V4.1 Flash（客户端内 0× 计费）",
+    "model": "DeepSeek V4.1 Flash",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/leo114119/status/2114665808236323052",
+    "summary": "AI 科研桌面助手「科搭 Codar」在客户端里提供「免费领取 AI 模型」入口，领取后 7 天内用 DeepSeek V4.1 Flash 计费系数为 0×（社区反馈 7 天后约 0.06×）。官方未公布活动页和截止日期，以客户端显示为准。",
+    "free_terms": "如何领取：到 https://codar.speedai.com/download 下载 Mac/Windows 客户端 → 微信扫码/手机号/账号登录 → 点工作台左下角「免费领取 AI 模型」→ 切到「免费模型」页点领取 → 选活动支持的模型使用。无需绑卡；自领取/注册起约 7 天免费，之后恢复计费；邀请码非必填，规则以客户端为准。",
+    "source": "X @leo114119；社区讨论 https://www.nodeloc.com/t/topic/115337 ；官网 https://codar.speedai.com/",
+    "collected_at": "2026-10-26T18:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2114665808236323052",
+    "post_time_bj": "2026-10-26T18:29:51+08:00",
+    "product": "科搭 Codar 免费模型",
+    "providers": [],
+    "agents": [
+      {
+        "name": "科搭 Codar",
+        "action_url": "https://codar.speedai.com/download"
+      }
+    ],
+    "models": [
+      {
+        "name": "DeepSeek V4.1 Flash",
+        "action_url": "https://www.deepseek.com/news/deepseek-v4-1-flash/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_client",
+      "cn_account"
+    ]
   }
 ]
