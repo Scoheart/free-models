@@ -14125,5 +14125,45 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "decuff-abliterated-api-free-1m-tokens-20261027",
+  "title": "decuff 无审查开源模型 API：Google/手机登录每月送 100 万 tokens",
+  "model": "decuffed-flash（Qwen3.8 27B abliterated）/ decuffed-flagship（DeepSeek V4.1 Flash abliterated）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/decuffai/status/2114077560867115191",
+  "summary": "新上线的 decuff 提供去拒答（abliterated）版开源权重模型的 OpenAI/Anthropic 兼容 API，可接 Claude Code、Codex。每个账号先送免费试用；用 Google 或手机号登录每月额外送 100 万免费 tokens。官网定价页与文档已核实。",
+  "free_terms": "如何领取：打开 decuff.ai/account，用 Google 或手机号登录（可得每月 100 万免费 tokens，任意在线模型可用；只用匿名账号则为 Flash 每月 50 万 tokens 试用），无需绑卡。进 API keys 创建 dc_sk_ 开头的 Key，base URL 填 https://api.decuff.ai/v1，模型 decuffed-flash。免费额度限 20 次/分钟、每天最多 20 万 tokens、单次输出 4096 tokens，容量用完即止。",
+  "source": "X @decuffai；转述 @guxiaochun888；官网 https://decuff.ai/models 与 https://decuff.ai/docs",
+  "collected_at": "2026-10-27T09:45:00+08:00",
+  "expired": false,
+  "source_post_id": "2114077560867115191",
+  "post_time_bj": "2026-10-25T03:32:00+08:00",
+  "product": "decuff",
+  "providers": [
+   {
+    "name": "decuff 账号/API Key",
+    "action_url": "https://decuff.ai/account"
+   },
+   {
+    "name": "decuff 定价页",
+    "action_url": "https://decuff.ai/models"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "decuff 文档",
+    "action_url": "https://decuff.ai/docs"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
