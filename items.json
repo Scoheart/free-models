@@ -14085,5 +14085,45 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "scaleway-generative-apis-free-tier-1m-tokens-20261027",
+  "title": "Scaleway Generative APIs 免费档：100 万 tokens + 60 分钟语音转写（欧洲云）",
+  "model": "DeepSeek V4.1 Flash / GLM-5.3 / Qwen3.8-27B / Gemma 4 / Mistral Medium 3.5 / gpt-oss-120b 等",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/hodu382759/status/2114868679389110315",
+  "summary": "法国云厂商 Scaleway 的 Serverless Generative APIs 自带免费档：100 万 tokens 加 60 分钟音频转写，可调 GLM-5.3、DeepSeek V4.1 Flash、Qwen3.8、Gemma 4、Mistral 等模型（OpenAI 兼容）。另有 whisper-large-v3、qwen3-embedding-8b、bge 嵌入等模型输出侧标为免费。官网定价页已核实。",
+  "free_terms": "如何领取：在 console.scaleway.com 注册 Scaleway 账号并完成账户验证（官方页未写明是否必须绑卡，欧洲云一般需填支付方式），进入 Generative APIs 页创建 API Key（IAM），用 OpenAI 兼容接口调用即可自动扣免费档：100 万 tokens + 60 分钟语音转写，超出按 €/百万 token 计费。Batches 半价。",
+  "source": "X @hodu382759；Scaleway 定价页 https://www.scaleway.com/en/pricing/model-as-a-service/",
+  "collected_at": "2026-10-27T08:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2114868679389110315",
+  "post_time_bj": "2026-10-27T07:56:00+08:00",
+  "product": "Scaleway Generative APIs",
+  "providers": [
+   {
+    "name": "Scaleway Console",
+    "action_url": "https://console.scaleway.com/generative-api/models"
+   },
+   {
+    "name": "Scaleway 定价页",
+    "action_url": "https://www.scaleway.com/en/pricing/model-as-a-service/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Generative APIs 文档",
+    "action_url": "https://www.scaleway.com/en/docs/generative-apis/"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
