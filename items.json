@@ -14253,5 +14253,49 @@
       "need_key",
       "cn_account"
     ]
+  },
+  {
+    "id": "baidu-unlimited-ocr-doc-parse-api-free-200pages-20261027",
+    "title": "百度智能云 文档解析（Unlimited-OCR）API 限时免费：个人实名送 200 页",
+    "model": "文心 Unlimited-OCR 2（开源 Unlimited-OCR，MIT）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/Younik4we/status/2114929633154023757",
+    "summary": "百度智能云 10/27 更新文档：新上线「文档解析（Unlimited-OCR）」免部署 API，基于文心 Unlimited-OCR 2，跨页表格/段落自动合并、标题层级解析，直接输出 JSON/Markdown，扫描件、图片 PDF 可转结构化文本。接口限时免费，个人实名送 200 页、企业实名 1000 页；模型本身也已在 GitHub/Hugging Face 开源可自部署。",
+    "free_terms": "如何领取：注册百度智能云 → 完成个人实名认证 → 进入「文字识别」控制台，约 10 分钟内自动发放「文档解析」免费测试资源 200 页（企业实名 1000 页），在资源列表查看。用 API Key/Secret Key 换 access_token 调用异步接口（提交 QPS 2、查询 QPS 5）。成功和失败调用都扣额度；用完可申请调额或开通付费。不用绑卡。",
+    "source": "X @Younik4we；百度智能云 OCR 文档《文档解析（Unlimited-OCR）》（2026-10-27 更新）与《免费测试资源》页已核实",
+    "collected_at": "2026-10-27T12:52:00+08:00",
+    "expired": false,
+    "source_post_id": "2114929633154023757",
+    "post_time_bj": "2026-10-27T11:58:12+08:00",
+    "product": "百度智能云 文字识别 · 文档解析（Unlimited-OCR）",
+    "providers": [
+      {
+        "name": "百度智能云 文档解析 API 文档",
+        "action_url": "https://ai.baidu.com/ai-doc/OCR/fmr1p39gb"
+      },
+      {
+        "name": "百度智能云 OCR 免费测试资源说明",
+        "action_url": "https://cloud.baidu.cn/doc/OCR/s/fk3h7xu7h"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Unlimited-OCR GitHub",
+        "action_url": "https://github.com/baidu/Unlimited-OCR"
+      },
+      {
+        "name": "Unlimited-OCR Hugging Face",
+        "action_url": "https://huggingface.co/baidu/Unlimited-OCR"
+      }
+    ],
+    "scenes": [
+      "ocr"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account"
+    ]
   }
 ]
