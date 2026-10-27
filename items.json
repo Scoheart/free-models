@@ -14440,5 +14440,125 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "apinex-kimi-k3-free-20m-daily-20261028",
+  "title": "APInex：Kimi K3 免费上线，免费档每天 20M tokens",
+  "model": "free/kimi-k3（Kimi K3，1M 上下文）",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/APInex_ai/status/2115133927543230939",
+  "summary": "第三方 OpenAI 兼容聚合站 APInex 官推宣布 Kimi K3 免费，模型 ID free/kimi-k3，1M 上下文、支持工具调用，可接 Cursor、Claude Code、Hermes、OpenCode；免费档每天 20M tokens、15 RPM（此前为 3M/天）。官网免费列表另含 Kimi K2.8、GLM-5.3、MiniMax M3.1 Flash、Qwen 3.8 MAX 等。属第三方代理，勿传敏感数据。",
+  "free_terms": "打开 apinex.bond 点 Create account 注册（官网称无需订阅/绑卡）→ 控制台创建 sk-apx… Key → Base URL 填 https://api.apinex.bond/v1，模型填 free/kimi-k3。免费档每天共 20M tokens（00:00 UTC 重置）、15 RPM；额度和名单可能随时调整，截止未定。",
+  "source": "X @APInex_ai 官推；官网 apinex.bond/models?provider=Free",
+  "collected_at": "2026-10-28T01:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2115133927543230939",
+  "post_time_bj": "2026-10-28T01:30:00+08:00",
+  "product": "APInex",
+  "providers": [
+   {
+    "name": "APInex",
+    "action_url": "https://apinex.bond/"
+   },
+   {
+    "name": "APInex 文档",
+    "action_url": "https://apinex.bond/docs"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "APInex 免费模型列表",
+    "action_url": "https://apinex.bond/models?provider=Free"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "token360-minimax-m3.1-flash-free-72h-20261102",
+  "title": "Token360：MiniMax M3.1 Flash 限时免费 72 小时（11/3–11/6）",
+  "model": "MiniMax M3.1 Flash（minimax-m3.1-flash）",
+  "type": "限时",
+  "deadline": "2026-11-06T01:00:00+08:00",
+  "url": "https://x.com/benny_token360/status/2115121795779141660",
+  "summary": "美国多模态推理网关 Token360 预告：MiniMax M3.1 Flash 将在其 API 上免费 72 小时，太平洋时间 11/2 9:00 至 11/5 9:00（北京时间约 11/3 01:00 至 11/6 01:00）。模型 1M 上下文、支持多模态与推理，OpenAI 兼容，平时价 $0.15/$0.6 每百万 tokens。尚未开始，到点再用。",
+  "free_terms": "去 token360.ai 点 Sign up free 注册 → 控制台创建 API Key → Base URL 填 https://api.token360.ai/v1，模型 id 填 minimax-m3.1-flash。免费窗口为北京时间 11/3 01:00–11/6 01:00（帖子未说明单账号限额和是否需绑卡，以控制台为准）；窗口外按量计费。",
+  "source": "X @benny_token360；Token360 模型页",
+  "collected_at": "2026-10-28T01:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2115121795779141660",
+  "post_time_bj": "2026-10-28T00:41:47+08:00",
+  "product": "Token360",
+  "providers": [
+   {
+    "name": "Token360",
+    "action_url": "https://www.token360.ai/en-US"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "MiniMax M3.1 Flash（Token360）",
+    "action_url": "https://www.token360.ai/en-US/explore/models/minimax-m3.1-flash"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
+ },
+ {
+  "id": "liquid-lfm3-open-weights-20261027",
+  "title": "Liquid AI 发布 LFM3 系列开源权重（1.7B 文本 / 2B 视觉·音频·全模态）",
+  "model": "LFM3-1.7B · LFM3-VL-2B · LFM3-Audio-2B · LFM3-Omni-2B",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/liquidai/status/2115128329003303107",
+  "summary": "Liquid AI 正式发布新一代 LFM3 端侧模型家族：LFM3-1.7B（256k 上下文文本）、LFM3-VL-2B（视觉语言，支持视频输入）、LFM3-Audio-2B（语音对话/工具调用）、LFM3-Omni-2B（全模态）及 d1 决策模型，可单卡微调、手机离线运行。Hugging Face 已上架权重及 GGUF、MLX、ONNX 等量化版本，可免费下载本地跑。",
+  "free_terms": "打开 Hugging Face 上 LiquidAI 的 LFM3 模型页直接下载权重（部分模型可能要先登录 HF 并同意许可）；电脑可用 llama.cpp/LM Studio 加载 GGUF，Mac 用 MLX 版本。本地运行无需 Key、不绑卡、不限次数；商用请看各模型页的 LFM 许可条款。",
+  "source": "X @liquidai 官推；Hugging Face LiquidAI",
+  "collected_at": "2026-10-28T01:52:00+08:00",
+  "expired": false,
+  "source_post_id": "2115128329003303107",
+  "post_time_bj": "2026-10-28T01:07:45+08:00",
+  "product": "Liquid AI LFM3",
+  "providers": [
+   {
+    "name": "Liquid AI",
+    "action_url": "https://www.liquid.ai/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "LFM3-1.7B（HF）",
+    "action_url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+   },
+   {
+    "name": "LFM3-VL-2B（HF）",
+    "action_url": "https://huggingface.co/LiquidAI/LFM3-VL-2B"
+   },
+   {
+    "name": "LFM3-Omni-2B（HF）",
+    "action_url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "image"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
  }
 ]
