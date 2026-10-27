@@ -14603,5 +14603,43 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "giotto-alto-free-chat-20261028",
+  "title": "瑞士 Giotto Alto 推理旗舰免费开放：网页匿名聊天免注册 + iOS/Android App",
+  "model": "Giotto Alto",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://x.com/giotto_ai/status/2115100162204856795",
+  "summary": "瑞士洛桑 Giotto AI 于 10/27 发布 Giotto Alto（推理旗舰，官方自报 HLE 52%、GPQA-Diamond 91.9%）与单卡可跑的 Giotto Solo。Alto 在其欧洲共享云上对所有人免费，可匿名聊天无需账号；API 不免费（按 token 或月费单并发），无开放权重。",
+  "free_terms": "如何领取：打开 cloud.giotto.ai 直接聊天，官方称匿名可用、无需注册；或装 iOS/Android「Giotto AI」App。免费仅限聊天/共享云，不绑卡；API 需付费（官网列 €2.10/€10.50 每百万 token，另有单并发月费），无公开额度上限说明。",
+  "source": "X @giotto_ai",
+  "collected_at": "2026-10-28T05:50:00+08:00",
+  "expired": false,
+  "providers": [
+   {
+    "name": "Giotto Cloud",
+    "action_url": "https://cloud.giotto.ai/"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Giotto AI (iOS)",
+    "action_url": "https://apps.apple.com/ch/app/giotto-ai/id6817496055"
+   }
+  ],
+  "models": [
+   {
+    "name": "Giotto Alto",
+    "action_url": "https://www.giotto.ai/"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "zero_signup"
+  ]
  }
 ]
