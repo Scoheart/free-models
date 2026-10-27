@@ -14560,5 +14560,48 @@
   "barriers": [
    "zero_signup"
   ]
+ },
+ {
+  "id": "asicloud-super-decider-free-inference-20261028",
+  "title": "ASI:Cloud 上 Super Decider 决策模型 API 限时免费推理（送完即止）",
+  "model": "Super Decider（Singularity Compute）",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/CUDOS_/status/2115145562420908235",
+  "summary": "ASI:Cloud 官推宣布 Singularity Compute 的 Super Decider 决策模型通过 ASI:Cloud API 免费推理，额度送完即止。该模型不写长文，而是对给定情境输出选项、是/否概率或打分，并附校准置信度，号称 JevBench 决策榜第一、中位延迟约 0.25 秒；权重以 Apache 2.0 开源，可在 Hugging Face 下载。",
+  "free_terms": "打开 asicloud.cudos.org 登录/注册 ASI:Cloud，在模型目录选 Super Decider，进 Manage API keys 创建 Key；调用 https://llm.a.singularitycompute.com 的 /v1/systemone 或 OpenAI 兼容 /v1/chat/completions，body 写 model: super-decider。官方称免费推理「送完即止」，未写截止日、是否绑卡与单账号限额；也可从 Hugging Face 下载 Apache 2.0 权重本地跑。",
+  "source": "X @CUDOS_（ASI:Cloud）官推；Singularity Compute 官网与 GitHub API 文档",
+  "collected_at": "2026-10-28T02:43:00+08:00",
+  "expired": false,
+  "source_post_id": "2115145562420908235",
+  "post_time_bj": "2026-10-28T02:16:14+08:00",
+  "product": "ASI:Cloud Super Decider",
+  "providers": [
+   {
+    "name": "ASI:Cloud",
+    "action_url": "https://asicloud.cudos.org/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Super Decider（官网）",
+    "action_url": "https://singularitycompute.com/super-decider"
+   },
+   {
+    "name": "Super Decider（HF 权重）",
+    "action_url": "https://huggingface.co/Singularity-Compute/super-decider"
+   },
+   {
+    "name": "Super Decider API 文档",
+    "action_url": "https://github.com/Singularity-Compute/super-decider/blob/main/docs/API.md"
+   }
+  ],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
