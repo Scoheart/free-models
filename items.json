@@ -14641,5 +14641,128 @@
   "barriers": [
    "zero_signup"
   ]
- }
+ },
+  {
+    "id": "stepfun-stepaudio3-free-nov8-20261102",
+    "title": "阶跃星辰 StepAudio 3 系列 API 限时免费至 11/8",
+    "model": "StepAudio 3 Realtime / TTS / Gen / Music / ASR",
+    "type": "限时",
+    "deadline": "2026-11-08T23:59:59+08:00",
+    "url": "https://x.com/Clearance43/status/2117252938934452593",
+    "summary": "阶跃星辰官方定价文档确认：StepAudio 3 系列语音模型限时免费至北京时间 2026 年 11 月 8 日 23:59:59，11 月 9 日零时起恢复表列价格。覆盖实时语音、语音合成、音频与音乐生成、语音识别；不是长期免费档。",
+    "free_terms": "需平台注册并创建 API Key；个人账号需完成身份验证。V0 档（累计充值低于 $15）官方通用限速为 5 并发、100 RPM、50 万 TPM，语音端点具体限制以控制台为准。免费期结束后按量收费。官方未在活动说明中明确单账号免费总额度与是否需要绑卡，不作免绑卡承诺。",
+    "claim_steps": [
+      "打开阶跃开放平台注册；个人账号需完成身份验证。",
+      "在控制台创建 API Key，按相应 StepAudio 3 模型文档接入。",
+      "免费截止为北京时间 11/8 23:59:59；11/9 起按官方价目表收费，使用前核对控制台。",
+      "官方活动说明未明确单账号免费总额度或绑卡要求，请以控制台为准。"
+    ],
+    "source": "X @Clearance43（原帖已核实）；阶跃星辰官方定价文档已核实",
+    "collected_at": "2026-11-04T19:57:00+08:00",
+    "expired": false,
+    "source_post_id": "2117252938934452593",
+    "product": "StepFun StepAudio 3",
+    "providers": [
+      {
+        "name": "阶跃星辰开放平台",
+        "action_url": "https://platform.stepfun.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "StepAudio 3 官方定价及限速",
+        "action_url": "https://platform.stepfun.ai/docs/en/guides/pricing/details"
+      }
+    ],
+    "scenes": [
+      "audio"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "official_url": "https://platform.stepfun.ai/docs/en/guides/pricing/details"
+  },
+  {
+    "id": "tazo-labs-15min-free-audio-20261102",
+    "title": "Tazo Labs：新账号送 15 分钟免费音频决策 API 额度",
+    "model": "Tazo Large",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/namanjn1998/status/2117232948327936064",
+    "summary": "Tazo Labs 推出面向语音代理的音频决策模型：输入音频、问题与选项，输出决策概率。官方文档确认新账号获得 15 分钟免费音频额度，网页 Playground 和全部 API Key 共享余额；不是每个 Key 分别赠送。",
+    "free_terms": "新账号 15 分钟音频，静音也计入；一次性额度，未公布到期日或绑卡要求。Tazo Large 每账号 500 次/滚动分钟、5 并发；上传音频最长 45 秒、最大 16MB。余额用尽后新请求返回 402，需充值才能继续。",
+    "claim_steps": [
+      "打开 app.tazolabs.com 注册账号，先在 Playground 体验。",
+      "如需 API，在账号中创建 Key；所有 Key 与 Playground 共享 15 分钟额度。",
+      "关注剩余音频秒数，额度耗尽后新请求会停止；勿将新建 Key 误认为新增免费时间。",
+      "静音也计入音频时长；官方未公布该免费额度的到期日或绑卡要求。"
+    ],
+    "source": "X @namanjn1998（原帖已核实）；Tazo 官方 billing / limits 文档已核实",
+    "collected_at": "2026-11-04T19:57:00+08:00",
+    "expired": false,
+    "source_post_id": "2117232948327936064",
+    "product": "Tazo Labs",
+    "providers": [
+      {
+        "name": "Tazo Labs",
+        "action_url": "https://app.tazolabs.com"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Tazo Large 额度说明",
+        "action_url": "https://docs.tazolabs.com/guides/billing"
+      },
+      {
+        "name": "Tazo API 限制",
+        "action_url": "https://docs.tazolabs.com/guides/limits"
+      }
+    ],
+    "scenes": [
+      "audio"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "official_url": "https://docs.tazolabs.com/guides/billing"
+  },
+  {
+    "id": "sail-startups-10000-credit-20261103",
+    "title": "Sail for Startups：申请最高 $10,000 推理与 Sailboxes 额度（需审核）",
+    "model": "Sail 托管开放模型 / Sailboxes",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/sailresearchco/status/2117663094562242752",
+    "summary": "Sail Research 面向自筹资金或已融资的初创企业开放申请，最高赠送 $10,000 额度，可共用于开放模型推理 API 与持久化代理计算环境 Sailboxes。每份申请单独审核，不保证获批或获得最高金额。",
+    "free_terms": "需有创业公司及实际工作负载，使用 Sail 账号邮箱提交申请；获批后额度加到账户并邮件通知。官方未公布统一到期日、最低赠送额或是否需要绑卡；不是所有注册用户自动领取。",
+    "claim_steps": [
+      "本活动面向自筹资金或已融资的初创企业；先建立 Sail 账号，再打开官方 Startups 页面。",
+      "使用 Sail 账号邮箱提交公司和计划使用的工作负载信息。",
+      "等待人工审核；通过后额度进入账户，推理与 Sailboxes 共用。",
+      "最高 $10,000，不保证获批或获得最高金额；官方未公布统一到期日。"
+    ],
+    "source": "X @sailresearchco（原帖已核实）；Sail 官方 Startups 页面已核实",
+    "collected_at": "2026-11-04T19:57:00+08:00",
+    "expired": false,
+    "source_post_id": "2117663094562242752",
+    "product": "Sail for Startups",
+    "providers": [
+      {
+        "name": "Sail for Startups 申请",
+        "action_url": "https://www.sailresearch.com/startups"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "official_url": "https://www.sailresearch.com/startups"
+  }
 ]
