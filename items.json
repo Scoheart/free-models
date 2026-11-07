@@ -15295,5 +15295,40 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "simular-box-free-cloud-desktop-mcp-20261107",
+    "title": "Simular Box：免费云端 Linux 桌面（MCP）给 AI Agent 用",
+    "model": "账号日额度内的 Simular 自带模型（接自有 AI 不扣点）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/mingzi206/status/2119069715779997895",
+    "summary": "Simular 推出 Box：每账号一台云端 Linux 桌面，经远程 MCP（https://mcp.box.simular.ai/mcp）接入 Claude/ChatGPT/Claude Code/Codex/Cursor/OpenCode 等，让 Agent 开浏览器、点按、跑命令。官方写明 Box 本身免费，模型调用吃账号每日额度；社区实测 Google/GitHub 登录、不绑卡，闲置休眠且无公网入站。",
+    "free_terms": "如何领取：打开 https://box.simular.ai → Google/GitHub 登录（不绑卡）→ 本机跑 npx @simular-ai/box connect 或把 MCP URL https://mcp.box.simular.ai/mcp 加到 Claude Code/Codex/Cursor/OpenCode → 浏览器 OAuth 授权。无公网入站、闲置休眠；日额度以账号显示为准，额度用尽可到 Billing 加购。",
+    "source": "X @mingzi206 / @vampire2g / @Leo_zhang2018；官方 https://box.simular.ai",
+    "collected_at": "2026-11-07T22:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119069715779997895",
+    "providers": [
+      {
+        "name": "Simular Box",
+        "action_url": "https://box.simular.ai"
+      },
+      {
+        "name": "Box MCP 文档",
+        "action_url": "https://box.simular.ai/docs/install"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Claude Code / Codex / Cursor / OpenCode",
+        "action_url": "https://box.simular.ai/docs/install"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": []
   }
 ]
