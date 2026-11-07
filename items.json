@@ -15087,5 +15087,137 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "fal-flux-3-max-free-weekend-20261107",
+    "title": "fal FLUX 3 Max：周末限免视频（未登录每天 3 条，至 11/9 PST）",
+    "model": "FLUX 3 Max（文生/图生/关键帧生视频）",
+    "type": "限时",
+    "deadline": "2026-11-10T04:00:00+08:00",
+    "url": "https://x.com/fal/status/2118753653096149187",
+    "summary": "fal 官方开放 FLUX 3 Max 周末免费生成：美西 11/6 09:00–11/9 12:00 PST（北京至 11/10 04:00）。未登录每天 3 条、登录免费账号 4 条、验证付款方式 5 条；单条最长 15 秒、720p 带声音。额度从首次生成起 24 小时回补，非零点刷新；API 调用仍计费。",
+    "free_terms": "如何领取：打开 https://fal.ai/flux-3-max ，在 Playground/Sandbox 直接生成（可不登录）。未登录每天 3 条；注册免费 fal 账号升到 4；验证支付方式升到 5（三档不叠加，登出用量计入登录上限）。单条≤15s/720p/有声。额度自首次生成满 24h 回补。截止美西 11/9 12:00。仅网页免费，API 照常收费。",
+    "source": "X @fal 官方；活动页 fal.ai/flux-3-max",
+    "collected_at": "2026-11-07T20:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2118753653096149187",
+    "providers": [
+      {
+        "name": "fal FLUX 3 Max",
+        "action_url": "https://fal.ai/flux-3-max"
+      },
+      {
+        "name": "fal",
+        "action_url": "https://fal.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "FLUX 3 Max",
+        "action_url": "https://fal.ai/flux-3-max"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "zero_signup"
+    ]
+  },
+  {
+    "id": "nous-portal-longcat-2.5-free-week-20261107",
+    "title": "Nous Portal：美团 LongCat-2.5 限时免费一周（标 LongCat-2.5:Free）",
+    "model": "LongCat-2.5:Free",
+    "type": "限时",
+    "deadline": "2026-11-13T23:59:59+08:00",
+    "url": "https://x.com/NousResearch/status/2118734093105946792",
+    "summary": "Nous Research 官方宣布：美团 LongCat-2.5（原生多模态，约 1.6T/48B 激活）在 Nous Portal 免费一周。Portal 模型目录现标 LongCat-2.5:Free；按 11/6 发帖推算约至 11/13（Portal 页未写精确截止时刻）。免费档仅覆盖 :free 模型，有速率限制。",
+    "free_terms": "如何领取：1) 打开 https://portal.nousresearch.com 注册/登录免费账号（免绑卡即可用免费模型）；2) 模型列表选 LongCat-2.5:Free；3) 也可经 Hermes Agent 走 Nous provider。免费档月付额度 0，只跑标 FREE 的模型；想用付费模型再升级。官方称一周，建议 11/13 前用完并盯 Portal 标价。",
+    "source": "X @NousResearch；Portal portal.nousresearch.com/models",
+    "collected_at": "2026-11-07T20:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2118734093105946792",
+    "providers": [
+      {
+        "name": "Nous Portal",
+        "action_url": "https://portal.nousresearch.com"
+      },
+      {
+        "name": "Nous Portal Models",
+        "action_url": "https://portal.nousresearch.com/models"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Hermes Agent",
+        "action_url": "https://hermes-agent.nousresearch.com/"
+      }
+    ],
+    "models": [
+      {
+        "name": "LongCat-2.5:Free",
+        "action_url": "https://portal.nousresearch.com/models"
+      },
+      {
+        "name": "LongCat-2.5 介绍",
+        "action_url": "https://longcat.ai/blog/longcat-2.5/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "perch-qwen38-max-starter-until-nov20-20261107",
+    "title": "Perch AI Starter：Qwen 3.8 Max 限时免费至 11/20 美东中午",
+    "model": "Qwen 3.8 Max（另含 Laguna S 2.1 / DeepSeek V4.1 Flash / GLM 5.3 Flash）",
+    "type": "限时",
+    "deadline": "2026-11-21T01:00:00+08:00",
+    "url": "https://x.com/anya_yfa7/status/2119007163159138502",
+    "summary": "Perch 官方文档：免费 Starter（免绑卡，每月约 20000 PT≈$20）自 10/25 起将 Qwen 3.8 Max 纳入可选模型，至 2026-11-20 美东中午（北京约 11/21 01:00）；用量计入 Starter 月额度。同期 Starter 阵容还有 Laguna S 2.1、DeepSeek V4.1 Flash、GLM 5.3 Flash。非公开 API。",
+    "free_terms": "如何领取：打开 https://perchai.app 注册 Starter（免绑卡）。Desktop/Web 模型选择器选 Qwen 3.8 Max，或 CLI 执行 /model qwen-3.8-max。用量计入每月约 20000 PT；截止美东 11/20 12:00，到期移出 Starter。Pro/Ultra 另有 DeepSeek V4.1 Flash 周末不限量（付费档，不计入本卡）。",
+    "source": "X @anya_yfa7；官方 docs perchai.app/docs/plans/model-promotions 与 Starter/Models",
+    "collected_at": "2026-11-07T20:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119007163159138502",
+    "providers": [
+      {
+        "name": "Perch AI",
+        "action_url": "https://perchai.app"
+      },
+      {
+        "name": "Perch Model promotions",
+        "action_url": "https://www.perchai.app/docs/plans/model-promotions"
+      },
+      {
+        "name": "Perch Starter",
+        "action_url": "https://www.perchai.app/docs/plans/starter"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Qwen 3.8 Max",
+        "action_url": "https://www.perchai.app/docs/concepts/models"
+      },
+      {
+        "name": "DeepSeek V4.1 Flash",
+        "action_url": "https://www.perchai.app/docs/concepts/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
