@@ -840,17 +840,17 @@
   },
   {
     "id": "opencode-zen-exo-free-20261010",
-    "title": "【当前待核实】OpenCode Zen：Exo Free 限时免费推理模型（约 1M 上下文，$0）",
+    "title": "OpenCode Zen：Exo Free 限时免费推理模型（约 1M 上下文，$0）",
     "model": "Exo Free",
     "type": "限时",
     "deadline": null,
     "url": "https://x.com/orangercat/status/2108685425040650278",
-    "summary": "2026-11-04 核对：当前官方模型表未列出此历史免费模型，尚不能确认仍可使用；未查到明确结束公告，不臆造截止日。历史资料：OpenCode Zen 文档与模型列表已上架 Exo Free（model id：exo-free）：输入/输出/缓存读均为 $0，约 100 万 token 上下文，支持图片与工具调用，推理力度固定为 high。社区帖称约 10 月 6 日上线，结束时间未公布。用法：登录 OpenCode Zen 拿 API Key，在 OpenCode 里 /models 选 Exo Free，或配置 opencode/exo-free；也可直调 https://opencode.ai/zen/v1/chat/completions。注意：免费期内请求可能被用于改进模型，不适合公司代码/客户数据。",
+    "summary": "OpenCode Zen 文档与模型列表已上架 Exo Free（model id：exo-free）：输入/输出/缓存读均为 $0，约 100 万 token 上下文，支持图片与工具调用，推理力度固定为 high。社区帖称约 10 月 6 日上线，结束时间未公布。用法：登录 OpenCode Zen 拿 API Key，在 OpenCode 里 /models 选 Exo Free，或配置 opencode/exo-free；也可直调 https://opencode.ai/zen/v1/chat/completions。注意：免费期内请求可能被用于改进模型，不适合公司代码/客户数据。",
     "source": "orangercat",
     "collected_at": "2026-10-10T06:44:25+08:00",
     "expired": false,
     "source_post_id": "2108685425040650278",
-    "free_terms": "当前可用性待核实；不能再据历史帖子承诺免费。官方免费聊天模型需 OpenCode 客户端。",
+    "free_terms": "OpenCode Zen 限时免费；无公布截止日期；免费期请求可能用于改进模型。",
     "product": "OpenCode Zen · Exo Free (opencode/exo-free)",
     "providers": [
       {
@@ -877,16 +877,7 @@
     "barriers": [
       "need_key",
       "need_client"
-    ],
-    "claim_steps": [
-      "当前官方模型表未列出此模型，先在 OpenCode 的 /models 核对。",
-      "未确认仍免费或可用，不建议依历史 API 接入说明使用。"
-    ],
-    "verification_status": "unconfirmed",
-    "official_url": "https://opencode.ai/v2/docs/console/models/",
-    "update_note": "当前官方名单缺席，仅标待核实，不伪造过期日期。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://opencode.ai/v2/docs/console/models/"
+    ]
   },
   {
     "id": "empero-qwen38-27b-free-api-20261010",
@@ -925,17 +916,17 @@
   },
   {
     "id": "ling-3.1-flash-free-multichannel-20261010",
-    "title": "蚂蚁百灵 Ling 3.1 Flash：10 月多渠道首发免费活动已结束",
+    "title": "蚂蚁百灵 Ling 3.1 Flash：OpenRouter / Vercel / OpenCode Zen / 官方 API 限时免费",
     "model": "Ling 3.1 Flash",
     "type": "限时",
-    "deadline": null,
+    "deadline": "2026-10-14T23:59:59+08:00",
     "url": "https://x.com/AntLingAGI/status/2108765698407440721",
-    "summary": "本条保留 10 月首发多渠道免费活动记录。Vercel 公告免费至 2026/10/13；当前蚂蚁官方定价页已将 Ling 3.1 Flash 与 OpenRouter 对应调用列为付费折扣，OpenCode 当前免费列表也不含该模型。不要把 Ling 3.2 Flash 的新免费活动或 Requesty 的单独免费端点套用到本条旧活动。",
+    "summary": "inclusionAI（蚂蚁百灵）Ling 3.1 Flash（约 560B 总参 / 25B 激活，混合推理 MoE）正在多渠道限时免费：OpenRouter 上 inclusionai/ling-3.1-flash 标价 $0（NovitaAI 托管）；Vercel AI Gateway 官方 Changelog 写明免费至 2026-10-13（可用 inclusionai/ling-3.1-flash 或 inclusionai/ling-3.1-flash-free）；OpenCode Zen 文档列出 ling-3.1-flash-free 为 Free；官方 Ant Ling API 亦有约两周上线免费窗口（社区/监测推断约至 10/14）。官方账号 @AntLingAGI 确认 OR/Vercel 与 day0 合作方限时免费。约 262K 上下文，适合编码与长程 Agent。条件：需各平台账号与 API Key；免费结束后标准 ID 可能开始计费，-free 后缀可能停服。",
     "source": "AntLingAGI",
     "collected_at": "2026-10-10T12:42:50+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2108765698407440721",
-    "free_terms": "旧首发活动已结束。当前蚂蚁官方与 OpenRouter 的 Ling 3.1 Flash 为付费折扣；Vercel 标准 ID 活动后开始计费，-free ID 停服。",
+    "free_terms": "OpenRouter $0；Vercel AI Gateway 免费至 2026-10-13；OpenCode Zen ling-3.1-flash-free；Ant Ling 官方 API 约两周免费（约至 10/14）。结束后标准 ID 可能计费，-free 可能停服。",
     "product": "inclusionAI Ling 3.1 Flash (inclusionai/ling-3.1-flash)",
     "providers": [
       {
@@ -989,41 +980,26 @@
     ],
     "barriers": [
       "need_key"
-    ],
-    "claim_steps": [
-      "本条为历史活动，不再按旧免费说明调用。",
-      "Vercel 原免费期至 10/13；标准 ID 到期转收费，-free ID 停服。",
-      "如需新的免费渠道，请分别核对 Ling 3.2 Flash 或 Requesty 当前条款，不能沿用本条首发承诺。"
-    ],
-    "deadline_note": "旧记录的 10/14 精确截止来自推测，移除统一倒计时；Vercel 原公告仅写至10/13，其他渠道时间不强行统一。",
-    "official_url": "https://developer.ant-ling.com/en/docs/models/price/",
-    "verification_urls": [
-      "https://vercel.com/changelog/ling-3-1-flash-is-now-available-on-ai-gateway",
-      "https://opencode.ai/v2/docs/console/models/"
-    ],
-    "update_source": "https://developer.ant-ling.com/en/docs/models/price/",
-    "update_note": "官方现行价格与历史免费截止已核对；标记旧活动结束，保留原帖。",
-    "verification_status": "verified",
-    "updated_at": "2026-11-06T09:22:34+08:00"
+    ]
   },
   {
     "id": "opencode-zen-free-roster-20261010",
-    "title": "OpenCode：当前限时免费模型合集（需 OpenCode 客户端）",
-    "model": "OpenCode 当前免费模型",
+    "title": "OpenCode Zen：十余个限时免费模型（Exo / Ling / LongCat / Space Bunny 等）",
+    "model": "OpenCode Zen free 合集",
     "type": "限时",
     "deadline": null,
     "url": "https://x.com/Israfilv2/status/2108778555429756958",
-    "summary": "官方表当前列出 Big Pickle、Crouton Alpha、Pulse Alpha、GLM-5.3-Flash、DeepSeek V4.1 Flash、Beam、Flint 40B、MiMo-V2.6-Flash 与 Nemotron 系列等免费聊天模型；需要 OpenCode 客户端。模型名单、地区限制和隐私条款随时可能变化；此前合集中的 Exo 等并非当前确认可用名单。Jev 1.13 Free 为单列的结构化决策接口。",
+    "summary": "OpenCode Zen 官方定价表当前将一批模型标为 Free（输入/输出/缓存读均为 $0），社区帖汇总约 11+ 个：Exo Free、Ling 3.1 Flash Free、LongCat 2.5 Preview Free、Space Bunny Free、MiMo-V2.6-Flash Free、Step 5 Preview Free、Muse Spark 1.3 Contributor Free、Ling 3.0 Flash Fin Free、Nemotron 3.5 Lightning Free、Nemotron 3 Ultra Free、Big Pickle，另有 Jev 1.13 Free、MiMo-V2.5 Free 等。用法：登录 Zen 取 API Key，OpenCode 里 /models 选 free 模型，或 Base URL https://opencode.ai/zen/v1。限时免费、结束日未统一公布；部分免费期可能用于训练（Exo/Big Pickle/Ling/Nemotron 等例外说明见文档），敏感代码慎用。条件：需 OpenCode Zen 账号与 API Key。",
     "source": "Israfilv2",
     "collected_at": "2026-10-10T12:42:50+08:00",
     "expired": false,
     "source_post_id": "2108778555429756958",
-    "free_terms": "免费聊天模型需 OpenCode；非任意客户端免费 API。部分模型保留数据或用于改进；部分地区不可用。各模型活动截止未统一公布。",
+    "free_terms": "OpenCode Zen 标价 Free；限时，结束日未统一公布；部分模型免费期可能用于训练，见官方 Privacy 说明。",
     "product": "OpenCode Zen free models",
     "providers": [
       {
-        "name": "OpenCode 官方模型表",
-        "action_url": "https://opencode.ai/v2/docs/console/models/"
+        "name": "OpenCode Zen",
+        "action_url": "https://opencode.ai/docs/zen/"
       }
     ],
     "agents": [
@@ -1034,8 +1010,24 @@
     ],
     "models": [
       {
-        "name": "当前模型、价格与隐私说明",
-        "action_url": "https://opencode.ai/v2/docs/console/models/"
+        "name": "Exo Free",
+        "action_url": "https://opencode.ai/docs/zen/"
+      },
+      {
+        "name": "Ling 3.1 Flash Free",
+        "action_url": "https://opencode.ai/docs/zen/"
+      },
+      {
+        "name": "LongCat 2.5 Preview Free",
+        "action_url": "https://opencode.ai/docs/zen/"
+      },
+      {
+        "name": "Space Bunny Free",
+        "action_url": "https://opencode.ai/docs/zen/"
+      },
+      {
+        "name": "Big Pickle",
+        "action_url": "https://opencode.ai/docs/zen/"
       }
     ],
     "scenes": [
@@ -1043,17 +1035,9 @@
       "chat"
     ],
     "barriers": [
+      "need_key",
       "need_client"
-    ],
-    "claim_steps": [
-      "打开 OpenCode，用 /models 查看当前实际免费模型。",
-      "免费聊天模型需在 OpenCode 内使用，不能保证第三方客户端免费调用。",
-      "逐项核对地区与隐私限制；勿向会收集数据的免费模型提交机密内容。"
-    ],
-    "official_url": "https://opencode.ai/v2/docs/console/models/",
-    "update_note": "按 2026-11-05 官方名单补充 Crouton Alpha；免费聊天客户端限制保持不变。",
-    "updated_at": "2026-11-05T09:20:00+08:00",
-    "update_source": "https://opencode.ai/v2/docs/console/models/"
+    ]
   },
   {
     "id": "tokenharbor-free-haiku-deepseek-mimo-20261010",
@@ -1430,28 +1414,40 @@
   },
   {
     "id": "qoder-qwen38-flash-free-extended-20261010",
-    "title": "Qoder International：Qwen3.8-Flash 每日有限免费额度（超额按 0.1× Credits）",
+    "title": "Qoder：Qwen3.8-Flash 个人用户限时免 Credits（已延期，结束日待公告）",
     "model": "Qwen3.8-Flash",
     "type": "限时",
     "deadline": null,
     "url": "https://x.com/Forhanvv/status/2108971809324625951",
-    "summary": "Qoder International 个人用户每天获得有限次数的 Qwen3.8-Flash 免费使用，额度内 0.0× Credits，免费与零余额账号也可用；付费用户次数更多，具体次数未公布。超额后可等待次日或按原 0.1× Credits 继续。团队和企业订阅不适用，活动结束日待官方公告。",
+    "summary": "阿里 Qoder（国际版/CN）官方活动页确认：个人用户调用 Qwen3.8-Flash 计费系数 0.0×、不消耗 Credits；原定 2026-09-30 结束已延期，10/1 起继续免费，结束日将提前在活动页公告。免费/零余额账号可用，团队/企业订阅除外。适用 Qoder IDE/CLI/插件/Cloud Agents/网页/移动端等。无需领取，模型选择器选 Qwen3.8-Flash 即可。多模态+工具调用，适合编码/长文档/看图。活动页：https://docs.qoder.com/events/flashoffer 与 https://docs.qoder.cn/events/flashoffer 。",
     "source": "x @Forhanvv / docs.qoder.com",
     "collected_at": "2026-10-11T01:40:41+08:00",
     "expired": false,
     "source_post_id": "2108971809324625951",
-    "free_terms": "须登录 Qoder International 个人账号；每日有限次数，超额按 0.1× Credits 或等次日。仅实际由 Qwen3.8-Flash 完成的调用免费，其他模型按各自规则收费。仅限官方支持用法，禁止未授权转发/转售。",
+    "free_terms": "个人用户限时 0.0× Credits；原 9/30 截止已延期，结束日待公告；团队/企业除外；零余额可用。",
     "product": "Qoder Qwen3.8-Flash",
     "providers": [
       {
         "name": "Qoder International 活动页",
         "action_url": "https://docs.qoder.com/events/flashoffer"
+      },
+      {
+        "name": "Qoder CN 活动页",
+        "action_url": "https://docs.qoder.cn/events/flashoffer"
       }
     ],
     "agents": [
       {
         "name": "Qoder",
         "action_url": "https://qoder.com/"
+      },
+      {
+        "name": "Cline",
+        "action_url": "https://cline.bot/"
+      },
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
       }
     ],
     "models": [
@@ -1466,32 +1462,23 @@
       "image"
     ],
     "barriers": [
-      "need_client"
-    ],
-    "claim_steps": [
-      "登录 Qoder International 个人账号，在官方产品中选择 Qwen3.8-Flash。",
-      "每天仅有限次数免费，付费用户次数更多；具体次数以账号内为准。",
-      "额度耗尽后可等次日恢复，或按原 0.1× Credits 继续；其他模型调用不在此优惠内。",
-      "团队/企业不适用；截止待公告。不得未授权转发、转售或向第三方共享访问。"
-    ],
-    "official_url": "https://docs.qoder.com/events/flashoffer",
-    "update_note": "纠正无限免费、免注册和第三方客户端暗示；本次只核实国际版活动。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://docs.qoder.com/events/flashoffer"
+      "need_client",
+      "zero_signup"
+    ]
   },
   {
     "id": "heygen-voice-free-preview-20261010",
-    "title": "HeyGen Voice：旧免费预览说明待区分，当前仅 Turbo Free 专用模型免费",
+    "title": "HeyGen Voice：自研 TTS #1，平台/API 免费预览（Instant Clone 免创建费）",
     "model": "HeyGen Voice",
     "type": "API",
     "deadline": null,
     "url": "https://x.com/PaulDerrington/status/2108973111022354646",
-    "summary": "本条10月旧预览说明不可当作全部 HeyGen Voice API 免费。当前官方 TTS 文档明确：默认 heygen-voice-1 与普通 Turbo 收费，需指定 heygen-voice-1-turbo-free 才享受至11/30的免费窗口。Instant Voice Clone 创建在预览期免费，不等于所有后续合成都免费；Professional Clone 不支持免费模型。",
+    "summary": "HeyGen 于 2026-10-09 发布自研语音模型 HeyGen Voice，Artificial Analysis Controlled Voice 榜首（约 Elo 1201）。官方新闻稿称平台与 API 可免费使用；开发者文档确认 Instant Voice Clone 创建在 preview 期间免费（单段录音、秒级就绪），Professional Clone 需购买 slot（约 $99/月）且合成 0.6 API credits/分钟。需注册并建 API Key（X-Api-Key）。文档：https://developers.heygen.com/docs/models/heygen-voice ；TTS：POST /v3/models/audio/tts。注意第三方榜单换算价与「免费」表述并存，实际以官方账单/文档为准。",
     "source": "x @PaulDerrington / @likeDesigning / PR Newswire",
     "collected_at": "2026-10-11T01:40:41+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2108973111022354646",
-    "free_terms": "Instant Clone 创建预览免费，不代表全部TTS免费。当前须选择 heygen-voice-1-turbo-free，默认Voice和普通Turbo仍收费；详细条件见Turbo Free条目。",
+    "free_terms": "新闻稿：平台与 API 免费可用；文档：Instant Clone 创建 preview 免费；Professional 付费。需 API Key。",
     "product": "HeyGen Voice",
     "providers": [
       {
@@ -1511,24 +1498,11 @@
       }
     ],
     "scenes": [
-      "audio"
+      "chat"
     ],
     "barriers": [
       "need_key"
-    ],
-    "claim_steps": [
-      "不要按旧新闻稿把全部 Voice API 当作免费。",
-      "当前免费调用须显式使用 heygen-voice-1-turbo-free；默认 heygen-voice-1 和普通 Turbo 收费。",
-      "Instant Clone 创建预览免费不等于全部合成免费；Professional Clone 不支持免费模型。请按单独的 Turbo Free 条目核对11/30窗口及限额。"
-    ],
-    "official_url": "https://developers.heygen.com/docs/voices/heygen-voice-speech",
-    "update_source": "https://developers.heygen.com/docs/voices/heygen-voice-speech",
-    "verification_urls": [
-      "https://www.heygen.com/blog/heygen-voice-turbo"
-    ],
-    "update_note": "旧宽泛免费预览已由当前Turbo Free具体条款取代，隐藏旧活动卡片但保留来源。",
-    "verification_status": "superseded",
-    "updated_at": "2026-11-06T09:22:34+08:00"
+    ]
   },
   {
     "id": "nous-missingno-free-limited-20261011",
@@ -1743,17 +1717,17 @@
   },
   {
     "id": "payperq-nano-banana-veo-free-nov-20261011",
-    "title": "PayPerQ：Google 生图/视频免费活动已结束，11/4 起恢复正常价格",
+    "title": "PayPerQ：Nano Banana / Veo 3.1 等 Google 图像与视频模型限时 $0 至 11 月初",
     "model": "Nano Banana 2.1 / Pro / Lite · Veo 3.1 / Fast / Lite · Gemini Omni 1.1 Flash",
     "type": "限时",
-    "deadline": null,
+    "deadline": "2026-11-07T23:59:59+08:00",
     "url": "https://x.com/Israfilv2/status/2109292727905255659",
-    "summary": "PayPerQ 官方活动页已更新：最初的免费调用于 10/20 改为 95% 折扣，11/4 又宣布整个促销结束，Google 图像和视频模型恢复正常价格。保留历史帖子，仅作归档；旧条目中的 $0 调用及 11/7 截止不再适用。",
+    "summary": "PayPerQ（ppq.ai）官方活动：账户有余额（最低约 $0.10）即可在网页或 API 以 $0 调用 Google Nano Banana 全家桶（2.1 / 2 Lite / Pro，含图编辑）、Veo 3.1 / Fast / Lite（含图生视频与首尾帧）以及 Gemini Omni 1.1 Flash。免费调用不扣余额，活动至 11 月初或促销额度耗尽。条件：账户需有余额（充值可低至约 $0.10）；网页与 API 均可。",
     "source": "Israfilv2 / ppq.ai",
     "collected_at": "2026-10-11T22:47:08+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2109292727905255659",
-    "free_terms": "已结束，无可领取免费额度。10/20 改为支付标价的 5%，11/4 宣布折扣也结束；现在网页及 API 都按正常价从余额扣费。",
+    "free_terms": "账户有余额即可 $0 调用；免费调用不扣余额；至 11 月初或促销额度耗尽。",
     "product": "PayPerQ 上的 Google Nano Banana / Veo 3.1 / Gemini Omni 1.1 Flash",
     "providers": [
       {
@@ -1778,21 +1752,7 @@
     "barriers": [
       "deposit_hold",
       "need_key"
-    ],
-    "claim_steps": [
-      "本条为历史活动，已无免费领取入口。",
-      "官方 10/20 把免费改为 95% 折扣，11/4 宣布促销结束；当前使用会按正常价扣除余额，勿按旧帖批量调用。",
-      "具体价格以官方定价页为准。"
-    ],
-    "official_url": "https://ppq.ai/blog/free-google-image-and-video-generation",
-    "verification_urls": [
-      "https://ppq.ai/pricing"
-    ],
-    "verification_status": "verified",
-    "updated_at": "2026-11-07T09:55:00+08:00",
-    "update_source": "https://ppq.ai/blog/free-google-image-and-video-generation",
-    "update_note": "官方 11/4 结束公告与当前定价交叉核实；取消旧的推测截止日并标为已结束。",
-    "deadline_note": "官方仅公布状态更新日期，未给精确结束时刻；以 expired=true 标记。"
+    ]
   },
   {
     "id": "perch-qwen38-starter-promo-20261011",
@@ -2555,17 +2515,17 @@
   },
   {
     "id": "antigravity-free-claude46-until-nov2-20261012",
-    "title": "Google Antigravity 免费档：Claude 4.6 / GPT-OSS-120b 移除日期延至 11/18",
-    "model": "Claude Opus 4.6 / Sonnet 4.6 / GPT-OSS-120b / Gemini 3.8 Flash",
+    "title": "Google Antigravity 免费档：Claude Opus/Sonnet 4.6 与 GPT-OSS-120b 可用至 11/2",
+    "model": "Claude Opus 4.6 / Sonnet 4.6 / GPT-OSS-120b / Gemini 3.x",
     "type": "限时",
-    "deadline": null,
+    "deadline": "2026-11-02T23:59:59+08:00",
     "url": "https://x.com/orangercat/status/2109570145030971730",
-    "summary": "Google 最新模型表仍将 Claude Sonnet/Opus 4.6 与 GPT-OSS-120b 列入 Free / Google AI Plus，移除日期由原 11/2 更新为 2026-11-18。个人免费档为 $0/月且无需付费订阅；额度每周刷新，具体数字未公开。Gemini 3.8 Flash 也在免费档内，勿把付费 Gemini 4 Argon 或 Claude 5.5 算成免费。",
+    "summary": "Google Antigravity 个人免费档（$0）现可用 Claude Opus 4.6、Sonnet 4.6（thinking）、GPT-OSS-120b，以及 Gemini 3.8/3.7/3.6 Flash 与 Gemini 3.1 Pro。官网模型页标注 Claude 4.6 与 GPT-OSS-120b 将于 2026-11-02 从免费档移除，之后免费档仅保留 Gemini。额度按周刷新，官方未公布具体数字；需个人 Google 账号、满 18 岁且在支持地区。勿用 Antigravity 登录态接第三方工具（如 OpenClaw），条款可能封号。条件：免费档有基础每周限额；Gemini 免费继续，Claude/GPT-OSS 限时至 11/2。",
     "source": "orangercat",
     "collected_at": "2026-10-12T17:47:08+08:00",
     "expired": false,
     "source_post_id": "2109570145030971730",
-    "free_terms": "个人免费档 $0/月；Claude 4.6 / GPT-OSS-120b 将于 2026-11-18 移除，精确时刻/时区未公布。每周限额、数字未公开；需18岁以上个人 Google 账号及支持地区。",
+    "free_terms": "免费档含 Claude 4.6 / GPT-OSS-120b 至 2026-11-02；Gemini 持续免费；每周刷新额度，数字未公开。",
     "product": "Google Antigravity Free",
     "providers": [
       {
@@ -2599,25 +2559,8 @@
     ],
     "barriers": [
       "need_client",
-      "region_limited"
-    ],
-    "claim_steps": [
-      "使用18岁以上个人 Google 账号登录官方 Antigravity，先核对账号所在地区是否在 FAQ 支持名单。",
-      "选择 Free 档的 Claude Sonnet/Opus 4.6、GPT-OSS-120b 或 Gemini 3.8 Flash；无需购买 Pro/Ultra 订阅，绑卡情况未实测。",
-      "最新官方表将 Claude 4.6 / GPT-OSS-120b 移除日期列为 2026-11-18，未给时区和时刻；临近日期再次核对，不承诺持续免费。",
-      "免费额度按周刷新，数值随容量和任务用量变化；只能通过官方产品使用，不要将 Antigravity 登录态转接第三方客户端。"
-    ],
-    "official_url": "https://antigravity.google/docs/models/",
-    "verification_urls": [
-      "https://antigravity.google/pricing",
-      "https://antigravity.google/docs/plans/",
-      "https://antigravity.google/docs/faq/"
-    ],
-    "verification_status": "verified",
-    "updated_at": "2026-11-07T09:55:00+08:00",
-    "update_source": "https://antigravity.google/docs/models/",
-    "update_note": "按现行官方模型表把旧 11/2 移除日改为 11/18，取消未经官方确认的精确时区/时刻。",
-    "deadline_note": "官方只给 2026-11-18，未给精确时区/时刻；deadline 留空。"
+      "zero_signup"
+    ]
   },
   {
     "id": "cleanapis-5m-free-tokens-monthly-20261012",
@@ -2660,17 +2603,17 @@
   },
   {
     "id": "nous-portal-free-tier-11-models-20261013",
-    "title": "Nous Portal 免费档：当前五款 FREE 模型（含 LongCat-2.5 限时一周）",
-    "model": "LongCat-2.5:Free / Reflection Beam 1.0 / Crouton Alpha / Step 3.7 Flash / Solar Mini 4",
+    "title": "Nous Portal 免费档：11 个模型 $0（LongCat 2.5 Preview / Step 5 Preview / Laguna S 2.1 等）",
+    "model": "LongCat 2.5 Preview、LongCat 2.0、Step 5 Preview、Step 3.7 Flash、Laguna S/XS 2.1、Solar Mini 4、Ling 3.1 Flash、Ling 3.0 Flash Fin/Sante、MISSINGNO",
     "type": "API",
     "deadline": null,
     "url": "https://x.com/dextune/status/2109676718877458501",
-    "summary": "当前官方目录的 Free Models 为 LongCat-2.5:Free、Reflection Beam 1.0 501B A23B、Crouton Alpha、StepFun Step 3.7 Flash 与 Upstage Solar Mini 4。旧的 11 款列表及 Laguna 10/31 活动不再代表现行名单。Free 计划 $0/月、标准限流、无付费 credits；模型与期限随时变化。",
+    "summary": "Nous Portal 免费档当前有 11 个模型标价 $0（已用 Portal 公开模型接口核对）：美团 LongCat 2.5 Preview（1M 上下文，社区称 Portal 日用量第一）、LongCat 2.0、阶跃 Step 5 Preview（1M 上下文）、Step 3.7 Flash、Poolside Laguna S/XS 2.1（免费截止 10/31）、Upstage Solar Mini 4、inclusionAI Ling 3.1 Flash / Ling 3.0 Flash Fin / Sante，以及 stealth/missingno。在 Hermes Agent 里运行 hermes model 选 Nous Portal 即可用。条件：需 Nous Portal 账号与 API Key；除 Laguna 外未公布截止日，随时可能调整。",
     "source": "dextune",
     "collected_at": "2026-10-13T01:05:00+08:00",
     "expired": false,
     "source_post_id": "2109676718877458501",
-    "free_terms": "只使用当前标 FREE 的模型；LongCat-2.5 于 11/6 宣布免费一周，其余未公布统一截止日。Free 计划限流数字、绑卡及地区要求未明确，付费模型和托管服务另计。",
+    "free_terms": "Portal 模型列表 $0/1M；Laguna S/XS 2.1 免费至 2026-10-31；其他未公布截止日",
     "product": "Nous Portal free tier",
     "providers": [
       {
@@ -2694,22 +2637,9 @@
       "coding",
       "chat"
     ],
-    "barriers": [],
-    "claim_steps": [
-      "登录 Nous Portal 并核对 Free 计划，当前免费名单为 LongCat-2.5:Free、Reflection Beam、Crouton Alpha、Step 3.7 Flash、Solar Mini 4。",
-      "LongCat-2.5 于 11/6 宣布免费一周，约至 11/13，精确时刻未知；其他模型没有统一结束日，调用前检查仍标 FREE。",
-      "Free 计划为 $0/月、标准限流且没有付费 credits；具体免费请求数、绑卡要求和地区名单未明确。",
-      "不要沿用历史 11 款列表或已过 10/31 的 Laguna 活动；付费模型、工具和云端托管不在免费模型额度内。"
-    ],
-    "official_url": "https://portal.nousresearch.com/models",
-    "verification_urls": [
-      "https://portal.nousresearch.com/manage-subscription",
-      "https://nousresearch.com/"
-    ],
-    "verification_status": "verified",
-    "updated_at": "2026-11-07T10:09:00+08:00",
-    "update_source": "https://portal.nousresearch.com/models",
-    "update_note": "按现行官方 Free Models 和 Free 计划替换旧 11 模型名单，保留历史原帖。"
+    "barriers": [
+      "need_key"
+    ]
   },
   {
     "id": "subq-snap-100m-free-tokens-20261013",
@@ -3295,17 +3225,17 @@
   },
   {
     "id": "opencode-zen-cat-jam-free-20261013",
-    "title": "【当前待核实】OpenCode Zen：新隐身模型 Cat Jam Free（cat-jam-free）限时免费",
+    "title": "OpenCode Zen：新隐身模型 Cat Jam Free（cat-jam-free）限时免费",
     "model": "Cat Jam Free（cat-jam-free，隐身模型，提供方未公开）",
     "type": "限时",
     "deadline": null,
     "url": "https://x.com/FOMAnews/status/2109894568548196781",
-    "summary": "2026-11-04 核对：当前官方模型表未列出此历史免费模型，尚不能确认仍可使用；未查到明确结束公告，不臆造截止日。历史资料：OpenCode Zen 新上架隐身模型 Cat Jam Free（model id：cat-jam-free），已出现在公开的 /v1/models 列表和官方 Zen 文档里，输入/输出/缓存读均标为免费。官方说明：限时免费，团队借这段时间收集反馈改进模型，背后提供方未公开，结束时间未公布。注意：免费期内请求数据可能被用于改进模型，别喂公司代码或客户数据。用法：登录 OpenCode Zen 拿 API Key，在 OpenCode 里 /models 选 Cat Jam Free，或用 OpenAI 兼容端点 https://opencode.ai/inference/v1/chat/completions 调 cat-jam-free。",
+    "summary": "OpenCode Zen 新上架隐身模型 Cat Jam Free（model id：cat-jam-free），已出现在公开的 /v1/models 列表和官方 Zen 文档里，输入/输出/缓存读均标为免费。官方说明：限时免费，团队借这段时间收集反馈改进模型，背后提供方未公开，结束时间未公布。注意：免费期内请求数据可能被用于改进模型，别喂公司代码或客户数据。用法：登录 OpenCode Zen 拿 API Key，在 OpenCode 里 /models 选 Cat Jam Free，或用 OpenAI 兼容端点 https://opencode.ai/inference/v1/chat/completions 调 cat-jam-free。",
     "source": "x @FOMAnews",
     "collected_at": "2026-10-13T14:55:00+08:00",
     "expired": false,
     "source_post_id": "2109894568548196781",
-    "free_terms": "当前可用性待核实；不能再据历史帖子承诺免费。官方免费聊天模型需 OpenCode 客户端。",
+    "free_terms": "OpenCode Zen 限时免费；截止未公布；免费期数据可能用于改进模型。",
     "product": "OpenCode Zen · Cat Jam Free (opencode/cat-jam-free)",
     "providers": [
       {
@@ -3336,16 +3266,7 @@
     "barriers": [
       "need_key",
       "need_client"
-    ],
-    "claim_steps": [
-      "当前官方模型表未列出此模型，先在 OpenCode 的 /models 核对。",
-      "未确认仍免费或可用，不建议依历史 API 接入说明使用。"
-    ],
-    "verification_status": "unconfirmed",
-    "official_url": "https://opencode.ai/v2/docs/console/models/",
-    "update_note": "当前官方名单缺席，仅标待核实，不伪造过期日期。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://opencode.ai/v2/docs/console/models/"
+    ]
   },
   {
     "id": "codex-day8-global-usage-reset-20261013",
@@ -3357,7 +3278,7 @@
     "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）10 月初立下规则：连续 28 天，每天要么上线一项多数人用得上的改进，要么给大家重置用量。10/13 第 8 天他只发了「Day 8/ Reset」，随后确认全局重置已在美西时间当天生效，已完成推送。之前第 2、3、6 天也做过重置，第 7 天是把 GPT-6.1 Sol 在 Codex 里的默认上下文提到 500K。重置对象是 ChatGPT 付费账号在 Codex / ChatGPT Work 里的五小时和周额度，不是 API 余额；免费档不一定受益。接下来还有约 20 天，可能还会再重置，值得关注他的帖子。",
     "source": "x @thsottiaux",
     "collected_at": "2026-10-13T14:55:00+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2109812216212099456",
     "free_terms": "ChatGPT 付费档 Codex 用量一次性全局重置（已生效）；不改 API 余额；后续是否再重置看每日公告。",
     "product": "OpenAI Codex usage reset (Day 8)",
@@ -3379,10 +3300,7 @@
     ],
     "barriers": [
       "need_client"
-    ],
-    "update_note": "历史一次性自动重置事件，非现在仍可领取的活动；保留原文和日期，不再作为进行中优惠展示。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://x.com/thsottiaux/status/2109812216212099456"
+    ]
   },
   {
     "id": "tencent-lightvela-free-month-20261013",
@@ -4539,7 +4457,7 @@
     "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）在北京时间 10/15 12:55 发帖「Day 10/ Reset」，并调侃“我的重置按钮丢了的说法太夸张了”，即他「连续 28 天每天一项改进或一次重置」计划的第 10 天，再次给大家重置用量。这是继第 2、3、6、8 天之后又一次全局重置。重置对象是 ChatGPT 付费账号在 Codex / ChatGPT Work 里的五小时和周额度，不是 API 余额；免费档不一定受益。他这次帖子没写生效时间，按以往几次通常在当天美西时间内推送完成，有中文转述说约 2 小时内回满。计划还剩约 18 天，后续可能还会再重置。",
     "source": "x @thsottiaux",
     "collected_at": "2026-10-15T13:45:00+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2110595484180214059",
     "free_terms": "ChatGPT 付费档 Codex 用量一次性全局重置；不改 API 余额；具体生效时间官方未写明。",
     "product": "OpenAI Codex usage reset (Day 10)",
@@ -4561,10 +4479,7 @@
     ],
     "barriers": [
       "need_client"
-    ],
-    "update_note": "历史一次性自动重置事件，非现在仍可领取的活动；保留原文和日期，不再作为进行中优惠展示。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://x.com/thsottiaux/status/2110595484180214059"
+    ]
   },
   {
     "id": "stepfun-step5-preview-open-weights-20261015",
@@ -4677,12 +4592,12 @@
     "type": "限时",
     "deadline": null,
     "url": "https://x.com/opencode/status/2110635747648909472",
-    "summary": "DeepSeek V4.1 Flash Free 当前仍列于 OpenCode 官方免费模型表。免费聊天模型需在 OpenCode 内使用；其他客户端应使用付费模型或 Go，不能把公开端点当作任意客户端的免费 API。提供方零留存、不用于训练；免费结束日与统一额度未公布。",
+    "summary": "OpenCode 官方宣布 DeepSeek V4.1 Flash 现已在 OpenCode 免费可用。公开 /v1/models 与官方 Zen 文档均已列出模型 id：deepseek-v4.1-flash-free，定价表 Input/Output/Cached Read 均为 Free。文档写明限时免费，提供方零数据留存、不用于训练；未公布确切截止日。用法：下载/打开 OpenCode，在 /models 选 DeepSeek V4.1 Flash Free，或经 OpenCode Zen API Key 调 https://opencode.ai/inference/v1/chat/completions。社区反馈免费档上下文约 200k，完整 1M 为付费 deepseek-v4.1-flash。 更新（10/20）：OpenCode 官方 10/20 00:34（北京时间）发帖称 OpenCode Go 与免费档的 DeepSeek V4.1 Flash 已升级到 1017 版本，用户无需任何改动，仍免费。",
     "source": "x.com/@opencode/status/2110635747648909472",
     "collected_at": "2026-10-15T16:47:33+08:00",
     "expired": false,
     "source_post_id": "2110635747648909472",
-    "free_terms": "限时免费，需 OpenCode 客户端；不保证第三方客户端免费调用。提供方零留存、不训练；具体限额以端内为准。",
+    "free_terms": "限时免费；模型 id deepseek-v4.1-flash-free；零数据留存；截止未公布；免费档上下文约 200k。",
     "product": "OpenCode Zen · DeepSeek V4.1 Flash Free (opencode/deepseek-v4.1-flash-free)",
     "providers": [
       {
@@ -4713,15 +4628,8 @@
     "barriers": [
       "need_client"
     ],
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://opencode.ai/v2/docs/console/models/",
-    "claim_steps": [
-      "打开 OpenCode，在 /models 中选择 DeepSeek V4.1 Flash Free。",
-      "免费聊天模型需在 OpenCode 内使用；其他客户端使用付费模型或 Go。",
-      "截止日和统一额度未公布，核对端内可用性与限额。"
-    ],
-    "official_url": "https://opencode.ai/v2/docs/console/models/",
-    "update_note": "2026-11-04 按官方文档修正使用范围，移除泛用免费 API 接入建议。"
+    "updated_at": "2026-10-20T15:44:00+08:00",
+    "update_source": "https://x.com/opencode/status/2112220734768779441"
   },
   {
     "id": "google-deep-review-2-free-weekly-20261015",
@@ -5684,12 +5592,12 @@
     "type": "限时",
     "deadline": null,
     "url": "https://x.com/opencode/status/2110986357539754114",
-    "summary": "GLM-5.3-Flash Free 当前仍列于 OpenCode 官方免费模型表。免费聊天模型需在 OpenCode 内使用；其他客户端应使用付费模型或 Go，不能把公开端点当作任意客户端的免费 API。提供方零留存、不用于训练；免费结束日与统一额度未公布。",
+    "summary": "OpenCode 官方宣布智谱 GLM 5.3 Flash 现已在 OpenCode 免费可用，这是继 DeepSeek V4.1 Flash、Nemotron 3.5 Super VL 之后两天内又一个免费模型。公开 /v1/models 已列出 glm-5.3-flash-free，Zen 文档写明限时免费，提供方零数据留存、不用于训练，未公布截止日。用法：打开 OpenCode 在 /models 选 GLM-5.3-Flash Free，或用 OpenCode Zen API Key 调 https://opencode.ai/inference/openai/v1/chat/completions。社区反馈免费档上下文约 200K、高峰期容易 429，有用户称每天约 200 次请求。",
     "source": "x.com/@opencode/status/2110986357539754114（OpenCode Zen 文档与公开 /v1/models 核实）",
     "collected_at": "2026-10-16T15:45:00+08:00",
     "expired": false,
     "source_post_id": "2110986357539754114",
-    "free_terms": "限时免费，需 OpenCode 客户端；不保证第三方客户端免费调用。提供方零留存、不训练；具体限额以端内为准。",
+    "free_terms": "限时免费；模型 id glm-5.3-flash-free；零数据留存、不用于训练；截止未公布；免费档约 200K 上下文，限速未官方公布。",
     "product": "OpenCode Zen · GLM-5.3-Flash Free (opencode/glm-5.3-flash-free)",
     "post_time_bj": "2026-10-16T14:49:02+08:00",
     "providers": [
@@ -5720,16 +5628,7 @@
     ],
     "barriers": [
       "need_client"
-    ],
-    "claim_steps": [
-      "打开 OpenCode，在 /models 中选择 GLM-5.3-Flash Free。",
-      "免费聊天模型需在 OpenCode 内使用；其他客户端使用付费模型或 Go。",
-      "截止日和统一额度未公布，核对端内可用性与限额。"
-    ],
-    "official_url": "https://opencode.ai/v2/docs/console/models/",
-    "update_note": "2026-11-04 按官方文档修正使用范围，移除泛用免费 API 接入建议。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://opencode.ai/v2/docs/console/models/"
+    ]
   },
   {
     "id": "workbuddy-codebuddy-deepseek-outage-500-credits-20261016",
@@ -5817,17 +5716,17 @@
   },
   {
     "id": "devin-swe2-free-extend-20261016",
-    "title": "Devin SWE-2：自助套餐 Desktop / CLI 免费期延至 11/30（不含 Cloud）",
+    "title": "Devin SWE-2：Pro/Max/Teams 免费期再延至约 11/1（仅 Desktop / CLI）",
     "model": "Cognition SWE-2（Medium / High / Max）",
     "type": "限时",
-    "deadline": null,
+    "deadline": "2026-11-01T23:59:59+08:00",
     "url": "https://x.com/Himalayas1989/status/2111019169240297948",
-    "summary": "Devin 当前官方文档确认 SWE-2 对 self-serve 套餐在 Desktop 与 CLI 免费至 2026-11-30，不适用于 Devin cloud 会话。套餐资格、可选模型以账号模型选择器为准，不承诺所有免费账号无限可用。此更新依据官方文档，保留原历史社区帖。",
+    "summary": "社区多源称 Devin 官方 Discord（veritas）通知：自研编程模型 SWE-2 对 Pro / Max / Teams 用户在 Desktop（原 Windsurf）与 CLI 的免费促销再次延期，约用到 10 月底或 11 月 1 日；同时上线付费加速档 SWE-2 Lightning。注意：官网定价页仍写免费到 2026-10-16、文档写到 10-15，X 无官推，以端内模型列表 Free 标签为准。Cloud 会话不计入此次免费。条件：需有效 Pro（$20/月起）/ Max / Teams；仅 Desktop 与 CLI。",
     "source": "x.com/@Himalayas1989/status/2111019169240297948（同日 @ScarletKc/@noah_z_zhang/@markfenner/@chneqi1 等；定价页 https://devin.ai/pricing 与 docs.devin.ai/desktop/models 尚未同步新截止日）",
     "collected_at": "2026-10-16T18:42:10+08:00",
     "expired": false,
     "source_post_id": "2111019169240297948",
-    "free_terms": "官网将免费 SWE-2 列为 Pro（$20/月起）及以上权益；官方文档称 self-serve 套餐 Desktop/CLI 促销至 2026-11-30，未注明精确时区/时刻。不含 Cloud；语音模式独立 Agent 调用不享受该促销。",
+    "free_terms": "Pro/Max/Teams 在 Devin Desktop 与 CLI 免费用 SWE-2，社区称延至约 11/1；官网页仍写 10/16。不含 Cloud。另有付费 SWE-2 Lightning。",
     "product": "Devin Desktop / CLI — SWE-2",
     "providers": [
       {
@@ -5860,16 +5759,7 @@
     ],
     "barriers": [
       "need_client"
-    ],
-    "claim_steps": [
-      "官网将免费 SWE-2 列为 Pro（$20/月起）及以上套餐权益；免费档仅有限模型，先核对账号模型选择器。",
-      "自助套餐促销至 2026-11-30；官方未给精确截止时区，请以账号内为准。",
-      "Cloud 会话不包含在内；语音模式独立 Agent 调用也不享受该促销。"
-    ],
-    "official_url": "https://docs.devin.ai/desktop/models",
-    "update_note": "用官方 11/30 日期替换历史约 11/1 的推测；未编造截止时区，故 deadline 留空。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://docs.devin.ai/desktop/models"
+    ]
   },
   {
     "id": "nvidia-nim-step5-preview-free-endpoint-20261016",
@@ -6177,7 +6067,7 @@
     "summary": "Antigravity 负责人 Varun Mohan 发帖称，因本周 Argon 和 Gemini 在 Antigravity 上使用火爆，已给所有人重置 Argon 和 Gemini 模型额度，鼓励周末继续开发。社区用户确认额度已回满，并吐槽 Pro 档的 Argon 周额度很快就会用完。这是一次性重置，不是额度上调；打开 Antigravity 应用、CLI 或 IDE 插件即可直接用上回满的额度。",
     "source": "x.com/_mohansolo/status/2111220356178751860 + x.com/thtbee_/status/2111230123076927947",
     "collected_at": "2026-10-17T07:50:00+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2111220356178751860",
     "free_terms": "一次性全员重置，Antigravity 现有用户（含 Pro）的 Argon 与 Gemini 模型额度回满；需 Google 账号登录 Antigravity；额度用完后按原周期再重置。",
     "product": "Google Antigravity",
@@ -6206,10 +6096,7 @@
     ],
     "barriers": [
       "need_client"
-    ],
-    "update_note": "历史一次性自动重置事件，非现在仍可领取的活动；保留原文和日期，不再作为进行中优惠展示。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://x.com/_mohansolo/status/2111220356178751860"
+    ]
   },
   {
     "id": "commandcode-beam1-free-all-plans-20261017",
@@ -6787,7 +6674,7 @@
     "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）在北京时间 10/18 00:20 发帖「Day 13/ Le limit reset」，是他「连续 28 天每天一项改进或一次重置」计划的第 13 天，再次给大家重置用量（此前第 2、3、6、8、10 天也重置过）。他随后回复说会在美西时间当天结束前推送完成，北京时间 05:12 又单独发了一条「Done」，大概率表示已推送，但帖子没明说。重置的是 ChatGPT 付费账号在 Codex / ChatGPT Work 里的五小时和周额度，不是 API 余额；免费档不一定受益。同时有不少用户反映最近 Codex 用量消耗明显变快，重置后建议自己看一下额度。",
     "source": "x @thsottiaux",
     "collected_at": "2026-10-18T06:50:00+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2111492673890824348",
     "free_terms": "ChatGPT 付费档 Codex 用量一次性全局重置；不改 API 余额；官方称美西 10/17 当天内推送完成。",
     "product": "OpenAI Codex usage reset (Day 13)",
@@ -6810,10 +6697,7 @@
     ],
     "barriers": [
       "need_client"
-    ],
-    "update_note": "历史一次性自动重置事件，非现在仍可领取的活动；保留原文和日期，不再作为进行中优惠展示。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://x.com/thsottiaux/status/2111492673890824348"
+    ]
   },
   {
     "id": "cloudflare-workers-ai-free-10k-neurons-daily-20261018",
@@ -8628,13 +8512,13 @@
     "type": "API",
     "deadline": null,
     "url": "https://x.com/freeaidog123/status/2112431722818421232",
-    "summary": "Requesty 官方现行免费档仍提供每天 200 次请求、无需信用卡，免费目录当前列出 13 个模型，包括 Ling 3.1 Flash、Nemotron、Gemma 4 31B、Laguna 和 Leanstral 1.5。免费端点的处理地区各异，多数标为 US，不能将平台提供 EU data residency 能力理解为所有免费模型都在欧洲处理。",
+    "summary": "欧洲 AI 网关 Requesty 的免费档：邮箱注册建 Key 即可调用全部免费模型（目前 13 个，含 NVIDIA Nemotron 3 系列、Google Gemma 4 31B、InclusionAI Ling 3.1 Flash、Poolside Laguna、Mistral Leanstral 1.5），每天 200 次请求，不用绑卡，兼容 OpenAI/Anthropic 接口，可直接接 Claude Code、Cline、Cursor。官网定价页和免费模型页已核实；帖子说的「$10 赠金」官网没写，以账号内为准。",
     "source": "x @freeaidog123；官网 requesty.ai 定价页与免费模型页核实",
     "collected_at": "2026-10-20T14:50:00+08:00",
     "expired": false,
     "source_post_id": "2112431722818421232",
     "post_time_bj": "2026-10-20T14:32:24+08:00",
-    "free_terms": "Free 计划每天 200 次请求，无需信用卡；仅免费目录内的零价端点。当前 13 个模型，名单可能变化；具体端点地区和数据政策需逐一核对。",
+    "free_terms": "Free 计划 $0：仅限免费模型，每天 200 次请求，无需信用卡，无试用期限；base URL https://router.requesty.ai/v1。",
     "product": "Requesty",
     "providers": [
       {
@@ -8659,22 +8543,7 @@
     ],
     "barriers": [
       "need_key"
-    ],
-    "claim_steps": [
-      "在 Requesty 官方注册或登录，创建 API Key；Free 计划无需信用卡，限每天 200 次请求。",
-      "从官方免费目录复制端点 ID，配置 OpenAI 兼容 Base URL https://router.requesty.ai/v1；不要将任意付费模型当作免费。",
-      "当前免费目录列出 13 个模型，名单可能变化。调用前确认该端点仍为零价，并检查可用性与剩余额度。",
-      "逐一核对端点地区：多数当前标为 US，Leanstral 1.5 标为 EU、Gemma 4 31B 标为 Global。平台的 EU 驻留能力不代表全部免费推理都留在 EU。",
-      "官方页面未承诺社区所说的 $10 注册赠金，也未明确免费请求的重置时区；以账户显示为准。"
-    ],
-    "official_url": "https://www.requesty.ai/pricing",
-    "verification_urls": [
-      "https://www.requesty.ai/models/free"
-    ],
-    "update_source": "https://www.requesty.ai/models/free",
-    "update_note": "重新核对免费额度与模型目录；补充免费端点地区，避免将 EU 驻留能力泛化到所有免费模型。",
-    "verification_status": "verified",
-    "updated_at": "2026-11-06T09:22:34+08:00"
+    ]
   },
   {
     "id": "deepseek-search-fetch-free-claude-code-codex-nov1-20261020",
@@ -8771,7 +8640,7 @@
     "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）北京时间 10/20 03:45 先发「Day 15/ We're cooked」，14:33 又改口发「Day 15/ Nevermind, we're still cooking... and reset. Enjoy.」，即第 15 天再次给大家重置 Codex 用量（此前第 8、10、13 天等也重置过）。多位用户随后确认额度已刷新。重置的是 ChatGPT 付费账号在 Codex 里的五小时和周额度，不是 API 余额；免费档不一定受益。也有用户反映最近消耗变快、重置给的额度偏少，建议重置后自己看一下余量。",
     "source": "x @thsottiaux",
     "collected_at": "2026-10-20T17:50:00+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2112432076767289678",
     "post_time_bj": "2026-10-20T14:33:48+08:00",
     "free_terms": "ChatGPT 付费档 Codex 用量一次性全局重置；不改 API 余额；无截止时间（一次性）。",
@@ -8794,10 +8663,7 @@
     ],
     "barriers": [
       "need_client"
-    ],
-    "update_note": "历史一次性自动重置事件，非现在仍可领取的活动；保留原文和日期，不再作为进行中优惠展示。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://x.com/thsottiaux/status/2112432076767289678"
+    ]
   },
   {
     "id": "praex-velox2-free-daily-no-signup-20261020",
@@ -10129,27 +9995,27 @@
   },
   {
     "id": "heygen-voice-turbo-api-free-nov30-20261022",
-    "title": "HeyGen Voice Turbo Free：专用免费 TTS 模型至 11/30（免绑卡/余额）",
+    "title": "HeyGen Voice Turbo：TTS 榜第一，API 的 Turbo 端点免费到 11/30",
     "model": "HeyGen Voice Turbo（文本转语音）",
     "type": "限时",
-    "deadline": null,
+    "deadline": "2026-11-30T23:59:00+08:00",
     "url": "https://x.com/HeyGen/status/2112960858624078265",
-    "summary": "HeyGen 当前官方文档确认，只有 heygen-voice-1-turbo-free 模型的文本转语音请求免费至2026/11/30，不需要信用卡或余额。普通 Turbo 与默认 Voice 仍收费。免费版支持公开声音和 Instant Clone，不支持 Professional Clone；默认每端点每工作区成员30次/分钟，单次1–5000字符，且共享容量可能提前限流。",
+    "summary": "HeyGen 官方称自家 Voice Turbo 和 Voice 占 Artificial Analysis 文本转语音榜前两名。Turbo 是更快更便宜的模式，已上线 API，Turbo 端点免费用到 11 月 30 日（官方没写时区，按北京时间 11/30 当天结束算比较稳）。需要 HeyGen 账号和 API Key。",
     "source": "X @HeyGen 官方",
     "collected_at": "2026-10-22T01:48:00+08:00",
     "expired": false,
     "source_post_id": "2112960858624078265",
     "post_time_bj": "2026-10-22T01:35:00+08:00",
-    "free_terms": "须显式选 heygen-voice-1-turbo-free；免信用卡和余额，至11/30，精确时区未公布。默认30 RPM/端点/工作区成员，单次1–5000字符。普通Turbo/默认模型收费。",
+    "free_terms": "API 的 Voice Turbo 端点免费至 11/30（时区未说明）。",
     "product": "HeyGen API",
     "providers": [
       {
-        "name": "HeyGen API Key",
-        "action_url": "https://platform.heygen.com/api-keys"
+        "name": "HeyGen API 设置",
+        "action_url": "https://app.heygen.com/settings?nav=API"
       },
       {
-        "name": "HeyGen TTS 官方说明",
-        "action_url": "https://developers.heygen.com/docs/voices/heygen-voice-speech"
+        "name": "HeyGen API 文档",
+        "action_url": "https://docs.heygen.com/"
       }
     ],
     "agents": [],
@@ -10159,23 +10025,7 @@
     ],
     "barriers": [
       "need_key"
-    ],
-    "claim_steps": [
-      "在 HeyGen 官方账号创建 API Key；Turbo Free 不要求信用卡或充值余额。",
-      "调用 /v3/models/audio/tts 或 /v3/models/audio/tts/stream，显式指定 model 为 heygen-voice-1-turbo-free；省略模型会使用付费默认模型，普通 heygen-voice-1-turbo 也收费。",
-      "选用 ACTIVE 公开声音或自己的 HeyGen Voice 1 Instant Clone；免费版不支持 Professional Clone，文本长度须为1–5000字符。",
-      "默认每端点每工作区成员30次/分钟，账号可能另有限额；共享容量耗尽也会429，按 Retry-After 或退避重试。免费请求不会自动转为付费模型。",
-      "免费至2026/11/30，官方未公布时区和精确结束时刻；不承诺可用性或响应时延，使用前核对最新条款。"
-    ],
-    "official_url": "https://developers.heygen.com/docs/voices/heygen-voice-speech",
-    "verification_urls": [
-      "https://www.heygen.com/blog/heygen-voice-turbo"
-    ],
-    "update_source": "https://developers.heygen.com/docs/voices/heygen-voice-speech",
-    "update_note": "补齐专用免费模型ID、免绑卡/余额和实际限额；移除旧记录自行假设的北京时间截止。",
-    "deadline_note": "官方只写至11/30，未给时区，不保留原记录的推测性+08:00时间。",
-    "verification_status": "verified",
-    "updated_at": "2026-11-06T09:22:34+08:00"
+    ]
   },
   {
     "id": "recursive-flint-open-weights-free-20261022",
@@ -10628,7 +10478,7 @@
     "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）北京时间 10/22 14:55 发帖「Day 17/ Bet you thought we forgot, but no, it’s reset day today」，即第 17 天再次全局重置 Codex 用量（此前第 8、10、13、15 天也重置过）。重置的是 ChatGPT 付费账号在 Codex 里的五小时和周额度，不是 API 余额。帖子同时提醒申请 Daybreak Blue（网络安全用途）访问，约 15 分钟可办好。",
     "source": "X @thsottiaux",
     "collected_at": "2026-10-22T18:50:00+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2113162277688070445",
     "post_time_bj": "2026-10-22T14:55:22+08:00",
     "free_terms": "ChatGPT 付费档 Codex 用量一次性全局重置；不改 API 余额；一次性，无截止时间。",
@@ -10651,10 +10501,7 @@
     ],
     "barriers": [
       "need_client"
-    ],
-    "update_note": "历史一次性自动重置事件，非现在仍可领取的活动；保留原文和日期，不再作为进行中优惠展示。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://x.com/thsottiaux/status/2113162277688070445"
+    ]
   },
   {
     "id": "claude-duet-preview-free-limit-reset-nov30-20261022",
@@ -11229,18 +11076,18 @@
   },
   {
     "id": "antigravity-promo-ai-pro-opus55-argon-20261023",
-    "title": "Antigravity：赠送 Pro 不保证 Claude 5.5；Argon 仅合资格设备试用可用",
+    "title": "Antigravity：赠送的 Google AI Pro（Pixel/Jio/学生/Lenny's）也能用 Claude Opus 5.5 和 Gemini 4 Argon",
     "model": "Claude Opus 5.5 / Claude Sonnet 5.5 / Gemini 4 Argon",
     "type": "额度",
     "deadline": null,
     "url": "https://x.com/hodu382759/status/2113438746431697158",
-    "summary": "现行官方模型表已限制 Claude Sonnet/Opus 5.5 为非试用 Pro 订阅或 Ultra 等套餐；Gemini 4 Argon 则允许付费 Pro 或合资格高端设备试用。此前社区称 Pixel/Jio/学生/Lenny's 等赠送 Pro 均可使用两类模型，不能再作通用保证。各赠送渠道是否符合例外需查账号，不代表新用户能普遍免费领取。",
+    "summary": "多名用户 10/23 上午反馈：通过 Pixel、Jio、学生认证、Lenny's Product Pass 等渠道免费拿到的 Google AI Pro，在 Antigravity 模型列表里出现了 Gemini 4 Argon（Low/Medium/High）以及 Claude Opus 5.5、Sonnet 5.5。暂未见 Google 官方公告，属于用户实测；有用户反映 Opus 5.5 的 5 小时与周额度消耗很快。",
     "source": "x @hodu382759、@xiangxiang103、@jayzhangdev、@wanglv666 等多名用户实测；未见官方公告",
     "collected_at": "2026-10-23T10:50:00+08:00",
     "expired": false,
     "source_post_id": "2113438746431697158",
     "post_time_bj": "2026-10-23T09:13:57+08:00",
-    "free_terms": "Claude 5.5 的 Pro 权益仅非试用订阅；Gemini 4 Argon 的免费试用例外限合资格高端设备。未逐一确认 Pixel/Jio/学生/Lenny's 账号，不保证原社区反馈仍适用。",
+    "free_terms": "需持有 Google AI Pro（含各类免费赠送渠道）；受 Antigravity 5 小时/每周额度限制。无明确截止时间，未经官方确认，可能随时调整。",
     "product": "Google Antigravity",
     "providers": [],
     "agents": [
@@ -11254,23 +11101,8 @@
       "coding"
     ],
     "barriers": [
-      "need_client",
-      "region_limited"
-    ],
-    "claim_steps": [
-      "先在官方模型表与自己的模型选择器核对具体套餐，不要仅凭赠送 Google AI Pro 的名称判断资格。",
-      "Claude Opus/Sonnet 5.5 在 Pro 中要求非试用订阅；不能把免费赠送或试用 Pro 普遍列作免费 Claude 5.5 入口。",
-      "Gemini 4 Argon 可用范围为付费 Pro 或合资格高端设备试用；官方未在模型页枚举所有合资格设备和赠送渠道。",
-      "仅保留合资格设备试用的条件性入口，额度按账号显示；不要为了旧活动说明直接开通付费订阅。"
-    ],
-    "official_url": "https://antigravity.google/docs/models/",
-    "verification_urls": [
-      "https://antigravity.google/docs/plans/"
-    ],
-    "verification_status": "partially_verified",
-    "updated_at": "2026-11-07T09:58:00+08:00",
-    "update_source": "https://antigravity.google/docs/models/",
-    "update_note": "用最新官方套餐限制修正历史社区泛化说法；各赠送渠道的具体资格未逐一确认。"
+      "need_client"
+    ]
   },
   {
     "id": "qoder-intl-daily-100-credits-20261023",
@@ -11387,7 +11219,7 @@
     "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）北京时间 10/23 12:46 发帖「Day 18/ Decisions API is GA, OpenResponses joined the Linux Foundation, we shipped some performance improvements and Uber is going all-in on codex & work. But yes… that’s a reset!」，即第 18 天再次全局重置 Codex 用量（此前第 8、10、13、15、17 天也重置过）。同日还宣布 Decisions API 正式 GA、OpenResponses 加入 Linux Foundation。重置的是 ChatGPT 付费账号在 Codex 里的五小时和周额度，不是 API 余额。",
     "source": "X @thsottiaux",
     "collected_at": "2026-10-23T15:41:25+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2113492187770175603",
     "post_time_bj": "2026-10-23T12:46:19+08:00",
     "free_terms": "ChatGPT 付费档 Codex 用量一次性全局重置；不改 API 余额；一次性，无截止时间。",
@@ -11410,10 +11242,7 @@
     ],
     "barriers": [
       "need_client"
-    ],
-    "update_note": "历史一次性自动重置事件，非现在仍可领取的活动；保留原文和日期，不再作为进行中优惠展示。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://x.com/thsottiaux/status/2113492187770175603"
+    ]
   },
   {
     "id": "exa-free-tier-10usd-monthly-20261023",
@@ -11456,12 +11285,12 @@
   },
   {
     "id": "oc-ferry-opencode-free-to-workbuddy-20261023",
-    "title": "OC Ferry：第三方 OpenCode 转接工具（当前免费转接可用性未确认）",
+    "title": "OC Ferry：把 OpenCode 免费模型摆渡进 WorkBuddy（免登录免 Key）",
     "model": null,
     "type": "API",
     "deadline": null,
     "url": "https://x.com/ChinaAIDaily/status/2113545761002856903",
-    "summary": "历史社区帖介绍 OC Ferry 在本机运行 OpenCode 并转接至 WorkBuddy。当前 OpenCode 官方文档要求免费聊天模型在 OpenCode 内使用，因此不能据历史帖承诺 WorkBuddy 转接仍免费或可用。本次未安装或测试该第三方工具。",
+    "summary": "开源托盘工具 OC Ferry（MIT）在本机隔离跑 OpenCode，按价格筛出真正免费的模型并探测工具调用兼容性，一键写入 WorkBuddy 的 models.json，再起本机 OpenAI 兼容转发口；免登录、不用 API Key。需先装 WorkBuddy，macOS/Windows 有安装包；退出时会摘掉自己导入的条目。",
     "source": "ChinaAIDaily",
     "collected_at": "2026-10-23T16:45:00+08:00",
     "expired": false,
@@ -11469,7 +11298,7 @@
     "related_post_urls": [
       "https://x.com/QingQ77/status/2110363745805385833"
     ],
-    "free_terms": "第三方本地转接工具，非 OpenCode 官方免费 API。是否兼容当前限制未确认；勿绕过限制，勿输入敏感数据。",
+    "free_terms": "免登录/免 API Key；依赖 OpenCode 当前免费模型池可用性；需安装 WorkBuddy + OC Ferry 客户端",
     "product": "OC Ferry (RuiC-oc-ferry)",
     "providers": [],
     "agents": [
@@ -11492,18 +11321,9 @@
       "chat"
     ],
     "barriers": [
-      "need_client"
-    ],
-    "claim_steps": [
-      "这是历史社区工具记录，当前免费转接可用性未确认。",
-      "优先在官方 OpenCode 客户端直接使用免费模型。",
-      "第三方工具可能读取本地内容和凭据；本次未安装、测试或确认其安全性。"
-    ],
-    "verification_status": "unconfirmed",
-    "official_url": "https://opencode.ai/v2/docs/console/models/",
-    "update_note": "保留历史来源，明确官方客户端限制与第三方风险，不把不确定性当作过期。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://opencode.ai/v2/docs/console/models/"
+      "need_client",
+      "zero_signup"
+    ]
   },
   {
     "id": "trae-cn-1024-checkin-1m-credits-lottery-20261023",
@@ -12529,12 +12349,12 @@
   },
   {
     "id": "qiniu-conatus-free-1e8-tokens-daily-20261024",
-    "title": "七牛云 Conatus Free：实名每天 1 亿 Token（单笔充值＞¥100 可到每天 10 亿，至 11/30）",
+    "title": "七牛云 Conatus Free：实名每天 1 亿 Token（充值≥¥100 可到每天 10 亿，至 11/30）",
     "model": "qiniu/conatus-free",
     "type": "限时",
     "deadline": "2026-11-30T23:59:00+08:00",
     "url": "https://x.com/EastSavin/status/2113889683340243127",
-    "summary": "七牛云 1024 限时融合模型 Conatus Free（Model ID qiniu/conatus-free），10/24–11/30。完成实名认证后每日 1 亿 Token，任意一笔已到账充值＞¥100（多笔不累加）可升至每日 10 亿；每日 00:00（北京时间）重置、不结转。仅消耗活动免费额度，用尽即拒、不扣余额也不切付费模型。兼容 Completions/Messages，Base URL https://api.qnaigc.com/v1；官方写明可接工具调用/深度思考/图像理解。",
+    "summary": "七牛云 1024 限时融合模型 Conatus Free（Model ID qiniu/conatus-free），10/24–11/30。完成实名认证后每日 1 亿 Token，任意一笔已到账充值＞¥100（历史计入、多笔不累加）可升至每日 10 亿；每日 00:00（北京时间）重置、不结转。仅消耗活动免费额度，用尽即拒、不扣余额也不切付费模型。兼容 Completions/Messages，Base URL https://api.qnaigc.com/v1；官方写明可接工具调用/深度思考/图像理解。",
     "source": "X @EastSavin / @hodu382759；官网 qiniu.com/ai/free-models/conatus-2026",
     "collected_at": "2026-10-24T15:42:07+08:00",
     "expired": false,
@@ -12571,19 +12391,7 @@
     "barriers": [
       "need_key",
       "cn_account"
-    ],
-    "claim_steps": [
-      "登录七牛云并完成实名认证，未受风控限制的认证用户每天可用 1 亿 Token，无需为基础额度充值。",
-      "创建自己的 API Key，使用模型 ID qiniu/conatus-free，Base URL 为 https://api.qnaigc.com/v1。",
-      "可选的额度提升要求任意一笔已到账充值严格大于 ¥100，多笔不累计；达到条件后每天最高 10 亿 Token。充值不是免费领取的必需步骤。",
-      "输入、输出和缓存输入均计入额度，同账号所有 API Key 共享；北京时间每天 00:00 重置，不结转。",
-      "活动至北京时间 2026/11/30 23:59；额度用尽或活动结束即停止调用，不自动付费、不切换收费模型。"
-    ],
-    "official_url": "https://www.qiniu.com/ai/free-models/conatus-2026",
-    "update_source": "https://www.qiniu.com/ai/free-models/conatus-2026",
-    "update_note": "修正标题的 ≥¥100 为官方严格 ＞¥100；补充共享额度、缓存计量与到期不转付费。",
-    "verification_status": "verified",
-    "updated_at": "2026-11-06T09:22:34+08:00"
+    ]
   },
   {
     "id": "scnet-maas-newuser-01yuan-50m-tokens-20261024",
@@ -13310,7 +13118,7 @@
     "summary": "OpenAI Codex 负责人 Tibo（@thsottiaux）北京时间 10/25 11:39 发帖「Day 20/ Rest and reset」，即「28 天挑战」第 20 天再次全局重置 Codex 用量（此前第 8、10、13、15、17、18 天也重置过）。多个跟踪账号转述称这次是付费用户的完整重置，太平洋时间午夜前全部生效。重置的是 ChatGPT 付费账号在 Codex 里的五小时和周额度，不是 API 余额；另有用户提醒，使用存下来的重置次数可能会改变每周刷新日。",
     "source": "X @thsottiaux；@codex_resets、@Eason_ba_ba 转述",
     "collected_at": "2026-10-25T15:45:00+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2114200152701575656",
     "post_time_bj": "2026-10-25T11:39:31+08:00",
     "free_terms": "ChatGPT 付费档 Codex 用量一次性全局重置；不改 API 余额；一次性，无截止时间。",
@@ -13333,10 +13141,7 @@
     ],
     "barriers": [
       "need_client"
-    ],
-    "update_note": "历史一次性自动重置事件，非现在仍可领取的活动；保留原文和日期，不再作为进行中优惠展示。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://x.com/thsottiaux/status/2114200152701575656"
+    ]
   },
   {
     "id": "autoclaw-weekly-perks-m10w4-100m-tokens-20261025",
@@ -13500,7 +13305,7 @@
     "free_terms": "无需领取：已订阅 Kimi 任一档会员计划的账号自动生效，官方称太平洋时间 10/25 当天结束前（约北京 10/26 15:00）用量条会更新。到 kimi.com 登录 → 会员/Kimi Code 页面查看用量条确认。仅限现有付费订阅用户、每账号一次，免费账号不适用；不需额外绑卡或填码。",
     "source": "X @Kimi_Moonshot 官方帖",
     "collected_at": "2026-10-26T05:50:00+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2114450610724708492",
     "post_time_bj": "2026-10-26T04:14:44+08:00",
     "product": "Kimi 会员订阅（K3.1 Pro 计划）",
@@ -13528,10 +13333,7 @@
     ],
     "barriers": [
       "need_key"
-    ],
-    "update_note": "历史一次性自动重置事件，非现在仍可领取的活动；保留原文和日期，不再作为进行中优惠展示。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://x.com/Kimi_Moonshot/status/2114450610724708492"
+    ]
   },
   {
     "id": "claude-code-cloud-session-credit-expire-nov4-20261026",
@@ -13745,7 +13547,7 @@
     "free_terms": "如何领取：已是 ChatGPT 付费档（Plus/Pro 等）用户打开 chatgpt.com/codex 或 Codex 客户端，用量已由官方全局重置，无需额外领取码或绑卡；敲 /status 可看是否回满。一次性重置、无截止；不改 API 余额；免费档不适用。",
     "source": "X @thsottiaux；社区 @knightleijun / @DevAdventur3s 等确认到账",
     "collected_at": "2026-10-26T14:45:00+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2114588174249071102",
     "post_time_bj": "2026-10-26T13:21:22+08:00",
     "product": "OpenAI Codex usage reset (Day 21)",
@@ -13767,10 +13569,7 @@
     ],
     "barriers": [
       "need_client"
-    ],
-    "update_note": "历史一次性自动重置事件，非现在仍可领取的活动；保留原文和日期，不再作为进行中优惠展示。",
-    "updated_at": "2026-11-04T20:24:00+08:00",
-    "update_source": "https://x.com/thsottiaux/status/2114588174249071102"
+    ]
   },
   {
     "id": "huggingfacebio-carbon-x-open-weights-20261026",
@@ -14684,16 +14483,16 @@
   },
   {
     "id": "token360-minimax-m3.1-flash-free-72h-20261102",
-    "title": "Token360：MiniMax M3.1 Flash 72 小时免费窗口已过（原定 11/3–11/6）",
+    "title": "Token360：MiniMax M3.1 Flash 限时免费 72 小时（11/3–11/6）",
     "model": "MiniMax M3.1 Flash（minimax-m3.1-flash）",
     "type": "限时",
     "deadline": "2026-11-06T01:00:00+08:00",
     "url": "https://x.com/benny_token360/status/2115121795779141660",
-    "summary": "本条历史记录的 72 小时免费窗口为太平洋时间 11/2 09:00–11/5 09:00，即北京时间 11/3 01:00–11/6 01:00，现已超过已记录截止。原 X 帖与模型页本次未能重新读取，未核实任何延期；保留原时间与出处，不把当前不可读当作服务下线。",
-    "free_terms": "已过原记录免费窗口，勿继续按免费承诺调用；原记录注明窗口外按量计费。当前价格或延期需自行核对官方控制台。",
+    "summary": "美国多模态推理网关 Token360 预告：MiniMax M3.1 Flash 将在其 API 上免费 72 小时，太平洋时间 11/2 9:00 至 11/5 9:00（北京时间约 11/3 01:00 至 11/6 01:00）。模型 1M 上下文、支持多模态与推理，OpenAI 兼容，平时价 $0.15/$0.6 每百万 tokens。尚未开始，到点再用。",
+    "free_terms": "去 token360.ai 点 Sign up free 注册 → 控制台创建 API Key → Base URL 填 https://api.token360.ai/v1，模型 id 填 minimax-m3.1-flash。免费窗口为北京时间 11/3 01:00–11/6 01:00（帖子未说明单账号限额和是否需绑卡，以控制台为准）；窗口外按量计费。",
     "source": "X @benny_token360；Token360 模型页",
     "collected_at": "2026-10-28T01:52:00+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2115121795779141660",
     "post_time_bj": "2026-10-28T00:41:47+08:00",
     "product": "Token360",
@@ -14716,15 +14515,7 @@
     ],
     "barriers": [
       "need_key"
-    ],
-    "claim_steps": [
-      "该 72 小时活动已超过原记录截止，北京时间 2026/11/6 01:00。",
-      "本次未能重新读取原帖和模型页，未核实延期；如继续使用，请先确认当前价格，避免按旧免费承诺调用。"
-    ],
-    "update_source": "https://x.com/benny_token360/status/2115121795779141660",
-    "update_note": "仅按仓库已有截止显式标记过期；本次原帖/模型页不可读，不声称重新核实官网或服务停用。",
-    "verification_status": "expired_by_recorded_deadline",
-    "updated_at": "2026-11-06T09:22:34+08:00"
+    ]
   },
   {
     "id": "liquid-lfm3-open-weights-20261027",
@@ -14852,152 +14643,61 @@
     ]
   },
   {
-    "id": "stepfun-stepaudio3-free-nov8-20261102",
-    "title": "阶跃星辰 StepAudio 3 系列 API 限时免费至 11/8",
-    "model": "StepAudio 3 Realtime / TTS / Gen / Music / ASR",
+    "id": "qoder-qoduck-daily-free-20261107",
+    "title": "Qoder 国际版：匿名模型 Qoduck 个人用户每日免费额度（11/7 起，结束日待官宣）",
+    "model": "Qoduck（stealth）",
     "type": "限时",
-    "deadline": "2026-11-08T23:59:59+08:00",
-    "url": "https://x.com/Clearance43/status/2117252938934452593",
-    "summary": "阶跃星辰官方定价文档确认：StepAudio 3 系列语音模型限时免费至北京时间 2026 年 11 月 8 日 23:59:59，11 月 9 日零时起恢复表列价格。覆盖实时语音、语音合成、音频与音乐生成、语音识别；不是长期免费档。",
-    "free_terms": "需平台注册并创建 API Key；个人账号需完成身份验证。V0 档（累计充值低于 $15）官方通用限速为 5 并发、100 RPM、50 万 TPM，语音端点具体限制以控制台为准。免费期结束后按量收费。官方未在活动说明中明确单账号免费总额度与是否需要绑卡，不作免绑卡承诺。",
-    "claim_steps": [
-      "打开阶跃开放平台注册；个人账号需完成身份验证。",
-      "在控制台创建 API Key，按相应 StepAudio 3 模型文档接入。",
-      "免费截止为北京时间 11/8 23:59:59；11/9 起按官方价目表收费，使用前核对控制台。",
-      "官方活动说明未明确单账号免费总额度或绑卡要求，请以控制台为准。"
-    ],
-    "source": "X @Clearance43（原帖已核实）；阶跃星辰官方定价文档已核实",
-    "collected_at": "2026-11-04T19:57:00+08:00",
-    "expired": false,
-    "source_post_id": "2117252938934452593",
-    "product": "StepFun StepAudio 3",
-    "providers": [
-      {
-        "name": "阶跃星辰开放平台",
-        "action_url": "https://platform.stepfun.ai/"
-      }
-    ],
-    "agents": [],
-    "models": [
-      {
-        "name": "StepAudio 3 官方定价及限速",
-        "action_url": "https://platform.stepfun.ai/docs/en/guides/pricing/details"
-      }
-    ],
-    "scenes": [
-      "audio"
-    ],
-    "barriers": [
-      "need_key"
-    ],
-    "official_url": "https://platform.stepfun.ai/docs/en/guides/pricing/details"
-  },
-  {
-    "id": "tazo-labs-15min-free-audio-20261102",
-    "title": "Tazo Labs：新账号送 15 分钟免费音频决策 API 额度",
-    "model": "Tazo Large",
-    "type": "额度",
     "deadline": null,
-    "url": "https://x.com/namanjn1998/status/2117232948327936064",
-    "summary": "Tazo Labs 推出面向语音代理的音频决策模型：输入音频、问题与选项，输出决策概率。官方文档确认新账号获得 15 分钟免费音频额度，网页 Playground 和全部 API Key 共享余额；不是每个 Key 分别赠送。",
-    "free_terms": "新账号 15 分钟音频，静音也计入；一次性额度，未公布到期日或绑卡要求。Tazo Large 每账号 500 次/滚动分钟、5 并发；上传音频最长 45 秒、最大 16MB。余额用尽后新请求返回 402，需充值才能继续。",
-    "claim_steps": [
-      "打开 app.tazolabs.com 注册账号，先在 Playground 体验。",
-      "如需 API，在账号中创建 Key；所有 Key 与 Playground 共享 15 分钟额度。",
-      "关注剩余音频秒数，额度耗尽后新请求会停止；勿将新建 Key 误认为新增免费时间。",
-      "静音也计入音频时长；官方未公布该免费额度的到期日或绑卡要求。"
-    ],
-    "source": "X @namanjn1998（原帖已核实）；Tazo 官方 billing / limits 文档已核实",
-    "collected_at": "2026-11-04T19:57:00+08:00",
+    "url": "https://x.com/alibaba_cloud/status/2118992047613080032",
+    "summary": "阿里云官号确认：Qoder 国际版上线匿名模型 Qoduck，自 2026-11-07 起个人用户每天有免费额度，额度内 0.0× Credits（含最高思考强度）；Teams/Enterprise 不可见，IDE/插件/CLI 暂不支持。",
+    "free_terms": "如何领取：打开 qoder.com 注册/登录国际版个人账号（Free/Pro Trial/Lite/Pro/Pro+/Ultra 均可；Teams/Enterprise 不可）→ 下载并更新桌面端到最新版 → 模型列表选 Qoduck，无需兑换码。每日免费次数有限（付费用户更多），用完可次日重置或按 0.5× 扣 Credits；高峰可能排队。活动结束日待官方提前公告。",
+    "source": "X @alibaba_cloud + docs.qoder.com/events/qoduck-free",
+    "collected_at": "2026-11-07T17:45:05+08:00",
     "expired": false,
-    "source_post_id": "2117232948327936064",
-    "product": "Tazo Labs",
-    "providers": [
+    "providers": [],
+    "agents": [
       {
-        "name": "Tazo Labs",
-        "action_url": "https://app.tazolabs.com"
-      }
-    ],
-    "agents": [],
-    "models": [
-      {
-        "name": "Tazo Large 额度说明",
-        "action_url": "https://docs.tazolabs.com/guides/billing"
+        "name": "Qoder 下载",
+        "action_url": "https://qoder.com/download"
       },
       {
-        "name": "Tazo API 限制",
-        "action_url": "https://docs.tazolabs.com/guides/limits"
+        "name": "Qoduck 活动说明",
+        "action_url": "https://docs.qoder.com/events/qoduck-free"
       }
     ],
-    "scenes": [
-      "audio"
-    ],
-    "barriers": [
-      "need_key"
-    ],
-    "official_url": "https://docs.tazolabs.com/guides/billing"
-  },
-  {
-    "id": "sail-startups-10000-credit-20261103",
-    "title": "Sail for Startups：申请最高 $10,000 推理与 Sailboxes 额度（需审核）",
-    "model": "Sail 托管开放模型 / Sailboxes",
-    "type": "额度",
-    "deadline": null,
-    "url": "https://x.com/sailresearchco/status/2117663094562242752",
-    "summary": "Sail Research 面向自筹资金或已融资的初创企业开放申请，最高赠送 $10,000 额度，可共用于开放模型推理 API 与持久化代理计算环境 Sailboxes。每份申请单独审核，不保证获批或获得最高金额。",
-    "free_terms": "需有创业公司及实际工作负载，使用 Sail 账号邮箱提交申请；获批后额度加到账户并邮件通知。官方未公布统一到期日、最低赠送额或是否需要绑卡；不是所有注册用户自动领取。",
-    "claim_steps": [
-      "本活动面向自筹资金或已融资的初创企业；先建立 Sail 账号，再打开官方 Startups 页面。",
-      "使用 Sail 账号邮箱提交公司和计划使用的工作负载信息。",
-      "等待人工审核；通过后额度进入账户，推理与 Sailboxes 共用。",
-      "最高 $10,000，不保证获批或获得最高金额；官方未公布统一到期日。"
-    ],
-    "source": "X @sailresearchco（原帖已核实）；Sail 官方 Startups 页面已核实",
-    "collected_at": "2026-11-04T19:57:00+08:00",
-    "expired": false,
-    "source_post_id": "2117663094562242752",
-    "product": "Sail for Startups",
-    "providers": [
+    "models": [
       {
-        "name": "Sail for Startups 申请",
-        "action_url": "https://www.sailresearch.com/startups"
+        "name": "Qoduck",
+        "action_url": "https://docs.qoder.com/events/qoduck-free"
       }
     ],
-    "agents": [],
-    "models": [],
     "scenes": [
       "coding",
       "chat"
     ],
     "barriers": [
-      "need_key"
-    ],
-    "official_url": "https://www.sailresearch.com/startups"
+      "need_client"
+    ]
   },
   {
-    "id": "openrouter-crouton-alpha-free-20261103",
-    "title": "OpenRouter：Crouton Alpha 隐身推理模型免费开放（1M 多模态上下文）",
-    "model": "Crouton Alpha（stealth/crouton-alpha）",
-    "type": "API",
-    "deadline": null,
-    "url": "https://x.com/OpenRouter/status/2117712705901728199",
-    "summary": "OpenRouter 官方宣布 Crouton Alpha 免费开放，模型页确认输入与输出均为 $0，支持 1,048,576 token 上下文，接受文本、图片、音频、视频和文件输入，输出文本。模型由匿名第三方提供；未公布免费结束日期。",
-    "free_terms": "需 OpenRouter 账号和 API Key；免费不等于不限量，实际可用性与限额以平台为准。匿名供应商可能保留提示词与输出，但声明不用于训练；不支持 EU in-region routing，勿据此推断全部欧盟用户不能用。",
-    "claim_steps": [
-      "注册或登录 OpenRouter，在 Keys 页面创建 API Key。",
-      "使用 OpenAI 兼容接口 https://openrouter.ai/api/v1，模型 ID 填 stealth/crouton-alpha；使用前核对模型页仍为免费。",
-      "官方未公布固定免费截止日或该模型独立总额度；免费并非不限量，可用性与限额以平台为准。",
-      "模型由匿名供应商提供，提示词和输出可能被保留但不用于训练；避免发送敏感内容。当前不支持 EU in-region routing。"
-    ],
-    "source": "X @OpenRouter 官推原帖与 OpenRouter 模型页已核实",
-    "source_post_id": "2117712705901728199",
-    "post_time_bj": "2026-11-04T04:17:08+08:00",
-    "collected_at": "2026-11-04T20:27:00+08:00",
+    "id": "openrouter-stealth-crouton-alpha-free-20261107",
+    "title": "OpenRouter：隐身模型 Crouton Alpha 限时 $0（1M 多模态上下文）",
+    "model": "stealth/crouton-alpha",
+    "type": "限时",
+    "deadline": "2026-11-11T04:37:00+08:00",
+    "url": "https://x.com/okeyccronald/status/2118869736800874674",
+    "summary": "OpenRouter 于 11/3 上架隐身模型 stealth/crouton-alpha：输入/输出均 $0，1M 上下文，支持文本/图/音/视频与工具调用；社区据 OpenCode 一周窗估算约用到 11/11，以 OpenRouter 页面为准。",
+    "free_terms": "如何领取：打开 openrouter.ai 注册账号 → Keys 页创建 API Key（需登录，一般免绑卡）→ 请求 model=stealth/crouton-alpha，base https://openrouter.ai/api/v1。受免费模型速率限制；隐身期提供方匿名，提示词/回复可能被提供方保留但不用于训练。结束日以 OpenRouter 定价页变为非 $0 为准（社区估约 11/11）。",
+    "source": "X @okeyccronald + openrouter.ai/stealth/crouton-alpha",
+    "collected_at": "2026-11-07T17:45:05+08:00",
     "expired": false,
-    "product": "OpenRouter Crouton Alpha",
     "providers": [
       {
-        "name": "OpenRouter API Keys",
+        "name": "OpenRouter",
+        "action_url": "https://openrouter.ai/"
+      },
+      {
+        "name": "创建 API Key",
         "action_url": "https://openrouter.ai/keys"
       }
     ],
@@ -15014,586 +14714,28 @@
     ],
     "barriers": [
       "need_key"
-    ],
-    "official_url": "https://openrouter.ai/stealth/crouton-alpha"
-  },
-  {
-    "id": "opencode-crouton-alpha-free-week-20261103",
-    "title": "OpenCode：Crouton Alpha 限时免费一周（仅部分地区）",
-    "model": "Crouton Alpha",
-    "type": "限时",
-    "deadline": null,
-    "url": "https://x.com/opencode/status/2117717721458843711",
-    "summary": "OpenCode 于 UTC 11/3 宣布隐身模型 Crouton Alpha 接下来一周免费，具有 1M 上下文与多模态能力。11/5 官方模型文档已列出该模型，输入、输出与缓存读取均免费；免费聊天模型须在 OpenCode 内使用。数据不用于训练，但保留 30 天；中国大陆、香港、澳门、欧盟等地区不可用，完整名单见官方文档。精确结束时刻与单账号额度未公布。",
-    "free_terms": "限时一周，约至 11/10 UTC，精确结束时刻未公布；仅 OpenCode 客户端。中国大陆/港澳、欧盟等地区不开放；数据保留 30 天，不用于训练。",
-    "claim_steps": [
-      "打开官方 OpenCode 客户端，在 /models 中查找 Crouton Alpha Free 并确认免费标识。",
-      "官方于 UTC 11/3 宣布接下来一周免费，约至 11/10；精确结束时刻未公布，使用前确认客户端显示。",
-      "中国大陆、香港、澳门、欧盟等地区不可用；请先核对官方模型文档的完整地区限制，不要绕过限制。",
-      "数据保留 30 天但不用于模型训练，避免输入机密内容。免费聊天模型需在 OpenCode 内使用，不能视作任意客户端可调用的免费 API。"
-    ],
-    "source": "X @opencode 官方原帖已核实",
-    "source_post_id": "2117717721458843711",
-    "post_time_bj": "2026-11-04T04:37:04+08:00",
-    "collected_at": "2026-11-04T20:27:00+08:00",
-    "expired": false,
-    "product": "OpenCode Crouton Alpha",
-    "providers": [],
-    "agents": [
-      {
-        "name": "OpenCode",
-        "action_url": "https://opencode.ai/"
-      }
-    ],
-    "models": [],
-    "scenes": [
-      "coding",
-      "chat"
-    ],
-    "barriers": [
-      "need_client",
-      "region_limited"
-    ],
-    "official_url": "https://opencode.ai/v2/docs/console/models/",
-    "verification_status": "verified",
-    "updated_at": "2026-11-05T09:20:00+08:00",
-    "update_source": "https://opencode.ai/v2/docs/console/models/",
-    "update_note": "官方文档已补齐地区限制、30 天数据保留与客户端限制，保留一周活动原帖，不推算精确截止。"
-  },
-  {
-    "id": "openai-chatgpt-pro-business-api-credits-20261029",
-    "title": "ChatGPT Pro / Business：付费订阅附赠每月最高 $500 API 额度",
-    "model": "OpenAI API（不含通过 API Key 使用的 Codex）",
-    "type": "额度",
-    "deadline": null,
-    "url": "https://x.com/OpenAIDevs/status/2115583698074755078",
-    "summary": "OpenAI 为符合资格的付费 ChatGPT Pro / Business 订阅提供 API 额度：Pro 按 $100/$200/$500 档每周期赠同额；Business 按 Standard 每席 $20、Premium 每席 $100 汇总，每月封顶 $500。不是免费账号注册赠金，必须先有合资格付费订阅。",
-    "free_terms": "付费订阅需已生效至少 7 天；同一邮箱且拥有订阅/Business 工作区和接收额度的 API 组织。首次按剩余周期折算，周期结束过期不滚存。年付 Business 按全年预发、上限 $6000，并按剩余期限折算。无需另添 API 支付方式；地区和开放批次可能影响资格。",
-    "claim_steps": [
-      "先确认已有符合资格且付费生效至少 7 天的 Pro 或 Business 订阅；Plus、免费或试用订阅不适用，不是零付费领取。",
-      "使用同一邮箱，作为订阅/Business 工作区及 API 组织的所有者，在 ChatGPT 设置 → Billing 或 API Platform Billing 查找 API credits benefit 并绑定目标组织。",
-      "Pro $100/$200/$500 档每月周期赠同额；Business Standard 每席 $20、Premium 每席 $100，合计封顶 $500/月。首次按剩余周期折算；年付 Business 全年预发上限 $6000。",
-      "领取后在 API 组织账单中确认额度到账和到期日；后续合资格续费自动发放，未用额度到期不滚存，且不提高 ChatGPT 或已登录 Codex 的使用上限。",
-      "无需另加 API 支付方式；额度不覆盖通过 API Key 使用的 Codex。赠金耗尽后会继续使用已有付费余额，无余额则请求停止；可用性仍受地区、开放批次和 API 限额约束。"
-    ],
-    "source": "X @OpenAIDevs 官方原帖与 OpenAI Help Center 条款已核实",
-    "source_post_id": "2115583698074755078",
-    "post_time_bj": "2026-10-29T07:17:13+08:00",
-    "collected_at": "2026-11-04T20:27:00+08:00",
-    "expired": false,
-    "product": "ChatGPT 付费订阅 API 额度福利",
-    "providers": [
-      {
-        "name": "ChatGPT Billing 领取",
-        "action_url": "https://chatgpt.com/settings/billing"
-      }
-    ],
-    "agents": [],
-    "models": [],
-    "scenes": [
-      "coding",
-      "chat",
-      "image",
-      "audio"
-    ],
-    "barriers": [
-      "need_key"
-    ],
-    "official_url": "https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions"
-  },
-  {
-    "id": "kiro-kiroween-4000-credits-20261102",
-    "title": "Kiroween 2026：合资格参赛者可申请一次性 4000 Kiro 积分",
-    "model": "Kiro 支持的编码模型（按地区与账号实际可用性）",
-    "type": "额度",
-    "deadline": "2026-12-02T04:00:00+08:00",
-    "url": "https://x.com/WojakTheDev/status/2117184063761191365",
-    "summary": "Kiroween 2026 黑客松合资格参赛者可申请一次性 4000 Kiro 积分，用于参赛开发，需提供 Kiro User ID 或关联 AWS Account ID 及项目信息并经审核。不是任意注册自动到账，也不是无条件通用赠金。",
-    "free_terms": "申请截止 12/1 12:00 PT（北京时间 12/2 04:00）；兑换码须于 12/4 前按官方要求兑换；已兑换积分于 12/31 23:59 PT 过期。审核及发放请预留 48 个工作小时；需达到当地成年年龄并符合地区/利益冲突限制，作品须在 10/30–12/4 提交期内新建。",
-    "claim_steps": [
-      "先阅读 Devpost 官方规则，确认达到当地成年年龄且所在地区符合资格；活动无需购买，但设参赛资格与地区限制。",
-      "注册 Kiro 账号，在 Devpost 加入 Kiroween 2026，从 Resources 页申请 4000 积分，准确提供 Kiro User ID 或关联 AWS Account ID 和项目信息。",
-      "申请截止为太平洋时间 12/1 12:00，即北京时间 12/2 04:00；官方要求为审核与发放预留 48 个工作小时，不保证所有申请获批，按实际流程完成资格核验。",
-      "兑换码须在官方所列 12/4 兑换期限内使用，过期码不补发；已兑换积分在 12/31 23:59 PT（北京时间 2027/1/1 15:59）过期。",
-      "积分用于参赛开发且每人一次；参赛项目须在 10/30–12/4 期间新建。部分地区不能参加，包括魁北克、阿根廷、澳大利亚、巴西、意大利、菲律宾、俄罗斯、阿联酋及规则列明的受制裁地区等，请核对完整名单。"
-    ],
-    "source": "X @WojakTheDev 原帖；Kiroween Devpost 官方 Resources 与 Rules 已核实",
-    "source_post_id": "2117184063761191365",
-    "post_time_bj": "2026-11-02T17:16:30+08:00",
-    "collected_at": "2026-11-04T20:27:00+08:00",
-    "expired": false,
-    "product": "Kiroween 2026 Kiro 积分",
-    "providers": [],
-    "agents": [
-      {
-        "name": "Kiro",
-        "action_url": "https://app.kiro.dev/"
-      }
-    ],
-    "models": [
-      {
-        "name": "Kiroween 积分申请说明",
-        "action_url": "https://kiroween.devpost.com/resources"
-      },
-      {
-        "name": "Kiroween 官方规则",
-        "action_url": "https://kiroween.devpost.com/rules"
-      }
-    ],
-    "scenes": [
-      "coding"
-    ],
-    "barriers": [
-      "need_client"
-    ],
-    "official_url": "https://kiroween.devpost.com/resources"
-  },
-  {
-    "id": "v2ex-ai-persona-free-quota-20261104",
-    "title": "V2EX AI Persona API：符合条件的账号每 5 小时 100 万免费 tokens",
-    "model": "V2EX AI Persona 可用模型",
-    "type": "API",
-    "deadline": null,
-    "url": "https://cn.v2ex.com/t/1253800",
-    "summary": "V2EX 官方提供 OpenAI 兼容 AI Persona API，与网页 AI Chat 共用额度。未充值账号基础额度为每 5 小时 100 万 tokens，包含输入和输出，未用完不累计。需要账号已有 AI Chat 使用资格，并非任意新注册账号立即可用。",
-    "free_terms": "账号需满足至少 5000 铜币（50 银币）、曾付费支持 V2EX、或连接钱包并持有至少 10000 $V2EX 中的一项。免费基础额度每 5 小时 100 万 tokens；API 与网页共用。需 Personal Access Token，调用 persona 名称；未公布固定截止日。",
-    "claim_steps": [
-      "先确认 V2EX 账号具备 AI Chat 权限：至少 5000 铜币（50 银币），或曾付费支持网站，或连接钱包且持有至少 10000 $V2EX。已有铜币达标用户可不额外付费，不需要为领取额度购买加密资产。",
-      "登录 V2EX，按官方 API 文档创建 Personal Access Token；选用自己的或有访问权限的公开 AI Persona。",
-      "客户端设置 base URL 为 https://edge.v2ex.com/chat/v1，model 填角色设定名称，而非上游模型 ID。支持 Models、Responses、Chat Completions 等接口。",
-      "未充值账号基础额度为每 5 小时 100 万 tokens，输入和输出都计入；与网页 AI Chat 共用，未用完不累计。无有效窗口时，下次消息启动新窗口。",
-      "过去 7 年有有效充值的账号基础额度为 800 万 tokens，另有加成；这不是未充值免费档额度。实际角色模型、可用性、并发与限速以官方接口及账号为准。"
-    ],
-    "source": "V2EX 社区发现帖；V2EX 官方配额/API 文档及站长 Livid 资格公告",
-    "collected_at": "2026-11-04T20:27:00+08:00",
-    "expired": false,
-    "product": "V2EX AI Persona API",
-    "providers": [
-      {
-        "name": "V2EX AI Persona",
-        "action_url": "https://edge.v2ex.com/help/persona"
-      }
-    ],
-    "agents": [],
-    "models": [],
-    "scenes": [
-      "chat",
-      "coding"
-    ],
-    "barriers": [
-      "need_key"
-    ],
-    "official_url": "https://edge.v2ex.com/help/quota",
-    "verification_urls": [
-      "https://edge.v2ex.com/help/persona",
-      "https://edge.v2ex.com/t/1225982",
-      "https://s.v2ex.com/t/1234521"
     ]
   },
   {
-    "id": "morph-monthly-200-free-requests-20261104",
-    "title": "Morph：官方定价页标示每月 200 次免费请求",
-    "model": "Morph 托管模型及专用 API（免费适用范围未明示）",
-    "type": "额度",
+    "id": "openrouter-liquid-lfm3-1.7b-free-20261107",
+    "title": "OpenRouter：Liquid LFM3-1.7B 免费上架（256K，工具调用/结构化输出）",
+    "model": "liquid/lfm-3-1.7b:free",
+    "type": "模型",
     "deadline": null,
-    "url": "https://linux.do/t/topic/3083718",
-    "summary": "Morph 官方当前定价页标示每月 200 次免费请求，提供面向编码代理的模型推理与专用 API。官方公开页面未明确这 200 次涵盖哪些模型、单次长度上限和具体领取限制，应以账号控制台确认。社区提到的每月 $2.50 未获当前官方定价页支持。",
-    "free_terms": "官方定价页标示 200 requests free every month；未明确免费模型范围、单次请求大小、绑卡要求或具体重置时区。不要将社区 $2.50/月说法作为已核实额度。首次充值赠 $5 需先支付，属于另一个付费优惠。",
-    "claim_steps": [
-      "打开 Morph 官方定价页，确认当前仍显示每月 200 次免费请求，再前往官方账号入口。",
-      "登录后在控制台核对免费档可用模型、剩余请求、是否需要支付方式及重置规则；公开定价页未明确这些细节。",
-      "按官方文档创建并配置自己的 API Key；仅在控制台确认属于免费范围后试用对应模型或 API。",
-      "不要把 200 次免费请求理解为全部模型无限长度可用，也不要将社区称每月 $2.50 作为当前官方承诺。",
-      "定价页的首次充值赠 $5 需要先充值，最低充值显示 $10，与免费月请求额度分开。学生一年免费页面当前返回 404，本条不包含学生活动。"
-    ],
-    "source": "LINUX DO 社区发现帖；Morph 官方定价页已核实",
-    "collected_at": "2026-11-04T20:27:00+08:00",
+    "url": "https://x.com/vmkoko/status/2118885903301214520",
+    "summary": "OpenRouter 于 11/6 前后上架 liquid/lfm-3-1.7b:free：约 1.7B 参数、$0/$0、约 256K 上下文，面向边缘/轻量 Agent，支持工具调用与结构化输出；提示词与输出可能被 Liquid 用于训练。",
+    "free_terms": "如何领取：注册 openrouter.ai → 创建 API Key → 调用 model=liquid/lfm-3-1.7b:free（OpenAI 兼容）。免费端点有速率限制（见 OpenRouter limits 文档）；无需绑卡即可用 :free 模型。与仅下载开源权重不同，这是托管免费推理。",
+    "source": "X @vmkoko + openrouter.ai/liquid/lfm-3-1.7b:free",
+    "collected_at": "2026-11-07T17:45:05+08:00",
     "expired": false,
-    "product": "Morph Free Monthly Requests",
-    "providers": [
-      {
-        "name": "Morph",
-        "action_url": "https://www.morphllm.com/pricing"
-      }
-    ],
-    "agents": [],
-    "models": [],
-    "scenes": [
-      "coding",
-      "chat"
-    ],
-    "barriers": [
-      "need_key"
-    ],
-    "official_url": "https://www.morphllm.com/pricing"
-  },
-  {
-    "id": "workbuddy-codebuddy-hy4-free-quota-nov15-20261105",
-    "title": "腾讯 Hy4：WorkBuddy / CodeBuddy 11/4–15 提供限额免费体验",
-    "model": "腾讯混元 Hy4 正式版",
-    "type": "限时",
-    "deadline": null,
-    "url": "https://linux.do/t/topic/3120695",
-    "summary": "腾讯 Hy4 正式版已上线 WorkBuddy 与 CodeBuddy。官方发布公告称 2026 年 11 月 4–15 日提供一定免费使用额度，具体单账号配额、适用地区、账户门槛与结束时区未披露。此处是客户端内免费体验，不是不限量免费 API；TokenHub 的 Hy4 API 活动仅为半价。",
-    "free_terms": "11/4–15 客户端内限额免费；配额、适用地区及精确结束时刻以产品提示为准。TokenHub API 仅半价，不免费。",
-    "claim_steps": [
-      "进入官方 WorkBuddy 或 CodeBuddy，登录并在模型列表选择 Hy4 正式版。",
-      "先检查本账号的免费标识和剩余额度；官方宣布免费窗口为 11/4–15，但未给统一配额、地区或精确截止时区。",
-      "仅在显示免费额度的范围内体验；不要把此活动当作不限量使用或免费 TokenHub API。"
-    ],
-    "source": "LinuxDo 社区线索 + 腾讯官方 Hy4 发布公告",
-    "source_post_id": "3120695",
-    "collected_at": "2026-11-05T09:23:00+08:00",
-    "expired": false,
-    "product": "WorkBuddy / CodeBuddy Hy4",
-    "providers": [],
-    "agents": [
-      {
-        "name": "WorkBuddy",
-        "action_url": "https://www.workbuddy.ai/"
-      },
-      {
-        "name": "CodeBuddy",
-        "action_url": "https://www.codebuddy.ai/"
-      }
-    ],
-    "models": [],
-    "scenes": [
-      "coding",
-      "chat"
-    ],
-    "barriers": [
-      "need_client"
-    ],
-    "official_url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
-    "verification_status": "verified",
-    "deadline_note": "官方只给11月4日至15日，未给时区或结束时刻，不设置推测性倒计时。"
-  },
-  {
-    "id": "codeflicker-free-50-credits-one-month-20261105",
-    "title": "CodeFlicker Free：一次性 50 积分（1 个月有效）与无限代码补全",
-    "model": "CodeFlicker 高级模型 / Auto",
-    "type": "额度",
-    "deadline": null,
-    "url": "https://linux.do/t/topic/2587729",
-    "summary": "CodeFlicker 官方现行价格说明：Free 计划一次性赠送 50 积分，有效期一个月；不再每天发放免费积分。免费计划可使用高级模型、Skill/SubAgent 与 Duet Space，代码补全无限次；Auto 模型仍消耗积分，无限 Auto 仅属付费 Pro。此项为历史社区发现的现行条款补录，不是今日上线活动。",
-    "free_terms": "Free 一次性 50 积分，发放后有效 1 个月；不按日或月重复赠送。代码补全无限次，Auto/高级模型按积分使用。",
-    "claim_steps": [
-      "从 CodeFlicker 官网进入产品并注册或登录，选择 Free 计划。",
-      "在账户积分页确认获赠 50 积分与到期日；免费赠额为一次性，有效期一个月。",
-      "代码补全可无限次使用；AI 对话和 Auto 会消耗积分，用尽或过期后不能把付费 Pro 权益当作免费。"
-    ],
-    "source": "LinuxDo 历史社区线索 + CodeFlicker 当前官方价格文档",
-    "source_post_id": "2587729",
-    "collected_at": "2026-11-05T09:23:00+08:00",
-    "expired": false,
-    "product": "CodeFlicker Free",
-    "providers": [],
-    "agents": [
-      {
-        "name": "CodeFlicker",
-        "action_url": "https://www.codeflicker.ai/"
-      }
-    ],
-    "models": [],
-    "scenes": [
-      "coding"
-    ],
-    "barriers": [
-      "need_client"
-    ],
-    "official_url": "https://www.codeflicker.ai/docs/feats/others/pricing.html",
-    "verification_status": "verified"
-  },
-  {
-    "id": "trae-cn-desktop-questions-tasks-free-nov8-20261105",
-    "title": "TRAE 中国版桌面端：提问与任务限时 0 积分（至 11/8，不含视频）",
-    "model": "TRAE 桌面端提问 / 任务",
-    "type": "限时",
-    "deadline": null,
-    "url": "https://forum.trae.cn/t/topic/464459",
-    "summary": "TRAE 官方社区 11/2 公告称，最新桌面客户端的提问与任务限时 0 积分，至 2026 年 11 月 8 日 23:59，不含视频生成。公告结束时刻未明确时区，故不设置推算倒计时。社区存在计费异常反馈，使用前应检查客户端实际价格与积分记录；不能据此承诺不限量或所有功能免费。",
-    "free_terms": "最新桌面客户端提问/任务限时 0 积分，公告至11/8 23:59；视频不包含。时区、具体适用范围与限额以客户端及官方说明为准。",
-    "claim_steps": [
-      "从官方 TRAE 中国区入口获取最新桌面客户端并登录。",
-      "开始提问或任务前确认界面为 0 积分；公告活动至2026/11/8 23:59，未确认时区。",
-      "视频生成不在免费范围内；社区有计费异常反馈，发现扣费先停用并核对账单及官方说明，不将活动理解为不限量。"
-    ],
-    "source": "TRAE 官方社区公告；社区反馈提醒核查实际扣费",
-    "source_post_id": "464459",
-    "collected_at": "2026-11-05T09:28:00+08:00",
-    "expired": false,
-    "product": "TRAE 中国版桌面客户端",
-    "providers": [],
-    "agents": [
-      {
-        "name": "TRAE 中国版",
-        "action_url": "https://www.trae.cn/"
-      }
-    ],
-    "models": [],
-    "scenes": [
-      "coding",
-      "chat"
-    ],
-    "barriers": [
-      "need_client"
-    ],
-    "official_url": "https://forum.trae.cn/t/topic/464459",
-    "verification_status": "verified",
-    "deadline_note": "公告为2026/11/8 23:59，时区未确认，暂不写入带时区的deadline。"
-  },
-  {
-    "id": "modelscope-magicubes-daily-200-plus50-20261105",
-    "title": "魔搭 ModelScope：登录每日领 200 魔粒，绑定阿里云再加 50",
-    "model": "ModelScope 平台可用推理模型",
-    "type": "额度",
-    "deadline": null,
-    "url": "https://linux.do/t/topic/2739524",
-    "summary": "魔搭官方 8/10 的魔粒体系公告：登录可每日领取 200 魔粒，绑定阿里云账号可额外获 50 魔粒/日。模型调用依档位扣除，轻量、主流、旗舰典型调用分别约 0.5、1、2 魔粒；不能再把它概括为所有模型每天固定免费 2000 次。使用前可能需完善资料与验证邮箱，API 调用需平台 Token。每日赠额的有效期及全部模型资格未确认，以账户页面为准。",
-    "free_terms": "登录领取200魔粒/日，绑定阿里云另50/日；推理按模型档位扣除，非统一免费请求数。每日赠额有效期与具体可用模型以平台显示为准。",
-    "claim_steps": [
-      "登录 ModelScope，按页面要求完善资料并验证邮箱，在魔粒入口领取每日赠额。",
-      "官方称登录可领200魔粒/日；如选择绑定阿里云账号，可额外获得50魔粒/日。",
-      "在模型页检查该模型是否可用及每次扣除量；轻量/主流/旗舰典型扣除0.5/1/2魔粒，不据此保证固定调用次数。",
-      "API接入需平台Token；每日魔粒到期规则及模型范围以账户页面为准，不将部分贡献奖励的90天有效期套用到每日赠额。"
-    ],
-    "source": "LinuxDo 历史社区线索 + ModelScope 官方魔粒体系公告",
-    "source_post_id": "2739524",
-    "collected_at": "2026-11-05T09:29:00+08:00",
-    "expired": false,
-    "product": "ModelScope 魔粒体系",
-    "providers": [
-      {
-        "name": "ModelScope",
-        "action_url": "https://www.modelscope.cn/"
-      }
-    ],
-    "agents": [],
-    "models": [],
-    "scenes": [
-      "coding",
-      "chat"
-    ],
-    "barriers": [
-      "need_key"
-    ],
-    "official_url": "https://www.modelscope.cn/posts/435591",
-    "verification_status": "verified"
-  },
-  {
-    "id": "ant-ling-3.2-flash-free-launch-20261106",
-    "title": "蚂蚁百灵 Ling-3.2-flash：上线首两周免费（API 须绑定个人支付宝）",
-    "model": "Ling-3.2-flash",
-    "type": "限时",
-    "deadline": null,
-    "url": "https://developer.ant-ling.com/en/docs/getting-started/changelog/",
-    "summary": "蚂蚁百灵官方 11/5 发布 Ling-3.2-flash，并确认上线首两周免费。支持图像、文本和视频输入、1M 上下文，提供兼容 OpenAI 与 Anthropic 协议的 API。首次 API 调用前须绑定支付宝并开通服务，不能描述为无支付设置；精确截止时刻、地区和单账号总额度未公布。",
-    "free_terms": "11/5 上线后首两周免费；精确结束时刻未公布。API 须绑定个人支付宝并开通服务，默认限速 2 QPS；活动结束恢复计费，注意余额和自动扣费设置。",
-    "claim_steps": [
-      "先阅读官方价格说明，登录蚂蚁百灵 API 控制台；首次 API 调用前须绑定个人支付宝并开通 Ling 服务。",
-      "在控制台确认 Ling-3.2-flash 仍显示免费，再创建自己的 API Key 并按官方文档接入。",
-      "官方于 11/5 上线并宣布首两周免费，未给精确结束时刻或单账号总额度；默认限制为每秒最多 2 次请求，不代表无限量。",
-      "活动后恢复价格；若签署自动扣费协议，额度用尽可能转为按量计费。使用前检查账单和扣费设置，地区可用性以账号提示为准。"
-    ],
-    "source": "蚂蚁百灵官方发布日志、价格及限流文档",
-    "collected_at": "2026-11-06T09:22:34+08:00",
-    "expired": false,
-    "product": "Ant Ling 官方 API / Ling-3.2-flash",
-    "providers": [
-      {
-        "name": "蚂蚁百灵官方价格与开通说明",
-        "action_url": "https://developer.ant-ling.com/en/docs/models/price/"
-      }
-    ],
-    "agents": [],
-    "models": [
-      {
-        "name": "Ling 模型文档",
-        "action_url": "https://developer.ant-ling.com/en/docs/models/ling/"
-      }
-    ],
-    "scenes": [
-      "coding",
-      "chat",
-      "image"
-    ],
-    "barriers": [
-      "need_key",
-      "cn_account"
-    ],
-    "official_url": "https://developer.ant-ling.com/en/docs/getting-started/changelog/",
-    "verification_urls": [
-      "https://developer.ant-ling.com/en/docs/models/price/",
-      "https://developer.ant-ling.com/en/docs/api-reference/api-guide/queries-per-second/"
-    ],
-    "verification_status": "verified",
-    "deadline_note": "首两周窗口未给精确结束时刻/时区，不推算固定倒计时。"
-  },
-  {
-    "id": "maritaca-s5-free-api-launch-20261106",
-    "title": "Maritaca S5-free：限时免费文本 API（60 RPM，输入/输出各 256K TPM）",
-    "model": "S5-free / s5-free",
-    "type": "限时",
-    "deadline": null,
-    "url": "https://www.maritaca.ai/en/blog/S5/",
-    "summary": "Maritaca 11/3 发布 S5；官方现行价格和模型文档另列 S5-free 临时免费版本，文本 tokens 不收费，1M 上下文、32K 最大输出。固定 60 RPM、输入与输出各 256K TPM，不支持 Batch、Flex 或内置工具，活动可随时结束。",
-    "free_terms": "仅 S5-free / s5-free 文本调用限时免费；60 RPM，输入/输出各256K TPM，不含Batch/Flex/内置工具。未公布结束日，绑卡和地区要求未确认。",
-    "claim_steps": [
-      "从 Maritaca 官方 API 文档进入账号与密钥流程，先核对 S5-free 是否仍开放及账号资格；公开资料未明确地区或绑卡要求。",
-      "模型 ID 使用 S5-free 或 s5-free，只有免费版本文本 tokens 不收费；普通 S5 与 S5-br-sp 是付费模型。",
-      "免费版固定 60 次请求/分钟，输入和输出各 256K tokens/分钟；1M 上下文规格不代表可绕过每分钟限额。",
-      "仅文本，不包含 Batch API、Flex 和内置工具。临时活动可随时结束，截止日未公布，调用前核对当前条款。"
-    ],
-    "source": "Maritaca 官方发布博客、价格、模型与限流文档",
-    "collected_at": "2026-11-06T09:22:34+08:00",
-    "expired": false,
-    "product": "Maritaca S5 Free",
-    "providers": [
-      {
-        "name": "Maritaca S5 Free 条款",
-        "action_url": "https://docs.maritaca.ai/pt/precos#s5-free"
-      }
-    ],
-    "agents": [],
-    "models": [
-      {
-        "name": "Maritaca S5 模型文档",
-        "action_url": "https://docs.maritaca.ai/pt/modelos"
-      }
-    ],
-    "scenes": [
-      "coding",
-      "chat"
-    ],
-    "barriers": [
-      "need_key"
-    ],
-    "official_url": "https://docs.maritaca.ai/pt/precos#s5-free",
-    "verification_urls": [
-      "https://docs.maritaca.ai/pt/modelos",
-      "https://docs.maritaca.ai/pt/rate-limits"
-    ],
-    "verification_status": "verified",
-    "deadline_note": "官方明确临时活动可随时结束，未给固定日期。"
-  },
-  {
-    "id": "devin-swe2-flash-free-dec4-20261106",
-    "title": "Devin SWE-2 Flash：自助计划免费至 12/5 北京时间凌晨，Free 可用 Medium",
-    "model": "SWE-2 Flash（Medium / High / Max）",
-    "type": "限时",
-    "deadline": "2026-12-04T18:00:00Z",
-    "url": "https://linux.do/t/topic/3124278",
-    "summary": "Devin 现行模型文档将 SWE-2 Flash 自助计划免费期列为 2026/12/4 18:00 UTC（北京时间12/5 02:00），晚于发布博客最初的11/30。Free 计划可选 Medium，High/Max 需付费计划；仅 Desktop 与 CLI，不含 cloud。Enterprise 为25%折扣而非免费，不能泛称所有套餐不限量。",
-    "free_terms": "自助计划 Desktop/CLI 免费至12/4 18:00 UTC；Free可用Medium，High/Max需付费计划。免费模型不占日/周quota，但不承诺无限速率；Cloud和语音模式独立Agent不含。",
-    "claim_steps": [
-      "登录官方 Devin Desktop 或 CLI，在模型选择器确认 SWE-2 Flash 的当前免费价格；Free 计划可选 Medium，High/Max 需要付费计划。",
-      "以最新模型文档为准：自助计划免费截止2026/12/4 18:00 UTC，即北京时间12/5 02:00，取代发布博客的早期11/30说明。",
-      "免费模型不消耗日/周 quota，但仍需遵守产品限速与可用性；未公布统一请求量，不承诺不限量。",
-      "不适用于 Devin cloud，语音模式的独立 Agent 调用也不享受模型促销。Enterprise 的 SWE-2 Flash 是截至11/18的25%折扣，不是免费。",
-      "结束后恢复收费，继续使用前再次检查模型价格；不要把 SWE-2 Flash 的截止日套用到旧 SWE-2 活动。"
-    ],
-    "source": "LinuxDo 社区原帖；Devin 最新官方模型与配额文档（优先于发布博客旧日期）",
-    "source_post_id": "3124278",
-    "collected_at": "2026-11-06T09:22:34+08:00",
-    "expired": false,
-    "product": "Devin Desktop / CLI — SWE-2 Flash",
-    "providers": [],
-    "agents": [
-      {
-        "name": "Devin Desktop / CLI",
-        "action_url": "https://devin.ai/pricing"
-      }
-    ],
-    "models": [
-      {
-        "name": "Devin 当前模型价格与资格",
-        "action_url": "https://docs.devin.ai/desktop/models"
-      }
-    ],
-    "scenes": [
-      "coding"
-    ],
-    "barriers": [
-      "need_client"
-    ],
-    "official_url": "https://docs.devin.ai/desktop/models",
-    "verification_urls": [
-      "https://docs.devin.ai/desktop/accounts/quota",
-      "https://cognition.com/blog/swe-2-flash",
-      "https://devin.ai/pricing"
-    ],
-    "verification_status": "verified"
-  },
-  {
-    "id": "wechat-cloudbase-miniapp-ai-growth-1b-tokens-20261107",
-    "title": "微信云开发小程序成长计划二期：10 亿 Token + 10 万张生图额度（仅指定来源）",
-    "model": "hy4 / hy4-preview / hy3 / deepseek-v4.1-flash / deepseek-v4.1-flash-1017；指定混元生图模型",
-    "type": "限时",
-    "deadline": null,
-    "deadline_note": "官方二期日期为 2026-07-01 至 2026-12-31，未标明报名截止时分及时区；资源包自申请成功起 6 个月有效。两个二期生图模型另定于 2026-12-01 0 点下线，公告未明示时区。",
-    "url": "https://docs.cloudbase.net/ai/ai-inspire-plan",
-    "official_url": "https://docs.cloudbase.net/ai/ai-inspire-plan",
-    "summary": "微信小程序成长计划二期提供 10 亿文本 Token 和 10 万张指定混元模型生图额度，自申请成功起 6 个月有效。11 月官方通知新增 hy4、deepseek-v4.1-flash-1017，共五款文本模型可抵扣。仅限指定小程序与云开发来源，不是通用外部 Agent 免费 API。",
-    "source": "CloudBase 官方活动细则及 11 月新增模型通知；11 月 6 日中文社区报道触发复核",
-    "collected_at": "2026-11-07T01:55:36Z",
-    "expired": false,
-    "free_terms": "每个小程序账号仅参加一次，领取后不能换腾讯云账号或环境。须选择微信云开发环境；无环境或开发阶段体验环境获 6 个月个人版，其他合资格环境获 120 元券。公开细则未写明绑卡/充值前置条件及完整地区名单，实名与主体资格以报名审核为准。超额文本可扣资源点套餐，非资源点套餐调用失败。生图耗尽后不能由套餐抵扣；两个二期生图模型 12/1 下线，新模型抵扣资格未确认。",
-    "product": "微信云开发小程序成长计划二期",
-    "providers": [
-      {
-        "name": "腾讯云开发 CloudBase 官方细则",
-        "action_url": "https://docs.cloudbase.net/ai/ai-inspire-plan"
-      }
-    ],
-    "agents": [],
-    "models": [
-      {
-        "name": "11 月新增模型及抵扣规则",
-        "action_url": "https://docs.cloudbase.net/ai/ai-inspire-plan-new-models-2026-11"
-      }
-    ],
-    "scenes": [
-      "chat",
-      "image",
-      "coding"
-    ],
-    "barriers": [
-      "cn_account"
-    ],
-    "claim_steps": [
-      "使用微信小程序账号登录微信公众平台，进入行业能力 → 小程序成长计划；每个小程序仅能参加一次，领取后不能更换腾讯云账号或环境。",
-      "二期活动至 2026-12-31，领取 10 亿文本 Token 和 10 万张指定模型生图额度，资源包自申请成功起 6 个月有效；截止时区/时分未公布。",
-      "选择合资格微信云开发环境；未绑定腾讯云账号时会自动创建账号。无环境或体验环境可获 6 个月个人版，其他合资格环境获 120 元券。",
-      "仅限小程序端、云开发服务端或控制台调用 hy4、hy4-preview、hy3、deepseek-v4.1-flash、deepseek-v4.1-flash-1017 自动抵扣；外部 AI 工具不享该免费包。超额文本可能消耗资源点套餐，非资源点套餐调用失败。",
-      "二期两个生图模型 12/1 下线，后继模型免费抵扣资格待确认；付款、地区及实名/主体要求以实际报名审核为准，未进行报名实测。"
-    ],
-    "verification_urls": [
-      "https://docs.cloudbase.net/ai/ai-inspire-plan",
-      "https://docs.cloudbase.net/ai/ai-inspire-plan-new-models-2026-11",
-      "https://mozhenzhen.com/news/wechat-miniapp-cloudbase-billion-token-free-20261106"
-    ],
-    "verification_status": "verified"
-  },
-  {
-    "id": "openrouter-liquid-lfm3-17b-free-api-20261107",
-    "title": "OpenRouter：LFM3-1.7B 免费 API 上线（256K 上下文，数据可能用于训练）",
-    "model": "LiquidAI LFM3-1.7B (free)",
-    "type": "API",
-    "deadline": null,
-    "deadline_note": "官方模型页未公布免费结束时间；不代表永久免费。",
-    "url": "https://openrouter.ai/liquid/lfm-3-1.7b:free",
-    "official_url": "https://openrouter.ai/liquid/lfm-3-1.7b:free",
-    "summary": "OpenRouter 官方模型页显示 2026-11-06 上线 liquid/lfm-3-1.7b:free，输入和输出 token 价格均为 0。提供 262,144 上下文、最多 8,192 输出，支持工具调用与结构化输出。这是托管免费 API，与已收录的 LFM3 开放权重不同。需 OpenRouter 账号及 API Key；未充值账号每分钟最多 20 次、每天最多 50 次免费请求；无需为这档额度充值，负余额可能阻止免费模型调用。提示词和输出可能被保留并用于训练 Liquid 模型，不宜发送敏感数据。当前不支持 EU in-region routing，这不等于禁止欧洲用户使用。",
-    "source": "OpenRouter 官方模型页、FAQ 与 Limits 文档（2026-11-07 核验）",
-    "collected_at": "2026-11-07T01:55:57+00:00",
-    "expired": false,
-    "free_terms": "输入/输出 token $0；需账号及 API Key；未充值免费档 20 RPM、50 次/日；免费结束日期与完整地区限制未知。",
-    "product": "LiquidAI LFM3-1.7B via OpenRouter",
     "providers": [
       {
         "name": "OpenRouter",
-        "action_url": "https://openrouter.ai/keys"
+        "action_url": "https://openrouter.ai/"
+      },
+      {
+        "name": "Free models 合集",
+        "action_url": "https://openrouter.ai/collections/free-models"
       }
     ],
     "agents": [],
@@ -15604,172 +14746,114 @@
       }
     ],
     "scenes": [
-      "chat",
-      "coding"
+      "coding",
+      "chat"
     ],
     "barriers": [
       "need_key"
-    ],
-    "claim_steps": [
-      "注册或登录 OpenRouter 并创建 API Key，模型 ID 使用 liquid/lfm-3-1.7b:free；核对输入/输出价格仍为 $0。",
-      "未充值免费档限 20 次/分钟、50 次/日，额度由免费模型共享；无需为这档额度充值，负余额仍可能阻止调用。",
-      "提供 262,144 上下文、最多 8,192 输出，支持工具调用和结构化输出；托管免费 API 不等同于开放权重的本地运行。",
-      "提示词和输出可能被保留并用于 Liquid 模型训练，不要提交机密内容；当前不支持 EU in-region routing，不代表一概禁止欧洲用户。",
-      "免费结束日期及完整地区范围未公布，实际可用性以账号和模型页为准。"
-    ],
-    "verification_urls": [
-      "https://openrouter.ai/liquid/lfm-3-1.7b:free",
-      "https://openrouter.ai/docs/faq",
-      "https://openrouter.ai/docs/api_reference/limits",
-      "https://openrouter.ai/api/v1/models"
-    ],
-    "verification_status": "verified"
+    ]
   },
   {
-    "id": "fal-flux3-max-free-weekend-nov9-20261107",
-    "title": "fal FLUX 3 Max：每天免费生成 3–5 条有声视频，至北京时间 11/10 04:00",
-    "model": "FLUX 3 Max",
-    "type": "限时",
-    "deadline": "2026-11-10T04:00:00+08:00",
-    "deadline_note": "官方明确结束时间：2026-11-09 12:00 PST，即 20:00 UTC / 北京时间次日 04:00。",
-    "url": "https://x.com/fal/status/2118753653096149187",
-    "official_url": "https://fal.ai/flux-3-max",
-    "summary": "fal 官方活动页确认：11/6 17:00 UTC 至 11/9 20:00 UTC，FLUX 3 Max 文生视频、图生视频及关键帧视频提供每日免费量。无需登录每天 3 条，免费账号登录后每天 4 条，验证银行卡后每天 5 条；最多 15 秒、720p、有声。首次生成后 24 小时补满额度，不按午夜重置，匿名与登录额度不叠加。免费仅限活动 Playground / sandbox，登录用户还可在 fal Agent 使用；API 并非免费，超过免费量或活动结束后按秒收费。活动页未公布具体地区名单。",
-    "source": "fal 官方活动页与 X 公告",
-    "source_post_id": "2118753653096149187",
-    "collected_at": "2026-11-07T01:55:57+00:00",
+    "id": "autoclaw-weekly-perks-m11w1-50m-tokens-20261107",
+    "title": "智谱 AutoClaw 一周福利 M11W1：登录领 50M Tokens（至 11/8 23:59）",
+    "model": "AutoClaw 通用额度",
+    "type": "额度",
+    "deadline": "2026-11-08T23:59:59+08:00",
+    "url": "https://x.com/pytzl/status/2118972783640424757",
+    "summary": "智谱 AutoClaw 官方博客：北京时间 11/2 00:00–11/8 23:59 登录国内站即可领取 50M Tokens（约 5000 积分），每账号一次；奖励统一于 11/8 23:59 失效，越早领可用越久。",
+    "free_terms": "如何领取：打开 autoclaw.zhipuai.cn → 下载/打开 AutoClaw 客户端并登录（国内站；国际站规则不同勿混）→ 活动期内登录即领 50M Tokens，无需订阅、一般免绑卡。每号限一次；额度 11/8 23:59 作废。详见官方博客 M11W1。",
+    "source": "X @pytzl + autoclaw.zhipuai.cn/blog/news/M11W1/",
+    "collected_at": "2026-11-07T17:45:05+08:00",
     "expired": false,
-    "free_terms": "匿名 3 条/24h；登录 4 条/24h；绑卡验证 5 条/24h，不叠加。每条最长 15 秒，720p 带声音。活动至 11/9 20:00 UTC，API 收费。",
-    "product": "fal FLUX 3 Max weekend free generations",
-    "providers": [
+    "providers": [],
+    "agents": [
       {
-        "name": "fal 活动 Playground",
-        "action_url": "https://fal.ai/flux-3-max"
+        "name": "AutoClaw 官网",
+        "action_url": "https://autoclaw.zhipuai.cn/"
+      },
+      {
+        "name": "M11W1 官方说明",
+        "action_url": "https://autoclaw.zhipuai.cn/blog/news/M11W1/"
       }
     ],
-    "agents": [],
-    "models": [
-      {
-        "name": "FLUX 3 Max",
-        "action_url": "https://fal.ai/flux-3-max"
-      }
-    ],
+    "models": [],
     "scenes": [
-      "video"
-    ],
-    "barriers": [
-      "zero_signup"
-    ],
-    "claim_steps": [
-      "打开 fal 官方 FLUX 3 Max 活动页，匿名可生成 3 条免费视频，登录免费账号为 4 条，验证银行卡为 5 条；匿名与登录额度不叠加。",
-      "每条最长 15 秒、720p、有声；首次生成后 24 小时补满额度，不按午夜重置。",
-      "免费限活动 Playground / sandbox，登录后也可用 fal Agent；API 请求照常计费，超出免费量的生成也收费。",
-      "活动于北京时间 2026-11-10 04:00（11/9 20:00 UTC）结束，之后恢复收费；地区名单未公布，使用前核对页面剩余免费次数。"
-    ],
-    "verification_urls": [
-      "https://fal.ai/flux-3-max",
-      "https://x.com/fal/status/2118753653096149187"
-    ],
-    "verification_status": "verified"
-  },
-  {
-    "id": "nous-longcat25-free-week-20261107",
-    "title": "Nous Portal：LongCat-2.5 限时免费一周（11/6 公告）",
-    "model": "LongCat-2.5:Free",
-    "type": "限时",
-    "deadline": null,
-    "deadline_note": "Nous 官方 2026-11-06 公告称免费一周，约至 11/13；未给精确结束时刻或时区，保留 null，不视为长期免费。",
-    "url": "https://x.com/NousResearch/status/2118734093105946792",
-    "official_url": "https://portal.nousresearch.com/models",
-    "summary": "Nous 官方网站 Announcements 展示 11/6 原帖，宣布美团 LongCat-2.5 在 Nous Portal 免费一周；Portal 官方模型列表当前列出 LongCat-2.5:Free，价格 FREE。Free 计划月费 $0，只能用免费模型，采用标准限流，无附赠付费 credits。需要 Nous 账号；具体请求/Token 限额、绑卡要求和适用地区未在已读官方页面明确。付费模型、工具调用服务及云端托管不应视为本次免费内容。",
-    "source": "Nous Research 官网公告、Portal 模型目录及计划页（2026-11-07 核验）",
-    "source_post_id": "2118734093105946792",
-    "collected_at": "2026-11-07T01:55:57+00:00",
-    "expired": false,
-    "free_terms": "LongCat-2.5:Free 当前 FREE；11/6 宣布免费一周；需账号，标准限流但数值未知，付款验证要求与地区名单未知。",
-    "product": "LongCat-2.5 via Nous Portal",
-    "providers": [
-      {
-        "name": "Nous Portal",
-        "action_url": "https://portal.nousresearch.com/models"
-      }
-    ],
-    "agents": [],
-    "models": [
-      {
-        "name": "LongCat-2.5:Free",
-        "action_url": "https://portal.nousresearch.com/models"
-      }
-    ],
-    "scenes": [
-      "chat",
-      "coding"
-    ],
-    "barriers": [],
-    "claim_steps": [
-      "注册或登录 Nous Portal，确认 Free 计划为 $0；选择明确标示 FREE 的 LongCat-2.5:Free。",
-      "官方于 11/6 宣布免费一周，约至 11/13，未公布精确时刻/时区；每次调用前检查仍为免费。",
-      "标准限流的具体次数/Token 数、绑卡要求和完整地区名单未公布，不承诺无限量或全球开放。",
-      "Free 计划没有付费 credits；其他付费模型、工具服务和云端托管不在这次免费范围内。"
-    ],
-    "verification_urls": [
-      "https://nousresearch.com/",
-      "https://portal.nousresearch.com/models",
-      "https://portal.nousresearch.com/manage-subscription",
-      "https://x.com/NousResearch/status/2118734093105946792"
-    ],
-    "verification_status": "verified"
-  },
-  {
-    "id": "dots-studio-note3-preview-direct-api-free-trial-20261107",
-    "title": "小红书 Dots Studio：dots3-note-prev 官方 API 免费体验（每 Key 60 RPM）",
-    "model": "dots3-note-prev",
-    "type": "限时",
-    "deadline": null,
-    "deadline_note": "免费体验结束时间未公布；官方称恢复收费前会在官网与 API 页面提前通知。",
-    "url": "https://linux.do/t/topic/3132248?tl=en",
-    "official_url": "https://dots.ai/platform/docs",
-    "summary": "Dots Studio 直接提供 dots3-note-prev 免费体验 API，512K 上下文，兼容 OpenAI 聊天补全与 Anthropic Messages；支持多模态输入和工具调用。每把 Key 默认 60 RPM、150 万 TPM；不代表无限总额度。该渠道与目录已有 OpenRouter 免费路由不同。",
-    "source": "LinuxDo 11/6 原帖及 11/7 反馈；Dots Studio 官方接口文档与登录页",
-    "collected_at": "2026-11-07T01:55:36Z",
-    "expired": false,
-    "free_terms": "当前暂不收费，日/月总量与结束日未公布。需要平台账号和 API Key；登录页提供 +86 手机号验证码或小红书扫码，新用户可直接登录。公开页面未列出绑卡或充值要求，未登录核验。未公布其他地区支持范围。社区反映排队及响应较慢。",
-    "product": "Dots Studio 官方 API 免费体验",
-    "providers": [
-      {
-        "name": "Dots API 开放平台",
-        "action_url": "https://dots.ai/platform/"
-      }
-    ],
-    "agents": [],
-    "models": [
-      {
-        "name": "dots3-note-prev 官方接口文档",
-        "action_url": "https://dots.ai/platform/docs"
-      }
-    ],
-    "scenes": [
-      "chat",
       "coding",
-      "image"
+      "chat"
     ],
     "barriers": [
-      "need_key",
+      "need_client",
       "cn_account"
+    ]
+  },
+  {
+    "id": "trae-bao-free-until-nov8-20261107",
+    "title": "TRAE 宝（个人助理）限时免积分：问答/下任务不扣积分至 11/8 23:59",
+    "model": "TRAE 宝",
+    "type": "限时",
+    "deadline": "2026-11-08T23:59:59+08:00",
+    "url": "https://x.com/Jonhoni99/status/2118886076165058651",
+    "summary": "字节 TRAE 官方中文社区公告：即日起至 2026-11-08 23:59，登录 TRAE 桌面端最新版使用个人助理「TRAE 宝」问答与下达任务全部不消耗积分；暂不支持视频生成。",
+    "free_terms": "如何领取：打开 trae.cn 下载并更新桌面端到最新版 → 登录账号 → 使用「TRAE 宝」个人助理问答/下任务即可，活动期内不扣积分，无需兑换码。截止 11/8 23:59；视频生成不在免费范围。官方说明见 forum.trae.cn 帖。",
+    "source": "X @Jonhoni99 + forum.trae.cn/t/topic/464434",
+    "collected_at": "2026-11-07T17:45:05+08:00",
+    "expired": false,
+    "providers": [],
+    "agents": [
+      {
+        "name": "TRAE 中国区",
+        "action_url": "https://www.trae.cn/"
+      },
+      {
+        "name": "TRAE 宝活动帖",
+        "action_url": "https://forum.trae.cn/t/topic/464434"
+      }
     ],
-    "claim_steps": [
-      "访问 Dots API 开放平台，以 +86 手机号验证码或小红书扫码登录。",
-      "官方定价表虽列输入 $0.14 / 输出 $0.28 每百万 Token，但紧接提示当前免费体验暂不收费，恢复前会提前通知；结束时间及日/月总量未知。",
-      "在 API Keys 页面创建个人 Key；仅按官方文档保存和使用，不向公开仓库或前端暴露密钥。",
-      "用模型 ID dots3-note-prev 接入；官方基础 URL 为 https://note3-prev-api.askdiandian.com，请求以 api-key 请求头认证。",
-      "遵守每 Key 60 RPM、150 万 TPM 限流；使用前关注官方收费恢复公告，不把当前免费体验视为永久承诺。",
-      "公开页面未写明绑卡或充值前置条件，未登录实测；其他地区是否支持未知，社区反馈高峰可能排队或响应较慢。"
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
     ],
-    "verification_urls": [
-      "https://linux.do/t/topic/3132248?tl=en",
-      "https://dots.ai/platform/docs",
-      "https://dots.ai/platform/"
+    "barriers": [
+      "need_client",
+      "cn_account"
+    ]
+  },
+  {
+    "id": "workbuddy-hy3-hy4-free-nov15-20261107",
+    "title": "WorkBuddy：混元 Hy3/Hy4 0.00× 免费额度延至 11/15（有日上限）",
+    "model": "混元 Hy3 / Hy4",
+    "type": "限时",
+    "deadline": "2026-11-15T23:59:59+08:00",
+    "url": "https://x.com/nex_ify/status/2118990842673111248",
+    "summary": "社区称腾讯将 WorkBuddy 内 Hy3 限免延至 11/15，Hy4 亦以 0.00× 提供并有每日免费额度上限；同端还可看到 Kimi K3、GLM 5.3、DeepSeek V4.1 Flash 等。以客户端实际倍率与公告为准。",
+    "free_terms": "如何领取：打开 workbuddy.ai（或国内 workbuddy.cn）注册/登录 → 更新客户端 → 模型列表选 Hy3/Hy4，确认倍率为 0.00× 即可调用。有每日免费额度上限，用完需等刷新或改用积分；截止约 11/15。无需单独兑换码。",
+    "source": "X @nex_ify / @shengliao8（社区汇总，待客户端核对）",
+    "collected_at": "2026-11-07T17:45:05+08:00",
+    "expired": false,
+    "providers": [],
+    "agents": [
+      {
+        "name": "WorkBuddy",
+        "action_url": "https://www.workbuddy.ai/"
+      },
+      {
+        "name": "WorkBuddy 国内站",
+        "action_url": "https://www.workbuddy.cn/"
+      }
     ],
-    "verification_status": "verified"
+    "models": [
+      {
+        "name": "混元 Hy4 / Hy3",
+        "action_url": "https://www.workbuddy.ai/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
