@@ -15399,5 +15399,57 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "deepai-code-9-unmetered-free-20261108",
+    "title": "DeepAI Code：桌面编程 Agent 免费档——9 款不计量模型 + 每日最高 200 Theos",
+    "model": "GLM 5.3 Flash / DeepSeek V4.1 Flash / MiMo 2.6 Flash·Pro / Solar Mini 4 / GPT-6 Luna / Crouton Alpha / Glyph Cluster / DeepAI Cyber（不计量）；另有 Claude Opus 5.5、Claude Fable 5.1、GPT-6 Astra 等 frontier 耗 Theos",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/Finnhu334/status/2119121346491998342",
+    "summary": "DeepAI Code（Mac/Windows 桌面编程 Agent）官方确认免费档：$0、免绑卡、免 API Key。9 款模型不消耗 Theos（含 GLM 5.3 Flash、DeepSeek V4.1 Flash、MiMo 2.6 Flash/Pro、Solar Mini 4、GPT-6 Luna、Crouton Alpha、Glyph Cluster、DeepAI Cyber）；其余 frontier 模型共享免费账号每日最高约 200 Theos。亦可接自有 ChatGPT/Claude/Cursor/OpenCode 等 Provider。非开放 Chat Completions 网关，属客户端 Agent。",
+    "free_terms": "如何领取：打开 https://deepai.org/chat/ai-code 下载 Mac/Windows 客户端 → 注册/登录免费 DeepAI 账号（免绑卡）→ 模型列表直接选不计量模型（0 Theos）或 frontier（耗每日 Theos，免费档约 200/天，24h 刷新不结转）。无需兑换码；可在 Settings→Providers 接 ChatGPT/Claude/OpenCode 等自有额度。",
+    "source": "X @Finnhu334 / @DeepAI 核实；官方 https://deepai.org/chat/ai-code",
+    "collected_at": "2026-11-08T01:42:00+08:00",
+    "expired": false,
+    "source_post_id": "2119121346491998342",
+    "related_post_urls": [
+      "https://x.com/anya_yfa7/status/2119096414227845576",
+      "https://x.com/DeepAI/status/2119121029230420327",
+      "https://x.com/Finnhu334/status/2119118910956138789"
+    ],
+    "providers": [
+      {
+        "name": "DeepAI Code 下载页",
+        "action_url": "https://deepai.org/chat/ai-code"
+      }
+    ],
+    "agents": [
+      {
+        "name": "DeepAI Code",
+        "action_url": "https://deepai.org/chat/ai-code"
+      }
+    ],
+    "models": [
+      {
+        "name": "GLM 5.3 Flash（不计量）",
+        "action_url": "https://deepai.org/chat/ai-code"
+      },
+      {
+        "name": "DeepSeek V4.1 Flash（不计量）",
+        "action_url": "https://deepai.org/chat/ai-code"
+      },
+      {
+        "name": "Crouton Alpha（不计量）",
+        "action_url": "https://deepai.org/chat/ai-code"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
