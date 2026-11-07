@@ -14855,5 +14855,97 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "opencode-zen-iceman-free-20261107",
+    "title": "OpenCode Zen：匿名模型 Iceman Free 限时 $0（全员可用）",
+    "model": "iceman-free",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://x.com/aitrackerbot/status/2118855760763318584",
+    "summary": "OpenCode Zen 上架匿名模型 Iceman Free（id: iceman-free），输入/输出/缓存读均为 $0，约 262K 上下文、131K 输出，支持推理与工具调用。与此前仅 Go 订阅可用的 iceman-contributor-free 不同，现对 Zen 用户全员限时免费。社区指纹指向 Microsoft MAI-Thinking-1；官方称免费期内数据会保留并用于改进模型。截止日未官宣。",
+    "free_terms": "如何领取：打开 opencode.ai 客户端 → /connect 选 OpenCode Zen，粘贴 Console API Key（opencode.ai 控制台登录拿 Key，一般免绑卡）→ /models 选 Iceman Free（iceman-free）。也可直接调 https://opencode.ai/inference/openai/v1 。限时 $0；免费期提示词可能被保留并用于训练。",
+    "source": "X @aitrackerbot + opencode.ai/docs/zen 核实",
+    "collected_at": "2026-11-07T18:47:32+08:00",
+    "expired": false,
+    "source_post_id": "2118855760763318584",
+    "related_post_urls": [
+      "https://x.com/mspd4100/status/2119016408860229864",
+      "https://x.com/dsoch8c/status/2118862128195190829",
+      "https://x.com/HenyJone/status/2118961709473763462"
+    ],
+    "providers": [
+      {
+        "name": "OpenCode Zen",
+        "action_url": "https://opencode.ai/zen"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Iceman Free",
+        "action_url": "https://opencode.ai/docs/zen/"
+      },
+      {
+        "name": "Zen 模型列表",
+        "action_url": "https://opencode.ai/inference/v1/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "need_key"
+    ]
+  },
+  {
+    "id": "opencode-zen-inkling-2-small-free-20261107",
+    "title": "OpenCode Zen：Inkling 2 Small Free 限时 $0（Thinking Machines）",
+    "model": "inkling-2-small-free",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://opencode.ai/docs/zen/",
+    "summary": "OpenCode Zen 文档与公开模型表已列入 Inkling 2 Small Free（id: inkling-2-small-free），输入/输出/缓存读 $0。为 Thinking Machines Lab 的 Inkling 2 Small 限时免费档；官方注明免费期数据可能保留并用于训练，且欧盟及若干地区不可用。权重计划稍后以 Apache 2.0 开放。截止日未官宣。",
+    "free_terms": "如何领取：打开 OpenCode → /connect 选 Zen 并粘贴 Console API Key → /models 选 Inkling 2 Small Free（inkling-2-small-free）。限时 $0。注意：免费期数据可能用于训练；欧盟/俄乌朝伊古等地区不可用。截止未官宣。入口文档 https://opencode.ai/docs/zen/",
+    "source": "opencode.ai/docs/zen（定价表与 Free models 节已列 Inkling 2 Small Free；$0；有地区限制与训练数据说明）",
+    "collected_at": "2026-11-07T18:47:32+08:00",
+    "expired": false,
+    "providers": [
+      {
+        "name": "OpenCode Zen",
+        "action_url": "https://opencode.ai/zen"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Inkling 2 Small Free",
+        "action_url": "https://opencode.ai/docs/zen/"
+      },
+      {
+        "name": "Zen 模型列表",
+        "action_url": "https://opencode.ai/inference/v1/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "need_key"
+    ]
   }
 ]
