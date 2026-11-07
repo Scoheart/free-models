@@ -14947,5 +14947,145 @@
       "need_client",
       "need_key"
     ]
+  },
+  {
+    "id": "articul8-bivia-1b-free-tokens-20261107",
+    "title": "Articul8 Bivia：前 1 万名用户领 10 亿 Tokens（决策模型 API）",
+    "model": "Bivia（Articul8）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/xulijian1994/status/2119030692789068074",
+    "summary": "Articul8 推出多模态决策模型 Bivia（不生成长文，返回校准后的结构化决策），上线福利：前 10,000 名注册用户可领最多 10 亿免费 Tokens；官方称无需订阅，按输入计费（约 $0.042/百万输入 Token，输出 $0）。社区实测称注册后到账；官方页未写死截止日与名额剩余。",
+    "free_terms": "如何领取：打开 https://www.articul8.ai/bivia → Claim/注册（可用 https://app.articul8.ai/registration?source=bivia&code=bivia）→ 平台创建 API Key → 调 https://api.articul8.ai/bivia（见 docs.articul8.ai/bivia/quickstart）。前 1 万名最多 10 亿 Tokens；无需订阅；官方未写绑卡要求与精确截止日，额度是否耗尽以控制台为准。",
+    "source": "X @xulijian1994；官方 articul8.ai/bivia 与 LinkedIn 官宣（first 10,000 / 1B tokens）",
+    "collected_at": "2026-11-07T19:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119030692789068074",
+    "providers": [
+      {
+        "name": "Articul8 Bivia",
+        "action_url": "https://www.articul8.ai/bivia"
+      },
+      {
+        "name": "Articul8 注册",
+        "action_url": "https://app.articul8.ai/registration?source=bivia&code=bivia"
+      },
+      {
+        "name": "Bivia API 文档",
+        "action_url": "https://docs.articul8.ai/bivia/quickstart/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Bivia",
+        "action_url": "https://www.articul8.ai/bivia"
+      },
+      {
+        "name": "Bivia API Docs",
+        "action_url": "https://docs.articul8.ai/bivia/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "ant-ling-3.2-flash-free-2weeks-20261107",
+    "title": "蚂蚁百灵 Ling-3.2-flash：上线前 2 周 API/网页限时免费（约至 11/19）",
+    "model": "Ling-3.2-flash",
+    "type": "限时",
+    "deadline": "2026-11-19T23:59:59+08:00",
+    "url": "https://x.com/shengliao8/status/2119032646684868979",
+    "summary": "蚂蚁百灵 11/5 上线原生多模态 Ling-3.2-flash（560B 总参/25B 激活，1M 上下文，支持图文视频）。官方定价页与 Changelog 写明「上线前 2 周限时免费」，按上线日推算约至 11/19（精确时刻未官宣）；结束后恢复按量计费，请盯账户余额。兼容 OpenAI/Anthropic 协议。",
+    "free_terms": "如何领取：①网页体验打开 https://chat.ant-ling.com 注册登录试聊；②API：读 https://developer.ant-ling.com/zh-CN/docs/getting-started/prerequisites/ 完成支付宝绑定与开通，控制台创建 Token，base https://api.ant-ling.com/v1 ，model=Ling-3.2-flash。上线日起约两周免费，到期恢复原价；已签代扣者可能自动转付费。需中国支付宝/账号。",
+    "source": "X @shengliao8；官方定价页 developer.ant-ling.com/zh-CN/docs/models/price/ 与 Changelog（2026-11-05）",
+    "collected_at": "2026-11-07T19:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119032646684868979",
+    "providers": [
+      {
+        "name": "Ant Ling 定价（限免说明）",
+        "action_url": "https://developer.ant-ling.com/zh-CN/docs/models/price/"
+      },
+      {
+        "name": "Ant Ling 准备工作/控制台",
+        "action_url": "https://developer.ant-ling.com/zh-CN/docs/getting-started/prerequisites/"
+      },
+      {
+        "name": "Ant Ling 对话页",
+        "action_url": "https://chat.ant-ling.com"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Ling-3.2-flash",
+        "action_url": "https://developer.ant-ling.com/zh-CN/docs/models/price/"
+      },
+      {
+        "name": "Ant Ling 官网",
+        "action_url": "https://www.ant-ling.com/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account"
+    ]
+  },
+  {
+    "id": "kiroween-4000-credits-20261107",
+    "title": "Kiroween 2026：报名黑客松可申请 4,000 免费 Kiro Credits",
+    "model": "Kiro 内置模型额度",
+    "type": "额度",
+    "deadline": "2026-12-02T04:00:00+08:00",
+    "url": "https://x.com/SteveAIStudio/status/2119026767952547945",
+    "summary": "AWS Kiro 万圣节黑客松 Kiroween 2026（Devpost）参赛者可一次性申请 4,000 免费 Kiro Credits（约合官方加购价 $160）。申请截止美西 12/1 12:00（北京 12/2 04:00）；兑换码须在 12/4 前兑换，兑换后额度至 12/31 23:59 PT 失效。需年满当地法定成年，部分国家/地区排除。",
+    "free_terms": "如何领取：1) 打开 https://kiroween.devpost.com/ 点 Join hackathon 注册 Devpost；2) 准备好 Kiro 账号（https://kiro.dev/）；3) 在 Devpost Resources 页填 Credit Request Form（填 Kiro user ID 或 AWS 账户 ID）；4) 美西 12/1 12:00 前申请，约 48 工作小时内发码，12/4 前兑换。兑换额度用至 12/31 PT。仅参赛者一次，审核可能拒可疑申请。",
+    "source": "X @SteveAIStudio；官方 Devpost kiroween.devpost.com 与 Rules",
+    "collected_at": "2026-11-07T19:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119026767952547945",
+    "providers": [
+      {
+        "name": "Kiroween Devpost",
+        "action_url": "https://kiroween.devpost.com/"
+      },
+      {
+        "name": "Kiro",
+        "action_url": "https://kiro.dev/"
+      },
+      {
+        "name": "Kiro 控制台",
+        "action_url": "https://app.kiro.dev"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Kiro",
+        "action_url": "https://kiro.dev/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Kiro 模型文档",
+        "action_url": "https://kiro.dev/docs/models/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
