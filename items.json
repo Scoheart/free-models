@@ -15363,5 +15363,41 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "specstream-10usd-free-credit-30days-20261108",
+    "title": "SpecStream：新用户免绑卡送 $10 搜索 API 额度（首 30 天）",
+    "model": "SpecStream Search / Extract / Deep Search API + MCP",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/xulijian1994/status/2119093285105053861",
+    "summary": "SpecStream 面向 AI Agent 的联网搜索/抽取 API（及 MCP）。官网定价页确认：新账户一次性赠 $10 额度、首 30 天内用完，免绑卡；Search API 约 $5/千次（约可搜 2000 次），Extract $0.80/千页。账户、API、MCP 之后仍可免费用，但新用量需充值或订阅。非 Chat Completions 网关，偏 Tavily/Exa 同类检索。",
+    "free_terms": "如何领取：打开 https://specstream.ai/pricing 点 Start free 注册（免绑卡）→ 工作区 Agents & API 创建 Key → 调 https://api.specstream.ai/v1/web-search 或接 MCP。新户一次性 $10，须在首 30 天用完；Search 约 $5/千次（≈2000 次）。账户/API/MCP 之后仍免费，新用量需充值。",
+    "source": "X @xulijian1994；官方 https://specstream.ai/pricing",
+    "collected_at": "2026-11-08T00:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119093285105053861",
+    "providers": [
+      {
+        "name": "SpecStream 定价/领取",
+        "action_url": "https://specstream.ai/pricing"
+      },
+      {
+        "name": "SpecStream Search API",
+        "action_url": "https://specstream.ai/search-api"
+      },
+      {
+        "name": "SpecStream API 文档",
+        "action_url": "https://specstream.ai/docs/api"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
