@@ -15330,5 +15330,38 @@
       "coding"
     ],
     "barriers": []
+  },
+  {
+    "id": "llm7-free-tier-100k-tokens-daily-20261107",
+    "title": "LLM7.io：免费档每天 10 万 Token 的 OpenAI 兼容 API",
+    "model": "LLM7 聚合的数十个模型（如 gpt-oss:20b、codestral、nemotron-3-nano 等）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/GouGeHSLU/status/2119084738292138407",
+    "summary": "LLM7.io 是 OpenAI 兼容的多模型聚合 API。帖主称免费档每天 10 万 token、每小时 250 次、每分钟 60 次，一个 key 可调几十个模型，无需先充值；官网写明免费额度可能随需求缩减且不另行通知。实测 api.llm7.io 的 chat/completions 端点可正常响应。",
+    "free_terms": "如何领取：打开 https://dash.llm7.io 登录并创建 API Key（免费档不用充值，付费档才需充值）→ 代码里把 base_url 设为 https://api.llm7.io/v1，填 Key 即可调用。限额：每天约 10 万 token、250 次/小时、60 次/分钟；官方可随时缩减免费额度，先测延迟别直接上生产。",
+    "source": "X @GouGeHSLU；官方 https://llm7.io",
+    "collected_at": "2026-11-07T23:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2119084738292138407",
+    "providers": [
+      {
+        "name": "LLM7.io 控制台",
+        "action_url": "https://dash.llm7.io"
+      },
+      {
+        "name": "LLM7.io",
+        "action_url": "https://llm7.io"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
