@@ -15219,5 +15219,81 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "tencent-edgeone-makers-500k-tokens-monthly-20261107",
+    "title": "腾讯 EdgeOne Makers 免费版：每月 50 万内置模型 Token（限时扶持）",
+    "model": "DeepSeek V4 Pro / V4 Flash / V4.1 Flash、Kimi K2.6、MiniMax M3/M2.7、混元 Hy3",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/zrqgood9068/status/2119049201023611190",
+    "summary": "腾讯 EdgeOne Makers 免费版每个账号每月 50 万内置模型 Token，同账号所有项目共享，OpenAI/Anthropic 兼容网关 ai-gateway.edgeone.link/v1 可调 DeepSeek V4、Kimi K2.6、MiniMax M3、混元 Hy3 等。官方称限时扶持、仅供原型验证；腾讯云预告 11/9–11/11 上线付费档，免费档保留但配额可能调整。",
+    "free_terms": "如何领取：打开 Makers 控制台登录腾讯云账号并开通 Makers（免费版 $0，未见绑卡要求，以控制台为准）→ Makers / Models / API Key 创建密钥 → base URL 填 https://ai-gateway.edgeone.link/v1，model 填 @makers/deepseek-v4-flash 等。额度 50 万 token/月，同账号项目共享；请勿用于生产。",
+    "source": "X @zrqgood9068、@sleewppi；官方 pages.edgeone.ai 免费 LLM API 页与腾讯云限制与配额文档",
+    "collected_at": "2026-11-07T21:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2119049201023611190",
+    "providers": [
+      {
+        "name": "EdgeOne Makers 免费 LLM API",
+        "action_url": "https://pages.edgeone.ai/zh/use-cases/free-llm-api"
+      },
+      {
+        "name": "Makers Models 集成文档",
+        "action_url": "https://makers.edgeone.link/document/makers-models-integration"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Makers 内置模型清单",
+        "action_url": "https://pages.edgeone.ai/zh/document/models-vendors-overview"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account"
+    ]
+  },
+  {
+    "id": "vercel-ai-gateway-humansand-ampersand-free-nov13-20261107",
+    "title": "Vercel AI Gateway：Humans& Ampersand 免费至 11/13",
+    "model": "humansand/ampersand-v0.1",
+    "type": "限时",
+    "deadline": "2026-11-14T16:00:00+08:00",
+    "url": "https://x.com/engrbilalwaris/status/2119057286857634141",
+    "summary": "Vercel 官方 changelog：Humans& 的群聊模型 Ampersand（humansand/ampersand-v0.1，1M 上下文）在 AI Gateway 上免费到 2026-11-13。它每轮决定发言还是沉默，需调用方提供 send_message 和 pass 两个函数工具；支持 AI SDK、OpenAI 兼容 Chat Completions 及 Claude Code/Codex/Cursor。",
+    "free_terms": "如何领取：登录 Vercel → AI Gateway 创建 API Key（模型页“Get API key”）→ 用 OpenAI 兼容接口或 AI SDK 调 humansand/ampersand-v0.1；编码 Agent 可跑 npx vercel ai-gateway setup 后选该模型。需自定义 send_message/pass 工具，tool_choice 只能 auto/none。免费至 11/13（美西，约北京 11/14 16:00）。",
+    "source": "X @engrbilalwaris；Vercel changelog 与 Humans& 模型页",
+    "collected_at": "2026-11-07T21:50:00+08:00",
+    "expired": false,
+    "source_post_id": "2119057286857634141",
+    "providers": [
+      {
+        "name": "Vercel AI Gateway（Humans& 模型页）",
+        "action_url": "https://vercel.com/ai-gateway/models/providers/humansand"
+      },
+      {
+        "name": "Vercel changelog",
+        "action_url": "https://vercel.com/changelog/humans-and-ampersand-now-available-on-ai-gateway"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "humansand/ampersand-v0.1",
+        "action_url": "https://vercel.com/ai-gateway/models/providers/humansand"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
