@@ -15451,5 +15451,199 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "zro-moonmath-free-daily-glm53-deepseek-flash-20261108",
+    "title": "Zro（MoonMath.ai）免费档：GLM-5.3 Flash / DeepSeek V4.1 Flash 每日免费额度（OpenAI 兼容）",
+    "model": "GLM-5.3 Flash / DeepSeek V4.1 Flash",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/Akasheth_/status/2119116133324435595",
+    "summary": "MoonMath.ai 旗下面向编程 Agent 的私有推理服务 Zro 提供 Free 计划：$0/月，GLM-5.3 Flash 与 DeepSeek V4.1 Flash 每天含免费用量、每日重置；OpenAI 兼容（/v1 Completions/Responses）及 Anthropic Messages 接口，零请求留存、不拿请求训练。官方文档提供 zro CLI 一键接 Claude Code/Codex/OpenCode/Cursor/Cline 等。每日具体额度官网未写明数字。",
+    "free_terms": "如何领取：打开 https://zro.moonmath.ai/pricing 点 Start free → 注册/登录账号（Free 计划 $0，官网未要求订阅）→ Account → API keys 新建 sk- 开头的 Key → base URL 填 https://zro.moonmath.ai/v1（Claude Code 用 https://zro.moonmath.ai），模型 deepseek-v4.1-flash 或 glm-5.3-flash。也可 npm i -g @moonmath-ai/zro 后 zro login、zro launch opencode。免费额度每天重置，具体数字未公开；Quickstart 写着「订阅或买包」，如免费档调不通需买 $5 用量包。其他模型付费。",
+    "source": "X @Akasheth_；官方 https://zro.moonmath.ai/pricing 核实",
+    "collected_at": "2026-11-08T02:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119116133324435595",
+    "providers": [
+      {
+        "name": "Zro（MoonMath.ai）",
+        "action_url": "https://zro.moonmath.ai/pricing"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "DeepSeek V4.1 Flash",
+        "action_url": "https://zro.moonmath.ai/docs"
+      },
+      {
+        "name": "GLM-5.3 Flash",
+        "action_url": "https://zro.moonmath.ai/docs"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
+  },
+  {
+    "id": "stepfun-stepaudio3-preview-free-until-nov17-20261108",
+    "title": "阶跃星辰 StepAudio 3：4 个 preview 语音模型 API 限时免费（至 11/17 11:59 北京时间）",
+    "model": "stepaudio-3-realtime-preview / stepaudio-3-chat-preview / stepaudio-3-gen-preview / stepaudio-3-music-preview",
+    "type": "限时",
+    "deadline": "2026-11-17T11:59:59+08:00",
+    "url": "https://x.com/FAatc168/status/2119127822723920367",
+    "summary": "阶跃星辰开放平台的 StepAudio 3 系列 4 个 preview 模型（实时语音 Realtime、语音对话 Chat（Chat Completions 接口）、综合音频生成 Gen、音乐生成 Music）计费标注「限时免费」。官方定价页写明限免到北京时间 2026-11-17 11:59:59，12:00 起改按新价收费，preview 版本下线换成正式付费版。StepAudio 3 TTS、ASR 已经收费，不在免费范围内。",
+    "free_terms": "如何领取：打开 https://platform.stepfun.com 注册/登录（手机号）→「API Key」页 https://platform.stepfun.com/interface-key 新建 Key → 调用时模型名填 stepaudio-3-realtime-preview / stepaudio-3-chat-preview / stepaudio-3-gen-preview / stepaudio-3-music-preview（base https://api.stepfun.com/v1），不用兑换码，官网没说要绑卡。限免截至 11/17 11:59:59（北京时间），之后按新价计费；TTS/ASR 不免费，别选错模型。受速率限制。",
+    "source": "X @FAatc168 / @GouGeHSLU；官方定价 https://platform.stepfun.com/docs/zh/guides/pricing/details 核实",
+    "collected_at": "2026-11-08T02:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119127822723920367",
+    "related_post_urls": [
+      "https://x.com/GouGeHSLU/status/2119130220578103495"
+    ],
+    "providers": [
+      {
+        "name": "阶跃星辰开放平台",
+        "action_url": "https://platform.stepfun.com/interface-key"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "StepAudio 3 模型列表",
+        "action_url": "https://platform.stepfun.com/docs/zh/guides/models/audio"
+      },
+      {
+        "name": "StepAudio 3 Realtime/Chat",
+        "action_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-realtime"
+      },
+      {
+        "name": "StepAudio 3 Music",
+        "action_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-music"
+      }
+    ],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account"
+    ]
+  },
+  {
+    "id": "autoclaw-double11-50m-tokens-nov9-15-20261108",
+    "title": "智谱 AutoClaw 双十一福利：11/9–11/15 登录领 50M Tokens",
+    "model": "AutoClaw 通用额度",
+    "type": "额度",
+    "deadline": "2026-11-15T23:59:59+08:00",
+    "url": "https://x.com/zsansan4/status/2119095305169989773",
+    "summary": "智谱 AutoClaw（澳龙）官方博客：北京时间 11/9 00:00 至 11/15 23:59，活动期间登录 AutoClaw 就能领 50M Tokens（App 弹窗显示约 5000 积分），每个账号限领一次，积分 11/15 23:59 过期。接在 M11W1（11/8 到期）之后。网传「100M」与官方不符，以官方 50M 为准。",
+    "free_terms": "如何领取：11/9 00:00（北京时间）后打开 https://autoclaw.zhipuai.cn 下载/打开 AutoClaw 客户端并登录（国内站）→ 活动期内登录后 50M Tokens 自动到账，不用兑换码、不用订阅，一般不用绑卡。每号限一次，多设备登录不会多领；9 号前登录领不到；积分 11/15 23:59 过期。详见官方博客 M11W2。",
+    "source": "X @zsansan4 / @Clearance43；官方 https://autoclaw.zhipuai.cn/blog/news/M11W2/ 核实",
+    "collected_at": "2026-11-08T02:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119095305169989773",
+    "providers": [],
+    "agents": [
+      {
+        "name": "AutoClaw 官网",
+        "action_url": "https://autoclaw.zhipuai.cn/"
+      },
+      {
+        "name": "M11W2 官方说明",
+        "action_url": "https://autoclaw.zhipuai.cn/blog/news/M11W2/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "cn_account"
+    ]
+  },
+  {
+    "id": "antigravity-free-claude46-extended-nov18-20261108",
+    "title": "Google Antigravity 免费档：Claude Opus/Sonnet 4.6 与 GPT-OSS-120b 延长到 11/18",
+    "model": "Claude Opus 4.6 / Claude Sonnet 4.6 / GPT-OSS-120b / Gemini 3.8 Flash",
+    "type": "限时",
+    "deadline": "2026-11-18T23:59:59+08:00",
+    "url": "https://x.com/Clearance43/status/2119136526504460603",
+    "summary": "Antigravity 官方模型页已改为：Claude Sonnet 4.6、Claude Opus 4.6（thinking）与 GPT-OSS-120b「将于 2026-11-18 移除」（原定 11/2）。Free & Google AI Plus 档目前可用 Claude 4.6 两款、GPT-OSS-120b 和 Gemini 3.8 Flash；Claude/GPT 与 Gemini 分别有 5 小时与每周额度。官方只写了日期，没写时区，按 11/18 当天估算截止。",
+    "free_terms": "如何领取：打开 https://antigravity.google 下载 Antigravity 客户端 → 用个人 Google 账号登录（需满 18 岁、在支持地区）→ 免费档直接在模型下拉里选 Claude Opus 4.6 / Sonnet 4.6（thinking）或 GPT-OSS-120b，不用付费、不用绑卡、不用兑换码。额度按 5 小时和每周刷新，/usage 可查；11/18 后这三款从免费档移除。不要用 Antigravity 登录态接第三方工具，可能违反条款。",
+    "source": "X @Clearance43；官方 https://antigravity.google/docs/models/ 核实（Will be removed on November 18, 2026）",
+    "collected_at": "2026-11-08T02:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119136526504460603",
+    "providers": [
+      {
+        "name": "Google Antigravity",
+        "action_url": "https://antigravity.google/pricing"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Antigravity",
+        "action_url": "https://antigravity.google/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Models 文档（含移除日期）",
+        "action_url": "https://antigravity.google/docs/models/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client"
+    ]
+  },
+  {
+    "id": "openai-chatgpt-pro-business-monthly-api-credits-20261108",
+    "title": "ChatGPT Pro / Business 订阅送每月 OpenAI API 额度（最高 $500/月）",
+    "model": "OpenAI API（Responses / Agents / Realtime / Images 等）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/duoyun_77/status/2119131523316097072",
+    "summary": "OpenAI 官方：符合条件的 ChatGPT Pro 和 Business 订阅可以领每月 API 额度，绑定到自己名下的 API 组织。Pro $100/$200/$500 档分别对应每月 $100/$200/$500；Business 每个付费 Standard 席位 $20、Premium 席位 $100，每个工作区每月最多 $500。额度当期有效、不结转，不需要 API 付款方式。不能抵 Codex API Key 的用量，也不会提高 ChatGPT/Codex 的使用上限。",
+    "free_terms": "如何领取：ChatGPT 网页 → 设置 → 账单（https://chatgpt.com/settings/billing；Business 进工作区账单或 Admin Console）→ 找到 API credits 权益 → 选择要绑定的 API 组织并确认；也可以在 API Platform Billing 里发起。条件：付费 Pro/Business 订阅已满 7 天（试用和赠送的订阅不算），本人同时是订阅/工作区和 API 组织的 owner，两边用同一个邮箱；按地区和批次开放。一个订阅只能绑一个组织，首月按剩余天数折算。",
+    "source": "X @duoyun_77 / @OpenAIDevs；官方 https://developers.openai.com/api/docs/guides/chatgpt-api-credits 核实",
+    "collected_at": "2026-11-08T02:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119131523316097072",
+    "related_post_urls": [
+      "https://x.com/OpenAIDevs/status/2118856544733532452"
+    ],
+    "providers": [
+      {
+        "name": "OpenAI API 额度说明",
+        "action_url": "https://developers.openai.com/api/docs/guides/chatgpt-api-credits"
+      },
+      {
+        "name": "ChatGPT 账单设置",
+        "action_url": "https://chatgpt.com/settings/billing"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key",
+      "deposit_hold"
+    ]
   }
 ]
