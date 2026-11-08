@@ -16048,5 +16048,87 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "directionally-local-dl-free-tier-50m-weekly-20261108",
+  "title": "Directionally Local（dl）：GitHub 登录每周最多 5000 万免费 Token（GPT-6 Luna / DeepSeek）",
+  "model": "GPT-6 Luna、DeepSeek V4.1 Flash（完整档另有 GPT-6.1 Sol、GPT-6 Astra）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/27_bishal/status/2119371491422921000",
+  "summary": "开源终端编码 Agent Directionally Local（命令 dl）官网确认有免费档：GitHub 登录、不用绑卡，完整档每周 GPT-6 Luna 与 DeepSeek V4.1 Flash 共享 5000 万 Token，另有 Sol 1000 万、Astra 300 万，且每周上限约 20 美元。新号或低活跃 GitHub 账号走 Starter，只能用 DeepSeek、每周 500 万。免费凭据仅限本机 dl，高峰可能排队。",
+  "free_terms": "如何领取：在 macOS/Linux（Windows 用 WSL）的项目目录执行 curl -fsSL https://dl.new | sh（或 npm install -g directionallylocal 再运行 dl）。首次选 Free，用 GitHub 设备码在浏览器授权（会读取账号年龄、公开仓库与贡献数，并要联系邮箱），不用绑卡。完整档需 GitHub 满 90 天且有 3 个公开仓库或近一年 50 次贡献：每周 Luna 与 DeepSeek 共享 5000 万 Token，Sol 1000 万、Astra 300 万，另有约 20 美元周上限（先到先停）。不符条件走 Starter：仅 DeepSeek、每周 500 万；使用邀请码也可升完整档。会话里 /invite 邀请好友，双方当周都用满 3 天则各加 1000 万，最多每周加 5000 万。高峰期可能排队或暂停；免费凭据只许用在本机 dl，拿到其他工具可能封号，后台任务需自带 Key。测试阶段可能随时调整。",
+  "source": "X @27_bishal / @pengsonal；官网 https://dl.new/ 、安装文档 https://directionallylocal.com/docs/install/ 、模型说明 https://directionallylocal.com/docs/autopilot/models-and-providers/ 与条款 https://directionallylocal.com/terms/ 核实",
+  "collected_at": "2026-11-08T18:45:00+08:00",
+  "expired": false,
+  "providers": [
+   {
+    "name": "Directionally Local 安装",
+    "action_url": "https://dl.new/"
+   },
+   {
+    "name": "Directionally Local 文档",
+    "action_url": "https://directionallylocal.com/docs/install/"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Directionally Local (dl)",
+    "action_url": "https://dl.new/"
+   }
+  ],
+  "models": [
+   {
+    "name": "GPT-6 Luna / DeepSeek V4.1 Flash（免费档）",
+    "action_url": "https://directionallylocal.com/docs/autopilot/models-and-providers/"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
+ },
+ {
+  "id": "traycer-gemini-weekend-100usd-20261108",
+  "title": "Traycer Gemini Weekend：每账号领 100 美元 Gemini 额度，至 11/9 15:59",
+  "model": "Traycer Inference 上的任意 Gemini 模型",
+  "type": "限时",
+  "deadline": "2026-11-09T15:59:59+08:00",
+  "url": "https://x.com/ai_chuhai/status/2119365217452790186",
+  "summary": "Traycer 官方 Gemini Weekend：个人积分账号可免费领取 100 美元额度，只能用在 Traycer Inference 的 Gemini 模型；共 800 份（首轮 500 份约 13 小时领完后官方又加 300 份），先到先得。未用完的额度在太平洋时间 11 月 8 日 23:59（北京时间 11 月 9 日 15:59）作废。",
+  "free_terms": "如何领取：打开 https://traycer.ai/campaigns/gemini-weekend ，活动有效期内点 Claim $100 in credits，按提示登录（仅个人、按积分计费的账号，团队账号不能领；官网写领取不收费）。每账号限一次，总共 800 份（第一轮 500 份约 13 小时领完后官方又加 300 份），先到先得。到账后在 Billing 页单独记账，优先用于 Traycer Inference 上的任意 Gemini 模型，不覆盖其他模型或自带 Key。未用完的额度在截止时作废：北京时间 11 月 9 日 15:59（太平洋时间 11 月 8 日 23:59）。名额领完或截止后无法再领。使用需安装 Traycer 桌面端（macOS / Windows / Linux，https://traycer.ai/ ）。",
+  "source": "X @ai_chuhai；官网活动页 https://traycer.ai/campaigns/gemini-weekend 核实（Sat Nov 7 8:00 AM PST – Sun Nov 8 11:59 PM PST）",
+  "collected_at": "2026-11-08T18:45:00+08:00",
+  "expired": false,
+  "providers": [
+   {
+    "name": "Traycer Gemini Weekend 领取",
+    "action_url": "https://traycer.ai/campaigns/gemini-weekend"
+   },
+   {
+    "name": "Traycer 官网",
+    "action_url": "https://traycer.ai/"
+   }
+  ],
+  "agents": [
+   {
+    "name": "Traycer",
+    "action_url": "https://traycer.ai/"
+   }
+  ],
+  "models": [
+   {
+    "name": "Gemini（Traycer Inference）",
+    "action_url": "https://traycer.ai/campaigns/gemini-weekend"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
