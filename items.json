@@ -16285,5 +16285,52 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "freepi-unlimited-particle-dsv41-glm53-20261109",
+  "title": "free-pi：Particle / DeepSeek V4.1 Flash / GLM 5.3 Flash 限时不限量（不扣每日额度）",
+  "model": "Particle、DeepSeek V4.1 Flash、GLM 5.3 Flash",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/tryfreepi/status/2118823482515431881",
+  "summary": "官方账号 @tryfreepi 11/6 宣布周末活动：Particle-1、DeepSeek V4.1 Flash、GLM 5.3 Flash 在 free-pi 终端 Agent 里限时不限量、不扣每日积分。changelog（v0.6.14，11/5）写明这三款 “Free Unlimited for a limited time, use no credits”；Particle 与 DeepSeek V4.1 Flash 模型页此刻仍标 “🔥 Free Unlimited: limited time”。这是在每日免费额度之外的限时加码。创始人 11/8 仍在说 this weekend，也说过取决于供应商能撑多久；官网未写硬截止日。",
+  "free_terms": "如何领取：终端运行 npx free-pi-cli@latest（需 Node 22.15+）→ 用 GitHub 在 freepi.ai 登录（点 Connect this terminal，不绑卡、不用 API Key）→ /model 切到 particle、deepseek-v4.1-flash 或 glm-5.3-flash。这三款限时不扣每日积分。官网未写截止日，模型页仍标 limited time；其他模型走每日额度。同时只能开一个会话，会话可能用于训练。",
+  "source": "X @tryfreepi；官网 changelog https://freepi.ai/changelog 与模型页 https://freepi.ai/models/particle 、https://freepi.ai/models/deepseek-v4.1-flash 核实",
+  "collected_at": "2026-11-09T03:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2118823482515431881",
+  "post_time_bj": "2026-11-07T05:50:58+08:00",
+  "product": "free-pi",
+  "providers": [],
+  "agents": [
+   {
+    "name": "free-pi 官网",
+    "action_url": "https://freepi.ai"
+   },
+   {
+    "name": "free-pi changelog",
+    "action_url": "https://freepi.ai/changelog"
+   }
+  ],
+  "models": [
+   {
+    "name": "Particle（限时不限量）",
+    "action_url": "https://freepi.ai/models/particle"
+   },
+   {
+    "name": "DeepSeek V4.1 Flash（限时不限量）",
+    "action_url": "https://freepi.ai/models/deepseek-v4.1-flash"
+   },
+   {
+    "name": "GLM 5.3 Flash",
+    "action_url": "https://freepi.ai/models/glm-5.3-flash"
+   }
+  ],
+  "scenes": [
+   "coding"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
