@@ -15787,5 +15787,38 @@
       "chat"
     ],
     "barriers": []
+  },
+  {
+    "id": "nararouter-free-7m-tokens-daily-20261108",
+    "title": "NaraRouter 免费档：每天 700 万 Token，OpenAI/Anthropic 兼容 API，免绑卡",
+    "model": "Laguna S 2.1（第三方汇总另列 Agnes 2.5 Flash、Nemotron 3.5 Lightning Free）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/qihanblmg/status/2119254297552814082",
+    "summary": "印尼 byNara 的多模型网关 NaraRouter 有永久免费档：每天 700 万 Token、每分钟 15 次请求，注册即生效、不用绑卡。接口同时兼容 OpenAI Chat Completions/Responses 和 Anthropic Messages，可接 Claude Code、Codex、OpenCode。免费档只能用免费模型，官网定价页列的是 Laguna S 2.1，其余模型需付费套餐；受公平使用条款约束。",
+    "free_terms": "如何领取：到 router.bynara.id/register 注册账号（不绑卡，免费额度立即生效）→ 控制台 API keys 页生成 Key（sk-nry- 开头，只显示一次）→ base URL 填 https://router.bynara.id/v1，模型用 /v1/models 里列出的免费别名。每天 700 万 Token、15 次/分钟，北京时间 08:00 重置；滥用会被限速或封号。",
+    "source": "X @qihanblmg；官网 bynara.id/pricing、router.bynara.id/docs 核实",
+    "collected_at": "2026-11-08T10:50:00+08:00",
+    "expired": false,
+    "providers": [
+      {
+        "name": "NaraRouter",
+        "action_url": "https://router.bynara.id/register"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "NaraRouter 定价与模型",
+        "action_url": "https://bynara.id/pricing"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
