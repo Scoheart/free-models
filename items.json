@@ -10508,18 +10508,18 @@
   },
   {
     "id": "claude-duet-preview-free-limit-reset-nov30-20261022",
-    "title": "Claude Duet 预览：获准后送一次免费额度全重置（11/30 前用）",
-    "model": "Claude（Pro/Max 订阅额度，Duet 基于 Opus 5.5）",
+    "title": "Claude Duet 预览：获准后送额度全重置（未用截止已延至 12/15）",
+    "model": "Claude（Pro/Max/Ultra 订阅额度，Duet 基于 Opus 5.5）",
     "type": "额度",
-    "deadline": "2026-11-30T23:59:59+08:00",
+    "deadline": "2026-12-15T23:59:59+08:00",
     "url": "https://x.com/clauderesets/status/2113219014529032697",
-    "summary": "Anthropic 10/21 推出个人 Agent「Claude Duet」研究预览（美国 Pro/Max 用户排队申请）。拿到预览资格的账号会额外得到一次免费的完整额度重置，5 小时额度和周额度一起清零，可在 11/30 前任选时间在 Claude 网页或桌面端「设置 → 用量 → Reset for free」使用。注意 Duet 本身也消耗套餐额度；截止日按北京时间保守记为 11/30，以账号内显示为准。",
-    "source": "X @clauderesets",
+    "summary": "Anthropic 10/21 推出个人 Agent「Claude Duet」研究预览（美国 Pro/Max/Ultra 用户排队申请）。获准账号会额外得到完整额度重置，5 小时额度和周额度一起补满，在 Claude 网页或桌面端「设置 → 用量 → Reset for free」使用。注意 Duet 本身也消耗套餐额度。更新（11/8）：官方帮助页已改为 Pro 三次、Max 和 Ultra 各一次，未用重置于 2026-12-15 失效（官方只写日期、未标时区，按当天北京时间 23:59 记）。",
+    "source": "X @clauderesets；11/8 据 X @zhongwei1988 复核，官方 https://support.claude.com/en/articles/17631495-get-started-with-claude-duet 已改为 Pro 三次 / Max·Ultra 一次，未用截止 2026-12-15",
     "collected_at": "2026-10-22T19:50:00+08:00",
     "expired": false,
     "source_post_id": "2113219014529032697",
     "post_time_bj": "2026-10-22T18:40:49+08:00",
-    "free_terms": "仅限进入 Claude Duet 预览的美国 Pro/Max 账号；一次性重置 5 小时+周额度；11/30 前使用。",
+    "free_terms": "如何领取：美国 Pro/Max/Ultra 用户打开 https://claude.com/product/claude-duet 点 Join the waitlist，填与账号一致的邮箱。获邀后在网页或 Claude 桌面端「设置 → 用量」点 Reset for free：Pro 3 次，Max 和 Ultra 各 1 次，每次补满 5 小时+周额度。未用截至 2026-12-15 失效；手机端和 Claude Code 无此按钮。",
     "product": "Claude Duet preview bonus reset",
     "providers": [
       {
@@ -15927,5 +15927,45 @@
       "image"
     ],
     "barriers": []
+  },
+  {
+    "id": "claude-duet-limit-resets-extended-dec15-20261108",
+    "title": "Claude Duet 预览额度重置：Pro 三次 / Max·Ultra 一次，未用截止延至 12/15",
+    "model": "Claude（Pro/Max/Ultra 订阅额度，Duet 基于 Opus 5.5）",
+    "type": "额度",
+    "deadline": "2026-12-15T23:59:59+08:00",
+    "url": "https://x.com/zhongwei1988/status/2119331132390912113",
+    "summary": "Anthropic 官方帮助页已更新 Claude Duet 研究预览的赠送重置：获准的美国用户里，Pro 可获得 3 次完整额度重置，Max 和 Ultra 各 1 次；每次会把 5 小时额度和周额度一起补满。未使用的重置于 2026-12-15 失效（官方只写日期、未标时区，按当天北京时间 23:59 记）。原先卡片写的是「一次重置、11/30 前用」。",
+    "free_terms": "如何领取：美国 Pro/Max/Ultra 用户打开 https://claude.com/product/claude-duet 点 Join the waitlist，填与 Claude 账号一致的邮箱。获邀后按邮件装 App 登录，再到网页或桌面端「设置 → 用量」点 Reset for free。Pro 可重置 3 次，Max 和 Ultra 各 1 次，每次补满 5 小时+周额度；未用截至 2026-12-15 失效。手机端和 Claude Code 无此按钮；Duet 后台任务也扣同一套餐额度。",
+    "source": "X @zhongwei1988；官方 https://support.claude.com/en/articles/17631495-get-started-with-claude-duet 核实（Pro: three limit resets；Max and Ultra: one；Unused limit resets expire on December 15, 2026）",
+    "collected_at": "2026-11-08T15:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119331132390912113",
+    "post_time_bj": "2026-11-08T15:28:11+08:00",
+    "product": "Claude Duet preview bonus limit resets",
+    "providers": [
+      {
+        "name": "Claude Duet 产品页",
+        "action_url": "https://claude.com/product/claude-duet"
+      },
+      {
+        "name": "Claude 用量设置",
+        "action_url": "https://claude.ai/settings/usage"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Get started with Claude Duet",
+        "action_url": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ]
   }
 ]
