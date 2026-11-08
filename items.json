@@ -16250,5 +16250,40 @@
   "barriers": [
    "need_key"
   ]
+ },
+ {
+  "id": "velork-hobby-2000-free-ai-credits-20261108",
+  "title": "Velork 前端 AI IDE 正式上线：免费 Hobby 档新账号一次性送 2000 Velork AI 积分（可用 Claude Sonnet 5.5）",
+  "model": "Claude Sonnet 5.5、Claude Haiku 5.5（Velork AI 托管）",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/okeyccronald/status/2119472653266194890",
+  "summary": "Velork 是基于 VS Code 的前端 IDE，把 AI 设计画布和代码编辑放在一起，可把 Figma 设计、网页截取转成你项目技术栈的代码，内置 Claude Code/Codex/Cursor/Copilot 等 Agent。官方套餐页写明：免费 Hobby 档新账号一次性送 2000 Velork AI 积分（1 积分约 $0.001，合计约 $2 用量，不续期），可用 Claude Sonnet 5.5 和 Haiku 5.5；另每月 30 个生图积分（约 10 张）、1 小时云电脑。额度不大，适合试用；用自己的订阅或 API Key 则不限量不扣积分。",
+  "free_terms": "如何领取：到 velork.com/download 下载桌面客户端，注册新账号即自动进入免费 Hobby 档，送一次性 2000 Velork AI 积分（约 $2 用量，不续期）。在 Agent 聊天里选 Velork AI 模型（Sonnet 5.5/Haiku 5.5）即扣积分；用完会提示 Connect AI，可接自己的 Claude/ChatGPT 订阅或 API Key 继续。文档未提绑卡。另每月 30 生图积分、1 小时云电脑。",
+  "source": "X @okeyccronald；官方套餐文档 https://velork.com/docs/account/plans 与 AI providers 文档核实",
+  "collected_at": "2026-11-09T01:46:00+08:00",
+  "expired": false,
+  "source_post_id": "2119472653266194890",
+  "post_time_bj": "2026-11-09T00:50:33+08:00",
+  "product": "Velork",
+  "providers": [],
+  "agents": [
+   {
+    "name": "Velork（下载桌面 IDE）",
+    "action_url": "https://velork.com/download"
+   },
+   {
+    "name": "Velork 套餐与额度说明",
+    "action_url": "https://velork.com/docs/account/plans"
+   }
+  ],
+  "models": [],
+  "scenes": [
+   "coding",
+   "image"
+  ],
+  "barriers": [
+   "need_client"
+  ]
  }
 ]
