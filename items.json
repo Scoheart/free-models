@@ -10535,7 +10535,8 @@
     ],
     "barriers": [
       "need_key"
-    ]
+    ],
+    "superseded_by": "claude-duet-limit-resets-extended-dec15-20261108"
   },
   {
     "id": "antdigital-lingdt-decision-1-dtmaas-free-trial-20261022",
