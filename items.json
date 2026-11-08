@@ -15754,5 +15754,38 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "mlh-ghw-builders-week-x-premium-1month-20261108",
+    "title": "MLH Builders Week：免费领 1 个月 X Premium（解锁 Grok Bot 与 Cursor），至 11/13 02:00",
+    "model": "Grok / Grok Bot、Cursor（随 X Premium 解锁）",
+    "type": "限时",
+    "deadline": "2026-11-13T02:00:00+08:00",
+    "url": "https://x.com/wangjing1056606/status/2119238726064685275",
+    "summary": "MLH 全球黑客周 Builders Week（11/6–11/12 美东）联合 SpaceXSI 给报名参与者发 1 个月免费 X Premium 兑换码，官方说法是开通 X Premium 即可解锁 Cursor 和 Grok Bot。面向学生、职场人和 13 岁以上青少年，全球免费参加。",
+    "free_terms": "如何领取：到 events.mlh.com 的 Global Hack Week: Builders Week 页面免费报名 → 查收 MLH 团队发来的邮件，里面有专属 X Premium 兑换链接 → 用 X 账号兑换 1 个月 Premium。可选在 MLH 挑战页提交兑换截图拿积分。每人一个码，活动 11/12 13:00 美东（北京 11/13 02:00）结束，需尽早报名才能收到码。",
+    "source": "X @wangjing1056606（社区帖）；核实 MLH 挑战页「SWAG CHALLENGE: Sign up for an X Premium Account」与活动页",
+    "collected_at": "2026-11-08T09:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119238726064685275",
+    "post_time_bj": "2026-11-08T09:21:00+08:00",
+    "product": "MLH × X Premium",
+    "providers": [
+      {
+        "name": "MLH Builders Week 报名",
+        "action_url": "https://events.mlh.com/events/14729-global-hack-week-builders-week"
+      },
+      {
+        "name": "MLH X Premium 挑战说明",
+        "action_url": "https://www.mlh.com/events/global-hack-week-builders-week/challenges/01a1ad19-fe6b-af64-2734-9a0bbdee637c"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": []
   }
 ]
