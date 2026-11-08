@@ -15820,5 +15820,42 @@
     "barriers": [
       "need_key"
     ]
+  },
+  {
+    "id": "edenai-gemma4-31b-it-free-endpoint-20261108",
+    "title": "Eden AI：Gemma 4 31B IT 官方端点免费（输入输出 $0，262K）",
+    "model": "Gemma 4 31B IT（google/gemma-4-31b-it）；另有 Gemma 4 26B A4B、Ternary Bonsai 27B 等 $0 模型",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/Kashcol_com/status/2119271742136779116",
+    "summary": "Eden AI 模型目录上，Gemma 4 31B IT 的官方 Google Cloud 端点输入/输出均为 $0，上下文 262K，走 OpenAI 兼容接口。务必指定 google/gemma-4-31b-it，同模型其他供应商从 $0.1/百万 token 起价。官方 10/28 博文还列出 Gemma 4 26B A4B、Ternary Bonsai 27B 等共 7 个 $0 文本模型。需注册创建 API Key。",
+    "free_terms": "如何领取：打开 app.edenai.run 注册/登录 → Settings → API Keys 创建 Key → Base URL 填 https://api.edenai.run/v3，模型填 google/gemma-4-31b-it（官方 Google Cloud 端点，输入/输出 $0，262K）。同模型其他端点从 $0.1/百万起，选错会扣预付积分。Gemma 4 26B A4B、Ternary Bonsai 27B 等也标 $0。官网未要求绑卡；截止未公布。",
+    "source": "X @Kashcol_com（社区帖）；核实 edenai.co/models/gemma-4-31b-it 官方端点 $0/$0，以及 2026-10-28 官方博文列出 7 个 $0 文本模型",
+    "collected_at": "2026-11-08T11:50:00+08:00",
+    "expired": false,
+    "providers": [
+      {
+        "name": "Eden AI",
+        "action_url": "https://app.edenai.run/settings/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Gemma 4 31B IT（官方免费端点）",
+        "action_url": "https://www.edenai.co/models/gemma-4-31b-it"
+      },
+      {
+        "name": "Eden AI 免费文本模型说明",
+        "action_url": "https://www.edenai.co/post/top-free-text-generation-tools-apis-and-open-source-models"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ]
   }
 ]
