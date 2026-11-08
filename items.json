@@ -5881,14 +5881,14 @@
     "title": "Reflection Beam 免费托管调用：Ollama beam:cloud / OpenCode Zen beam-free / Vercel reflection/beam-free",
     "model": "Reflection Beam 1.0（501B MoE / 23B 激活）",
     "type": "限时",
-    "deadline": null,
+    "deadline": "2026-11-09T16:01:00+08:00",
     "url": "https://x.com/ollama/status/2111087699574903061",
-    "summary": "Reflection 开源 Beam 1.0 后，多家平台同步上线免费托管版本：Ollama 官方宣布 beam:cloud 限时免费（美国托管、零数据保留，可用 `ollama launch claude --model beam:cloud` 接入 Claude Code，也支持 OpenCode / Hermes / OpenClaw）；OpenCode Zen 新增 Beam Free（beam-free），输入输出与缓存均免费，但不对中国大陆及港澳等地区开放，数据保留 30 天；Vercel AI Gateway 上架 reflection/beam-free（1M 上下文，最大输出 131K）。均未公布截止时间和额度上限。与已收录的 HF 开源权重条目不同，这里无需自备算力。",
+    "summary": "Reflection 开源 Beam 1.0 后，多家平台同步上线免费托管版本：Ollama 官方宣布 beam:cloud 限时免费（美国托管、零数据保留，可用 `ollama launch claude --model beam:cloud` 接入 Claude Code，也支持 OpenCode / Hermes / OpenClaw）；OpenCode Zen 新增 Beam Free（beam-free），输入输出与缓存均免费，但不对中国大陆及港澳等地区开放，数据保留 30 天；Vercel AI Gateway 上架 reflection/beam-free（1M 上下文，最大输出 131K）。均未公布截止时间和额度上限。与已收录的 HF 开源权重条目不同，这里无需自备算力。 更新（11/8）：Ollama 模型页现已写明 beam:cloud 免费到北京时间 11/9 16:01，过后转为付费，脚本里写着 beam:cloud 的要提前换模型。",
     "source": "x.com/ollama/status/2111087699574903061 + x.com/EastSavin/status/2111124822394847299 + x.com/aiptsd/status/2111130775160537397；核实 ollama.com/library/beam、opencode.ai/docs/zen、vercel.com/ai-gateway/models/beam-free",
     "collected_at": "2026-10-17T00:58:00+08:00",
     "expired": false,
     "source_post_id": "2111087699574903061",
-    "free_terms": "限时免费，未公布截止时间与额度；Ollama 需登录账号使用 cloud 模型；OpenCode Zen 需 Console API Key，且不对中国大陆/港澳等地区开放；Vercel AI Gateway 需 Vercel 账号与 AI Gateway Key。",
+    "free_terms": "Ollama 官方页写明 beam:cloud 免费到 2026-11-09 00:01 PST（北京时间 11/9 16:01），之后按 $0.125/$0.40 每百万输入/输出计费。领取：ollama.com 注册登录 → Settings → Keys 建 API Key，或装 Ollama 后 `ollama launch claude --model beam:cloud`；OpenCode Zen 需 Console Key 且不对中国大陆/港澳开放；Vercel 需 AI Gateway Key。",
     "product": "Ollama Cloud beam:cloud / OpenCode Zen beam-free / Vercel AI Gateway reflection/beam-free",
     "post_time_bj": "2026-10-16T21:31:44+08:00",
     "providers": [
@@ -5936,6 +5936,9 @@
     "barriers": [
       "need_key",
       "need_client"
+    ],
+    "related_post_urls": [
+      "https://x.com/vastplan/status/2119224036760621455"
     ]
   },
   {
@@ -15714,6 +15717,42 @@
     "barriers": [
       "need_key",
       "cn_account"
+    ]
+  },
+  {
+    "id": "nvidia-nim-glm-53-flash-free-endpoint-20261108",
+    "title": "NVIDIA NIM：GLM-5.3-Flash 免费 API endpoint（1M 上下文，OpenAI 兼容）",
+    "model": "GLM-5.3-Flash（z-ai/glm-5.3-flash）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/Jkggiaqy/status/2119220779149656409",
+    "summary": "NVIDIA build.nvidia.com 上智谱 GLM-5.3-Flash 标为 Free Endpoint，可免费调用：320B 总参/18B 激活的多模态 MoE，1M 上下文，支持推理和工具调用，走 OpenAI 兼容接口。注意满血 GLM-5.3 的免费端点已于 10/28 下线，免费的只剩 Flash 版。仅限测试评估、不可生产用，免费档数据可能被用于训练。",
+    "free_terms": "如何领取：打开 build.nvidia.com 注册/登录 NVIDIA 账号（加入免费 Developer Program，需手机验证）→ 到 build.nvidia.com/settings/api-keys 生成 API Key → Base URL 填 https://integrate.api.nvidia.com/v1，模型填 z-ai/glm-5.3-flash。不绑卡；官方限约 40 次/分钟，按模型和流量可能更低；仅限测试，截止未公布。",
+    "source": "X @Jkggiaqy（社区帖）；核实 build.nvidia.com/z-ai/glm-5-3-flash 显示 Free Endpoint: Available",
+    "collected_at": "2026-11-08T08:45:00+08:00",
+    "expired": false,
+    "source_post_id": "2119220779149656409",
+    "post_time_bj": "2026-11-08T08:09:41+08:00",
+    "product": "NVIDIA NIM",
+    "providers": [
+      {
+        "name": "NVIDIA NIM API Keys",
+        "action_url": "https://build.nvidia.com/settings/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "GLM-5.3-Flash（NIM）",
+        "action_url": "https://build.nvidia.com/z-ai/glm-5-3-flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
     ]
   }
 ]
