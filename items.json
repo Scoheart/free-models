@@ -15968,5 +15968,48 @@
     "barriers": [
       "need_client"
     ]
+  },
+  {
+    "id": "nodecode-cyber-v1-free-key-20261108",
+    "title": "Nodecode Cyber v1：充值 $2 后可在官方 CLI 免费调用",
+    "model": "Cyber v1（nodecode-cyber-v1；基于 DeepSeek V4.1 Flash + Foresight Labs 微调）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/CallMeCSZ/status/2119339141510906107",
+    "summary": "Nodecode 官方文档确认：账户充值至少 2 美元或欧元（余额留在账户）后，可在官方 CLI 领取 Cyber v1 的 Free key，不按 token 扣费；仅限 Nodecode 客户端，上下文 256K，一般不设每日上限（首次充值后 14 天内每天 3M token）。",
+    "free_terms": "如何领取：打开 nodecode.ai 注册 → account/top-up 充值至少 $2/€2（需绑卡，余额留账户，Free key 不扣）→ 用官网 install.sh 安装 CLI，运行 nodecode login，页面选 Free key 并 Allow → /models 选 nodecode-free/nodecode-cyber-v1。仅限官方 CLI 和 Cyber v1（换客户端或换模型会 403）；免费档 256K 上下文、40 次/分钟；一般不限每日量，首次充值后 14 天内每天 3M token 且同时 1 路（之后 2 路）。",
+    "source": "X @CallMeCSZ / @v10se；官方 https://nodecode.ai/docs/models 与 changelog 0.1.11（Updated Nov 6, 2026）核实",
+    "collected_at": "2026-11-08T16:55:00+08:00",
+    "expired": false,
+    "providers": [
+      {
+        "name": "Nodecode",
+        "action_url": "https://nodecode.ai/docs/models"
+      },
+      {
+        "name": "Nodecode 充值",
+        "action_url": "https://nodecode.ai/account/top-up"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Nodecode",
+        "action_url": "https://nodecode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Cyber v1（Free key）",
+        "action_url": "https://nodecode.ai/docs/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "deposit_hold"
+    ]
   }
 ]
