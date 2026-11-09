@@ -16332,5 +16332,87 @@
   "barriers": [
    "need_client"
   ]
+ },
+ {
+  "id": "opencode-frantic-ferret-free-20261109",
+  "title": "OpenCode：隐身模型 Frantic Ferret Free 限时 $0（1M 多模态上下文）",
+  "model": "frantic-ferret-free（Frantic Ferret Free）",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://x.com/hakmgpt/status/2119505407194386668",
+  "summary": "OpenCode 11/8 上架新隐身推理模型 Frantic Ferret Free：输入/输出/缓存均 $0，1M 上下文、最多 270K 输出，支持文本/图像/视频/PDF 输入、工具调用与六档推理强度。OpenCode 模型注册表 models.dev 已收录（release_date 2026-11-08，cost 全 0）。模型来源厂商未经官方确认。截止日未公布。",
+  "free_terms": "如何领取：安装 OpenCode（npm i -g opencode-ai 或官网安装脚本）→ 终端运行 opencode → /models 选 Frantic Ferret Free（OpenCode Zen 免费模型，无需充值）。免费档只能在 OpenCode 客户端用，不能接其他客户端。有社区反馈地区限制，具体范围未经官方确认。隐身期数据可能被保留。截止日未公布。",
+  "source": "X @hakmgpt / @aitrackerbot / @k2sbhai；OpenCode 模型注册表 https://models.dev/api.json（opencode.frantic-ferret-free，cost 0）核实",
+  "collected_at": "2026-11-09T04:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2119505407194386668",
+  "post_time_bj": "2026-11-09T03:00:42+08:00",
+  "product": "OpenCode Zen",
+  "related_post_urls": [
+   "https://x.com/aitrackerbot/status/2119507570717040997",
+   "https://x.com/k2sbhai/status/2119508308373692878",
+   "https://x.com/abhinavflac/status/2119518459927433509"
+  ],
+  "providers": [
+   {
+    "name": "OpenCode Zen 文档",
+    "action_url": "https://opencode.ai/docs/zen/"
+   }
+  ],
+  "agents": [
+   {
+    "name": "OpenCode",
+    "action_url": "https://opencode.ai/"
+   }
+  ],
+  "models": [
+   {
+    "name": "Frantic Ferret Free（models.dev）",
+    "action_url": "https://models.dev/"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_client"
+  ]
+ },
+ {
+  "id": "lg-k-exaone-2.5-free-api-20261109",
+  "title": "LG K-EXAONE 2.5 API 全面免费开放（750B MoE，512K 上下文）",
+  "model": "K-EXAONE 2.5（k-exaone_v2.5）",
+  "type": "API",
+  "deadline": null,
+  "url": "https://x.com/johnroodepic/status/2119630279967121432",
+  "summary": "LG AI 研究院 11/9 在 NVIDIA AI Day Seoul 宣布 K-EXAONE 2.5 API 即日起通过 EXAONE API 平台免费开放：750B 总参/31B 激活、512K 上下文、纯文本、韩英双语，支持工具调用与结构化输出。截止日与具体限额官方未公布。",
+  "free_terms": "如何领取：打开 docs.exaone.ai（EXAONE API Platform）注册并申请 API Key，OpenAI 兼容，base https://api.exaone.ai/v1，model 填 k-exaone_v2.5。报道称仅需 Key、无额外费用；是否绑卡、每账号限额官方文档未写。X 帖称仅限非商用、不得转供第三方调用，使用前请读条款。",
+  "source": "X @johnroodepic；官方文档 docs.exaone.ai、연합뉴스、TIME Korea、Digital Today 核实",
+  "collected_at": "2026-11-09T11:40:00+08:00",
+  "expired": false,
+  "source_post_id": "2119630279967121432",
+  "post_time_bj": "2026-11-09T11:16:54+08:00",
+  "product": "EXAONE API Platform",
+  "providers": [
+   {
+    "name": "EXAONE API Platform",
+    "action_url": "https://docs.exaone.ai/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "K-EXAONE 2.5 API 文档",
+    "action_url": "https://docs.exaone.ai/en/docs/k-exaone-2.5"
+   }
+  ],
+  "scenes": [
+   "coding",
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
