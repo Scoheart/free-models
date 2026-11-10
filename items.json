@@ -16526,5 +16526,40 @@
    "cn_account",
    "need_key"
   ]
+ },
+ {
+  "id": "ai21-studio-10usd-trial-20261110",
+  "title": "AI21 Studio 新账号送 $10 试用额度（Jamba / Maestro，免绑卡）",
+  "model": "Jamba Mini / Jamba Large / Maestro",
+  "type": "额度",
+  "deadline": null,
+  "url": "https://x.com/i/status/2120071027267174640",
+  "summary": "AI21 Studio 新注册账号自动获得 $10 API 试用额度，可调用 Jamba 系列和 Maestro，OpenAI 兼容接口，无需信用卡；用完或到期后需绑定付款方式。",
+  "free_terms": "如何领取：打开 studio.ai21.com 注册账号，额度自动到账，无需绑卡→控制台创建 API Key→调用 API/SDK/Playground。有效期官方两处写法不一：定价页写 7 天，文档称 3 个月，以账号 Usage 页为准；额度用完或过期后需绑卡（402 报错）。",
+  "source": "X 帖（教程体）；ai21.com/pricing 官方定价页核实 $10、免绑卡",
+  "collected_at": "2026-11-10T16:50:00+08:00",
+  "expired": false,
+  "source_post_id": "2120071027267174640",
+  "post_time_bj": "2026-11-10T16:28:16+08:00",
+  "product": "AI21 Studio",
+  "providers": [
+   {
+    "name": "AI21 Studio",
+    "action_url": "https://studio.ai21.com/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "AI21 定价与模型",
+    "action_url": "https://www.ai21.com/pricing/"
+   }
+  ],
+  "scenes": [
+   "chat"
+  ],
+  "barriers": [
+   "need_key"
+  ]
  }
 ]
