@@ -7,6 +7,8 @@
   --border: rgba(15, 15, 20, 0.08);
   --accent: #5b5bd6;
   --amber: #b45309;
+  --ok: #15803d;
+  --bad: #e24b2a;
   --font: "Inter", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif;
 }
 
@@ -20,6 +22,8 @@
     --border: rgba(255, 255, 255, 0.11);
     --accent: #8b8bf5;
     --amber: #fbbf24;
+    --ok: #4ade80;
+    --bad: #ff8a6a;
   }
 }
 
@@ -77,27 +81,113 @@ body {
   gap: 0.55rem;
 }
 
+.title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.65rem 0.85rem;
+}
+
 .card-title {
   margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.35;
 }
 
-.card-blurb {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.875rem;
-  line-height: 1.55;
+.title-row .auto-claim {
+  flex: 0 0 auto;
+  margin-top: 0.16rem;
 }
 
-.card-blurb .deadline {
-  color: var(--faint);
+.auto-claim {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.08rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
   white-space: nowrap;
 }
 
-.card-blurb .deadline.soon {
+.auto-claim.success {
+  color: var(--ok);
+  background: color-mix(in srgb, var(--ok) 14%, transparent);
+}
+
+.auto-claim.failed {
+  color: var(--bad);
+  background: color-mix(in srgb, var(--bad) 14%, transparent);
+}
+
+.auto-claim.needs-user {
+  color: var(--amber);
+  background: color-mix(in srgb, var(--amber) 16%, transparent);
+}
+
+.auto-claim-note {
+  margin: -0.15rem 0 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.auto-claim-text {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.auto-claim-at {
+  flex: 0 0 auto;
+  color: var(--faint);
+  font-size: 0.6875rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.claim-steps {
+  margin: 0;
+  padding: 0.1rem 0 0.1rem 1.2rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  list-style: disc;
+}
+
+.claim-steps li {
+  margin: 0;
+  padding: 0.2rem 0;
+  overflow-wrap: anywhere;
+}
+
+.claim-steps li::marker {
+  color: var(--accent);
+}
+
+.card-deadline {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.card-deadline .deadline {
+  color: var(--faint);
+}
+
+.card-deadline .deadline.soon {
   color: var(--amber);
   font-weight: 550;
 }
@@ -161,4 +251,6 @@ body {
   .wrap { padding: 1.75rem 1rem 3rem; }
   .card { padding: 1rem 1.05rem; }
   .card-title { font-size: 1rem; }
+  .title-row { flex-wrap: wrap; }
+  .auto-claim-note { flex-wrap: wrap; }
 }
