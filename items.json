@@ -29844,5 +29844,478 @@
         "detail": "OpenRouter 免费模型通用限额为每分钟 20 次、每天 50 次；账户累计充值满 $10 后，每天上限提到 1000 次。免费模型可能随时下架或改价，以模型页为准。"
       }
     ]
+  },
+  {
+    "agents": [],
+    "models": [],
+    "expired": false,
+    "collected_at": "2026-11-11T03:05:00+08:00",
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "无需单独注册：在已有的 Google AI Studio 账号里直接使用内置 Maps Demo Key 即可。",
+      "at": "2026-11-11T03:28:00+08:00"
+    },
+    "id": "google-ai-studio-maps-demo-key-100-daily-20261111",
+    "providers": [
+      {
+        "name": "Google AI Studio",
+        "action_url": "https://aistudio.google.com"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "title": "Google AI Studio 内置 Google Maps：免绑卡 Maps Demo Key，每个 API 每天 100 次",
+    "platform": "Google AI Studio",
+    "product": "Google Maps Platform in AI Studio（Maps Demo Key）",
+    "model": "",
+    "type": "额度",
+    "deadline": "",
+    "url": "https://developers.google.com/maps/ai/ai-studio",
+    "source": "Google for Developers 官方文档 developers.google.com/maps/ai/ai-studio；Google Developers Blog；X @EntrepreneursAI、@wcg8904 帖子",
+    "summary": "据 Google 官方文档和开发者博客：现在可在 Google AI Studio 里用 Gemini 直接生成带 Google 地图的应用。AI Studio 会自动配一个 Maps Demo Key，不用信用卡，也不用开 Google Cloud 结算账户。沙盒额度为每个 API 每天 100 次，24 小时重置。新用户可用除 Route Optimization、Solar、Nav Connect 外的全部 Maps API（Maps JavaScript、Places、Routes、Geocoding、Weather、Air Quality、Street View 等）；已有 Cloud 账号的用户免费档只含常用原型 API。X 上也有多条帖子报道（据 X 上的报道）。",
+    "free_terms": "入口 https://aistudio.google.com （Build 模式）；在对话里描述含地图的应用，弹出「Set up Google Maps Platform」卡片后接受 Maps Demo Project 服务条款并点 Enable Google Maps；或在 Settings（齿轮）里主动启用。账号门槛：Google 账号即可，免绑卡、免 Cloud 结算账户。限额：每个 API 每天 100 次，每 24 小时重置；Key 自动存进应用 secrets（GOOGLE_MAPS_PLATFORM_KEY）。无截止日。上生产需绑 Cloud 结算账户。",
+    "claim_steps": [
+      "打开 https://aistudio.google.com 进入 Build 模式",
+      "用自然语言描述一个需要地图的应用（如门店查找、路线规划）",
+      "出现「Set up Google Maps Platform」卡片后接受条款并点 Enable Google Maps",
+      "AI Studio 自动生成 Maps Demo Key 并写入应用 secrets，每个 API 每天 100 次"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开 AI Studio",
+        "detail": "用 Google 账号登录 Google AI Studio，进入 Build（应用生成）模式。",
+        "url": "https://aistudio.google.com"
+      },
+      {
+        "step": "描述地图类应用",
+        "detail": "在对话里提出需要地图、地点、路线或天气的应用需求，AI Studio 会自动识别地理类意图并推荐 Google Maps Platform。"
+      },
+      {
+        "step": "启用 Google Maps",
+        "detail": "对话中出现「Set up Google Maps Platform」卡片：阅读并接受 Maps Demo Project 服务条款（如有提示再接受 Starter Tier 附加条款），点 Enable Google Maps。也可在 Settings（齿轮图标）里主动启用。",
+        "url": "https://codelabs.developers.google.com/codelabs/cloud-run/build-with-google-maps-platform-and-ai"
+      },
+      {
+        "step": "确认 Key 已注入",
+        "detail": "AI Studio 会在 Google 托管项目上生成 Maps Demo Key，存进应用 secrets，名称为 GOOGLE_MAPS_PLATFORM_KEY，预览区会直接出现可交互地图。"
+      },
+      {
+        "step": "注意额度与范围",
+        "detail": "每个 API 每天 100 次，24 小时重置。新用户可用除 Route Optimization、Solar、Nav Connect 外的全部 Maps API；已有 Cloud 账号的用户免费档只含 Maps JavaScript、Places（不含照片和评论）、Routes、Geocoding、Weather 等常用 API。",
+        "url": "https://developers.google.com/maps/ai/ai-studio"
+      },
+      {
+        "step": "需要更高额度时",
+        "detail": "绑定 Google Cloud 结算账户即可解除每日上限，按标准 Google Maps Platform 价格计费（含每月免费用量）。",
+        "url": "https://developers.google.com/maps/ai/usage-and-billing"
+      }
+    ]
+  },
+  {
+    "agents": [],
+    "models": [],
+    "expired": false,
+    "collected_at": "2026-11-11T03:05:00+08:00",
+    "auto_claim": {
+      "status": "success",
+      "note": "已用 Google 注册并建 key「Scoheart」，实际只到账 $0.25，其余 $9.75 需充值解锁（未充值）。",
+      "at": "2026-11-11T03:28:00+08:00"
+    },
+    "id": "helyx-ai-10usd-signup-credit-20261111",
+    "providers": [
+      {
+        "name": "Helyx AI",
+        "action_url": "https://helyxai.space/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "title": "Helyx AI：新账号送 $10 额度（$2 立即到账，$8 联系客服解锁；免绑卡，OpenAI 兼容）",
+    "platform": "Helyx AI",
+    "product": "Helyx AI API 网关",
+    "model": "",
+    "type": "额度",
+    "deadline": "",
+    "url": "https://helyxai.space/",
+    "source": "Helyx AI 官网 helyxai.space；aifree.dev 与 FreeAIHub 收录页；X @jhl880617 帖子",
+    "summary": "据 Helyx AI 官网：这是一个 OpenAI 兼容的 API 网关（base_url https://helyxai.space/v1），可调用 Claude、GPT、Gemini、Kimi、DeepSeek、Grok 等 50 多个模型。每个新账号送 $10 免费额度，免绑卡，用 Google 或 GitHub 登录，进控制台即自动生成 API Key。据 aifree.dev 和 X 上的报道：$10 里 $2 登录后立即到账，其余 $8 要联系客服解锁（防滥用）。额度按各模型单价扣，用完后只能用加密货币充值。",
+    "free_terms": "入口 https://helyxai.space/ （注册页 helyxai.space/signup.php）；用 Google 或 GitHub 登录，无需密码和信用卡；登录后控制台自动生成 API Key。额度：新账号 $10（$2 即时到账，$8 需联系客服解锁），一次性，按模型单价扣；base_url https://helyxai.space/v1 ；无截止日；充值只支持加密货币。",
+    "claim_steps": [
+      "打开 https://helyxai.space/ 用 Google 或 GitHub 登录",
+      "进入控制台，API Key 已自动生成，$2 已到账",
+      "联系客服申请解锁剩余 $8",
+      "客户端 base_url 设为 https://helyxai.space/v1，模型如 deepseek-v4.1-flash"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 Helyx AI",
+        "detail": "打开官网，用 Google 或 GitHub 账号登录（无需密码）。",
+        "url": "https://helyxai.space/"
+      },
+      {
+        "step": "取 API Key",
+        "detail": "首次进入控制台会自动生成 API Key，$2 启动额度立即到账。",
+        "note": "官网写每个新账号送 $10，免绑卡"
+      },
+      {
+        "step": "解锁剩余 $8",
+        "detail": "据 aifree.dev 和 X 上的报道，剩下的 $8 要联系客服人工解锁（防滥用）；客服入口在控制台内，具体位置以页面为准。",
+        "url": "https://aifree.dev/offer/helyx-ai-free-signup-credit"
+      },
+      {
+        "step": "配置客户端",
+        "detail": "OpenAI 兼容：base_url 填 https://helyxai.space/v1 ，官网示例模型有 claude-opus-5、deepseek-v4.1-flash、gemini-3.1-flash-lite、glm-5.3-flash 等。"
+      },
+      {
+        "step": "注意扣费",
+        "detail": "额度按各模型单价扣（如 Claude Opus 5 每百万 Token $5/$25），一次性不续；用完只能用加密货币充值，没有订阅，也不会自动扣费。"
+      }
+    ]
+  },
+  {
+    "agents": [],
+    "models": [],
+    "expired": false,
+    "collected_at": "2026-11-11T03:05:00+08:00",
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "已用 Google 注册并建 key，余额 $0；免费档需你本人在控制台完成手机号验证。",
+      "at": "2026-11-11T03:28:00+08:00"
+    },
+    "id": "hyperbolic-free-tier-phone-verify-1usd-20261111",
+    "providers": [
+      {
+        "name": "Hyperbolic",
+        "action_url": "https://app.hyperbolic.ai"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "need_phone"
+    ],
+    "title": "Hyperbolic 重开推理 API：免费档验证手机号即可调用，并送 $1 额度",
+    "platform": "Hyperbolic",
+    "product": "Hyperbolic Serverless Inference",
+    "model": "",
+    "type": "额度",
+    "deadline": "",
+    "url": "https://www.hyperbolic.ai/docs/faq/account-billing",
+    "source": "Hyperbolic 官方文档（账户与计费 FAQ、2026-10-26 周 changelog）；free-llm.com 11 月盘点",
+    "summary": "据 Hyperbolic 官方文档：Hyperbolic 在 10 月重新上线 Serverless 推理 API，新地址 https://api.hyperbolic.ai/inference/v1（旧的 api.hyperbolic.xyz 已停用）。从 2026-10-26 那周起，免费档个人账号验证手机号后就能调用推理，验证同时送 $1 额度（只能用于推理，不能租 GPU）。一个手机号只能给一个账号解锁。没验证手机号的免费账号调用会返回 403 inference_requires_verified_phone。据 free-llm.com，可用模型包括 DeepSeek V4 Flash、DeepSeek V4.1 Flash、GLM-5.3 Flash、Qwen3.8 27B 等，每个 Key 每分钟 300 次。",
+    "free_terms": "入口 https://app.hyperbolic.ai 注册；在入门引导、邀请链接或 Settings > Plan 中验证手机号，送 $1 额度并解锁免费档推理；每个手机号只能解锁一个账号；$1 只能用于推理，不能租 GPU；API Key 在 https://app.hyperbolic.ai/settings/api-keys ；base_url https://api.hyperbolic.ai/inference/v1 （OpenAI 兼容）；无截止日。",
+    "claim_steps": [
+      "打开 https://app.hyperbolic.ai 注册账号",
+      "在 Settings > Plan 验证手机号，$1 额度到账",
+      "在 https://app.hyperbolic.ai/settings/api-keys 创建 API Key",
+      "base_url 设为 https://api.hyperbolic.ai/inference/v1"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册 Hyperbolic",
+        "detail": "打开 Hyperbolic 控制台注册个人账号（默认是 Free Tier）。",
+        "url": "https://app.hyperbolic.ai"
+      },
+      {
+        "step": "验证手机号",
+        "detail": "在入门引导、邀请链接或 Settings > Plan 里验证手机号。验证后免费档账号可以调用推理，并到账 $1 额度。",
+        "note": "一个手机号只能给一个账号解锁；顶部原来的 $1 横幅已撤下，但验证入口仍在"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "到 Settings 的 API Keys 页面创建 Key。",
+        "url": "https://app.hyperbolic.ai/settings/api-keys"
+      },
+      {
+        "step": "配置调用",
+        "detail": "OpenAI 兼容：base_url 填 https://api.hyperbolic.ai/inference/v1 。旧地址 api.hyperbolic.xyz 及其模型 ID 已停用。",
+        "url": "https://www.hyperbolic.ai/docs/faq/account-billing"
+      },
+      {
+        "step": "注意限制",
+        "detail": "$1 只能用于推理，不能租 GPU；用完后需一次性充值 $5 以上升级 Pro。没验证手机号会返回 403 inference_requires_verified_phone。"
+      }
+    ]
+  },
+  {
+    "agents": [],
+    "models": [],
+    "expired": false,
+    "collected_at": "2026-11-11T03:05:00+08:00",
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "只支持邮箱注册（无 Google），且 $5 需 CLI 登录领取，未注册，需你本人处理。",
+      "at": "2026-11-11T03:28:00+08:00"
+    },
+    "id": "vectoree-5usd-welcome-credit-cli-20261111",
+    "providers": [
+      {
+        "name": "Vectoree",
+        "action_url": "https://vectoree.ai/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_key",
+      "need_client"
+    ],
+    "title": "Vectoree：CLI 登录并关联项目后送 $5 欢迎额度（模型网关 + Agent 后端，OpenAI 兼容）",
+    "platform": "Vectoree",
+    "product": "Vectoree Model Plaza 网关",
+    "model": "vectoree/auto",
+    "type": "额度",
+    "deadline": "",
+    "url": "https://vectoree.ai/",
+    "source": "Vectoree 官网 vectoree.ai；aifree.dev 收录页；free-llm.com 11 月盘点",
+    "summary": "据 Vectoree 官网：Vectoree 是给编程 Agent 用的后端，含 OpenAI 兼容模型网关（Model Plaza，可调用 xAI、OpenAI、Google、Anthropic、DeepSeek 等）、MCP 工具中心、认证、Postgres 和对象存储，共用一个项目 Key。没有月费，用 CLI 登录并关联项目后送 $5 欢迎额度；之后按量从组织钱包扣，钱包空了就不能调用网关，充值走 Stripe。",
+    "free_terms": "入口 https://vectoree.ai/ 注册并创建项目；运行 npx @vectoree/cli login --api-url https://vectoree.ai ，再运行 npx @vectoree/cli link 关联项目，$5 欢迎额度到账（一次性）；项目 Key 写在 .vectoree/config.json（前缀 sk-ve-v1-）；网关 base_url https://vectoree.ai/api/v1 ，模型如 vectoree/auto；无月费，无截止日；用完需 Stripe 充值。",
+    "claim_steps": [
+      "打开 https://vectoree.ai/ 注册并创建项目",
+      "终端运行 npx @vectoree/cli login --api-url https://vectoree.ai",
+      "运行 npx @vectoree/cli link 关联项目，$5 欢迎额度到账",
+      "用 OpenAI SDK，baseURL https://vectoree.ai/api/v1，模型 vectoree/auto"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册并建项目",
+        "detail": "在 Vectoree 官网注册账号并创建一个项目。",
+        "url": "https://vectoree.ai/"
+      },
+      {
+        "step": "CLI 登录",
+        "detail": "终端执行 npx @vectoree/cli login --api-url https://vectoree.ai ，按提示在浏览器里完成授权。",
+        "url": "https://docs.vectoree.ai/quickstart"
+      },
+      {
+        "step": "关联项目",
+        "detail": "执行 npx @vectoree/cli link 关联项目。官网写明 CLI 登录并关联后才发放 $5 欢迎额度。"
+      },
+      {
+        "step": "取项目 Key",
+        "detail": "项目 Key 保存在 .vectoree/config.json，格式为 sk-ve-v1-…。"
+      },
+      {
+        "step": "调用网关",
+        "detail": "OpenAI 兼容：baseURL 填 https://vectoree.ai/api/v1 ，模型可填 vectoree/auto，也可在 Model Plaza 选具体模型。"
+      },
+      {
+        "step": "注意扣费",
+        "detail": "按模型目录价从组织钱包扣，$5 为一次性；钱包为 0 时网关调用会失败，充值走 Stripe。"
+      }
+    ]
+  },
+  {
+    "agents": [],
+    "models": [],
+    "expired": false,
+    "collected_at": "2026-11-11T03:05:00+08:00",
+    "auto_claim": {
+      "status": "success",
+      "note": "已用 Google 注册，余额 $5，已建 key「Scoheart」（控制台不支持额度上限和过期）。",
+      "at": "2026-11-11T03:28:00+08:00"
+    },
+    "id": "yepapi-5usd-free-credit-no-card-20261111",
+    "providers": [
+      {
+        "name": "YepAPI",
+        "action_url": "https://yepapi.com/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "title": "YepAPI：注册送 $5 免费额度（免绑卡，一个 Key 调用 285 个 AI 模型和 184 个数据接口）",
+    "platform": "YepAPI",
+    "product": "YepAPI",
+    "model": "",
+    "type": "额度",
+    "deadline": "",
+    "url": "https://yepapi.com/",
+    "source": "YepAPI 官网 yepapi.com；aifree.dev 收录页",
+    "summary": "据 YepAPI 官网：一个 API Key 可同时调用 SEO、抓取、社交数据等 184 个数据接口和 285 个 AI 模型（Claude、GPT、DeepSeek、Seedance 等），按次或按 Token 计费，没有月费。注册送 $5 免费额度，免绑卡。据 aifree.dev，$5 为一次性，用完按量付费；平台另有 Nemotron 3 Super 等 $0 模型。",
+    "free_terms": "入口 https://yepapi.com/ 点 Get your API key 注册；免绑卡；注册即得 $5 一次性额度，可用于全部模型和数据接口；无月费、无截止日；用完按量付费。",
+    "claim_steps": [
+      "打开 https://yepapi.com/ 点 Get your API key",
+      "注册账号（免绑卡），$5 额度到账",
+      "在控制台复制 API Key",
+      "按官网文档调用模型或数据接口"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开官网",
+        "detail": "进入 YepAPI 首页，点 Get your API key。",
+        "url": "https://yepapi.com/"
+      },
+      {
+        "step": "注册账号",
+        "detail": "完成注册，官网写明 $5 free credit, no card required。"
+      },
+      {
+        "step": "复制 API Key",
+        "detail": "在控制台复制 API Key，具体位置以页面为准。"
+      },
+      {
+        "step": "调用",
+        "detail": "按官网 Read the docs 的说明调用 AI 模型或 SEO / 抓取 / 社交数据接口，同一个 Key 通用。"
+      },
+      {
+        "step": "注意",
+        "detail": "$5 是一次性额度，按每次调用或每百万 Token 计价扣费（如 Claude Opus 5.5 每百万 Token $5.91/$29.54），用完需充值。",
+        "url": "https://aifree.dev/offer/yepapi-free-credit"
+      }
+    ]
+  },
+  {
+    "agents": [],
+    "models": [],
+    "expired": false,
+    "collected_at": "2026-11-11T03:05:00+08:00",
+    "auto_claim": {
+      "status": "failed",
+      "note": "Google 授权后跳到「Something went wrong」错误页，未注册成功，下轮重试。",
+      "at": "2026-11-11T03:28:00+08:00"
+    },
+    "id": "sarvam-ai-inr100-signup-credits-20261111",
+    "providers": [
+      {
+        "name": "Sarvam AI",
+        "action_url": "https://dashboard.sarvam.ai"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "audio",
+      "translate"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "title": "Sarvam AI：验证用户注册送 ₹100 免费额度（永不过期，语音 / 翻译 / Sarvam-105B 对话通用）",
+    "platform": "Sarvam AI",
+    "product": "Sarvam AI API",
+    "model": "",
+    "type": "额度",
+    "deadline": "",
+    "url": "https://docs.sarvam.ai/api/getting-started/ratelimits",
+    "source": "Sarvam AI 官方文档 docs.sarvam.ai（Credits & Rate Limits）；aifree.dev 收录页",
+    "summary": "据 Sarvam AI 官方文档：每个完成验证的用户注册即送 ₹100 免费额度，可用于全部 API（语音识别 Saaras、语音合成 Bulbul、翻译、文档智能、Sarvam-105B 对话等），额度永不过期。Starter 档限速：语音、翻译、文本类每分钟 60 次，Sarvam-105B 每分钟 40 次，按账号计（不是按 Key）。额度用完后需充值或升级套餐。据 aifree.dev，免绑卡。",
+    "free_terms": "入口 Sarvam Dashboard 注册并完成验证；额度：₹100 一次性，全部 API 通用，永不过期；限速：多数 API 每分钟 60 次，Sarvam-105B 每分钟 40 次（按账号计）；免绑卡（据 aifree.dev）；无截止日；用完需充值。",
+    "claim_steps": [
+      "打开 Sarvam Dashboard 注册并完成验证",
+      "₹100 免费额度自动到账",
+      "在 Dashboard 创建 API Key",
+      "按文档调用语音、翻译或 Sarvam-105B 对话接口"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册 Sarvam",
+        "detail": "打开 Sarvam AI Dashboard 注册账号并完成验证。",
+        "url": "https://dashboard.sarvam.ai"
+      },
+      {
+        "step": "确认额度",
+        "detail": "官方文档写明每个完成验证的用户注册即送 ₹100，全部 API 通用，永不过期。",
+        "url": "https://docs.sarvam.ai/api/getting-started/ratelimits"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在 Dashboard 里创建 API Key，具体位置以页面为准。"
+      },
+      {
+        "step": "调用接口",
+        "detail": "可调用语音识别（Saaras）、语音合成（Bulbul）、翻译、文档智能和 Sarvam-105B 对话等接口，详见官方文档。"
+      },
+      {
+        "step": "注意限速",
+        "detail": "Starter 档：语音、翻译、文本类每分钟 60 次，Sarvam-105B 每分钟 40 次，按账号计（多个 Key 共用）。额度用完后调用会报错，需充值或升级。"
+      }
+    ]
+  },
+  {
+    "agents": [],
+    "models": [],
+    "expired": false,
+    "collected_at": "2026-11-11T03:05:00+08:00",
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在 AtomCode 客户端内执行 /login 领取（每日限量），需你本人操作。",
+      "at": "2026-11-11T03:28:00+08:00"
+    },
+    "id": "atomcode-codingplan-lite-30d-free-daily-1000-20261111",
+    "providers": [
+      {
+        "name": "AtomCode（AtomGit CodingPlan）",
+        "action_url": "https://atomcode.atomgit.com/docs/zh/login.html"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client",
+      "cn_account"
+    ],
+    "title": "AtomGit AtomCode：/login 免费领 CodingPlan Lite 30 天（每日限量 1000 人），Pro 体验版 7 天（每日 10:00 限量 100 人）",
+    "platform": "AtomGit",
+    "product": "AtomCode CodingPlan",
+    "model": "",
+    "type": "额度",
+    "deadline": "",
+    "url": "https://atomcode.atomgit.com/docs/zh/login.html",
+    "source": "AtomCode 官方文档 atomcode.atomgit.com（登录方式）；火花工坊「今日 AI 免费额度」；AtomCode 仓库 PR #1151",
+    "summary": "据 AtomCode 官方文档：AtomCode 是 AtomGit（CSDN / 开放原子开源基金会旗下代码托管平台）的终端编程 Agent。在 AtomCode 里执行 /login 完成 AtomGit 授权，就会自动申领 CodingPlan 免费额度并配好模型。三档：Lite 30 天，每日限量 1000 人；Pro 体验版 7 天，每日 10:00 限量 100 人，额外含 GLM-5.2；Pro 30 天，需在活动仓库合入 PR。调用额度按 5 小时滚动窗口计。文档列的 Lite 模型是 deepseek-v4-flash 和 Qwen3-VL-8B，但仓库 PR #1151 指出这份列表已过时，实际模型以 /status 为准。只能在 AtomCode 客户端里用。",
+    "free_terms": "入口：安装 AtomCode 后在 TUI 执行 /login（或命令行 atomcode login），浏览器完成 AtomGit 授权后自动申领；Lite 30 天，每日限量 1000 人；Pro 体验版 7 天，每日 10:00 起限量 100 人；Pro 30 天需在活动仓库合入 PR；额度按 5 小时滚动窗口计；需 AtomGit 账号；只能在 AtomCode 客户端内使用；名额每天领完即止，atomcode status 可查用量和到期时间。",
+    "claim_steps": [
+      "安装 AtomCode 并启动 atomcode",
+      "执行 /login（或 atomcode login），在浏览器里完成 AtomGit 授权",
+      "系统自动申领当前能领的最高档 CodingPlan 并写好模型配置",
+      "执行 /status 查看额度和到期时间"
+    ],
+    "claim_guide": [
+      {
+        "step": "安装并启动 AtomCode",
+        "detail": "按官方文档安装 AtomCode，首次启动会弹出 3 步向导，第 3 步选「用 AtomGit CodingPlan 一键接入」。",
+        "url": "https://atomcode.atomgit.com/docs/zh/login.html"
+      },
+      {
+        "step": "执行 /login",
+        "detail": "已在 TUI 里时随时执行 /login；脚本或服务器场景用 atomcode login。浏览器会打开 AtomGit 授权页，点允许。"
+      },
+      {
+        "step": "自动申领",
+        "detail": "授权后系统自动发放当前能领的最高档：Lite 30 天（每日限量 1000 人）、Pro 体验版 7 天（每日 10:00 限量 100 人）。Pro 30 天需在活动仓库合入 PR。",
+        "note": "名额每天领完即止，想领 Pro 体验版要赶北京时间 10:00"
+      },
+      {
+        "step": "确认模型",
+        "detail": "文档列的 Lite 模型是 deepseek-v4-flash 和 Qwen3-VL-8B，但仓库 PR 指出这份列表已过时，实际模型以 /status 和 /model 显示为准。",
+        "url": "https://gitcode.com/atomgit_atomcode/atomcode/pull/1151"
+      },
+      {
+        "step": "查看用量",
+        "detail": "atomcode status（或 TUI 内 /status）可查看 CodingPlan 用量和到期时间；额度按 5 小时滚动窗口计。"
+      }
+    ]
   }
 ]
