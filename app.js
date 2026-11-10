@@ -1,6 +1,497 @@
-/* free-models — simple list of active free offers */
-(function () {
+/* free-models — platforms on the left, offer details on the right */
+(function (root) {
   "use strict";
+
+  var SOURCE_HOSTS = {
+    "x.com": 1,
+    "twitter.com": 1,
+    "mobile.twitter.com": 1,
+    "v2ex.com": 1,
+    "linux.do": 1,
+    "reddit.com": 1,
+    "old.reddit.com": 1,
+    "news.ycombinator.com": 1,
+    "t.me": 1,
+    "weibo.com": 1,
+    "mp.weixin.qq.com": 1,
+  };
+
+  var HOST_LABELS = {
+    "openrouter.ai": "OpenRouter",
+    "groq.com": "Groq",
+    "console.groq.com": "Groq",
+    "api.groq.com": "Groq",
+    "cohere.com": "Cohere",
+    "cohere.ai": "Cohere",
+    "dashboard.cohere.com": "Cohere",
+    "docs.cohere.com": "Cohere",
+    "aistudio.google.com": "Google AI Studio",
+    "ai.google.dev": "Google AI Studio",
+    "makersuite.google.com": "Google AI Studio",
+    "chatgpt.com": "OpenAI",
+    "openai.com": "OpenAI",
+    "platform.openai.com": "OpenAI",
+    "developers.openai.com": "OpenAI",
+    "help.openai.com": "OpenAI",
+    "claude.com": "Anthropic",
+    "claude.ai": "Anthropic",
+    "clau.de": "Anthropic",
+    "console.anthropic.com": "Anthropic",
+    "anthropic.com": "Anthropic",
+    "support.claude.com": "Anthropic",
+    "docs.anthropic.com": "Anthropic",
+    "huggingface.co": "Hugging Face",
+    "hf.co": "Hugging Face",
+    "chat.hf.co": "Hugging Face",
+    "github.com": "GitHub",
+    "github.io": "GitHub",
+    "opencode.ai": "OpenCode",
+    "vercel.com": "Vercel",
+    "build.nvidia.com": "NVIDIA NIM",
+    "developer.nvidia.com": "NVIDIA",
+    "api.nvidia.com": "NVIDIA NIM",
+    "bailian.console.aliyun.com": "阿里云百炼",
+    "modelstudio.console.alibabacloud.com": "阿里云百炼",
+    "help.aliyun.com": "阿里云",
+    "alibabacloud.com": "阿里云",
+    "platform.deepseek.com": "DeepSeek",
+    "api-docs.deepseek.com": "DeepSeek",
+    "deepseek.com": "DeepSeek",
+    "platform.stepfun.com": "阶跃星辰",
+    "platform.minimax.io": "MiniMax",
+    "agent.minimax.io": "MiniMax",
+    "minimax.io": "MiniMax",
+    "platform.sensenova.cn": "商汤日日新",
+    "sensetime.com": "商汤",
+    "cloud.tencent.com": "腾讯云",
+    "orcaterm.cloud.tencent.com": "腾讯云",
+    "console.volcengine.com": "火山方舟",
+    "volcengine.com": "火山方舟",
+    "zenmux.ai": "ZenMux",
+    "platform.flock.io": "FLock",
+    "docs.flock.io": "FLock",
+    "flock.io": "FLock",
+    "fish.audio": "Fish Audio",
+    "docs.fish.audio": "Fish Audio",
+    "x.ai": "xAI",
+    "console.x.ai": "xAI",
+    "grok.com": "xAI",
+    "aws.amazon.com": "Amazon Web Services",
+    "console.aws.amazon.com": "Amazon Web Services",
+    "kiro.dev": "Kiro",
+    "app.kiro.dev": "Kiro",
+    "kiroween.devpost.com": "Kiro",
+    "cline.bot": "Cline",
+    "app.cline.bot": "Cline",
+    "docs.cline.bot": "Cline",
+    "portal.nousresearch.com": "Nous Portal",
+    "nousresearch.com": "Nous",
+    "hermes-agent.nousresearch.com": "Nous",
+    "platform.iteracompute.com": "IteraCompute",
+    "iteracompute.com": "IteraCompute",
+    "apinex.bond": "APInex",
+    "platform.experientiallabs.ai": "Experiential Labs",
+    "experientiallabs.ai": "Experiential Labs",
+    "commandcode.ai": "Command Code",
+    "you.com": "You.com",
+    "platform.ifm.ai": "IFM",
+    "docs.ifm.ai": "IFM",
+    "api.ifm.ai": "IFM",
+    "ifm.ai": "IFM",
+    "docs.bigmodel.cn": "智谱",
+    "open.bigmodel.cn": "智谱",
+    "bigmodel.cn": "智谱",
+    "autoclaw.zhipuai.cn": "智谱",
+    "zhipuai.cn": "智谱",
+    "cloud.siliconflow.cn": "硅基流动",
+    "siliconflow.cn": "硅基流动",
+    "docs.siliconflow.cn": "硅基流动",
+    "mimo.mi.com": "小米 MiMo",
+    "portal.qiniu.com": "七牛云",
+    "qiniu.com": "七牛云",
+    "platform.agentscope.io": "AgentScope",
+    "agentscope.io": "AgentScope",
+    "platform.yeta.ai": "Yeta",
+    "yeta.ai": "Yeta",
+    "platform.mosi.cn": "Mosi",
+    "mosi.cn": "Mosi",
+    "workbuddy.cn": "WorkBuddy",
+    "workbuddy.ai": "WorkBuddy",
+    "gmicloud.ai": "GMI Cloud",
+    "console.gmicloud.ai": "GMI Cloud",
+    "platform.inworld.ai": "Inworld",
+    "inworld.ai": "Inworld",
+    "platform.inceptionlabs.ai": "Inception Labs",
+    "inceptionlabs.ai": "Inception Labs",
+    "chat.inceptionlabs.ai": "Inception Labs",
+    "heygen.com": "HeyGen",
+    "developers.heygen.com": "HeyGen",
+    "docs.heygen.com": "HeyGen",
+    "app.heygen.com": "HeyGen",
+    "bolt.new": "Bolt",
+    "docker.com": "Docker",
+    "runware.ai": "Runware",
+    "my.runware.ai": "Runware",
+    "liquid.ai": "Liquid AI",
+    "console.liquid.ai": "Liquid AI",
+    "docs.liquid.ai": "Liquid AI",
+    "discovery.intern-ai.org.cn": "书生 Intern",
+    "intern-ai.org.cn": "书生 Intern",
+    "runanywhere.ai": "RunAnywhere",
+    "console.runanywhere.ai": "RunAnywhere",
+    "docs.runanywhere.ai": "RunAnywhere",
+    "prismml.com": "PrismML",
+    "docs.prismml.com": "PrismML",
+    "mangoboost.io": "MangoBoost",
+    "inference.mangoboost.io": "MangoBoost",
+    "ollama.com": "Ollama",
+    "perchai.app": "Perch AI",
+    "orcarouter.ai": "OrcaRouter",
+    "antigravity.google": "Google Antigravity",
+    "gemini.google.com": "Gemini",
+    "gemini.google": "Gemini",
+    "ai.google": "Google",
+    "one.google.com": "Google",
+    "blog.google": "Google",
+    "research.google": "Google",
+    "developers.google.com": "Google",
+    "me.developers.google.com": "Google",
+    "developers.googleblog.com": "Google",
+    "developers.cloudflare.com": "Cloudflare Workers AI",
+    "blog.cloudflare.com": "Cloudflare",
+    "cloudflare.com": "Cloudflare",
+    "cloud.cerebras.ai": "Cerebras",
+    "cerebras.ai": "Cerebras",
+    "together.ai": "Together AI",
+    "api.together.ai": "Together AI",
+    "fireworks.ai": "Fireworks",
+    "app.fireworks.ai": "Fireworks",
+    "replicate.com": "Replicate",
+    "fal.ai": "fal",
+    "mistral.ai": "Mistral",
+    "docs.mistral.ai": "Mistral",
+    "console.mistral.ai": "Mistral",
+    "studio.ai21.com": "AI21 Studio",
+    "ai21.com": "AI21",
+    "elevenlabs.io": "ElevenLabs",
+    "join.elevenlabs.io": "ElevenLabs",
+    "deepgram.com": "Deepgram",
+    "console.deepgram.com": "Deepgram",
+    "developers.deepgram.com": "Deepgram",
+    "modelscope.cn": "ModelScope",
+    "modelscope.ai": "ModelScope",
+    "zcode.z.ai": "ZCode",
+    "qoder.com": "Qoder",
+    "docs.qoder.com": "Qoder",
+    "docs.qoder.cn": "Qoder",
+    "qoder.cn": "Qoder",
+    "freebuff.com": "Freebuff",
+    "freepi.ai": "free-pi",
+    "kimi.com": "Kimi",
+    "moonshot.cn": "Kimi",
+    "marketplace.visualstudio.com": "VS Code",
+    "cursor.com": "Cursor",
+    "zed.dev": "Zed",
+    "devin.ai": "Devin",
+    "docs.devin.ai": "Devin",
+    "exa.ai": "Exa",
+    "dashboard.exa.ai": "Exa",
+    "tavily.com": "Tavily",
+    "app.tavily.com": "Tavily",
+    "docs.tavily.com": "Tavily",
+    "firecrawl.dev": "Firecrawl",
+    "docs.firecrawl.dev": "Firecrawl",
+    "jina.ai": "Jina",
+    "voyageai.com": "Voyage AI",
+    "dashboard.voyageai.com": "Voyage AI",
+    "docs.voyageai.com": "Voyage AI",
+    "modal.com": "Modal",
+    "nebius.com": "Nebius",
+    "tokenfactory.nebius.com": "Nebius",
+    "dev.nebius.com": "Nebius",
+    "sambanova.ai": "SambaNova",
+    "cloud.sambanova.ai": "SambaNova",
+    "docs.sambanova.ai": "SambaNova",
+    "novita.ai": "Novita",
+    "baseten.co": "Baseten",
+    "app.baseten.co": "Baseten",
+    "digitalocean.com": "DigitalOcean",
+    "scaleway.com": "Scaleway",
+    "console.scaleway.com": "Scaleway",
+    "ovhcloud.com": "OVHcloud",
+    "endpoints.ai.cloud.ovh.net": "OVHcloud",
+    "cloud.google.com": "Google Cloud",
+    "console.cloud.google.com": "Google Cloud",
+    "colab.research.google.com": "Google Colab",
+    "aistudio.baidu.com": "百度 AI Studio",
+    "cloud.baidu.cn": "百度智能云",
+    "ai.baidu.com": "百度 AI",
+    "baidu.com": "百度",
+    "xfyun.cn": "讯飞",
+    "console.xfyun.cn": "讯飞",
+    "maas.xfyun.cn": "讯飞",
+    "xinghuo.xfyun.cn": "讯飞星火",
+    "cloud.tencent.com.cn": "腾讯云",
+    "antigravity.google.com": "Google Antigravity",
+    "canva.com": "Canva",
+    "community.canva.dev": "Canva",
+    "perplexity.ai": "Perplexity",
+    "x.com": "X",
+    "twitter.com": "X",
+    "v2ex.com": "V2EX",
+    "linux.do": "Linux.do",
+    "duckduckgo.com": "DuckDuckGo",
+    "duck.ai": "DuckDuckGo",
+    "npmjs.com": "npm",
+    "sailresearch.com": "Sail Research",
+    "app.sailresearch.com": "Sail Research",
+    "docs.sailresearch.com": "Sail Research",
+    "optracloud.com": "OptraCloud",
+    "api.optracloud.com": "OptraCloud",
+    "freeinference.org": "FreeInference",
+    "doc.freeinference.org": "FreeInference",
+    "velork.com": "Velork",
+    "nodecode.ai": "Nodecode",
+    "directionallylocal.com": "Directionally Local",
+    "dl.new": "Directionally Local",
+    "traycer.ai": "Traycer",
+    "unorouter.com": "UnoRouter",
+    "larprouter.com": "Larprouter",
+    "blazerail.com": "BlazeRail",
+    "tokenharbor.ai": "TokenHarbor",
+    "infron.ai": "Infron",
+    "beatapi.io": "BeatAPI",
+    "docs.beatapi.io": "BeatAPI",
+    "scnet.cn": "SCNet",
+    "oxionai.com": "Oxion",
+    "deepai.org": "DeepAI",
+    "codecraftapi.com": "CodeCraft",
+    "viorant.ai": "Viorant",
+    "docs.viorant.ai": "Viorant",
+    "ppq.ai": "PPQ",
+    "dphn.ai": "DPHN",
+    "app.dphn.ai": "DPHN",
+    "trustedrouter.com": "TrustedRouter",
+    "batchrate.ai": "BatchRate",
+    "tuqu.ai": "TUQU",
+    "assemblyai.com": "AssemblyAI",
+    "requesty.ai": "Requesty",
+    "maximoai.co": "Maximo",
+    "todayai.cn": "TodayAI",
+    "xiaohuanxiong.com": "小浣熊",
+    "runinfra.ai": "RunInfra",
+    "sandbase.ai": "Sandbase",
+    "pojia.ai": "PoJia",
+    "infini-ai.com": "无问芯穹",
+    "docs.infini-ai.com": "无问芯穹",
+    "cloud.infini-ai.com": "无问芯穹",
+    "decuff.ai": "Decuff",
+    "specstream.ai": "SpecStream",
+    "simular.ai": "Simular",
+    "box.simular.ai": "Simular",
+    "context.dev": "Context.dev",
+    "antseed.com": "Antseed",
+    "inferx.net": "InferX",
+    "model.inferx.net": "InferX",
+    "freemilk.ai": "FreeMilk",
+    "llmtr.com": "LLMTR",
+    "antdigital.com": "蚂蚁数科",
+    "maas.antdigital.com": "蚂蚁数科",
+    "unisound.com": "云知声",
+    "maas.unisound.com": "云知声",
+    "ant-ling.com": "Ant Ling",
+    "developer.ant-ling.com": "Ant Ling",
+    "chat.ant-ling.com": "Ant Ling",
+    "nomask.ai": "Nomask",
+    "atomicagent.io": "Atomic Agent",
+    "kilo.ai": "Kilo",
+    "viggle.ai": "Viggle",
+    "portal.viggle.ai": "Viggle",
+    "docs.viggle.ai": "Viggle",
+    "longcat.ai": "LongCat",
+    "trae.cn": "TRAE",
+    "docs.trae.cn": "TRAE",
+    "forum.trae.cn": "TRAE",
+    "kojo.sh": "Kojo",
+    "edenai.co": "Eden AI",
+    "app.edenai.run": "Eden AI",
+    "edenai.run": "Eden AI",
+    "speechmatics.com": "Speechmatics",
+    "docs.speechmatics.com": "Speechmatics",
+    "portal.speechmatics.com": "Speechmatics",
+    "qdrant.tech": "Qdrant",
+    "cloud.qdrant.io": "Qdrant",
+    "coderabbit.ai": "CodeRabbit",
+    "app.coderabbit.ai": "CodeRabbit",
+    "docs.coderabbit.ai": "CodeRabbit",
+    "nscale.com": "Nscale",
+    "console.nscale.com": "Nscale",
+    "docs.nscale.com": "Nscale",
+    "thundercompute.com": "ThunderCompute",
+    "console.thundercompute.com": "ThunderCompute",
+    "giotto.ai": "Giotto",
+    "cloud.giotto.ai": "Giotto",
+    "articul8.ai": "Articul8",
+    "app.articul8.ai": "Articul8",
+    "docs.articul8.ai": "Articul8",
+    "whatstoken.ai": "WhatsToken",
+    "token360.ai": "Token360",
+    "anyrouter.dev": "AnyRouter",
+    "constellationgate.ai": "Constellation Gate",
+    "app.constellationgate.ai": "Constellation Gate",
+    "modulate.ai": "Modulate",
+    "videogen.io": "Videogen",
+    "eigent.ai": "Eigent",
+    "swarms.ai": "Swarms",
+    "praex.ai": "Praex",
+    "sakana.ai": "Sakana",
+    "chat.sakana.ai": "Sakana",
+    "console.sakana.ai": "Sakana",
+    "arena.ai": "Arena",
+    "bfl.ai": "Black Forest Labs",
+    "gradium.ai": "Gradium",
+    "exaone.ai": "EXAONE",
+    "docs.exaone.ai": "EXAONE",
+    "upstage.ai": "Upstage",
+    "console.upstage.ai": "Upstage",
+    "nopaywall.io": "Nopaywall",
+    "hal-x.ai": "HAL-X",
+    "api.hal-x.ai": "HAL-X",
+    "empero.org": "Empero",
+    "free.empero.org": "Empero",
+    "river.ai": "River",
+    "console.river.ai": "River",
+    "docs.river.ai": "River",
+    "munito.ai": "Munito",
+    "console.munito.ai": "Munito",
+    "docs.munito.ai": "Munito",
+    "sarashina.ai": "Sarashina",
+    "docs.sarashina.ai": "Sarashina",
+    "odyssey.systems": "Odyssey",
+    "experience.odyssey.systems": "Odyssey",
+    "developer.odyssey.ml": "Odyssey",
+    "meta.ai": "Meta",
+    "dev.meta.ai": "Meta",
+    "research.meta.ai": "Meta",
+    "developer.amd.com.cn": "AMD",
+    "amd-aim.github.io": "AMD",
+    "jetbrains.com": "JetBrains",
+    "blog.jetbrains.com": "JetBrains",
+    "apple.com": "Apple",
+    "developer.apple.com": "Apple",
+    "apps.apple.com": "App Store",
+    "opera.com": "Opera",
+    "next.opera.com": "Opera",
+    "blogs.opera.com": "Opera",
+    "databricks.com": "Databricks",
+    "docs.databricks.com": "Databricks",
+    "huaweicloud.com": "华为云",
+    "support.huaweicloud.com": "华为云",
+    "activity.huaweicloud.com": "华为云",
+    "bilibili.com": "哔哩哔哩",
+    "index-translate.bilibili.com": "哔哩哔哩",
+    "dify.ai": "Dify",
+    "akashml.com": "Akash",
+    "playground.akashml.com": "Akash",
+    "paddleocr.com": "PaddleOCR",
+    "paddleocr.ai": "PaddleOCR",
+    "indicstack.ai": "IndicStack",
+    "console.indicstack.ai": "IndicStack",
+    "krafton.ai": "Krafton",
+    "raon-mini.krafton.ai": "Krafton",
+    "raon-console.krafton.ai": "Krafton",
+    "tinyfish.ai": "TinyFish",
+    "agent.tinyfish.ai": "TinyFish",
+    "coralbricks.ai": "Coral Bricks",
+    "tabbit.ai": "Tabbit",
+    "monkeycode-ai.com": "MonkeyCode",
+    "scaledown.ai": "ScaleDown",
+    "docs.scaledown.ai": "ScaleDown",
+    "lightvela.com": "LightVela",
+    "artexllm.com": "Artex",
+    "subq.ai": "SubQ",
+    "freellmapi.co": "FreeLLM",
+    "cleanapis.com": "CleanAPIs",
+    "railway.com": "Railway",
+    "mlh.com": "MLH",
+    "events.mlh.com": "MLH",
+    "coursera.org": "Coursera",
+    "arxiv.org": "arXiv",
+    "forms.gle": "Google Forms",
+    "chromewebstore.google.com": "Chrome 网上应用店",
+    "pi.dev": "Pi",
+    "jio.com": "Jio",
+    "verizon.com": "Verizon",
+    "codebuddy.cn": "CodeBuddy",
+    "agnes-ai.com": "Agnes",
+    "platform.agnes-ai.com": "Agnes",
+    "wiki.agnes-ai.com": "Agnes",
+    "0g.ai": "0G",
+    "pc.0g.ai": "0G",
+    "tether.io": "Tether",
+    "qvac.tether.io": "QVAC",
+    "zellige.ai": "Zellige",
+    "darkbloom.dev": "Darkbloom",
+    "console.darkbloom.dev": "Darkbloom",
+    "nace.ai": "Nace",
+    "console.nace.ai": "Nace",
+    "raphael.app": "Raphael",
+    "thewavecode.com": "Wave Code",
+    "z.ai": "Z.ai",
+    "autoclaw.z.ai": "Z.ai",
+    "fikraapi.co.ke": "Fikra",
+    "udgamlabs.com": "UDGAM",
+    "vgenv.com": "VGen",
+    "somark.ai": "Somark",
+    "free-oxr.somark.ai": "Somark",
+    "deepworks.cn": "DeepWorks",
+    "deepexi.com": "DeepWorks",
+    "deepworks.deepexi.com": "DeepWorks",
+    "vllm-sr.ai": "vLLM",
+    "decision.vllm-sr.ai": "vLLM",
+    "omnirush.ai": "OmniRush",
+    "instabox.sh": "Instabox",
+    "gonkarouter.io": "GonkaRouter",
+    "xgoose.org": "xGoose",
+    "systalyze.com": "Systalyze",
+    "console.systalyze.com": "Systalyze",
+    "speedai.com": "SpeedAI",
+    "codar.speedai.com": "SpeedAI",
+    "hi3d.ai": "Hi3D",
+    "deapi.ai": "deAPI",
+    "app.deapi.ai": "deAPI",
+    "cnb.cool": "CNB",
+    "ccode.si": "CCode",
+    "starkrelay.bond": "StarkRelay",
+    "getonespace.com": "OneSpace",
+    "pages.edgeone.ai": "EdgeOne",
+    "edgeone.ai": "EdgeOne",
+    "makers.edgeone.link": "EdgeOne",
+    "llm7.io": "LLM7",
+    "dash.llm7.io": "LLM7",
+    "bynara.id": "Bynara",
+    "router.bynara.id": "Bynara",
+    "xkiro.com": "xKiro",
+    "cookstudio.ai": "CookStudio",
+    "app.cookstudio.ai": "CookStudio",
+    "moonmath.ai": "MoonMath",
+    "zro.moonmath.ai": "MoonMath",
+    "alysiscode.com": "Alysis",
+    "models.dev": "Models.dev",
+    "sgl-project.github.io": "SGLang",
+    "esa.int": "ESA",
+    "eve.philab.esa.int": "ESA",
+    "cudos.org": "CUDOS",
+    "asicloud.cudos.org": "CUDOS",
+    "singularitycompute.com": "Singularity Compute",
+    "devpost.com": "Devpost",
+    "fx.sh": "fx",
+    "treg.to": "treg",
+    "vids.new": "Google Vids",
+    "cloudbase.net": "CloudBase",
+    "docs.cloudbase.net": "CloudBase",
+    "mac.install.guide": "mac.install.guide",
+  };
 
   function asList(v) {
     return Array.isArray(v) ? v : [];
@@ -52,6 +543,37 @@
     return t.slice(0, max).replace(/[\s,，。；;、]+$/g, "") + "\u2026";
   }
 
+  function norm(s) {
+    return String(s == null ? "" : s).toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function cmpName(a, b) {
+    var as = String(a || "");
+    var bs = String(b || "");
+    try {
+      return as.localeCompare(bs, "zh-CN", { sensitivity: "base", numeric: true });
+    } catch (e) {
+      if (as < bs) return -1;
+      if (as > bs) return 1;
+      return 0;
+    }
+  }
+
+  function titleOf(item) {
+    return String(item.title || item.name || item.model || "未命名");
+  }
+
+  function deadlineOf(item) {
+    return item.deadline || item.expires_at || item.expire_at || item.expires || "";
+  }
+
+  function deadlineMs(item) {
+    var d = deadlineOf(item);
+    if (!d) return null;
+    var t = Date.parse(String(d));
+    return Number.isNaN(t) ? null : t;
+  }
+
   function autoClaimView(item) {
     var ac, status, note, at;
     ac = item && item.auto_claim;
@@ -65,54 +587,129 @@
     return null;
   }
 
-  function renderAutoClaim(item) {
-    var view, badge, note, visible;
-    view = autoClaimView(item);
-    if (!view) return { badge: "", note: "" };
-    badge = '<span class="auto-claim ' + view.kind + '">' + escapeHtml(view.label) + "</span>";
-    note = "";
-    if (view.note || view.at) {
-      note = '<p class="auto-claim-note">';
-      if (view.note) {
-        visible = clipText(view.note, 42);
-        note +=
-          '<span class="auto-claim-text" title="' +
-          escapeHtml(view.note) +
-          '">' +
-          escapeHtml(visible) +
-          "</span>";
+  function summaryStatus(offers) {
+    var i, view, hasUser, hasFail;
+    hasUser = false;
+    hasFail = false;
+    for (i = 0; i < offers.length; i++) {
+      view = autoClaimView(offers[i]);
+      if (!view) continue;
+      if (view.kind === "success") return "success";
+      if (view.kind === "needs-user") hasUser = true;
+      else if (view.kind === "failed") hasFail = true;
+    }
+    if (hasUser) return "needs-user";
+    if (hasFail) return "failed";
+    return "";
+  }
+
+  function statusLabel(status) {
+    if (status === "success") return "有已自动领取";
+    if (status === "needs-user") return "有需要本人操作";
+    if (status === "failed") return "有自动申请失败";
+    return "";
+  }
+
+  function hostnameOf(url) {
+    var m = String(url || "").trim().match(/^https?:\/\/([^\/?#]+)/i);
+    if (!m) return "";
+    return m[1].replace(/:\d+$/, "").replace(/^www\./i, "").toLowerCase();
+  }
+
+  function prettifyToken(sld) {
+    var special = {
+      ai: "AI",
+      api: "API",
+      llm: "LLM",
+      openai: "OpenAI",
+      openrouter: "OpenRouter",
+      huggingface: "Hugging Face",
+      deepseek: "DeepSeek",
+      chatgpt: "ChatGPT",
+      github: "GitHub",
+      nvidia: "NVIDIA",
+      aws: "AWS",
+    };
+    var bits, i, w, out;
+    if (!sld) return "";
+    if (special[sld]) return special[sld];
+    bits = String(sld).split(/[-_]+/);
+    out = [];
+    for (i = 0; i < bits.length; i++) {
+      w = bits[i];
+      if (!w) continue;
+      if (special[w]) out.push(special[w]);
+      else if (w.length <= 2) out.push(w.toUpperCase());
+      else out.push(w.charAt(0).toUpperCase() + w.slice(1));
+    }
+    return out.join(" ");
+  }
+
+  function platformFromUrl(url) {
+    var host, parts, i, candidate, sld, tld;
+    host = hostnameOf(url);
+    if (!host) return "";
+    if (host === "vercel.com" && /ai-gateway/i.test(String(url))) return "Vercel AI Gateway";
+    parts = host.split(".");
+    for (i = 0; i < parts.length; i++) {
+      candidate = parts.slice(i).join(".");
+      if (HOST_LABELS[candidate]) return HOST_LABELS[candidate];
+    }
+    sld = parts.length >= 2 ? parts[parts.length - 2] : parts[0];
+    tld = parts[parts.length - 1];
+    if ((sld === "co" || sld === "com" || sld === "org" || sld === "net" || sld === "gov" || sld === "ac") && parts.length >= 3) {
+      sld = parts[parts.length - 3];
+    }
+    if (tld && HOST_LABELS[sld + "." + tld]) return HOST_LABELS[sld + "." + tld];
+    if (HOST_LABELS[sld]) return HOST_LABELS[sld];
+    return prettifyToken(sld);
+  }
+
+  function collectUrls(item) {
+    var urls = [];
+    function pushList(list) {
+      var i, e, u;
+      list = asList(list);
+      for (i = 0; i < list.length; i++) {
+        e = list[i];
+        if (!e || typeof e !== "object") continue;
+        u = e.action_url || e.url;
+        if (u) urls.push(String(u));
       }
-      if (view.at) note += '<span class="auto-claim-at">' + escapeHtml(view.at) + "</span>";
-      note += "</p>";
     }
-    return { badge: badge, note: note };
+    pushList(item.providers);
+    if (item.official_url) urls.push(String(item.official_url));
+    if (item.terms_url) urls.push(String(item.terms_url));
+    pushList(item.models);
+    pushList(item.agents);
+    if (item.docs_url) urls.push(String(item.docs_url));
+    if (item.url || item.link || item.source_url) urls.push(String(item.url || item.link || item.source_url));
+    return urls;
   }
 
-  function sortKey(item) {
-    var c = item.collected_at || item.collectedAt || item.created_at || item.scraped_at;
-    var t = c ? Date.parse(c) : NaN;
-    return Number.isNaN(t) ? 0 : t;
-  }
-
-  function fmtDeadlineMD(iso) {
-    var t = Date.parse(iso);
-    if (Number.isNaN(t)) return "";
-    try {
-      return new Intl.DateTimeFormat("en-US", {
-        timeZone: "Asia/Shanghai",
-        month: "numeric",
-        day: "numeric",
-      }).format(t);
-    } catch (e) {
-      var d = new Date(t);
-      return d.getMonth() + 1 + "/" + d.getDate();
+  function platformOf(item) {
+    var named, urls, i, host, label, fallback;
+    if (!item || typeof item !== "object") return "其他";
+    named = item.platform != null ? String(item.platform).replace(/\s+/g, " ").trim() : "";
+    if (named) return named;
+    urls = collectUrls(item);
+    fallback = "";
+    for (i = 0; i < urls.length; i++) {
+      host = hostnameOf(urls[i]);
+      label = platformFromUrl(urls[i]);
+      if (!label) continue;
+      if (!fallback) fallback = label;
+      if (host && !SOURCE_HOSTS[host]) return label;
     }
+    return fallback || "其他";
   }
 
-  function daysUntil(iso, now) {
-    var t = Date.parse(iso);
-    if (Number.isNaN(t)) return Infinity;
-    return Math.ceil((t - now) / 86400000);
+  function slugify(name) {
+    var s = String(name == null ? "" : name).trim().toLowerCase();
+    s = s.replace(/\s+/g, "-");
+    s = s.replace(/[^a-z0-9\u3400-\u9fff-]+/g, "-");
+    s = s.replace(/-+/g, "-").replace(/^-|-$/g, "");
+    return s || "platform";
   }
 
   function claimUrl(item) {
@@ -135,120 +732,638 @@
     return String(item.url || item.link || item.source_url || "");
   }
 
-  function claimStepsOf(item) {
-    // claim_steps wins so a step may contain ； or ;. Otherwise split
-    // free_terms (then summary) on those semicolons or newlines.
-    var i, step, out, raw, parts, part;
-    out = [];
-    if (Array.isArray(item.claim_steps)) {
-      for (i = 0; i < item.claim_steps.length; i++) {
-        step = item.claim_steps[i];
-        step = String(step == null ? "" : step).replace(/\s+/g, " ").trim();
-        if (step) out.push(step);
-      }
-      if (out.length) return out;
+  function goUrl(item) {
+    var direct, host, claim;
+    direct = String(item.url || item.link || item.source_url || "");
+    host = hostnameOf(direct);
+    if (direct && host && !SOURCE_HOSTS[host]) return direct;
+    claim = claimUrl(item);
+    return claim || direct;
+  }
+
+  function safeUrl(u) {
+    var s = redactSecrets(String(u || "")).trim();
+    if (!/^https?:\/\//i.test(s)) return "";
+    if (/[\s<>"']/.test(s)) return "";
+    if (/javascript:/i.test(s)) return "";
+    return s;
+  }
+
+  function guideFromValue(entry) {
+    var step, detail, note, url;
+    if (entry == null) return null;
+    if (typeof entry === "string") {
+      detail = redactSecrets(entry).replace(/\s+/g, " ").trim();
+      if (!detail) return null;
+      return { step: "", detail: detail, url: "", note: "" };
     }
-    raw = item.free_terms || item.summary || item.desc || item.description || "";
-    parts = String(raw).split(/[；;\r\n]+/);
+    if (typeof entry !== "object" || Array.isArray(entry)) return null;
+    step = entry.step == null ? "" : redactSecrets(String(entry.step)).replace(/\s+/g, " ").trim();
+    detail = entry.detail == null ? "" : redactSecrets(String(entry.detail)).trim();
+    note = entry.note == null ? "" : redactSecrets(String(entry.note)).replace(/\s+/g, " ").trim();
+    url = entry.url == null ? "" : redactSecrets(String(entry.url)).trim();
+    if (!step && !detail && !note && !url) return null;
+    return { step: step, detail: detail, url: url, note: note };
+  }
+
+  function splitStepString(raw) {
+    var text, parts, i, part, out;
+    text = String(raw == null ? "" : raw).trim();
+    if (!text) return [];
+    parts = text.split(/\r?\n+/);
+    if (parts.length === 1) parts = text.split(/[；;]+/);
+    out = [];
     for (i = 0; i < parts.length; i++) {
       part = parts[i].replace(/\s+/g, " ").trim();
+      part = part.replace(/^(?:如何领取[:：]\s*)/, "");
+      part = part.replace(/^\d+\s*[\.、\)]\s*/, "");
       if (part) out.push(part);
     }
     return out;
   }
 
-  function renderSteps(steps) {
-    var i, html;
-    if (!steps.length) return "";
-    html = '<ul class="claim-steps" aria-label="如何领取">';
-    for (i = 0; i < steps.length; i++) {
-      html += "<li>" + escapeHtml(steps[i]) + "</li>";
+  function claimGuideOf(item) {
+    var steps, i, step, raw, parts;
+    steps = [];
+    if (!item || typeof item !== "object") return steps;
+    if (Array.isArray(item.claim_guide)) {
+      for (i = 0; i < item.claim_guide.length; i++) {
+        step = guideFromValue(item.claim_guide[i]);
+        if (step) steps.push(step);
+      }
+      if (steps.length) return steps;
     }
-    return html + "</ul>";
+    raw = item.claim_steps;
+    if (Array.isArray(raw)) {
+      for (i = 0; i < raw.length; i++) {
+        if (raw[i] && typeof raw[i] === "object") {
+          step = guideFromValue(raw[i]);
+          if (step) steps.push(step);
+        } else {
+          parts = String(raw[i] == null ? "" : raw[i]).replace(/\s+/g, " ").trim();
+          if (parts) steps.push({ step: "", detail: redactSecrets(parts), url: "", note: "" });
+        }
+      }
+      if (steps.length) return steps;
+    } else if (typeof raw === "string" && raw.trim()) {
+      parts = splitStepString(raw);
+      for (i = 0; i < parts.length; i++) {
+        steps.push({ step: "", detail: redactSecrets(parts[i]), url: "", note: "" });
+      }
+      if (steps.length) return steps;
+    }
+    raw = item.free_terms || item.summary || item.desc || item.description || "";
+    parts = splitStepString(String(raw));
+    if (parts.length >= 2) {
+      for (i = 0; i < parts.length; i++) steps.push({ step: "", detail: redactSecrets(parts[i]), url: "", note: "" });
+      return steps;
+    }
+    if (parts.length === 1 && /如何领取|→|->/.test(String(raw))) {
+      steps.push({ step: "如何领取", detail: redactSecrets(parts[0]), url: "", note: "" });
+    }
+    return steps;
   }
 
-  function renderCard(item, now) {
-    var title = String(item.title || item.name || item.model || "未命名");
-    var steps = claimStepsOf(item);
-    var deadline = item.deadline || item.expires_at || item.expire_at || item.expires || null;
-    var href = claimUrl(item);
-    var source = String(item.url || item.link || item.source_url || "");
-
-    var deadlineHtml = "";
-    if (deadline) {
-      var md = fmtDeadlineMD(String(deadline));
-      if (md) {
-        var soon = daysUntil(String(deadline), now) <= 2;
-        deadlineHtml =
-          '<p class="card-deadline"><span class="deadline' +
-          (soon ? " soon" : "") +
-          '">截止 ' +
-          escapeHtml(md) +
-          "</span></p>";
+  function haystack(item) {
+    var bits, guide, i, lists, n, e, list;
+    bits = [
+      titleOf(item),
+      item.model,
+      item.product,
+      item.summary,
+      item.free_terms,
+      item.desc,
+      item.description,
+      item.platform,
+    ];
+    guide = claimGuideOf(item);
+    for (i = 0; i < guide.length; i++) {
+      bits.push(guide[i].step, guide[i].detail, guide[i].note);
+    }
+    lists = [item.providers, item.agents, item.models];
+    for (n = 0; n < lists.length; n++) {
+      list = asList(lists[n]);
+      for (i = 0; i < list.length; i++) {
+        e = list[i];
+        if (e && typeof e === "object" && e.name) bits.push(e.name);
       }
     }
+    return norm(redactSecrets(bits.filter(function (x) { return x != null && String(x).trim() !== ""; }).join("\n")));
+  }
 
-    var stepsHtml = renderSteps(steps);
-    var ac = renderAutoClaim(item);
+  function activeItems(items, now) {
+    var all, out, i, it;
+    all = Array.isArray(items) ? items : [];
+    out = [];
+    for (i = 0; i < all.length; i++) {
+      it = all[i];
+      if (!it || typeof it !== "object") continue;
+      if (isExpired(it, now) || isSuperseded(it)) continue;
+      out.push(it);
+    }
+    return out;
+  }
 
-    var goHtml = href
-      ? '<a class="go" href="' +
-        escapeHtml(href) +
-        '" target="_blank" rel="noopener noreferrer">去领取 →</a>'
-      : "";
+  function buildGroups(items, now) {
+    var active, map, order, i, it, name, g, ms, used, base, slug, n;
+    active = activeItems(items, now);
+    map = {};
+    order = [];
+    for (i = 0; i < active.length; i++) {
+      it = active[i];
+      name = platformOf(it);
+      if (!map[name]) {
+        map[name] = { name: name, offers: [], nearest: Infinity };
+        order.push(map[name]);
+      }
+      g = map[name];
+      g.offers.push(it);
+      ms = deadlineMs(it);
+      if (ms != null && ms < g.nearest) g.nearest = ms;
+    }
+    for (i = 0; i < order.length; i++) {
+      order[i].offers.sort(function (a, b) {
+        var da = deadlineMs(a);
+        var db = deadlineMs(b);
+        if (da == null && db == null) return cmpName(titleOf(a), titleOf(b));
+        if (da == null) return 1;
+        if (db == null) return -1;
+        if (da !== db) return da - db;
+        return cmpName(titleOf(a), titleOf(b));
+      });
+    }
+    order.sort(function (a, b) {
+      if (a.nearest !== b.nearest) return a.nearest - b.nearest;
+      return cmpName(a.name, b.name);
+    });
+    used = {};
+    for (i = 0; i < order.length; i++) {
+      base = slugify(order[i].name);
+      slug = base;
+      n = 2;
+      while (used[slug]) {
+        slug = base + "-" + n;
+        n += 1;
+      }
+      used[slug] = 1;
+      order[i].slug = slug;
+    }
+    return order;
+  }
 
-    var sourceHtml =
-      source && source !== href
-        ? '<a class="source" href="' +
-          escapeHtml(source) +
-          '" target="_blank" rel="noopener noreferrer">原帖</a>'
-        : source && !href
-          ? '<a class="source" href="' +
-            escapeHtml(source) +
-            '" target="_blank" rel="noopener noreferrer">原帖</a>'
-          : "";
+  function filterGroups(groups, query) {
+    var q, out, i, g, offers;
+    q = norm(query);
+    out = [];
+    for (i = 0; i < groups.length; i++) {
+      g = groups[i];
+      if (!q || norm(g.name).indexOf(q) !== -1) {
+        out.push({ name: g.name, slug: g.slug, offers: g.offers.slice(), nearest: g.nearest });
+        continue;
+      }
+      offers = g.offers.filter(function (it) {
+        return haystack(it).indexOf(q) !== -1;
+      });
+      if (offers.length) out.push({ name: g.name, slug: g.slug, offers: offers, nearest: g.nearest });
+    }
+    return out;
+  }
 
+  function groupBySlug(groups, slug) {
+    var i;
+    for (i = 0; i < groups.length; i++) {
+      if (groups[i].slug === slug) return groups[i];
+    }
+    return null;
+  }
+
+  function fmtDeadlineBJ(iso) {
+    var t, date, time;
+    t = Date.parse(String(iso));
+    if (Number.isNaN(t)) return "";
+    try {
+      date = new Intl.DateTimeFormat("zh-CN", {
+        timeZone: "Asia/Shanghai",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }).format(t);
+      time = new Intl.DateTimeFormat("zh-CN", {
+        timeZone: "Asia/Shanghai",
+        hour: "2-digit",
+        minute: "2-digit",
+        hourCycle: "h23",
+      }).format(t);
+      return date + " " + time + "（北京时间）";
+    } catch (e) {
+      return String(iso) + "（北京时间）";
+    }
+  }
+
+  function daysUntil(iso, now) {
+    var t = Date.parse(String(iso));
+    if (Number.isNaN(t)) return Infinity;
+    return Math.ceil((t - now) / 86400000);
+  }
+
+  function renderParagraphs(text, className) {
+    var blocks, i, lines, j, inner, html;
+    blocks = String(text).split(/\n{2,}/);
+    html = "";
+    for (i = 0; i < blocks.length; i++) {
+      lines = blocks[i].split(/\n/);
+      inner = "";
+      for (j = 0; j < lines.length; j++) {
+        if (!lines[j].trim() && lines.length > 1) continue;
+        if (inner) inner += "<br>";
+        inner += escapeHtml(lines[j]);
+      }
+      if (inner.trim()) html += '<p class="' + className + '">' + inner + "</p>";
+    }
+    return html;
+  }
+
+  function renderDot(offers) {
+    var status = summaryStatus(offers);
+    if (!status) return "";
     return (
-      '<article class="card">' +
-      '<div class="title-row">' +
-      '<h2 class="card-title">' +
-      escapeHtml(title) +
-      "</h2>" +
-      ac.badge +
-      "</div>" +
-      ac.note +
-      stepsHtml +
-      deadlineHtml +
-      '<div class="card-actions">' +
-      goHtml +
-      sourceHtml +
-      "</div>" +
-      "</article>"
+      '<span class="dot ' +
+      status +
+      '" title="' +
+      escapeHtml(statusLabel(status)) +
+      '"><span class="sr">' +
+      escapeHtml(statusLabel(status)) +
+      "</span></span>"
     );
   }
 
-  var now = Date.now();
-  var all = Array.isArray(ITEMS) ? ITEMS : [];
-  var active = all
-    .filter(function (it) {
-      return it && typeof it === "object" && !isExpired(it, now) && !isSuperseded(it);
-    })
-    .slice()
-    .sort(function (a, b) {
-      return sortKey(b) - sortKey(a);
-    });
-
-  var list = document.getElementById("list");
-  if (!active.length) {
-    list.innerHTML = '<div class="empty">暂时没有进行中的免费活动。</div>';
-  } else {
-    list.innerHTML = active
-      .map(function (it) {
-        return renderCard(it, now);
-      })
-      .join("");
+  function renderTabs(groups, slug) {
+    var html, i, g, selected;
+    html = "";
+    for (i = 0; i < groups.length; i++) {
+      g = groups[i];
+      selected = g.slug === slug;
+      html +=
+        '<button type="button" class="tab" role="tab" data-slug="' +
+        escapeHtml(g.slug) +
+        '" aria-selected="' +
+        (selected ? "true" : "false") +
+        '" aria-controls="detail" tabindex="' +
+        (selected ? "0" : "-1") +
+        '">';
+      html += '<span class="tab-name">' + escapeHtml(redactSecrets(g.name)) + "</span>";
+      html += '<span class="tab-meta"><span class="tab-count">' + g.offers.length + "</span>";
+      html += renderDot(g.offers);
+      html += "</span></button>";
+    }
+    return html;
   }
 
-  // Expose counts for local verification / debugging
-  window.__FM_COUNTS = { total: all.length, shown: active.length, hidden: all.length - active.length };
-})();
+  function renderOptions(groups, slug) {
+    var html, i, g, status, prefix;
+    html = "";
+    for (i = 0; i < groups.length; i++) {
+      g = groups[i];
+      status = summaryStatus(g.offers);
+      prefix = status === "success" ? "● " : status === "needs-user" ? "◐ " : status === "failed" ? "○ " : "";
+      html +=
+        '<option value="' +
+        escapeHtml(g.slug) +
+        '"' +
+        (g.slug === slug ? " selected" : "") +
+        ">" +
+        escapeHtml(prefix + redactSecrets(g.name) + "（" + g.offers.length + "）") +
+        "</option>";
+    }
+    return html;
+  }
+
+  function renderAutoClaim(item) {
+    var view = autoClaimView(item);
+    if (!view) return "";
+    var html = '<div class="auto-claim-row">';
+    html += '<span class="auto-claim ' + view.kind + '">' + escapeHtml(view.label) + "</span>";
+    if (view.note || view.at) {
+      html += '<p class="auto-claim-note">';
+      if (view.note) html += '<span class="auto-claim-text">' + escapeHtml(view.note) + "</span>";
+      if (view.at) html += '<span class="auto-claim-at">' + escapeHtml(view.at) + "</span>";
+      html += "</p>";
+    }
+    html += "</div>";
+    return html;
+  }
+
+  function linkLabel(href) {
+    var host = hostnameOf(href);
+    return host ? "打开 " + host : "打开链接";
+  }
+
+  function renderGuide(steps) {
+    var html, i, st, href;
+    if (!steps.length) return "";
+    html = '<ol class="guide">';
+    for (i = 0; i < steps.length; i++) {
+      st = steps[i];
+      html += "<li>";
+      if (st.step) html += '<p class="guide-title">' + escapeHtml(st.step) + "</p>";
+      if (st.detail) html += renderParagraphs(st.detail, "guide-detail");
+      href = safeUrl(st.url);
+      if (href) {
+        html +=
+          '<a class="guide-link" href="' +
+          escapeHtml(href) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          escapeHtml(linkLabel(href)) +
+          "</a>";
+      }
+      if (st.note) {
+        html += '<p class="guide-note"><span class="note-label">注意</span>' + escapeHtml(st.note) + "</p>";
+      }
+      html += "</li>";
+    }
+    html += "</ol>";
+    return html;
+  }
+
+  function renderOffer(item, now) {
+    var title, summary, terms, deadline, md, soon, href, source, guide, same;
+    title = redactSecrets(titleOf(item));
+    summary = item.summary == null ? "" : redactSecrets(String(item.summary)).trim();
+    terms = item.free_terms == null ? "" : redactSecrets(String(item.free_terms)).trim();
+    deadline = deadlineOf(item);
+    md = deadline ? fmtDeadlineBJ(String(deadline)) : "";
+    soon = deadline && daysUntil(String(deadline), now) <= 2;
+    href = safeUrl(goUrl(item));
+    source = safeUrl(item.url || item.link || item.source_url || "");
+    same = source && href && source === href;
+    guide = claimGuideOf(item);
+    var html = '<article class="offer">';
+    html += '<div class="offer-top">';
+    html += '<div class="offer-heading">';
+    html += "<h3 class=\"offer-title\">" + escapeHtml(title) + "</h3>";
+    if (md) {
+      html += '<p class="deadline' + (soon ? " soon" : "") + '">截止 ' + escapeHtml(md) + "</p>";
+    } else {
+      html += '<p class="deadline quiet">未标明截止时间</p>';
+    }
+    html += "</div>";
+    html += '<div class="offer-actions">';
+    if (href) {
+      html +=
+        '<a class="go" href="' +
+        escapeHtml(href) +
+        '" target="_blank" rel="noopener noreferrer">去领取</a>';
+    }
+    if (source && !same) {
+      html +=
+        '<a class="source" href="' +
+        escapeHtml(source) +
+        '" target="_blank" rel="noopener noreferrer">来源</a>';
+    }
+    html += "</div></div>";
+    html += renderAutoClaim(item);
+    if (summary) {
+      html += '<section class="block"><h4>简介</h4>' + renderParagraphs(summary, "body") + "</section>";
+    }
+    if (terms && norm(terms) !== norm(summary)) {
+      html += '<section class="block"><h4>免费条款</h4>' + renderParagraphs(terms, "body") + "</section>";
+    }
+    if (guide.length) {
+      html += '<section class="block"><h4>领取步骤</h4>' + renderGuide(guide) + "</section>";
+    }
+    html += "</article>";
+    return html;
+  }
+
+  function renderDetail(group, now) {
+    var html, i, label;
+    if (!group) return "";
+    label = statusLabel(summaryStatus(group.offers));
+    html = '<div class="detail-inner">';
+    html += '<header class="platform-head">';
+    html += '<p class="kicker">平台</p>';
+    html += "<h2>" + escapeHtml(redactSecrets(group.name)) + "</h2>";
+    html += '<p class="platform-meta"><span>' + group.offers.length + " 项进行中</span>";
+    if (label) html += renderDot(group.offers) + '<span class="dot-label">' + escapeHtml(label) + "</span>";
+    html += "</p></header>";
+    for (i = 0; i < group.offers.length; i++) html += renderOffer(group.offers[i], now);
+    html += "</div>";
+    return html;
+  }
+
+  function renderEmpty(query) {
+    if (query && String(query).trim()) {
+      return '<div class="empty">没有匹配的平台或活动。换个关键词，或清空搜索。</div>';
+    }
+    return '<div class="empty">暂时没有进行中的免费活动。</div>';
+  }
+
+  function countOffers(groups) {
+    var n = 0;
+    var i;
+    for (i = 0; i < groups.length; i++) n += groups[i].offers.length;
+    return n;
+  }
+
+  function readHash() {
+    var raw;
+    if (typeof location === "undefined") return "";
+    raw = String(location.hash || "").replace(/^#/, "");
+    if (!raw) return "";
+    try {
+      raw = decodeURIComponent(raw);
+    } catch (e) {}
+    return raw;
+  }
+
+  function boot() {
+    var tabsEl, detailEl, qEl, selectEl, statsEl, now, all, allGroups, state;
+
+    if (typeof document === "undefined") return;
+    tabsEl = document.getElementById("tabs");
+    detailEl = document.getElementById("detail");
+    qEl = document.getElementById("q");
+    selectEl = document.getElementById("platform-select");
+    statsEl = document.getElementById("stats");
+    if (!tabsEl || !detailEl) return;
+
+    now = Date.now();
+    all = typeof ITEMS !== "undefined" && Array.isArray(ITEMS) ? ITEMS : [];
+    allGroups = buildGroups(all, now);
+    state = { query: "", slug: readHash(), rendered: "" };
+
+    function writeHash(slug, mode) {
+      var url;
+      if (!slug || typeof history === "undefined" || typeof location === "undefined") return;
+      if (readHash() === slug) return;
+      url = location.pathname + location.search + "#" + slug;
+      if (mode === "push" && history.pushState) history.pushState({ slug: slug }, "", url);
+      else if (history.replaceState) history.replaceState({ slug: slug }, "", url);
+    }
+
+    function render() {
+      var groups, slug, group, btn, buttons, i, shown, hidden;
+      groups = filterGroups(allGroups, state.query);
+      if (!state.slug && !state.query && groups.length) state.slug = groups[0].slug;
+      slug = "";
+      if (state.slug && groupBySlug(groups, state.slug)) slug = state.slug;
+      else if (groups.length) slug = groups[0].slug;
+      group = groupBySlug(groups, slug);
+      tabsEl.innerHTML = groups.length ? renderTabs(groups, slug) : '<p class="tabs-empty">没有匹配的平台</p>';
+      if (selectEl) {
+        selectEl.innerHTML = renderOptions(groups, slug);
+        selectEl.disabled = !groups.length;
+        if (slug) selectEl.value = slug;
+      }
+      detailEl.innerHTML = group ? renderDetail(group, now) : renderEmpty(state.query);
+      detailEl.setAttribute("role", "tabpanel");
+      detailEl.setAttribute("aria-label", group ? group.name : "活动详情");
+      if (statsEl) {
+        if (state.query) {
+          statsEl.textContent = "找到 " + groups.length + " 个平台 · " + countOffers(groups) + " 项";
+        } else {
+          statsEl.textContent = countOffers(allGroups) + " 项进行中 · " + allGroups.length + " 个平台";
+        }
+      }
+      if (slug && slug !== state.rendered) {
+        buttons = tabsEl.querySelectorAll ? tabsEl.querySelectorAll("[role=tab]") : [];
+        for (i = 0; i < buttons.length; i++) {
+          if (buttons[i].getAttribute("aria-selected") === "true") btn = buttons[i];
+        }
+        if (btn) scrollTabIntoView(btn);
+        state.rendered = slug;
+      }
+      shown = activeItems(all, now).length;
+      hidden = all.length - shown;
+      root.__FM_COUNTS = {
+        total: all.length,
+        shown: shown,
+        hidden: hidden,
+        platforms: allGroups.length,
+      };
+    }
+
+    function scrollTabIntoView(btn) {
+      var br, sr, horizontal;
+      if (!btn || !tabsEl.getBoundingClientRect) return;
+      horizontal = tabsEl.scrollWidth > tabsEl.clientWidth + 8;
+      br = btn.getBoundingClientRect();
+      sr = tabsEl.getBoundingClientRect();
+      if (horizontal) {
+        if (br.left >= sr.left - 1 && br.right <= sr.right + 1) return;
+        tabsEl.scrollLeft += br.left - sr.left - 10;
+        return;
+      }
+      if (br.top < sr.top) tabsEl.scrollTop -= sr.top - br.top;
+      else if (br.bottom > sr.bottom) tabsEl.scrollTop += br.bottom - sr.bottom;
+    }
+
+    function slugFromEvent(target) {
+      var node = target;
+      while (node && node !== tabsEl) {
+        if (node.getAttribute && node.getAttribute("data-slug")) return node.getAttribute("data-slug");
+        node = node.parentNode;
+      }
+      return "";
+    }
+
+    tabsEl.addEventListener("click", function (e) {
+      var slug = slugFromEvent(e.target);
+      if (!slug) return;
+      state.slug = slug;
+      writeHash(slug, "push");
+      state.rendered = "";
+      render();
+    });
+
+    tabsEl.addEventListener("keydown", function (e) {
+      var buttons, i, next, key;
+      key = e.key || e.which;
+      if (key !== "ArrowDown" && key !== "ArrowUp" && key !== "ArrowRight" && key !== "ArrowLeft" && key !== "Home" && key !== "End") return;
+      buttons = [];
+      var nodes = tabsEl.querySelectorAll("[role=tab]");
+      for (i = 0; i < nodes.length; i++) buttons.push(nodes[i]);
+      i = -1;
+      for (next = 0; next < buttons.length; next++) {
+        if (buttons[next] === document.activeElement) i = next;
+      }
+      if (i < 0) return;
+      if (key === "ArrowDown" || key === "ArrowRight") i = Math.min(buttons.length - 1, i + 1);
+      else if (key === "ArrowUp" || key === "ArrowLeft") i = Math.max(0, i - 1);
+      else if (key === "Home") i = 0;
+      else i = buttons.length - 1;
+      e.preventDefault();
+      buttons[i].focus();
+      state.slug = buttons[i].getAttribute("data-slug");
+      writeHash(state.slug, "push");
+      state.rendered = "";
+      render();
+    });
+
+    if (qEl) {
+      qEl.addEventListener("input", function () {
+        state.query = qEl.value;
+        render();
+      });
+    }
+
+    if (selectEl) {
+      selectEl.addEventListener("change", function () {
+        state.slug = selectEl.value;
+        writeHash(state.slug, "push");
+        state.rendered = "";
+        render();
+      });
+    }
+
+    function onNavigate() {
+      var next = readHash();
+      state.slug = next;
+      if (next && !groupBySlug(filterGroups(allGroups, state.query), next) && groupBySlug(allGroups, next)) {
+        state.query = "";
+        if (qEl) qEl.value = "";
+      }
+      state.rendered = "";
+      render();
+    }
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("hashchange", onNavigate);
+      window.addEventListener("popstate", onNavigate);
+      window.addEventListener("resize", function () {
+        var btn = tabsEl.querySelector('[aria-selected="true"]');
+        if (!btn) return;
+        scrollTabIntoView(btn);
+        if (window.requestAnimationFrame) {
+          window.requestAnimationFrame(function () { scrollTabIntoView(btn); });
+        }
+      });
+    }
+
+    render();
+    if (!readHash() && state.slug) writeHash(state.slug, "replace");
+  }
+
+  root.__FM = {
+    escapeHtml: escapeHtml,
+    redactSecrets: redactSecrets,
+    isExpired: isExpired,
+    isSuperseded: isSuperseded,
+    platformOf: platformOf,
+    platformFromUrl: platformFromUrl,
+    slugify: slugify,
+    buildGroups: buildGroups,
+    filterGroups: filterGroups,
+    renderDetail: renderDetail,
+    renderTabs: renderTabs,
+    renderOptions: renderOptions,
+    claimGuideOf: claimGuideOf,
+    autoClaimView: autoClaimView,
+    summaryStatus: summaryStatus,
+    goUrl: goUrl,
+    safeUrl: safeUrl,
+    fmtDeadlineBJ: fmtDeadlineBJ,
+  };
+
+  boot();
+})(typeof globalThis !== "undefined" ? globalThis : this);
