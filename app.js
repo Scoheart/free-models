@@ -33,6 +33,15 @@
     return Number.isNaN(t) ? 0 : t;
   }
 
+  function firstSentence(text, maxChars) {
+    var s = String(text || "").replace(/\s+/g, " ").trim();
+    if (!s) return "";
+    var cut = s.search(/[。！？.!?]/);
+    if (cut >= 0 && cut < maxChars) return s.slice(0, cut + 1);
+    if (s.length <= maxChars) return s;
+    return s.slice(0, maxChars).replace(/[，,、\s]+$/, "") + "…";
+  }
+
   function fmtDeadlineMD(iso) {
     var t = Date.parse(iso);
     if (Number.isNaN(t)) return "";
@@ -74,41 +83,18 @@
     return String(item.url || item.link || item.source_url || "");
   }
 
-  function claimStepsOf(item) {
-    // claim_steps wins so a step may contain ； or ;. Otherwise split
-    // free_terms (then summary) on those semicolons or newlines.
-    var i, step, out, raw, parts, part;
-    out = [];
-    if (Array.isArray(item.claim_steps)) {
-      for (i = 0; i < item.claim_steps.length; i++) {
-        step = item.claim_steps[i];
-        step = String(step == null ? "" : step).replace(/\s+/g, " ").trim();
-        if (step) out.push(step);
-      }
-      if (out.length) return out;
-    }
-    raw = item.free_terms || item.summary || item.desc || item.description || "";
-    parts = String(raw).split(/[；;\r\n]+/);
-    for (i = 0; i < parts.length; i++) {
-      part = parts[i].replace(/\s+/g, " ").trim();
-      if (part) out.push(part);
-    }
-    return out;
-  }
-
-  function renderSteps(steps) {
-    var i, html;
-    if (!steps.length) return "";
-    html = '<ul class="claim-steps" aria-label="如何领取">';
-    for (i = 0; i < steps.length; i++) {
-      html += "<li>" + escapeHtml(steps[i]) + "</li>";
-    }
-    return html + "</ul>";
+  function blurbOf(item) {
+    // Prefer free_terms as how-to-claim; keep enough length for concrete steps.
+    var raw = item.free_terms || item.summary || item.desc || item.description || "";
+    var s = String(raw || "").replace(/\s+/g, " ").trim();
+    if (!s) return "";
+    if (s.length <= 220) return s;
+    return s.slice(0, 220).replace(/[，,、\s]+$/, "") + "…";
   }
 
   function renderCard(item, now) {
     var title = String(item.title || item.name || item.model || "未命名");
-    var steps = claimStepsOf(item);
+    var blurb = blurbOf(item);
     var deadline = item.deadline || item.expires_at || item.expire_at || item.expires || null;
     var href = claimUrl(item);
     var source = String(item.url || item.link || item.source_url || "");
@@ -119,15 +105,19 @@
       if (md) {
         var soon = daysUntil(String(deadline), now) <= 2;
         deadlineHtml =
-          '<p class="card-deadline"><span class="deadline' +
+          ' <span class="deadline' +
           (soon ? " soon" : "") +
-          '">截止 ' +
+          '">· 截止 ' +
           escapeHtml(md) +
-          "</span></p>";
+          "</span>";
       }
     }
 
-    var stepsHtml = renderSteps(steps);
+    var blurbHtml = blurb
+      ? '<p class="card-blurb">' + escapeHtml(blurb) + deadlineHtml + "</p>"
+      : deadlineHtml
+        ? '<p class="card-blurb">' + deadlineHtml.trim() + "</p>"
+        : "";
 
     var goHtml = href
       ? '<a class="go" href="' +
@@ -151,8 +141,7 @@
       '<h2 class="card-title">' +
       escapeHtml(title) +
       "</h2>" +
-      stepsHtml +
-      deadlineHtml +
+      blurbHtml +
       '<div class="card-actions">' +
       goHtml +
       sourceHtml +

@@ -85,36 +85,19 @@ body {
   line-height: 1.35;
 }
 
-.claim-steps {
+.card-blurb {
   margin: 0;
-  padding: 0.1rem 0 0.1rem 1.2rem;
   color: var(--muted);
   font-size: 0.875rem;
   line-height: 1.55;
-  list-style: disc;
 }
 
-.claim-steps li {
-  margin: 0;
-  padding: 0.2rem 0;
-  overflow-wrap: anywhere;
-}
-
-.claim-steps li::marker {
-  color: var(--accent);
-}
-
-.card-deadline {
-  margin: 0;
-  font-size: 0.8125rem;
-  line-height: 1.45;
-}
-
-.card-deadline .deadline {
+.card-blurb .deadline {
   color: var(--faint);
+  white-space: nowrap;
 }
 
-.card-deadline .deadline.soon {
+.card-blurb .deadline.soon {
   color: var(--amber);
   font-weight: 550;
 }
