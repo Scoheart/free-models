@@ -30317,5 +30317,378 @@
         "detail": "atomcode status（或 TUI 内 /status）可查看 CodingPlan 用量和到期时间；额度按 5 小时滚动窗口计。"
       }
     ]
+  },
+  {
+    "id": "fal-minimax-h3-image-free-5-daily-nov23-20261111",
+    "title": "fal：MiniMax H3 Image 限免两周，每 24 小时最多 5 张免费图（至 11/23，仅 Playground / Sandbox）",
+    "platform": "fal",
+    "product": "fal MiniMax H3 Image",
+    "model": "MiniMax H3 Image",
+    "type": "限时",
+    "deadline": "2026-11-23T23:59:59+08:00",
+    "url": "https://fal.ai/minimax-h3-image",
+    "source": "X @fal 官推（2026-11-11 02:03 北京）；fal 官方活动页 fal.ai/minimax-h3-image",
+    "source_post_id": "2120215900091752490",
+    "post_time_bj": "2026-11-11T02:03:56+08:00",
+    "summary": "据 X 上的报道（@fal 官推 11/11 02:03 北京）及 fal 官方活动页：MiniMax 新的开源权重图像模型 MiniMax H3 Image 上线 fal，前两周免费试用至 11 月 23 日。每 24 小时（从你第一张免费图起算）未登录可免费生成 3 张、登录 4 张、绑定付款方式验证后 5 张（是总数不叠加）。免费只适用于 fal Playground、Sandbox（文生图和图像编辑）和登录后的 fal Agent；API 调用照常按量计费。",
+    "free_terms": "入口 fal.ai/minimax-h3-image → 打开 Playground 直接生成；未登录 3 张/24h，注册登录 4 张，绑卡验证 5 张（超额才扣费）；仅 Playground/Sandbox/fal Agent 免费，API 照常收费；截止 11/23。",
+    "claim_steps": [
+      "打开 fal.ai/minimax-h3-image，点进 MiniMax H3 Image Playground",
+      "未登录可直接生成 3 张；注册或登录 fal 账号后共 4 张",
+      "如需 5 张，在账户里添加付款方式完成验证（只有超出免费额度才扣费）",
+      "每 24 小时从第一张免费图起算重置，活动至 11 月 23 日"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开活动页",
+        "detail": "访问 fal 官方活动页，点页面上的 Playground 入口（文生图 / 图像编辑都可）。",
+        "url": "https://fal.ai/minimax-h3-image"
+      },
+      {
+        "step": "未登录先试",
+        "detail": "不登录即可免费生成 3 张图。",
+        "url": "https://fal.ai/models/minimax/h3-image/text-to-image"
+      },
+      {
+        "step": "登录提升到 4 张",
+        "detail": "右上角 Sign-up / Log-in 注册或登录 fal 账号，免费额度变为每 24 小时共 4 张（总数，不与未登录的 3 张叠加）。"
+      },
+      {
+        "step": "可选：验证账户到 5 张",
+        "detail": "在账户中添加付款方式完成验证后为 5 张；只有超出免费额度才会扣费。",
+        "note": "需绑卡，不想绑卡就停在 4 张"
+      },
+      {
+        "step": "注意范围",
+        "detail": "免费仅限 Playground、Sandbox 和登录后的 fal Agent；通过 API 调用按正常价格计费。活动至 2026-11-23。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "fal",
+        "action_url": "https://fal.ai/minimax-h3-image"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "MiniMax H3 Image（fal）",
+        "action_url": "https://fal.ai/models/minimax/h3-image/text-to-image"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "zero_signup"
+    ],
+    "collected_at": "2026-11-11T04:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "pending",
+      "note": "待自动申请",
+      "at": "2026-11-11T04:25:00+08:00"
+    }
+  },
+  {
+    "id": "onysoft-tencent-cloud-16-models-free-nov16-20261111",
+    "title": "Onysoft × 腾讯云：Hy4 / DeepSeek V4 / GLM-5.3 / Kimi K3 / MiniMax M3 等 16 个模型加 :tencent 后缀免费（至 11/16 23:59 UTC+3）",
+    "platform": "Onysoft",
+    "product": "Onysoft API",
+    "model": "tencent/hy4:tencent 等 16 个",
+    "type": "限时",
+    "deadline": "2026-11-17T04:59:00+08:00",
+    "url": "https://api.onysoft.com/blog/onysoft-tencent-cloud-is-ortakligi",
+    "source": "Onysoft 官方博客 api.onysoft.com（2026-11-10）",
+    "summary": "据 Onysoft 官方博客（11/10）：Onysoft 成为腾讯云合作伙伴，腾讯云版本的 Hy、DeepSeek、GLM、Kimi、MiniMax 共 16 个模型 ID 在模型名后加 :tencent 即免费调用，不扣余额，至 2026-11-16 23:59（UTC+3，即北京时间 11/17 04:59）。端点 https://api.onysoft.com/v1（OpenAI 兼容），Key 以 sk-ony- 开头；限验证账户（用 Google 或 GitHub 登录，或至少真实充值过一次）。每账号每日有用量上限，单请求 64K 输入 / 16K 输出，仅文本和工具调用；总容量有限，用完当天可能停。请求在腾讯云新加坡区处理。",
+    "free_terms": "入口 api.onysoft.com 用 Google/GitHub 登录（即算验证账户）→ 控制台建 sk-ony- Key；base_url https://api.onysoft.com/v1，模型名加 :tencent（如 tencent/hy4:tencent、z-ai/glm-5.3:tencent、moonshotai/kimi-k3:tencent）；每日限额、64K 入/16K 出；至 11/16 23:59 UTC+3。",
+    "claim_steps": [
+      "打开 api.onysoft.com，用 Google 或 GitHub 登录（满足「验证账户」条件）",
+      "在控制台创建 API Key（sk-ony- 开头）",
+      "OpenAI SDK 的 base_url 设为 https://api.onysoft.com/v1",
+      "model 填带 :tencent 后缀的 ID，例如 tencent/hy4:tencent、deepseek/deepseek-v4.1-flash:tencent、z-ai/glm-5.3:tencent、moonshotai/kimi-k3:tencent、minimax/minimax-m3:tencent",
+      "注意每日用量上限、单请求 64K 输入 / 16K 输出，截止 11/16 23:59（UTC+3）"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 Onysoft",
+        "detail": "打开 Onysoft，用 Google 或 GitHub 登录。博客写明免费模型只对验证账户开放：用 Google/GitHub 登录，或至少真实充值过一次。",
+        "url": "https://api.onysoft.com/"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在控制台的 API Key 区域新建 Key（前缀 sk-ony-），按钮位置以控制台为准。",
+        "note": "建议给 Key 设消费上限"
+      },
+      {
+        "step": "配置端点",
+        "detail": "OpenAI 兼容端点 https://api.onysoft.com/v1，Authorization: Bearer sk-ony-…；不需要腾讯云账号。"
+      },
+      {
+        "step": "选免费模型",
+        "detail": "模型 ID 末尾加 :tencent 即免费且不扣余额，共 16 个：tencent/hy4、hy4-preview、hy3；deepseek-v4.1-flash、v4-flash-202605、v4-pro-202606、v4-pro-0813；glm-5.3、glm-5.3-flash、glm-5.3-flashx、glm-5.2；kimi-k3、kimi-k2.7-code、kimi-k2.7-code-highspeed；minimax-m3、minimax-m3.1-flash。",
+        "url": "https://api.onysoft.com/blog/onysoft-tencent-cloud-is-ortakligi"
+      },
+      {
+        "step": "注意限制",
+        "detail": "每账号每日用量上限；单请求 64K 输入 / 16K 输出；只支持文本和函数调用；总容量用完当天可能停。截止 2026-11-16 23:59（UTC+3），即北京时间 11/17 04:59。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Onysoft",
+        "action_url": "https://api.onysoft.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "tencent/hy4:tencent",
+        "action_url": "https://api.onysoft.com/blog/onysoft-tencent-cloud-is-ortakligi"
+      },
+      {
+        "name": "moonshotai/kimi-k3:tencent",
+        "action_url": "https://api.onysoft.com/blog/onysoft-tencent-cloud-is-ortakligi"
+      },
+      {
+        "name": "z-ai/glm-5.3:tencent",
+        "action_url": "https://api.onysoft.com/blog/onysoft-tencent-cloud-is-ortakligi"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T04:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "pending",
+      "note": "待自动申请",
+      "at": "2026-11-11T04:25:00+08:00"
+    }
+  },
+  {
+    "id": "openrouter-parallel-decisions-fast-free-7days-20261111",
+    "title": "OpenRouter：Parallel Decisions Fast 联网决策模型免费 7 天（parallel/decisions-fast:free，约至 11/14）",
+    "platform": "OpenRouter",
+    "product": "Parallel Decisions Fast",
+    "model": "parallel/decisions-fast:free",
+    "type": "限时",
+    "deadline": "2026-11-14T05:32:00+08:00",
+    "url": "https://openrouter.ai/parallel/decisions-fast:free",
+    "source": "Parallel 官方博客 parallel.ai/blog/decisions-openrouter（11/6）；OpenRouter 模型页；线索来自火花工坊「今日 AI 免费额度」",
+    "summary": "据 Parallel 官方博客（11/6）与 OpenRouter 模型页：Parallel 的联网决策模型 Decisions Fast 上线 OpenRouter，免费试用 7 天，模型 ID parallel/decisions-fast:free，用现有 OpenRouter Key 即可，无需单独注册 Parallel。它不生成文本：读取 state（文本或 JSON），联网检索后对最多 100 个问题返回带概率的结构化答案和引用，32K 上下文。走 OpenRouter alpha Decisions 接口（POST /api/alpha/decisions），不是普通 chat completions。免费期从 11/6 约 21:32 UTC 起算 7 天，官方未写精确结束时刻，截止为推算（约北京时间 11/14 05:32）；之后官方价 $1 / 1000 次请求。",
+    "free_terms": "入口 openrouter.ai/parallel/decisions-fast:free；用现有 OpenRouter API Key，model 填 parallel/decisions-fast:free，接口 POST https://openrouter.ai/api/alpha/decisions；免费端点限速；7 天限免约至 11/14（推算）。",
+    "claim_steps": [
+      "登录 OpenRouter（已有账号），在 Keys 页准备 API Key",
+      "打开 openrouter.ai/parallel/decisions-fast:free 查看用法",
+      "调用 POST https://openrouter.ai/api/alpha/decisions，model 填 parallel/decisions-fast:free，传 state 和最多 100 个问题",
+      "免费 7 天从 11/6 起算，约北京时间 11/14 结束（推算）"
+    ],
+    "claim_guide": [
+      {
+        "step": "准备 OpenRouter Key",
+        "detail": "登录 OpenRouter，在 Keys 页面使用或新建 API Key（建议设消费上限）。",
+        "url": "https://openrouter.ai/settings/keys"
+      },
+      {
+        "step": "查看模型页",
+        "detail": "打开 Parallel: Decisions Fast (free) 页面，价格显示为 Free，32K 上下文。",
+        "url": "https://openrouter.ai/parallel/decisions-fast:free"
+      },
+      {
+        "step": "调用 Decisions 接口",
+        "detail": "它不走 chat completions，而是 OpenRouter alpha Decisions 接口 POST /api/alpha/decisions；model 填 parallel/decisions-fast:free，传 state（文本/JSON）和问题列表（是否题 / 选择题 / 评分题）。",
+        "url": "https://parallel.ai/blog/decisions-openrouter"
+      },
+      {
+        "step": "注意截止",
+        "detail": "官方写的是免费 7 天（11/6 上线），没给精确结束时刻；本站按约北京时间 11/14 05:32 推算。免费端点受 OpenRouter 免费限速。",
+        "note": "截止为推算值"
+      }
+    ],
+    "providers": [
+      {
+        "name": "OpenRouter",
+        "action_url": "https://openrouter.ai/parallel/decisions-fast:free"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "parallel/decisions-fast:free",
+        "action_url": "https://openrouter.ai/parallel/decisions-fast:free"
+      }
+    ],
+    "scenes": [
+      "search",
+      "agent"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T04:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "pending",
+      "note": "待自动申请",
+      "at": "2026-11-11T04:25:00+08:00"
+    }
+  },
+  {
+    "id": "vertex-ai-express-mode-90day-free-tier-20261111",
+    "title": "Google Cloud Agent Platform（Vertex AI）Express Mode：Gmail 新用户 90 天免费层，免绑卡送 API Key（Gemini 3.1 Pro 预览 / 3 Flash 等）",
+    "platform": "Google",
+    "product": "Gemini Enterprise Agent Platform（Vertex AI）Express Mode",
+    "model": "gemini-3.1-pro-preview · gemini-3-flash-preview · gemini-2.5-pro/flash 等",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start/express-mode/overview",
+    "source": "Google Cloud 官方文档（2026-11-10 UTC 更新）；线索来自火花工坊「今日 AI 免费额度」",
+    "summary": "据 Google Cloud 官方文档（11/10 更新）：用 @gmail.com 账号、且从未用过 Google Cloud 的新用户，可开通 Agent Platform（原 Vertex AI）Express Mode 免费层，90 天内在配额内免费调用支持 Express Mode 的接口，不用填结算信息，开通时自动生成 API Key。可用模型含 gemini-3.1-pro-preview、gemini-3-flash-preview、gemini-3-pro-image、gemini-3.1-flash-image（动态限速）和 gemini-2.5-pro / flash / flash-lite / flash-image（10 RPM）。已是 Google Cloud 老用户或开启结算后，90 天免费层即取消。与 Google Cloud $300 免费试用是两条路线。",
+    "free_terms": "入口 Google Cloud 控制台 Express Mode 注册页（需 @gmail.com 且为 Google Cloud 新用户，免绑卡）→ 自动生成 API Key（APIs & Services → Credentials）；端点 https://aiplatform.googleapis.com/v1/publishers/google/models/MODEL_ID:streamGenerateContent，头 x-goog-api-key；90 天，配额内免费；老用户/开结算即失效。",
+    "claim_steps": [
+      "确认用的是 @gmail.com 账号，且这个账号从没开过 Google Cloud（老用户不适用）",
+      "打开文档里的「Go to Express Mode」进入 Google Cloud 控制台开通 Express Mode，不填结算信息",
+      "开通后在 APIs & Services → Credentials 复制自动生成的 API Key",
+      "请求 https://aiplatform.googleapis.com/v1/publishers/google/models/gemini-3-flash-preview:streamGenerateContent，头部 x-goog-api-key 带 Key",
+      "90 天内配额内免费；不要开启结算，否则免费层取消"
+    ],
+    "claim_guide": [
+      {
+        "step": "确认资格",
+        "detail": "必须是 @gmail.com Google 账号，且是 Google Cloud 新用户；已在用 Google Cloud（含 $300 免费试用计划）的账号不适用。",
+        "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start/express-mode/overview",
+        "note": "本账号若已开过 Google Cloud，可能拿不到"
+      },
+      {
+        "step": "开通 Express Mode",
+        "detail": "在文档「Sign up for express mode」一节点 Go to Express Mode，进入 Google Cloud 控制台按提示开通，选地区；免费层不需要填结算信息。"
+      },
+      {
+        "step": "拿 API Key",
+        "detail": "开通时会自动生成 Key；在控制台 APIs & Services → Credentials（或 API Keys 页）复制 Generative Language API Key。"
+      },
+      {
+        "step": "调用",
+        "detail": "端点 https://aiplatform.googleapis.com/v1/publishers/google/models/MODEL_ID:streamGenerateContent，HTTP 头 x-goog-api-key；或用 google-genai SDK：genai.Client(vertexai=True, api_key=...)。可用模型见文档表格。"
+      },
+      {
+        "step": "注意",
+        "detail": "免费层 90 天、按配额；开启结算或升级为标准账户后免费层取消。仅支持文档表格中的模型，Live API 不可用。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Google Cloud",
+        "action_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start/express-mode/overview"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "gemini-3.1-pro-preview",
+        "action_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start/express-mode/overview"
+      },
+      {
+        "name": "gemini-3-flash-preview",
+        "action_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start/express-mode/overview"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T04:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "pending",
+      "note": "待自动申请",
+      "at": "2026-11-11T04:25:00+08:00"
+    }
+  },
+  {
+    "id": "longcat-25-mit-open-weights-20261111",
+    "title": "美团 LongCat-2.5 开源权重（MIT，1.6T 总参 / 约 48B 激活，原生多模态，另有 W4A4 版）",
+    "platform": "开源权重",
+    "product": "美团 LongCat-2.5",
+    "model": "LongCat-2.5 · LongCat-2.5-W4A4",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://huggingface.co/meituan-longcat/LongCat-2.5",
+    "source": "X @Nicolo_Tognoni（2026-11-11 02:50 北京）；Hugging Face meituan-longcat（API 显示 license: mit）",
+    "source_post_id": "2120227491243610609",
+    "post_time_bj": "2026-11-11T02:50:00+08:00",
+    "summary": "据 X 上的报道：美团以 MIT 许可开放 LongCat-2.5 权重，原生多模态，面向长程智能体编程，约 1.6T 总参数、每 token 约 48B 激活；W4A4 版可在国产加速卡上原生 INT4 运行；OpenCode 另有两周免费。Hugging Face 上 meituan-longcat/LongCat-2.5 与 LongCat-2.5-W4A4 已上架，HF API 显示许可证为 MIT。模型极大，需要多卡服务器才能自部署。",
+    "free_terms": "入口 huggingface.co/meituan-longcat/LongCat-2.5（另有 LongCat-2.5-W4A4）直接下载，MIT 许可可商用；无需 Key、不绑卡；1.6T 参数需多卡服务器；想直接用可走 OpenCode 两周限免。",
+    "claim_steps": [
+      "打开 Hugging Face 的 meituan-longcat/LongCat-2.5 模型页阅读模型卡",
+      "用 hf download meituan-longcat/LongCat-2.5（或 W4A4 版）下载权重",
+      "按模型卡说明的推理框架在多卡服务器上部署",
+      "不想自部署可在 OpenCode 里选 LongCat 2.5 Free（两周限免）"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开模型页",
+        "detail": "访问 Hugging Face 上美团官方组织 meituan-longcat 的 LongCat-2.5 页面，阅读模型卡与 MIT 许可。",
+        "url": "https://huggingface.co/meituan-longcat/LongCat-2.5"
+      },
+      {
+        "step": "选择版本",
+        "detail": "标准版 LongCat-2.5，或 W4A4 量化版 LongCat-2.5-W4A4（据报道可在国产加速卡上原生 INT4 运行）。",
+        "url": "https://huggingface.co/meituan-longcat/LongCat-2.5-W4A4"
+      },
+      {
+        "step": "下载权重",
+        "detail": "用 hf download（huggingface-cli）按模型页命令下载；不要用来路不明的镜像。"
+      },
+      {
+        "step": "部署",
+        "detail": "按模型卡写明的推理框架部署；约 1.6T 总参数，需多卡服务器，个人电脑跑不动。"
+      },
+      {
+        "step": "免部署体验",
+        "detail": "OpenCode 客户端 /models 选 LongCat 2.5 Free 可限时免费使用（见本站 OpenCode LongCat 2.5 条目）。",
+        "note": "开放权重免费不代表任何托管 API 免费"
+      }
+    ],
+    "providers": [
+      {
+        "name": "美团 LongCat",
+        "action_url": "https://huggingface.co/meituan-longcat"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "LongCat-2.5（HF）",
+        "action_url": "https://huggingface.co/meituan-longcat/LongCat-2.5"
+      },
+      {
+        "name": "LongCat-2.5-W4A4（HF）",
+        "action_url": "https://huggingface.co/meituan-longcat/LongCat-2.5-W4A4"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "zero_signup"
+    ],
+    "collected_at": "2026-11-11T04:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "pending",
+      "note": "待自动申请",
+      "at": "2026-11-11T04:25:00+08:00"
+    }
   }
 ]
