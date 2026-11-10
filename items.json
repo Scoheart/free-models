@@ -31003,5 +31003,383 @@
       "note": "需要手机号和大陆实名认证，需你本人在 LongCat 开放平台完成",
       "at": "2026-11-11T05:10:00+08:00"
     }
+  },
+  {
+    "id": "claude-one-free-full-reset-dec10-20261111",
+    "title": "Claude：Pro / Max / Ultra / Team 全员送一次免费「全额度重置」（所有模型和限额，12/10 14:00 PT 前用）",
+    "platform": "Anthropic",
+    "product": "Claude 订阅用量重置",
+    "model": "Claude 全部模型（订阅额度）",
+    "type": "额度",
+    "deadline": "2026-12-11T06:00:00+08:00",
+    "url": "https://x.com/claudedevs/status/2120275296637321476",
+    "source": "X @claudedevs 官方帖（2026-11-11 05:59 北京发布）；X @yangleiocx3 转述",
+    "summary": "据 X 上的报道（Claude 官方开发者账号 @claudedevs）：Anthropic 给所有 Pro、Max、Ultra、Team 用户发了一次免费的完整重置，覆盖所有模型和所有限额，可在 12 月 10 日 14:00 PT（北京时间 12 月 11 日 06:00）前任意时间使用。官方说明是修复了几个多耗额度的小问题，且此前 Fable 重置对已用满每周全部模型限额的人帮助不大，作为补偿。入口在 Settings > Usage 或 clau.de/reset。",
+    "free_terms": "入口 claude.ai Settings > Usage 或 clau.de/reset；门槛：Pro / Max / Ultra / Team 订阅；内容：1 次全额度重置（所有模型、所有限额）；截止 12/10 14:00 PT（北京 12/11 06:00）。",
+    "claim_steps": [
+      "用已订阅 Pro / Max / Ultra / Team 的账号登录 claude.ai",
+      "打开 Settings > Usage（或直接访问 clau.de/reset）",
+      "在额度快用完时点使用这次免费重置",
+      "在 12/10 14:00 PT（北京 12/11 06:00）前用掉，过期作废"
+    ],
+    "claim_guide": [
+      {
+        "step": "确认订阅",
+        "detail": "只有 Pro、Max、Ultra、Team 用户获赠这次重置（据 @claudedevs 帖）。",
+        "url": "https://x.com/claudedevs/status/2120275296637321476"
+      },
+      {
+        "step": "登录 Claude",
+        "detail": "用订阅账号登录 claude.ai。",
+        "url": "https://claude.ai"
+      },
+      {
+        "step": "打开用量页",
+        "detail": "进入 Settings > Usage，或打开官方短链 clau.de/reset。",
+        "url": "https://claude.ai/settings/usage",
+        "note": "clau.de/reset 有 Cloudflare 验证，需浏览器打开"
+      },
+      {
+        "step": "择机使用",
+        "detail": "重置覆盖所有模型和所有限额，建议等每周额度快用完时再用。"
+      },
+      {
+        "step": "注意截止",
+        "detail": "12 月 10 日 14:00 PT（北京时间 12 月 11 日 06:00）前有效。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Claude 用量设置",
+        "action_url": "https://claude.ai/settings/usage"
+      },
+      {
+        "name": "官方重置短链",
+        "action_url": "https://clau.de/reset"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Claude（订阅额度）",
+        "action_url": "https://claude.ai"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_subscription"
+    ],
+    "collected_at": "2026-11-11T06:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "账号内重置，需你本人在 Claude 用量页点击使用（需 Pro/Max/Ultra/Team 订阅）",
+      "at": "2026-11-11T06:05:00+08:00"
+    }
+  },
+  {
+    "id": "maritaca-s5-free-api-limited-20261111",
+    "title": "Maritaca AI：Sabiá S5 推出免费 API 版 S5-free（限时，零 token 费，60 RPM，OpenAI 兼容）",
+    "platform": "Maritaca AI",
+    "product": "Maritaca API",
+    "model": "S5-free（Sabiá 5）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://docs.maritaca.ai/en/s5-quick-start",
+    "source": "Maritaca 官方文档 docs.maritaca.ai（Getting started with S5、Rate Limits、Overview）；X @MaritacaAI 官方帖 2118780186472652919；X @Kashcol_com 转述",
+    "summary": "据 Maritaca 官方文档（docs.maritaca.ai）：巴西 Maritaca AI 的最新模型 Sabiá S5 在 API 上提供限时免费版 S5-free，不收 token 费，只支持文本（不含 Batch API、Flex 和内置工具、PDF/图片输入），属上线优惠，可能随时结束。S5-free 固定限额 60 RPM、输入/输出各 256k TPM，各档位相同。API 兼容 OpenAI，base_url 为 https://chat.maritaca.ai/api。付费版 S5 为 R$0.50/R$2.50 每百万 token。",
+    "free_terms": "入口 plataforma.maritaca.ai 注册→「API keys」页建 Key；模型名 S5-free（小写 s5-free 也可）；base_url https://chat.maritaca.ai/api（OpenAI 兼容）；限额 60 RPM、256k TPM 入/出；仅文本；限时，无公布截止。",
+    "claim_steps": [
+      "在 Maritaca 平台 plataforma.maritaca.ai 注册账号",
+      "到 API keys 页面创建 Key",
+      "把 OpenAI SDK 的 base_url 设为 https://chat.maritaca.ai/api",
+      "model 填 S5-free 调用（仅文本，60 RPM）"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册账号",
+        "detail": "在 Maritaca 平台创建账号。",
+        "url": "https://plataforma.maritaca.ai/"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "进入 API keys 页面点创建新 Key 并保存。",
+        "url": "https://plataforma.maritaca.ai/chaves-de-api"
+      },
+      {
+        "step": "配置接口",
+        "detail": "OpenAI 兼容：base_url = https://chat.maritaca.ai/api，curl 路径 /api/chat/completions。",
+        "url": "https://docs.maritaca.ai/en/s5-quick-start"
+      },
+      {
+        "step": "选免费模型",
+        "detail": "model 填 S5-free；免费版只接受文本，不含 Batch、Flex、内置工具。",
+        "url": "https://docs.maritaca.ai/en/s5-quick-start",
+        "note": "上线优惠，可能随时结束"
+      },
+      {
+        "step": "注意限额",
+        "detail": "S5-free 固定 60 RPM、输入/输出各 256k TPM，所有档位相同。",
+        "url": "https://docs.maritaca.ai/en/rate-limits"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Maritaca 平台",
+        "action_url": "https://plataforma.maritaca.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "S5-free（Maritaca API）",
+        "action_url": "https://docs.maritaca.ai/en/s5-quick-start"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T06:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "pending",
+      "note": "未在 registered-accounts / Gmail 找到 Maritaca 账号，可尝试注册并建 Key",
+      "at": "2026-11-11T06:05:00+08:00"
+    }
+  },
+  {
+    "id": "traycer-gemini-carbon-100usd-500-claims-20261111",
+    "title": "Traycer：Gemini Carbon 上线活动，每账号送 $100 Gemini 额度（限 500 份，至 11/13 03:29 北京）",
+    "platform": "Traycer",
+    "product": "Traycer Inference",
+    "model": "Traycer 上任意 Gemini 模型（含 Gemini 4 Carbon）",
+    "type": "限时",
+    "deadline": "2026-11-13T03:29:00+08:00",
+    "url": "https://traycer.ai/campaigns/free-gemini-carbon",
+    "source": "Traycer 官网活动页 traycer.ai/campaigns/free-gemini-carbon（WebSearch 检索并直接抓取核实）",
+    "summary": "据 Traycer 官网活动页：Gemini Carbon Launch 活动从 11/10 11:30 PST 到 11/12 11:29 PST（北京 11/11 03:30 – 11/13 03:29），每个账号可领 $100 Gemini 额度，全场共 500 份、先到先得（总池 $50,000）。额度单独计算、优先用于 Gemini，可用于 Traycer Inference 上的任意 Gemini 模型（含 Gemini 4 Carbon、Gemini 4 Argon、Gemini 3.8 Flash），不能用于其他模型或自带 Key。仅限积分制套餐的个人账号，团队账号不可领；领过 Gemini Weekend 的也能领。未用完额度在活动结束时清零。",
+    "free_terms": "入口 traycer.ai/campaigns/free-gemini-carbon 点「Claim $100 in credits」并登录；门槛：积分制套餐的个人账号（团队不可）；限 500 份先到先得；只能在 Traycer 桌面端用 Gemini；截止 11/13 03:29 北京，余额到期清零。",
+    "claim_steps": [
+      "打开 Traycer 活动页 traycer.ai/campaigns/free-gemini-carbon",
+      "点「Claim $100 in credits」，按提示登录个人账号",
+      "到 Billing 页确认 $100 已到账",
+      "下载 Traycer 桌面端，选 Gemini 模型（Traycer Inference）使用",
+      "在 11/13 03:29（北京）前用完"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开活动页",
+        "detail": "活动期内页面显示 Claim 按钮。",
+        "url": "https://traycer.ai/campaigns/free-gemini-carbon"
+      },
+      {
+        "step": "领取额度",
+        "detail": "点「Claim $100 in credits」，按要求登录；仅积分制套餐的个人账号可领，每账号一次。",
+        "url": "https://traycer.ai/campaigns/free-gemini-carbon",
+        "note": "共 500 份，先到先得"
+      },
+      {
+        "step": "确认到账",
+        "detail": "额度会加到账号的 Billing 页，与常规余额分开、优先用于 Gemini。"
+      },
+      {
+        "step": "安装客户端",
+        "detail": "Traycer 是免费开源的桌面应用，额度在 Traycer 应用里使用。",
+        "url": "https://traycer.ai/"
+      },
+      {
+        "step": "选 Gemini 模型",
+        "detail": "选择走 Traycer Inference 的 Gemini 模型（如 Gemini 4 Carbon、Gemini 4 Argon、Gemini 3.8 Flash）；自带 Key 不适用。"
+      },
+      {
+        "step": "注意截止",
+        "detail": "11/12 11:29 AM PST（北京 11/13 03:29）结束，未用额度清零。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Traycer Gemini Carbon 领取",
+        "action_url": "https://traycer.ai/campaigns/free-gemini-carbon"
+      },
+      {
+        "name": "Traycer 官网",
+        "action_url": "https://traycer.ai/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Traycer",
+        "action_url": "https://traycer.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Gemini 4 Carbon（Traycer Inference）",
+        "action_url": "https://traycer.ai/campaigns/free-gemini-carbon"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "collected_at": "2026-11-11T06:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "pending",
+      "note": "未找到 Traycer 账号；领取需登录并在活动页点 Claim，限 500 份",
+      "at": "2026-11-11T06:05:00+08:00"
+    }
+  },
+  {
+    "id": "crowllm-gateway-free-shelf-53-models-20261111",
+    "title": "CrowLLM：新 API 网关「免费货架」53 个 :free 模型 $0 调用（免绑卡，OpenAI / Anthropic / Gemini 兼容）",
+    "platform": "CrowLLM",
+    "product": "CrowLLM API 网关",
+    "model": "53 个 :free 模型（如 qwen-3.8-27b:free、deepseek-v4.1-flash:free、longcat-2.5:free、gemma-4-31b-it:free）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://crowllm.com/",
+    "source": "X @crowllmapi 帖（2026-11-11 05:36 北京）；官网 crowllm.com/llms.txt；公开模型目录 crowllm.com/v1/models（2026-11-11 06:15 北京抓取）",
+    "summary": "据 X 上的报道（@crowllmapi）及官网 llms.txt：CrowLLM 是个人开发者做的托管 API 网关，一个 Key 调 200+ 模型，其中一批模型定价为 0 且长期保留，不用绑卡、没有试用倒计时；余额为 0 时也能调免费模型。OpenAI 兼容 base 为 https://crowllm.com/v1，Anthropic 客户端用 https://crowllm.com，Gemini 客户端用 https://crowllm.com/v1beta。我们匿名抓取 /v1/models 共 180 个模型，其中 53 个以 :free 结尾。新站、上游来源未公开，勿传敏感数据。",
+    "free_terms": "入口 crowllm.com 注册→建 API Key（可设消费上限、过期）；免绑卡；免费模型 id 以 :free 结尾（53 个）；OpenAI base https://crowllm.com/v1；有每分钟请求上限（官方未写具体数）；无截止。",
+    "claim_steps": [
+      "打开 crowllm.com 注册账号",
+      "创建 API Key，可设模型范围、IP 白名单、消费上限和过期时间",
+      "OpenAI SDK 的 base_url 设为 https://crowllm.com/v1",
+      "GET https://crowllm.com/v1/models 选 :free 结尾的模型调用"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册",
+        "detail": "在 CrowLLM 官网注册账号，免绑卡。",
+        "url": "https://crowllm.com/"
+      },
+      {
+        "step": "建 Key",
+        "detail": "Key 可限定模型列表、IP 白名单、消费上限和过期时间（据 llms.txt）。",
+        "url": "https://crowllm.com/docs/authentication"
+      },
+      {
+        "step": "配置接口",
+        "detail": "OpenAI 类客户端 https://crowllm.com/v1；Anthropic 类 https://crowllm.com（不要加 /v1）；Gemini 类 https://crowllm.com/v1beta。",
+        "url": "https://crowllm.com/llms.txt"
+      },
+      {
+        "step": "找免费模型",
+        "detail": "匿名 GET /v1/models 可看目录，id 以 :free 结尾的是 $0 模型（抓取时 53 个）。",
+        "url": "https://crowllm.com/v1/models"
+      },
+      {
+        "step": "注意风险",
+        "detail": "新上线的单人项目网关，上游来源未公开，有模型名含 uncensored；只作备用，勿传机密。",
+        "note": "第三方网关"
+      }
+    ],
+    "providers": [
+      {
+        "name": "CrowLLM",
+        "action_url": "https://crowllm.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "CrowLLM :free 模型目录",
+        "action_url": "https://crowllm.com/v1/models"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T06:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "pending",
+      "note": "未找到 CrowLLM 账号，可注册并建带消费上限和过期时间的 Key",
+      "at": "2026-11-11T06:05:00+08:00"
+    }
+  },
+  {
+    "id": "zoom-ai-launchpad-startup-credits-150k-20261111",
+    "title": "Zoom AI Launchpad：语音 / 对话 AI 创业公司申请最高 $150K Zoom AI Services 额度（$5K / $50K / $150K，12 个月）",
+    "platform": "Zoom",
+    "product": "Zoom AI Services（AI Launchpad 资助计划）",
+    "model": "Zoom 语音识别、翻译、摘要、Decisions、Voice Agent API",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://www.zoom.ai/ai-launchpad",
+    "source": "Zoom 官方新闻 news.zoom.com/zoom-ai-launchpad（2026-11-10）；GlobeNewswire 新闻稿；官网 zoom.ai/ai-launchpad；X @GPPY666 转述",
+    "summary": "据 Zoom 官方新闻（news.zoom.com）与 zoom.ai 官网：Zoom 11 月 10 日推出 AI Launchpad 资助计划，给以语音、语言或对话 AI 为核心的初创公司免费发放 Zoom AI Services 额度，不占股份。三档 $5,000 / $50,000 / $150,000，额度自发放起 12 个月有效，可用于语音转写、翻译、摘要、Decisions 和 Voice Agent 等 API。滚动审核、名额有限，按产品、团队、技术和进展评估；每个参与者限一次，受美国出口管制地区不可申请。",
+    "free_terms": "入口 zoom.ai/ai-launchpad 提交申请；门槛：以 AI 为核心的初创公司（有原型/产品或清晰路线），需审核；三档 $5K/$50K/$150K，12 个月有效；仅抵 Zoom AI Services；滚动审核、无公布截止。",
+    "claim_steps": [
+      "打开 zoom.ai/ai-launchpad 查看资格",
+      "准备产品、团队、技术方案和计划使用 Zoom AI Services 的说明",
+      "在页面提交申请，等待滚动审核",
+      "获批后额度加到 Build Platform Developer 账号，12 个月内使用"
+    ],
+    "claim_guide": [
+      {
+        "step": "看资格",
+        "detail": "面向以语音、语言或对话 AI 为核心的初创公司；融资阶段不是硬性要求。",
+        "url": "https://www.zoom.ai/ai-launchpad"
+      },
+      {
+        "step": "了解档位",
+        "detail": "Seed $5,000、Growth $50,000、Scale $150,000，由 Zoom 按情况分配。",
+        "url": "https://www.zoom.ai/ai-launchpad"
+      },
+      {
+        "step": "提交申请",
+        "detail": "在官网提交申请，如实填写 Zoom AI Services 的用途。",
+        "url": "https://www.zoom.ai/ai-launchpad",
+        "note": "名额有限，滚动审核"
+      },
+      {
+        "step": "获批后使用",
+        "detail": "额度进入 Build Platform Developer 账号的 Grant Plan，自发放起 12 个月有效。",
+        "url": "https://news.zoom.com/zoom-ai-launchpad/"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Zoom AI Launchpad",
+        "action_url": "https://www.zoom.ai/ai-launchpad"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Zoom AI Services",
+        "action_url": "https://www.zoom.ai/ai-launchpad"
+      }
+    ],
+    "scenes": [
+      "audio",
+      "voice",
+      "translate"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T06:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要以创业公司身份提交申请并经人工审核，不能自动领取",
+      "at": "2026-11-11T06:05:00+08:00"
+    }
   }
 ]
