@@ -24125,7 +24125,7 @@
     "free_terms": "如何领取：打开 openrouter.ai 注册账号 → Keys 页创建 API Key（需登录，一般免绑卡）→ 请求 model=stealth/crouton-alpha，base https://openrouter.ai/api/v1。受免费模型速率限制；隐身期提供方匿名，提示词/回复可能被提供方保留但不用于训练。结束日以 OpenRouter 定价页变为非 $0 为准（社区估约 11/11）。",
     "source": "X @okeyccronald + openrouter.ai/stealth/crouton-alpha",
     "collected_at": "2026-11-07T17:45:05+08:00",
-    "expired": false,
+    "expired": true,
     "providers": [
       {
         "name": "OpenRouter",
@@ -30689,6 +30689,319 @@
       "status": "failed",
       "note": "开源权重，直接到 Hugging Face 下载即可，没有需要领取的额度",
       "at": "2026-11-11T04:14:00+08:00"
+    }
+  },
+  {
+    "id": "coarena-free-model-api-5usd-daily-20261111",
+    "title": "Coarena 免费模型 API：每天 $5 用量由平台买单，22 个模型（含 Gemini 4 Carbon、Claude Opus 5.5、GPT-6.1）",
+    "platform": "Coarena",
+    "product": "Coarena Model API（Coasty）",
+    "model": "Gemini 4 Carbon · Claude Opus 5.5 / Sonnet 5.5 / Fable 5.2 · GPT-6.1 Sol/Terra · Kimi K3.1 Pro 等 22 个",
+    "type": "API",
+    "deadline": null,
+    "url": "https://coarena.ai/docs",
+    "source": "X @coastyai（2026-11-11 03:57 北京）；coarena.ai/docs 官方文档；api/v1/models 公开列表",
+    "source_post_id": "2120244488937590796",
+    "post_time_bj": "2026-11-11T03:57:33+08:00",
+    "summary": "据 X 上的报道：Coarena（YC S26，Coasty 旗下的电脑操作 Agent 评测平台）宣布 Gemini 4 Carbon 在其平台 $0 输入/$0 输出、免绑卡。coarena.ai 官方文档写明：免费 Model API 一个 Key 调用 22 个模型，每天 $5 的模型用量由 Coarena 支付，每分钟 30 次、并发 2；可通过 API 申请升到每天 $10。公开 /api/v1/models 列表中各模型 pricing 均为 0。",
+    "free_terms": "入口 coarena.ai/account/api（Continue with Google 登录）创建 Key；免绑卡；每天 $5 模型用量免费（官方称 Coarena pays），30 RPM、2 并发，账号可能另有每日请求上限；用满返回 429，可 POST /api/v1/limits/requests 申请 $10/天；OpenAI 兼容 base https://coarena.ai/api/v1，Anthropic 兼容 https://coarena.ai/api；未写截止日。",
+    "claim_steps": [
+      "打开 coarena.ai/account/api，用 Google 登录",
+      "在 API 页面创建 Key",
+      "OpenAI SDK 设 base_url=https://coarena.ai/api/v1（Anthropic SDK 用 https://coarena.ai/api）",
+      "model 填列表里的 id，如 gemini-4-carbon、claude-opus-5-5",
+      "用 GET /api/v1/limits 查看当日用量"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录",
+        "detail": "打开 Coarena 的 API 页面，点 Continue with Google 登录（页面只显示 Google 登录）。",
+        "url": "https://coarena.ai/account/api"
+      },
+      {
+        "step": "创建 Key",
+        "detail": "登录后在 API 页面创建个人 API Key，文档写明免费、无需绑卡。",
+        "url": "https://coarena.ai/docs",
+        "note": "Key 只在本地保存"
+      },
+      {
+        "step": "配置 base URL",
+        "detail": "OpenAI 兼容：https://coarena.ai/api/v1；Anthropic 兼容（Claude Code 等）：https://coarena.ai/api。"
+      },
+      {
+        "step": "选择模型",
+        "detail": "GET https://coarena.ai/api/v1/models 免 Key 可看 22 个 id，例如 gemini-4-carbon、claude-opus-5-5、gpt-6-1-sol、kimi-k3-1-pro。",
+        "url": "https://coarena.ai/api/v1/models"
+      },
+      {
+        "step": "注意限额",
+        "detail": "每天 $5 用量、30 次/分钟、2 并发；用满返回 429 insufficient_quota，可调用 /api/v1/limits/requests 申请 $10/天。",
+        "note": "免费额度由第三方平台补贴，可能随时调整"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Coarena",
+        "action_url": "https://coarena.ai/account/api"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Gemini 4 Carbon（Coarena）",
+        "action_url": "https://coarena.ai/models/gemini-4-carbon"
+      },
+      {
+        "name": "Claude Opus 5.5（Coarena）",
+        "action_url": "https://coarena.ai/models/claude-opus-5-5"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T05:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "已用 Google 登录，但建 key 前要同意 API 对话被永久保存并可能授权给他人做数据集，需你本人决定是否接受",
+      "at": "2026-11-11T05:13:00+08:00"
+    }
+  },
+  {
+    "id": "twigpine-opengateway-qwen38-max-flash-free-nov13-20261111",
+    "title": "Twigpine OpenGateway：Qwen 3.8 Max + Flash 限时 $0，到 11/13 08:00 北京（池子用完即止）",
+    "platform": "Twigpine OpenGateway",
+    "product": "Twigpine OpenGateway（原 Gitlawb）",
+    "model": "Qwen 3.8 Max · Qwen 3.8 Flash",
+    "type": "限时",
+    "deadline": "2026-11-13T08:00:00+08:00",
+    "url": "https://twigpine.com/opengateway/models/qwen/qwen3.8-max",
+    "source": "X @twigpine（2026-11-10 14:55 北京）；twigpine.com OpenGateway 模型页；api.twigpine.com/v1/models；Drix10 Blog 转述",
+    "source_post_id": "2120047640947917215",
+    "post_time_bj": "2026-11-10T14:55:20+08:00",
+    "summary": "据 X 上的报道：Twigpine 发布 OpenClaude 0.35 与 Zero 0.13，并把 OpenGateway 设为推荐 provider；Qwen 3.8 Max 和 Qwen 3.8 Flash 在 OpenGateway 上 $0 输入/$0 输出，到 11 月 13 日 00:00 UTC，池子用完为止。官方模型页标注「free for everyone until November 13 — no credits needed」，余额为 0 也能调用；公开 /v1/models 中两者 prompt/completion 价格均为 0。",
+    "free_terms": "入口 twigpine.com/console（可用 Google、X 或邮件链接登录）→ gateway keys 创建 ogw_live_ Key；免充值，零余额可调用；模型 qwen/qwen3.8-max（262K 上下文）与 qwen/qwen3.8-flash（1M 上下文）；OpenAI 兼容 https://api.twigpine.com/v1，也支持 Anthropic Messages；截止 2026-11-13 00:00 UTC（北京 08:00），免费池用完可能提前结束。",
+    "claim_steps": [
+      "打开 twigpine.com/console 登录（Google / X / 邮件链接）",
+      "进入 Gateway Keys 创建 Key",
+      "OPENAI_BASE_URL 设为 https://api.twigpine.com/v1",
+      "model 填 qwen/qwen3.8-max 或 qwen/qwen3.8-flash",
+      "在 11/13 08:00（北京）前使用"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录控制台",
+        "detail": "打开 Twigpine 控制台，页面写明可用 Google、X 或邮件链接登录。",
+        "url": "https://twigpine.com/console/signin?next=%2Fconsole%2Fgateway%2Fkeys"
+      },
+      {
+        "step": "创建 Key",
+        "detail": "在 Gateway → Keys 页面新建一个 Key（以 ogw_live_ 开头），可按项目分别创建、单独吊销。",
+        "url": "https://twigpine.com/console/gateway/keys"
+      },
+      {
+        "step": "配置接口",
+        "detail": "OpenAI 兼容 base URL：https://api.twigpine.com/v1；Anthropic SDK 也可指向该网关。",
+        "url": "https://twigpine.com/opengateway"
+      },
+      {
+        "step": "选择免费模型",
+        "detail": "model 填 qwen/qwen3.8-max 或 qwen/qwen3.8-flash；模型页标注 Billed $0，零余额可用。",
+        "url": "https://twigpine.com/opengateway/models/qwen/qwen3.8-flash"
+      },
+      {
+        "step": "注意截止",
+        "detail": "免费到 2026-11-13 00:00 UTC（北京时间 08:00），官方说 while the pool lasts，池子用完可能更早结束。",
+        "note": "不要用 model=auto，否则可能路由到收费模型"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Twigpine OpenGateway",
+        "action_url": "https://twigpine.com/console/gateway/keys"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenClaude / Zero",
+        "action_url": "https://twigpine.com/opengateway"
+      }
+    ],
+    "models": [
+      {
+        "name": "qwen/qwen3.8-max（OpenGateway）",
+        "action_url": "https://twigpine.com/opengateway/models/qwen/qwen3.8-max"
+      },
+      {
+        "name": "qwen/qwen3.8-flash（OpenGateway）",
+        "action_url": "https://twigpine.com/opengateway/models/qwen/qwen3.8-flash"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T05:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "已用 Google 注册并创建 key（控制台无额度上限和过期设置）",
+      "at": "2026-11-11T05:13:00+08:00"
+    }
+  },
+  {
+    "id": "hiapi-black-friday-deepseek-v41-flash-10m-daily-20261111",
+    "title": "HiAPI 黑五：11/24–11/30 每天免费 1000 万 DeepSeek V4.1 Flash Token（需至少充值过一次）",
+    "platform": "HiAPI",
+    "product": "HiAPI",
+    "model": "DeepSeek V4.1 Flash（deepseek-v4.1-flash）",
+    "type": "限时",
+    "deadline": "2026-12-01T15:59:00+08:00",
+    "url": "https://hiapi.ai/en/blog/free-deepseek-api-black-friday-2026",
+    "source": "hiapi.ai 官方博客（2026-11-10，中英文版）",
+    "summary": "据 hiapi.ai 官方博客：HiAPI 黑五活动在太平洋时间 11 月 24 日 00:00 至 11 月 30 日 23:59，凡至少成功充值过一次（金额不限）的账号，每天可免费用 1000 万 DeepSeek V4.1 Flash Token，每天 00:00 PT 重置、不结转；无需优惠码、无需排队；限 10 次/分钟、并发 2；OpenAI 兼容接口。",
+    "free_terms": "入口 hiapi.ai 注册并创建 Key；门槛：账号至少成功充值过一次（任意金额）；每账号每天 10M tokens（DeepSeek V4.1 Flash），00:00 PT 重置，当天未用不结转；10 RPM、2 并发；活动时间北京 11/24 16:00 – 12/01 15:59；base https://api.hiapi.ai/v1。",
+    "claim_steps": [
+      "在 hiapi.ai 注册账号并创建 API Key",
+      "活动开始前完成一次任意金额充值（这是领取门槛）",
+      "11/24 起把 base_url 设为 https://api.hiapi.ai/v1",
+      "model 填 deepseek-v4.1-flash，每天用完 1000 万 Token 内的额度"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读活动说明",
+        "detail": "看官方博客中的规则表：额度、资格、限速和起止时间。",
+        "url": "https://hiapi.ai/zh/blog/free-deepseek-api-black-friday-2026"
+      },
+      {
+        "step": "注册并建 Key",
+        "detail": "在 hiapi.ai 右上角 Get Started 注册，进入控制台创建 API Key。",
+        "url": "https://hiapi.ai/"
+      },
+      {
+        "step": "完成一次充值",
+        "detail": "资格是至少成功充值过一次，金额不限；这一步需要付款方式。",
+        "note": "需付费门槛，不适合纯白嫖"
+      },
+      {
+        "step": "调用",
+        "detail": "活动期间（北京时间 11/24 16:00 – 12/01 15:59）用 OpenAI 兼容接口 https://api.hiapi.ai/v1，model=deepseek-v4.1-flash。"
+      },
+      {
+        "step": "控制用量",
+        "detail": "每天 1000 万 Token、00:00 PT 重置、不结转；10 次/分钟、并发 2；超出部分按正常价 $0.44/$1.32 每百万计费。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "HiAPI",
+        "action_url": "https://hiapi.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "DeepSeek V4.1 Flash（HiAPI）",
+        "action_url": "https://hiapi.ai/en/blog/free-deepseek-api-black-friday-2026"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "deposit_hold"
+    ],
+    "collected_at": "2026-11-11T05:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要先在 HiAPI 充值过一次才能参加黑五免费额度，不花钱所以没领；活动北京 11/24 16:00 开始",
+      "at": "2026-11-11T05:10:00+08:00"
+    }
+  },
+  {
+    "id": "longcat-api-newuser-10m-tokens-realname-20261111",
+    "title": "美团 LongCat API 开放平台：LongCat-2.5 上线，新用户实名送 1000 万 Token（老用户 500 万）",
+    "platform": "美团 LongCat",
+    "product": "LongCat API 开放平台",
+    "model": "LongCat-2.5",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://www.aipromonow.com/promos/meituan-longcat-25-launch-free-tokens-nov2026",
+    "source": "AI 优惠雷达 aipromonow.com（据 LongCat 平台 11/2 上线公告整理）；LongCat 官方文档 longcat.chat/platform/docs",
+    "summary": "据 AI 优惠雷达（aipromonow.com）：美团 LongCat API 开放平台 11 月 2 日上线正式版 LongCat-2.5，新用户可得 1000 万免费 Token、老用户 500 万，完成个人实名认证后自动到账，命中缓存的请求不扣赠送额度。官方文档确认 LongCat-2.5 提供 OpenAI / Anthropic 兼容接口（1M 上下文、最大输出 256K），但我们抓到的官方更新日志与 FAQ 未写赠送数额，以控制台为准。",
+    "free_terms": "入口 longcat.chat 开放平台，手机号登录（非大陆用户可邮箱登录）；门槛：完成个人实名认证（大陆身份证）；新用户 1000 万 Token / 老用户 500 万，到账后在「用量管理」查看；OpenAI 兼容 https://api.longcat.chat/openai，Anthropic 兼容 https://api.longcat.chat/anthropic；截止日未公布。",
+    "claim_steps": [
+      "打开 LongCat API 开放平台，用手机号登录",
+      "在「账号信息及配置」完成个人实名认证",
+      "到「用量管理」确认赠送 Token 到账",
+      "在 API Keys 页面创建 Key",
+      "按文档用 OpenAI 或 Anthropic 兼容接口调用 LongCat-2.5"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录平台",
+        "detail": "访问 LongCat API 开放平台，用手机号验证码登录；非大陆用户可切换邮箱登录。",
+        "url": "https://longcat.chat/platform/"
+      },
+      {
+        "step": "实名认证",
+        "detail": "进入「账号信息及配置」→「实名认证」→「个人认证」，填写真实姓名和证件号码。",
+        "url": "https://longcat.chat/platform/docs/zh/faq",
+        "note": "需中国大陆身份信息"
+      },
+      {
+        "step": "确认额度",
+        "detail": "据 aipromonow，实名后赠送 Token 自动出现在「用量管理」；官方文档未写数额，以控制台为准。",
+        "url": "https://www.aipromonow.com/promos/meituan-longcat-25-launch-free-tokens-nov2026"
+      },
+      {
+        "step": "创建 Key",
+        "detail": "在 API Keys 页面点「创建 API Key」，Key 只显示一次，立即保存。",
+        "url": "https://longcat.chat/platform/docs/zh/"
+      },
+      {
+        "step": "调用",
+        "detail": "OpenAI 格式 https://api.longcat.chat/openai（/v1/chat/completions），Anthropic 格式 https://api.longcat.chat/anthropic，模型 LongCat-2.5。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "美团 LongCat",
+        "action_url": "https://longcat.chat/platform/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "LongCat-2.5（LongCat API）",
+        "action_url": "https://longcat.chat/platform/docs/zh/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account",
+      "need_phone"
+    ],
+    "collected_at": "2026-11-11T05:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要手机号和大陆实名认证，需你本人在 LongCat 开放平台完成",
+      "at": "2026-11-11T05:10:00+08:00"
     }
   }
 ]
