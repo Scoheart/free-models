@@ -5716,17 +5716,17 @@
   },
   {
     "id": "devin-swe2-free-extend-20261016",
-    "title": "Devin SWE-2：Pro/Max/Teams 免费期再延至约 11/1（仅 Desktop / CLI）",
+    "title": "Devin SWE-2：Self-serve 在 Desktop / CLI 免费延至 11/30",
     "model": "Cognition SWE-2（Medium / High / Max）",
     "type": "限时",
-    "deadline": "2026-11-01T23:59:59+08:00",
+    "deadline": null,
     "url": "https://x.com/Himalayas1989/status/2111019169240297948",
-    "summary": "社区多源称 Devin 官方 Discord（veritas）通知：自研编程模型 SWE-2 对 Pro / Max / Teams 用户在 Desktop（原 Windsurf）与 CLI 的免费促销再次延期，约用到 10 月底或 11 月 1 日；同时上线付费加速档 SWE-2 Lightning。注意：官网定价页仍写免费到 2026-10-16、文档写到 10-15，X 无官推，以端内模型列表 Free 标签为准。Cloud 会话不计入此次免费。条件：需有效 Pro（$20/月起）/ Max / Teams；仅 Desktop 与 CLI。",
-    "source": "x.com/@Himalayas1989/status/2111019169240297948（同日 @ScarletKc/@noah_z_zhang/@markfenner/@chneqi1 等；定价页 https://devin.ai/pricing 与 docs.devin.ai/desktop/models 尚未同步新截止日）",
+    "summary": "2026-11-10 复核 Devin 官方模型文档（标注截至 11/9）：SWE-2 在 Self-serve 计划的 Desktop 和 CLI 免费至 2026-11-30，不适用于 Devin Cloud 会话。最新官方日期替代旧社区约 11/1 的估算。具体结束时刻与时区未写明；这不是永久免费，也不应把 SWE-2 Flash 的 Free/Medium 资格直接套用到 SWE-2。",
+    "source": "原 X 社区线索保留；2026-11-10 按官方 https://docs.devin.ai/desktop/models 的 11/9 Self-serve 条款更新。",
     "collected_at": "2026-10-16T18:42:10+08:00",
     "expired": false,
     "source_post_id": "2111019169240297948",
-    "free_terms": "Pro/Max/Teams 在 Devin Desktop 与 CLI 免费用 SWE-2，社区称延至约 11/1；官网页仍写 10/16。不含 Cloud。另有付费 SWE-2 Lightning。",
+    "free_terms": "需能访问 SWE-2 的 Devin Self-serve 账号，在 Desktop / CLI 选择 SWE-2；官方免费日期延至 2026-11-30，但未写具体时刻和时区，故不填写推测的精确 deadline；原卡涉及 Pro / Max / Teams，当前账号套餐资格、用量限制与地区以模型选择器为准，Free 计划是否能选 SWE-2 本次未核实；不含 Cloud 会话或实时语音通话中的单独代理模型，不能把付费订阅本身当免费。",
     "product": "Devin Desktop / CLI — SWE-2",
     "providers": [
       {
@@ -5759,7 +5759,10 @@
     ],
     "barriers": [
       "need_client"
-    ]
+    ],
+    "docs_url": "https://docs.devin.ai/desktop/models",
+    "update_note": "用官方 11/30 替换旧约 11/1 估算，精确时区未知，deadline 留空。",
+    "updated_at": "2026-11-10T01:46:03Z"
   },
   {
     "id": "nvidia-nim-step5-preview-free-endpoint-20261016",
@@ -5878,24 +5881,20 @@
   },
   {
     "id": "reflection-beam-free-hosted-ollama-opencode-vercel-20261017",
-    "title": "Reflection Beam 免费托管调用：Ollama beam:cloud / OpenCode Zen beam-free / Vercel reflection/beam-free",
+    "title": "Reflection Beam：OpenCode / Vercel 仍限时免费，Ollama 渠道已付费",
     "model": "Reflection Beam 1.0（501B MoE / 23B 激活）",
     "type": "限时",
-    "deadline": "2026-11-09T16:01:00+08:00",
+    "deadline": null,
     "url": "https://x.com/ollama/status/2111087699574903061",
-    "summary": "Reflection 开源 Beam 1.0 后，多家平台同步上线免费托管版本：Ollama 官方宣布 beam:cloud 限时免费（美国托管、零数据保留，可用 `ollama launch claude --model beam:cloud` 接入 Claude Code，也支持 OpenCode / Hermes / OpenClaw）；OpenCode Zen 新增 Beam Free（beam-free），输入输出与缓存均免费，但不对中国大陆及港澳等地区开放，数据保留 30 天；Vercel AI Gateway 上架 reflection/beam-free（1M 上下文，最大输出 131K）。均未公布截止时间和额度上限。与已收录的 HF 开源权重条目不同，这里无需自备算力。 更新（11/8）：Ollama 模型页现已写明 beam:cloud 免费到北京时间 11/9 16:01，过后转为付费，脚本里写着 beam:cloud 的要提前换模型。",
-    "source": "x.com/ollama/status/2111087699574903061 + x.com/EastSavin/status/2111124822394847299 + x.com/aiptsd/status/2111130775160537397；核实 ollama.com/library/beam、opencode.ai/docs/zen、vercel.com/ai-gateway/models/beam-free",
+    "summary": "2026-11-10 逐渠道复核：Ollama beam:cloud 已按量收费，每百万输入 $0.125、缓存输入 $0.015、输出 $0.40。OpenCode beam-free 与 Vercel reflection/beam-free 官方仍标免费，未公布结束时间或具体总额度。Ollama 的结束日期不能用作整张多渠道卡片的截止时间。",
+    "source": "原 X 社区线索保留；2026-11-10 官方 https://ollama.com/pricing 、https://opencode.ai/docs/console/models/ 、https://vercel.com/ai-gateway/models/beam-free 逐渠道核实。",
     "collected_at": "2026-10-17T00:58:00+08:00",
     "expired": false,
     "source_post_id": "2111087699574903061",
-    "free_terms": "Ollama 官方页写明 beam:cloud 免费到 2026-11-09 00:01 PST（北京时间 11/9 16:01），之后按 $0.125/$0.40 每百万输入/输出计费。领取：ollama.com 注册登录 → Settings → Keys 建 API Key，或装 Ollama 后 `ollama launch claude --model beam:cloud`；OpenCode Zen 需 Console Key 且不对中国大陆/港澳开放；Vercel 需 AI Gateway Key。",
-    "product": "Ollama Cloud beam:cloud / OpenCode Zen beam-free / Vercel AI Gateway reflection/beam-free",
+    "free_terms": "OpenCode：在 OpenCode 内选择 beam-free，免费聊天模型不支持任意其他客户端；不对中国大陆、香港、澳门等官方列明地区开放，数据保留 30 天且不用于训练；Vercel：需账号及 AI Gateway Key，选择 reflection/beam-free，当前输入/输出免费，地区与支付验证要求本次未确定；两个免费渠道均未公布截止日及具体总额度，不能当作永久免费或无限量；Ollama beam:cloud 免费已结束，现每百万输入 $0.125、缓存输入 $0.015、输出 $0.40，不再提供免费领取入口。",
+    "product": "OpenCode beam-free / Vercel AI Gateway reflection/beam-free（Ollama 历史免费渠道已结束）",
     "post_time_bj": "2026-10-16T21:31:44+08:00",
     "providers": [
-      {
-        "name": "Ollama",
-        "action_url": "https://ollama.com/settings/keys"
-      },
       {
         "name": "OpenCode Zen",
         "action_url": "https://opencode.ai/zen"
@@ -5907,19 +5906,11 @@
     ],
     "agents": [
       {
-        "name": "Ollama",
-        "action_url": "https://ollama.com/download"
-      },
-      {
         "name": "OpenCode",
         "action_url": "https://opencode.ai/download"
       }
     ],
     "models": [
-      {
-        "name": "beam:cloud (Ollama)",
-        "action_url": "https://ollama.com/library/beam"
-      },
       {
         "name": "reflection/beam-free (Vercel)",
         "action_url": "https://vercel.com/ai-gateway/models/beam-free"
@@ -5939,7 +5930,10 @@
     ],
     "related_post_urls": [
       "https://x.com/vastplan/status/2119224036760621455"
-    ]
+    ],
+    "docs_url": "https://opencode.ai/docs/console/models/",
+    "update_note": "仅 Ollama 渠道免费结束；清除跨渠道误用的整体截止日，保留另两渠道并注明限制。",
+    "updated_at": "2026-11-10T01:46:03Z"
   },
   {
     "id": "openrouter-teleai-xing4-29b-a4b-free-20261017",
@@ -8028,18 +8022,18 @@
   },
   {
     "id": "perch-starter-20usd-monthly-free-20261019",
-    "title": "Perch AI Starter：免绑卡每月约 $20 用量（含 DeepSeek/GLM/Laguna；Beam 1.0 限时至 10/23）",
-    "model": "Laguna S 2.1、DeepSeek V4.1 Flash、GLM 5.3 Flash、Beam 1.0（至 10/23）等轮换前沿模型",
+    "title": "Perch AI Starter：免绑卡每月最高 20000 PT（约 $20 用量，模型轮换）",
+    "model": "Laguna S 2.1、DeepSeek V4.1 Flash、GLM 5.3 Flash；Qwen 3.8 Max 至 11/20 美东中午",
     "type": "额度",
     "deadline": null,
     "url": "https://x.com/xin5651/status/2112181698872140102",
-    "summary": "Perch AI 免费 Starter 计划无需绑卡，每月约 20000 PT（约 $20）托管模型用量，月初重置；当前池含 Laguna S 2.1、DeepSeek V4.1 Flash、GLM 5.3 Flash，Beam 1.0 免费至 10/23。经 Web/Desktop/CLI 使用，非公开 API；免费档默认可用于去标识化训练，需在设置关闭。官网定价页已核实。",
-    "source": "x @xin5651 福利快报；perchai.app/pricing 官网已核实 Starter Free、$20/月、Beam 至 Oct 23",
+    "summary": "2026-11-10 官方 Starter 文档确认：免费个人档免绑卡，每月最高 20000 PT（1 PT 对应 $0.001 托管用量），支持 Web / Desktop / CLI，无公开 API。当前列出 Laguna S 2.1、DeepSeek V4.1 Flash、GLM 5.3 Flash，Qwen 3.8 Max 活动至 11/20 美东中午。Beam 及 MiniMax M3.1 Flash 的 Starter 活动已结束。模型与额度受可用性及账号限制约束。",
+    "source": "原 X @xin5651 线索保留；2026-11-10 官方 https://www.perchai.app/docs/plans/starter 、https://www.perchai.app/docs/concepts/models 、https://www.perchai.app/docs/plans/model-promotions 复核。",
     "collected_at": "2026-10-19T22:52:00+08:00",
     "expired": false,
     "source_post_id": "2112181698872140102",
     "post_time_bj": "2026-10-19T21:58:54+08:00",
-    "free_terms": "Starter 免绑卡；每月最多约 $20 / 20000 PT，月初重置；Beam 1.0 限时至 2026-10-23；默认数据训练可关；仅 Web/Desktop/CLI，无公开 API。",
+    "free_terms": "注册 Starter，免绑卡，每月最高 20000 PT（约 $20 托管用量），按账户 Usage 查看实际额度和刷新，不是现金或无限量；仅 Web / Desktop / CLI，无公开 API；模型轮换，Qwen 3.8 Max 至 2026-11-20 12:00 美东（北京 11/21 01:00）；Beam 已于 10/23、MiniMax M3.1 Flash 已于 10/25 退出 Starter，不再算当前免费模型；Starter Data Program 在展示并确认通知后默认开启，可在 Privacy 关闭，可能用于衍生训练数据；地区资格及常规免费档截止日未在本次资料中明确。",
     "product": "Perch AI Starter",
     "providers": [
       {
@@ -8062,10 +8056,10 @@
       "coding",
       "chat"
     ],
-    "barriers": [
-      "zero_signup",
-      "need_client"
-    ]
+    "barriers": [],
+    "docs_url": "https://www.perchai.app/docs/plans/starter",
+    "update_note": "移除已结束 Beam 活动及“月初重置”未经当前文档明确的说法；不把“免绑卡”写成“免注册”。",
+    "updated_at": "2026-11-10T01:46:03Z"
   },
   {
     "id": "qoder-deepseek-v41-flash-1017-free-oct24-20261020",
@@ -10872,18 +10866,18 @@
   },
   {
     "id": "perch-minimax-m31-flash-stays-free-20261023",
-    "title": "Perch AI：MiniMax M3.1 Flash 其他平台免费期结束后，仍留在 Starter 免费档",
+    "title": "Perch AI Starter：MiniMax M3.1 Flash 免费活动已于 10/25 结束",
     "model": "MiniMax M3.1 Flash、DeepSeek V4.1 Flash（1017）",
     "type": "模型",
     "deadline": null,
     "url": "https://x.com/PerchTerminal/status/2113369564990046376",
-    "summary": "Perch AI 官方更新：OpenRouter、OpenCode 等平台的 MiniMax M3.1 Flash 免费期已经结束，但 Perch 的免费 Starter 计划会继续提供 MiniMax M3.1 Flash，同时还有 DeepSeek V4.1 Flash（1017）。官网定价页已核实：Starter 免费阵容为 Laguna S 2.1、DeepSeek V4.1 Flash、GLM 5.3 Flash、Beam 1.0（至 10/23）以及“限时”的 MiniMax M3.1 Flash，用量计入 Starter 每月约 $20 的免费额度。官方没给 M3.1 Flash 的截止时间。",
-    "source": "x @PerchTerminal（Perch AI 官方）；perchai.app/pricing 官网已核实",
+    "summary": "Perch 官方活动文档现确认：MiniMax M3.1 Flash 在 Starter 的免费活动仅从 2026-10-19 持续到 10-25，已退出 Starter。旧条目“其他平台结束后仍留在免费档”只反映当时状态，已不适合作为当前领取信息；Starter 常规免费额度仍在，见独立 Starter 条目。",
+    "source": "原 X @PerchTerminal 线索保留；2026-11-10 官方 https://www.perchai.app/docs/plans/model-promotions 与 https://www.perchai.app/announcements 明确活动在 10/25 结束。",
     "collected_at": "2026-10-23T05:50:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2113369564990046376",
     "post_time_bj": "2026-10-23T04:39:03+08:00",
-    "free_terms": "注册 Perch 免费 Starter 即可，无需绑卡；用量计入每月约 $20（20000 PT）免费额度；MiniMax M3.1 Flash 标注为限时，未公布截止时间；仅 Web/Desktop/CLI，无公开 API。",
+    "free_terms": "MiniMax M3.1 Flash 的 Starter 免费活动已于 2026-10-25 结束，无法再按本条领取；官方未写当天精确时刻与时区，deadline 留空并标记过期；Starter 其他模型与月额度以现行 Starter 文档为准。",
     "product": "Perch AI Starter",
     "providers": [
       {
@@ -10908,7 +10902,10 @@
     ],
     "barriers": [
       "zero_signup"
-    ]
+    ],
+    "docs_url": "https://www.perchai.app/docs/plans/model-promotions",
+    "update_note": "按官方 Past promotions 标记过期，不误把 Starter 整体免费档标为结束。",
+    "updated_at": "2026-11-10T01:46:03Z"
   },
   {
     "id": "canva-craft-image-model-free-20261023",
@@ -11034,18 +11031,18 @@
   },
   {
     "id": "ollama-cloud-free-plan-monthly-starter-credits-20261023",
-    "title": "Ollama Cloud 免费账号：每月送入门额度，可用入门云模型并直连 Claude Code / Codex",
+    "title": "Ollama Cloud：免费月度入门额度已结束，云模型改为按量付费",
     "model": "Ollama Cloud 入门模型（如 gpt-oss、gemma4、glm-5.3-flash 等，以官网为准）",
     "type": "额度",
     "deadline": null,
     "url": "https://x.com/hodu382759/status/2113448823590990305",
-    "summary": "Ollama 免费账号除本地无限跑模型外，还附带一份云端入门额度，只能用部分入门模型，从注册日起每月刷新、不结转，同时只能跑 1 个请求。可用 ollama launch claude 等命令一键接入 Claude Code、Codex、OpenCode，适合本地显卡不够时试用。充值后可解锁全部云模型。",
-    "source": "x @hodu382759；Ollama 官方定价页已核实",
+    "summary": "2026-11-10 复核 Ollama 官方定价页：原免费云端入门额度已不再提供。无订阅费的 Pay as you go 方案对云模型按 token 付费，当前支持 3 并发；每月包含用量属于付费 Pro / Max / Team。V2EX 转述通知称 11/9 切换，当前官方页未保留历史生效日期。本地运行不收云调用费，仍需自己的硬件。",
+    "source": "原 X @hodu382759 线索保留；2026-11-10 官方 https://ollama.com/pricing 确认现行按量计费；https://www.v2ex.com/t/1253066 原帖转述 11/9 切换（日期未获当前官方页独立确认）。",
     "collected_at": "2026-10-23T10:50:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2113448823590990305",
     "post_time_bj": "2026-10-23T09:54:00+08:00",
-    "free_terms": "免费账号含入门用量额度（具体额度官网未写明），按注册日每月重置；仅入门模型；并发 1。长期政策。",
+    "free_terms": "无订阅费不等于免费云推理；云模型按次消耗 usage credits，当前无免费月度入门额度；支付方式、注册及地区资格以账户页面为准；本地自托管不受这次云端收费变化影响；原优惠已过期，精确终止时间不作推测。",
     "product": "Ollama Cloud",
     "providers": [
       {
@@ -11076,7 +11073,13 @@
     "barriers": [
       "need_key",
       "need_client"
-    ]
+    ],
+    "docs_url": "https://ollama.com/pricing",
+    "related_post_urls": [
+      "https://www.v2ex.com/t/1253066"
+    ],
+    "update_note": "撤回“长期免费月额度、并发 1”旧政策；本地模型使用不受影响。",
+    "updated_at": "2026-11-10T01:46:03Z"
   },
   {
     "id": "antigravity-promo-ai-pro-opus55-argon-20261023",
@@ -11608,18 +11611,18 @@
   },
   {
     "id": "mistral-api-free-mode-no-card-20261023",
-    "title": "Mistral API Free mode：注册即可建 Key，免绑卡调用（限速/月额度）",
+    "title": "Mistral Free mode：原免费 API 已失效，仅含 Vibe / Studio 月度试用",
     "model": "Mistral API（Free mode）",
     "type": "API",
     "deadline": null,
     "url": "https://x.com/AionVoid/status/2113605265639530681",
-    "summary": "社区提醒并经 Mistral 官方文档核实：新账号默认 Free mode，无需绑卡即可在 Studio 创建 API Key 调用 api.mistral.ai；有用量与速率限制（RPS/每分钟 token/每月 token，具体数字仅在 Admin→Limits 页可见）。官方写明免费模式可能用于训练，适合原型与试 prompt，敏感数据勿用。定价页曾写的「$10/月 API credits」文案已于 10/7 前后撤下，当前以账户 Limits 为准。",
-    "source": "X @AionVoid；docs.mistral.ai Free mode 已核实",
+    "summary": "2026-11-10 复核 Mistral 官方文档：Free mode 仅含试用 Vibe 和 Studio 的月度用量，不包含 API 访问；创建 API Key 和调用 API 需要激活计费及 pay-as-you-go。此前“注册即可免绑卡调用 API”的信息已失效。免费预算金额、地区、旧账号例外及原 API 免费政策的精确结束时间未核实。",
+    "source": "原 X @AionVoid 线索保留；2026-11-10 复核官方 https://docs.mistral.ai/admin/billing-usage/usage-limits 及 API Key 快速入门；Reddit 社区反馈仅作线索。",
     "collected_at": "2026-10-23T20:45:15+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2113605265639530681",
     "post_time_bj": "2026-10-23T20:15:38+08:00",
-    "free_terms": "Free mode 默认开启，免绑卡；限速与月用量见账户 Limits；无公布截止。",
+    "free_terms": "原免费 API 政策已失效；API 需计费激活与 pay-as-you-go，快速入门要求有 API 访问资格并添加支付方式；Vibe / Studio 的月度试用不等于免费 API；原优惠标记过期，未臆造终止日期。",
     "product": "Mistral AI Studio / API Free mode",
     "providers": [
       {
@@ -11644,7 +11647,14 @@
     ],
     "barriers": [
       "need_key"
-    ]
+    ],
+    "docs_url": "https://docs.mistral.ai/admin/billing-usage/usage-limits",
+    "related_post_urls": [
+      "https://www.reddit.com/r/MistralAI/comments/1xkz7bn/subscription_between_free_and_pro/",
+      "https://www.reddit.com/r/MistralAI/comments/1w3j46c/free_plan_explanation/"
+    ],
+    "update_note": "官方明确 Free mode 不含 API；原免费 API 条目过期，未以个别旧账号反馈覆盖现行规则。",
+    "updated_at": "2026-11-10T01:46:03Z"
   },
   {
     "id": "nomask-minimax-m31-flash-free-plus-20261023",
@@ -16213,20 +16223,24 @@
   },
   {
     "id": "ifm-k2-horizon-free-10m-daily-20261108",
-    "title": "MBZUAI IFM：K2 Horizon 375B 推理模型免费 API，每个 Key 每天 1000 万 Token",
+    "title": "MBZUAI IFM：K2 Horizon API 每 Key 每日上限 1000 万 Token，免费性待官方确认",
     "model": "IFM/K2-Horizon-375B-A23B（K2 Horizon 375B-A23B，512K 上下文）",
     "type": "API",
     "deadline": null,
     "url": "https://x.com/okeyccronald/status/2119452022915129697",
-    "summary": "阿联酋 MBZUAI 旗下基础模型研究所 IFM 的托管 API 平台，免费提供开源 K2 Horizon 375B（MoE，23B 激活，512K 上下文）推理模型。官方 Limits 文档写明：每个 API Key 每天 1000 万 Token（输入输出合并），UTC 00:00（北京时间早 8 点）重置，超额返回 429；平台无收费方案，也未写截止日期。OpenAI 兼容接口，支持流式、工具调用、JSON 输出。注意推理 token 也计入额度，请求发往境外。",
-    "free_terms": "如何领取：到 https://platform.ifm.ai 注册账号，进 API Keys 页（platform.ifm.ai/api-keys）创建 Key；base URL 填 https://api.ifm.ai/v1，model 填 IFM/K2-Horizon-375B-A23B（官方建议 temperature 1.0、top_p 0.95）。文档未提绑卡或收费。额度：每个 Key 每天 1000 万 Token，北京时间早 8 点重置，超额 429。另有未公开的分钟级限流。官方未写截止日，政策可能调整。",
-    "source": "X @okeyccronald；官方文档 https://docs.ifm.ai/docs/limits.md 与 https://docs.ifm.ai/docs/quickstart.md 核实",
+    "summary": "MBZUAI IFM 官方 Limits 文档确认每个 API Key 每天最多 1000 万 Token（输入输出合计），UTC 00:00（北京时间 08:00）重置，超额返回 429；这属于用量上限，不能据此认定为免费额度。Quickstart 和模型目录确认 K2 Horizon 375B-A23B 托管 API、512K 上下文及 OpenAI 兼容接口。本次读取的公开文档未明确承诺 API 免费，也未说明收费或绑卡要求、地区范围和免费到期时间，均待官方确认；开源权重不等于免费托管推理。",
+    "free_terms": "待核实：免费性、收费或绑卡要求、可注册地区及免费到期时间均未在本次读取的官方文档中明确，使用前先向 IFM 核实，勿视为永久免费；已确认的用量上限：每 Key 每日 1000 万 Token（输入输出合计），UTC 00:00 / 北京时间 08:00 重置，超额 429，另有数值未公开的分钟级限制；接入需 IFM Platform API Key，base URL 为 https://api.ifm.ai/v1，model 为 IFM/K2-Horizon-375B-A23B，官方建议 temperature 1.0、top_p 0.95。",
+    "source": "原收录线索：X @okeyccronald；2026-11-10 读取官方 https://docs.ifm.ai/docs/limits.md 、https://docs.ifm.ai/docs/quickstart.md 、https://docs.ifm.ai/docs/model-catalog.md ，仅核实用量上限和接入方式，未找到明确免费承诺。",
     "collected_at": "2026-11-08T23:46:00+08:00",
     "expired": false,
     "source_post_id": "2119452022915129697",
     "post_time_bj": "2026-11-08T23:28:34+08:00",
     "product": "IFM Platform（MBZUAI Institute of Foundation Models）",
     "providers": [
+      {
+        "name": "IFM Limits（先核实免费性）",
+        "action_url": "https://docs.ifm.ai/docs/limits.md"
+      },
       {
         "name": "IFM Platform（创建 API Key）",
         "action_url": "https://platform.ifm.ai/api-keys"
@@ -16249,7 +16263,10 @@
     ],
     "barriers": [
       "need_key"
-    ]
+    ],
+    "docs_url": "https://docs.ifm.ai/docs/limits.md",
+    "updated_at": "2026-11-10T01:46:03Z",
+    "update_note": "撤回“免费 API”“平台无收费方案”的无依据断言；每日 token 上限不等于免费承诺。付款要求、地区与免费到期时间保留未知。"
   },
   {
     "id": "velork-hobby-2000-free-ai-credits-20261108",
@@ -16453,5 +16470,49 @@
       "deposit_hold"
     ],
     "terms_url": "https://docs.sailresearch.com/pricing"
+  },
+  {
+    "id": "devin-swe2-flash-self-serve-free-20261110",
+    "title": "Devin SWE-2 Flash：Free 可用 Medium，限时免费至北京 12/5 02:00",
+    "model": "SWE-2 Flash（Medium / High / Max）",
+    "type": "限时",
+    "deadline": "2026-12-04T18:00:00Z",
+    "url": "https://linux.do/t/topic/3124278",
+    "summary": "LinuxDo 11/5 讨论 Cognition 的 SWE-2 Flash 发布。2026-11-10 复核 Devin 官方 11/9 模型文档：Self-serve 的免费期已延至 2026-12-04 18:00 UTC（北京 12/5 02:00），Free 计划可选 Medium，High / Max 需付费计划。仅 Devin Desktop / CLI，不含 Cloud。以最新文档为准，不沿用发布博客的旧 11/30 日期。",
+    "source": "LinuxDo Liu.su 原帖；官方 https://cognition.com/blog/swe-2-flash 与 https://docs.devin.ai/desktop/models 交叉核实，截止按较新官方模型文档。",
+    "collected_at": "2026-11-10T01:46:03Z",
+    "expired": false,
+    "source_post_id": "linuxdo-3124278",
+    "free_terms": "注册 Devin 账号，使用 Desktop / CLI 并选择 SWE-2 Flash；Free 计划可用 Medium，High / Max 需付费计划，不代表付费订阅免费；Self-serve 模型免费至 2026-12-04 18:00 UTC（北京时间 12/5 02:00），不是永久免费；具体请求/token 上限、Free 是否需验卡及适用地区本次未核实，请以账号模型选择器和官方条款为准；不含 Cloud 会话或实时语音通话的单独代理模型，Enterprise 另有折扣规则，不能套用本活动。",
+    "product": "Devin Desktop / CLI · SWE-2 Flash",
+    "providers": [
+      {
+        "name": "Devin 官方模型与活动条款",
+        "action_url": "https://docs.devin.ai/desktop/models"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Devin Desktop",
+        "action_url": "https://devin.ai/desktop"
+      },
+      {
+        "name": "Devin CLI",
+        "action_url": "https://docs.devin.ai/cli/index"
+      }
+    ],
+    "models": [
+      {
+        "name": "SWE-2 Flash 官方发布",
+        "action_url": "https://cognition.com/blog/swe-2-flash"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "docs_url": "https://docs.devin.ai/desktop/models"
   }
 ]
