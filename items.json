@@ -30385,9 +30385,9 @@
     "collected_at": "2026-11-11T04:05:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "pending",
-      "note": "待自动申请",
-      "at": "2026-11-11T04:25:00+08:00"
+      "status": "failed",
+      "note": "只在 fal Playground 免费出图，API 照常收费，无 key 可领，未自动申请",
+      "at": "2026-11-11T04:14:00+08:00"
     }
   },
   {
@@ -30465,9 +30465,9 @@
     "collected_at": "2026-11-11T04:05:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "pending",
-      "note": "待自动申请",
-      "at": "2026-11-11T04:25:00+08:00"
+      "status": "needs_user",
+      "note": "已用 Google 登录建好账号，但进控制台前必须填手机号，需你本人在 api.onysoft.com/complete-profile 填手机号后再建 key",
+      "at": "2026-11-11T04:14:00+08:00"
     }
   },
   {
@@ -30533,9 +30533,9 @@
     "collected_at": "2026-11-11T04:05:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "pending",
-      "note": "待自动申请",
-      "at": "2026-11-11T04:25:00+08:00"
+      "status": "success",
+      "note": "OpenRouter 已有账号和 key，直接用现有 key 调 parallel/decisions-fast:free 即可，无需新领",
+      "at": "2026-11-11T04:14:00+08:00"
     }
   },
   {
@@ -30609,9 +30609,9 @@
     "collected_at": "2026-11-11T04:05:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "pending",
-      "note": "待自动申请",
-      "at": "2026-11-11T04:25:00+08:00"
+      "status": "needs_user",
+      "note": "只限从没用过 Google Cloud 的账号，你的 Gmail 已开过 AI Studio 计费，大概率不符合；要领需你本人用新 Gmail 试",
+      "at": "2026-11-11T04:14:00+08:00"
     }
   },
   {
@@ -30686,9 +30686,9 @@
     "collected_at": "2026-11-11T04:05:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "pending",
-      "note": "待自动申请",
-      "at": "2026-11-11T04:25:00+08:00"
+      "status": "failed",
+      "note": "开源权重，直接到 Hugging Face 下载即可，没有需要领取的额度",
+      "at": "2026-11-11T04:14:00+08:00"
     }
   }
 ]
