@@ -27,6 +27,67 @@
     return Number.isNaN(t) ? false : t < now;
   }
 
+  function isSuperseded(item) {
+    if (item.superseded === true || item.is_superseded === true) return true;
+    var by = item.superseded_by != null ? item.superseded_by : item.supersededBy;
+    if (by == null || by === false) return false;
+    return String(by).trim() !== "";
+  }
+
+  function redactSecrets(s) {
+    var out = String(s);
+    out = out.replace(/\b(?:sk|pk|rk|ak|ghp|gho|github_pat)_[A-Za-z0-9_\-]{8,}/g, "[redacted]");
+    out = out.replace(/\b(?:sk|pk|rk|ak)-[A-Za-z0-9_\-]{12,}/g, "[redacted]");
+    out = out.replace(
+      /((?:api[_-]?key|access[_-]?token|refresh[_-]?token|token|secret|password)\s*[:=]\s*)\S+/gi,
+      "$1[redacted]"
+    );
+    out = out.replace(/\bBearer\s+[A-Za-z0-9._\-]{8,}/gi, "Bearer [redacted]");
+    return out;
+  }
+
+  function clipText(s, max) {
+    var t = String(s).replace(/\s+/g, " ").trim();
+    if (t.length <= max) return t;
+    return t.slice(0, max).replace(/[\s,，。；;、]+$/g, "") + "\u2026";
+  }
+
+  function autoClaimView(item) {
+    var ac, status, note, at;
+    ac = item && item.auto_claim;
+    if (!ac || typeof ac !== "object" || Array.isArray(ac)) return null;
+    status = String(ac.status == null ? "" : ac.status).trim().toLowerCase();
+    note = ac.note == null ? "" : clipText(redactSecrets(String(ac.note)), 240);
+    at = ac.at == null ? "" : clipText(redactSecrets(String(ac.at)), 48);
+    if (status === "success") return { kind: "success", label: "已自动领取", note: note, at: at };
+    if (status === "failed") return { kind: "failed", label: "自动申请失败", note: note, at: at };
+    if (status === "needs_user") return { kind: "needs-user", label: "需要你本人操作", note: note, at: at };
+    return null;
+  }
+
+  function renderAutoClaim(item) {
+    var view, badge, note, visible;
+    view = autoClaimView(item);
+    if (!view) return { badge: "", note: "" };
+    badge = '<span class="auto-claim ' + view.kind + '">' + escapeHtml(view.label) + "</span>";
+    note = "";
+    if (view.note || view.at) {
+      note = '<p class="auto-claim-note">';
+      if (view.note) {
+        visible = clipText(view.note, 42);
+        note +=
+          '<span class="auto-claim-text" title="' +
+          escapeHtml(view.note) +
+          '">' +
+          escapeHtml(visible) +
+          "</span>";
+      }
+      if (view.at) note += '<span class="auto-claim-at">' + escapeHtml(view.at) + "</span>";
+      note += "</p>";
+    }
+    return { badge: badge, note: note };
+  }
+
   function sortKey(item) {
     var c = item.collected_at || item.collectedAt || item.created_at || item.scraped_at;
     var t = c ? Date.parse(c) : NaN;
@@ -128,6 +189,7 @@
     }
 
     var stepsHtml = renderSteps(steps);
+    var ac = renderAutoClaim(item);
 
     var goHtml = href
       ? '<a class="go" href="' +
@@ -148,9 +210,13 @@
 
     return (
       '<article class="card">' +
+      '<div class="title-row">' +
       '<h2 class="card-title">' +
       escapeHtml(title) +
       "</h2>" +
+      ac.badge +
+      "</div>" +
+      ac.note +
       stepsHtml +
       deadlineHtml +
       '<div class="card-actions">' +
@@ -165,7 +231,7 @@
   var all = Array.isArray(ITEMS) ? ITEMS : [];
   var active = all
     .filter(function (it) {
-      return it && typeof it === "object" && !isExpired(it, now);
+      return it && typeof it === "object" && !isExpired(it, now) && !isSuperseded(it);
     })
     .slice()
     .sort(function (a, b) {
