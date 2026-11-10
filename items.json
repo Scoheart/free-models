@@ -31149,9 +31149,9 @@
     "collected_at": "2026-11-11T06:05:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "pending",
-      "note": "未在 registered-accounts / Gmail 找到 Maritaca 账号，可尝试注册并建 Key",
-      "at": "2026-11-11T06:05:00+08:00"
+      "status": "success",
+      "note": "已用 Google 注册并建 Key（上限 R$1/月，无过期选项），可调用 S5-free",
+      "at": "2026-11-11T06:20:00+08:00"
     }
   },
   {
@@ -31234,9 +31234,9 @@
     "collected_at": "2026-11-11T06:05:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "pending",
-      "note": "未找到 Traycer 账号；领取需登录并在活动页点 Claim，限 500 份",
-      "at": "2026-11-11T06:05:00+08:00"
+      "status": "success",
+      "note": "已用 Google 登录并领到 $100 Gemini 额度，仅限 Traycer 应用内用，北京时间 11/13 03:29 到期",
+      "at": "2026-11-11T06:20:00+08:00"
     }
   },
   {
@@ -31307,9 +31307,9 @@
     "collected_at": "2026-11-11T06:05:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "pending",
-      "note": "未找到 CrowLLM 账号，可注册并建带消费上限和过期时间的 Key",
-      "at": "2026-11-11T06:05:00+08:00"
+      "status": "success",
+      "note": "已用 Google 注册并建 Key（额度 $1，11/18 过期）",
+      "at": "2026-11-11T06:20:00+08:00"
     }
   },
   {
