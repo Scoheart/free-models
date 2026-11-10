@@ -15,24 +15,37 @@ INDEX_TMPL = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<meta name="description" content="免费 AI 模型与额度汇总"/>
-<meta name="color-scheme" content="light dark"/>
+<meta name="description" content="按平台汇总正在进行的免费 AI 模型与额度，附领取步骤。"/>
+<meta name="color-scheme" content="light"/>
 <title>免费模型</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111113'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='16' fill='%238b8bf5'%3EF%3C/text%3E%3C/svg%3E"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f6e62'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='16' font-family='Georgia' fill='%23ffffff'%3EF%3C/text%3E%3C/svg%3E"/>
 <link rel="stylesheet" href="./styles.css?v=__CACHE_V__"/>
 </head>
 <body>
-<main class="wrap">
-<header class="hero">
+<div class="app">
+<header class="top">
+<div class="brand">
+<p class="eyebrow">进行中的免费额度</p>
 <h1>免费模型</h1>
-<p class="lead">汇总正在免费的 AI 模型与额度，最新的在上面。</p>
+<p class="lead">按平台查看还没过期的模型、额度和领取步骤。离截止最近的平台排在前面。</p>
+</div>
+<p class="stats" id="stats" aria-live="polite"></p>
 </header>
-<div class="list" id="list" aria-live="polite"></div>
-<footer class="foot">数据来自公开帖子，领取前请自行核对官方条款。</footer>
-</main>
+<div class="layout">
+<aside class="sidebar">
+<div class="search-wrap" role="search">
+<label class="sr" for="q">搜索平台或活动</label>
+<input id="q" type="search" placeholder="搜索平台、模型或条款" autocomplete="off" spellcheck="false"/>
+</div>
+<p class="legend" aria-hidden="true"><span class="dot success"></span>已领取<span class="dot needs-user"></span>待操作<span class="dot failed"></span>失败</p>
+<label class="sr" for="platform-select">选择平台</label>
+<select id="platform-select" class="platform-select"></select>
+<div id="tabs" class="tabs" role="tablist" aria-label="平台"></div>
+</aside>
+<main id="detail" class="detail"></main>
+</div>
+<footer class="foot">数据来自公开帖子，领取前请自行核对官方条款。页面不展示 API Key。</footer>
+</div>
 <script src="./data.js?v=__CACHE_V__"></script>
 <script src="./app.js?v=__CACHE_V__"></script>
 </body>
