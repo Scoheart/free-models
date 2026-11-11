@@ -33815,9 +33815,9 @@
     "collected_at": "2026-11-12T04:35:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "pending",
-      "note": "已有 AI Studio 账号和免费档 Key，待用现有 Key 测一次 gemini-decision-1",
-      "at": "2026-11-12 04:35 北京"
+      "status": "success",
+      "note": "已有 AI Studio 账号和免费档 key，免费档直接可用，无需新领；Decisions API 调用格式未确认，未实测。",
+      "at": "2026-11-12T04:25:00+08:00"
     }
   },
   {
@@ -33901,9 +33901,9 @@
     "collected_at": "2026-11-12T04:35:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "pending",
-      "note": "待自动申请：Google 登录 Synap 并创建 API Key",
-      "at": "2026-11-12 04:35 北京"
+      "status": "failed",
+      "note": "本机浏览器访问 synap402.com 证书报错，HTTP 跳到阿里云安全验证页，未登录、未建 key，下轮再试。",
+      "at": "2026-11-12T04:30:00+08:00"
     }
   },
   {
@@ -33975,9 +33975,9 @@
     "collected_at": "2026-11-12T04:35:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "pending",
-      "note": "已有 Respan 账号和 Key（11/11 建，$1 上限、11/18 过期），待用现有 Key 测 meta/muse-ember:free",
-      "at": "2026-11-12 04:35 北京"
+      "status": "success",
+      "note": "已有 Respan 账号（11/11 Google 注册），免费线路直接可用；之前 key 明文未取回，本轮未实测。",
+      "at": "2026-11-12T04:25:00+08:00"
     }
   },
   {
