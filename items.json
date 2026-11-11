@@ -430,7 +430,7 @@
     "summary": "OpenRouter 上 inception/mercury-decide:free 输入输出均为 $0，走 /v1/systemone 结构化决策接口（非普通 chat completions），带校准概率，适合分流/评分场景。OpenRouter :free；System One 端点；受 OpenRouter 免费档日请求与速率限制。",
     "source": "phylera14",
     "collected_at": "2026-10-09T17:23:25+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2108376695241949465",
     "product": "Inception Mercury Decide",
     "providers": [
@@ -482,7 +482,9 @@
         "step": "验证是否成功",
         "detail": "用环境变量里的 Key 调一次目标模型。若返回正常内容或明确的限流错误（而不是 401/模型不存在），说明账号和 Key 可用。免费名单变化很快，失败时先回模型页看是否还是 $0"
       }
-    ]
+    ],
+    "expired_reason": "inception/mercury-decide 已从 OpenRouter 模型列表下架（2026-11-11 13:15 北京核对 /api/v1/models）",
+    "expired_at": "2026-11-11T13:30:00+08:00"
   },
   {
     "id": "openrouter-free-collection-20261009",
@@ -4065,12 +4067,12 @@
   },
   {
     "id": "nace-console-drex-25-credit-20261013",
-    "title": "Nace Console：新账号送 $25 API 额度（Drex 决策模型 + 文档智能 NDI）",
+    "title": "Nace Console：符合条件的新账号送 $5 API 额度（3 个月有效，Drex 决策模型 + 文档处理）",
     "model": "Drex 2.0 / Drex 1.5（开源权重）、Nace Document Intelligence 1.0",
     "type": "额度",
     "deadline": null,
     "url": "https://x.com/MAXdeg0/status/2109731683326980216",
-    "summary": "Nace 的开发者控制台 Console 一个 API Key 同时调用 Drex（给每个选项输出校准概率的小型决策模型，适合路由、分类、工具选择）和 NDI（解析/拆分/分类/抽取/溯源 36 种文件）。新账号 $25 额度，30 天内有效；Drex 1.5 权重可免费自部署；官网 FAQ 写明：新账号自带 $25 额度，创建后 30 天过期，之后按量充值；Drex 1.5 权重已在 GitHub/Hugging Face 开放可自部署；可通过 MCP、CLI、Python/TS SDK 接入 Claude Code、Codex、Cursor、opencode；帖主附的优惠码 MAX-1 称可再加 $10，未经官方核实。",
+    "summary": "Nace 的开发者控制台 Console 一个 API Key 同时调用 Drex 决策模型（给每个选项输出校准概率，适合路由、分类、工具选择）和文档处理（解析、拆分、分类、抽取）。据 Nace 官网定价页（2026-11-11 13:20 北京核对）和模真真 11/10 报道，注册赠款已从早先的 $25 改为 $5：符合条件的新账号获 $5 额度，有效期 3 个月，所有调用共用这一余额，之后按量充值。据模真真报道，可用 Google、注册满 30 天的 GitHub 账号或邮箱加验证非预付银行卡注册；同一邮箱只送一次、临时邮箱不送，同一网络或同一公司邮箱域名每 24 小时各限 3 个账号获赠。不打开 Auto-pay 就不会超额扣费。Drex 1.5 权重可在 GitHub / Hugging Face 免费自部署。",
     "source": "MAXdeg0（官网 nace.ai/developers 核实 $25 额度条款）",
     "collected_at": "2026-10-13T03:55:00+08:00",
     "expired": false,
@@ -4120,7 +4122,8 @@
         "step": "验证是否成功",
         "detail": "回到控制台查看免费额度、余额、模型列表或订单/密钥列表，确认对应项目已经出现。如果是 API，把密钥放到环境变量里，按官方文档发一条最小请求。能正常返回即表示领取成功"
       }
-    ]
+    ],
+    "terms_updated_at": "2026-11-11T13:30:00+08:00"
   },
   {
     "id": "autoclaw-weekly-perks-glm53-flash-20261013",
@@ -8879,7 +8882,7 @@
     "summary": "中国电信 AI 团队（TeleAI，TeleChat 系列后继）的开源 MoE 模型 Xing4.0-29B-A4B 已在 OpenRouter 上架免费版 xingchen-agi/xing4.0-29b-a4b:free，输入输出均为 0 元，262K 上下文、最长输出约 236K，支持工具调用、结构化输出和推理开关。OpenRouter :free 版本，输入输出免费；权重同时在 Hugging Face 以 Apache-2.0 开放；OpenRouter 免费模型有每日请求次数限制，未公布下线时间。限额：需 OpenRouter 账号与 API Key，受 OpenRouter 免费模型每日限额约束。未公布截止时间。",
     "source": "x.com/Chahatusharma/status/2111176501198721120；核实 openrouter.ai/api/v1/models（pricing 0/0，created 2026-10-17 03:04 北京时间）、huggingface.co/XingChen-AGI/Xing4.0-29B-A4B",
     "collected_at": "2026-10-17T03:52:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2111176501198721120",
     "product": "OpenRouter xingchen-agi/xing4.0-29b-a4b:free",
     "post_time_bj": "2026-10-17T03:24:36+08:00",
@@ -8937,7 +8940,9 @@
         "step": "验证是否成功",
         "detail": "用环境变量里的 Key 调一次目标模型。若返回正常内容或明确的限流错误（而不是 401/模型不存在），说明账号和 Key 可用。免费名单变化很快，失败时先回模型页看是否还是 $0"
       }
-    ]
+    ],
+    "expired_reason": "xingchen-agi/xing4.0-29b-a4b:free 已从 OpenRouter 模型列表下架（2026-11-11 13:15 北京核对）",
+    "expired_at": "2026-11-11T13:30:00+08:00"
   },
   {
     "id": "deepseek-search-api-claude-code-codex-free-2weeks-20261017",
@@ -15718,7 +15723,7 @@
     "summary": "OpenRouter 已上架 Base Labs 决策模型 baseten/mammoth-1，适合路由/分类/打分。OpenRouter :free 端点 $0；受免费速率限制；需 API Key；OpenRouter 已上架 Base Labs 决策模型 baseten/mammoth-1:free（27B）与 baseten/elephant-1:free（9B），页面标价 $0/M，16K 上下文，走 Decisions API（非 chat completions）；社区同步称 Baseten/Vercel 渠道免费到约 10/27。截止：未在 OR 页写死，可能随 Baseten 一周促销结束，OpenRouter :free 页未写死截止日期，受免费端点速率限制（未充值约 50 次/天）。",
     "source": "X @Decoded08；OpenRouter 模型页 https://openrouter.ai/baseten/mammoth-1:free",
     "collected_at": "2026-10-22T15:44:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2113171042944352613",
     "post_time_bj": "2026-10-22T15:30:12+08:00",
     "product": "OpenRouter",
@@ -15744,7 +15749,9 @@
     ],
     "barriers": [
       "need_key"
-    ]
+    ],
+    "expired_reason": "baseten/mammoth-1 与 elephant-1 已从 OpenRouter 模型列表下架（2026-11-11 13:15 北京核对）",
+    "expired_at": "2026-11-11T13:30:00+08:00"
   },
   {
     "id": "codex-day17-global-usage-reset-20261022",
@@ -29657,7 +29664,7 @@
     "product": "Hetzner Experiments Inference API",
     "model": "Qwen/Qwen3.6-35B-A3B-FP8 等开源模型",
     "type": "API",
-    "deadline": null,
+    "deadline": "2026-12-08T23:59:59+01:00",
     "url": "https://experiments.hetzner.com/docs/inference",
     "source": "Hetzner 官方社区教程 community.hetzner.com/tutorials/opencode-with-hetzner-inference-api-systemd-sandbox（作者 Hetzner Online，2026-07-15）；社区工具包 github.com/stdevMac/hetzner-inference README（称 free while experimental）；觉醒AI知识库 jxxy.net 2026-11-09 报道",
     "summary": "据 Hetzner 官方社区教程，Hetzner Experiments 提供 OpenAI 兼容的推理 API（base https://inference.hetzner.com/api/v1），在 experiments.hetzner.com 的 Inference 应用里建 Token 即可用，教程示例模型 Qwen/Qwen3.6-35B-A3B-FP8。社区工具包 README 和 jxxy.net 报道称实验期免费、无 SLA、数据在欧盟，限额约每 60 秒 1000 万输入 / 20 万输出 token，模型还包括 DeepSeek-V4-Flash、GLM-5.2、Kimi-K2.7-Code 等；“免费”与限额未在可抓取的官方页面直接看到（官方文档页需 JS/登录）。截止：实验期免费（据社区工具包/报道），限额约 1000 万输入+20 万输出 token/60 秒，无 SLA、可能随时关停，无公布截止日。",
@@ -29728,12 +29735,14 @@
       "need_key"
     ],
     "collected_at": "2026-11-11T09:05:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "needs_user",
       "note": "Hetzner 账号不支持 Google 登录，需你本人用邮箱密码注册（可能还要身份或付款验证）后在 Experiments → Inference 建 token。",
       "at": "2026-11-11T09:15:00+08:00"
-    }
+    },
+    "expired_reason": "Hetzner 11/4 邮件通知：实验版不再发放新 Token，旧 Base URL 11/10 停用，实验 12/8 结束并转正式付费产品（LINUX DO 转载原文、EMIT Solution 更新说明，2026-11-11 13:15 北京核对）；新用户已无法领取",
+    "expired_at": "2026-11-11T13:30:00+08:00"
   },
   {
     "id": "modal-for-builders-compute-credits-20261111",
@@ -30608,5 +30617,156 @@
       "note": "开源权重，直接到 Hugging Face 下载即可，没有需要领取的额度",
       "at": "2026-11-11T12:15:00+08:00"
     }
+  },
+  {
+    "id": "freeai-30k-tokens-daily-free-api-20261111",
+    "title": "Free.ai：注册确认邮箱后每天 3 万免费 Token，附 OpenAI 兼容 API（每月 1000 次请求）",
+    "platform": "Free.ai",
+    "product": "Free.ai API",
+    "model": "qwen7b 等自托管模型",
+    "type": "API",
+    "deadline": null,
+    "url": "https://free.ai/api",
+    "source": "X @jhl880617（2026-11-11 12:20 北京）；free.ai 首页、定价页、API 文档（2026-11-11 13:25 北京抓取）",
+    "source_post_id": "2120371168779645198",
+    "summary": "据 X 上的报道并经 Free.ai 官网核实，Free.ai 是聚合 400 多个 AI 工具的平台，自己在 GPU 上跑 Qwen、FLUX、Kokoro、Whisper 等开源模型，也转接 GPT、Claude、Gemini 等外部模型。注册并确认邮箱后每天发 30,000 Token 免费额度，24 小时重置，不累积；未注册的匿名用户每天只有 6,000。免费额度可用于聊天、生图、语音、转写等，生成视频每两天限 1 条。免费档的 API 每月 1,000 次请求、每分钟 60 次，免费池主要覆盖自托管模型，调用 GPT、Claude 等外部模型会按 1.5 倍成本折算成 Token，很快耗尽。不用绑卡，官方写明可商用，没有公布截止日期。",
+    "claim_steps": [
+      "打开 free.ai/signup，用 Google、Microsoft 或邮箱注册",
+      "到邮箱点确认链接，解锁每天 30,000 Token",
+      "进入 API 页面生成 sk-free- 开头的 Key",
+      "按 API 文档调用 api.free.ai 的 /v1/chat/，模型选自托管模型（如 qwen7b）最省额度"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册账号",
+        "detail": "打开注册页，选 Continue with Google、Continue with Microsoft，或填邮箱和密码注册",
+        "url": "https://free.ai/signup/",
+        "note": "不需要信用卡"
+      },
+      {
+        "step": "确认邮箱",
+        "detail": "到注册邮箱里点 Free.ai 发来的确认链接，确认后每天 30,000 Token 才会生效",
+        "url": "https://free.ai/signup/",
+        "note": "未确认邮箱只有匿名额度 6,000/天"
+      },
+      {
+        "step": "生成 API Key",
+        "detail": "登录后进入 API 页面，生成 sk-free- 开头的 Key",
+        "url": "https://free.ai/api",
+        "note": "免费档每月 1,000 次 API 请求、每分钟 60 次"
+      },
+      {
+        "step": "调用自托管模型",
+        "detail": "按 API 文档向 api.free.ai 的 /v1/chat/ 发请求，model 填 qwen7b 等自托管模型；生图等接口也在同一文档里",
+        "url": "https://free.ai/api",
+        "note": "外部模型（GPT、Claude 等）按 1.5 倍成本扣 Token，免费额度很快用完"
+      },
+      {
+        "step": "查看额度",
+        "detail": "在定价页可对照每种工具的 Token 消耗，每日免费额度 24 小时重置",
+        "url": "https://free.ai/pricing",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "Free.ai",
+        "action_url": "https://free.ai/signup/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Free.ai 自托管模型（Qwen / FLUX / Whisper 等）",
+        "action_url": "https://free.ai/api"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "image",
+      "audio"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T13:30:00+08:00",
+    "expired": false,
+    "auto_claim": null
+  },
+  {
+    "id": "radoxai-free-tier-500k-tokens-monthly-20261111",
+    "title": "Radox AI：免费档每月 50 万 Token（免绑卡，OpenAI 兼容网关，33 个模型）",
+    "platform": "Radox AI",
+    "product": "Radox AI API",
+    "model": "全部聊天模型",
+    "type": "API",
+    "deadline": null,
+    "url": "https://radoxai.com/pricing",
+    "source": "X @Shohank9n1（2026-11-11 12:12 北京）；radoxai.com 首页与定价页（2026-11-11 13:20 北京抓取）",
+    "source_post_id": "2120369134781538418",
+    "summary": "据 X 上的报道并经 Radox AI 定价页核实，Radox AI 是第三方 OpenAI 兼容网关，自称一个接口可调 Claude、GPT、Gemini、DeepSeek 等 33 个模型。免费档 Free Forever 每月 50 万 Token（提示词加回复合计），每分钟 80 次请求、10 万 Token，可用全部聊天模型，支持流式、工具调用和图片输入，不用绑卡，每月重置。额度用完后按各模型单价从账户余额扣费，余额为 0 时返回 402，不会自动扣款。注意它是第三方转接服务，付费档宣称 4.5 美元 1 亿 Token、无限量等价格远低于官方，来源和稳定性无法核实，不要传敏感数据。没有公布截止日期。",
+    "claim_steps": [
+      "打开 radoxai.com/register，用 Google 或 GitHub 注册（手机号选填）",
+      "登录后在控制台创建 API Key",
+      "base_url 填 https://radoxai.com/v1，模型名从 Models 页选",
+      "在定价页或控制台查看每月 50 万免费 Token 的用量"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册",
+        "detail": "打开注册页，选 Sign up with Google 或 Sign up with GitHub，也可填邮箱密码注册",
+        "url": "https://radoxai.com/register",
+        "note": "手机号是选填项，不用绑卡"
+      },
+      {
+        "step": "创建 Key",
+        "detail": "登录后按文档的 Getting Started 在控制台创建 API Key",
+        "url": "https://radoxai.com/docs",
+        "note": ""
+      },
+      {
+        "step": "选模型",
+        "detail": "在模型目录挑选要用的聊天模型，复制模型 ID",
+        "url": "https://radoxai.com/models",
+        "note": "所有模型都按免费档 50 万 Token/月统一计量"
+      },
+      {
+        "step": "调用",
+        "detail": "任意 OpenAI SDK 或编码工具里 base_url 填 https://radoxai.com/v1，填入 Key 和模型 ID",
+        "url": "https://radoxai.com/docs",
+        "note": "第三方转接服务，勿传敏感数据"
+      },
+      {
+        "step": "留意用量",
+        "detail": "免费额度用完后会按单价扣余额，余额为 0 时返回 402；每月自动重置",
+        "url": "https://radoxai.com/pricing",
+        "note": "不要充值也不会被扣费"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Radox AI",
+        "action_url": "https://radoxai.com/register"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Radox AI 模型目录",
+        "action_url": "https://radoxai.com/models"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T13:30:00+08:00",
+    "expired": false,
+    "auto_claim": null
   }
 ]
