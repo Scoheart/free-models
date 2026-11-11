@@ -31513,5 +31513,173 @@
       "note": "OpenCode Console 登录页之前几轮都打不开，本轮未重试；客户端里可直接选用 beam-free",
       "at": "2026-11-11 17:15 北京"
     }
+  },
+  {
+    "id": "kiro-first-pro-upgrade-rest-of-month-free-500-trial-credits-20261111",
+    "title": "Kiro：首次从免费版升级 Pro，当月剩余天数免费 + 500 试用 Credits（12 个月有效，需绑卡）",
+    "platform": "AWS Kiro",
+    "product": "Kiro Pro 免费试用",
+    "model": "Claude Opus 5.5 / Claude Sonnet 5.5 / Kimi K3 等 Kiro 内置模型",
+    "type": "Agent",
+    "deadline": null,
+    "url": "https://kiro.dev/blog/kiros-new-free-trial-gives-you-500-extra-credits/",
+    "source": "Kiro 官方博客《Kiro’s new free trial gives you 500 extra credits》、Kiro Pricing 页与 Billing 文档（2026-11-11 18:20 北京抓取）；据 X 上的报道（@itsjdraven、@DineshK02902282、@shakirbuilds，11/11）",
+    "summary": "Kiro 是 AWS 推出的 AI 编程 IDE。官方博客和定价页写明，从 2026 年 11 月 1 日起免费试用规则改为：Kiro Free 用户第一次升级到付费套餐时，当月剩下的时间 Pro 免费，首张账单要到下个月 1 日才出；另外再送 500 个试用 Credits，12 个月内有效，在套餐 Credits 用完后才扣。套餐费和套餐 Credits 都按升级时刻到月底的剩余秒数折算：Pro 原价每月 $20、1,000 Credits，比如 11 月 15 日 00:00 UTC 升级，可得约 533 个套餐 Credits 加 500 试用 Credits，费用 $0；越早升级拿到的套餐 Credits 越多。若一开始就选 Pro+、Pro Max 或 Power，免费的 Pro 月份可以抵扣，只需付差价。据 X 上的报道，Kiro 内可用 Claude Opus 5.5、Claude Sonnet 5.5、Kimi K3 等模型。门槛：升级付费套餐必须绑定有效信用卡；只限第一次升级，以后再升级不会再送免费月；退回免费版后未用完的试用 Credits 会保留，但只能用于免费档模型。注意：不取消的话下月 1 日起按原价自动扣费；额度只能在 Kiro 客户端 / CLI 里用，不是通用 API。",
+    "claim_steps": [
+      "登录 Kiro 免费账号（kiro.dev 下载 IDE 或打开账号订阅页）",
+      "在订阅 / Plans 页面选择 Pro（或更高套餐）并绑定信用卡完成结账，费用显示 $0",
+      "确认套餐 Credits 与 500 试用 Credits 已到账",
+      "如只想白嫖本月，在下月 1 日前回订阅页取消续订"
+    ],
+    "claim_guide": [
+      {
+        "step": "准备 Kiro 免费账号",
+        "detail": "打开 Kiro 官网下载并登录 IDE，或用已有的 Kiro Free 账号登录（支持 Google / GitHub / AWS Builder ID 等方式，以登录页为准）",
+        "url": "https://kiro.dev/",
+        "note": "只有第一次从免费版升级才有免费月"
+      },
+      {
+        "step": "查看试用规则",
+        "detail": "阅读定价页的 Free trial 说明，确认按剩余秒数折算的套餐 Credits 与 500 试用 Credits",
+        "url": "https://kiro.dev/pricing/",
+        "note": "越早升级，拿到的当月套餐 Credits 越多"
+      },
+      {
+        "step": "进入订阅页升级",
+        "detail": "在 Kiro 账号的订阅 / Plans 页面选择 Pro（或 Pro+ 等更高档位），进入结账",
+        "url": "https://kiro.dev/pricing/",
+        "note": "按钮位置以页面为准"
+      },
+      {
+        "step": "绑卡结账",
+        "detail": "填写有效信用卡信息，确认结账金额为 $0（选更高档位则只付差价）",
+        "url": "https://kiro.dev/docs/billing/",
+        "note": "必须绑卡"
+      },
+      {
+        "step": "确认 Credits 到账",
+        "detail": "回到 Kiro IDE 或账号页查看套餐 Credits 与 500 试用 Credits，在模型选择里切换 Claude Opus 5.5 / Sonnet 5.5 等模型使用",
+        "url": "https://kiro.dev/docs/billing/",
+        "note": "试用 Credits 在套餐 Credits 用完后才扣"
+      },
+      {
+        "step": "按需取消续订",
+        "detail": "如不想付费，在下月 1 日前到订阅页取消，避免按 $20/月 自动扣费",
+        "url": "https://kiro.dev/docs/billing/",
+        "note": "退回免费版后试用 Credits 仅能用于免费档模型"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Kiro",
+        "action_url": "https://kiro.dev/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Kiro 模型文档",
+        "action_url": "https://kiro.dev/docs/models/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_card",
+      "need_client",
+      "new_user_only"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-11T18:40:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "升级 Kiro Pro 必须绑定信用卡并结账（金额 $0，下月 1 日起自动按 $20/月 扣费），需要你本人决定并操作；Gmail 里没有找到 Kiro 账号邮件",
+      "at": "2026-11-11 18:40 北京"
+    }
+  },
+  {
+    "id": "ucloud-astraflow-newuser-50-yuan-credit-20261111",
+    "title": "UCloud 星图 AstraFlow：新客注册 + 实名领 50 元算力金（一个 Key 调 200+ 模型，每人限领一张）",
+    "platform": "UCloud 优刻得",
+    "product": "AstraFlow 星图（ModelVerse）",
+    "model": "DeepSeek / 通义千问 / Kimi / GLM / MiniMax 等 200+ 模型",
+    "type": "API",
+    "deadline": null,
+    "url": "https://www.ucloud.cn/site/active/astraflow-credit",
+    "source": "UCloud 官方「星图 · 新客 50 元算力金补贴计划」活动页、AstraFlow 星图产品页与「双11 AI 算力嘉年华」活动页（2026-11-11 18:25 北京抓取）；AI 优惠雷达（aipromonow.com）双十一 AI 优惠专场、白嫖 BaiPiao、AI Hive 羊毛站",
+    "summary": "AstraFlow 星图（控制台里叫 ModelVerse）是优刻得 UCloud 的大模型聚合平台，用一个 API Key 通过 OpenAI 兼容接口调用 DeepSeek、通义千问、Kimi、智谱 GLM、MiniMax、豆包、混元、文心、讯飞星火等 200 多款模型。UCloud 官方活动页写明：新客注册并完成实名认证即可领取 50 元算力金（星力卡），每人限领限兑一张，名额有限、先到先得；双 11 期间 UCloud「AI 算力嘉年华」页面也在推这项福利。算力金用于抵扣模型调用费用，不是现金、不能提现，也不是固定 Token 数，能用多久取决于所选模型的价格。据白嫖 BaiPiao 介绍，算力金卡密会发到邮箱，领完还要按邮件指引兑换才会到账；官方未公布活动截止日、卡密兑换期限和到账后的有效期，也没写清哪些模型可以抵扣。门槛：仅限 UCloud 新客，必须完成实名认证（国内实名）；平台按量计费，算力金用完后会按量扣费。",
+    "claim_steps": [
+      "打开 UCloud 星图新客 50 元算力金活动页，注册 / 登录 UCloud 账号",
+      "完成实名认证",
+      "回到活动页点击领取 50 元算力金，到邮箱查收卡密并按指引兑换",
+      "在控制台模型服务平台（ModelVerse）创建 API Key",
+      "OpenAI 兼容客户端 base_url 填 https://api.modelverse.cn（文档写法为 https://api.modelverse.cn/v1），model 填控制台模型列表里的完整模型 ID"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开活动页",
+        "detail": "进入 UCloud 星图「新客 50 元算力金补贴计划」页面",
+        "url": "https://www.ucloud.cn/site/active/astraflow-credit",
+        "note": "名额有限，先到先得"
+      },
+      {
+        "step": "注册并实名",
+        "detail": "注册或登录 UCloud 优刻得账号，在账号中心完成实名认证",
+        "url": "https://www.ucloud.cn/",
+        "note": "需国内实名认证"
+      },
+      {
+        "step": "领取算力金",
+        "detail": "回到活动页点击领取 50 元算力金（星力卡），每人限领限兑一张",
+        "url": "https://www.ucloud.cn/site/active/astraflow-credit",
+        "note": "按钮位置以页面为准"
+      },
+      {
+        "step": "邮箱兑换卡密",
+        "detail": "到注册邮箱查收算力金卡密邮件，按邮件说明在控制台兑换，确认账户里的算力金已到账",
+        "url": "https://www.ucloud.cn/site/active/astraflow-credit",
+        "note": "领卡不等于已到账，记得兑换"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "登录控制台，进入模型服务平台（AstraFlow / ModelVerse），一键创建 API Key",
+        "url": "https://www.ucloud.cn/site/active/astraflow",
+        "note": ""
+      },
+      {
+        "step": "接入调用",
+        "detail": "在 OpenAI 兼容客户端里把 base_url 换成 https://api.modelverse.cn（文档写法 https://api.modelverse.cn/v1），填入 Key，model 从控制台模型列表复制完整 ID",
+        "url": "https://www.ucloud.cn/site/active/astraflow",
+        "note": "先发短请求看扣费"
+      }
+    ],
+    "providers": [
+      {
+        "name": "UCloud 星图 AstraFlow",
+        "action_url": "https://www.ucloud.cn/site/active/astraflow"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "cn_account",
+      "need_realname",
+      "new_user_only",
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T18:40:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "领取 50 元算力金必须完成 UCloud 国内实名认证，需要你本人操作；Gmail 里没有找到 UCloud 账号邮件",
+      "at": "2026-11-11 18:40 北京"
+    }
   }
 ]
