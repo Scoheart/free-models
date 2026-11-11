@@ -6442,15 +6442,15 @@
   },
   {
     "id": "docker-sandboxes-250-credit-20261015",
-    "title": "Docker Cloud Sandboxes：新注册送 $250 算力额度（至 10/31）",
+    "title": "Docker Cloud Sandboxes：新注册送 $250 沙箱算力额度，活动延长至 2027/1/31（需绑卡）",
     "model": null,
     "type": "额度",
-    "deadline": "2026-10-31T23:59:00-07:00",
+    "deadline": "2027-02-01T15:59:00+08:00",
     "url": "https://www.docker.com/c/sbx-promo/",
-    "summary": "Docker Agentic Platform 限时：2026-09-22 至 10/31 PT 23:59 新注册用户一次性获 $250 Cloud Sandbox 算力额度（替代默认 $25）。$250 沙箱算力，领取后 6 个月过期；不含模型 API 费用；按秒计费沙箱 CPU/内存；模型 API 与 Agent 订阅另计，不含在 $250 内；每用户/账号限一次。需绑卡，超出额度才扣款。截止北京时间 2026-11-01 14:59。",
-    "source": "x.com/@KevinWwwrz/status/2110556921828950406",
+    "summary": "Docker 的云端沙箱（每个沙箱是一台带独立内核的 microVM，让 AI 编程 Agent 在云上持续跑任务）新用户赠金活动延长了：官方活动页现写明，2027 年 1 月 31 日（美西时间）前注册 Docker Agentic Platform 即得 $250 算力额度，替代平时的 $25。按 Medium 规格（4 vCPU、8GB，每小时 $0.28）算，大约能 4 个 Agent 并行每天跑 7 小时跑满 30 天。据 X 上的报道，额度领取后 6 个月过期。门槛：注册时必须绑信用卡，超出额度的部分才扣费；只限新注册用户。限制：只抵沙箱算力，模型 API 和 Agent 订阅费用另算。截止：北京时间 2027 年 2 月 1 日 15:59。",
+    "source": "Docker 官方活动页 docker.com/c/sbx-promo（2026-11-11 19:10 北京抓取）；据 X 上的报道（@fngq171155，11/11）",
     "collected_at": "2026-10-15T10:41:11+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2110556921828950406",
     "product": "Docker Cloud Sandboxes",
     "providers": [
@@ -6470,9 +6470,55 @@
       "coding"
     ],
     "barriers": [
-      "deposit_hold",
-      "need_key"
-    ]
+      "need_card",
+      "new_user_only"
+    ],
+    "platform": "Docker",
+    "claim_steps": [
+      "打开 Docker Sandboxes 活动页，点 Claim my $250 credit",
+      "注册 Docker Agentic Platform 账号",
+      "按要求绑定信用卡完成注册",
+      "在控制台确认 $250 额度到账后创建云沙箱"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开活动页",
+        "detail": "进入 Docker Sandboxes 促销页，点击 Claim my $250 credit",
+        "url": "https://www.docker.com/c/sbx-promo/",
+        "note": ""
+      },
+      {
+        "step": "注册账号",
+        "detail": "注册或登录 Docker 账号，开通 Docker Agentic Platform",
+        "url": "https://www.docker.com/c/sbx-promo/",
+        "note": "只限新注册"
+      },
+      {
+        "step": "绑卡",
+        "detail": "按页面要求填写信用卡信息完成注册",
+        "url": "https://www.docker.com/c/sbx-promo/",
+        "note": "超出额度才扣费"
+      },
+      {
+        "step": "确认额度",
+        "detail": "在账单 / Credits 页面确认 $250 已到账",
+        "url": "https://www.docker.com/c/sbx-promo/",
+        "note": ""
+      },
+      {
+        "step": "创建沙箱",
+        "detail": "按 Docker Sandboxes 文档创建云端沙箱，把 Claude Code、Codex 等编程 Agent 放进去跑",
+        "url": "https://docs.docker.com/",
+        "note": "规格越大扣得越快"
+      }
+    ],
+    "category": "agents",
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "注册时必须绑定信用卡，需要你本人决定并操作",
+      "at": "2026-11-11 19:15 北京"
+    },
+    "updated_at": "2026-11-11T19:15:00+08:00"
   },
   {
     "id": "ling-3.1-flash-mit-open-weights-20261015",
@@ -31680,6 +31726,528 @@
       "status": "needs_user",
       "note": "领取 50 元算力金必须完成 UCloud 国内实名认证，需要你本人操作；Gmail 里没有找到 UCloud 账号邮件",
       "at": "2026-11-11 18:40 北京"
+    }
+  },
+  {
+    "id": "qwen-code-1x-qoder-login-500-free-credits-20261111",
+    "title": "Qwen Code 1.0 Preview：用 Qoder 账号登录领 500 免费 Credits（Qwen Code 专属，30 天有效，11/11–11/24 可领）",
+    "platform": "Qoder",
+    "product": "Qwen Code 1.0 Preview（Qoder 登录）",
+    "model": "Qwen4-Max-Preview 等 Qoder 账号可用模型（以客户端为准）",
+    "type": "限时",
+    "deadline": "2026-11-24T23:59:59+08:00",
+    "url": "https://linux.do/t/topic/3155773",
+    "source": "LINUX DO 帖《qwen code 1.x preview + qoder auth 可以领 500 credit》（Qwen Code 贡献者 sorrycc，11/11 16:00 北京）；GitHub QwenLM/qwen-code v1.0.0-preview 发布说明；据 X 上的报道（@NFT_Chen、@ShuaiMaLong、@hjdiandian，11/11）",
+    "summary": "阿里 11 月 11 日发布开源编程 Agent「Qwen Code 1.0 Preview」，把 Qoder 的 Agent 运行框架并入 Qwen Code，新版支持用 Qwen 账号或 Qoder 账号登录。LINUX DO 上 Qwen Code 贡献者 sorrycc 分享：装 1.x 预览版后用 Qoder 账号登录并关联 GitHub，就会到账 500 Credits，不用绑卡、不用付费。据 X 上的报道和截图，这批是 Qwen Code 专属额度，30 天有效（约 12 月 11 日过期），领取窗口为 11 月 11 日至 24 日，可用来跑 Qwen4 等模型。注意：这不是官方公告，官方文档和 GitHub 发布说明都没写赠送额度；只有 1.x 预览版才有 Qoder 登录入口，旧版 0.x 没有；需要 Qoder 账号并关联 GitHub；额度只能在 Qwen Code 里用，不是可导出的 API Key。另外 dev.to 评测提醒，Qwen 官方 OAuth 免费档 2026 年 4 月已结束，额度用完后要自己接付费模型。",
+    "claim_steps": [
+      "安装 Qwen Code 1.x 预览版（官方 GitHub v1.0.0-preview 下载对应系统安装包，或用贡献者给的安装脚本）",
+      "终端里运行 qwen",
+      "在 Qwen Code 里输入 /auth，选择 Qoder 登录",
+      "按提示在浏览器登录 Qoder 账号，如未关联 GitHub 就关联一下",
+      "回到 Qwen Code 查看 Credits 是否到账，再选模型开始用"
+    ],
+    "claim_guide": [
+      {
+        "step": "下载 1.x 预览版",
+        "detail": "打开 Qwen Code 的 GitHub Releases，下载 v1.0.0-preview 对应系统的原生安装包；也可以用 LINUX DO 帖子里的安装脚本 curl -fsSL https://qwen-code.oss-accelerate.aliyuncs.com/install.sh | bash",
+        "url": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview",
+        "note": "必须是 1.x，0.x 没有 Qoder 登录入口"
+      },
+      {
+        "step": "启动 Qwen Code",
+        "detail": "在任意项目目录的终端里运行 qwen",
+        "url": "https://qwenlm.github.io/qwen-code-docs/1.x/zh/users/overview/",
+        "note": ""
+      },
+      {
+        "step": "选择 Qoder 登录",
+        "detail": "输入 /auth，在账号列表里选 Qoder，按提示在浏览器中登录 Qoder 账号",
+        "url": "https://qoder.com/",
+        "note": "Qoder 支持 Google / GitHub 等方式登录，以登录页为准"
+      },
+      {
+        "step": "关联 GitHub",
+        "detail": "如果 Qoder 账号还没关联 GitHub，按页面提示完成关联",
+        "url": "https://qoder.com/",
+        "note": "帖子说关联后才到账"
+      },
+      {
+        "step": "确认到账",
+        "detail": "回到 Qwen Code 查看账号 Credits，确认 500 Credits 到账后再开始任务",
+        "url": "https://linux.do/t/topic/3155773",
+        "note": "非官方渠道消息，以实际到账为准"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Qwen Code 1.0 Preview",
+        "action_url": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview"
+      },
+      {
+        "name": "Qoder",
+        "action_url": "https://qoder.com/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-11T19:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在你自己电脑装 Qwen Code 1.x，终端里 /auth 选 Qoder 登录并关联 GitHub 才到账",
+      "at": "2026-11-11 19:20 北京"
+    }
+  },
+  {
+    "id": "antigravity-scientists-program-adds-gemini-4-carbon-20261111",
+    "title": "Google Antigravity 科研人员计划扩容：获批者最高用量档免费 6 个月，现含 Gemini 4 Carbon + Argon",
+    "platform": "Google Antigravity",
+    "product": "Google Antigravity · Scientists program",
+    "model": "Gemini 4 Carbon / Gemini 4 Argon（Antigravity 最高用量档）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+    "source": "Google 官方博客《Gemini 4 Carbon is now available》（2026-11-11）；机器之心 11/11 报道",
+    "summary": "Google 11 月 11 日全面开放 Gemini 4 Carbon（官方称目前能力最强、专做长周期复杂任务的模型）。官方博客写明：四周前开放的科研人员计划（给 1 万名科学家在 Google Antigravity 里免费用 Argon 6 个月，已有数千人入选）现在把 Carbon 也加进来，现有和新入选的人都能用，以后还会陆续加入最新前沿模型。获批者可在 Antigravity 最高用量档免费使用 Argon 和 Carbon 6 个月。门槛：要提交申请，按资格、容量和遴选结果每周滚动审批；面向大学、可授学位机构、非营利研究机构和国家实验室等科研人员。限制：只能在 Antigravity 客户端里用，不是 API 额度；普通开发者用 Carbon 的 API 要走 AI Studio 付费档，消费者要 Google AI Ultra 订阅。",
+    "claim_steps": [
+      "打开 Google 官方博客里 For scientists & researchers 的申请链接",
+      "填写申请表（机构、研究方向等）并提交",
+      "等待每周滚动审批通知",
+      "获批后在 Google Antigravity 里用申请时的 Google 账号登录，选 Gemini 4 Carbon 或 Argon"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读官方说明",
+        "detail": "打开 Gemini 4 Carbon 发布博客，找到 For scientists & researchers 一段",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+        "note": ""
+      },
+      {
+        "step": "填写申请表",
+        "detail": "点击博客里的申请链接（Google 表单），按要求填写所在机构、研究方向和使用计划后提交",
+        "url": "https://forms.gle/WvmBbPvRbpKG1BPn9",
+        "note": "用打算在 Antigravity 登录的 Google 账号"
+      },
+      {
+        "step": "等待审批",
+        "detail": "官方每周滚动审批，留意申请邮箱的通知",
+        "url": "https://ai.google/gemini-for-science/",
+        "note": ""
+      },
+      {
+        "step": "下载 Antigravity",
+        "detail": "获批后下载安装 Google Antigravity 并用同一 Google 账号登录",
+        "url": "https://antigravity.google/",
+        "note": ""
+      },
+      {
+        "step": "选用 Carbon",
+        "detail": "在 Antigravity 模型选择里切换到 Gemini 4 Carbon 或 Gemini 4 Argon 开始使用",
+        "url": "http://antigravity.google/blog/gemini-4-carbon-in-google-antigravity/",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "申请表（Interest form）",
+        "action_url": "https://forms.gle/WvmBbPvRbpKG1BPn9"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Google Antigravity",
+        "action_url": "https://antigravity.google/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Gemini 4 Carbon（获批后在 Antigravity 内）",
+        "action_url": "https://antigravity.google/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "need_review"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-11T19:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要以科研机构人员身份填写申请并等待 Google 人工遴选，必须你本人判断资格并提交",
+      "at": "2026-11-11 19:15 北京"
+    }
+  },
+  {
+    "id": "tokenharbor-free-allowance-weekly-deepseek-mimo-rudder-20261111",
+    "title": "Token Harbor 免费档：每 7 天滚动重置的免费额度，DeepSeek V4.1 Flash / MiMo V2.6 Flash / TH-Rudder 免费调（免绑卡）",
+    "platform": "Token Harbor",
+    "product": "Token Harbor Free 档",
+    "model": "DeepSeek V4.1 Flash / MiMo V2.6 Flash / TH-Rudder",
+    "type": "API",
+    "deadline": null,
+    "url": "https://tokenharbor.ai/pricing",
+    "source": "Token Harbor 官方定价页、模型页与 Quickstart 文档（2026-11-11 19:05 北京抓取）；aifree.dev；据 X 上的报道（@jhl880617，11/11）",
+    "summary": "Token Harbor 是一个 OpenAI 兼容的多模型 API 网关。官方定价页写明 Free 档 $0/月、免绑卡：带一份免费额度，从你第一次调用免费模型起按 7 天滚动重置，目前包含 DeepSeek V4.1 Flash、MiMo V2.6 Flash 和自家 TH-Rudder，之后还会陆续加入促销模型；模型名以 :free 结尾的调用不扣余额。买付费 Pass 后免费额度仍保留。限制：官方没公布每周免费额度的具体大小，用完后免费线路会拒绝请求；免费模型要你自己在控制台开启，开启后平台员工可能查看免费线路的对话，提供方也可能拿去训练，敏感内容别走免费线路；免费模型名单会轮换。之前那批 Haiku 5.5 限免已结束，本条是常驻免费档。",
+    "claim_steps": [
+      "打开 Token Harbor 官网点 Try free 注册登录",
+      "在控制台开启免费模型（free routes）",
+      "在控制台复制 Universal Key（thk_live_ 开头，只显示一次）",
+      "OpenAI 兼容客户端 base_url 填 https://tokenharbor.ai/v1，model 填 deepseek-v4.1-flash:free 或 mimo-v2.6-flash:free"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册账号",
+        "detail": "打开官网点 Try free / Sign in 注册登录，免绑卡",
+        "url": "https://tokenharbor.ai/",
+        "note": ""
+      },
+      {
+        "step": "开启免费线路",
+        "detail": "在控制台 / 设置里手动开启免费模型（free routes），默认是关闭的",
+        "url": "https://tokenharbor.ai/pricing",
+        "note": "开启即表示同意免费模型的数据政策"
+      },
+      {
+        "step": "复制 Key",
+        "detail": "在控制台复制 Universal Key（thk_live_…），只显示一次，立刻保存",
+        "url": "https://tokenharbor.ai/docs/getting-started/quickstart",
+        "note": ""
+      },
+      {
+        "step": "配置客户端",
+        "detail": "在 OpenAI 兼容客户端里把 base_url 设为 https://tokenharbor.ai/v1，填入 Key",
+        "url": "https://tokenharbor.ai/docs/getting-started/quickstart",
+        "note": ""
+      },
+      {
+        "step": "选免费模型",
+        "detail": "model 填 deepseek-v4.1-flash:free 或 mimo-v2.6-flash:free（TH-Rudder 以模型页为准），发一条短请求测试",
+        "url": "https://tokenharbor.ai/models?category=free",
+        "note": "带 :free 后缀才不扣余额"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Token Harbor",
+        "action_url": "https://tokenharbor.ai/"
+      },
+      {
+        "name": "Token Harbor Docs",
+        "action_url": "https://tokenharbor.ai/docs/getting-started/quickstart"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "deepseek-v4.1-flash:free",
+        "action_url": "https://tokenharbor.ai/models?category=free"
+      },
+      {
+        "name": "mimo-v2.6-flash:free",
+        "action_url": "https://tokenharbor.ai/models?category=free"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T19:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "已用 Google 注册并建 key（$0.50 上限），但免费模型要先在控制台同意免费模型数据使用条款，需你本人决定",
+      "at": "2026-11-11 19:25 北京"
+    }
+  },
+  {
+    "id": "fal-sandbox-6-free-generations-daily-no-login-20261111",
+    "title": "fal Sandbox：免登录每天 6 次免费生成，可横向对比多款前沿生图模型",
+    "platform": "fal",
+    "product": "fal Sandbox",
+    "model": "GPT Image 2 / Nano Banana 2 / Seedream 5 Lite / FLUX 3 Max 等（以页面为准）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://fal.ai/sandbox",
+    "source": "fal 官方 Sandbox 页（2026-11-11 19:08 北京抓取）；据 X 上的报道（@lovethelife2333，11/11）",
+    "summary": "fal 是海外生成式媒体模型平台。官方 Sandbox 页面写明“每天 6 次免费生成，无需账号”：打开网页就能选一个或多个模型、输入提示词出图，并对比各模型的耗时和价格，适合试用 GPT Image 2、Nano Banana 2、Seedream 5 Lite 等前沿生图模型。限制：每天 6 次，用完次日刷新；据 X 上的报道，免费的只是图片生成，视频类工具要登录且不在这 6 次里；这是网页试用，fal 的 API 调用照常收费，没有可领的 API 额度。另一条 MiniMax H3 Image 限免（每 24 小时 3–5 张，至 11/23）是单独活动。",
+    "claim_steps": [
+      "打开 fal Sandbox 页面",
+      "选择要试的生图模型（可多选对比）",
+      "输入提示词、设置比例后生成",
+      "页面上方会显示当天剩余免费次数"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开 Sandbox",
+        "detail": "浏览器访问 fal Sandbox，无需注册登录",
+        "url": "https://fal.ai/sandbox",
+        "note": "每天 6 次"
+      },
+      {
+        "step": "选择模型",
+        "detail": "在页面里选一个或多个生图 / 改图模型",
+        "url": "https://fal.ai/sandbox",
+        "note": "多选会同时消耗次数，以页面显示为准"
+      },
+      {
+        "step": "输入提示词生成",
+        "detail": "填写提示词、可上传参考图、设置比例后点运行",
+        "url": "https://fal.ai/sandbox",
+        "note": ""
+      },
+      {
+        "step": "查看剩余次数",
+        "detail": "页面顶部显示当天剩余免费生成次数，用完次日刷新",
+        "url": "https://fal.ai/sandbox",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "fal",
+        "action_url": "https://fal.ai/sandbox"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "zero_signup"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T19:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "免登录网页直接用，无需申请，没有 API key",
+      "at": "2026-11-11 19:20 北京"
+    }
+  },
+  {
+    "id": "moomoo-qoder-ai-trading-agent-challenge-sg-pro-1500-credits-20261111",
+    "title": "Moomoo SG × Qoder AI 交易 Agent 挑战赛：获批参赛者送 1 个月 Qoder Pro + 1500 Credits（新加坡，需审核）",
+    "platform": "Qoder",
+    "product": "Moomoo x Qoder AI Trading Agent Challenge",
+    "model": "Qoder Pro 内置模型",
+    "type": "黑客松",
+    "deadline": "2026-11-30T23:59:00+08:00",
+    "url": "https://luma.com/oezyv35j",
+    "source": "Luma 活动页（主办 Alibaba Cloud SG events）；据 X 上的报道（@qoder_ai_ide 官推，2026-11-11 16:21 北京）",
+    "summary": "阿里云新加坡联合 Moomoo 举办的 AI 交易 Agent 挑战赛：用 Qoder 和 Qoder Cloud Agents 搭建交易 Agent，接 Moomoo MCP 在模拟盘（初始 10 万美元虚拟资金）里测试策略，奖品总值超过 8,500 新元（现金、交易券和 Qoder Credits）。每位获批参赛者都能拿到 1 个月免费 Qoder Pro（价值 $20）加 1,500 Credits（价值 $20），激活绑定报名用的邮箱。门槛：报名需主办方审核；活动在新加坡，11 月 16 日 18:00–21:00 有线下开幕工作坊；开发与交易窗口 11 月 17–28 日，11 月 30 日 23:59（新加坡时间，与北京时间相同）前提交演示。限制：Credits 只能在 Qoder 里用，不是通用 API；参赛还需要 Moomoo 账号。",
+    "claim_steps": [
+      "打开 Luma 活动页，用邮箱 Request to Join 报名",
+      "等待主办方审核通过",
+      "审核通过后用报名邮箱登录 Qoder，查收 Pro 与 1,500 Credits",
+      "按赛程在 11/30 23:59 前提交作品"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开活动页",
+        "detail": "进入 Luma 上的 Moomoo x Qoder AI Trading Agent Challenge 页面",
+        "url": "https://luma.com/oezyv35j",
+        "note": "线下开幕在新加坡"
+      },
+      {
+        "step": "报名",
+        "detail": "点击 Request to Join，用你打算登录 Qoder 的邮箱报名",
+        "url": "https://luma.com/oezyv35j",
+        "note": "需主办方审核"
+      },
+      {
+        "step": "激活 Qoder 权益",
+        "detail": "审核通过后用同一邮箱登录 Qoder，确认 1 个月 Pro 和 1,500 Credits 已到账",
+        "url": "https://qoder.com/",
+        "note": "权益绑定报名邮箱"
+      },
+      {
+        "step": "准备 Moomoo 模拟盘",
+        "detail": "按活动页说明注册 Moomoo 账号并接入比赛用的 Moomoo MCP 模拟交易账户",
+        "url": "https://luma.com/oezyv35j",
+        "note": ""
+      },
+      {
+        "step": "提交作品",
+        "detail": "在 11 月 30 日 23:59（新加坡时间）前通过活动页的提交链接提交用 Qoder 生成的演示文稿",
+        "url": "https://luma.com/oezyv35j",
+        "note": ""
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Qoder",
+        "action_url": "https://qoder.com/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_review",
+      "need_client"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-11T19:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要你本人报名并通过主办方审核，活动在新加坡且有线下开幕；是否参赛由你决定",
+      "at": "2026-11-11 19:15 北京"
+    }
+  },
+  {
+    "id": "e2b-hobby-free-100usd-sandbox-credits-20261111",
+    "title": "E2B Hobby 免费档：注册送一次性 $100 云沙箱额度（免绑卡，给 AI Agent 跑代码）",
+    "platform": "E2B",
+    "product": "E2B Hobby",
+    "model": null,
+    "type": "额度",
+    "deadline": null,
+    "url": "https://e2b.dev/pricing",
+    "source": "E2B 官方定价页（2026-11-11 19:10 北京抓取）；据 X 上的报道（@jhl880617，11/11）",
+    "summary": "E2B 是给 AI Agent 用的云沙箱平台（Agent 可以在隔离的云端 Linux 里执行代码），Claude Code、Codex 这类 Agent 和自建 Agent 都能接。官方定价页写明 Hobby 档免费、免绑卡，附 $100 额度：沙箱单次最长 1 小时，最多 10 个并发，按秒计 CPU 和内存，自带 10GB 磁盘。限制：$100 是一次性额度，用完要按量付费或升级 Pro（$150/月）；只抵沙箱算力，不含模型调用费用。",
+    "claim_steps": [
+      "打开 E2B 官网注册（支持 Google / GitHub）",
+      "注册后自动进入 Hobby 免费档并获得 $100 额度",
+      "在控制台创建 API Key",
+      "安装 E2B SDK 用 Key 启动沙箱"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册账号",
+        "detail": "打开 E2B 注册页，用 Google 或 GitHub 登录",
+        "url": "https://e2b.dev/auth/sign-up",
+        "note": "免绑卡"
+      },
+      {
+        "step": "确认额度",
+        "detail": "登录控制台，在用量 / 账单页确认 Hobby 档 $100 额度已到账",
+        "url": "https://e2b.dev/dashboard",
+        "note": ""
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在控制台 API Keys 页面新建 Key 并保存",
+        "url": "https://e2b.dev/dashboard",
+        "note": ""
+      },
+      {
+        "step": "安装 SDK",
+        "detail": "按文档安装 Python 或 JS SDK，设置 E2B_API_KEY 环境变量",
+        "url": "https://e2b.dev/docs",
+        "note": ""
+      },
+      {
+        "step": "启动沙箱",
+        "detail": "用 SDK 创建沙箱运行代码，或接到你的 Agent 框架里",
+        "url": "https://e2b.dev/docs",
+        "note": "单次最长 1 小时"
+      }
+    ],
+    "providers": [
+      {
+        "name": "E2B",
+        "action_url": "https://e2b.dev/"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-11T19:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "已用 Google 注册，但建 key 前要求绑卡付 $5（退回为额度）验证，需你本人决定",
+      "at": "2026-11-11 19:25 北京"
+    }
+  },
+  {
+    "id": "pickshot-free-unlimited-basic-images-10-videos-daily-20261111",
+    "title": "Pickshot：免费账号 5 款基础生图模型无限出图 + Lacquer 视频每天 10 条（新号再送 50 积分）",
+    "platform": "Pickshot",
+    "product": "Pickshot 免费账号",
+    "model": "Indigo / Saffron / Jade / Cobalt / Amber（生图）+ Lacquer（视频）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://pickshot.ai/pricing",
+    "source": "Pickshot 官网首页与定价页（2026-11-11 19:10 北京抓取）；据 X 上的报道（@AIPICVIDEO，11/11）",
+    "summary": "Pickshot 是韩国团队 2026 年 10 月上线的 AI 生图 / 视频 / 音频网站。官网写明：新账号送 50 积分；免费账号在网页上用 5 款基础生图模型（Indigo、Saffron、Jade、Cobalt、Amber）出图不扣积分、不限次数；自家 Lacquer 视频模型每天免费 10 条，每条最长 5 秒、720p、可带声音（新账号自 11 月 8 日起生效，老账号 12 月 8 日起）。限制：免费档同时只能跑 2 个任务，排队优先级低于会员；其他模型和 API / MCP 照常按积分扣费；官方说明免费权益可能按免费使用政策调整或结束（12 月 5 日有政策更新）。是网页工具，不是 API 额度。",
+    "claim_steps": [
+      "打开 Pickshot 官网点 Start free 注册",
+      "在 Image studio 选 5 款免费基础模型出图",
+      "在 Video studio 选 Lacquer 生成免费短视频"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册账号",
+        "detail": "打开 Pickshot 官网，点 Start free 注册登录",
+        "url": "https://pickshot.ai/",
+        "note": "登录方式以页面为准"
+      },
+      {
+        "step": "免费出图",
+        "detail": "进入 Image studio，选 Indigo / Saffron / Jade / Cobalt / Amber 这几款标 Free 的模型生成图片",
+        "url": "https://pickshot.ai/pricing",
+        "note": "其他模型会扣积分"
+      },
+      {
+        "step": "免费视频",
+        "detail": "进入 Video studio，选 Lacquer，时长设 5 秒以内生成",
+        "url": "https://pickshot.ai/",
+        "note": "每天 10 条"
+      },
+      {
+        "step": "查看积分",
+        "detail": "在 Settings > Credits 查看 50 积分新人赠送和消耗情况",
+        "url": "https://pickshot.ai/pricing",
+        "note": ""
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Pickshot",
+        "action_url": "https://pickshot.ai/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "image",
+      "video"
+    ],
+    "barriers": [],
+    "category": "agents",
+    "collected_at": "2026-11-11T19:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "网页生图工具，没有 API key，要用就在 pickshot.ai 自行登录",
+      "at": "2026-11-11 19:20 北京"
     }
   }
 ]
