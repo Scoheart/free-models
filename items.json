@@ -31220,5 +31220,157 @@
       "note": "免费档只对邀请码开放，需要你决定是否用邮箱申请邀请码并等官方审核，本轮没有替你提交",
       "at": "2026-11-11 15:20 北京"
     }
+  },
+  {
+    "id": "openrouter-ernie-55-flash-preview-free-20261111",
+    "title": "OpenRouter：百度 ERNIE 5.5 Flash Preview 免费上架（baidu/ernie-5.5-flash-preview:free，1M 上下文）",
+    "platform": "OpenRouter",
+    "product": "OpenRouter",
+    "model": "baidu/ernie-5.5-flash-preview:free",
+    "type": "API",
+    "deadline": null,
+    "url": "https://openrouter.ai/baidu/ernie-5.5-flash-preview:free",
+    "source": "OpenRouter 官方模型接口 /api/v1/models（2026-11-11 16:10 北京抓取）；百度 @Baidu_Inc 11/11 发布帖；IT之家、每经网 11/11 报道",
+    "summary": "百度 11 月 11 日发布文心 ERNIE 5.5 Flash Preview（据 IT之家、每经网报道：总参 280B、每 Token 激活 14B，1M 上下文，主打编程、3D 建模、知识工作和内容创作，是后训练中间版本，权重计划 11 月 25 日前开源）。OpenRouter 官方模型列表同时上架了免费版 baidu/ernie-5.5-flash-preview:free，输入、输出都是 $0，由百度千帆提供，上下文 1,024,000、最长输出 921,600 Token，只支持文本，强制开启推理（只有 high 一档），支持工具调用和结构化输出。限额按 OpenRouter 免费模型通用规则：每天免费请求次数有限，累计充值过 $10 的账号额度更高。门槛：只需 OpenRouter 账号，不用绑卡。官方没有公布免费截止时间，随时可能下架；付费版在千帆按量计费（输入 2 元/百万、输出 8 元/百万，限时五折）。",
+    "claim_steps": [
+      "登录 https://openrouter.ai，在 Keys 页面创建 API Key",
+      "OpenAI 兼容 base_url 填 https://openrouter.ai/api/v1",
+      "model 填 baidu/ernie-5.5-flash-preview:free"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 OpenRouter",
+        "detail": "打开 OpenRouter 官网，用已有账号登录（没有就用 Google 登录注册）",
+        "url": "https://openrouter.ai/",
+        "note": "已有账号无需重新注册"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "进入 Keys 页面点创建 Key，建议给 Key 设置一个很低的额度上限",
+        "url": "https://openrouter.ai/settings/keys",
+        "note": ""
+      },
+      {
+        "step": "确认模型",
+        "detail": "打开模型页确认免费版仍在线、价格显示 $0",
+        "url": "https://openrouter.ai/baidu/ernie-5.5-flash-preview:free",
+        "note": "免费版随时可能下架"
+      },
+      {
+        "step": "调用",
+        "detail": "OpenAI 客户端 base_url 设为 https://openrouter.ai/api/v1，model 填 baidu/ernie-5.5-flash-preview:free",
+        "url": "https://openrouter.ai/docs/quickstart",
+        "note": "模型强制推理，输出会带思考内容"
+      }
+    ],
+    "providers": [
+      {
+        "name": "OpenRouter",
+        "action_url": "https://openrouter.ai/settings/keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "baidu/ernie-5.5-flash-preview:free",
+        "action_url": "https://openrouter.ai/baidu/ernie-5.5-flash-preview:free"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T16:30:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "已有 OpenRouter 账号，:free 模型无需另外领取，用现有账号的 key 直接调用即可",
+      "at": "2026-11-11 16:30 北京"
+    }
+  },
+  {
+    "id": "cucloud-double11-ai-desktop-token-plan-lite-free-month-20261111",
+    "title": "联通云双 11：新客 0 元试用 1 个月 AI 云桌面（4 核 8G）+ 千问办公 + Token Plan Lite（限量 5000 份）",
+    "platform": "联通云",
+    "product": "联通云 AI 云桌面",
+    "model": "Token Plan Lite",
+    "type": "Cloud",
+    "deadline": null,
+    "url": "https://www.c114.com.cn/other/241/a1320855.html",
+    "source": "C114 通信网《联通云双11算力狂欢，AI触手可及！》（厂商供稿，11/11）；据 X 上的报道（@hodu382759，11/11）",
+    "summary": "据 C114 通信网刊登的联通云双 11 活动稿（厂商供稿），联通云新客户可 0 元试用 1 个月 AI 云桌面：4 核 8G、80GB 高性能盘，预置千问办公，开机即可办公，另外赠送一份 Token Plan Lite 套餐，用来调用大模型不用另付费。限量 5000 份，每位新客户限 1 份，先到先得。同场还有 2 核 4G 云服务器 11.11 元/6 个月（限量 1200 台）和 DeepSeek-V4-Pro、Qwen3.8-Max、GLM-5.3 等按量模型限时特价（这些是付费优惠）。门槛：仅限联通云新客户；国内云平台下单一般需要手机号注册并完成实名认证。活动稿没有写明截止日期和 Token Plan Lite 的具体额度，以活动页为准；据 X 上的报道，这是双 11 期间的限量活动，抢完即止。",
+    "claim_steps": [
+      "打开联通云官网 www.cucloud.cn，进入「双11算力狂欢」活动页",
+      "注册/登录联通云账号并完成实名认证",
+      "在「新客专享」里领取 AI 云桌面 + 千问办公 + Token Plan Lite 0 元试用",
+      "在控制台查看 Token Plan Lite 的调用方式和额度"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开活动页",
+        "detail": "进入联通云官网，找到首页的「双11算力狂欢」活动入口",
+        "url": "https://www.cucloud.cn/",
+        "note": "活动稿说也可以扫码进入活动页"
+      },
+      {
+        "step": "注册并实名",
+        "detail": "用手机号注册或登录联通云账号，按提示完成个人实名认证",
+        "url": "https://www.cucloud.cn/",
+        "note": "仅限新客户"
+      },
+      {
+        "step": "领取 0 元试用",
+        "detail": "在活动页「礼遇一：新客专享」处领取 AI 云桌面 + 千问办公 + Token Plan Lite 的 0 元 1 个月试用",
+        "url": "https://www.cucloud.cn/",
+        "note": "限量 5000 份，每人 1 份"
+      },
+      {
+        "step": "登录云桌面",
+        "detail": "在控制台的云桌面产品里找到开通的实例，按页面提示用客户端或网页登录，千问办公已预装",
+        "url": "https://www.cucloud.cn/",
+        "note": "具体按钮以控制台为准"
+      },
+      {
+        "step": "使用 Token Plan Lite",
+        "detail": "在控制台找到 Token Plan / 大模型服务相关页面，查看赠送套餐的额度、可用模型和调用方式",
+        "url": "https://www.cucloud.cn/",
+        "note": "活动稿没写额度，以控制台显示为准"
+      }
+    ],
+    "providers": [
+      {
+        "name": "联通云",
+        "action_url": "https://www.cucloud.cn/"
+      }
+    ],
+    "agents": [
+      {
+        "name": "千问办公",
+        "action_url": "https://www.cucloud.cn/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "office",
+      "chat"
+    ],
+    "barriers": [
+      "cn_account",
+      "need_phone",
+      "need_realname",
+      "new_user_only"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T16:30:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "联通云需要手机号短信注册并完成实名认证后才能领取新客 0 元试用，需要你本人操作",
+      "at": "2026-11-11 16:30 北京"
+    }
   }
 ]
