@@ -8,12 +8,13 @@ https://scoheart.github.io/free-models/
 
 ## 功能
 
-- 左侧按平台分栏：每项显示平台名、进行中的活动数量，以及自动领取状态点（绿 = 有成功，琥珀 = 需要本人操作，红 = 失败，未标记则无点）
+- 顶部两个分类：**Providers**（模型、网关、API 额度）和 **Agents**（编程 Agent、CLI、IDE 里使用的免费额度，例如 Devin、Traycer、Claude、Claude Code、Cursor、MiniMax Code、Kiro）
+- 左侧按平台分栏，只显示当前分类里的活动：每项显示平台名、进行中的活动数量，以及自动领取状态点（绿 = 有成功，琥珀 = 需要本人操作，红 = 失败，未标记则无点）
 - 平台排序：离截止最近的在前，其余按名称
-- 搜索框过滤平台名和活动正文
+- 搜索框在当前分类里过滤平台名和活动正文
 - 右侧是选中平台的活动：标题、截止时间（北京时间）、简介、免费条款、自动领取徽章、去领取，以及编号领取步骤
-- 地址栏 hash 记住当前平台（例如 `#groq`），可直接打开
-- 手机上平台列表变成顶部的下拉框，并保留可横向滑动的标签条
+- 地址栏 hash 记住分类和平台（例如 `#providers/groq`、`#agents/opencode`）。只写平台的旧链接（`#groq`）仍然可以打开
+- 手机上分类、搜索和平台筛选固定在顶部。平台可以用下拉框，也可以横向滑动标签条。过长的简介和领取步骤默认收起，点一下展开
 
 ## 仓库根目录即站点
 
@@ -34,6 +35,8 @@ https://scoheart.github.io/free-models/
 平台名优先用 `platform`。没有该字段时，从领取链接的主机名推断（优先 `providers` / `models` / `agents` 的 `action_url`，跳过 x.com 等帖子来源），再退回条目 `url`。常见主机映射成可读名称，例如 `console.groq.com` → Groq，`aistudio.google.com` → Google AI Studio，`openrouter.ai` → OpenRouter，带 `ai-gateway` 的 vercel.com → Vercel AI Gateway。
 
 领取步骤优先用 `claim_guide`：对象数组，每项含 `step`（短标题）、`detail`（可多句）、可选 `url`、可选 `note`（如需要手机号或绑卡，页面显示为提醒）。没有 `claim_guide` 时用 `claim_steps`（字符串，或字符串数组；字符串按换行拆，只有一行时再按 `；` / `;` 拆）。都没有时，若 `free_terms`（否则 `summary`）能拆成多步，或正文像领取说明，则用作步骤。步骤正文里如果要保留分号，写成数组，不要只放在一个字符串里。
+
+可选字段 `category`（或 `kind`）为 `providers` 或 `agents`，用来改自动分类。不写时，页面用平台名、标题开头和产品名判断：已知的编程 Agent、CLI、IDE 归入 Agents，名字像 `Code` / `CLI` / `IDE` / `Desktop` 的新工具也会归入 Agents，其余（包括之后每小时新增的网关）归入 Providers。
 
 可选字段 `auto_claim` 记录自动领取结果：`status` 为 `success`、`failed` 或 `needs_user`，`note` 为简短中文说明，`at` 为北京时间字符串。有该字段时显示徽章：已自动领取（绿）、自动申请失败（红）、需要你本人操作（琥珀）；没有该字段则不显示徽章。`note` 与 `at` 跟在徽章后面。同一平台只要有一条成功，标签上的状态点就是绿色；否则有待操作则为琥珀，有失败则为红色。页面不展示任何 API Key，说明文字里看起来像密钥的字符串会被替换成 `[redacted]`。`expired` 为真、截止时间已过，或带 `superseded_by` 的条目不会出现。
 

@@ -23,15 +23,21 @@ INDEX_TMPL = """<!DOCTYPE html>
 </head>
 <body>
 <div class="app">
+<div class="chrome">
 <header class="top">
 <div class="brand">
 <p class="eyebrow">进行中的免费额度</p>
 <h1>免费模型</h1>
 <p class="lead">按平台查看还没过期的模型、额度和领取步骤。离截止最近的平台排在前面。</p>
 </div>
+<div class="top-side">
+<div class="kind-switch" role="tablist" aria-label="类型">
+<button type="button" class="kind" id="kind-providers" role="tab" data-kind="providers" aria-selected="true" aria-controls="detail">Providers<span class="kind-count" data-kind-count="providers"></span></button>
+<button type="button" class="kind" id="kind-agents" role="tab" data-kind="agents" aria-selected="false" tabindex="-1" aria-controls="detail">Agents<span class="kind-count" data-kind-count="agents"></span></button>
+</div>
 <p class="stats" id="stats" aria-live="polite"></p>
+</div>
 </header>
-<div class="layout">
 <aside class="sidebar">
 <div class="search-wrap" role="search">
 <label class="sr" for="q">搜索平台或活动</label>
@@ -40,11 +46,13 @@ INDEX_TMPL = """<!DOCTYPE html>
 <p class="legend" aria-hidden="true"><span class="dot success"></span>已领取<span class="dot needs-user"></span>待操作<span class="dot failed"></span>失败</p>
 <label class="sr" for="platform-select">选择平台</label>
 <select id="platform-select" class="platform-select"></select>
-<div id="tabs" class="tabs" role="tablist" aria-label="平台"></div>
+<div class="tab-rail" id="tab-rail"><div id="tabs" class="tabs" role="tablist" aria-label="平台"></div></div>
 </aside>
-<main id="detail" class="detail"></main>
 </div>
+<div class="layout">
+<main id="detail" class="detail"></main>
 <footer class="foot">数据来自公开帖子，领取前请自行核对官方条款。页面不展示 API Key。</footer>
+</div>
 </div>
 <script src="./data.js?v=__CACHE_V__"></script>
 <script src="./app.js?v=__CACHE_V__"></script>

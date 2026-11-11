@@ -704,6 +704,201 @@
     return fallback || "其他";
   }
 
+  // Venue classification for the Providers / Agents tabs.
+  // Optional item.category (or item.kind) of "providers" or "agents" wins.
+  // Otherwise the platform, title lead, and product name are matched against
+  // known agent apps and a few name patterns (IDE / CLI / * Code). Everything
+  // else, including new gateways the hourly scan adds, stays in Providers.
+  var AGENT_VENUES = {
+    "devin": 1,
+    "traycer": 1,
+    "cursor": 1,
+    "kiro": 1,
+    "aws kiro": 1,
+    "claude": 1,
+    "claude code": 1,
+    "minimax code": 1,
+    "opencode": 1,
+    "cline": 1,
+    "kilo": 1,
+    "kilo code": 1,
+    "qoder": 1,
+    "zed": 1,
+    "workbuddy": 1,
+    "google antigravity": 1,
+    "antigravity": 1,
+    "command code": 1,
+    "hermes": 1,
+    "hermes desktop": 1,
+    "hermes agent": 1,
+    "freebuff": 1,
+    "free-pi": 1,
+    "freepi": 1,
+    "zcode": 1,
+    "智谱 zcode": 1,
+    "autoclaw": 1,
+    "智谱 autoclaw": 1,
+    "codar": 1,
+    "科搭 codar": 1,
+    "deepworks": 1,
+    "滴普 deepworks": 1,
+    "adcode": 1,
+    "ccode": 1,
+    "deepai code": 1,
+    "eaon code": 1,
+    "eigent": 1,
+    "freemilk": 1,
+    "omnirush": 1,
+    "velork": 1,
+    "wave code": 1,
+    "atomic agent": 1,
+    "agentscope": 1,
+    "opencrabs": 1,
+    "nodecode": 1,
+    "alysis code": 1,
+    "monkeycode": 1,
+    "praex": 1,
+    "windsurf": 1,
+    "copilot": 1,
+    "github copilot": 1,
+    "codex": 1,
+    "trae": 1,
+    "aider": 1,
+    "roo": 1,
+    "roo code": 1,
+    "bolt": 1,
+    "replit": 1,
+    "continue": 1,
+    "deepseek harness": 1,
+    "oc ferry": 1,
+  };
+
+  var FORCE_PROVIDER = {
+    "free claude code": 1,
+    "xkiro": 1,
+    "omniroute": 1,
+    "freellmapi": 1,
+    "freeinference": 1,
+  };
+
+  var PROVIDER_VENUE_RE = /\b(api|apis|gateway|router|inference|studio|cloud|nim|endpoint|endpoints)\b|开放平台|网关|路由/;
+  var AGENT_VENUE_RE = /(?:^| )(code|coder|cli|ide|desktop|agent)$|代码编辑器|编程 agent|编码 agent|coding agent|\bide\b|\bcli\b|\bdesktop\b/;
+
+  function normalizeVenue(s) {
+    var n = norm(s);
+    n = n.replace(/[（(][^）)]*[）)]/g, " ");
+    n = n.replace(/\b\d+(?:\.\d+)+\b/g, " ");
+    n = n.replace(/[\/|、+]+/g, " ");
+    n = n.replace(/\s+/g, " ").trim();
+    return n;
+  }
+
+  function explicitKind(item) {
+    var raw, n;
+    if (!item || typeof item !== "object") return "";
+    raw = item.category != null ? item.category : item.kind;
+    n = norm(raw);
+    if (n === "agent" || n === "agents") return "agents";
+    if (n === "provider" || n === "providers") return "providers";
+    return "";
+  }
+
+  function nameLooksLikeAgent(name) {
+    var n, token;
+    n = normalizeVenue(name);
+    if (!n) return false;
+    if (FORCE_PROVIDER[n]) return false;
+    if (AGENT_VENUES[n]) return true;
+    if (PROVIDER_VENUE_RE.test(n)) return false;
+    token = n.split(" ")[0];
+    if (token && AGENT_VENUES[token]) return true;
+    if (AGENT_VENUE_RE.test(n)) return true;
+    token = n.split(" ").pop();
+    if (token && /^[a-z0-9][a-z0-9-]{1,22}code$/.test(token)) return true;
+    return false;
+  }
+
+  function titleLead(title) {
+    var m = String(title || "").trim().match(/^([^:：]{1,48})[:：]/);
+    return m ? m[1].trim() : "";
+  }
+
+  function leadIsAgent(title) {
+    return nameLooksLikeAgent(titleLead(title));
+  }
+
+  function leadIsCodingTool(title) {
+    var n, token;
+    n = normalizeVenue(titleLead(title));
+    if (!n) return false;
+    if (n.indexOf("claude code") === 0) return true;
+    token = n.split(" ")[0];
+    if (token === "claude") return false;
+    return nameLooksLikeAgent(n);
+  }
+
+  function headIsAgent(product) {
+    var head = String(product || "").split(/\s*[·•]\s*/)[0];
+    return nameLooksLikeAgent(head);
+  }
+
+  function isApiCredit(item) {
+    var text = norm(String(item.title || "") + " " + String(item.product || ""));
+    return /api\s*额度|api credits|每月 api|api key/.test(text);
+  }
+
+  function inAppAgentHeuristic(item) {
+    var blob, ag, pr;
+    ag = asList(item.agents).length;
+    pr = asList(item.providers).length;
+    if (!ag || pr) return false;
+    blob = norm(String(item.title || "") + " " + String(item.product || "") + " " + platformOf(item));
+    return /代码编辑器|编程\s*agent|编码\s*agent|coding agent|终端编程|桌面编程|\bcli\b|\bide\b/.test(blob);
+  }
+
+  function categoryOf(item) {
+    var explicit, platform, platformAgent, blob;
+    if (!item || typeof item !== "object") return "providers";
+    explicit = explicitKind(item);
+    if (explicit) return explicit;
+    platform = platformOf(item);
+    if (FORCE_PROVIDER[normalizeVenue(platform)]) return "providers";
+    platformAgent = nameLooksLikeAgent(platform);
+    blob = norm(String(item.title || "") + " " + String(item.product || ""));
+    // "Claude … API 额度" is the Anthropic API, not the Claude app. A title that
+    // leads with a specific agent (Codex, Cursor, Cline, …) stays in Agents.
+    if (isApiCredit(item) && !platformAgent && !leadIsCodingTool(item.title) && !/code review/.test(blob)) return "providers";
+    if (platformAgent) return "agents";
+    if (leadIsAgent(item.title) || headIsAgent(item.product)) return "agents";
+    if (inAppAgentHeuristic(item)) return "agents";
+    return "providers";
+  }
+
+  function groupsInKind(groups, kind) {
+    var want, out, i, g, offers, j, ms, nearest;
+    want = kind === "agents" ? "agents" : "providers";
+    out = [];
+    groups = groups || [];
+    for (i = 0; i < groups.length; i++) {
+      g = groups[i];
+      offers = [];
+      nearest = Infinity;
+      for (j = 0; j < g.offers.length; j++) {
+        if (categoryOf(g.offers[j]) !== want) continue;
+        offers.push(g.offers[j]);
+        ms = deadlineMs(g.offers[j]);
+        if (ms != null && ms < nearest) nearest = ms;
+      }
+      if (!offers.length) continue;
+      out.push({ name: g.name, slug: g.slug, offers: offers, nearest: nearest });
+    }
+    out.sort(function (a, b) {
+      if (a.nearest !== b.nearest) return a.nearest - b.nearest;
+      return cmpName(a.name, b.name);
+    });
+    return out;
+  }
+
   function slugify(name) {
     var s = String(name == null ? "" : name).trim().toLowerCase();
     s = s.replace(/\s+/g, "-");
@@ -1085,6 +1280,17 @@
     return html;
   }
 
+  function renderFoldable(label, inner) {
+    if (!inner) return "";
+    return (
+      '<section class="block"><h4>' +
+      escapeHtml(label) +
+      '</h4><div class="fold-text">' +
+      inner +
+      '</div><button type="button" class="fold-toggle" hidden>展开</button></section>'
+    );
+  }
+
   function renderOffer(item, now) {
     var title, summary, terms, deadline, md, soon, href, source, guide, same;
     title = redactSecrets(titleOf(item));
@@ -1097,7 +1303,7 @@
     source = safeUrl(item.url || item.link || item.source_url || "");
     same = source && href && source === href;
     guide = claimGuideOf(item);
-    var html = '<article class="offer">';
+    var html = '<article class="offer" data-kind="' + categoryOf(item) + '">';
     html += '<div class="offer-top">';
     html += '<div class="offer-heading">';
     html += "<h3 class=\"offer-title\">" + escapeHtml(title) + "</h3>";
@@ -1122,14 +1328,16 @@
     }
     html += "</div></div>";
     html += renderAutoClaim(item);
-    if (summary) {
-      html += '<section class="block"><h4>简介</h4>' + renderParagraphs(summary, "body") + "</section>";
-    }
-    if (terms && norm(terms) !== norm(summary)) {
-      html += '<section class="block"><h4>免费条款</h4>' + renderParagraphs(terms, "body") + "</section>";
-    }
+    if (summary) html += renderFoldable("简介", renderParagraphs(summary, "body"));
+    if (terms && norm(terms) !== norm(summary)) html += renderFoldable("免费条款", renderParagraphs(terms, "body"));
     if (guide.length) {
-      html += '<section class="block"><h4>领取步骤</h4>' + renderGuide(guide) + "</section>";
+      html += '<section class="block steps-block"><details class="steps" open>';
+      html +=
+        '<summary class="steps-summary"><span class="steps-label">领取步骤</span><span class="steps-count">' +
+        guide.length +
+        "</span></summary>";
+      html += renderGuide(guide);
+      html += "</details></section>";
     }
     html += "</article>";
     return html;
@@ -1151,11 +1359,15 @@
     return html;
   }
 
-  function renderEmpty(query) {
+  function renderEmpty(query, hintHtml) {
     if (query && String(query).trim()) {
-      return '<div class="empty">没有匹配的平台或活动。换个关键词，或清空搜索。</div>';
+      return (
+        '<div class="empty"><p>没有匹配的平台或活动。换个关键词，或清空搜索。</p>' +
+        (hintHtml || "") +
+        "</div>"
+      );
     }
-    return '<div class="empty">暂时没有进行中的免费活动。</div>';
+    return '<div class="empty"><p>暂时没有进行中的免费活动。</p>' + (hintHtml || "") + "</div>";
   }
 
   function countOffers(groups) {
@@ -1176,8 +1388,25 @@
     return raw;
   }
 
+  function parseHash(raw) {
+    var slash, kind, slug;
+    raw = String(raw || "");
+    if (raw === "providers" || raw === "agents") return { kind: raw, slug: "" };
+    slash = raw.indexOf("/");
+    if (slash > 0) {
+      kind = raw.slice(0, slash);
+      slug = raw.slice(slash + 1);
+      if (kind === "providers" || kind === "agents") return { kind: kind, slug: slug };
+    }
+    return { kind: "", slug: raw };
+  }
+
+  function kindLabel(kind) {
+    return kind === "agents" ? "Agents" : "Providers";
+  }
+
   function boot() {
-    var tabsEl, detailEl, qEl, selectEl, statsEl, now, all, allGroups, state;
+    var tabsEl, detailEl, qEl, selectEl, statsEl, railEl, now, all, allGroups, byKind, state, initial, i;
 
     if (typeof document === "undefined") return;
     tabsEl = document.getElementById("tabs");
@@ -1185,46 +1414,128 @@
     qEl = document.getElementById("q");
     selectEl = document.getElementById("platform-select");
     statsEl = document.getElementById("stats");
+    railEl = document.getElementById("tab-rail");
     if (!tabsEl || !detailEl) return;
 
     now = Date.now();
     all = typeof ITEMS !== "undefined" && Array.isArray(ITEMS) ? ITEMS : [];
     allGroups = buildGroups(all, now);
-    state = { query: "", slug: readHash(), rendered: "" };
+    byKind = {
+      providers: groupsInKind(allGroups, "providers"),
+      agents: groupsInKind(allGroups, "agents"),
+    };
+    initial = parseHash(readHash());
+    state = {
+      query: "",
+      slug: initial.slug,
+      kind: initial.kind === "agents" ? "agents" : "providers",
+      rendered: "",
+    };
 
-    function writeHash(slug, mode) {
-      var url;
-      if (!slug || typeof history === "undefined" || typeof location === "undefined") return;
-      if (readHash() === slug) return;
-      url = location.pathname + location.search + "#" + slug;
-      if (mode === "push" && history.pushState) history.pushState({ slug: slug }, "", url);
-      else if (history.replaceState) history.replaceState({ slug: slug }, "", url);
+    function hashFor(kind, slug) {
+      return (kind === "agents" ? "agents" : "providers") + "/" + (slug || "");
+    }
+
+    function writeHash(kind, slug, mode) {
+      var url, next;
+      if (typeof history === "undefined" || typeof location === "undefined") return;
+      next = hashFor(kind, slug);
+      if (readHash() === next) return;
+      url = location.pathname + location.search + "#" + next;
+      if (mode === "push" && history.pushState) history.pushState({ kind: kind, slug: slug }, "", url);
+      else if (history.replaceState) history.replaceState({ kind: kind, slug: slug }, "", url);
+    }
+
+    function inferKind(slug) {
+      if (slug && groupBySlug(byKind.agents, slug) && !groupBySlug(byKind.providers, slug)) return "agents";
+      if (slug && groupBySlug(byKind.providers, slug)) return "providers";
+      if (slug && groupBySlug(byKind.agents, slug)) return "agents";
+      return state.kind === "agents" ? "agents" : "providers";
+    }
+
+    function scopedGroups(kind) {
+      return byKind[kind === "agents" ? "agents" : "providers"] || [];
+    }
+
+    function otherKindHint(kind, query) {
+      var other, found, label;
+      if (!query) return "";
+      other = kind === "agents" ? "providers" : "agents";
+      found = filterGroups(scopedGroups(other), query);
+      if (!found.length) return "";
+      label = kindLabel(other);
+      return (
+        '<p class="empty-switch">' +
+        escapeHtml(label) +
+        " 里有 " +
+        countOffers(found) +
+        ' 项匹配。<button type="button" class="jump-kind" data-kind="' +
+        other +
+        '">切换到 ' +
+        escapeHtml(label) +
+        "</button></p>"
+      );
+    }
+
+    function syncKindButtons(kind) {
+      var buttons, i, on;
+      buttons = document.querySelectorAll ? document.querySelectorAll(".kind") : [];
+      for (i = 0; i < buttons.length; i++) {
+        on = buttons[i].getAttribute("data-kind") === kind;
+        buttons[i].setAttribute("aria-selected", on ? "true" : "false");
+        buttons[i].tabIndex = on ? 0 : -1;
+      }
+    }
+
+    function setKindCounts() {
+      var nodes, i, kind, groups;
+      nodes = document.querySelectorAll ? document.querySelectorAll("[data-kind-count]") : [];
+      for (i = 0; i < nodes.length; i++) {
+        kind = nodes[i].getAttribute("data-kind-count");
+        groups = scopedGroups(kind);
+        nodes[i].textContent = String(countOffers(groups));
+      }
     }
 
     function render() {
-      var groups, slug, group, btn, buttons, i, shown, hidden;
-      groups = filterGroups(allGroups, state.query);
-      if (!state.slug && !state.query && groups.length) state.slug = groups[0].slug;
+      var groups, base, slug, group, btn, buttons, i, shown, hidden, kind;
+      if (state.slug && !initial.kind) state.kind = inferKind(state.slug);
+      initial = { kind: "set" };
+      kind = state.kind === "agents" ? "agents" : "providers";
+      state.kind = kind;
+      base = scopedGroups(kind);
+      if (state.slug && !groupBySlug(base, state.slug) && !state.query) {
+        if (groupBySlug(scopedGroups(kind === "agents" ? "providers" : "agents"), state.slug)) {
+          kind = inferKind(state.slug);
+          state.kind = kind;
+          base = scopedGroups(kind);
+        }
+      }
+      groups = filterGroups(base, state.query);
       slug = "";
       if (state.slug && groupBySlug(groups, state.slug)) slug = state.slug;
       else if (groups.length) slug = groups[0].slug;
+      if (!state.query) state.slug = slug;
       group = groupBySlug(groups, slug);
+      syncKindButtons(kind);
+      tabsEl.setAttribute("aria-label", kindLabel(kind) + " 平台");
       tabsEl.innerHTML = groups.length ? renderTabs(groups, slug) : '<p class="tabs-empty">没有匹配的平台</p>';
       if (selectEl) {
         selectEl.innerHTML = renderOptions(groups, slug);
         selectEl.disabled = !groups.length;
         if (slug) selectEl.value = slug;
       }
-      detailEl.innerHTML = group ? renderDetail(group, now) : renderEmpty(state.query);
+      detailEl.innerHTML = group ? renderDetail(group, now) : renderEmpty(state.query, otherKindHint(kind, state.query));
       detailEl.setAttribute("role", "tabpanel");
       detailEl.setAttribute("aria-label", group ? group.name : "活动详情");
       if (statsEl) {
         if (state.query) {
           statsEl.textContent = "找到 " + groups.length + " 个平台 · " + countOffers(groups) + " 项";
         } else {
-          statsEl.textContent = countOffers(allGroups) + " 项进行中 · " + allGroups.length + " 个平台";
+          statsEl.textContent = countOffers(base) + " 项进行中 · " + base.length + " 个平台";
         }
       }
+      applyFolds();
       if (slug && slug !== state.rendered) {
         buttons = tabsEl.querySelectorAll ? tabsEl.querySelectorAll("[role=tab]") : [];
         for (i = 0; i < buttons.length; i++) {
@@ -1233,6 +1544,7 @@
         if (btn) scrollTabIntoView(btn);
         state.rendered = slug;
       }
+      updateTabFades();
       shown = activeItems(all, now).length;
       hidden = all.length - shown;
       root.__FM_COUNTS = {
@@ -1240,6 +1552,9 @@
         shown: shown,
         hidden: hidden,
         platforms: allGroups.length,
+        providers: countOffers(byKind.providers),
+        agents: countOffers(byKind.agents),
+        kind: kind,
       };
     }
 
@@ -1250,12 +1565,12 @@
       br = btn.getBoundingClientRect();
       sr = tabsEl.getBoundingClientRect();
       if (horizontal) {
-        if (br.left >= sr.left - 1 && br.right <= sr.right + 1) return;
-        tabsEl.scrollLeft += br.left - sr.left - 10;
-        return;
-      }
-      if (br.top < sr.top) tabsEl.scrollTop -= sr.top - br.top;
+        if (br.left < sr.left - 1 || br.right > sr.right + 1) {
+          tabsEl.scrollLeft += br.left - sr.left - 28;
+        }
+      } else if (br.top < sr.top) tabsEl.scrollTop -= sr.top - br.top;
       else if (br.bottom > sr.bottom) tabsEl.scrollTop += br.bottom - sr.bottom;
+      updateTabFades();
     }
 
     function slugFromEvent(target) {
@@ -1267,11 +1582,88 @@
       return "";
     }
 
+    function stepsAreLong(details) {
+      var text, items;
+      items = details.querySelectorAll ? details.querySelectorAll(".guide > li").length : 0;
+      text = String(details.textContent || "").replace(/\s+/g, "");
+      return items >= 3 || text.length > 180;
+    }
+
+    function isMobile() {
+      return window.matchMedia && window.matchMedia("(max-width: 860px)").matches;
+    }
+
+    function applyFolds() {
+      var mobile, steps, i, texts, el, btn, overflow, full, clamped;
+      if (!detailEl) return;
+      mobile = isMobile();
+      steps = detailEl.querySelectorAll("details.steps");
+      for (i = 0; i < steps.length; i++) {
+        if (!mobile) steps[i].open = true;
+        else if (steps[i].getAttribute("data-touched") !== "1") steps[i].open = !stepsAreLong(steps[i]);
+      }
+      texts = detailEl.querySelectorAll(".fold-text");
+      for (i = 0; i < texts.length; i++) {
+        el = texts[i];
+        btn = el.nextSibling;
+        while (btn && btn.nodeType !== 1) btn = btn.nextSibling;
+        if (!btn || !btn.classList || !btn.classList.contains("fold-toggle")) continue;
+        if (!mobile || el.getAttribute("data-open") === "1") {
+          el.removeAttribute("data-collapsed");
+          btn.hidden = !mobile || el.getAttribute("data-open") !== "1" ? true : false;
+          if (mobile && el.getAttribute("data-open") === "1") {
+            btn.hidden = false;
+            btn.textContent = "收起";
+          }
+          continue;
+        }
+        el.setAttribute("data-collapsed", "true");
+        overflow = el.scrollHeight > el.clientHeight + 2;
+        if (!overflow && String(el.textContent || "").replace(/\s+/g, "").length > 120) {
+          el.removeAttribute("data-collapsed");
+          full = el.offsetHeight;
+          el.setAttribute("data-collapsed", "true");
+          clamped = el.clientHeight;
+          overflow = full > clamped + 2;
+        }
+        if (!overflow) {
+          el.removeAttribute("data-collapsed");
+          btn.hidden = true;
+        } else {
+          btn.hidden = false;
+          btn.textContent = "展开";
+        }
+      }
+    }
+
+    function updateTabFades() {
+      var max, horizontal;
+      if (!railEl || !tabsEl) return;
+      max = tabsEl.scrollWidth - tabsEl.clientWidth;
+      horizontal = max > 8;
+      if (railEl.classList) {
+        railEl.classList.toggle("can-left", horizontal && tabsEl.scrollLeft > 6);
+        railEl.classList.toggle("can-right", horizontal && tabsEl.scrollLeft < max - 6);
+      }
+    }
+
+    function chooseKind(kind, mode) {
+      var base;
+      if (kind !== "agents" && kind !== "providers") return;
+      state.kind = kind;
+      base = scopedGroups(kind);
+      if (!groupBySlug(base, state.slug)) state.slug = base.length ? base[0].slug : "";
+      state.query = qEl ? qEl.value : state.query;
+      state.rendered = "";
+      writeHash(state.kind, state.slug, mode || "push");
+      render();
+    }
+
     tabsEl.addEventListener("click", function (e) {
       var slug = slugFromEvent(e.target);
       if (!slug) return;
       state.slug = slug;
-      writeHash(slug, "push");
+      writeHash(state.kind, slug, "push");
       state.rendered = "";
       render();
     });
@@ -1295,9 +1687,13 @@
       e.preventDefault();
       buttons[i].focus();
       state.slug = buttons[i].getAttribute("data-slug");
-      writeHash(state.slug, "push");
+      writeHash(state.kind, state.slug, "push");
       state.rendered = "";
       render();
+    });
+
+    tabsEl.addEventListener("scroll", function () {
+      updateTabFades();
     });
 
     if (qEl) {
@@ -1310,18 +1706,85 @@
     if (selectEl) {
       selectEl.addEventListener("change", function () {
         state.slug = selectEl.value;
-        writeHash(state.slug, "push");
+        writeHash(state.kind, state.slug, "push");
         state.rendered = "";
         render();
       });
     }
 
+    document.addEventListener("click", function (e) {
+      var node, kind, textEl;
+      node = e.target;
+      while (node && node !== document) {
+        if (node.classList && node.classList.contains("kind") && node.getAttribute("data-kind")) {
+          kind = node.getAttribute("data-kind");
+          if (kind !== state.kind) chooseKind(kind, "push");
+          return;
+        }
+        if (node.classList && node.classList.contains("jump-kind")) {
+          chooseKind(node.getAttribute("data-kind"), "push");
+          return;
+        }
+        if (node.classList && node.classList.contains("fold-toggle")) {
+          textEl = node.previousSibling;
+          while (textEl && textEl.nodeType !== 1) textEl = textEl.previousSibling;
+          if (!textEl) return;
+          if (textEl.getAttribute("data-open") === "1") {
+            textEl.removeAttribute("data-open");
+            textEl.setAttribute("data-collapsed", "true");
+            node.textContent = "展开";
+          } else {
+            textEl.setAttribute("data-open", "1");
+            textEl.removeAttribute("data-collapsed");
+            node.textContent = "收起";
+          }
+          return;
+        }
+        node = node.parentNode;
+      }
+    });
+
+    if (detailEl.addEventListener) {
+      detailEl.addEventListener("toggle", function (e) {
+        var t = e.target;
+        if (t && t.classList && t.classList.contains("steps")) t.setAttribute("data-touched", "1");
+      }, true);
+    }
+
+    function onKindKey(e) {
+      var key, buttons, i, next;
+      key = e.key || e.which;
+      if (key !== "ArrowRight" && key !== "ArrowLeft" && key !== "Home" && key !== "End") return;
+      buttons = [];
+      var nodes = document.querySelectorAll(".kind");
+      for (i = 0; i < nodes.length; i++) buttons.push(nodes[i]);
+      if (!buttons.length) return;
+      i = state.kind === "agents" ? 1 : 0;
+      if (key === "Home") i = 0;
+      else if (key === "End") i = 1;
+      else if (key === "ArrowRight") i = Math.min(1, i + 1);
+      else i = Math.max(0, i - 1);
+      next = buttons[i];
+      if (!next) return;
+      e.preventDefault();
+      next.focus();
+      chooseKind(next.getAttribute("data-kind"), "push");
+    }
+
+    var kindButtons = document.querySelectorAll(".kind");
+    for (i = 0; i < kindButtons.length; i++) kindButtons[i].addEventListener("keydown", onKindKey);
+
     function onNavigate() {
-      var next = readHash();
-      state.slug = next;
-      if (next && !groupBySlug(filterGroups(allGroups, state.query), next) && groupBySlug(allGroups, next)) {
+      var parsed, kindBase;
+      parsed = parseHash(readHash());
+      state.slug = parsed.slug;
+      if (parsed.kind) state.kind = parsed.kind;
+      else if (parsed.slug) state.kind = inferKind(parsed.slug);
+      kindBase = scopedGroups(state.kind);
+      if (parsed.slug && !groupBySlug(kindBase, parsed.slug) && groupBySlug(allGroups, parsed.slug)) {
         state.query = "";
         if (qEl) qEl.value = "";
+        state.kind = inferKind(parsed.slug);
       }
       state.rendered = "";
       render();
@@ -1332,16 +1795,26 @@
       window.addEventListener("popstate", onNavigate);
       window.addEventListener("resize", function () {
         var btn = tabsEl.querySelector('[aria-selected="true"]');
+        applyFolds();
+        updateTabFades();
         if (!btn) return;
         scrollTabIntoView(btn);
         if (window.requestAnimationFrame) {
           window.requestAnimationFrame(function () { scrollTabIntoView(btn); });
         }
       });
+      if (window.matchMedia) {
+        var mq = window.matchMedia("(max-width: 860px)");
+        var onMq = function () { applyFolds(); updateTabFades(); };
+        if (mq.addEventListener) mq.addEventListener("change", onMq);
+        else if (mq.addListener) mq.addListener(onMq);
+      }
     }
 
+    setKindCounts();
+    if (!initial.kind && initial.slug) state.kind = inferKind(initial.slug);
     render();
-    if (!readHash() && state.slug) writeHash(state.slug, "replace");
+    if (state.slug) writeHash(state.kind, state.slug, "replace");
   }
 
   root.__FM = {
@@ -1360,6 +1833,8 @@
     claimGuideOf: claimGuideOf,
     autoClaimView: autoClaimView,
     summaryStatus: summaryStatus,
+    categoryOf: categoryOf,
+    groupsInKind: groupsInKind,
     goUrl: goUrl,
     safeUrl: safeUrl,
     fmtDeadlineBJ: fmtDeadlineBJ,

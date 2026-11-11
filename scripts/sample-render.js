@@ -184,6 +184,54 @@ var realHtml = realGroups.map(function (g) { return FM.renderDetail(g, Date.now(
 check(realHtml.indexOf("qoder-deepseek-v41-flash-1017-free-oct24-20261020") === -1, "real superseded id not rendered");
 check(realGroups.length > 5 && realHtml.indexOf("去领取") !== -1, "real catalog renders");
 check(realHtml.indexOf("<script") === -1, "real render has no script tag");
+check(realHtml.indexOf('data-kind="providers"') !== -1 || realHtml.indexOf('data-kind="agents"') !== -1, "offer kind attribute");
+check(html.indexOf("领取步骤") !== -1 && html.indexOf('class="steps"') !== -1, "steps disclosure");
+check(html.indexOf("简介") !== -1 && html.indexOf('class="fold-text"') !== -1, "foldable summary");
+
+function itemWhere(pred) {
+  var i;
+  for (i = 0; i < real.length; i++) if (pred(real[i])) return real[i];
+  return null;
+}
+var groqItem = itemWhere(function (it) { return FM.platformOf(it) === "Groq" && !FM.isExpired(it, Date.now()); });
+var openrouterItem = itemWhere(function (it) { return FM.platformOf(it) === "OpenRouter" && FM.categoryOf(it) === "providers"; });
+var vercelItem = itemWhere(function (it) { return FM.platformOf(it) === "Vercel AI Gateway"; });
+var opencodeItem = itemWhere(function (it) { return FM.platformOf(it) === "OpenCode"; });
+var kiroItem = itemWhere(function (it) { return FM.platformOf(it) === "AWS Kiro"; });
+var traycerItem = itemWhere(function (it) { return FM.platformOf(it) === "Traycer"; });
+var devinItem = itemWhere(function (it) { return /Devin/.test(FM.platformOf(it)); });
+var cursorItem = itemWhere(function (it) { return /^Cursor/.test(it.title || ""); });
+var minimaxCodeItem = itemWhere(function (it) { return /MiniMax Code/.test(it.title || ""); });
+var claudeApiItem = itemWhere(function (it) { return FM.platformOf(it) === "Anthropic" && /API 额度/.test(it.title || ""); });
+check(groqItem && FM.categoryOf(groqItem) === "providers", "groq is a provider");
+check(openrouterItem && FM.categoryOf(openrouterItem) === "providers", "openrouter is a provider");
+check(vercelItem && FM.categoryOf(vercelItem) === "providers", "vercel gateway is a provider");
+check(opencodeItem && FM.categoryOf(opencodeItem) === "agents", "opencode is an agent");
+check(kiroItem && FM.categoryOf(kiroItem) === "agents", "kiro is an agent");
+check(traycerItem && FM.categoryOf(traycerItem) === "agents", "traycer is an agent");
+check(devinItem && FM.categoryOf(devinItem) === "agents", "devin is an agent");
+check(cursorItem && FM.categoryOf(cursorItem) === "agents", "cursor title is an agent");
+check(minimaxCodeItem && FM.categoryOf(minimaxCodeItem) === "agents", "minimax code is an agent");
+check(claudeApiItem && FM.categoryOf(claudeApiItem) === "providers", "anthropic api credits stay providers");
+check(FM.categoryOf({ title: "Anything", platform: "Cursor", category: "providers" }) === "providers", "explicit category wins");
+check(FM.categoryOf({ title: "Brand new gateway", platform: "ZyxwGateway" }) === "providers", "unknown gateway falls back to providers");
+check(FM.categoryOf({ title: "Foo IDE 免费", platform: "Foo IDE" }) === "agents", "ide pattern is an agent");
+check(FM.categoryOf(items[0]) === "providers", "sample groq row is a provider");
+
+var realNow = Date.now();
+var realBuilt = FM.buildGroups(real, realNow);
+var agentNames = FM.groupsInKind(realBuilt, "agents").map(function (g) { return g.name; });
+var providerNames = FM.groupsInKind(realBuilt, "providers").map(function (g) { return g.name; });
+check(agentNames.indexOf("OpenCode") !== -1 && agentNames.indexOf("Groq") === -1, "agent platforms " + agentNames.slice(0, 6).join(","));
+check(providerNames.indexOf("OpenRouter") !== -1 && providerNames.indexOf("OpenCode") === -1, "provider platforms");
+var agentSearch = FM.filterGroups(FM.groupsInKind(realBuilt, "agents"), "opencode");
+check(agentSearch.length >= 1 && agentSearch[0].name === "OpenCode", "search stays inside agents");
+var kindCounts = { providers: 0, agents: 0 };
+real.forEach(function (it) {
+  if (FM.isExpired(it, realNow) || FM.isSuperseded(it)) return;
+  kindCounts[FM.categoryOf(it)] += 1;
+});
+check(kindCounts.providers > 50 && kindCounts.agents > 10, "both kinds have offers " + JSON.stringify(kindCounts));
 
 if (failures.length) {
   console.error("SAMPLE RENDER FAILED");
