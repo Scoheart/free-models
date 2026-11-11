@@ -32988,5 +32988,253 @@
       "note": "需要把 Higgsfield 连接器加到你本人的 Claude 账号里并开通 3 天试用，试用条款可能涉及绑卡，需你本人决定",
       "at": "2026-11-11 21:20 北京"
     }
+  },
+  {
+    "id": "upstage-console-10usd-signup-credit-20261111",
+    "title": "Upstage Console：注册送 $10 免费额度，可调旗舰 Solar Pro 4（512K 上下文，免绑卡）",
+    "platform": "Upstage",
+    "product": "Upstage Console API",
+    "model": "solar-pro4 / solar-mini4",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://console.upstage.ai/docs/getting-started",
+    "source": "Upstage 官方 Getting Started 文档（标题「Sign up to receive $10 in free credit」，11/11 22:10 北京抓取）、Upstage 官方博客；awesome-free-ai-coding 11/9 探测核实；据 X 上的报道（@jhl880617 11/11 20:21 北京）",
+    "summary": "韩国大模型公司 Upstage 的开发者平台 Upstage Console，官方入门文档写明注册即可获得 $10 免费额度（Sign up to receive $10 in free credit），可用于平台上的所有 API，包括 8 月发布的旗舰模型 Solar Pro 4（512K 上下文、最长 128K 输出，支持推理、工具调用和结构化输出，擅长文档类任务、编程和商务场景）和 Solar Mini 4，以及文档解析、信息抽取等接口。据第三方清单 awesome-free-ai-coding 11 月 9 日探测，这笔额度每个账号限一次，注册不需要绑卡。Solar Pro 4 当前按促销价约 $0.30 / 百万输入、$1.20 / 百万输出计费，$10 大约能跑数千万 Token。限制：只送一次，额度有效期以控制台显示为准，用完后需充值或绑卡按量付费；官方称不会存储或用 API 数据训练模型。门槛：海外平台，邮箱或第三方账号注册即可，官方未要求手机号或实名。",
+    "claim_steps": [
+      "打开 Upstage Console，点右上角 Log in 注册登录",
+      "注册后控制台会自动生成一个默认 API Key（也可在 Dashboard → API Keys 新建）",
+      "OpenAI 兼容客户端 base_url 填 https://api.upstage.ai/v1，model 填 solar-pro4",
+      "发一条测试请求，在用量 / 账单页确认从免费额度扣费"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开控制台",
+        "detail": "访问 Upstage Console 入门页，点右上角 Log in 按提示注册",
+        "url": "https://console.upstage.ai/docs/getting-started",
+        "note": "登录方式以页面为准"
+      },
+      {
+        "step": "确认额度",
+        "detail": "登录后在账单 / Billing 页查看 $10 免费额度是否到账",
+        "url": "https://console.upstage.ai/",
+        "note": "不需要先绑卡"
+      },
+      {
+        "step": "获取 API Key",
+        "detail": "在 Dashboard → API Keys 复制默认 Key 或点 Create new key 新建",
+        "url": "https://console.upstage.ai/api-keys",
+        "note": "Key 只显示一次，立即保存"
+      },
+      {
+        "step": "配置客户端",
+        "detail": "OpenAI SDK 里 base_url 填 https://api.upstage.ai/v1，model 填 solar-pro4（轻量用 solar-mini4），可加 reasoning_effort=medium/high",
+        "url": "https://console.upstage.ai/docs/models/solar-pro-4.md",
+        "note": ""
+      },
+      {
+        "step": "测试调用",
+        "detail": "按入门页的 cURL / Python 示例发一条请求，确认正常返回",
+        "url": "https://console.upstage.ai/docs/getting-started",
+        "note": ""
+      },
+      {
+        "step": "留意余额",
+        "detail": "在 Billing 页关注剩余额度，用完前决定是否绑卡",
+        "url": "https://console.upstage.ai/",
+        "note": "额度用完后会按绑定的付款方式按量扣费"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Upstage Console",
+        "action_url": "https://console.upstage.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "solar-pro4",
+        "action_url": "https://console.upstage.ai/docs/models/solar-pro-4.md"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key",
+      "new_user_only"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T22:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "Google 注册，$10 欢迎券已到账（有效至 2027-02-09），key 存入 .keys.json（控制台无法设单 key 额度上限和过期时间）。",
+      "at": "2026-11-11 22:15 北京"
+    }
+  },
+  {
+    "id": "radium-cloud-25usd-free-credit-no-card-20261111",
+    "title": "Radium：新账号送 $25 推理额度，免绑卡（Hal / Clarke / Tycho 三档模型，OpenAI + Anthropic 兼容）",
+    "platform": "Radium",
+    "product": "Radium Inference API",
+    "model": "Hal 1.0 / Clarke 1.0 / Tycho 1.0",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://radium.cloud/pricing",
+    "source": "Radium 官网首页与定价页（11/11 22:10 北京抓取，写明「Every new account gets $25 in credit. No card required.」）；OneHack 论坛 11/11 20:57 北京帖子",
+    "summary": "Radium 是一家自建 GPU 机房的推理服务商，主打用自家模型替代 OpenAI / Anthropic、价格约为一半。官网首页和定价页写明：每个新账号送 $25 额度，不需要绑卡。平台有三档自有模型：Hal 1.0（对标 Opus 5.5 / GPT-6 Astra，$2.75 / $13.75 每百万 Token）、Clarke 1.0（对标 Sonnet 5.5，$1.50 / $7.00）、Tycho 1.0（对标 Haiku 5.5，$0.50 / $2.25），提示缓存最高省 90%。按 Tycho 价格算，$25 约等于 5000 万输入 Token。API 同时兼容 OpenAI 和 Anthropic 两种协议。限制：一次性赠送，官网未写有效期和用量上限；模型「对标」说法是厂商自述，没有第三方独立评测，模型底层来源未公开，敏感数据慎用。门槛：只需注册账号，官方未要求手机号、实名或信用卡。",
+    "claim_steps": [
+      "打开 Radium 注册页 deploy.radium.cloud/sign-up 注册登录",
+      "在控制台创建 API Key",
+      "OpenAI 兼容客户端 base_url 填 https://api.radium.cloud/v1，model 填 hal-1.0（或 Clarke / Tycho，以控制台模型名为准）",
+      "Anthropic 兼容客户端 base_url 填 https://api.radium.cloud"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册账号",
+        "detail": "打开 Radium 注册页，按提示注册并登录控制台",
+        "url": "https://deploy.radium.cloud/sign-up",
+        "note": "登录方式以页面为准"
+      },
+      {
+        "step": "确认额度",
+        "detail": "在控制台的账单 / 余额处确认 $25 免费额度到账",
+        "url": "https://deploy.radium.cloud/",
+        "note": "不需要绑卡"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在控制台 API Keys 页新建一个 Key，能设额度上限或过期时间就设上",
+        "url": "https://deploy.radium.cloud/",
+        "note": "Key 只显示一次，立即保存"
+      },
+      {
+        "step": "查看文档与模型名",
+        "detail": "打开 Radium 文档，确认三档模型的准确 model id",
+        "url": "https://docs.radium.cloud/",
+        "note": "官网示例里用的是 hal-1.0"
+      },
+      {
+        "step": "配置 OpenAI 兼容客户端",
+        "detail": "base_url 填 https://api.radium.cloud/v1，调用 /v1/chat/completions，model 填对应模型 id",
+        "url": "https://radium.cloud/",
+        "note": ""
+      },
+      {
+        "step": "配置 Anthropic 兼容客户端（可选）",
+        "detail": "Claude Code 等 Anthropic 协议工具 base_url 填 https://api.radium.cloud",
+        "url": "https://radium.cloud/",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "Radium",
+        "action_url": "https://deploy.radium.cloud/sign-up"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "hal-1.0",
+        "action_url": "https://radium.cloud/models/radium-hal"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key",
+      "new_user_only"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T22:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "Google 注册，点 Get started 后 $25 赠送额度到账，未绑卡；key 存入 .keys.json（key 无额度上限和过期设置）。",
+      "at": "2026-11-11 22:15 北京"
+    }
+  },
+  {
+    "id": "amd-ai-developer-program-100usd-devcloud-credit-20261111",
+    "title": "AMD AI Developer Program：免费入会可申请 $100 AMD Developer Cloud 额度（MI300X 192GB GPU，需审核）",
+    "platform": "AMD",
+    "product": "AMD AI Developer Program · AMD Developer Cloud",
+    "model": "自部署开源模型（如 Kimi K3.1 Pro 等，跑在 AMD Instinct GPU 上）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://www.amd.com/en/developer/resources/cloud-access/amd-developer-cloud.html",
+    "source": "AMD Developer Cloud 官方页、AMD 官方文章《How to Claim AMD Cloud Credits》、AMD AI Developer Program 新闻页（11/1「Looking for Your Free Cloud Credit?」，11/11 22:10 北京抓取）；that.promo 11/11 核实；据 X 上的报道（@StarDomain_ 11/11 21:25 北京）",
+    "summary": "AMD 的 AI 开发者计划（AMD AI Developer Program）免费加入，会员可申请 $100 的 AMD Developer Cloud 免费额度，用在 AMD Instinct MI300X GPU（单卡 192GB 显存）云主机上，自己部署和跑开源大模型（AMD 刚发文介绍了 Kimi K3.1 Pro 在 Instinct GPU 上的首日支持）。官方说明：额度由 AMD 按申请用途审核发放，面向独立开发者和开源贡献者，申请时要填所属单位、职位、用途描述和公开主页（GitHub 或 LinkedIn）；审核约 2–3 个工作日，通过后 3 个工作日内到账，额度从存入起 30 天内有效。限制：只能用于 MI300X GPU，不含存储和备份；GPU 实例关机也照样计费，额度用完或过期时若没绑卡，云主机和数据会被销毁，若绑了卡会自动扣费。AMD 官方文章还提到另一个选项是 Fireworks AI 托管推理 $50 额度（90 天有效），但 AMD Developer Cloud 页面本身只写了 $100 GPU 额度，以审核邮件为准。这是 GPU 算力额度，不是现成的模型 API Key。",
+    "claim_steps": [
+      "打开 AMD AI Developer Program 页面，用 AMD 账号注册加入（免费）",
+      "登录开发者计划门户，进入 Member Perks → Request Cloud Credits",
+      "填写申请表（单位、职位、用途、GitHub / LinkedIn 主页）并提交",
+      "收到审核通过邮件后，按邮件里的 $100 额度链接登录 AMD Developer Cloud 激活，创建 MI300X 实例"
+    ],
+    "claim_guide": [
+      {
+        "step": "加入开发者计划",
+        "detail": "打开 AMD AI Developer Program 页面，点加入并用 AMD 账号（AMD SSO）注册登录",
+        "url": "https://developer.amd.com/ai-developer-program/",
+        "note": "免费加入"
+      },
+      {
+        "step": "申请云额度",
+        "detail": "登录后在门户 Dashboard 找到 Member Perks，点 Request Cloud Credits",
+        "url": "https://www.amd.com/en/developer/resources/technical-articles/2026/how-to-claim-amd-cloud-credits.html",
+        "note": ""
+      },
+      {
+        "step": "填写申请表",
+        "detail": "按表单填写所属单位、职位、计划用途（推理 / 训练 / 微调）和详细说明，附上公开的 GitHub 或 LinkedIn 主页",
+        "url": "https://www.amd.com/en/developer/resources/technical-articles/2026/how-to-claim-amd-cloud-credits.html",
+        "note": "用途写得越具体越容易通过"
+      },
+      {
+        "step": "等待审核",
+        "detail": "约 2–3 个工作日内收到审核结果邮件",
+        "url": "",
+        "note": "由 AMD 自行决定是否发放"
+      },
+      {
+        "step": "激活额度",
+        "detail": "按邮件里的 $100 额度链接登录或创建 AMD Developer Cloud 账号，在「My AMD Home」页确认额度",
+        "url": "https://www.amd.com/en/developer/resources/cloud-access/amd-developer-cloud.html",
+        "note": "30 天内用完"
+      },
+      {
+        "step": "创建 GPU 实例",
+        "detail": "在 AMD Developer Cloud 控制台新建 MI300X 实例，部署 vLLM 等跑开源模型；不用时直接销毁实例",
+        "url": "https://www.amd.com/en/developer/resources/cloud-access/amd-developer-cloud.html",
+        "note": "关机也计费，只有销毁才停止扣额度"
+      }
+    ],
+    "providers": [
+      {
+        "name": "AMD Developer Cloud",
+        "action_url": "https://developer.amd.com/ai-developer-program/"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "gpu"
+    ],
+    "barriers": [
+      "need_review"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T22:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要你本人填写单位、职位、用途和 GitHub / LinkedIn 主页提交人工审核，无法代填",
+      "at": "2026-11-11 22:20 北京"
+    }
   }
 ]
