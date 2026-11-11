@@ -13530,12 +13530,12 @@
     "title": "MOSS-Image API 上线，官方宣布免费调用",
     "model": "MOSS-Image",
     "type": "API",
-    "deadline": null,
+    "deadline": "2026-11-11T12:00:00+08:00",
     "url": "https://x.com/MOSS_Global/status/2112553676439163165",
     "summary": "OpenMOSS / 模思（MOSI）官方宣布 MOSS-Image 图像生成 API 上线并免费开放，在 Moss 开放平台控制台创建 API Key 即可调用。平台同时提供 MOSS-TTS、MOSS-VL 等多模态模型 API。限额：未说明期限与限额。截止：官方未写免费截止时间和用量上限。",
     "source": "x @MOSS_Global（官方）；platform.mosi.cn 控制台可访问",
     "collected_at": "2026-10-20T22:50:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2112553676439163165",
     "post_time_bj": "2026-10-20T22:37:00+08:00",
     "product": "Moss 开放平台",
@@ -32320,6 +32320,673 @@
       "status": "success",
       "note": "已用 Google 账号注册，$30 免费额度已到账，并已创建 API key（已设 7 天过期至 2026-11-18，平台不支持设额度上限）",
       "at": "2026-11-11 20:18 北京"
+    }
+  },
+  {
+    "id": "moss-nex-n26-free-api-20261111",
+    "title": "MOSS API：Nex-N2.6 多模态 Agent 模型限时免费调用（0 积分，OpenAI / Anthropic 兼容）",
+    "platform": "Moss 开放平台",
+    "product": "MOSS API · Nex-N2.6",
+    "model": "nex-n2.6",
+    "type": "API",
+    "deadline": null,
+    "url": "https://platform.moss.cn/docs/models/nex-n2-6",
+    "source": "MOSS API 官方模型文档 platform.moss.cn/docs/models/nex-n2-6（2026-11-11 21:05 北京抓取）；据 X 上的报道（@MOSS_Global、@NexEcosystem 官推，11/11 20:08–20:52 北京）",
+    "summary": "上海创智学院开源的多模态 Agent 模型 Nex-N2.6 于 11 月 11 日发布（基于 GLM-5.3-Flash 后训练，支持文本、图片、视频输入，文本输出，可函数调用）。据 X 上的报道，MOSS 官方账号宣布 Nex-N2.6 可通过 MOSS API 免费调用；MOSS API 官方模型文档写明计费为「限时免费」、0 积分，所有有效的 MOSS API Key 都能调用，同时支持 Chat Completions、Responses 和 Anthropic Messages 三种协议。限制：单次输出默认 8192、上限 131072 Token；请求体（含编码后的图片/视频）不超过 10 MiB，视频仅 MP4/WebM，不支持文件上传引用；官方未写免费截止时间和用量上限，响应里仍会返回 Token 用量。账号门槛：需注册 MOSS 开放平台账号并创建 API Key（登录方式以控制台为准）。注意：同平台的 MOSS-Image 生图 API 已于 11 月 11 日 12:00 开始收费，免费的只有 Nex-N2.6。",
+    "claim_steps": [
+      "打开 MOSS 开放平台控制台并注册登录",
+      "在 API Keys 页面创建 API Key",
+      "OpenAI 兼容客户端 base_url 填 https://api.mosi.cn/v1，model 填 nex-n2.6",
+      "Anthropic 兼容客户端用 https://api.mosi.cn（x-api-key + anthropic-version: 2023-06-01）"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开控制台",
+        "detail": "进入 MOSS 开放平台控制台，按页面提示注册并登录",
+        "url": "https://platform.mosi.cn/",
+        "note": "登录方式以页面为准"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在左侧 Configuration → API Keys 新建一个 Key，能设过期或额度就设上",
+        "url": "https://platform.mosi.cn/",
+        "note": "Key 只显示一次，立即保存"
+      },
+      {
+        "step": "查看模型文档",
+        "detail": "打开 Nex N2.6 模型页确认计费仍为「限时免费」、0 积分",
+        "url": "https://platform.moss.cn/docs/models/nex-n2-6",
+        "note": ""
+      },
+      {
+        "step": "配置 OpenAI 兼容客户端",
+        "detail": "base_url 填 https://api.mosi.cn/v1，鉴权用 Bearer Key，model 填 nex-n2.6，调用 /v1/chat/completions 或 /v1/responses",
+        "url": "https://platform.moss.cn/docs/models/nex-n2-6",
+        "note": ""
+      },
+      {
+        "step": "配置 Anthropic 兼容客户端（可选）",
+        "detail": "Messages 协议请求 https://api.mosi.cn/v1/messages，用 x-api-key 头并传 anthropic-version: 2023-06-01",
+        "url": "https://platform.moss.cn/docs/models/nex-n2-6",
+        "note": "Messages 协议不支持视频"
+      },
+      {
+        "step": "发一条测试请求",
+        "detail": "发一条短文本请求，确认返回正常并在用量页看到 0 积分扣费",
+        "url": "https://platform.mosi.cn/",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "MOSS 开放平台",
+        "action_url": "https://platform.mosi.cn/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "nex-n2.6",
+        "action_url": "https://platform.moss.cn/docs/models/nex-n2-6"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "vision"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T21:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "failed",
+      "note": "platform.mosi.cn 证书无效（ERR_CERT_AUTHORITY_INVALID），页面打不开，未注册",
+      "at": "2026-11-11 21:16 北京"
+    }
+  },
+  {
+    "id": "google-cloud-300-trial-gemini-platform-cutoff-nov16-20261111",
+    "title": "Google Cloud $300 试用额度：11/16 起新开通的试用不能再抵 Gemini 平台（Vertex AI），想用要在 11/15 前开通",
+    "platform": "Google Cloud",
+    "product": "Google Cloud Free Trial $300",
+    "model": "Gemini 平台（原 Vertex AI）上的 Gemini 模型",
+    "type": "额度",
+    "deadline": "2026-11-16T00:00:00-08:00",
+    "url": "https://cloud.google.com/free/docs/free-cloud-features",
+    "source": "Google Cloud 官方文档《Free cloud features and trial offer》（页面标注 2026-11-10 UTC 更新，11/11 21:00 北京抓取）；据 X 上的报道（@20060702zyl 11/11 羊毛日报）",
+    "summary": "Google Cloud 新客户免费试用送 $300、90 天有效，可用于大多数云服务。官方文档 11 月 10 日新增限制：2026 年 11 月 16 日及之后开通免费试用、或在这天及之后升级为付费账号的，$300 都不能再支付 Gemini 平台（原 Vertex AI）费用；AI Studio 里的 Gemini API 本来就不能用这笔钱，也不能用于以 API 形式提供的第三方合作模型（MaaS）。所以想用这 $300 在 Vertex 上跑 Gemini，要在 11 月 16 日（官方按太平洋时间计，约北京时间 11 月 16 日 16:00）之前开通试用。门槛：仅限从未付费用过 Google Cloud / Maps / Firebase、也没开过试用的新客户，每人一次；开通需绑定信用卡等付款方式做验证（官方说会预授权 0–1 美元，试用期不扣费，需手动升级才计费）；国内银行卡可能过不了。限制：90 天有效，试用账号有配额与 GPU 等限制。",
+    "claim_steps": [
+      "打开 Google Cloud 免费试用页，点 Get started for free",
+      "用 Google 账号登录，填写国家和账号类型",
+      "添加信用卡等付款方式完成验证",
+      "在 11/16 前完成开通后，到 Vertex AI / Gemini 平台启用 API 使用 Gemini"
+    ],
+    "claim_guide": [
+      {
+        "step": "确认资格",
+        "detail": "先确认这个 Google 账号从没付费用过 Google Cloud、Maps、Firebase，也没开过试用",
+        "url": "https://cloud.google.com/free/docs/free-cloud-features",
+        "note": "每人一次"
+      },
+      {
+        "step": "开通试用",
+        "detail": "打开 Google Cloud 免费页，点 Get started for free，用 Google 账号登录并填写资料",
+        "url": "https://cloud.google.com/free",
+        "note": ""
+      },
+      {
+        "step": "绑定付款方式",
+        "detail": "填写信用卡或借记卡做身份验证，可能有 0–1 美元预授权，试用期不扣费",
+        "url": "https://cloud.google.com/free",
+        "note": "需绑卡；必须在 2026-11-16（太平洋时间）之前完成"
+      },
+      {
+        "step": "启用 Gemini 平台",
+        "detail": "在控制台新建项目，启用 Vertex AI（Gemini 平台）API",
+        "url": "https://console.cloud.google.com/vertex-ai",
+        "note": ""
+      },
+      {
+        "step": "调用 Gemini",
+        "detail": "按 Vertex AI 文档用服务账号或 gcloud 凭据调用 Gemini 模型，在账单页确认费用从 $300 抵扣",
+        "url": "https://console.cloud.google.com/billing",
+        "note": "AI Studio 的 Gemini API Key 不走这笔额度"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Google Cloud",
+        "action_url": "https://cloud.google.com/free"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_card",
+      "new_user_only"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T21:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "开通要绑信用卡，且你的 Google 账号此前已用过 Google Cloud，大概率不符合新客户条件，需你本人判断",
+      "at": "2026-11-11 21:20 北京"
+    }
+  },
+  {
+    "id": "baidu-qianfan-newcustomer-20yuan-voucher-nov30-20261111",
+    "title": "百度千帆：双 11 新客送 20 元代金券（智聚 11.11 活动，需实名）",
+    "platform": "百度智能云",
+    "product": "千帆大模型平台 新客代金券",
+    "model": "千帆平台模型（以券适用范围为准）",
+    "type": "额度",
+    "deadline": "2026-11-30T23:59:59+08:00",
+    "url": "https://cloud.baidu.com/campaign/event/bigevent/index.html",
+    "source": "百度智能云「智聚 11.11 年终钜惠」官方活动页（11/11 21:00 北京抓取）；据 X 上的报道（@xiao_wang24004 11/11 羊毛日报）",
+    "summary": "百度智能云双 11 活动页「千帆大模型专场」写明：千帆平台新客送 20 元代金券（企业实名再得 1999 元津贴）。据 X 上的报道，这张券可在千帆全平台模型上无门槛使用，领取截止 11 月 30 日，券有效期 1 个月。门槛：首次开通千帆的新客，需注册百度智能云并完成实名认证（企业津贴要企业实名）。限制：券的适用范围和有效期以领取时控制台显示为准；活动页同时有大量充值返券，那些需要付费，和这条无关。和已收录的「新用户 17 个模型各 100 万 Token」是两项不同权益。",
+    "claim_steps": [
+      "打开百度智能云智聚 11.11 活动页的千帆大模型专场",
+      "注册登录百度智能云并完成实名认证",
+      "在千帆新客专享处领取 20 元代金券",
+      "到千帆控制台创建 API Key 调用模型，费用自动用券抵扣"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开活动页",
+        "detail": "进入百度智能云智聚 11.11 活动页，切到「千帆大模型专场」找到「千帆新客专享」",
+        "url": "https://cloud.baidu.com/campaign/event/bigevent/index.html",
+        "note": ""
+      },
+      {
+        "step": "注册并实名",
+        "detail": "注册或登录百度智能云账号，按提示完成实名认证",
+        "url": "https://console.bce.baidu.com/",
+        "note": "需国内手机号和实名"
+      },
+      {
+        "step": "领取代金券",
+        "detail": "回到活动页点击领取 20 元代金券，在费用中心 → 代金券里确认到账和有效期",
+        "url": "https://console.bce.baidu.com/billing/",
+        "note": "据 X 上的报道 11/30 前领取、有效 1 个月"
+      },
+      {
+        "step": "开通千帆并建 Key",
+        "detail": "进入千帆控制台开通服务，在 API Key 管理里新建 Key",
+        "url": "https://console.bce.baidu.com/qianfan/",
+        "note": ""
+      },
+      {
+        "step": "调用模型",
+        "detail": "按千帆 OpenAI 兼容文档调用模型，账单里确认由代金券抵扣",
+        "url": "https://cloud.baidu.com/doc/qianfan/index.html",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "百度千帆",
+        "action_url": "https://cloud.baidu.com/campaign/event/bigevent/index.html"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_realname",
+      "need_phone",
+      "new_user_only"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T21:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要国内手机号注册并完成实名认证，需你本人操作",
+      "at": "2026-11-11 21:20 北京"
+    }
+  },
+  {
+    "id": "ant-ling-monthly-10yuan-voucher-new-20yuan-20261111",
+    "title": "蚂蚁百灵开放平台：每月 1 日送 10 元 Token 抵扣券 + 新用户 20 元券（替代原每日 50 万 Token）",
+    "platform": "蚂蚁百灵 Ant Ling",
+    "product": "百灵开放平台 新计费钱包权益",
+    "model": "百灵全部模型（Ling / Ring / Ming 等）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://developer.ant-ling.com/zh-CN/docs/getting-started/changelog/billing-upgrade/",
+    "source": "蚂蚁百灵官方文档《百灵计量计费服务升级说明》（页面标注 2026-11-05 更新，11/11 21:05 北京抓取）；FreeEgg 赛博鸡蛋（freeegg.top）11/9 收录",
+    "summary": "蚂蚁百灵开放平台把计费从小程序云钱包迁到独立的「百灵新钱包」，免费权益随之调整。官方说明写明：新用户注册后立即获得 20 元 Token 消费券，老用户升级时也补发一张 20 元券；之后每月 1 日给使用新计费平台的账户发 1 张 10 元 Token 抵扣券，当月有效、月末作废不结转；月中才升级的账户当月不补月度券，从下月 1 日起发。原来每天 50 万 Token 的免费额度已停止。券按实际计费金额抵扣，可用于百灵模型的 API 调用，配合缓存命中计价能跑更多量。门槛：需注册百灵开放平台并开通新钱包（据 FreeEgg，需实名，通常要支付宝/国内手机号）；券不能提现或转让。",
+    "claim_steps": [
+      "打开百灵开放平台注册登录",
+      "按提示开通百灵新钱包",
+      "确认 20 元新人券到账，并在控制台创建 API Key",
+      "此后每月 1 日自动发 10 元券，调用时自动抵扣"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册登录",
+        "detail": "打开蚂蚁百灵开放平台，按提示注册登录",
+        "url": "https://developer.ant-ling.com/",
+        "note": "通常需要国内手机号 / 支付宝"
+      },
+      {
+        "step": "开通新钱包",
+        "detail": "按控制台引导开通百灵新计费钱包（老用户按升级说明完成切换）",
+        "url": "https://developer.ant-ling.com/zh-CN/docs/getting-started/changelog/billing-upgrade/",
+        "note": "可能要求实名"
+      },
+      {
+        "step": "查看券",
+        "detail": "在新钱包 / 账单页确认 20 元新人券到账和有效期",
+        "url": "https://developer.ant-ling.com/",
+        "note": ""
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在控制台新建 API Key",
+        "url": "https://developer.ant-ling.com/zh-CN/docs/getting-started/prerequisites/",
+        "note": ""
+      },
+      {
+        "step": "调用模型",
+        "detail": "OpenAI 兼容客户端 base_url 填 https://api.ant-ling.com/v1，选择百灵模型调用，费用自动用券抵扣",
+        "url": "https://developer.ant-ling.com/zh-CN/docs/models/price/",
+        "note": "每月 10 元券当月用完，不结转"
+      }
+    ],
+    "providers": [
+      {
+        "name": "蚂蚁百灵开放平台",
+        "action_url": "https://developer.ant-ling.com/"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_realname",
+      "need_phone"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T21:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要国内手机号 / 支付宝注册并开通新钱包（可能要实名），需你本人操作",
+      "at": "2026-11-11 21:20 北京"
+    }
+  },
+  {
+    "id": "unisound-uplan-free-tier-weekly-2500-points-20261111",
+    "title": "云知声 U Plan Free 档：0 元订阅，每周 2500 积分调 U2-Flash / U2-Med，另送 ASR 8 小时、TTS 4 万字、OCR 737.5 万 Token",
+    "platform": "云知声",
+    "product": "云知声 Token Hub · U Plan Free 档",
+    "model": "U2-Flash / U2-Med（文本）+ U2-ASR / U2-TTS / U2-OCR 等",
+    "type": "API",
+    "deadline": null,
+    "url": "https://maas.unisound.com/token-plan",
+    "source": "云知声 Token Hub 官方 U Plan 页（11/11 21:05 北京抓取）；FreeEgg 赛博鸡蛋（freeegg.top）收录",
+    "summary": "云知声 Token Hub 正式上线 U Plan 订阅，官方页写明「Free 档免费领」：订阅 Free 档不花钱，可调 U2-Flash（编程办公）和 U2-Med（医疗）文本模型，并赠送 5 款模型权益——U2-TTS 语音合成 4 万字、U2-ASR 语音识别 8 小时、U2-OCR 文档解析 737.5 万 Token 等。据 FreeEgg 整理，Free 档每周发 2500 积分（另有 5 小时动态窗口 500），积分每周刷新不结转，赠送资源包不随周刷新、用完即止；官方按 90% 缓存命中估算约每周 6000 万 Token。兼容主流 Agent 工具（OpenAI / Anthropic 协议）。门槛：需注册 Token Hub 账号（国内平台，通常要手机号）。付费档目前限时 5 折，与本条无关。",
+    "claim_steps": [
+      "打开云知声 Token Hub 的 U Plan 页面",
+      "注册登录 Token Hub",
+      "订阅 Free 档（0 元）",
+      "在控制台拿专属 API Key 和 Base URL，填进 Agent 工具，模型选 u2-flash"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开 U Plan 页",
+        "detail": "进入云知声 Token Hub 的 U Plan 套餐页，找到 Free 档",
+        "url": "https://maas.unisound.com/token-plan",
+        "note": ""
+      },
+      {
+        "step": "注册登录",
+        "detail": "按页面提示注册并登录 Token Hub",
+        "url": "https://maas.unisound.com/",
+        "note": "国内平台，通常要手机号"
+      },
+      {
+        "step": "订阅 Free 档",
+        "detail": "在 Free 档点免费领取 / 订阅，0 元下单",
+        "url": "https://maas.unisound.com/token-plan",
+        "note": ""
+      },
+      {
+        "step": "获取 Key",
+        "detail": "在控制台复制 U Plan 专属 API Key 和 Base URL",
+        "url": "https://maas.unisound.com/",
+        "note": ""
+      },
+      {
+        "step": "接入工具",
+        "detail": "OpenAI 兼容填 https://maas-api.unisound.com/v1，Anthropic 兼容填 https://maas-api.unisound.com/anthropic，模型选 u2-flash 或 u2-med",
+        "url": "https://maas.unisound.com/token-plan",
+        "note": "以控制台给出的 Base URL 为准"
+      },
+      {
+        "step": "查看积分",
+        "detail": "在用量页查看每周积分和赠送资源包余量",
+        "url": "https://maas.unisound.com/",
+        "note": "积分每周刷新不结转"
+      }
+    ],
+    "providers": [
+      {
+        "name": "云知声 Token Hub",
+        "action_url": "https://maas.unisound.com/token-plan"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "u2-flash",
+        "action_url": "https://maas.unisound.com/token-plan"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "audio"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T21:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "只支持 +86 手机号短信或密码登录，没有 Google 或邮箱注册",
+      "at": "2026-11-11 21:16 北京"
+    }
+  },
+  {
+    "id": "minekuai-deepseek-v41-flash-free-unlimited-lite-20261111",
+    "title": "麦块云：Lite 免费档 DeepSeek V4.1 Flash 等免费模型不限量（排队通道），实名再送 5000 万 Token（仅中国大陆）",
+    "platform": "麦块云",
+    "product": "麦块云 模型 API Lite 档",
+    "model": "DeepSeek V4.1 Flash 1017 等（以模型广场为准）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://minekuai.cn/llm",
+    "source": "FreeEgg 赛博鸡蛋（freeegg.top）11/11 收录；麦块云官网前端说明（11/11 21:05 北京抓取）",
+    "summary": "麦块云是国内一家卖云服务器、算力和模型 API 的第三方平台。官网前端写明 Lite 档「注册即是，一个会话，免费模型不限量」，免费额度用完会自动切到「不限量通道」，不消耗额度但高峰期要排队；做新手任务（实名认证、首次调用等）可得永久额度。据 FreeEgg 整理：免费模型是自部署的 DeepSeek V4.1 Flash 1017（256K 上下文），实名送 5000 万永久 Token，首次调用再送 1000 万，签到攒鱼币可兑 1 亿 Token；支持 Claude Code、Codex 直连。门槛：手机号验证码注册，奖励要实名；一人一号；只服务中国大陆，海外 IP 会被拒。风险：第三方平台，官方自称「临时部署测试」，没有截止日也不保证稳定，敏感数据别走这里。",
+    "claim_steps": [
+      "打开麦块云模型广场确认免费模型清单",
+      "用手机号验证码注册登录",
+      "完成实名认证领取奖励额度",
+      "控制台创建 API 密钥，OpenAI 兼容客户端端点填 https://minekuai.cn/v1，模型填 deepseek-v4.1-flash-1017"
+    ],
+    "claim_guide": [
+      {
+        "step": "查看免费模型",
+        "detail": "打开麦块云模型广场，确认当前免费模型和通道规则",
+        "url": "https://minekuai.cn/llm",
+        "note": ""
+      },
+      {
+        "step": "注册登录",
+        "detail": "用国内手机号验证码注册登录",
+        "url": "https://minekuai.cn/",
+        "note": "仅中国大陆网络可用"
+      },
+      {
+        "step": "实名认证",
+        "detail": "在账户设置 → 实名认证完成认证，领取新手奖励额度",
+        "url": "https://minekuai.cn/",
+        "note": "需实名（支付宝授权）"
+      },
+      {
+        "step": "创建密钥",
+        "detail": "在控制台 API 密钥页新建密钥",
+        "url": "https://minekuai.cn/",
+        "note": ""
+      },
+      {
+        "step": "配置客户端",
+        "detail": "据 FreeEgg，端点填 https://minekuai.cn/v1，模型填 deepseek-v4.1-flash-1017；通道选「自动」可先用额度再走不限量排队",
+        "url": "https://minekuai.cn/llm",
+        "note": "第三方平台，敏感数据别走"
+      }
+    ],
+    "providers": [
+      {
+        "name": "麦块云",
+        "action_url": "https://minekuai.cn/llm"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_phone",
+      "need_realname",
+      "third_party"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T21:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要国内手机号注册、实名认证，且只允许中国大陆 IP，需你本人操作",
+      "at": "2026-11-11 21:20 北京"
+    }
+  },
+  {
+    "id": "meoo-daily-login-2000-points-newuser-5000-20261111",
+    "title": "秒悟 Meoo：每天首次登录送 2000 积分，免费版新人首月再送 5000（应用内可调 DeepSeek / Qwen / GLM 等）",
+    "platform": "秒悟 Meoo",
+    "product": "秒悟 Meoo 免费版",
+    "model": "DeepSeek V4.1 Flash / Qwen3.8 / GLM-5.3 / Kimi K3 等（以产品内为准）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://docs.meoo.com/pricing",
+    "source": "秒悟 Meoo 官方文档《订阅套餐&积分说明》（11/11 21:00 北京抓取）；FreeEgg 赛博鸡蛋收录；据 X 上的报道（@xiao_wang24004 11/11 羊毛日报）",
+    "summary": "秒悟 Meoo 是用一句话生成可上线 AI 应用的平台。官方积分说明写明：所有用户每天首次登录免费获赠 2000 积分；个人免费版每月套餐积分为 0，但新人首月送 5000；免费版还有 1 个云服务、1GB 存储和「应用内调用大模型」限时免费。积分用于平台内调用语言模型对话、图像 / 视频 / 语音 / 音乐生成，据 X 上的报道 DeepSeek V4.1 Flash 每千输入扣 2 积分、每千输出扣 8 积分，每日积分 7 天有效。限制：只能在秒悟产品里用，不是可导出的 API Key；免费版不能单独买积分包、不能导出代码。门槛：据 FreeEgg 用手机号登录。付费档默认连续包月，开通前看清。",
+    "claim_steps": [
+      "打开秒悟 Meoo 官网登录",
+      "每天首次进入控制台自动到账 2000 积分",
+      "在应用里调用模型或生成图片视频时扣积分"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开官网",
+        "detail": "访问秒悟 Meoo 官网点登录",
+        "url": "https://meoo.com/",
+        "note": "据 FreeEgg 用手机号登录"
+      },
+      {
+        "step": "每日领积分",
+        "detail": "每天首次登录自动到账 2000 积分，不用手动点",
+        "url": "https://docs.meoo.com/pricing",
+        "note": "每日积分 7 天有效"
+      },
+      {
+        "step": "新人首月积分",
+        "detail": "新注册的免费版账户首月另送 5000 积分，在积分页确认",
+        "url": "https://docs.meoo.com/pricing",
+        "note": ""
+      },
+      {
+        "step": "开始使用",
+        "detail": "用一句话描述想做的应用，生成后在应用内调用模型时扣积分",
+        "url": "https://meoo.com/",
+        "note": "只能在产品内用"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "秒悟 Meoo",
+        "action_url": "https://meoo.com/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "image",
+      "video"
+    ],
+    "barriers": [
+      "need_phone"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-11T21:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要国内手机号登录，积分只能在秒悟产品内使用，需你本人每天登录领取",
+      "at": "2026-11-11 21:20 北京"
+    }
+  },
+  {
+    "id": "minimax-code-daily-checkin-400-weekly-4000-20261111",
+    "title": "MiniMax Code 每日签到：每天 400 积分，连签第 4、7 天各 1000，一周 4000（30 天有效）",
+    "platform": "MiniMax",
+    "product": "MiniMax Code 每日签到",
+    "model": "MiniMax Code 内文本 / 多模态模型",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://agent.minimax.cn/docs/code/account/usage",
+    "source": "MiniMax Code 官方文档《M Plan 与积分》（11/11 21:00 北京抓取）；FreeEgg 赛博鸡蛋收录；据 X 上的报道（@xiao_wang24004 11/11 羊毛日报）",
+    "summary": "MiniMax Code 官方文档写明：打开 MiniMax Code 完成每日签到即可领积分，每天 400 积分，连续签到第 4 天、第 7 天单日加码到 1000 积分，签满一周共 4000 积分；签到积分可累计，到账起 30 天内有效。积分可在 MiniMax Code 产品内调用文本和多模态模型。限制：只能在 MiniMax Code 里用，不是 API 额度；据 X 上的报道仅电脑端可签到。门槛：需登录 MiniMax 账号（国内版通常手机号）。和 10 月 24 日那次限时签到加码不同，这是常驻签到。",
+    "claim_steps": [
+      "打开 MiniMax Code 电脑端并登录",
+      "进入设置 → 用量页",
+      "点每日签到领取积分"
+    ],
+    "claim_guide": [
+      {
+        "step": "下载登录",
+        "detail": "下载 MiniMax Code 电脑端并登录 MiniMax 账号",
+        "url": "https://agent.minimaxi.com/download",
+        "note": ""
+      },
+      {
+        "step": "进入用量页",
+        "detail": "打开设置里的「用量」页面，查看套餐、积分余额",
+        "url": "https://agent.minimax.cn/docs/code/account/usage",
+        "note": ""
+      },
+      {
+        "step": "每日签到",
+        "detail": "在用量页完成每日签到，每天 400 积分，第 4、7 天各 1000",
+        "url": "https://agent.minimax.cn/docs/code/account/usage",
+        "note": "断签会影响加码"
+      },
+      {
+        "step": "使用积分",
+        "detail": "在 MiniMax Code 里调用模型时自动扣积分，注意 30 天有效期",
+        "url": "https://agent.minimax.cn/docs/code/account/usage",
+        "note": ""
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "MiniMax Code",
+        "action_url": "https://agent.minimaxi.com/download"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-11T21:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要在你电脑上的 MiniMax Code 客户端里每天签到，无法远程代领",
+      "at": "2026-11-11 21:20 北京"
+    }
+  },
+  {
+    "id": "higgsfield-fable52-mcp-3day-free-unlimited-20261111",
+    "title": "Higgsfield MCP × Claude Fable 5.2：新用户 3 天免费无限量生成（图像 / 视频前沿模型，通过 Claude 连接器）",
+    "platform": "Higgsfield",
+    "product": "Higgsfield MCP",
+    "model": "Higgsfield 上的图像 / 视频模型（Seedream 5.5 等）",
+    "type": "限时",
+    "deadline": null,
+    "url": "https://higgsfield.ai/mcp",
+    "source": "Higgsfield 官网首页与 MCP 页（11/11 21:05 北京抓取）；据 X 上的报道（@higgsfield 官推 11/10 04:06 北京，及 @bokilapgtk 11/11）",
+    "summary": "AI 视频 / 图像平台 Higgsfield 配合 Anthropic 新模型 Claude Fable 5.2 发布，推出「Fable 5.2 × Higgsfield MCP」活动。官网首页写明：新用户通过 Claude MCP 可在前沿模型上无限量生成。据 X 上的报道，Higgsfield 官方称在 Higgsfield MCP 里开 3 天免费试用，期间所有顶级视频和图像模型免费、不限量。用法是把 Higgsfield 作为连接器加到 Claude（也支持 ChatGPT 等），让 Claude 指挥生成。限制：只限新用户，3 天试用，官方标注「限时活动、以条款为准」，未公布具体截止日；试用到期后是否自动转付费、是否需绑卡官方页没写清，开通前看清条款；需要有 Claude 账号来连接 MCP。",
+    "claim_steps": [
+      "打开 Higgsfield MCP 页面，选择 Connect to Claude",
+      "在 Claude 里添加 Higgsfield 连接器并登录 / 注册 Higgsfield",
+      "按提示开通 3 天免费试用",
+      "在 Claude 里让 Fable 5.2 调用 Higgsfield 生成图像或视频"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开 MCP 页",
+        "detail": "访问 Higgsfield MCP 页面，查看「How to connect」",
+        "url": "https://higgsfield.ai/mcp",
+        "note": ""
+      },
+      {
+        "step": "连接 Claude",
+        "detail": "点 Connect to Claude，按说明在 Claude 的设置 → 连接器里添加 Higgsfield",
+        "url": "https://higgsfield.ai/mcp",
+        "note": "需要 Claude 账号"
+      },
+      {
+        "step": "注册 Higgsfield",
+        "detail": "授权时注册或登录 Higgsfield 账号（新用户才有试用）",
+        "url": "https://higgsfield.ai/",
+        "note": "看清试用到期后是否自动扣费"
+      },
+      {
+        "step": "开始生成",
+        "detail": "在 Claude 里选 Fable 5.2，让它调用 Higgsfield 生成图像或视频",
+        "url": "https://higgsfield.ai/mcp",
+        "note": "3 天后结束"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Higgsfield MCP",
+        "action_url": "https://higgsfield.ai/mcp"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "image",
+      "video"
+    ],
+    "barriers": [
+      "new_user_only"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-11T21:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要把 Higgsfield 连接器加到你本人的 Claude 账号里并开通 3 天试用，试用条款可能涉及绑卡，需你本人决定",
+      "at": "2026-11-11 21:20 北京"
     }
   }
 ]
