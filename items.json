@@ -31591,5 +31591,323 @@
       "note": "产品内生图次数，无 API key 可建；登录 MiniMax 需手机号或已有账号，需本人使用",
       "at": "2026-11-11T08:10:00+08:00"
     }
+  },
+  {
+    "id": "together-ternary-bonsai-27b-free-serverless-20261111",
+    "title": "Together AI：Ternary Bonsai 27B 无服务器 API 免费（输入/输出 $0，262K 上下文）",
+    "platform": "Together AI",
+    "product": "Together AI Serverless Inference",
+    "model": "Prism-ML/Ternary-Bonsai-27B",
+    "type": "API",
+    "deadline": null,
+    "url": "https://www.together.ai/models/prism-ml-ternary-bonsai-27b",
+    "source": "Together AI 官方模型页 together.ai/models/prism-ml-ternary-bonsai-27b 与定价页 together.ai/pricing（2026-11-11 09:10 北京抓取，均标 Free/Free）；apipriceindex.com/deals、llmperks.com 11/10 核对",
+    "summary": "据 Together AI 官方模型页和定价页，PrismML 的 Ternary Bonsai 27B（Qwen3.6 27B 的 1.71 bit 三值量化版，支持文本+图像输入、262K 上下文、JSON 模式）在 Together 无服务器接口上输入、输出均为免费，模型 ID Prism-ML/Ternary-Bonsai-27B，走 OpenAI 兼容的 https://api.together.ai/v1/chat/completions。官方未写截止日；第三方 llmperks/aiplug 称限速随负载动态调整（看 429 响应头）、不支持函数调用。",
+    "free_terms": "注册 Together AI 账号 → API Keys 页 Create key → 调用 model=Prism-ML/Ternary-Bonsai-27B（base https://api.together.ai/v1）；输入/输出 $0；限速为动态公平使用（第三方称），官方未写截止日；是否需要先充值/绑卡官方页未写，以控制台为准。",
+    "claim_steps": [
+      "到 together.ai 注册/登录",
+      "在项目 API keys 页点 Create key 并复制",
+      "用 OpenAI 兼容客户端，base URL 设为 https://api.together.ai/v1",
+      "model 填 Prism-ML/Ternary-Bonsai-27B 调用",
+      "遇 429 按响应头等待重试"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册账号",
+        "detail": "打开 Together AI 官网注册或登录账号。",
+        "url": "https://www.together.ai/"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "进入项目的 API keys 页，点 Create key，起个名字后复制；Key 只显示一次。",
+        "url": "https://docs.together.ai/docs/quickstart"
+      },
+      {
+        "step": "确认免费价格",
+        "detail": "在模型页或定价页确认 Ternary Bonsai 27B 输入、输出均显示 Free。",
+        "url": "https://www.together.ai/pricing"
+      },
+      {
+        "step": "配置接口",
+        "detail": "OpenAI 兼容 base URL 为 https://api.together.ai/v1，Authorization: Bearer 你的 Key；model 填 Prism-ML/Ternary-Bonsai-27B。",
+        "url": "https://www.together.ai/models/prism-ml-ternary-bonsai-27b"
+      },
+      {
+        "step": "调参建议",
+        "detail": "官方推荐 temperature 0.7、top_p 0.95、top_k 20；支持图像输入和 JSON 模式，262K 上下文。",
+        "url": "https://www.together.ai/models/prism-ml-ternary-bonsai-27b"
+      },
+      {
+        "step": "注意限速",
+        "detail": "第三方称免费端点按服务器负载动态限速，返回 429 时看响应头再重试；官方未写截止日，随时可能改价。",
+        "url": "https://llmperks.com/models/ternary-bonsai-27b",
+        "note": "限速说法来自第三方"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Together AI",
+        "action_url": "https://www.together.ai/models/prism-ml-ternary-bonsai-27b"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Ternary Bonsai 27B",
+        "action_url": "https://www.together.ai/models/prism-ml-ternary-bonsai-27b"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T09:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "failed",
+      "note": "已用 Google 注册 Together AI，但创建 API key 需先充值至少 $15，不花钱未建 key。",
+      "at": "2026-11-11T09:15:00+08:00"
+    }
+  },
+  {
+    "id": "novita-apodex-11-mini-free-api-20261111",
+    "title": "Novita AI：Apodex 1.1 Mini 推理模型 API 免费（输入/输出 $0，256K 上下文）",
+    "platform": "Novita",
+    "product": "Novita AI Model APIs",
+    "model": "apodex/apodex-1.1-mini",
+    "type": "API",
+    "deadline": null,
+    "url": "https://novita.ai/models/model-detail/apodex-apodex-1.1-mini",
+    "source": "Novita AI 官方模型页 novita.ai/models/model-detail/apodex-apodex-1.1-mini（2026-11-11 09:10 北京抓取，Input/Output $0）；Novita 博客 blogs.novita.ai（称上线促销）；apipriceindex.com/deals 11/10 核对",
+    "summary": "据 Novita AI 官方模型页，Apodex 1.1 Mini（主打长程研究与预测的推理模型，256K 上下文）当前输入、输出均为 $0/百万 token，OpenAI 兼容 base https://api.novita.ai/openai（另有 Anthropic 兼容 https://api.novita.ai/anthropic），model=apodex/apodex-1.1-mini。Novita 博客称这是上线促销、非永久免费，官方未写截止日；OpenRouter 上的 :free 版本已下架。",
+    "free_terms": "登录 Novita AI → Key Management 建 Key → 调用 model=apodex/apodex-1.1-mini（base https://api.novita.ai/openai）；输入/输出 $0；促销性质、无公布截止日；余额为 0 时能否调用官方未写（文档称余额和模型权限可能影响请求）。",
+    "claim_steps": [
+      "登录 novita.ai（已有账号）",
+      "在 Key Management 新建或复用 API Key",
+      "base URL 设为 https://api.novita.ai/openai",
+      "model 填 apodex/apodex-1.1-mini 测一次调用",
+      "以模型页实时价格为准"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录账号",
+        "detail": "打开 Novita AI 并登录（你已有 Novita 账号，不用重新注册）。",
+        "url": "https://novita.ai/"
+      },
+      {
+        "step": "建 API Key",
+        "detail": "进入 Key Management 新建 Key，或复用已有 Key；Key 只通过环境变量 NOVITA_API_KEY 使用。",
+        "url": "https://docs.novita.ai/guides/quickstart"
+      },
+      {
+        "step": "确认价格",
+        "detail": "打开 Apodex 1.1 Mini 模型页，确认 Input/Output 仍是 $0。",
+        "url": "https://novita.ai/models/model-detail/apodex-apodex-1.1-mini"
+      },
+      {
+        "step": "配置接口",
+        "detail": "OpenAI 兼容 base https://api.novita.ai/openai（博客写法 https://api.novita.ai/v3/openai），Anthropic 兼容 https://api.novita.ai/anthropic；model 填 apodex/apodex-1.1-mini。",
+        "url": "https://blogs.novita.ai/apodex-1-1-mini-on-novita-ai-api-quickstart-pricing/"
+      },
+      {
+        "step": "检查余额影响",
+        "detail": "官方快速开始提示可用余额和模型权限可能影响请求是否成功；若余额为 0 报错，以控制台提示为准。",
+        "url": "https://docs.novita.ai/guides/quickstart",
+        "note": "上线促销，随时可能恢复收费"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Novita AI",
+        "action_url": "https://novita.ai/models/model-detail/apodex-apodex-1.1-mini"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Apodex 1.1 Mini",
+        "action_url": "https://novita.ai/models/model-detail/apodex-apodex-1.1-mini"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "forecasting"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T09:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "已有 Novita 账号和 key，但调用 apodex-1.1-mini 返回余额不足（NOT_ENOUGH_BALANCE），$0 余额无法免费调用。",
+      "at": "2026-11-11T09:15:00+08:00"
+    }
+  },
+  {
+    "id": "hetzner-experiments-inference-api-free-20261111",
+    "title": "Hetzner Experiments：实验性开源模型推理 API 实验期免费（OpenAI 兼容，欧盟机房）",
+    "platform": "Hetzner",
+    "product": "Hetzner Experiments Inference API",
+    "model": "Qwen/Qwen3.6-35B-A3B-FP8 等开源模型",
+    "type": "API",
+    "deadline": null,
+    "url": "https://experiments.hetzner.com/docs/inference",
+    "source": "Hetzner 官方社区教程 community.hetzner.com/tutorials/opencode-with-hetzner-inference-api-systemd-sandbox（作者 Hetzner Online，2026-07-15）；社区工具包 github.com/stdevMac/hetzner-inference README（称 free while experimental）；觉醒AI知识库 jxxy.net 2026-11-09 报道",
+    "summary": "据 Hetzner 官方社区教程，Hetzner Experiments 提供 OpenAI 兼容的推理 API（base https://inference.hetzner.com/api/v1），在 experiments.hetzner.com 的 Inference 应用里建 Token 即可用，教程示例模型 Qwen/Qwen3.6-35B-A3B-FP8。社区工具包 README 和 jxxy.net 报道称实验期免费、无 SLA、数据在欧盟，限额约每 60 秒 1000 万输入 / 20 万输出 token，模型还包括 DeepSeek-V4-Flash、GLM-5.2、Kimi-K2.7-Code 等；“免费”与限额未在可抓取的官方页面直接看到（官方文档页需 JS/登录）。",
+    "free_terms": "登录 experiments.hetzner.com（Hetzner 账号）→ 左侧 APPS 选 Inference → 右上 Create API Token → base https://inference.hetzner.com/api/v1、Bearer Token 调用；实验期免费（据社区工具包/报道），限额约 1000 万输入+20 万输出 token/60 秒，无 SLA、可能随时关停，无公布截止日。",
+    "claim_steps": [
+      "用 Hetzner 账号登录 experiments.hetzner.com",
+      "左侧 APPS 选 Inference，点 Create API Token",
+      "base URL 设为 https://inference.hetzner.com/api/v1",
+      "GET /models 看可用模型，再调 /chat/completions",
+      "超限返回 429，勿用于生产"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 Experiments",
+        "detail": "用 Hetzner 账号登录 Hetzner Experiments 平台。",
+        "url": "https://experiments.hetzner.com"
+      },
+      {
+        "step": "创建 Token",
+        "detail": "左侧 APPS 下选 Inference，点右上角 Create API Token 并保存。",
+        "url": "https://community.hetzner.com/tutorials/opencode-with-hetzner-inference-api-systemd-sandbox/"
+      },
+      {
+        "step": "配置接口",
+        "detail": "OpenAI 兼容 base URL https://inference.hetzner.com/api/v1，Authorization: Bearer <Token>；支持 /models、/completions、/chat/completions。",
+        "url": "https://github.com/stdevMac/hetzner-inference"
+      },
+      {
+        "step": "选模型",
+        "detail": "官方教程示例 model 为 Qwen/Qwen3.6-35B-A3B-FP8；先 GET /models 看当前列表（社区称还有 DeepSeek-V4-Flash、GLM-5.2、Kimi-K2.7-Code）。",
+        "url": "https://community.hetzner.com/tutorials/opencode-with-hetzner-inference-api-systemd-sandbox/"
+      },
+      {
+        "step": "接入编码工具",
+        "detail": "官方教程给出 OpenCode 配置（provider 用 @ai-sdk/openai-compatible）；社区工具包另有 Aider、LiteLLM、Continue、Open WebUI 配置模板。",
+        "url": "https://github.com/stdevMac/hetzner-inference",
+        "note": "工具包非 Hetzner 官方"
+      },
+      {
+        "step": "注意风险",
+        "detail": "实验性服务：免费但无 SLA，模型和可用性随时变，可能无预警关停；限额约每 60 秒 1000 万输入 / 20 万输出 token。",
+        "url": "https://www.jxxy.net/ai/articles/a-gh-2026-11-09-90111-hetzner-inference-toolkit/",
+        "note": "免费与限额来自社区来源"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Hetzner Experiments",
+        "action_url": "https://experiments.hetzner.com"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://community.hetzner.com/tutorials/opencode-with-hetzner-inference-api-systemd-sandbox/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Qwen3.6-35B-A3B-FP8",
+        "action_url": "https://community.hetzner.com/tutorials/opencode-with-hetzner-inference-api-systemd-sandbox/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T09:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "Hetzner 账号不支持 Google 登录，需你本人用邮箱密码注册（可能还要身份或付款验证）后在 Experiments → Inference 建 token。",
+      "at": "2026-11-11T09:15:00+08:00"
+    }
+  },
+  {
+    "id": "modal-for-builders-compute-credits-20261111",
+    "title": "Modal for Builders：个人 AI 项目申请算力 credits（多数 $1,000–$5,000，含 GPU）",
+    "platform": "Modal",
+    "product": "Modal for Builders",
+    "model": "任意（Modal 上的推理/训练/沙箱）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://modal.com/builders",
+    "source": "据 X 上的报道（@modal 官方号，2026-11-11 01:27 北京宣布）；Modal 官网 modal.com/builders（2026-11-11 09:10 北京抓取）",
+    "summary": "据 X 上的报道，Modal 11/11 凌晨推出 Modal for Builders，为做 AI 项目的个人开发者发放算力 credits。官网写明：任何有具体 AI 项目想在 Modal 上做的人都可申请，不要求粉丝量或过往作品；多数项目在 $1,000–$5,000，大额按阶段发放，可用于推理、训练、Sandboxes、批处理和 GPU；人工审核、只支持少量项目，通过后邮件通知；鼓励完成后公开 demo 并标注 Modal。与面向融资公司的 Modal for Startups 不同。",
+    "free_terms": "打开 modal.com/builders 点 Apply for Credits，填写具体项目、在 Modal 上跑什么、所需算力和预计展示时间；人工审核，多数 $1,000–$5,000（可能少于申请额）；需 Modal 账号；无截止日；另有常规免费档 $30/月。",
+    "claim_steps": [
+      "注册/登录 Modal 账号",
+      "打开 modal.com/builders 点 Apply for Credits",
+      "写清具体项目、在 Modal 上的工作负载、算力需求和交付时间",
+      "等邮件审核结果",
+      "获批后用 credits 构建并公开展示"
+    ],
+    "claim_guide": [
+      {
+        "step": "看资格",
+        "detail": "面向有具体 AI 项目的个人开发者，不要求大量粉丝或往期作品；风投支持的公司应改申 Modal for Startups。",
+        "url": "https://modal.com/builders"
+      },
+      {
+        "step": "准备 Modal 账号",
+        "detail": "先注册 Modal 账号，熟悉推理、Sandboxes、训练或批处理用法（常规免费档每月 $30 算力）。",
+        "url": "https://modal.com/"
+      },
+      {
+        "step": "填写申请",
+        "detail": "点 Apply for Credits，具体描述要做什么、哪些部分在 Modal 上跑、需要多少算力、何时能出成果；越具体越好。",
+        "url": "https://modal.com/builders#apply"
+      },
+      {
+        "step": "等待审核",
+        "detail": "每份申请人工审核并邮件回复；小额请求批得快，大额会细看项目范围，可能少于申请额或分阶段发放。",
+        "url": "https://modal.com/builders",
+        "note": "多数 $1,000–$5,000"
+      },
+      {
+        "step": "构建与展示",
+        "detail": "获批后在 Modal 上构建，完成后发 demo、文章或视频并注明运行在 Modal，可能被官方转发；有问题邮件 builders@modal.com。",
+        "url": "https://modal.com/builders"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Modal",
+        "action_url": "https://modal.com/builders"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Modal GPU / 推理算力",
+        "action_url": "https://modal.com/builders"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "collected_at": "2026-11-11T09:05:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需本人撰写具体项目申请并人工审核，不能自动领取",
+      "at": "2026-11-11T09:05:00+08:00"
+    }
   }
 ]
