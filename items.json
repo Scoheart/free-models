@@ -25545,7 +25545,7 @@
       "接口 v1/chat/completions（OpenAI 兼容）"
     ],
     "collected_at": "2026-11-11T00:10:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "success",
       "note": "已用 Google 登录注册 Fortytwo 并建好 key（额度上限 $0.01，7 天过期），免费期内调用 Qwen3.8-27B",
@@ -32248,6 +32248,78 @@
       "status": "needs_user",
       "note": "网页生图工具，没有 API key，要用就在 pickshot.ai 自行登录",
       "at": "2026-11-11 19:20 北京"
+    }
+  },
+  {
+    "id": "prized-new-account-30usd-credit-20261111",
+    "title": "Prized：新用户免绑卡送 $30 AI Agent 云沙箱额度",
+    "platform": "Prized",
+    "product": "Prized",
+    "model": null,
+    "type": "额度",
+    "deadline": null,
+    "url": "https://prized.dev/pricing",
+    "source": "据 X 上的报道（@jhl880617，2026-11-11）；条款以 Prized 官方定价页和账单/沙箱文档为准（2026-11-11 20:15 北京抓取）",
+    "summary": "Prized 是面向 AI Agent 的云沙箱和云主机平台：可用 HTTP API 或命令行按秒创建 Firecracker 微虚拟机跑代码，也可开一台常驻 Linux 云主机给 Claude Code、Codex 等继续工作。据 X 上的报道（@jhl880617，11/11）新用户注册送 $30 额度、免绑卡；官方定价页和账单文档写明，新工作区发放一次 $30 免费额度，同一人（同一邮箱或同一 Google/GitHub 账号）只能领一次，用完不自动补充。额度只抵云主机和沙箱算力，不含模型调用费用。仅用免费额度时：沙箱最多同时 10 个，单个最高 2 vCPU / 4 GB 内存、累计运行最长 60 分钟，暂停后可保留至上次使用后 30 天；云主机同时只能开 1 台，且限于 Nano 到 Small 规格。官方未公布该新用户额度本身的截止日，条款写明活动可能调整或结束。须年满 18 岁。",
+    "claim_steps": [
+      "打开 Prized 沙箱开通页，用 Google 或 GitHub 登录注册",
+      "注册后在账单或控制台确认 $30 免费额度已到账",
+      "在工作区 API Keys 页创建 API Key",
+      "把 Key 设为环境变量，按文档用 API 或 CLI 创建沙箱"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册账号",
+        "detail": "打开沙箱开通页，点 Continue with Google 或 Continue with GitHub 登录。选这条路径不会走云主机引导，额度同样到账。",
+        "url": "https://prized.dev/onboarding/sandboxes",
+        "note": "也可用普通登录页 https://prized.dev/sign-in"
+      },
+      {
+        "step": "确认额度",
+        "detail": "登录后在账单页确认新工作区的 $30 免费额度已到账。不要选付费套餐，也不要绑卡充值。",
+        "url": "https://prized.dev/dashboard/billing",
+        "note": ""
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "打开工作区 API Keys 页，新建一把 Key：可选 Full access，或 Custom 并勾选 Sandboxes: Write。保存好密钥，页面通常只显示一次。",
+        "url": "https://prized.dev/dashboard/workspace/api-keys",
+        "note": "沙箱页上的 Create API key 默认只开沙箱权限、90 天后过期"
+      },
+      {
+        "step": "配置调用",
+        "detail": "把密钥写入环境变量 PRIZED_API_KEY。OpenAI 风格以外的官方接口根地址是 https://api.prized.dev/api/v1，请求头用 Authorization: Bearer。",
+        "url": "https://prized.dev/docs/sandboxes",
+        "note": ""
+      },
+      {
+        "step": "创建沙箱",
+        "detail": "用官方文档里的 curl、Python/TS SDK 或 prized CLI，从模板 prized-base-v1（或带编程代理的 prized-agent-v1）创建沙箱并执行命令。",
+        "url": "https://prized.dev/docs/sandboxes",
+        "note": "模板名以控制台或文档当时列出的为准"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Prized",
+        "action_url": "https://prized.dev/"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-11T20:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "已用 Google 账号注册，$30 免费额度已到账，并已创建 API key（已设 7 天过期至 2026-11-18，平台不支持设额度上限）",
+      "at": "2026-11-11 20:18 北京"
     }
   }
 ]
