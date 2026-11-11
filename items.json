@@ -31372,5 +31372,146 @@
       "note": "联通云需要手机号短信注册并完成实名认证后才能领取新客 0 元试用，需要你本人操作",
       "at": "2026-11-11 16:30 北京"
     }
+  },
+  {
+    "id": "puter-ai-gateway-user-pays-free-allowance-muse-wonder-20261111",
+    "title": "Puter AI Gateway：每个 Puter 账号自带免费 AI 额度，可免 key 试用 Muse Wonder 等模型（User-Pays 模式）",
+    "platform": "Puter",
+    "product": "Puter AI Gateway / Puter.js",
+    "model": "meta/muse-wonder",
+    "type": "API",
+    "deadline": null,
+    "url": "https://developer.puter.com/ai/meta/muse-wonder/",
+    "source": "Puter 开发者站 Muse Wonder 模型页与 Pricing 页（2026-11-11 17:08 北京抓取）；据 X 上的报道（@imicer4X02，11/11）",
+    "summary": "Puter 是一个提供 AI Gateway、存储、数据库等服务的开发平台，采用 User-Pays（用户自付）模式：每个 Puter 账号都自带一份免费的存储、数据库和 AI 使用额度，调用记在登录用户自己的账号上，额度内不收费，用超了由用户自己向 Puter 充值，开发者一方不花钱。Puter 的 Muse Wonder 模型页写明可以在浏览器里免费试用 Meta 的 Muse Wonder（meta/muse-wonder，1M 上下文，多模态输入，官方 API 价为输入 $4、输出 $20 每百万 Token），页面内置的 Playground 不需要 API key；同一网关还列了 Muse Ember、Muse Spark Open 等模型，也提供 OpenAI 兼容接口（用 Puter 账号的 auth token 鉴权）。据 X 上的报道，注册 Puter 就送免费额度。门槛：只需一个 Puter 账号，官方页面没写需要绑卡或手机号。限制：官方没有公布免费额度的具体数值和重置周期，也没有截止日期；第三方平台转发调用，敏感内容不要往上贴。",
+    "claim_steps": [
+      "打开 Puter 开发者站的 Muse Wonder 模型页，用页面里的 Playground 直接免费试聊",
+      "需要接进自己的程序时，注册/登录 Puter 账号，获取账号的 auth token",
+      "用 Puter.js 或 OpenAI 兼容客户端调用 meta/muse-wonder，额度记在你自己的 Puter 账号上"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开模型页试用",
+        "detail": "进入 Puter 开发者站的 Muse Wonder 页面，在「Try Muse Wonder for free」区域的聊天框直接试用",
+        "url": "https://developer.puter.com/ai/meta/muse-wonder/",
+        "note": "Playground 不需要 API key"
+      },
+      {
+        "step": "注册 Puter 账号",
+        "detail": "在 Puter 官网注册或登录账号，每个账号自带免费 AI 额度",
+        "url": "https://puter.com/",
+        "note": "官方未公布额度数值"
+      },
+      {
+        "step": "了解计费方式",
+        "detail": "阅读 Pricing 页的 User-Pays 说明：额度内免费，超出部分由账号本人向 Puter 付费",
+        "url": "https://developer.puter.com/pricing/",
+        "note": ""
+      },
+      {
+        "step": "接入调用",
+        "detail": "按模型页的 npm / script / Python / cURL 示例接入，模型名填 meta/muse-wonder，鉴权用 Puter 账号的 auth token",
+        "url": "https://developer.puter.com/ai/meta/muse-wonder/",
+        "note": "不要提交敏感数据"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Puter",
+        "action_url": "https://developer.puter.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "meta/muse-wonder",
+        "action_url": "https://developer.puter.com/ai/meta/muse-wonder/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T17:12:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "failed",
+      "note": "浏览器打开 puter.com 和 developer.puter.com 都报证书错误，没有登录也没建 token，下一轮再试",
+      "at": "2026-11-11 17:15 北京"
+    }
+  },
+  {
+    "id": "opencode-beam-free-still-free-20261111",
+    "title": "OpenCode：Reflection Beam Free（beam-free，1M 上下文）仍在限时免费档（Ollama 免费已结束）",
+    "platform": "OpenCode",
+    "product": "OpenCode Zen",
+    "model": "beam-free",
+    "type": "Agent",
+    "deadline": null,
+    "url": "https://opencode.ai/docs/zen/#free-models",
+    "source": "OpenCode Console 官方文档 Pricing / Free models 段落与 /zen/v1/models 实时列表（2026-11-11 17:05 北京抓取）",
+    "summary": "Reflection 开源的 Beam 1.0（约 501B 总参、23B 激活的 MoE 推理模型）此前在 Ollama 上的免费托管已于 11 月 9 日结束，但 OpenCode 官方文档目前仍把 Beam Free（beam-free）列在免费模型里：输入、输出、缓存读取都是免费，官方写明「限时免费」。实时模型列表显示它有 1,048,576 Token 上下文、最长输出 131,072 Token，只支持文本，支持工具调用、结构化输出和 low 到 max 多档推理强度。数据政策：提供方不拿数据训练，但会出于安全原因保留 30 天。门槛：需要 OpenCode 账号和 Console key；官方写明不对中国大陆（含港澳）、俄罗斯、伊朗等多个国家和地区开放。没有公布截止日期和具体用量上限，随时可能下架。",
+    "claim_steps": [
+      "安装 OpenCode 并登录 OpenCode Console 获取 API Key",
+      "在 OpenCode 里运行 /connect 粘贴 Key",
+      "运行 /models 选择 Beam Free（beam-free）"
+    ],
+    "claim_guide": [
+      {
+        "step": "安装 OpenCode",
+        "detail": "从 OpenCode 官网按说明安装客户端并在终端启动",
+        "url": "https://opencode.ai/",
+        "note": "只用官方来源安装"
+      },
+      {
+        "step": "获取 Console Key",
+        "detail": "登录 OpenCode Console，在 API Key 相关页面创建并复制 key",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": "不对中国大陆及港澳开放"
+      },
+      {
+        "step": "连接 Key",
+        "detail": "在 OpenCode 里运行 /connect，选择 OpenCode 并粘贴 key",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": ""
+      },
+      {
+        "step": "选择模型",
+        "detail": "运行 /models，选 Beam Free（beam-free）开始使用",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": "限时免费，结束日未公布"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "beam-free",
+        "action_url": "https://opencode.ai/docs/zen/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-11T17:12:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "failed",
+      "note": "OpenCode Console 登录页之前几轮都打不开，本轮未重试；客户端里可直接选用 beam-free",
+      "at": "2026-11-11 17:15 北京"
+    }
   }
 ]
