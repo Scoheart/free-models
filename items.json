@@ -30776,5 +30776,295 @@
       "note": "已用 Google 账号注册并创建 API key，实测可调用（平台不支持设额度上限和过期时间）",
       "at": "2026-11-11 13:18 北京"
     }
+  },
+  {
+    "id": "nvidia-nim-mistral-large-4-free-endpoint-20261111",
+    "title": "NVIDIA NIM：Mistral Large 4 免费 API endpoint（1T 总参 MoE，OpenAI 兼容）",
+    "platform": "NVIDIA NIM",
+    "product": "NVIDIA NIM",
+    "model": "Mistral Large 4（mistralai/mistral-large-4-1t-a52b）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://build.nvidia.com/mistralai/mistral-large-4",
+    "source": "build.nvidia.com 模型目录（2026-11-11 14:10 北京抓取，标 Free Endpoint）；integrate.api.nvidia.com/v1/models 列出该模型；X @Longhousecat（2026-11-08）",
+    "summary": "据 NVIDIA build.nvidia.com 模型目录，Mistral AI 的 Mistral Large 4 已标为 Free Endpoint，可免费调用；X 上的报道称 11 月 8 日前后已可免费使用。模型是 1T 总参、52B 激活的细粒度 MoE，支持文本和图片输入、推理、函数调用和结构化输出，NVIDIA 以 NVFP4 精度提供服务。免费端点不用绑卡，但注册 NVIDIA 开发者账号通常要手机验证；NIM 免费端点一般限约每分钟 40 次，具体按模型和负载调整，仅供测试评估、不适合生产，免费档数据可能被用于训练。官方没有公布截止日期。",
+    "claim_steps": [
+      "登录 build.nvidia.com（NVIDIA 开发者账号）",
+      "到 build.nvidia.com/settings/api-keys 生成 API Key",
+      "base_url 填 https://integrate.api.nvidia.com/v1，模型名 mistralai/mistral-large-4-1t-a52b"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录",
+        "detail": "打开 build.nvidia.com，点右上角 Login 用已有 NVIDIA 账号登录",
+        "url": "https://build.nvidia.com/",
+        "note": "新账号需加入免费 Developer Program，可能要手机验证"
+      },
+      {
+        "step": "打开模型页",
+        "detail": "进入 Mistral Large 4 模型页，确认标有 Free Endpoint，可先在页面试用",
+        "url": "https://build.nvidia.com/mistralai/mistral-large-4",
+        "note": ""
+      },
+      {
+        "step": "生成 API Key",
+        "detail": "到 API Keys 设置页点生成新 Key，复制保存",
+        "url": "https://build.nvidia.com/settings/api-keys",
+        "note": "Key 只显示一次"
+      },
+      {
+        "step": "调用",
+        "detail": "任意 OpenAI SDK 里 base_url 填 https://integrate.api.nvidia.com/v1，model 填 mistralai/mistral-large-4-1t-a52b",
+        "url": "https://integrate.api.nvidia.com/v1/models",
+        "note": "免费端点有速率限制"
+      }
+    ],
+    "providers": [
+      {
+        "name": "NVIDIA NIM API Keys",
+        "action_url": "https://build.nvidia.com/settings/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Mistral Large 4（NIM）",
+        "action_url": "https://build.nvidia.com/mistralai/mistral-large-4"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T14:25:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "failed",
+      "note": "已有 NVIDIA 账号，但登录页一直空白，本轮没建成 key，下轮重试",
+      "at": "2026-11-11T14:12:00+08:00"
+    }
+  },
+  {
+    "id": "aliyun-university-student-300-coupon-20261111",
+    "title": "阿里云云工开物：高校学生认证领 300 元抵扣券（可抵部分云产品含大模型）",
+    "platform": "阿里云",
+    "product": "云工开物学生权益",
+    "model": "阿里云部分公共云产品",
+    "type": "代金券",
+    "deadline": null,
+    "url": "https://university.aliyun.com/",
+    "source": "X @eallon81287（2026-11-11 12:52 北京）；阿里云云工开物活动页规则（2026-11-11 14:12 北京抓取）",
+    "summary": "据 X 上的报道并经阿里云「云工开物」活动页核实，通过阿里云官网学生认证的中国高校在校生（专科、本科、硕士、博士、在职研究生等）每 12 个月可领一张 300 元学生专属优惠券，券有效期 1 年。适用范围是阿里云部分公共云产品，以学生权益专区列出的规格为准，X 帖称页面写明包括计算、存储、网络、数据库、大模型等。同一商品只能抵扣一次，不与其他折扣和优惠券叠加，不能提现；每日数量有限、先到先得，结束时间以官网通知为准。门槛：阿里云账号实名加学生认证，仅限国内高校学生，国际站不适用。",
+    "claim_steps": [
+      "登录阿里云账号，打开 university.aliyun.com",
+      "进入「学生权益」，点「立即申请」完成学生身份认证",
+      "认证通过后在同一页面领取 300 元抵扣券",
+      "在学生权益专区选择适用产品下单时选用该券"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录阿里云",
+        "detail": "用已有阿里云账号登录（需已完成个人实名）",
+        "url": "https://www.aliyun.com/",
+        "note": ""
+      },
+      {
+        "step": "打开云工开物",
+        "detail": "打开云工开物页面，切到顶部「学生权益」，在「我是学生」区域点立即申请",
+        "url": "https://university.aliyun.com/",
+        "note": "每日数量有限"
+      },
+      {
+        "step": "学生认证",
+        "detail": "按页面提示完成学生身份认证",
+        "url": "https://university.aliyun.com/",
+        "note": "必须本人操作，仅国内高校在校生"
+      },
+      {
+        "step": "领取抵扣券",
+        "detail": "认证通过后回到学生权益页领取 300 元云工开物学生专属优惠券",
+        "url": "https://university.aliyun.com/",
+        "note": "券有效期 1 年"
+      },
+      {
+        "step": "下单使用",
+        "detail": "在学生权益专区挑选适用产品下单，结算页选用该券",
+        "url": "https://university.aliyun.com/",
+        "note": "同一商品只抵一次"
+      }
+    ],
+    "providers": [
+      {
+        "name": "阿里云云工开物",
+        "action_url": "https://university.aliyun.com/"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "chat"
+    ],
+    "barriers": [
+      "cn_account",
+      "need_realname",
+      "student"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T14:25:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要国内高校学生身份认证和阿里云实名，必须本人在 university.aliyun.com 学生权益页申请；不是在校生则无法领取",
+      "at": "2026-11-11 14:25 北京"
+    }
+  },
+  {
+    "id": "suanli-maas-enterprise-100m-free-tokens-20261111",
+    "title": "共绩算力大模型云服务（MaaS）上线：首批企业用户可申请最高 1 亿免费 Tokens",
+    "platform": "共绩算力",
+    "product": "共绩算力 MaaS",
+    "model": "GLM、DeepSeek、MiniMax、Moonshot、Qwen 等",
+    "type": "API",
+    "deadline": null,
+    "url": "http://m.nshx.cn/news/229",
+    "source": "m.nshx.cn 转载的共绩算力上线公告（2026-11-11 12:29 北京发布）",
+    "summary": "据 m.nshx.cn 转载的共绩科技公告，共绩算力 11 月 11 日正式推出大模型云服务 MaaS，已面向全量用户开放，统一 OpenAI 兼容接口，支持 GLM、DeepSeek、MiniMax、Moonshot、Qwen 等国产模型，按 Token 计费。同时邀请首批企业用户深度试用，入选企业可申请最高 1 亿免费 Tokens 体验额度，用于模型测试、产品验证和应用开发。门槛：面向企业用户、需申请并经入选，个人用户无免费额度说明；申请方式、截止时间和额度有效期公告均未写明。",
+    "claim_steps": [
+      "打开 maas.suanli.cn/api-keys 注册并获取 API Key",
+      "按 suanli.cn/docs/large-model-cloud-service 文档把 base_url 和 api_key 换成共绩的",
+      "以企业身份联系共绩申请首批免费 Tokens 体验额度"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册账号",
+        "detail": "打开共绩算力 MaaS 控制台的 API Keys 页面，按提示注册登录",
+        "url": "https://maas.suanli.cn/api-keys",
+        "note": "国内平台，注册方式以页面为准"
+      },
+      {
+        "step": "获取密钥",
+        "detail": "在 API Keys 页面新建密钥并保存",
+        "url": "https://maas.suanli.cn/api-keys",
+        "note": ""
+      },
+      {
+        "step": "阅读接入文档",
+        "detail": "按官方教程文档修改 api_key 和 base_url，支持 Python SDK 和 cURL，流式、非流式都可",
+        "url": "https://www.suanli.cn/docs/large-model-cloud-service",
+        "note": "base_url 以文档为准"
+      },
+      {
+        "step": "申请企业额度",
+        "detail": "以企业身份通过官网联系共绩，申请首批企业用户免费 Tokens 体验额度",
+        "url": "https://www.suanli.cn/",
+        "note": "需人工审核入选"
+      }
+    ],
+    "providers": [
+      {
+        "name": "共绩算力 MaaS",
+        "action_url": "https://maas.suanli.cn/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account",
+      "need_review"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T14:25:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "仅首批企业用户可申请、需人工审核入选；需你以企业身份联系共绩申请，个人账号没有免费额度",
+      "at": "2026-11-11 14:25 北京"
+    }
+  },
+  {
+    "id": "opencode-jev-113-free-decision-api-20261111",
+    "title": "OpenCode Console：Jev 1.13 Free 结构化决策模型限时免费（System One 接口）",
+    "platform": "OpenCode",
+    "product": "OpenCode Console (Zen)",
+    "model": "Jev 1.13 Free（jev-1.13-free）",
+    "type": "API",
+    "deadline": null,
+    "url": "https://opencode.ai/docs/zen/#jev",
+    "source": "OpenCode Zen 官方文档（2026-11-11 14:10 北京抓取）；火花工坊 11/10 免费额度汇总提及",
+    "summary": "据 OpenCode Zen 官方文档，OpenCode Console 新增 TypeSafe AI 的 Jev 1.13 决策模型，并上架免费版 Jev 1.13 Free，写明限时免费。Jev 属于 System One 类模型，不生成长文本，而是对一段状态按你定义的问题打分，直接返回是/否、多选或评分结果和概率，适合路由、分类、紧急程度判断等快速决策；一次请求可并行问多个问题。定价表中免费版的输入、输出均为 Free，付费版 Jev 1.13 另行计费。它走单独的 System One 接口，不是聊天模型，OpenCode 客户端里不能直接对话。需要 OpenCode Console 账号和 API Key，是否要先充值文档未单独说明；官方没有公布截止日期和每日限额。",
+    "claim_steps": [
+      "打开 opencode.ai 登录 OpenCode Console（Zen）",
+      "在 Console 的 API Keys 处创建 Key",
+      "向 https://opencode.ai/inference/systemone/v1/systemone 发 POST，Header 带 Authorization: Bearer <Key>",
+      "请求体 model 填 jev-1.13-free，state 填待判断的文本，questions 里按 noul / choice / score 定义问题"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 Console",
+        "detail": "打开 OpenCode 官网，点右上角登录进入 OpenCode Console（Zen）",
+        "url": "https://opencode.ai/",
+        "note": "登录方式以页面为准"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在 Console 里找到 API Keys，新建一个 Key 并立即复制保存",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": "能设额度上限就设低一些"
+      },
+      {
+        "step": "确认免费模型",
+        "detail": "在 Zen 文档的 Pricing / Free models 部分确认 Jev 1.13 Free 仍标为免费",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": "名单会轮换"
+      },
+      {
+        "step": "发起调用",
+        "detail": "POST https://opencode.ai/inference/systemone/v1/systemone，Header 加 Authorization: Bearer <Key> 和 Content-Type: application/json；body 写 model=jev-1.13-free、state=待判断文本、questions={问题ID:{type:noul/choice/score, instructions:...}}",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": "不是 chat/completions 接口"
+      },
+      {
+        "step": "查看结果",
+        "detail": "返回结果按问题 ID 给出取值和概率，可直接在代码里用",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "OpenCode Console",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Jev 1.13 Free",
+        "action_url": "https://opencode.ai/docs/zen/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T14:25:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "failed",
+      "note": "OpenCode Console 登录页空白、无登录选项，本轮没领成，下轮重试",
+      "at": "2026-11-11T14:12:00+08:00"
+    }
   }
 ]
