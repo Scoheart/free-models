@@ -1007,15 +1007,6 @@
       }
       if (steps.length) return steps;
     }
-    raw = item.free_terms || item.summary || item.desc || item.description || "";
-    parts = splitStepString(String(raw));
-    if (parts.length >= 2) {
-      for (i = 0; i < parts.length; i++) steps.push({ step: "", detail: redactSecrets(parts[i]), url: "", note: "" });
-      return steps;
-    }
-    if (parts.length === 1 && /如何领取|→|->/.test(String(raw))) {
-      steps.push({ step: "如何领取", detail: redactSecrets(parts[0]), url: "", note: "" });
-    }
     return steps;
   }
 
@@ -1292,7 +1283,7 @@
   }
 
   function renderOffer(item, now) {
-    var title, summary, terms, deadline, md, soon, href, source, guide, same;
+    var title, summary, terms, deadline, md, soon, href, source, guide, same, intro;
     title = redactSecrets(titleOf(item));
     summary = item.summary == null ? "" : redactSecrets(String(item.summary)).trim();
     terms = item.free_terms == null ? "" : redactSecrets(String(item.free_terms)).trim();
@@ -1328,8 +1319,10 @@
     }
     html += "</div></div>";
     html += renderAutoClaim(item);
-    if (summary) html += renderFoldable("简介", renderParagraphs(summary, "body"));
-    if (terms && norm(terms) !== norm(summary)) html += renderFoldable("免费条款", renderParagraphs(terms, "body"));
+    intro = "";
+    if (summary) intro += renderParagraphs(summary, "body");
+    if (terms && norm(terms) !== norm(summary)) intro += renderParagraphs(terms, "body");
+    if (intro) html += renderFoldable("详情介绍", intro);
     if (guide.length) {
       html += '<section class="block steps-block"><details class="steps" open>';
       html +=

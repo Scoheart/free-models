@@ -170,7 +170,7 @@ check(html.indexOf("sk-abcdefghijklmnopqrstuvwxyz") === -1, "api_key secret scru
 check(html.indexOf("secret-token-value") === -1, "token assignment scrubbed");
 check(html.indexOf("sk-live-should-not-leak") === -1, "bearer secret scrubbed");
 check(html.indexOf("[redacted]") !== -1, "redaction marker present");
-check(html.indexOf("地区可能受限") !== -1 && html.indexOf("无需信用卡即可创建密钥") !== -1, "free_terms fallback steps");
+check(html.indexOf("地区可能受限") !== -1 && html.indexOf("无需信用卡即可创建密钥") !== -1, "leftover free_terms appear in 详情介绍");
 
 var filtered = FM.filterGroups(groups, "试用");
 check(filtered.length === 1 && filtered[0].name === "Cohere", "search matches offer text");
@@ -186,7 +186,9 @@ check(realGroups.length > 5 && realHtml.indexOf("去领取") !== -1, "real catal
 check(realHtml.indexOf("<script") === -1, "real render has no script tag");
 check(realHtml.indexOf('data-kind="providers"') !== -1 || realHtml.indexOf('data-kind="agents"') !== -1, "offer kind attribute");
 check(html.indexOf("领取步骤") !== -1 && html.indexOf('class="steps"') !== -1, "steps disclosure");
-check(html.indexOf("简介") !== -1 && html.indexOf('class="fold-text"') !== -1, "foldable summary");
+check(html.indexOf("详情介绍") !== -1 && html.indexOf('class="fold-text"') !== -1, "foldable 详情介绍");
+check(html.indexOf("免费条款") === -1, "no 免费条款 label");
+check(html.indexOf("简介") === -1, "简介 renamed");
 
 function itemWhere(pred) {
   var i;
