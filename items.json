@@ -31066,5 +31066,159 @@
       "note": "OpenCode Console 登录页空白、无登录选项，本轮没领成，下轮重试",
       "at": "2026-11-11T14:12:00+08:00"
     }
+  },
+  {
+    "id": "opencode-minimax-m31-flash-free-relisted-20261111",
+    "title": "OpenCode：MiniMax M3.1 Flash Free 重新上架，限时免费",
+    "platform": "OpenCode",
+    "product": "OpenCode Console (Zen)",
+    "model": "MiniMax M3.1 Flash Free",
+    "type": "Agent",
+    "deadline": null,
+    "url": "https://opencode.ai/docs/zen/#minimax-m31-flash-free",
+    "source": "OpenCode Zen 官方文档（2026-11-11 15:15 北京抓取）；据 X 上的报道（@okeyccronald，11/11）",
+    "summary": "据 X 上的报道，OpenCode 的免费模型列表目前有 12 个模型输入、输出和缓存读取都是 $0，其中 MiniMax M3.1 Flash Free 在 10 月 28 日下架后又重新上架。OpenCode Zen 官方文档写明 MiniMax M3.1 Flash Free 在 OpenCode 上限时免费，提供方执行零保留策略，不用你的数据训练模型。主要在 OpenCode 客户端（CLI/桌面）里使用，也可用 OpenCode Console 的 Key 通过 OpenAI 兼容接口调用。官方没有公布截止日期和具体限额，免费名单会随时轮换。",
+    "claim_steps": [
+      "安装或更新 OpenCode 客户端",
+      "在客户端里运行 /models，选择 MiniMax M3.1 Flash Free",
+      "需要 API 调用时，登录 opencode.ai 的 Console 创建 Key，base_url 填 https://opencode.ai/inference/openai/v1，模型名 minimax-m3.1-flash-free（以文档模型表为准）"
+    ],
+    "claim_guide": [
+      {
+        "step": "安装客户端",
+        "detail": "按 OpenCode 官网的安装命令装好或更新到最新版 OpenCode",
+        "url": "https://opencode.ai/",
+        "note": ""
+      },
+      {
+        "step": "选择模型",
+        "detail": "在 OpenCode 里输入 /models，在 OpenCode Zen 分组下找到 MiniMax M3.1 Flash Free 并选中",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": "列表以客户端实际显示为准"
+      },
+      {
+        "step": "（可选）创建 Key",
+        "detail": "打开 OpenCode Console 登录，在 API Keys 页面新建 Key 并保存",
+        "url": "https://opencode.ai/",
+        "note": "能设额度上限就设低"
+      },
+      {
+        "step": "（可选）API 调用",
+        "detail": "OpenAI 兼容接口地址 https://opencode.ai/inference/openai/v1/chat/completions，模型 ID 以 Zen 文档模型表为准",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": "不确定时先查文档模型表"
+      }
+    ],
+    "providers": [
+      {
+        "name": "OpenCode Zen",
+        "action_url": "https://opencode.ai/zen"
+      }
+    ],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "MiniMax M3.1 Flash Free",
+        "action_url": "https://opencode.ai/docs/zen/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-11T15:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "failed",
+      "note": "上一轮 OpenCode Console 登录页空白，未能注册；在 OpenCode 客户端里直接选这个模型即可用",
+      "at": "2026-11-11 15:20 北京"
+    }
+  },
+  {
+    "id": "botscanner-autobench-router-1usd-free-credit-20261111",
+    "title": "Botscanner（AutoBench Router）：新账号送 $1 免费额度，免绑卡（需邀请码）",
+    "platform": "Botscanner",
+    "product": "Botscanner Router (beta)",
+    "model": "autobench/beta-cost",
+    "type": "API",
+    "deadline": null,
+    "url": "https://botscanner.ai/faq",
+    "source": "Botscanner 官方 FAQ 与邀请申请页、Hugging Face 博客（AutoBench，2026-10-29）；that.promo 合集",
+    "summary": "据 Botscanner 官方 FAQ 和 Hugging Face 博客，AutoBench 推出的 LLM 路由器 Botscanner Router（beta）会按题目难度把请求分给 DeepSeek V4 Flash、GPT-5.6 Luna、GPT-5.6 Sol 等模型，新账号送 $1 免费额度，不用绑卡，官方估算约够 270 个难题（Cost 档）。免费账号只能用 Cost 档，Quality 和 Balanced 要累计充值 $10 才解锁。门槛：免费档目前仅限邀请，需要先提交邮箱申请邀请码、等官方定期审核；没有公布截止时间。",
+    "claim_steps": [
+      "打开 botscanner.autobench.org/invitation-request，填邮箱申请邀请码",
+      "收到邀请码后在 botscanner.ai 注册",
+      "到 botscanner.ai/api-keys 创建 Key",
+      "base_url 填 https://api.autobench.org/v1，模型填 autobench/beta-cost"
+    ],
+    "claim_guide": [
+      {
+        "step": "申请邀请码",
+        "detail": "打开邀请申请页，在 Option 1 处填邮箱提交，等官方审核发码",
+        "url": "https://botscanner.autobench.org/invitation-request",
+        "note": "Option 2 需要充值 $10，不要选"
+      },
+      {
+        "step": "注册账号",
+        "detail": "收到邀请码后回到 Botscanner 官网注册登录",
+        "url": "https://botscanner.ai/",
+        "note": ""
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "进入 API Keys 页面新建 Key 并保存",
+        "url": "https://botscanner.ai/api-keys",
+        "note": ""
+      },
+      {
+        "step": "调用",
+        "detail": "OpenAI 客户端 base_url 设为 https://api.autobench.org/v1，model 填 autobench/beta-cost",
+        "url": "https://huggingface.co/blog/PeterKruger/autobench-beta-router",
+        "note": "免费账号只能用 Cost 档"
+      },
+      {
+        "step": "查看用量",
+        "detail": "在 Usage 页面看剩余额度",
+        "url": "https://botscanner.ai/usage",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "Botscanner",
+        "action_url": "https://botscanner.ai/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "autobench/beta-cost",
+        "action_url": "https://botscanner.ai/router"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key",
+      "need_review"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-11T15:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "免费档只对邀请码开放，需要你决定是否用邮箱申请邀请码并等官方审核，本轮没有替你提交",
+      "at": "2026-11-11 15:20 北京"
+    }
   }
 ]
