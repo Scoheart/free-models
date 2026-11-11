@@ -484,7 +484,7 @@
       }
     ],
     "expired_reason": "inception/mercury-decide 已从 OpenRouter 模型列表下架（2026-11-11 13:15 北京核对 /api/v1/models）",
-    "expired_at": "2026-11-11T13:30:00+08:00"
+    "expired_at": "2026-11-11T13:10:00+08:00"
   },
   {
     "id": "openrouter-free-collection-20261009",
@@ -4123,7 +4123,7 @@
         "detail": "回到控制台查看免费额度、余额、模型列表或订单/密钥列表，确认对应项目已经出现。如果是 API，把密钥放到环境变量里，按官方文档发一条最小请求。能正常返回即表示领取成功"
       }
     ],
-    "terms_updated_at": "2026-11-11T13:30:00+08:00"
+    "terms_updated_at": "2026-11-11T13:10:00+08:00"
   },
   {
     "id": "autoclaw-weekly-perks-glm53-flash-20261013",
@@ -8942,7 +8942,7 @@
       }
     ],
     "expired_reason": "xingchen-agi/xing4.0-29b-a4b:free 已从 OpenRouter 模型列表下架（2026-11-11 13:15 北京核对）",
-    "expired_at": "2026-11-11T13:30:00+08:00"
+    "expired_at": "2026-11-11T13:10:00+08:00"
   },
   {
     "id": "deepseek-search-api-claude-code-codex-free-2weeks-20261017",
@@ -15751,7 +15751,7 @@
       "need_key"
     ],
     "expired_reason": "baseten/mammoth-1 与 elephant-1 已从 OpenRouter 模型列表下架（2026-11-11 13:15 北京核对）",
-    "expired_at": "2026-11-11T13:30:00+08:00"
+    "expired_at": "2026-11-11T13:10:00+08:00"
   },
   {
     "id": "codex-day17-global-usage-reset-20261022",
@@ -29742,7 +29742,7 @@
       "at": "2026-11-11T09:15:00+08:00"
     },
     "expired_reason": "Hetzner 11/4 邮件通知：实验版不再发放新 Token，旧 Base URL 11/10 停用，实验 12/8 结束并转正式付费产品（LINUX DO 转载原文、EMIT Solution 更新说明，2026-11-11 13:15 北京核对）；新用户已无法领取",
-    "expired_at": "2026-11-11T13:30:00+08:00"
+    "expired_at": "2026-11-11T13:10:00+08:00"
   },
   {
     "id": "modal-for-builders-compute-credits-20261111",
@@ -30690,7 +30690,7 @@
       "need_key"
     ],
     "category": "providers",
-    "collected_at": "2026-11-11T13:30:00+08:00",
+    "collected_at": "2026-11-11T13:10:00+08:00",
     "expired": false,
     "auto_claim": null
   },
@@ -30765,7 +30765,7 @@
       "need_key"
     ],
     "category": "providers",
-    "collected_at": "2026-11-11T13:30:00+08:00",
+    "collected_at": "2026-11-11T13:10:00+08:00",
     "expired": false,
     "auto_claim": null
   }
