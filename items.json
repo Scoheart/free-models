@@ -30819,5 +30819,299 @@
   "category": "providers",
   "collected_at": "2026-11-11T11:40:00+08:00",
   "expired": false
+ },
+ {
+  "id": "qwen4-max-preview-qwen-studio-free-plan-20261111",
+  "title": "Qwen4-Max 预览版上线：Qwen Studio 免费账号可直接试用（另接入千问 App、QwenWork、Qoder）",
+  "platform": "Qwen Studio",
+  "product": "Qwen4-Max-Preview",
+  "model": "Qwen4-Max-Preview",
+  "type": "限时",
+  "deadline": null,
+  "url": "https://chat.qwen.ai/",
+  "source": "X @Alibaba_Qwen（2026-11-11 10:01 北京）、@alin_zone（2026-11-11 10:27 北京）；PC Watch 2026-11-11 报道；界面新闻 / 钛媒体快讯",
+  "source_post_id": "2120335993643684315",
+  "summary": "据 X 上的报道，阿里 Qwen 官方 11/11 宣布 Qwen4 即将发布，旗舰 Qwen4-Max 预览版先上线 Token Plan，并在 QwenWork、Qoder、千问 App、Qwen Studio 开放抢先体验。PC Watch 报道写明在 Qwen Studio 免费方案下也能试用。",
+  "free_terms": "能拿到：在 Qwen Studio 网页 / 桌面端 / 手机 App 免费账号里使用 Qwen4-Max-Preview 对话和 Agent 模式（据 PC Watch 和用户实测）。门槛：需要 Qwen 账号。限额：官方没有公布免费账号对这个模型的次数上限，预览期间可能随时调整。截止：官方没写免费体验的截止时间。限制：这是网页 / App 里的对话额度，不是 API；API 只能走付费的 Token Plan（新用户限时最低 1 折），Qoder 里按 0.1× 计 Credits，千问办公（QwenWork）里标的是会员限免。",
+  "claim_steps": [
+   "打开 https://chat.qwen.ai/ （或下载千问 / Qwen Studio App），登录 Qwen 账号",
+   "在对话框上方的模型菜单里选 Qwen4-Max-Preview",
+   "直接发消息，或切到 Agent 模式布置任务"
+  ],
+  "claim_guide": [
+   {
+    "step": "打开 Qwen Studio",
+    "detail": "浏览器访问 chat.qwen.ai，也可以装 Windows / macOS / 手机版 App",
+    "url": "https://chat.qwen.ai/",
+    "note": ""
+   },
+   {
+    "step": "登录账号",
+    "detail": "点右上角或左下角的登录按钮，用已有 Qwen 账号登录或新注册",
+    "url": "https://chat.qwen.ai/",
+    "note": "支持哪些登录方式以页面为准"
+   },
+   {
+    "step": "选择模型",
+    "detail": "在输入框上方的模型下拉菜单中找到 Qwen4-Max-Preview 并选中",
+    "url": "https://chat.qwen.ai/",
+    "note": "如菜单里没有，刷新页面或更新 App"
+   },
+   {
+    "step": "开始使用",
+    "detail": "直接对话，或切换到 Agent 模式让它执行多步任务",
+    "url": "https://chat.qwen.ai/",
+    "note": ""
+   }
+  ],
+  "providers": [
+   {
+    "name": "Qwen Studio",
+    "action_url": "https://chat.qwen.ai/"
+   },
+   {
+    "name": "Qwen Token Plan（付费 API）",
+    "action_url": "https://qwencloud.com/pricing/token-plan"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Qwen4-Max-Preview",
+    "action_url": "https://chat.qwen.ai/"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "coding",
+   "agent"
+  ],
+  "barriers": [
+   "need_client"
+  ],
+  "category": "providers",
+  "collected_at": "2026-11-11T12:25:00+08:00",
+  "expired": false,
+  "auto_claim": {
+   "status": "needs_user",
+   "note": "只有网页/App 聊天，没有可建 API key 的免费控制台；想试用请本人登录 Qwen Studio 直接选 Qwen4-Max 预览版",
+   "at": "2026-11-11T12:15:00+08:00"
+  }
+ },
+ {
+  "id": "ifm-pan2-open-world-model-apache-20261111",
+  "title": "MBZUAI IFM PAN 2 开源世界模型（Apache 2.0，29B 扩散模型，按文字动作生成最长 20 秒视频）",
+  "platform": "开源权重",
+  "product": "PAN 2",
+  "model": "IFM/PAN2",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://huggingface.co/IFM/PAN2",
+  "source": "IFM 官方新闻稿 ifm.ai/pan2/press-release（2026-11-10）；Hugging Face IFM/PAN2 与 GitHub ifm-ai/PAN2（2026-11-11 12:20 北京核对）；HN / 中文媒体报道",
+  "source_post_id": "",
+  "summary": "MBZUAI 旗下基础模型研究院 IFM 于 11/10 发布开源世界模型 PAN 2：给一张起始画面加一段文字描述的动作，它生成接下来会发生什么的视频。Hugging Face 模型卡和 GitHub 仓库许可证均为 Apache 2.0。",
+  "free_terms": "能拿到：免费下载 PAN 2 的 29B 视频扩散模型权重，以及完整训练和推理代码（Apache 2.0，可商用）。输出 704×1248、24fps 视频，默认约 10 秒、最长 20 秒。门槛：无需账号。限制：文本编码器 Qwen3.5-9B 和 Wan 2.2 VAE 要按各自许可证另行下载；29B 模型 BF16 权重约 58GB，需要数据中心级 GPU（官方给了 H200 配置，可用分块 CPU 卸载）；官方建议配合 pan2-guardrail 安全过滤使用；不是实时交互模型。",
+  "claim_steps": [
+   "下载主权重：hf download IFM/PAN2 --include \"transformer/*\" --local-dir ./PAN2",
+   "下载依赖：hf download Qwen/Qwen3.5-9B 和 hf download Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+   "克隆代码 https://github.com/ifm-ai/PAN2 ，按 README 转换权重后运行 inference/inference.sh",
+   "也可以用 Diffusers 的 PAN 2 pipeline 或 vLLM 加载"
+  ],
+  "claim_guide": [
+   {
+    "step": "阅读模型卡",
+    "detail": "在 Hugging Face 查看硬件要求、输入格式和示例",
+    "url": "https://huggingface.co/IFM/PAN2",
+    "note": ""
+   },
+   {
+    "step": "下载权重",
+    "detail": "用 hf download 拉取 IFM/PAN2 的 transformer 目录，再下载 Qwen3.5-9B 文本编码器和 Wan 2.2 VAE",
+    "url": "https://huggingface.co/IFM/PAN2",
+    "note": "总计约 80GB 磁盘空间"
+   },
+   {
+    "step": "获取代码",
+    "detail": "克隆 GitHub 仓库，按 README 用 scripts/convert_checkpoint.py 转换为原生格式",
+    "url": "https://github.com/ifm-ai/PAN2",
+    "note": ""
+   },
+   {
+    "step": "运行推理",
+    "detail": "执行 inference/inference.sh，显存不够时加分块卸载参数；自由文本提示先用仓库里的提示改写脚本转成结构化描述",
+    "url": "https://github.com/ifm-ai/PAN2",
+    "note": "官方建议同时部署 pan2-guardrail"
+   }
+  ],
+  "providers": [
+   {
+    "name": "IFM（MBZUAI）",
+    "action_url": "https://ifm.ai/pan/"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "PAN 2（HF）",
+    "action_url": "https://huggingface.co/IFM/PAN2"
+   }
+  ],
+  "scenes": [
+   "video"
+  ],
+  "barriers": [
+   "zero_signup"
+  ],
+  "category": "providers",
+  "collected_at": "2026-11-11T12:25:00+08:00",
+  "expired": false,
+  "auto_claim": {
+   "status": "failed",
+   "note": "开源权重，直接到 Hugging Face 下载即可，没有需要领取的额度",
+   "at": "2026-11-11T12:15:00+08:00"
+  }
+ },
+ {
+  "id": "moyu-ai-double11-10m-tokens-realname-20261111",
+  "title": "魔芋 AI 双 11：个人实名送 1000 万 Token、30 天未消费老用户回归送 5000 万（今晚 24:00 截止）",
+  "platform": "魔芋 AI",
+  "product": "魔芋双十一 AI 狂欢季",
+  "model": "平台聚合模型（DeepSeek、MiniMax、豆包等）",
+  "type": "额度",
+  "deadline": "2026-11-11T23:59:59+08:00",
+  "url": "https://moyu.cn/sales/benefits",
+  "source": "X @0xOGFUN（2026-11-11 11:23 北京）；魔芋官网福利页 moyu.cn/sales/benefits（2026-11-11 12:20 北京抓取）",
+  "source_post_id": "2120356832556576775",
+  "summary": "据 X 上的报道，国内大模型 API 聚合网关魔芋 AI 的双 11 活动今晚结束。官网福利页列出新人礼包：个人实名可领 1000 万 Token，企业实名可领 1 亿；还有老用户回归礼包 5000 万 Token。",
+  "free_terms": "能拿到：个人新客完成实名后领 1000 万 Token，企业实名领 1 亿 Token；注册满 30 天且近 30 天没有消费的老用户可领 5000 万 Token；活动最后一天打卡另送 400 万 Token 和 1 次抽奖。门槛：国内账号，需要手机验证和实名认证。有效期：礼包到账后 15 天内用完。截止：活动 11/11 结束，北京时间今晚 24:00 前要领完。限制：深度思考模式的思维链同样扣 Token。",
+  "claim_steps": [
+   "打开 https://moyu.cn ，用手机号注册并登录",
+   "在控制台完成个人实名认证",
+   "进入双 11 福利页 https://moyu.cn/sales/benefits ，在新人礼包或回归礼包卡片上点领取",
+   "在控制台创建 API Key，按平台文档里的接口地址和模型名调用"
+  ],
+  "claim_guide": [
+   {
+    "step": "注册登录",
+    "detail": "访问魔芋官网，用手机号注册并登录",
+    "url": "https://moyu.cn",
+    "note": ""
+   },
+   {
+    "step": "实名认证",
+    "detail": "在个人中心或账户设置里找到实名认证入口，按提示完成个人认证",
+    "url": "https://moyu.cn",
+    "note": "入口位置以页面为准"
+   },
+   {
+    "step": "领取礼包",
+    "detail": "打开双 11 福利页，在「邀请赚 Token」区的新人礼包或回归礼包上点领取；当天打卡也可再领一份",
+    "url": "https://moyu.cn/sales/benefits",
+    "note": ""
+   },
+   {
+    "step": "创建 Key 调用",
+    "detail": "回到控制台的 API Key 页面新建 Key，按文档配置接口地址和模型名",
+    "url": "https://moyu.cn",
+    "note": "建议先设置用量上限"
+   }
+  ],
+  "providers": [
+   {
+    "name": "魔芋 AI",
+    "action_url": "https://moyu.cn"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "chat",
+   "coding"
+  ],
+  "barriers": [
+   "need_key",
+   "cn_account",
+   "need_phone"
+  ],
+  "category": "providers",
+  "collected_at": "2026-11-11T12:25:00+08:00",
+  "expired": false,
+  "auto_claim": {
+   "status": "needs_user",
+   "note": "需要中国手机号和个人实名认证，必须本人操作，今晚 24:00 截止",
+   "at": "2026-11-11T12:15:00+08:00"
+  }
+ },
+ {
+  "id": "nvidia-alpamayo2-edge-open-weights-20261111",
+  "title": "NVIDIA Alpamayo 2 Edge 开放权重（2B 自动驾驶视觉-语言-动作模型，输出轨迹 + 因果解释）",
+  "platform": "开源权重",
+  "product": "Alpamayo 2 Edge",
+  "model": "nvidia/Alpamayo2-Edge",
+  "type": "模型",
+  "deadline": null,
+  "url": "https://huggingface.co/nvidia/Alpamayo2-Edge",
+  "source": "X @eratolabs（2026-11-11 10:04 北京）；Hugging Face nvidia/Alpamayo2-Edge 模型卡（2026-11-11 12:20 北京核对）",
+  "source_post_id": "2120336955531751893",
+  "summary": "据 X 上的报道，NVIDIA 于 11/10 在 Hugging Face 公开 Alpamayo 2 Edge 权重。模型卡写明这是 2B 参数的推理型视觉-语言-动作模型，可生成驾驶轨迹和因果解释，面向车端 DRIVE AGX Thor 部署。",
+  "free_terms": "能拿到：免费下载 Alpamayo 2 Edge 权重（OpenMDW-1.1 许可），推理代码为 Apache 2.0；可输出未来 6.4 秒的 64 个轨迹点和思维链解释，也能回答驾驶场景问题。门槛：无需付费，不是门控模型。限制：输入需要 6 路摄像头多帧画面加自车运动历史；官方只在 NVIDIA H100 80GB 上测过，主要面向自动驾驶研究和微调。",
+  "claim_steps": [
+   "下载权重：hf download nvidia/Alpamayo2-Edge",
+   "克隆推理代码 https://github.com/NVlabs/alpamayo2-edge ，按 README 安装 Python 3.12、PyTorch 2.8、Transformers",
+   "按模型卡说明准备 6 路摄像头帧和自车位姿，运行轨迹预测或场景问答示例"
+  ],
+  "claim_guide": [
+   {
+    "step": "阅读模型卡",
+    "detail": "在 Hugging Face 查看输入格式、相机编号和许可证",
+    "url": "https://huggingface.co/nvidia/Alpamayo2-Edge",
+    "note": ""
+   },
+   {
+    "step": "下载权重",
+    "detail": "用 hf download 拉取 nvidia/Alpamayo2-Edge",
+    "url": "https://huggingface.co/nvidia/Alpamayo2-Edge",
+    "note": ""
+   },
+   {
+    "step": "安装代码",
+    "detail": "克隆 NVlabs/alpamayo2-edge 仓库并按 README 配好环境",
+    "url": "https://github.com/NVlabs/alpamayo2-edge",
+    "note": "FlashAttention 可选，用于加速"
+   },
+   {
+    "step": "运行示例",
+    "detail": "用仓库自带脚本加载数据集样本，输出轨迹和推理文本",
+    "url": "https://github.com/NVlabs/alpamayo2-edge",
+    "note": "示例数据可用 nvidia/PhysicalAI-Autonomous-Vehicles"
+   }
+  ],
+  "providers": [
+   {
+    "name": "NVIDIA",
+    "action_url": "https://huggingface.co/nvidia"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "Alpamayo 2 Edge（HF）",
+    "action_url": "https://huggingface.co/nvidia/Alpamayo2-Edge"
+   }
+  ],
+  "scenes": [
+   "multimodal"
+  ],
+  "barriers": [
+   "zero_signup"
+  ],
+  "category": "providers",
+  "collected_at": "2026-11-11T12:25:00+08:00",
+  "expired": false,
+  "auto_claim": {
+   "status": "failed",
+   "note": "开源权重，直接到 Hugging Face 下载即可，没有需要领取的额度",
+   "at": "2026-11-11T12:15:00+08:00"
+  }
  }
 ]
