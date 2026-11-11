@@ -29358,7 +29358,7 @@
     "url": "https://www.skyproduction.cn/",
     "source": "凤凰网大风号、财中社（caizhongshe.cn，2026-11-04）、网易订阅、美金梦 meijinmeng.cn 多家报道转述官方活动",
     "collected_at": "2026-11-11T07:05:00+08:00",
-    "expired": false,
+    "expired": true,
     "summary": "据财中社、凤凰网等报道：SkyProduction（天工工作台）双11活动推出 Seedance 2.5、Wan 3.0、可灵 4.0、MiniMax H3 等热门视频模型的 0 积分免费使用权益。0 积分权益需「符合条件」（报道未写明细）；开通符合条件的年包会员，MiniMax H3 最长免费 60 天，年包还可加赠最多 3 个月会员积分；Seedance 2.5 另有低至 0.16 元/秒价；仅产品内使用，不可导出 API。门槛：具体门槛、模型与有效期以官方活动页为准，未公开明细。截止北京时间 2026-11-03 00:00 至 11-11 24:00。",
     "claim_steps": [
       "打开 www.skyproduction.cn 天工工作台按活动规则解锁"
@@ -30586,7 +30586,7 @@
     ],
     "category": "providers",
     "collected_at": "2026-11-11T12:25:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "needs_user",
       "note": "需要中国手机号和个人实名认证，必须本人操作，今晚 24:00 截止",
@@ -33235,6 +33235,508 @@
       "status": "needs_user",
       "note": "需要你本人填写单位、职位、用途和 GitHub / LinkedIn 主页提交人工审核，无法代填",
       "at": "2026-11-11 22:20 北京"
+    }
+  },
+  {
+    "id": "volcengine-ark-500k-tokens-per-model-free-20261112",
+    "title": "火山方舟：新用户每个文本模型各送 50 万 Tokens 免费推理额度（可开「安心体验模式」用完即停）",
+    "platform": "火山方舟",
+    "product": "火山方舟 Ark 在线推理",
+    "model": "豆包系列及方舟上架的第三方文本模型（各 50 万 Tokens）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://ark.volcengine.com/region:cn-beijing/docs/free-inference-quota",
+    "source": "火山方舟官方文档《免费推理额度》《安心体验模式细则说明》与火山引擎福利汇总文档（11/12 00:10 北京抓取）；据 X 上的报道（@jhl880617 11/11 22:21 北京）",
+    "summary": "字节跳动火山引擎旗下的大模型平台火山方舟，给新注册用户发放免费推理试用额度：官方福利文档写明文本模型每个模型各 50 万 Tokens（约 38 万字中文）、图像生成模型每个各 200 张、视频生成模型每个各 200 万 Tokens，不同模型分别计算，所以换一个模型就是另一份 50 万。额度只抵扣按 Token 后付费的在线推理，不能抵扣批量推理、插件、知识库和上下文缓存的存储费用；主账号与子账号共享，基础模型和它的精调模型共享一份。平台另有「安心体验模式」：开启后只消耗赠送额度，用完自动暂停（返回 429），不会产生费用；但该模式只对从未开通过模型服务的账号开放，一旦关闭就不能再开。门槛：需注册火山引擎账号（国内手机号），额度耗尽后继续用或开启安心体验模式都需要完成实名认证；无固定截止日期，以控制台显示为准。",
+    "claim_steps": [
+      "打开火山引擎官网注册并登录，进入火山方舟控制台",
+      "在左侧「开通管理」页面查看各模型的免费推理额度；在模型列表上方的「安心体验模式」横幅点开关开启（或开通模型时勾选）",
+      "在「API Key 管理」创建 API Key",
+      "OpenAI 兼容客户端 base_url 填 https://ark.cn-beijing.volces.com/api/v3，model 填控制台模型列表里的模型 ID（如豆包系列）"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册火山引擎",
+        "detail": "打开火山引擎官网，点右上角注册，用手机号完成注册登录",
+        "url": "https://www.volcengine.com/",
+        "note": "需国内手机号"
+      },
+      {
+        "step": "完成实名认证",
+        "detail": "在账号中心按提示完成个人实名认证",
+        "url": "https://console.volcengine.com/",
+        "note": "开启安心体验模式与后续开通模型都需要"
+      },
+      {
+        "step": "进入方舟开通管理",
+        "detail": "打开火山方舟控制台，左侧菜单点「开通管理」，在模型列表的「免费推理额度」列查看每个模型的剩余额度",
+        "url": "https://console.volcengine.com/ark/",
+        "note": ""
+      },
+      {
+        "step": "开启安心体验模式",
+        "detail": "在开通管理页模型列表上方的「安心体验模式」横幅里点开关开启，或在开通模型时勾选",
+        "url": "https://ark.volcengine.com/region:cn-beijing/docs/free-tokens-only-mode",
+        "note": "只有从未开通过模型服务的账号能开，关闭后不能再开"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "左侧菜单进入「API Key 管理」，点创建 API Key 并保存",
+        "url": "https://console.volcengine.com/ark/",
+        "note": ""
+      },
+      {
+        "step": "配置客户端",
+        "detail": "OpenAI 兼容客户端 base_url 填 https://ark.cn-beijing.volces.com/api/v3，model 填开通管理里对应模型的 ID",
+        "url": "https://console.volcengine.com/ark/",
+        "note": "额度用完会返回 429 SetLimitExceeded"
+      }
+    ],
+    "providers": [
+      {
+        "name": "火山方舟",
+        "action_url": "https://console.volcengine.com/ark/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "豆包系列等方舟文本模型",
+        "action_url": "https://console.volcengine.com/ark/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key",
+      "new_user_only",
+      "need_phone",
+      "need_realname",
+      "cn_account"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "火山引擎注册需国内手机号短信验证，开启安心体验模式需实名认证，只能你本人操作",
+      "at": "2026-11-12 00:15 北京"
+    }
+  },
+  {
+    "id": "perplexity-api-10usd-signup-credit-60days-20261112",
+    "title": "Perplexity API：部分新 API 账号送 $10 一次性额度（60 天有效，可调 Sonar 联网搜索模型）",
+    "platform": "Perplexity",
+    "product": "Perplexity API（Sonar / Agent API）",
+    "model": "sonar 等",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://www.perplexity.ai/help-center/en/articles/10354847-api-payment-and-billing",
+    "source": "aiblogly.com《How to Get a Perplexity API Key for Free ($10 Credit, 2026)》（引用 Perplexity 帮助中心 API Payment and billing 一文），llmlatency.dev free-llm-api 清单；据 X 上的报道（@jhl880617 11/11 22:22 北京）",
+    "summary": "AI 搜索公司 Perplexity 的开发者 API，据第三方实测文章（引用 Perplexity 帮助中心的计费说明），部分新开通的 API 账号会得到一次性 $10 注册额度，不需要绑卡，到账起 60 天有效，过期未用完的部分会被清除。额度可用于 Agent API（/v1/responses）调用 Sonar 系列联网搜索问答模型，文章称同一接口下的 Claude Haiku 5.5 等第三方模型也能用；Orchestrator API 不在免费范围内。$10 按 Sonar 价格大约能跑几千次联网问答。限制：官方说法是「部分新账号」才有，不是人人都有，控制台没提示就是没拿到；用完后按量付费，想继续用需要绑卡充值。门槛：在独立的 Perplexity API 控制台登录即可（与 Perplexity App 账号分开），无需订阅 Pro。",
+    "claim_steps": [
+      "打开 Perplexity API 控制台 console.perplexity.ai 登录（与 App 分开，首次需登录一次）",
+      "首次进入时看账号设置页是否提示「You've received $10 of free credits」，或在 Home 页看 Credits 是否为 $10.00",
+      "点 Create API key，或在左侧 API keys 页复制 default Key",
+      "调用 https://api.perplexity.ai/v1/responses，model 填 sonar"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 API 控制台",
+        "detail": "打开 Perplexity API 控制台，用 Google 或邮箱登录",
+        "url": "https://console.perplexity.ai/",
+        "note": "API 控制台与 Perplexity App 是分开的"
+      },
+      {
+        "step": "确认赠送额度",
+        "detail": "首次进入的账号设置页若显示「You've received $10 of free credits」即已到账；跳过了就看 Home 页 Credits 是否为 $10.00",
+        "url": "https://console.perplexity.ai/",
+        "note": "没有显示说明该账号不在赠送范围"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "点 Create API key，或在左侧 API keys 页复制名为 default 的 Key，右上角 Generate API Key 可再建",
+        "url": "https://console.perplexity.ai/",
+        "note": "Key 只显示首尾字符，创建时立即保存"
+      },
+      {
+        "step": "发测试请求",
+        "detail": "POST https://api.perplexity.ai/v1/responses，Authorization 带 Bearer Key，body 里 model 填 sonar、input 填问题",
+        "url": "https://docs.perplexity.ai/",
+        "note": "免费额度走 Agent API，不覆盖 Orchestrator API"
+      },
+      {
+        "step": "不要绑卡",
+        "detail": "额度用完前不添加付款方式，避免自动扣费",
+        "url": "https://docs.perplexity.ai/docs/getting-started/projects",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "Perplexity API 控制台",
+        "action_url": "https://console.perplexity.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "sonar",
+        "action_url": "https://docs.perplexity.ai/"
+      }
+    ],
+    "scenes": [
+      "search",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "new_user_only"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "已用 Google 登录新建 API 平台账号，但建项目这一步要求填写国家、邮编并同意 API 服务条款，需本人完成后才能看到是否有 $10 额度",
+      "at": "2026-11-12 00:16 北京"
+    }
+  },
+  {
+    "id": "ecloud-mobileclaw-double11-25m-tokens-realname-20261112",
+    "title": "移动云双 11：MobileClaw 客户端实名注册送 2500 万 Token，每月登录再领 1000 万、每日签到 100 万（最高约 1 亿）",
+    "platform": "移动云",
+    "product": "MobileClaw 客户端",
+    "model": "DeepSeek-V4.1-Flash / GLM-5.3-Flash / GLM-5.3",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://m.163.com/dy/article/LBG44QPT0511A0V6.html",
+    "source": "网易号《移动云双11购Token 智赋新应用》（11/11 22:21 北京发布）、电子工程专辑、鲜枣课堂同稿转载（移动云双 11 活动通稿）",
+    "summary": "中国移动旗下移动云的双 11「购 Token 智赋新应用」活动开放免费体验通道：在移动云 MobileClaw 客户端完成实名注册即可领取 2500 万 Token；之后每月登录可再领 1000 万 Token，连续两个月；每日签到另领 100 万 Token，同样连续两个月，三项叠加最高约 1 亿 Token。体验额度支持 DeepSeek-V4.1-Flash、GLM-5.3-Flash 和 GLM-5.3 等模型。同场还有首月 7.9 元的 Coding Plan 等付费特惠，不属于免费部分。限制：额度在 MobileClaw 客户端内领取和使用，通稿未说明能否导出为 API Key；活动截止时间未公布，按双 11 活动期理解，以客户端显示为准。门槛：必须实名注册（国内手机号 + 身份认证）。",
+    "claim_steps": [
+      "下载并安装移动云 MobileClaw 客户端",
+      "用手机号注册并完成实名认证，领取 2500 万 Token",
+      "每月登录领取 1000 万 Token，每天签到领取 100 万 Token",
+      "在客户端里选择 DeepSeek-V4.1-Flash / GLM-5.3-Flash / GLM-5.3 使用"
+    ],
+    "claim_guide": [
+      {
+        "step": "找到活动入口",
+        "detail": "打开移动云官网，进入「双11购Token · 智赋新应用」活动页",
+        "url": "https://ecloud.10086.cn/",
+        "note": "通稿只给了扫码入口，具体页面以官网为准"
+      },
+      {
+        "step": "下载 MobileClaw",
+        "detail": "在活动页或移动云官网下载 MobileClaw 客户端并安装",
+        "url": "https://ecloud.10086.cn/",
+        "note": ""
+      },
+      {
+        "step": "实名注册",
+        "detail": "用国内手机号注册登录 MobileClaw，按提示完成实名认证，领取 2500 万 Token",
+        "url": "",
+        "note": "需本人身份信息"
+      },
+      {
+        "step": "每月领取",
+        "detail": "之后两个月每月登录客户端领取 1000 万 Token",
+        "url": "",
+        "note": ""
+      },
+      {
+        "step": "每日签到",
+        "detail": "在客户端里每天签到领取 100 万 Token，连续两个月",
+        "url": "",
+        "note": "不签到当天不发"
+      },
+      {
+        "step": "选择模型使用",
+        "detail": "在客户端模型列表里选 DeepSeek-V4.1-Flash、GLM-5.3-Flash 或 GLM-5.3 开始使用",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "移动云 MobileClaw",
+        "action_url": "https://ecloud.10086.cn/"
+      }
+    ],
+    "models": [
+      {
+        "name": "DeepSeek-V4.1-Flash",
+        "action_url": "https://ecloud.10086.cn/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_client",
+      "need_phone",
+      "need_realname",
+      "cn_account"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-12T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在 MobileClaw 客户端用国内手机号实名注册，只能你本人操作",
+      "at": "2026-11-12 00:15 北京"
+    }
+  },
+  {
+    "id": "pruna-build-program-20-300usd-credits-20261112",
+    "title": "Pruna Build Program：绑定账单信息先得 $20，用完解锁 $300 免费额度，按用量最多累计 $3,900",
+    "platform": "Pruna AI",
+    "product": "Pruna API（P-Models 图像 / 视频等高性能模型）",
+    "model": "Pruna P-Models",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://www.pruna.ai/blog/pruna-build-program",
+    "source": "Pruna AI 官方博客《Introducing the Pruna Build Program》（11/12 00:10 北京抓取）、Pruna 官方 LinkedIn；据 X 上的报道（@PrunaAI 11/12 00:06 北京）",
+    "summary": "Pruna AI 是一家做模型压缩加速的公司，提供更快更便宜的图像、视频等生成模型 API（P-Models）。它的 Build Program 分阶段送额度：Stage 0 填写账单信息加入后得 $20 免费额度；用完这 $20 即进入 Stage 1，获得 $300 免费额度（自助）；之后 60 天内实际消费 $900 解锁 Stage 2 再加 $900，90 天内再消费 $2,700 解锁 Stage 3 再加 $2,700，最多累计 $3,900，后两档附私聊群、优先支持和曝光机会。面向在做真实 AI 产品（SaaS、API、基础设施等）的团队，不要求注册公司。限制：官方称会审查用量是否符合计划用途，申请每月第三周集中审核；后两档要求真实付费消费，对个人白嫖意义主要在 $20 + $300。门槛：加入时必须提供账单信息（绑卡），需填写申请。",
+    "claim_steps": [
+      "打开 Pruna Build Program 页面，点「Apply in 2 minutes」填写申请",
+      "在 Pruna Dashboard 注册登录并填写账单信息，领取 Stage 0 的 $20",
+      "用完 $20 后自动进入 Stage 1，获得 $300 额度",
+      "在 Dashboard 创建 API Key，按 Pruna API 文档调用模型"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读计划说明",
+        "detail": "打开 Pruna Build Program 官方博客，了解各阶段解锁条件",
+        "url": "https://www.pruna.ai/blog/pruna-build-program",
+        "note": ""
+      },
+      {
+        "step": "提交申请",
+        "detail": "在页面点「Apply in 2 minutes」，填写团队与产品信息",
+        "url": "https://www.pruna.ai/blog/pruna-build-program",
+        "note": "每月第三周集中审核"
+      },
+      {
+        "step": "注册 Dashboard",
+        "detail": "打开 Pruna Dashboard 注册登录",
+        "url": "https://dashboard.pruna.ai/login",
+        "note": ""
+      },
+      {
+        "step": "填写账单信息",
+        "detail": "在 Dashboard 的账单 / Billing 处绑定付款方式，领取 Stage 0 的 $20",
+        "url": "https://dashboard.pruna.ai/login",
+        "note": "需绑卡"
+      },
+      {
+        "step": "创建 API Key 并调用",
+        "detail": "在 Dashboard 创建 API Key，按 API 文档调用 P-Models",
+        "url": "https://docs.api.pruna.ai/",
+        "note": "用完 $20 后进入 Stage 1 拿 $300"
+      },
+      {
+        "step": "控制用量",
+        "detail": "在 Dashboard 关注余额，额度用完后会按绑定的付款方式扣费",
+        "url": "https://dashboard.pruna.ai/login",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "Pruna API",
+        "action_url": "https://dashboard.pruna.ai/login"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "image",
+      "video"
+    ],
+    "barriers": [
+      "need_key",
+      "need_card",
+      "need_review"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "加入需填写申请并绑定账单信息（信用卡），只能你本人操作",
+      "at": "2026-11-12 00:15 北京"
+    }
+  },
+  {
+    "id": "orkas-desktop-500-lifetime-credits-20261112",
+    "title": "Orkas：开源多 Agent 桌面应用，新用户在桌面端登录送 500 永久积分（可用 Claude Opus 5.5 / GPT-6.1 Sol / Kimi K3）",
+    "platform": "Orkas",
+    "product": "Orkas 桌面应用（Mac / Windows）",
+    "model": "Claude Opus 5.5 / GPT-6.1 Sol / Kimi K3 等内置模型",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://orkas.ai/pricing/",
+    "source": "Orkas 官网定价页（11/12 00:10 北京抓取）、that.promo 11/11 核实条目、GitHub Orkas-AI/Orkas",
+    "summary": "Orkas 是一款免费开源（MIT）、本地优先的多 Agent 桌面应用（Mac 和 Windows），由一个「指挥官」协调多个专职 Agent，可接入本地的 Claude Code、Codex、OpenCode 等。官方定价页写明 Free 档送 500 永久积分（lifetime credits，不过期），可用于 Orkas 内置模型（含 Claude Opus 5.5、GPT-6.1 Sol、Kimi K3 等）、联网搜索、生图、生视频、语音和连接器；官方估算 1000 积分约等于 70–350 次任务对话或 2000 次搜索，500 积分大约是其一半。定价页还提到积分也可通过 API Key 在外部产品里使用。Free 档另含最多 5 个共享项目、100MB 云存储。限制：积分只在桌面端登录时发放，网页登录不送；一次性赠送，用完需订阅或买积分包。门槛：下载桌面客户端并注册登录，官方未要求绑卡。",
+    "claim_steps": [
+      "打开 Orkas 下载页，下载 Mac 或 Windows 桌面客户端",
+      "安装后在桌面客户端里注册并登录（必须在桌面端登录才发积分）",
+      "在账户 / 积分页面确认 500 永久积分到账",
+      "在客户端里选择内置模型开始使用"
+    ],
+    "claim_guide": [
+      {
+        "step": "下载客户端",
+        "detail": "打开 Orkas 下载页，选择 Mac 或 Windows 版本下载安装",
+        "url": "https://orkas.ai/download/",
+        "note": "开源仓库 GitHub Orkas-AI/Orkas"
+      },
+      {
+        "step": "桌面端登录",
+        "detail": "打开客户端，按提示注册并登录账号",
+        "url": "https://orkas.ai/",
+        "note": "网页登录不发放欢迎积分"
+      },
+      {
+        "step": "确认积分",
+        "detail": "在客户端账户或积分页面查看 500 lifetime credits 是否到账",
+        "url": "https://orkas.ai/pricing/",
+        "note": ""
+      },
+      {
+        "step": "选择模型",
+        "detail": "在客户端里选择 Orkas 内置模型（如 Claude Opus 5.5、GPT-6.1 Sol、Kimi K3）",
+        "url": "https://orkas.ai/pricing/",
+        "note": "也可接入你自己的 API Key，不扣 Orkas 积分"
+      },
+      {
+        "step": "开始任务",
+        "detail": "在对话中给「指挥官」下达任务，由它分派给专职 Agent 执行",
+        "url": "https://orkas.ai/",
+        "note": ""
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Orkas",
+        "action_url": "https://orkas.ai/download/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Claude Opus 5.5（Orkas 内置）",
+        "action_url": "https://orkas.ai/pricing/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "agent",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "new_user_only"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-12T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "积分只在 Mac / Windows 桌面客户端登录时发放，网页登录不送，无法在云端浏览器代领",
+      "at": "2026-11-12 00:15 北京"
+    }
+  },
+  {
+    "id": "logfare-free-openai-compatible-gateway-discord-20261112",
+    "title": "Logfare：免费 OpenAI 兼容模型网关，Standard 档每天 5000 次请求（DeepSeek V4.1 Flash / Qwen 3.8 27B / Gemma 4，需 Discord 验证）",
+    "platform": "Logfare",
+    "product": "Logfare 模型网关",
+    "model": "economy/deepseek-v4.1-flash / qwen-3.8-27b / gemma-4-31b-it / gemma-4-26b",
+    "type": "免费层",
+    "deadline": null,
+    "url": "https://logfare.ai/docs",
+    "source": "Logfare 官方文档与 /v1/models 接口（11/12 00:10 北京抓取）；awesome-free-ai-coding 11/11 新增条目（探测核实）",
+    "summary": "Logfare 是 Solexsis Research LLC 运营的免费 OpenAI 兼容模型网关，官方文档写明三个档位全部免费：Standard 档注册即可用；Premium 档需同意数据用于模型训练；Pro 档还需同意数据出售。Standard 档当前可调 economy/deepseek-v4.1-flash、qwen-3.8-27b、gemma-4-31b-it、gemma-4-26b 等文本模型，以及 FLUX 生图、bge / Qwen3 嵌入等模型，同时兼容 Anthropic Messages 和 OpenAI Responses 接口。限额：普通账号每天 5000 次请求、并发 6；新账号前 24 小时每天 500 次、并发 2；Premium / Pro 分别为每天 1 万 / 2 万次。限制：每人限一个账号，必须关联 Discord 并一直留在 Logfare 的 Discord 服务器，否则失去访问；Standard 流量会被记录用于内部评估（可选择退出）；请求会转发到不断变化的上游供应商；据 awesome-free-ai-coding 核查，其隐私政策写着 API Key 明文存储，与文档说法不一致，敏感数据不要用。门槛：免绑卡，需 Discord 账号验证。",
+    "claim_steps": [
+      "打开 Logfare 注册页注册账号（首个 API Key 会在注册时显示，立即保存）",
+      "按提示关联 Discord 账号并加入 Logfare 的 Discord 服务器",
+      "OpenAI 兼容客户端 base_url 填 https://logfare.ai/v1，model 填 qwen-3.8-27b 或 economy/deepseek-v4.1-flash",
+      "Claude Code 等 Anthropic 协议工具 base_url 填 https://logfare.ai"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册账号",
+        "detail": "打开 Logfare 注册页填写信息注册，注册完成时页面会显示首个 API Key",
+        "url": "https://logfare.ai/register",
+        "note": "Key 只显示一次"
+      },
+      {
+        "step": "关联 Discord",
+        "detail": "按页面提示关联 Discord 账号并加入 Logfare 服务器完成验证",
+        "url": "https://logfare.ai/docs",
+        "note": "退出服务器会失去访问"
+      },
+      {
+        "step": "查看可用模型",
+        "detail": "打开模型页或请求 GET https://logfare.ai/v1/models（无需 Key），Standard 档标为 Free",
+        "url": "https://logfare.ai/models",
+        "note": ""
+      },
+      {
+        "step": "配置 OpenAI 兼容客户端",
+        "detail": "base_url 填 https://logfare.ai/v1，Authorization 带 Bearer Key，model 填 qwen-3.8-27b、gemma-4-31b-it 或 economy/deepseek-v4.1-flash",
+        "url": "https://logfare.ai/docs",
+        "note": ""
+      },
+      {
+        "step": "配置 Anthropic 协议工具（可选）",
+        "detail": "Claude Code 的 ANTHROPIC_BASE_URL 填 https://logfare.ai，Key 用同一个",
+        "url": "https://logfare.ai/docs",
+        "note": ""
+      },
+      {
+        "step": "隐私设置",
+        "detail": "如不想被记录用于评估，在账户设置里关闭评估；不要在 /consent 页同意训练或数据出售",
+        "url": "https://logfare.ai/docs",
+        "note": "同意后才会解锁 Premium / Pro 档"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Logfare",
+        "action_url": "https://logfare.ai/register"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "qwen-3.8-27b",
+        "action_url": "https://logfare.ai/models"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "image"
+    ],
+    "barriers": [
+      "need_key",
+      "third_party"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "必须关联你本人的 Discord 账号并持续留在其服务器才能用，无法代办",
+      "at": "2026-11-12 00:15 北京"
     }
   }
 ]
