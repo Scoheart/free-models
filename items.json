@@ -30692,7 +30692,11 @@
     "category": "providers",
     "collected_at": "2026-11-11T13:10:00+08:00",
     "expired": false,
-    "auto_claim": null
+    "auto_claim": {
+      "status": "success",
+      "note": "已用 Google 账号注册并创建 API key（平台不支持设额度上限和过期时间）",
+      "at": "2026-11-11 13:19 北京"
+    }
   },
   {
     "id": "radoxai-free-tier-500k-tokens-monthly-20261111",
@@ -30767,6 +30771,10 @@
     "category": "providers",
     "collected_at": "2026-11-11T13:10:00+08:00",
     "expired": false,
-    "auto_claim": null
+    "auto_claim": {
+      "status": "success",
+      "note": "已用 Google 账号注册并创建 API key，实测可调用（平台不支持设额度上限和过期时间）",
+      "at": "2026-11-11 13:18 北京"
+    }
   }
 ]
