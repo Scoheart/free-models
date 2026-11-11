@@ -33738,5 +33738,540 @@
       "note": "必须关联你本人的 Discord 账号并持续留在其服务器才能用，无法代办",
       "at": "2026-11-12 00:15 北京"
     }
+  },
+  {
+    "id": "gemini-decision-1-ai-studio-free-tier-20261112",
+    "title": "Google Gemini Decisions API：新决策模型 Gemini Decision 1 上线，AI Studio 免费档可直接调用（免绑卡）",
+    "platform": "Google AI Studio",
+    "product": "Gemini Decisions API",
+    "model": "gemini-decision-1",
+    "type": "免费档",
+    "deadline": null,
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+    "source": "Google 官方博客《Gemini Decisions API》（2026-11-11）、Google AI Studio Decisions API 文档、OpenRouter 模型页、TeamoRouter 博客（免费档限额）；据 X 上的报道（@OfficialLoganK、@sundarpichai、@GoogleAIStudio，11/12 02:15 北京前后）",
+    "summary": "Google DeepMind 11 月 11 日发布 Gemini Decisions API，配套新模型 Gemini Decision 1（gemini-decision-1）。它不生成文字，而是对一份输入（文本、图片、音频、视频或 PDF，最长约 26 万 Token）同时回答最多 1000 个是非、单选或按评分标准打分的问题，返回校准后的概率和置信度，适合工具选择、内容审核、路由分流、批量打分这类判断任务。据 Google 官方博客，付费价为每百万输入 Token 0.10 美元、输出 Token 不收费，同时提供可在 Google AI Studio 原型开发用的免费档；据 X 上的报道和第三方 TeamoRouter 整理的发布说明，免费档无需绑卡，限额约为每分钟 200 次请求、每分钟 5 万 Token、每天 1 万次请求，且免费档数据会被用于改进 Google 产品。限制：只在 Gemini Developer API v1beta 上提供，走单独的 Decisions 接口而不是普通聊天接口；不支持批处理、上下文缓存和 Flex/Priority；问题说明只能是文字；不是聊天模型。门槛：需要 Google 账号，且网络要能访问 Google（中国大陆无法直连）。无截止日期。",
+    "claim_steps": [
+      "打开 Google AI Studio 用 Google 账号登录",
+      "点 Get API key 创建或复制免费档 API Key（不绑卡即为免费档）",
+      "升级 SDK：pip install -U google-genai（3.2 或以上）或 npm install @google/genai@latest",
+      "Python 用 genai.Client(http_options={\"api_version\": \"v1beta\"}) 调 client.decisions.create(model=\"gemini-decision-1\", input=..., questions={...})",
+      "REST 直接 POST https://generativelanguage.googleapis.com/v1beta/decisions，请求头 x-goog-api-key 带 Key"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 Google AI Studio",
+        "detail": "用 Google 账号登录 AI Studio",
+        "url": "https://aistudio.google.com/",
+        "note": "需能访问 Google 的网络"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "左侧点 Get API key，新建或复制已有 Key；项目不开结算即为免费档",
+        "url": "https://aistudio.google.com/apikey",
+        "note": "免费档数据会被用于改进 Google 产品，不要传敏感数据"
+      },
+      {
+        "step": "升级 SDK",
+        "detail": "Python 执行 pip install -U google-genai（需 3.2 或以上），Node 执行 npm install @google/genai@latest",
+        "url": "https://aistudio.google.com/docs/decisions-api",
+        "note": ""
+      },
+      {
+        "step": "发第一个判断请求",
+        "detail": "Python：client = genai.Client(http_options={\"api_version\": \"v1beta\"})，再调 client.decisions.create(model=\"gemini-decision-1\", input=\"要判断的内容\", questions={\"q1\": {\"type\": \"noul\", \"instructions\": \"问题\"}})",
+        "url": "https://aistudio.google.com/docs/decisions-api",
+        "note": "问题类型：noul（是非）、choice（单选）、score（打分）"
+      },
+      {
+        "step": "或直接用 REST",
+        "detail": "POST https://generativelanguage.googleapis.com/v1beta/decisions，请求头 x-goog-api-key 填 Key，body 里 model 填 gemini-decision-1",
+        "url": "https://aistudio.google.com/docs/decisions-api",
+        "note": "不是 generateContent 接口，普通聊天 SDK 不能直接换模型名使用"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Google AI Studio",
+        "action_url": "https://aistudio.google.com/apikey"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "gemini-decision-1",
+        "action_url": "https://aistudio.google.com/docs/decisions-api"
+      }
+    ],
+    "scenes": [
+      "classification",
+      "agent"
+    ],
+    "barriers": [
+      "need_key",
+      "need_google",
+      "region_block"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T04:35:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "pending",
+      "note": "已有 AI Studio 账号和免费档 Key，待用现有 Key 测一次 gemini-decision-1",
+      "at": "2026-11-12 04:35 北京"
+    }
+  },
+  {
+    "id": "synap-linkrra-qwen3-coder-30b-free-100k-daily-20261112",
+    "title": "Synap（Linkrra）：Google 登录即送免费 API，qwen3-coder-30b 每天 10 万 Tokens / 50 次请求（免绑卡，OpenAI 兼容）",
+    "platform": "Synap",
+    "product": "Synap by Linkrra 开放模型 API",
+    "model": "qwen3-coder-30b",
+    "type": "免费档",
+    "deadline": null,
+    "url": "https://synap402.com/docs",
+    "source": "synap402.com 首页、文档页与官方免费档接口 /api/account/free-tier（11/12 04:20 北京抓取）；据 X 上的报道（@linkrra 11/11 23:52 北京）",
+    "summary": "Linkrra 推出的开放模型 API 平台 Synap，主打零数据留存和比 OpenRouter 更低的价格，接口兼容 OpenAI，另有 Anthropic 协议端点可接 Claude Code（测试版）。用 Google 账号登录后有免费档：据官网和官方免费档接口，qwen3-coder-30b 每个账号每天 10 万 Tokens、50 次请求，每个 Key 每分钟 10 次，单次最多输出 4096 Tokens，每天 UTC 0 点（北京时间 8 点）重置；由 Linkrra 自营 GPU 提供，不转给第三方。门槛：必须用 Google 登录，同一 Google 账号和同一网络地址只算一份额度，先用完哪个算哪个；无需绑卡。其他模型需要充值，余额不足时接口返回 402。平台另有免登录网页聊天试用。无截止日期。",
+    "claim_steps": [
+      "打开 synap402.com，点 Sign up free / Get your free API key",
+      "用 Google 账号登录（只有 Google 登录账号有免费档）",
+      "在 Account 页创建 API Key（形如 sk-pool-…）",
+      "OpenAI 兼容客户端 base_url 填 https://synap402.com/v1，model 填 qwen3-coder-30b"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开 Synap",
+        "detail": "进入 Synap 首页，点 Sign up free 或 Get your free API key",
+        "url": "https://synap402.com/",
+        "note": ""
+      },
+      {
+        "step": "用 Google 登录",
+        "detail": "选择 Google 登录；免费档只发给 Google 登录的账号",
+        "url": "https://synap402.com/",
+        "note": "每个 Google 账号和网络地址各一份额度"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "登录后进入 Account 页创建 Key，形如 sk-pool-…，立即保存",
+        "url": "https://synap402.com/docs",
+        "note": ""
+      },
+      {
+        "step": "配置客户端",
+        "detail": "base_url 填 https://synap402.com/v1，model 填 qwen3-coder-30b；Cline、Continue、Kilo Code 选 OpenAI Compatible 填这两项",
+        "url": "https://synap402.com/docs",
+        "note": "每天 10 万 Tokens、50 次请求，UTC 0 点重置"
+      },
+      {
+        "step": "（可选）接 Codex CLI",
+        "detail": "在 ~/.codex/config.toml 新增 provider：base_url = \"https://synap402.com/v1\"，env_key 指向存 Key 的环境变量，model = \"qwen3-coder-30b\"",
+        "url": "https://synap402.com/docs",
+        "note": ""
+      },
+      {
+        "step": "不要充值",
+        "detail": "不买 credits 只能用免费模型，其他模型会返回 402",
+        "url": "https://synap402.com/pricing",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "Synap",
+        "action_url": "https://synap402.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "qwen3-coder-30b",
+        "action_url": "https://synap402.com/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_key",
+      "need_google",
+      "third_party"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T04:35:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "pending",
+      "note": "待自动申请：Google 登录 Synap 并创建 API Key",
+      "at": "2026-11-12 04:35 北京"
+    }
+  },
+  {
+    "id": "respan-muse-ember-free-route-20261112",
+    "title": "Respan：Meta 新模型 Muse Ember 免费线路 meta/muse-ember:free（每天 1000 次请求 / 1500 万 Tokens，免绑卡）",
+    "platform": "Respan",
+    "product": "Respan LLM Gateway",
+    "model": "Muse Ember（meta/muse-ember:free）",
+    "type": "限免",
+    "deadline": null,
+    "url": "https://www.respan.ai/models/muse-ember",
+    "source": "Respan 模型页 Muse Ember（respan.ai，11/12 04:25 北京抓取）、Respan 2026-11-04 changelog「Free model promotions」、赛博鸡蛋 jidan.si（11/11 更新）",
+    "summary": "模型网关 Respan（原 Keywords AI）在模型目录里给 Meta 11 月 9 日发布的 Muse Ember 开了免费线路 meta/muse-ember:free，输入输出均按 0 元计费。Muse Ember 是 Meta 最小、最高效的推理模型，100 万 Token 上下文，可输入文本、图片、视频、音频和 PDF。据 Respan 模型页和赛博鸡蛋整理，免费线路限额为每分钟 10 次请求、每小时 400 万 Tokens、每天 1000 次请求、每天 1500 万 Tokens。不带 :free 的普通线路收费（每百万输入 0.10 美元、输出 0.50 美元）。门槛：注册 Respan 账号即可，无需绑卡；官方没有公布免费结束时间，属限时推广。注意：官方文档写明余额用完的 Key 可能返回 activation_required，零余额账号能否一直调用尚未核实。同平台的 Gemini 4 Carbon 免费线路另见单独条目。",
+    "claim_steps": [
+      "打开 platform.respan.ai 用 Google、GitHub 或邮箱登录",
+      "在 Gateway → API keys 页创建 Key",
+      "OpenAI 兼容客户端 base_url 填 https://gateway.respan.ai/v1（或 https://api.respan.ai/api），model 填 meta/muse-ember:free",
+      "响应头会显示剩余免费额度"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 Respan",
+        "detail": "打开 Respan 平台，用 Google、GitHub 或邮箱注册登录",
+        "url": "https://platform.respan.ai/",
+        "note": "无需绑卡"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "进入 Gateway → API keys，新建 Key 并保存，可顺手设消费上限",
+        "url": "https://platform.respan.ai/platform/gateway/api-keys",
+        "note": ""
+      },
+      {
+        "step": "配置客户端",
+        "detail": "base_url 填 https://gateway.respan.ai/v1，Authorization 带 Bearer Key，model 填 meta/muse-ember:free",
+        "url": "https://www.respan.ai/models/muse-ember",
+        "note": "必须带 :free 后缀，否则按付费线路计费"
+      },
+      {
+        "step": "查看剩余额度",
+        "detail": "每次响应的头部会显示免费额度剩余量；每天 1000 次请求、1500 万 Tokens 用完后次日再用",
+        "url": "https://www.respan.ai/docs/changelog/changelog",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "Respan",
+        "action_url": "https://platform.respan.ai/platform/gateway/api-keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "meta/muse-ember:free",
+        "action_url": "https://www.respan.ai/models/muse-ember"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_key",
+      "third_party"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T04:35:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "pending",
+      "note": "已有 Respan 账号和 Key（11/11 建，$1 上限、11/18 过期），待用现有 Key 测 meta/muse-ember:free",
+      "at": "2026-11-12 04:35 北京"
+    }
+  },
+  {
+    "id": "jetbrains-junie-lite-free-coding-agent-20261112",
+    "title": "JetBrains Junie Lite：每个 JetBrains 账号免费的编程 Agent 档（Qwen 3.6 27B，日常使用几乎不限量，至 12/31）",
+    "platform": "JetBrains Junie",
+    "product": "Junie（JetBrains Air / Junie CLI）",
+    "model": "Qwen 3.6 27B",
+    "type": "免费档",
+    "deadline": "2026-12-31T23:59:59+08:00",
+    "url": "https://junie.jetbrains.com/blog/junie-lite/",
+    "source": "Junie 官方博客《Junie Lite: a free model for the work that never needed a frontier one》（10/2 发布，脚注写明有效期至 2026-12-31）、Junie Lite 官方文档（11/11 更新）、赛博鸡蛋 jidan.si（11/11 收录）",
+    "summary": "JetBrains 的编程 Agent Junie 推出免费档 Junie Lite，所有 JetBrains 账号都包含，免费账号、AI Pro / AI Ultimate 订阅用户以及个人和企业客户都能用。目前底层模型是 Qwen 3.6 27B，以后可能更换；推理只在 JetBrains 自己的服务器上运行，代码和提示词不会交给模型厂商，也不会用来训练。官方称日常使用几乎不限量，但不公布具体配额，模型容量满时请求会暂停，不会自动换成其他模型。适合改名、补测试、升级依赖这类日常活，复杂的大重构仍建议用前沿模型。使用范围：只能在 JetBrains IDE 里的 JetBrains Air 或 Junie CLI 中使用，旧的 AI Assistant 插件里没有。门槛：登录 JetBrains 账号即可，无需订阅、无需绑卡。官方博客脚注写明优惠有效期至 2026 年 12 月 31 日。",
+    "claim_steps": [
+      "把 JetBrains IDE 升级到 2026.3 并打开 JetBrains Air，或安装 Junie CLI",
+      "用 JetBrains 账号登录 Junie，首次请求即自动获得 Junie Lite",
+      "Junie CLI 里运行 /model 选择 Junie Lite；Air 里用模型选择器切换"
+    ],
+    "claim_guide": [
+      {
+        "step": "准备客户端",
+        "detail": "把 JetBrains IDE 升级到 2026.3 并打开内置的 JetBrains Air；或安装 Junie CLI",
+        "url": "https://junie.jetbrains.com/docs/junie-lite.html",
+        "note": "旧版 AI Assistant 插件不支持"
+      },
+      {
+        "step": "登录 JetBrains 账号",
+        "detail": "在 Air 或 Junie CLI 里用 JetBrains 账号登录，无需订阅、无需绑卡",
+        "url": "https://account.jetbrains.com/",
+        "note": ""
+      },
+      {
+        "step": "选择 Junie Lite",
+        "detail": "Junie CLI 里运行 /model 选 Junie Lite；Air 里在模型选择器中切换",
+        "url": "https://junie.jetbrains.com/blog/junie-lite/",
+        "note": "首次请求即可用，无需另外开通"
+      },
+      {
+        "step": "分配任务",
+        "detail": "把改名、补测试、升级依赖等日常任务交给 Junie Lite，复杂任务再切回付费模型",
+        "url": "https://junie.jetbrains.com/docs/junie-lite.html",
+        "note": "容量满时请求会暂停，不会自动降级"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Junie",
+        "action_url": "https://junie.jetbrains.com/docs/junie-lite.html"
+      }
+    ],
+    "models": [
+      {
+        "name": "Junie Lite（Qwen 3.6 27B）",
+        "action_url": "https://junie.jetbrains.com/blog/junie-lite/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-12T04:35:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "只能在本机 JetBrains IDE 2026.3（Air）或 Junie CLI 里登录使用，云端浏览器无法代领；你已有 JetBrains 账号，登录即可",
+      "at": "2026-11-12 04:35 北京"
+    }
+  },
+  {
+    "id": "doubao-desktop-newuser-30day-trial-checkin-8800-20261112",
+    "title": "豆包电脑版：新用户首次登录领 30 天免费体验套餐，所有用户每日签到领额度（30 天累计 8800）",
+    "platform": "豆包",
+    "product": "豆包电脑版 / 豆包工作电脑版",
+    "model": "豆包（除 Pro 模型外）",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://www.ithome.com/1/020/224.htm",
+    "source": "IT之家《豆包再次面向用户推出免费额度活动》（10/30）、每经 AI 快讯（10/31）、豆包官方下载页；据 X 上的报道（@jhl880617 11/12 00:22 北京）",
+    "summary": "字节跳动的豆包在电脑端推出免费额度活动：首次登录豆包电脑版或豆包工作电脑版的新用户，可直接领取 30 天免费体验套餐，每个账号限领一次，额度可用于除生成视频、Pro 模型以外的所有能力。所有新老用户每日签到可得 200 额度，周一翻倍，累计签到 30 天可得 8800 额度，超过一个月标准套餐（约 8400）；做整理文档、操作浏览器、做表格等体验任务还能另领额度。赠送额度有效期 30 天，优先于付费额度消耗。豆包工作是可在本地电脑上写文档、做表格、做 PPT、操作浏览器的桌面 AI 助手。门槛：需下载 Windows / macOS 桌面客户端并登录豆包账号（国内手机号）；活动为限时，未公布截止日期。",
+    "claim_steps": [
+      "从豆包官网下载豆包电脑版或豆包工作电脑版并安装",
+      "首次登录自动领取 30 天免费体验套餐，在订阅页查看是否生效",
+      "每天点左下角签到弹窗，或点头像在侧边栏选「免费用豆包」签到领 200 额度",
+      "完成体验任务后手动点领取额外额度"
+    ],
+    "claim_guide": [
+      {
+        "step": "下载客户端",
+        "detail": "打开豆包下载页，下载豆包电脑版或豆包工作电脑版并安装",
+        "url": "https://www.doubao.com/download",
+        "note": "只有电脑版有新用户 30 天套餐"
+      },
+      {
+        "step": "首次登录领套餐",
+        "detail": "用手机号登录，新用户首次登录即领 30 天免费体验套餐；到订阅页确认权益已生效",
+        "url": "https://www.doubao.com/download",
+        "note": "每个账号限领一次，不含生视频和 Pro 模型"
+      },
+      {
+        "step": "每日签到",
+        "detail": "点左下角签到弹窗，或点头像在侧边栏选「免费用豆包」，每天签到领 200 额度，周一翻倍",
+        "url": "https://www.ithome.com/1/020/224.htm",
+        "note": "累计 30 天最高 8800 额度"
+      },
+      {
+        "step": "做任务领额度",
+        "detail": "在活动页完成整理文档、操作浏览器、做表格等体验任务，再点「去领取」",
+        "url": "https://www.ithome.com/1/020/224.htm",
+        "note": "赠送额度 30 天有效"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "豆包电脑版",
+        "action_url": "https://www.doubao.com/download"
+      }
+    ],
+    "models": [
+      {
+        "name": "豆包",
+        "action_url": "https://www.doubao.com/download"
+      }
+    ],
+    "scenes": [
+      "office",
+      "agent",
+      "chat"
+    ],
+    "barriers": [
+      "need_client",
+      "need_phone",
+      "new_user_only",
+      "cn_account"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-12T04:35:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在本机安装豆包桌面客户端并用国内手机号登录，云端浏览器无法代领",
+      "at": "2026-11-12 04:35 北京"
+    }
+  },
+  {
+    "id": "epic-ai-megajam-2026-partner-credits-claude-fal-20261112",
+    "title": "Epic AI MegaJam 2026：itch.io 报名参赛即送合作方额度（Claude API $25、fal $30 等，11/12–11/15）",
+    "platform": "Epic Games",
+    "product": "2026 Epic AI MegaJam（itch.io）",
+    "model": "Claude API / fal 等",
+    "type": "黑客松额度",
+    "deadline": "2026-11-16T09:59:00+08:00",
+    "url": "https://itch.io/jam/2026-epic-ai-megajam",
+    "source": "itch.io 活动页《2026 Epic AI MegaJam》、Unreal Engine 论坛《Meet the 2026 Epic AI MegaJam partners》及其中官方回复（11/11）",
+    "summary": "Epic Games 举办的 2026 Epic AI MegaJam 游戏开发比赛（11 月 12 日至 15 日），Claude、Google、OpenAI、SpaceXSI、fal 等合作方给每位在 itch.io 报名的参赛者发放额度：Anthropic 送 25 美元 Claude API 额度（用于 Claude 开发者平台，领取后 90 天有效），SpaceXSI 送 50 美元额度（可用于 Cursor 等，11/15 前领取、领后 7 天有效），fal 送 30 美元 fal 额度（11/30 前兑换），另有 Diversion、Hyper3D、Meshy（需绑卡）、Tripo、Rokoko 等工具权益。额度码和领取链接通过邮件发给 itch.io 报名邮箱；原定 11/10 统一发送，官方在论坛回复称 11/11 及之后报名的人会在当天晚些时候补发。门槛：需要 itch.io 账号并报名，报名即视为参赛；比赛期间要求开发并在 11/15 17:59（太平洋时间，北京时间 11/16 09:59）前提交游戏，不能提前开始制作。",
+    "claim_steps": [
+      "登录 itch.io，打开 2026 Epic AI MegaJam 页面点 Join jam 报名",
+      "留意报名邮箱（含垃圾箱）里的合作方额度邮件",
+      "Claude 额度：先在 platform.claude.com 注册账号，再按邮件链接领取",
+      "fal、Tripo 等按邮件里的码在各自网站兑换，注意各自截止日"
+    ],
+    "claim_guide": [
+      {
+        "step": "报名参赛",
+        "detail": "登录或注册 itch.io，打开活动页点 Join jam",
+        "url": "https://itch.io/jam/2026-epic-ai-megajam",
+        "note": "报名即参赛，11/12–11/15 需开发并提交游戏"
+      },
+      {
+        "step": "等待额度邮件",
+        "detail": "合作方额度码和领取链接发到 itch.io 报名邮箱，记得查垃圾箱；晚报名者由官方补发",
+        "url": "https://forums.unrealengine.com/t/meet-the-2026-epic-ai-megajam-partners/2853549",
+        "note": ""
+      },
+      {
+        "step": "领取 Claude API 额度",
+        "detail": "先在 platform.claude.com 注册 Claude 开发者账号，再点邮件里的领取链接，25 美元额度领取后 90 天有效",
+        "url": "https://platform.claude.com/",
+        "note": ""
+      },
+      {
+        "step": "兑换 fal 额度",
+        "detail": "用邮件里的码在 fal 个人账号兑换 30 美元额度，11/30 前完成",
+        "url": "https://fal.ai/",
+        "note": ""
+      },
+      {
+        "step": "其他权益",
+        "detail": "SpaceXSI 额度 11/15 前领取；Tripo 3000 积分在其活动页填姓名邮箱取码、11/16 前兑换；Meshy 免费月需绑卡且会自动续费",
+        "url": "https://itch.io/jam/2026-epic-ai-megajam",
+        "note": "Meshy 需绑信用卡，注意取消续费"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Claude API",
+        "action_url": "https://platform.claude.com/"
+      },
+      {
+        "name": "fal",
+        "action_url": "https://fal.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "hackathon",
+      "coding",
+      "image"
+    ],
+    "barriers": [
+      "hackathon",
+      "need_email"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T04:35:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需你本人在 itch.io 报名参赛（报名即视为参赛，11/12–11/15 要提交游戏），是否参加由你决定；额度码发到报名邮箱",
+      "at": "2026-11-12 04:35 北京"
+    }
+  },
+  {
+    "id": "fal-opengame-game-jam-50usd-credits-20261112",
+    "title": "fal × OpenGame 游戏黑客松：每位参赛者送 $50 fal 额度（11/18–12/18，总奖金 10 万美元）",
+    "platform": "fal",
+    "product": "OpenGame Game Jam",
+    "model": "fal 生成模型（图像 / 视频 / 音频 / 3D）",
+    "type": "黑客松额度",
+    "deadline": "2026-12-18T23:59:59-08:00",
+    "url": "https://opengame.io",
+    "source": "据 X 上的报道（@fal 官方帖 11/12 01:28 北京，及 @0xRishi / @opengameio 赞助商说明）；getplaytests.dev《OpenGame Game Jam: $100K Prizes, Dates and Rules》",
+    "summary": "用户生成游戏平台 OpenGame 举办为期一个月的网页游戏黑客松（11 月 18 日至 12 月 18 日），现金奖池 10 万美元，赞助商有 ElevenLabs、fal 和 MeshyAI。据 X 上的报道，fal 给每位报名参赛者 50 美元免费 fal 额度，可调用 fal 上的图像、视频、音频、3D 等生成模型；另设「Best Use of fal」奖，前三名共分 5000 美元 fal 额度（与现金奖池分开）。规则：可用任何能导出网页的工具或引擎开发，在 OpenGame 平台提交。门槛：需要在 OpenGame 报名参赛并提交作品；活动 11/18 才开放，正式规则、额度发放方式和截止时区尚未公布，目前只能在 OpenGame 官网留邮箱等通知。",
+    "claim_steps": [
+      "打开 opengame.io 留邮箱，等待 11/18 开放报名通知",
+      "11/18 起在 OpenGame 报名参加 Game Jam",
+      "按官方说明领取 50 美元 fal 额度（发放方式待公布）",
+      "12/18 前在 OpenGame 平台提交网页游戏"
+    ],
+    "claim_guide": [
+      {
+        "step": "留邮箱",
+        "detail": "打开 OpenGame 官网，填写邮箱订阅活动开放通知",
+        "url": "https://opengame.io",
+        "note": "报名入口 11/18 才开放"
+      },
+      {
+        "step": "报名参赛",
+        "detail": "11/18 起按通知在 OpenGame 报名 Game Jam",
+        "url": "https://opengame.io",
+        "note": "需本人参赛"
+      },
+      {
+        "step": "领取 fal 额度",
+        "detail": "按官方说明领取每位参赛者 50 美元 fal 额度，没有 fal 账号先注册",
+        "url": "https://fal.ai/",
+        "note": "具体发放方式尚未公布"
+      },
+      {
+        "step": "提交作品",
+        "detail": "12/18 前在 OpenGame 平台提交可在网页运行的游戏，可参评 Best Use of fal",
+        "url": "https://opengame.io",
+        "note": "截止时区待官方规则确认"
+      }
+    ],
+    "providers": [
+      {
+        "name": "fal",
+        "action_url": "https://fal.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "hackathon",
+      "image",
+      "video"
+    ],
+    "barriers": [
+      "hackathon"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T04:35:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "11/18 才开放报名，且需你本人参赛并提交游戏，目前只能先在 opengame.io 留邮箱",
+      "at": "2026-11-12 04:35 北京"
+    }
   }
 ]
