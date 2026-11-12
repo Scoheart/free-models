@@ -34665,5 +34665,144 @@
       "note": "免费模型在 Windows / Linux 桌面客户端里使用；每周 $5 额度需在客户端或官网用浏览器登录。本轮无法代填登录或完成 Google 授权，请你本机安装后自行登录",
       "at": "2026-11-12 12:20 北京"
     }
+  },
+  {
+    "id": "poppixs-newuser-500-coins-nov30-20261112",
+    "title": "POPPIXS：11/30 前新注册送 500 硬币（30 天有效），可在网页里做动画和生图",
+    "platform": "POPPIXS",
+    "product": "POPPIXS 动画版",
+    "model": "Seedream 5.5（及其他官网列出的图像/视频模型）",
+    "type": "新用户赠送",
+    "deadline": "2026-11-30T22:59:59+08:00",
+    "url": "https://anime.poppixs.ai/",
+    "source": "据 X 上的报道（官方账号 @poppixs，2026-11-12 11:10 北京）；官方通稿 PR TIMES（2026-11-12 12:07 日本时间，https://prtimes.jp/main/html/rd/p/000000006.000187393.html）",
+    "source_post_id": "2120715728101978203",
+    "post_time_bj": "2026-11-12T11:10:05+08:00",
+    "summary": "据 X 上的报道（POPPIXS 官方账号 @poppixs）及日本官方通稿（PR TIMES，发布方为ユーナメディアパートナー株式会社）：日本 AI 动画平台 POPPIXS 动画版上线字节跳动 Seedream 5.5。2026 年 11 月 30 日前新注册账号，可获 500 枚平台硬币，自到账日起 30 天有效；通稿未写是否要绑卡、手机号或实名，也未说明 500 硬币能生成多少张图或多少秒视频，使用限制以站点内展示为准。通稿另写订阅会员在 2026 年 12 月 11 日 23:00（日本时间，北京时间 22:00）前用 Seedream 5.5 生图消耗硬币为 0、并称该模型生图限时无限制，但明确订阅费仍须另行支付；官网价目列出创作者档约 ¥5,980/月（税入），这不是免费领取，不要为这条去开通订阅。这是网页创作平台上的额度，通稿未提供开放 API。新注册赠币截止：2026-11-30 日本时间结束（北京时间 22:59）。",
+    "claim_steps": [
+      "打开 https://anime.poppixs.ai/ ，在 2026 年 11 月 30 日前按页面提示注册新账号",
+      "注册后在账户里查看是否到账 500 硬币，勿开通付费订阅"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开官网",
+        "detail": "访问 POPPIXS 动画版官网",
+        "url": "https://anime.poppixs.ai/"
+      },
+      {
+        "step": "注册新账号",
+        "detail": "在 2026 年 11 月 30 日前按页面上的注册或登录入口创建新账号。具体按钮文案以页面为准",
+        "url": "https://anime.poppixs.ai/",
+        "note": "须是新账号才能拿通稿写的 500 硬币"
+      },
+      {
+        "step": "查看硬币余额",
+        "detail": "登录后在账户或钱包位置确认 500 硬币是否到账，有效期为到账日起 30 天",
+        "url": "https://anime.poppixs.ai/"
+      },
+      {
+        "step": "不要开通订阅",
+        "detail": "Seedream 5.5 的 0 硬币活动只面向已付费订阅会员，订阅费另计。只领新用户硬币即可，不要为这条去付款",
+        "url": "https://prtimes.jp/main/html/rd/p/000000006.000187393.html",
+        "note": "官网创作者档标价约 ¥5,980/月（税入）"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "POPPIXS 动画版",
+        "action_url": "https://anime.poppixs.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Seedream 5.5",
+        "action_url": "https://anime.poppixs.ai/"
+      }
+    ],
+    "scenes": [
+      "image",
+      "video"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-12T16:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "这是网页创作平台的新用户赠币，没有 API key 可建。本轮无法代填注册或完成需本人确认的登录，请你打开官网在 11/30 前自行注册；不要开通付费订阅。",
+      "at": "2026-11-12 16:20 北京"
+    }
+  },
+  {
+    "id": "miora-minimax-h3-image-free-week-nov17-20261112",
+    "title": "Miora：MiniMax H3-Image 限免一周（11/11–11/17），网页创作工作室可用",
+    "platform": "Miora",
+    "product": "Miora（Agentic Creative Studio）",
+    "model": "MiniMax H3-Image",
+    "type": "限免",
+    "deadline": "2026-11-17T23:59:59+08:00",
+    "url": "https://miora.design/",
+    "source": "据 X 上的报道（@Miora_Design，2026-11-11 22:22 北京；官方账号 @MiniMax_AI 于 2026-11-12 02:51 北京回复确认）",
+    "source_post_id": "2120522643434778810",
+    "post_time_bj": "2026-11-11T22:22:50+08:00",
+    "summary": "据 X 上的报道：Miora 官方账号 @Miora_Design 宣布 MiniMax H3-Image 先在 Miora 网页创作工作室上线，11 月 11 日至 17 日一周免费使用；MiniMax 官方账号 @MiniMax_AI 回复确认「Free through Nov 17」。帖中未写每天可生成张数、是否要绑卡，也未说明时区，本条把截止记为北京时间 2026-11-17 23:59，实际以产品内提示为准。这与已收录的 fal 渠道（至 11/23、每 24 小时最多 5 张、仅 Playground/Sandbox）以及 MiniMax Code 活动期内每人 10 张不是同一入口，也不是 MiniMax 开放平台 API。Miora 官网前端定价文案还写免费用户注册送 1000 积分（90 天有效，每用户一次），并估算约可出 50 张图，但这是站内常设新用户赠送，不能据此推断 H3-Image 限免周的张数。海外版登录入口文案包括 Google、GitHub、X 和邮箱；页面流程里可能出现邀请码或候补名单，遇到就停下。免费导出可能带平台水印。",
+    "claim_steps": [
+      "打开 https://miora.design/ ，按页面的 Sign up / Sign in 注册或登录（海外版可试 Google、GitHub、X 或邮箱）",
+      "在工作室里选择 MiniMax H3-Image 生图或改图，活动窗口为 11/11–11/17"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开 Miora",
+        "detail": "访问官网，进入网页创作工作室",
+        "url": "https://miora.design/"
+      },
+      {
+        "step": "注册或登录",
+        "detail": "点页面上的 Sign up / Sign in / Login。海外版文案提供 Sign in / Sign up with Google、GitHub、X，以及邮箱验证码登录",
+        "url": "https://miora.design/",
+        "note": "邮箱别名（地址里带 +）文案写明不支持；若弹出 Enter Invite Code 或候补名单，没有邀请码就停下，不要付款或绑卡"
+      },
+      {
+        "step": "选择 H3-Image",
+        "detail": "登录后在模型或工具列表中选择 MiniMax H3-Image，按画布提示进行文生图或改图",
+        "url": "https://miora.design/",
+        "note": "按钮位置以页面为准；限免窗口为 11/11–11/17"
+      },
+      {
+        "step": "可选：核对注册积分",
+        "detail": "若只是新注册，也可在账户或定价页查看是否到账 1000 积分（文案写 90 天有效）。不要为这条去升级付费套餐或绑卡",
+        "url": "https://miora.design/pricing"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Miora",
+        "action_url": "https://miora.design/"
+      }
+    ],
+    "models": [
+      {
+        "name": "MiniMax H3-Image",
+        "action_url": "https://miora.design/"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-12T16:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "这是网页创作应用里的限免生图，没有 API key 可建。登录可能要 Google/GitHub/X 授权或邀请码，本轮无法完成需本人确认的授权，请你打开 https://miora.design/ 自行注册试用；不要绑卡付款。",
+      "at": "2026-11-12 16:20 北京"
+    }
   }
 ]
