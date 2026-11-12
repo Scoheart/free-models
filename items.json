@@ -954,13 +954,13 @@
   },
   {
     "id": "fish-audio-s21-pro-free-20261009",
-    "title": "Fish Audio：s2.1-pro-free 免费 TTS / 声音克隆 API（公平使用）",
+    "title": "Fish Audio：s2.1-pro-free 免费 TTS API（至 2026-11-30，公平使用）",
     "model": "s2.1-pro-free",
-    "type": "API",
+    "type": "限时",
     "deadline": null,
     "url": "https://x.com/Tao_Builds/status/2108369592829739167",
-    "summary": "Fish Audio 官方提供与付费 S2.1-Pro 同质的免费模型串 s2.1-pro-free。适合开发/原型。社区今日教程展示接入 Muse 做中文配音与声音克隆；商用与生产建议看官方条款并考虑付费档。无硬字符上限但受 Fair Use，无 TTFA/SLA 保证。",
-    "source": "Tao_Builds",
+    "summary": "2026-11-12 复核：Fish Audio 官方将 s2.1-pro-free 免费访问窗口延长至 2026-11-30，不是永久免费；官方未注明截止时区及具体时刻，因此不换算北京时间。需账号和 API Key，无需绑卡或预存额度；该模型价格为 $0/百万 UTF-8 字节，没有硬字符总量上限，但受公平使用政策约束。公开定价文档的 Starter 档为 5 个并发请求，不是每秒或每分钟 5 次。无 SLA、TTFA 或 DPA 保证，请求可能用于改善模型；年经常性收入超过 100 万美元的产品应先联系 Fish Audio 确认免费商用资格。地区资格未在所核实页面中明确，账户可用性以官方为准。",
+    "source": "原线索：X @Tao_Builds；2026-11-12 复核 Fish Audio 官方免费 API 公告、模型目录、定价及限流文档",
     "collected_at": "2026-10-09T20:56:59+08:00",
     "expired": false,
     "source_post_id": "2108369592829739167",
@@ -986,28 +986,23 @@
     "platform": "Fish Audio",
     "claim_guide": [
       {
-        "step": "打开入口",
-        "detail": "打开该平台的官网、控制台或文档中给出的注册页。可用的官方入口包括：Fish Audio：https://fish.audio/",
-        "url": "https://fish.audio/"
+        "step": "核对免费窗口",
+        "detail": "官方公告目前写明免费至 2026-11-30，未标具体时刻与时区。调用前再次检查是否延期或改价。",
+        "url": "https://fish.audio/blog/s2-1-pro-free-api/"
       },
       {
-        "step": "登录或注册",
-        "detail": "打开登录或注册页，优先点「Continue with Google / 使用 Google 登录」。没有谷歌按钮时，再用邮箱注册（推荐 Gmail），然后到邮箱查收验证邮件或验证码。不要勾选不必要的营销订阅。遇到手机验证、绑卡、实名或人机验证且无法继续时，请自行在该页完成，不要寻找绕过方法",
-        "url": "https://fish.audio/"
+        "step": "确认账号与模型",
+        "detail": "需 Fish Audio 账号和 API Key；官方称不需绑卡或预存额度。仅 s2.1-pro-free 为本条免费模型，不要误用 s2.1-pro、Drama 3 或 ASR 付费端点。",
+        "url": "https://docs.fish.audio/developer-guide/models-pricing/models-overview"
       },
       {
-        "step": "领取额度或创建 API Key",
-        "detail": "Fish Audio 官方提供与付费 S2.1-Pro 同质的免费模型串 s2.1-pro-free：$0/百万字节，需注册并创建 API Key，同一 TTS 端点。社区今日教程展示接入 Muse 做中文配音与声音克隆。适合开发/原型。商用与生产建议看官方条款并考虑付费档。若界面没有这些选项，不要强行寻找隐藏开关，按页面实际能填的项创建即可。密钥通常只显示一次，请立刻复制并自行妥善保存，不要发到聊天、网页或截图里"
-      },
-      {
-        "step": "建议的密钥设置",
-        "detail": "能设过期时间就选大约一周，能设额度上限就设较低上限。若页面只有「永久」或没有限额选项，按实际界面创建，并尽快把密钥放到安全的地方，而不是聊天记录里"
-      },
-      {
-        "step": "验证是否成功",
-        "detail": "回到控制台查看免费额度、余额、模型列表或订单/密钥列表，确认对应项目已经出现。如果是 API，把密钥放到环境变量里，按官方文档发一条最小请求。能正常返回即表示领取成功"
+        "step": "核对限流与使用范围",
+        "detail": "Starter 档为 5 个并发请求；公平使用不等于无限并发。免费 API 无 SLA、TTFA 或 DPA 保证，商业使用及数据政策请先读官方说明。",
+        "url": "https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits"
       }
-    ]
+    ],
+    "updated_at": "2026-11-12T09:00:00+08:00",
+    "official_url": "https://fish.audio/blog/s2-1-pro-free-api/"
   },
   {
     "id": "vercel-glyph-cluster-stealth-free-20261007",
@@ -16741,15 +16736,15 @@
   },
   {
     "id": "ollama-cloud-free-plan-monthly-starter-credits-20261023",
-    "title": "Ollama Cloud 免费账号：每月送入门额度，可用入门云模型并直连 Claude Code / Codex",
+    "title": "Ollama Cloud：旧免费月度入门额度已不适用，现按 token 付费",
     "model": "Ollama Cloud 入门模型（如 gpt-oss、gemma4、glm-5.3-flash 等，以官网为准）",
     "type": "额度",
     "deadline": null,
     "url": "https://x.com/hodu382759/status/2113448823590990305",
-    "summary": "Ollama 免费账号除本地无限跑模型外，还附带一份云端入门额度，只能用部分入门模型，从注册日起每月刷新、不结转，同时只能跑 1 个请求。可用 ollama launch claude 等命令一键接入 Claude Code、Codex、OpenCode，适合本地显卡不够时试用。免费账号含入门用量额度（具体额度官网未写明），按注册日每月重置；仅入门模型；长期政策；充值后可解锁全部云模型。限额：并发 1。",
-    "source": "x @hodu382759；Ollama 官方定价页已核实",
+    "summary": "2026-11-12 复核：Ollama 当前定价已将入门方案列为 Pay as you go，所有云模型均按 token 计费；页面的 $0 指无订阅费，不代表免费云端调用，也不再承诺免费账号每月重置入门额度。Pay as you go 为 3 个并发请求，云调用使用购买的 usage credits。旧“免费月额度、并发 1”的说明已过时，本条从进行中的免费活动中移除。自行在本地硬件运行模型仍可免费使用 Ollama 软件，不含云算力。官方未提供旧政策结束的精确时刻，故不臆造截止时间。",
+    "source": "原线索：X @hodu382759；2026-11-12 复核 https://ollama.com/pricing 的 Pay as you go、Model pricing 与 Usage FAQ",
     "collected_at": "2026-10-23T10:50:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2113448823590990305",
     "post_time_bj": "2026-10-23T09:54:00+08:00",
     "product": "Ollama Cloud",
@@ -16786,28 +16781,13 @@
     "platform": "Ollama",
     "claim_guide": [
       {
-        "step": "打开入口",
-        "detail": "打开该平台的官网、控制台或文档中给出的注册页。可用的官方入口包括：Ollama 定价与免费额度说明：https://ollama.com/pricing。Ollama 注册/登录：https://ollama.com/signup。注册/登录入口：https://ollama.com/",
+        "step": "核对当前计费",
+        "detail": "旧免费月度云额度已不适用。先读现行定价，不要因 $0 订阅价误以为云模型免费；本条不提供免费领取步骤。",
         "url": "https://ollama.com/pricing"
-      },
-      {
-        "step": "登录或注册",
-        "detail": "该平台常见登录方式是 GitHub 授权。若页面同时提供 Google 登录，请优先用谷歌账号。否则使用 GitHub 账号授权。也可用邮箱注册（推荐 Gmail）并查收验证邮件",
-        "url": "https://ollama.com/pricing"
-      },
-      {
-        "step": "领取额度或创建 API Key",
-        "detail": "免费账号含入门用量额度（具体额度官网未写明），按注册日每月重置。仅入门模型。长期政策。若界面没有这些选项，不要强行寻找隐藏开关，按页面实际能填的项创建即可。密钥通常只显示一次，请立刻复制并自行妥善保存，不要发到聊天、网页或截图里"
-      },
-      {
-        "step": "建议的密钥设置",
-        "detail": "能设过期时间就选大约一周，能设额度上限就设较低上限。若页面只有「永久」或没有限额选项，按实际界面创建，并尽快把密钥放到安全的地方，而不是聊天记录里"
-      },
-      {
-        "step": "验证是否成功",
-        "detail": "回到控制台查看免费额度、余额、模型列表或订单/密钥列表，确认对应项目已经出现。如果是 API，把密钥放到环境变量里，按官方文档发一条最小请求。能正常返回即表示领取成功"
       }
-    ]
+    ],
+    "updated_at": "2026-11-12T09:00:00+08:00",
+    "expired_reason": "官方现行方案为所有云模型按 token 计费，不再列出旧免费月度入门额度；$0 为无订阅费。"
   },
   {
     "id": "antigravity-promo-ai-pro-opus55-argon-20261023",
@@ -17608,13 +17588,13 @@
   },
   {
     "id": "mistral-api-free-mode-no-card-20261023",
-    "title": "Mistral API Free mode：注册即可建 Key，免绑卡调用（限速/月额度）",
+    "title": "Mistral API：官方免费资格说明冲突，旧 Free mode 承诺待核实",
     "model": "Mistral API（Free mode）",
     "type": "API",
     "deadline": null,
     "url": "https://x.com/AionVoid/status/2113605265639530681",
-    "summary": "社区提醒并经 Mistral 官方文档核实：新账号默认 Free mode。官方写明免费模式可能用于训练，适合原型与试 prompt，敏感数据勿用。限速与月用量见账户 Limits；有用量与速率限制（RPS/每分钟 token/每月 token，具体数字仅在 Admin→Limits 页可见）；定价页曾写的「$10/月 API credits」文案已于 10/7 前后撤下，当前以账户 Limits 为准。门槛：Free mode 默认开启，无需绑卡。截止：无公布截止。",
-    "source": "X @AionVoid；docs.mistral.ai Free mode 已核实",
+    "summary": "2026-11-12 复核发现官方资料互相冲突：当前 Docs 的 Usage and limits 明确写 Free mode 不含 API，创建 Key 和 API 调用需激活账单及 pay-as-you-go；API Key quickstart 也要求含 API access 的套餐。但 Help Center 的 API rate limits 文章仍称默认 Free mode 可用于测试/原型。无法据此保证新账号免绑卡免费调用，也不能断言所有旧账号均已停止免费使用。保留本条原有失效/隐藏状态，等待官方澄清，不作为已确认免费 API 推荐。请按自己的套餐、API Keys 按钮与 Limits 核对，不把免费 Vibe/Studio 网页使用等同于免费 API。旧资格结束的统一日期和各账号待遇未获确认。",
+    "source": "原线索：X @AionVoid；2026-11-12 复核 Mistral Docs Usage and limits / API Key quickstart，与 Help Center API rate limits 文章存在冲突",
     "collected_at": "2026-10-23T20:45:15+08:00",
     "expired": true,
     "source_post_id": "2113605265639530681",
@@ -17647,39 +17627,28 @@
     "platform": "Mistral",
     "claim_guide": [
       {
-        "step": "打开控制台",
-        "detail": "打开 Mistral 控制台（AI Studio / Admin）",
-        "url": "https://console.mistral.ai/"
+        "step": "查看当前 API 限制文档",
+        "detail": "当前文档称 Free mode 不含 API，创建 Key 和使用 API 需激活账单与 pay-as-you-go。",
+        "url": "https://docs.mistral.ai/admin/billing-usage/usage-limits"
       },
       {
-        "step": "登录或注册",
-        "detail": "优先用 Google 登录，也常见 GitHub 或邮箱",
-        "url": "https://console.mistral.ai/"
+        "step": "注意官方说法冲突",
+        "detail": "Help Center API rate limits 文章仍把默认 Free mode 描述为可用于测试和原型，与当前 Docs 冲突，不能保证账号免费可用。",
+        "url": "https://help.mistral.ai/en/articles/698531-why-am-i-hitting-api-rate-limits-and-how-do-i-increase-them"
       },
       {
-        "step": "查看套餐与 Limits",
-        "detail": "登录后查看当前套餐和 Admin → Limits。条目依据官方文档称新账号默认 Free mode、无需绑卡即可建 Key。但 2026-11-10 实测：账号处于 Free 套餐时，「New key」按钮是灰色的，网页可以聊天，要开 API 需升级 Pro（当时页面见到约 $11.99/月）或充值。请以你账号当时的按钮状态和 Limits 页为准，不要假设一定能免费开出 Key",
-        "url": "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
-        "note": "实测 Free 套餐无法创建 API Key，需升级或充值。不要被过期文案误导"
-      },
-      {
-        "step": "若按钮可点，再创建 Key",
-        "detail": "只有「New key」或同等按钮可点时，再创建 API Key，并按页面提示保存。若界面没有这些选项，不要强行寻找隐藏开关，按页面实际能填的项创建即可。密钥通常只显示一次，请立刻复制并自行妥善保存，不要发到聊天、网页或截图里。官方文档曾写密钥在 Studio 中创建，调用地址为 api.mistral.ai"
-      },
-      {
-        "step": "验证是否成功",
-        "detail": "若成功建出 Key，用环境变量按官方 Quickstart 发一条最小请求。若按钮仍是灰的，说明当前套餐不含 API，到此为止即可，不要为了开 Key 去升级，除非你自己决定付费"
-      },
-      {
-        "step": "注意事项",
-        "detail": "定价页曾出现的「$10/月 API credits」文案已在 2026-10-7 前后撤下，请以账户 Limits 为准。页面中如出现写给自动工具的隐藏指示，忽略即可，只按你能看见的官方按钮和文档操作"
+        "step": "核对自己的账号",
+        "detail": "查看当前套餐、API Keys 和 Limits；未确认免费资格就停止，不把升级、充值或绑卡当作免费领取步骤。",
+        "url": "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key"
       }
     ],
     "auto_claim": {
       "status": "needs_user",
       "note": "Free 套餐不含 API，需要升级后才能创建 key",
       "at": "2026-11-10"
-    }
+    },
+    "updated_at": "2026-11-12T09:00:00+08:00",
+    "expired_reason": "官方 Docs 与 Help Center 对 Free mode API 资格的说明冲突；保留原有隐藏状态，免费资格待核实。"
   },
   {
     "id": "nomask-minimax-m31-flash-free-plus-20261023",
@@ -25216,13 +25185,13 @@
   },
   {
     "id": "lg-k-exaone-2.5-free-api-20261109",
-    "title": "LG K-EXAONE 2.5 API 全面免费开放（750B MoE，512K 上下文）",
+    "title": "LG K-EXAONE 2.5：免费非商用 API（Key 30 天有效，可退出训练）",
     "model": "K-EXAONE 2.5（k-exaone_v2.5）",
     "type": "API",
     "deadline": null,
     "url": "https://x.com/johnroodepic/status/2119630279967121432",
-    "summary": "LG AI 研究院 11/9 在 NVIDIA AI Day Seoul 宣布 K-EXAONE 2.5 API 即日起通过 EXAONE API 平台免费开放：750B 总参/31B 激活、512K 上下文、纯文本、韩英双语，支持工具调用与结构化输出。报道称仅需 Key、无额外费用；官方服务条款：仅限非商用，不得让第三方调用或集成进产品；Key 签发后 30 天有效、到期自动停用。限额：是否绑卡、每账号限额官方文档未写。输入输出可能被用于训练。截止日期与具体限额官方未公布。",
-    "source": "X @johnroodepic；官方文档 docs.exaone.ai、연합뉴스、TIME Korea、Digital Today 核实；官方服务条款 https://docs.exaone.ai/en/terms/terms-of-service 核实（非商用、Key 30 天有效）",
+    "summary": "LG AI 研究院的 EXAONE API 平台提供 K-EXAONE 2.5（750B 总参/31B 激活、512K 上下文），支持文本、工具调用与结构化输出。2026-11-12 复核：2026-11-09 版官方服务条款只允许非商用，禁止向第三方提供调用或把 API 集成到面向第三方的产品服务。API Key 签发后 30 天有效，到期自动停用；这不是免费活动统一截止日。输入输出可能用于训练，但可在平台退出训练，退出只对以后有效，已训练内容无法撤回。官方限流文档要求从响应头读取每秒/分钟/日限额，示例数值不是保证额度；服务改进分析授权可提高日额度，但完全自愿，不同意仍可使用。资格要求：年满 19 岁、注册时如实填写所在国家，不面向韩国、美国及相关制裁规定覆盖的国家/地区或个人。完整支持地区清单、绑卡要求、固定账号额度与免费活动总期限未获明确，保留未知。",
+    "source": "原线索：X @johnroodepic 与公开新闻；2026-11-12 复核 docs.exaone.ai 的 Models、K-EXAONE 2.5、Rate Limits、2026-11-09 Terms of Service",
     "collected_at": "2026-11-09T11:40:00+08:00",
     "expired": false,
     "source_post_id": "2119630279967121432",
@@ -25252,32 +25221,32 @@
     "platform": "LG EXAONE",
     "claim_guide": [
       {
-        "step": "打开入口",
-        "detail": "打开该平台的官网、控制台或文档中给出的注册页。可用的官方入口包括：EXAONE API Platform：https://docs.exaone.ai/",
-        "url": "https://docs.exaone.ai/"
+        "step": "先读使用条款",
+        "detail": "仅限非商用，不得转售、共享 Key，或让第三方通过你的产品服务调用 API。开放权重许可与托管 API 条款不是一回事。",
+        "url": "https://docs.exaone.ai/en/terms/terms-of-service"
       },
       {
-        "step": "登录或注册",
-        "detail": "打开登录或注册页，优先点「Continue with Google / 使用 Google 登录」。没有谷歌按钮时，再用邮箱注册（推荐 Gmail），然后到邮箱查收验证邮件或验证码。不要勾选不必要的营销订阅。遇到手机验证、绑卡、实名或人机验证且无法继续时，请自行在该页完成，不要寻找绕过方法",
-        "url": "https://docs.exaone.ai/"
+        "step": "确认账号与有效期",
+        "detail": "需年满 19 岁，如实填写国家，遵守制裁地区限制。使用平台账号和 API Key；Key 自签发起 30 天有效，到期自动停用。完整支持地区与绑卡要求未核实，不作免门槛承诺。",
+        "url": "https://docs.exaone.ai/en/docs/authentication"
       },
       {
-        "step": "领取额度或创建 API Key",
-        "detail": "如何领取：打开 docs.exaone.ai（EXAONE API Platform）注册并申请 API Key，OpenAI 兼容，base https://api.exaone.ai/v1，model 填 k-exaone_v2.5。报道称仅需 Key、无额外费用。官方服务条款：仅限非商用，不得让第三方调用或集成进产品。Key 签发后 30 天有效、到期自动停用。若界面没有这些选项，不要强行寻找隐藏开关，按页面实际能填的项创建即可。密钥通常只显示一次，请立刻复制并自行妥善保存，不要发到聊天、网页或截图里"
+        "step": "设置数据使用偏好",
+        "detail": "条款允许平台使用输入输出训练，可在平台退出；退出不会撤回此前已进入模型训练的数据。不要提交敏感内容。",
+        "url": "https://docs.exaone.ai/en/terms/terms-of-service"
       },
       {
-        "step": "建议的密钥设置",
-        "detail": "能设过期时间就选大约一周，能设额度上限就设较低上限。若页面只有「永久」或没有限额选项，按实际界面创建，并尽快把密钥放到安全的地方，而不是聊天记录里"
-      },
-      {
-        "step": "验证是否成功",
-        "detail": "回到控制台查看免费额度、余额、模型列表或订单/密钥列表，确认对应项目已经出现。如果是 API，把密钥放到环境变量里，按官方文档发一条最小请求。能正常返回即表示领取成功"
+        "step": "按实际限额使用",
+        "detail": "从响应头查看每秒、每分钟及每日限额，不把文档示例当作账号配额。服务改进分析授权为可选，拒绝仍能使用 API。",
+        "url": "https://docs.exaone.ai/en/docs/rate-limits"
       }
     ],
     "claim_steps": [
-      "打开 docs.exaone.ai（EXAONE API Platform）注册并申请 API Key，OpenAI 兼容，base https://api.exaone.ai/v1，model 填 k-exaone_v2.5。",
-      "官方文档 https://docs.exaone.ai/en/terms/terms-of-service"
-    ]
+      "核对非商用条款及平台账号资格。",
+      "Key 30 天有效；可退出训练；按响应头读取实际限额。",
+      "OpenAI 兼容 base_url 为 https://api.exaone.ai/v1，模型为 k-exaone_v2.5。"
+    ],
+    "updated_at": "2026-11-12T09:00:00+08:00"
   },
   {
     "id": "sail-research-5usd-monthly-20261110",
@@ -34501,5 +34470,111 @@
       "note": "需企业邮箱、企业 KYC 和客服电话核实，面向印度企业客户，无法代领；是否申请由你决定",
       "at": "2026-11-12 08:05 北京"
     }
+  },
+  {
+    "id": "intangible-one-time-free-150-credits-20261112",
+    "title": "Intangible：免绑卡一次性 150 积分，试用 AI 场景创作与生图（非每月额度）",
+    "platform": "Intangible",
+    "product": "Intangible Studio",
+    "model": "Intangible AI Composer / 部分图像与视频模型",
+    "type": "试用",
+    "deadline": null,
+    "url": "https://help.intangible.ai/teams-and-billing/plans-and-billing",
+    "source": "Intangible 官方公开套餐说明、定价页及 MCP FAQ；2026-11-12 交叉核实",
+    "summary": "官方 Free 套餐提供一次性 150 积分，需注册账号，无需绑卡，不是每月重置额度。可在浏览器探索 3D 场景、AI Composer 与部分图像/视频模型，支持图片下载，项目和提示次数有限。免费档不含 MCP Agent 接入、视频下载、3D 场景导出或 Generate 3D Asset；免费档商用授权未获确认。官方未明确这笔赠送积分的到期日期和适用地区。另有 Explorer/Business 付费订阅试用，试用结束自动开账单，不能与免绑卡 Free 档混为一谈。",
+    "providers": [
+      {
+        "name": "Intangible Studio",
+        "action_url": "https://studio.intangible.ai"
+      },
+      {
+        "name": "官方套餐与免费额度",
+        "action_url": "https://intangible.ai/pricing"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "image",
+      "video"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "providers",
+    "claim_guide": [
+      {
+        "step": "核对 Free 档",
+        "detail": "官方帮助页明确列出 Free 为 150 积分、one time；不属于月度免费额度。",
+        "url": "https://help.intangible.ai/teams-and-billing/plans-and-billing"
+      },
+      {
+        "step": "注册并选免费套餐",
+        "detail": "在 Studio 使用 Google 或邮箱注册，邮箱方式需验证。选择 Free 即可，不要误选会自动转付费的 Explorer 或 Business 订阅试用。",
+        "url": "https://studio.intangible.ai"
+      },
+      {
+        "step": "在免费范围内试用",
+        "detail": "使用网页画布与支持的模型，先确认生成所需积分。MCP、视频导出、3D 资产生成等为付费能力；不需要安装客户端或创建 API Key。",
+        "url": "https://intangible.ai/pricing"
+      }
+    ],
+    "collected_at": "2026-11-12T09:20:00+08:00",
+    "expired": false
+  },
+  {
+    "id": "kenerate-ai-one-time-free-25-credits-20261112",
+    "title": "Kenerate AI：免绑卡一次性 25 积分，试用 Flux 2 / Qwen Image 3.0（网页生图）",
+    "platform": "Kenerate AI",
+    "product": "Kenerate AI",
+    "model": "Flux 2 Dev / Flux 2 Klein / Qwen Image 3.0",
+    "type": "试用",
+    "deadline": null,
+    "url": "https://kenerateai.com/blogs/ai-pumpkin-carving-ideas",
+    "source": "Kenerate AI 官方公开博客（2026-11-12 更新）与 pricing FAQ 交叉核实",
+    "summary": "Kenerate AI 官方博客称新账号登录后获得一次性 25 免费积分；定价 FAQ 确认初始体验额度无需信用卡，不是每日或每月续送。免费档可用 Flux 2 Dev / Flux 2 Klein（3 积分/图）及 Qwen Image 3.0（9 积分/图），约可生成 8 张 Flux 图或 2 张 Qwen 图，实际以生成前提示为准。Recraft、Ideogram 等需购买积分包；API Access 仅列于付费 Studio/Enterprise 包，不应当作免费 API 推荐。赠送积分到期日、地区限制和免费产物商用授权未明确；“积分永不过期”明确用于已购买的积分，不能套用到赠送额度。第三方模型聚合服务，请勿提交敏感素材。",
+    "providers": [
+      {
+        "name": "Kenerate AI 网页生图",
+        "action_url": "https://kenerateai.com"
+      },
+      {
+        "name": "官方定价 FAQ",
+        "action_url": "https://kenerateai.com/pricing"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "免费模型与积分说明",
+        "action_url": "https://kenerateai.com/blogs/ai-pumpkin-carving-ideas"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "providers",
+    "claim_guide": [
+      {
+        "step": "核对初始额度",
+        "detail": "官网 FAQ 提供免绑卡体验，官方博客列出新账号 25 积分。仅作一次性试用，不购买积分包也可试支持的免费模型。",
+        "url": "https://kenerateai.com/pricing"
+      },
+      {
+        "step": "注册并查看余额",
+        "detail": "通过官网注册或登录，确认账号实际赠送余额。若需要付款或显示不同条件，先停止并核对官方说明。",
+        "url": "https://kenerateai.com"
+      },
+      {
+        "step": "选择免费档模型",
+        "detail": "选择 Flux 2 Dev、Flux 2 Klein 或 Qwen Image 3.0，核对每次扣分。Recraft/Ideogram 及 API Access 不在本次免费范围内。",
+        "url": "https://kenerateai.com/blogs/ai-pumpkin-carving-ideas"
+      }
+    ],
+    "collected_at": "2026-11-12T09:20:00+08:00",
+    "expired": false
   }
 ]
