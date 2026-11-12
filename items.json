@@ -24155,7 +24155,7 @@
     "summary": "MLH 全球黑客周 Builders Week（11/6–11/12 美东）联合 SpaceXSI 给报名参与者发 1 个月免费 X Premium 兑换码，官方说法是开通 X Premium 即可解锁 Cursor 和 Grok Bot。面向学生、职场人和 13 岁以上青少年，全球免费参加。可选在 MLH 挑战页提交兑换截图拿积分；每人一个码，活动 11/12 13:00 美东（北京 11/13 02:00）结束，需尽早报名才能收到码。截止北京时间 2026-11-13 02:00。",
     "source": "X @wangjing1056606（社区帖）；核实 MLH 挑战页「SWAG CHALLENGE: Sign up for an X Premium Account」与活动页",
     "collected_at": "2026-11-08T09:45:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2119238726064685275",
     "post_time_bj": "2026-11-08T09:21:00+08:00",
     "product": "MLH × X Premium",
@@ -29170,7 +29170,7 @@
       "need_client"
     ],
     "collected_at": "2026-11-11T06:05:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "success",
       "note": "已用 Google 登录并领到 $100 Gemini 额度，仅限 Traycer 应用内用，北京时间 11/13 03:29 到期",
@@ -35335,6 +35335,382 @@
       "status": "needs_user",
       "note": "桌面客户端/CLI 内权益，且需 Pro/Max/Teams 付费自助套餐，没有 API Key 可建；如你已有付费套餐，本人在 Devin Desktop 或 CLI 里选 SWE-2 即可。",
       "at": "2026-11-13T00:40:00+08:00"
+    }
+  },
+  {
+    "id": "gemini-4-hydrogen-gemini-api-free-tier-20261113",
+    "title": "Gemini 4 Hydrogen 上线：Gemini API / AI Studio 免费档可直接调用（输入输出免费，1M 上下文）",
+    "platform": "Google AI Studio",
+    "product": "Gemini API",
+    "model": "gemini-4-hydrogen",
+    "type": "免费档",
+    "deadline": null,
+    "url": "https://ai.google.dev/gemini-api/docs/pricing#gemini-4-hydrogen",
+    "source": "Google 官方博客《Introducing Gemini 4 Hydrogen》（2026-11-12）、Gemini API 官方定价页；据 X 上的报道（@GoogleAIStudio 等，北京 11/13 02:00 前后）",
+    "summary": "Google 11 月 12 日（北京时间 13 日凌晨）发布 Gemini 4 Hydrogen，接替 Gemini 3.8 Flash，定位是快速、省钱的日常编码和 Agent 主力模型，支持 1M 上下文、最长约 1M 输出，有 low / medium / high（默认）/ xhigh 四档思考深度。据 Google 官方博客，它面向 Google AI Studio 和 Gemini API 的所有档位开放；官方定价页写明标准接口在免费档下输入、输出和缓存都免费，付费档为每百万输入 1.5 美元、输出 7.5 美元。限制：免费档没有 Google 搜索和地图接地（Grounding），Batch / Flex 等接口不在免费档，免费档数据会被用于改进 Google 产品；具体每分钟和每天的次数以 AI Studio 里显示的限额为准（按项目计算，每天太平洋时间零点重置）。门槛：只需 Google 账号，不用绑卡，网络要能访问 Google。官方未设截止日期。另外 Gemini App 免费用户只能在自动选型时用到它，Antigravity 里仅对付费 AI Pro / Ultra 开放。",
+    "claim_steps": [
+      "用 Google 账号登录 Google AI Studio",
+      "在 API Key 页面创建或复制免费档 Key（项目不开结算即为免费档）",
+      "调用时模型名填 gemini-4-hydrogen，或直接在 AI Studio 对话里选这个模型"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 AI Studio",
+        "detail": "用 Google 账号登录 Google AI Studio",
+        "url": "https://aistudio.google.com/",
+        "note": "需要能访问 Google 的网络"
+      },
+      {
+        "step": "创建免费档 Key",
+        "detail": "进入 API Key 页面新建或复制已有 Key；所在项目不开结算账号即为免费档",
+        "url": "https://aistudio.google.com/apikey",
+        "note": "免费档数据会被用于改进 Google 产品"
+      },
+      {
+        "step": "先在网页里试",
+        "detail": "在 AI Studio 新建对话，模型选择器里选 Gemini 4 Hydrogen",
+        "url": "https://aistudio.google.com/prompts/new_chat?model=gemini-4-hydrogen",
+        "note": ""
+      },
+      {
+        "step": "API 调用",
+        "detail": "用官方 google-genai SDK 或 OpenAI 兼容接口，模型名填 gemini-4-hydrogen",
+        "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-hydrogen",
+        "note": ""
+      },
+      {
+        "step": "查看限额",
+        "detail": "在 AI Studio 的用量与限额页面查看本项目的每分钟/每天限额",
+        "url": "https://ai.google.dev/gemini-api/docs/rate-limits",
+        "note": "限额按项目计算，太平洋时间零点重置"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Google AI Studio",
+        "action_url": "https://aistudio.google.com/apikey"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "gemini-4-hydrogen",
+        "action_url": "https://aistudio.google.com/prompts/new_chat?model=gemini-4-hydrogen"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_key",
+      "need_google",
+      "region_block"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-13T04:30:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待自动申请",
+      "at": "2026-11-13T04:30:00+08:00"
+    }
+  },
+  {
+    "id": "openrouter-apodex-11-mini-free-20261113",
+    "title": "OpenRouter：Apodex 1.1 Mini 免费上架（apodex/apodex-1.1-mini:free，256K 上下文）",
+    "platform": "OpenRouter",
+    "product": "OpenRouter",
+    "model": "apodex/apodex-1.1-mini:free",
+    "type": "API",
+    "deadline": null,
+    "url": "https://openrouter.ai/apodex/apodex-1.1-mini:free",
+    "source": "OpenRouter 官方模型接口 /api/v1/models 与该模型 endpoints 接口（2026-11-13 04:10 北京抓取，00:10 那轮还没有）",
+    "summary": "据 OpenRouter 官方模型接口，本轮新出现免费线路 Apodex 1.1 Mini (free)，输入、输出价格都是 0，由 Novita 提供，上下文 262,144 Token、最长输出约 23.6 万 Token。Apodex 1.1 Mini 是以推理为主的模型，面向长链路的研究和预测任务，可处理文件、数据、代码并调用工具，支持工具调用、结构化输出和推理开关。限额按 OpenRouter 免费模型通用规则：每分钟和每天的免费请求次数有限，累计充值过 10 美元的账号每日额度更高。门槛：只需 OpenRouter 账号，不用绑卡。官方没有公布免费截止时间，随时可能下架。本站此前已收录 Novita 自家平台上的同款免费 API，这次是 OpenRouter 上的新入口。",
+    "claim_steps": [
+      "登录 OpenRouter，在 Keys 页面创建 API Key（建议设低额度上限）",
+      "在模型页确认 apodex/apodex-1.1-mini:free 价格仍为 $0",
+      "OpenAI 兼容客户端里模型名填 apodex/apodex-1.1-mini:free 调用"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 OpenRouter",
+        "detail": "用已有账号登录 OpenRouter，没有就用 Google 账号注册",
+        "url": "https://openrouter.ai/",
+        "note": "已有账号无需重新注册"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "进入 Keys 页面创建 Key，并给 Key 设一个很低的额度上限",
+        "url": "https://openrouter.ai/settings/keys",
+        "note": ""
+      },
+      {
+        "step": "确认模型在线",
+        "detail": "打开模型页确认免费版仍在、价格显示 $0",
+        "url": "https://openrouter.ai/apodex/apodex-1.1-mini:free",
+        "note": "免费版随时可能下架"
+      },
+      {
+        "step": "调用",
+        "detail": "OpenAI 兼容客户端选 OpenRouter，模型名填 apodex/apodex-1.1-mini:free",
+        "url": "https://openrouter.ai/docs/quickstart",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "OpenRouter",
+        "action_url": "https://openrouter.ai/settings/keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "apodex/apodex-1.1-mini:free",
+        "action_url": "https://openrouter.ai/apodex/apodex-1.1-mini:free"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "forecasting"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-13T04:30:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待自动申请",
+      "at": "2026-11-13T04:30:00+08:00"
+    }
+  },
+  {
+    "id": "numes-free-kimi-k31-glm53-deepseek-v41-flash-20261113",
+    "title": "Numes：推理市场免费模型 Kimi K3.1 Pro / GLM 5.3 / DeepSeek V4.1 Flash（免绑卡、无需个人信息）",
+    "platform": "Numes",
+    "product": "Numes API",
+    "model": "Kimi K3.1 Pro / GLM 5.3 / DeepSeek V4.1 Flash",
+    "type": "API",
+    "deadline": null,
+    "url": "https://x.com/Numes_ai/status/2120930301509550206",
+    "source": "据 X 上的报道（Numes 官方账号 @Numes_ai，2026-11-12 17:22 UTC，即北京 11/13 01:22）；Numes 官网与文档 FAQ（numes.ai）",
+    "summary": "Numes 是美国公司 Floating Point Systems, Inc. 运营的 AI 推理市场：独立算力提供方上架模型，用户通过一个兼容 OpenAI（请求格式仿 OpenRouter）的接口调用，按实时价格、速度和可用性自动路由。据 X 上的报道（Numes 官方账号），平台目前提供 Kimi K3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash 三个免费模型，注册并创建 API Key 即可使用，不用绑卡也不用填个人信息，官方称已累计送出 2000 亿免费 Token。官方没有公布免费模型的速率或每日限额，也没有截止时间，免费名单随时可能变化；付费模型需用银行卡（Stripe）或比特币充值。算力来自第三方提供方，敏感数据请谨慎使用。",
+    "claim_steps": [
+      "打开 numes.ai 点 Sign in 注册账号",
+      "在控制台的 API Keys 页面创建 Key",
+      "在模型目录里找标为免费的 Kimi K3.1 Pro / GLM 5.3 / DeepSeek V4.1 Flash，复制模型 ID 调用"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册账号",
+        "detail": "打开 Numes 官网，右上角 Sign in 注册登录",
+        "url": "https://numes.ai/",
+        "note": "官方称不需要银行卡和个人信息"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "登录后进入控制台（Dashboard），在 API Keys 相关页面新建 Key",
+        "url": "https://numes.ai/dashboard",
+        "note": "按钮具体位置以控制台为准"
+      },
+      {
+        "step": "找免费模型",
+        "detail": "在模型目录里找 Kimi K3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash，确认价格为 0 后复制模型 ID",
+        "url": "https://numes.ai/models",
+        "note": "免费名单随时可能变化"
+      },
+      {
+        "step": "接入客户端",
+        "detail": "按官方快速上手文档，在 OpenAI 兼容客户端或 OpenCode 里配置 Numes 并选免费模型",
+        "url": "https://numes.ai/docs/quickstart",
+        "note": "算力来自第三方提供方，别传敏感数据"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Numes",
+        "action_url": "https://numes.ai/dashboard"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Kimi K3.1 Pro",
+        "action_url": "https://numes.ai/models"
+      },
+      {
+        "name": "GLM 5.3",
+        "action_url": "https://numes.ai/models"
+      },
+      {
+        "name": "DeepSeek V4.1 Flash",
+        "action_url": "https://numes.ai/models"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key",
+      "third_party"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-13T04:30:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待自动申请",
+      "at": "2026-11-13T04:30:00+08:00"
+    }
+  },
+  {
+    "id": "hackernoon-decentralize-ai-hackathon-70usd-nosana-gpu-20261113",
+    "title": "HackerNoon Decentralize AI 黑客松：合格参赛者领 $70 Nosana GPU 算力额度（前 500 名，至 2027 年 2 月）",
+    "platform": "Nosana",
+    "product": "Decentralize AI Hackathon（HackerNoon）",
+    "model": "Nosana GPU",
+    "type": "黑客松额度",
+    "deadline": null,
+    "url": "https://decentralizeai.tech/claim/nosana",
+    "source": "Decentralize AI Hackathon 官网 decentralizeai.tech（奖品页、FAQ、Nosana 额度申领页）；据 X 上的报道（2026-11-12）",
+    "summary": "HackerNoon 联合 Nosana、Arweave、MEXC 举办的 Decentralize AI 黑客松，2026 年 6 月到 2027 年 2 月分两轮进行，目前在第二轮，全球开放、免费报名。据官网，每位合格参赛者可领 70 美元的 Nosana 去中心化 GPU 算力额度（限前 500 名），获奖的 15 个项目再各得 450 美元算力，另有 Arweave 存储额度、AR 现金和 MX 代币奖励。门槛：要提交一份清晰的、使用去中心化基础设施的 AI 项目提案（含 GitHub 仓库），承诺在 Nosana 上部署或测试，并在 HackerNoon 上发文记录；每个团队只能由一人申领一次，经审核后通过邮件发放额度。额度只能用于本次黑客松项目；Nosana 默认部署会持续运行直到额度耗尽，按 RTX 5090 每小时约 0.48 美元计，70 美元大约只够 145 小时。官网没有写第二轮的具体截止日期。",
+    "claim_steps": [
+      "写好使用去中心化基础设施的 AI 项目提案，并准备 GitHub 仓库",
+      "打开 Nosana 额度申领页，填项目信息、Nosana 部署承诺、团队与联系方式后提交",
+      "等审核通过后按邮件说明领取额度，并在 HackerNoon 发文提交参赛"
+    ],
+    "claim_guide": [
+      {
+        "step": "了解规则",
+        "detail": "先看奖品页和 FAQ，确认项目方向属于去中心化 AI 基础设施",
+        "url": "https://decentralizeai.tech/faq",
+        "note": "只做原型或「即将推出」的项目不符合要求"
+      },
+      {
+        "step": "准备提案",
+        "detail": "写好项目提案（最多 5000 字符）和模型/工作负载说明，准备 GitHub 仓库地址",
+        "url": "https://decentralizeai.tech/prizes",
+        "note": ""
+      },
+      {
+        "step": "提交申领表",
+        "detail": "在 Nosana 额度申领页填写项目信息，选择会在 Nosana 上部署，填团队、邮箱、电话和国家后提交",
+        "url": "https://decentralizeai.tech/claim/nosana",
+        "note": "每个团队只能一人申领一次，限前 500 名"
+      },
+      {
+        "step": "领取额度",
+        "detail": "审核通过后按邮件里的说明登录 Nosana 使用额度",
+        "url": "https://deploy.nosana.com/deployments/create",
+        "note": "部署时把策略改成 Simple 并设置容器超时，闲置就停掉，否则额度几天就烧完"
+      },
+      {
+        "step": "发文参赛",
+        "detail": "在 HackerNoon 用活动标签发布项目文章，按轮次提交评奖",
+        "url": "https://hackernoon.com/tagged/decentralize-ai-hackathon",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "Nosana",
+        "action_url": "https://decentralizeai.tech/claim/nosana"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "hackathon",
+      "gpu"
+    ],
+    "barriers": [
+      "hackathon",
+      "need_review"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-13T04:30:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待自动申请",
+      "at": "2026-11-13T04:30:00+08:00"
+    }
+  },
+  {
+    "id": "chatgpt-free-codex-desktop-gpt6-luna-20261113",
+    "title": "ChatGPT 免费版也能用 Codex：桌面 App 里免费跑 GPT-6 Luna（有限额度，逐步开放）",
+    "platform": "OpenAI",
+    "product": "OpenAI Codex",
+    "model": "GPT-6 Luna",
+    "type": "免费档",
+    "deadline": null,
+    "url": "https://developers.openai.com/codex/pricing",
+    "source": "OpenAI Codex 官方定价页（developers.openai.com/codex/pricing）、OpenAI 帮助中心《Using Codex with your ChatGPT plan》；据 X 上的报道（2026-11-12）",
+    "summary": "据 OpenAI Codex 官方定价页，Codex 现已包含在 ChatGPT 免费版（0 美元/月）中：免费用户可以在 ChatGPT 桌面 App 的 Codex 模式里用 GPT-6 Luna（标准速度）做快速编码任务，按地区和账号逐步开放。OpenAI 帮助中心也写明 Codex 覆盖包括 Free 和 Go 在内的所有 ChatGPT 套餐。限制：官方没有公布免费版的具体消息条数，只说是有限的试用额度，用完后需等待重置或升级；免费版不含 Codex Cloud、网页版 Codex、CLI 和 IDE 插件（这些从 Plus 起提供），也不含 Codex 内生图。门槛：需要 ChatGPT 账号和桌面 App，部分用户首次使用时会被要求验证手机号。无截止日期。",
+    "claim_steps": [
+      "下载并安装 ChatGPT 桌面 App，用免费 ChatGPT 账号登录",
+      "在 App 里切到 Codex 模式，打开本地项目目录",
+      "模型用 GPT-6 Luna 做小型编码任务；看不到入口说明还没推送到你的账号"
+    ],
+    "claim_guide": [
+      {
+        "step": "安装桌面 App",
+        "detail": "下载 ChatGPT 桌面 App（macOS / Windows）并用免费账号登录",
+        "url": "https://chatgpt.com/download",
+        "note": "免费版只能在桌面 App 里用 Codex，网页版、CLI、IDE 插件需 Plus"
+      },
+      {
+        "step": "进入 Codex 模式",
+        "detail": "在桌面 App 里切到 Codex 模式，选择要处理的本地项目文件夹",
+        "url": "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan",
+        "note": "若被要求验证手机号，按提示完成"
+      },
+      {
+        "step": "选模型开始",
+        "detail": "模型使用 GPT-6 Luna（标准速度），描述要做的小改动或问题",
+        "url": "https://developers.openai.com/codex/pricing",
+        "note": "逐步开放，暂时看不到属正常"
+      },
+      {
+        "step": "留意额度",
+        "detail": "用完免费额度会提示等待重置时间或升级；可在设置里查看用量",
+        "note": "官方未公布免费消息条数"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Codex（ChatGPT 桌面 App）",
+        "action_url": "https://chatgpt.com/download"
+      }
+    ],
+    "models": [
+      {
+        "name": "GPT-6 Luna",
+        "action_url": "https://developers.openai.com/codex/pricing"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_client",
+      "need_signup"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-13T04:30:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待自动申请",
+      "at": "2026-11-13T04:30:00+08:00"
     }
   }
 ]
