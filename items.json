@@ -2638,36 +2638,28 @@
   },
   {
     "id": "iteracompute-qwen38-27b-free-30m-20261012",
-    "title": "IteraCompute：Qwen3.8-27B 每月最高 3000 万 tokens 免费 API（免绑卡）",
-    "model": "Qwen3.8-27B",
+    "title": "IteraCompute：Auto 免费路由每月 3000 万 tokens（免绑卡，至 11/24 16:00 北京时间）",
+    "model": "Auto",
     "type": "额度",
-    "deadline": null,
-    "url": "https://x.com/IteraCompute/status/2109316511026536956",
-    "summary": "IteraCompute 官方推出 OpenAI 兼容推理 API。注册并验证邮箱或 Google 登录即可创建 API Key，无需信用卡。IteraCompute 官方推出 OpenAI 兼容推理 API：免费档每月最高 3000 万 tokens 调用 Qwen3.8-27B（输入/缓存/输出均为 $0），32K 上下文、4 万 TPM，支持工具调用与流式；Qwen3.8-27B 全 $0；免费容量繁忙时可能排队，无 SLA；月初 UTC 重置；充值累计满 $10/$50 可升 Starter/Pro（更高月额度与上下文，模型仍 $0）；公平使用限速。门槛：条件：免费档无需绑卡或信用卡；需注册拿 API Key。",
+    "deadline": "2026-11-24T16:00:00+08:00",
+    "url": "https://iteracompute.com/free",
+    "summary": "据 IteraCompute 官方免费页，现在的免费入口是 Auto 路由（请求时模型 ID 填 Auto），不再钉死某一个模型。官方说明会按空闲容量在当前开放的开源模型之间分配（页面举例包括 Qwen3.8-27B 和 DeepSeek V4.1，具体模型、版本和精度可能随容量变化，不保证每次回答或能力一致）。免费档无需绑卡或充值，每月 3000 万 tokens（计入输入和输出），128K 上下文，共享空闲容量，可能排队或变慢，无延迟 SLA；每个账户同时只能有 1 个排队或运行中的请求，官方写明没有 TPM 或按日次数上限。验证邮箱后即解锁完整 30M 月额度，也可用 Google 登录。累计净充值满 10 美元可升 Starter（每月 1 亿 tokens，128K），满 50 美元可升 Pro（每月 3 亿 tokens，256K），各档 Auto 的 token 费仍为 0 美元，充值档排队优先。官方问答写明本次免费促销截止于 2026 年 11 月 24 日 00:00 太平洋时间（北京时间 16:00）；已充值用户在截止后仍保留对应档位权益，未充值用户此后的模型访问、额度和限制不做保证，之后安排以官方届时说明为准。",
     "source": "IteraCompute",
     "collected_at": "2026-10-12T00:43:01+08:00",
     "expired": false,
     "source_post_id": "2109316511026536956",
-    "product": "IteraCompute Free · qwen/qwen3.8-27b",
+    "product": "IteraCompute Free · Auto",
     "providers": [
       {
         "name": "IteraCompute",
-        "action_url": "https://platform.iteracompute.com/sign-up"
-      },
-      {
-        "name": "API Keys",
-        "action_url": "https://platform.iteracompute.com/api-keys"
+        "action_url": "https://iteracompute.com/free"
       }
     ],
     "agents": [],
     "models": [
       {
-        "name": "Qwen3.8-27B 免费说明",
-        "action_url": "https://iteracompute.com/free/"
-      },
-      {
-        "name": "模型页",
-        "action_url": "https://iteracompute.com/models/qwen3-8-27b/"
+        "name": "Auto",
+        "action_url": "https://iteracompute.com/free"
       }
     ],
     "scenes": [
@@ -2681,28 +2673,39 @@
     "platform": "IteraCompute",
     "claim_guide": [
       {
-        "step": "打开入口",
-        "detail": "打开该平台的官网、控制台或文档中给出的注册页。可用的官方入口包括：IteraCompute：https://platform.iteracompute.com/sign-up。API Keys：https://platform.iteracompute.com/api-keys。注册/登录入口：https://platform.iteracompute.com/",
+        "step": "打开免费页",
+        "detail": "访问 IteraCompute 官方免费说明，或直接进入注册/登录页",
+        "url": "https://iteracompute.com/free"
+      },
+      {
+        "step": "注册或登录",
+        "detail": "点 Sign Up / Sign in。可用 Google 登录，或用邮箱注册并完成邮箱验证。不要勾选营销订阅，也不要为升档去充值或绑卡",
         "url": "https://platform.iteracompute.com/sign-up"
       },
       {
-        "step": "登录或注册",
-        "detail": "打开登录或注册页，优先点「Continue with Google / 使用 Google 登录」。没有谷歌按钮时，再用邮箱注册（推荐 Gmail），然后到邮箱查收验证邮件或验证码。不要勾选不必要的营销订阅。遇到手机验证、绑卡、实名或人机验证且无法继续时，请自行在该页完成，不要寻找绕过方法",
-        "url": "https://platform.iteracompute.com/sign-up"
+        "step": "创建 API Key",
+        "detail": "登录后打开 API Keys 页，创建一把允许 Auto 的密钥。密钥通常只显示一次，立刻复制并自行妥善保存，不要发到聊天或网页里",
+        "url": "https://platform.iteracompute.com/api-keys"
       },
       {
-        "step": "领取额度或创建 API Key",
-        "detail": "免费档每月最高 30M tokens、32K 上下文、40K TPM。Qwen3.8-27B 全 $0。无需信用卡。繁忙可排队。月初 UTC 重置。若界面没有这些选项，不要强行寻找隐藏开关，按页面实际能填的项创建即可。密钥通常只显示一次，请立刻复制并自行妥善保存，不要发到聊天、网页或截图里"
-      },
-      {
-        "step": "建议的密钥设置",
-        "detail": "能设过期时间就选大约一周，能设额度上限就设较低上限。若页面只有「永久」或没有限额选项，按实际界面创建，并尽快把密钥放到安全的地方，而不是聊天记录里"
-      },
-      {
-        "step": "验证是否成功",
-        "detail": "回到控制台查看免费额度、余额、模型列表或订单/密钥列表，确认对应项目已经出现。如果是 API，把密钥放到环境变量里，按官方文档发一条最小请求。能正常返回即表示领取成功"
+        "step": "按 Auto 调用",
+        "detail": "OpenAI 兼容接口地址为 https://api.iteracompute.com/v1/chat/completions ，请求里的 model 填 Auto，不要再当成固定的 Qwen3.8-27B 线路",
+        "url": "https://iteracompute.com/free",
+        "note": "官方示例用 Authorization: Bearer 和 model 字段 Auto"
       }
-    ]
+    ],
+    "claim_steps": [
+      "打开 https://iteracompute.com/free ，点 Start using Auto 或到 https://platform.iteracompute.com/sign-up 注册/登录",
+      "用 Google 登录，或邮箱注册并完成邮箱验证",
+      "在 https://platform.iteracompute.com/api-keys 创建允许 Auto 的 API Key，密钥只显示一次，自行保存",
+      "调用 https://api.iteracompute.com/v1/chat/completions ，Authorization 用 Bearer，model 填 Auto"
+    ],
+    "category": "providers",
+    "auto_claim": {
+      "status": "success",
+      "note": "已有 IteraCompute 账号，不必新注册。官网现改为用 Auto 路由领取每月 30M 免费额度；本轮未再新建 Key。",
+      "at": "2026-11-12T20:17:00+08:00"
+    }
   },
   {
     "id": "workbuddy-deepseek-hy3-free-oct31-20261012",
@@ -14610,7 +14613,7 @@
     "type": "API",
     "deadline": null,
     "url": "https://x.com/beingsalluu/status/2112850482435961126",
-    "summary": "IteraCompute 免费页（目录更新于 10/21）新增 Kimi K3 Free 路由：输入、缓存、输出都是 $0，1M 上下文，支持工具调用、推理、视觉和流式，OpenAI 兼容。Kimi K3 Free 需累计净充值 ≥ $10，之后 token 免费但线路很慢、无 SLA；Qwen3.8-27B 免费档每月 30M tokens；但前提是账户累计净充值至少 $10（赠送额和手续费不算，退款低于 $10 会被停用），官方明说这条免费线路特别慢、要排队；想要速度得用付费 Kimi K3；原有的 Qwen3.8-27B 每月 3000 万免费 tokens（免绑卡）照旧，现在上下文是 128K。",
+    "summary": "据 IteraCompute 较早免费页整理：Kimi K3 Free 路由输入、缓存、输出都是 0 美元，1M 上下文，支持工具调用、推理、视觉和流式，OpenAI 兼容。开通这条线路的前提是账户累计净充值至少 10 美元（赠送额和手续费不算，退款后低于 10 美元会被停用）；官方明说这条免费线路特别慢、要排队，想要速度得用付费 Kimi K3。免绑卡的每月免费额度现已改在 Auto 路由上（每月 3000 万 tokens，128K 上下文），不再钉死 Qwen3.8-27B，官方写明该促销截止于 2026 年 11 月 24 日 00:00 太平洋时间（北京时间 16:00），详见 IteraCompute Auto 那条。",
     "source": "X @beingsalluu；IteraCompute 免费页 https://iteracompute.com/free/ 核实",
     "collected_at": "2026-10-21T18:45:00+08:00",
     "expired": false,
@@ -34803,6 +34806,322 @@
       "status": "needs_user",
       "note": "这是网页创作应用里的限免生图，没有 API key 可建。登录可能要 Google/GitHub/X 授权或邀请码，本轮无法完成需本人确认的授权，请你打开 https://miora.design/ 自行注册试用；不要绑卡付款。",
       "at": "2026-11-12 16:20 北京"
+    }
+  },
+  {
+    "id": "flonno-1usd-promo-credit-qwen38-27b-20261112",
+    "title": "Flonno：注册并验证邮箱后送 $1 API 额度（免绑卡，调用 Qwen3.8 Flash 27B，官方写明不过期）",
+    "platform": "Flonno",
+    "product": "Flonno API",
+    "model": "qwen3.8-27b",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://www.flonno.com/docs",
+    "source": "Flonno",
+    "summary": "据 Flonno 官方文档和条款（文档标注更新于 2026-11-11，条款标注 2026-11-10），这是瑞士自建 GPU 上的 OpenAI 兼容推理接口，模型为 qwen3.8-27b（Qwen3.8 Flash 27B，官方说明是对 Qwen3.8-27B 的量化优化版本，不转售其他厂商 API）。注册并验证主邮箱、打开控制台后会自动到账 1 美元一次性促销额度，官方写明不需要信用卡或订阅，每人一份（含此前试点额度），不可转让、无现金价值、不过期；用尽后需自行充值，不会自动扣款。注册页还写这笔额度大约相当于 2000 万输入 tokens，或 125 万输出 tokens。临时邮箱或一次性邮箱拿不到这笔额度。新账号标价为每百万 tokens 输入 0.05 美元、输出 0.80 美元（含 billed reasoning）。限速为生成接口每分钟 60 次、最多 10 路并发，模型发现每分钟 120 次；上下文 131,072、最大输出 32,768 tokens。重复账号、重复领取和滥用会被排除。",
+    "claim_steps": [
+      "打开 https://www.flonno.com/sign-up ，用 Google 登录，或用常用邮箱（不要用临时邮箱）加密码注册",
+      "到邮箱完成验证，再打开控制台，1 美元额度会自动到账",
+      "在控制台创建 API Key；能设过期和模型/IP 限制时，过期约设 7 天，并加上较低限额",
+      "调用时 base_url 填 https://www.flonno.com/v1 ，model 填 qwen3.8-27b，Authorization 用 Bearer"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开注册页",
+        "detail": "访问 Flonno 注册页，也可从首页点 Get $1 free 或 Sign in 旁的 Create account",
+        "url": "https://www.flonno.com/sign-up"
+      },
+      {
+        "step": "注册账号",
+        "detail": "优先点 Continue with Google。若用邮箱，填写常用邮箱并设置密码后点 Continue。不要用临时或一次性邮箱，也不要勾选营销订阅",
+        "url": "https://www.flonno.com/sign-up",
+        "note": "已有账号则打开 https://www.flonno.com/sign-in 登录"
+      },
+      {
+        "step": "验证邮箱并打开控制台",
+        "detail": "到注册邮箱查收验证邮件并完成验证，再进入控制台。官方写明验证后打开控制台会自动到账 1 美元额度，无需绑卡"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在控制台创建密钥。页面文案写明密钥可按模型、地址和过期时间限制；能设过期就选大约一周，能设额度上限就设较低上限。密钥通常只显示一次，立刻复制并自行保存，不要发到聊天或网页里"
+      },
+      {
+        "step": "配置调用",
+        "detail": "OpenAI 兼容 base URL 为 https://www.flonno.com/v1 ，模型名为 qwen3.8-27b。用 Authorization: Bearer 携带密钥，可走 /v1/chat/completions；另有 Anthropic Messages 子集走同一把密钥，但并不提供 Claude",
+        "url": "https://www.flonno.com/docs"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Flonno",
+        "action_url": "https://www.flonno.com/sign-up"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "qwen3.8-27b",
+        "action_url": "https://www.flonno.com/docs"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_email_verify"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T20:17:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "注册页支持 Google 或邮箱密码。本轮无法代填密码或完成需本人确认的 Google 授权，请你打开 https://www.flonno.com/sign-up 自行注册并验证常用邮箱（不要用临时邮箱），到控制台建 Key；能设过期就设约 7 天。",
+      "at": "2026-11-12T20:17:00+08:00"
+    }
+  },
+  {
+    "id": "oumi-free-credits-3months-20261112",
+    "title": "Oumi Free：注册最多送 3 个月额度（公司邮箱 $50，个人邮箱 $25），用于定制模型开发",
+    "platform": "Oumi",
+    "product": "Oumi Free",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://oumi.ai/pricing",
+    "source": "Oumi",
+    "summary": "据 Oumi 官方定价页，Oumi 是托管的定制模型开发平台，可用于数据合成、评测、微调和 Oumi Agent 等。Free 档标价 0 美元，文案为最多 3 个月额度：用公司邮箱注册送 50 美元，用个人邮箱送 25 美元。额度用于平台内的训练、评测和托管推理，不是通用第三方大模型网关。官方定价页未写这笔赠额是否必须绑卡，也没有再拆开免费档的分项用量上限。有效期为领取后 3 个月，未见统一的活动截止日。",
+    "claim_steps": [
+      "打开 https://oumi.ai/pricing 了解 Free 档说明，再前往 https://platform.oumi.ai/signin 注册或登录",
+      "按页面提示用邮箱注册（公司邮箱额度更高，个人邮箱也可），完成验证后在账户或账单里查看赠额是否到账",
+      "不要升级到付费档，也不要在未看清条款时绑卡"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开定价页",
+        "detail": "先看官方 Free 档说明，确认当前展示的赠额",
+        "url": "https://oumi.ai/pricing"
+      },
+      {
+        "step": "前往登录/注册",
+        "detail": "打开平台登录页，按页面按钮注册或登录。优先看是否有 Google 登录；没有再用邮箱",
+        "url": "https://platform.oumi.ai/signin"
+      },
+      {
+        "step": "完成注册并查看额度",
+        "detail": "按邮件或页面提示完成验证后，到账户、账单或用量页查看 25 或 50 美元赠额是否到账（个人邮箱为 25 美元，公司邮箱为 50 美元）"
+      },
+      {
+        "step": "留在免费档",
+        "detail": "不要为这条去订阅 Pro 或在未看清是否自动扣费时绑定支付卡。额度用于平台内训练、评测和托管推理",
+        "url": "https://platform.oumi.ai/signin"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Oumi",
+        "action_url": "https://platform.oumi.ai/signin"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "training"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T20:17:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要在 platform.oumi.ai 注册或登录。本轮无法代填密码或完成需本人确认的登录授权，请你自行注册（个人邮箱按官方文案为 25 美元）；定价页未写是否要绑卡，若弹出绑卡或付款就停下。",
+      "at": "2026-11-12T20:17:00+08:00"
+    }
+  },
+  {
+    "id": "reducto-standard-150usd-free-usage-20261112",
+    "title": "Reducto Standard：文档解析/抽取 API 含一次性 $150 免费用量",
+    "platform": "Reducto",
+    "product": "Reducto Standard",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://reducto.ai/pricing",
+    "source": "Reducto",
+    "summary": "据 Reducto 官方定价页，Standard 按量套餐面向早期团队，包含一次性 150 美元免费用量，用完后按标准单价计费（定价页示例：r-1 mini Parse 每 1000 页 1 美元、r-1 Parse 每 1000 页 10 美元、Extract 每 1000 页 20 美元，以当时标价为准）。这是文档解析与抽取 API（Parse、Extract、Edit、Split 等，支持 30 多种文件类型），不是通用大模型对话网关。官方未写这笔免费额度的截止日期，定价页也未写领取时是否必须先绑卡。另有面向早期团队的 Startup Program，需融资低于 1500 万美元、年收入低于 300 万美元、员工少于 50 人，额外赠额未在定价页写死。",
+    "claim_steps": [
+      "打开 https://reducto.ai/pricing ，点 Try for free 或前往 https://studio.reducto.ai/auth 注册/登录",
+      "按页面选择 Standard 按量档，完成注册后在控制台查看 150 美元免费用量是否到账",
+      "在 Studio 或 API 设置里创建密钥；若弹出绑卡或付款页就停下，不要为领取免费额度去付费"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开定价页或注册入口",
+        "detail": "访问官方定价页，或直接打开 Studio 登录/注册页",
+        "url": "https://studio.reducto.ai/auth",
+        "note": "定价页入口为 https://reducto.ai/pricing"
+      },
+      {
+        "step": "注册或登录",
+        "detail": "按页面提示注册或登录，优先看是否支持 Google 登录。不要勾选营销订阅"
+      },
+      {
+        "step": "确认 Standard 免费用量",
+        "detail": "进入控制台或用量页，确认 Standard 档的 150 美元免费用量已到账。若要求先绑卡或选择付费套餐，先停下来核对，不要为这条去开通付费",
+        "url": "https://studio.reducto.ai/"
+      },
+      {
+        "step": "创建 API 密钥",
+        "detail": "在 Studio 或 API 设置里创建密钥，自行保存，不要发到聊天或网页里。按官方文档调用 Parse / Extract 等接口"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Reducto",
+        "action_url": "https://studio.reducto.ai/auth"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "document"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T20:17:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要在 studio.reducto.ai 注册。本轮无法代填登录或完成需本人确认的授权，请你自行打开注册页领取 Standard 的 150 美元免费用量；若弹出绑卡或付款就停下。",
+      "at": "2026-11-12T20:17:00+08:00"
+    }
+  },
+  {
+    "id": "global-ai-builders-challenge-momen-adaption-20261112",
+    "title": "Global AI Builder’s Challenge：符合条件的学生参赛者可领 Momen $100 + Adaption $500 平台额度（11/21–11/28）",
+    "platform": "Devpost",
+    "product": "Global AI Builder’s Challenge",
+    "type": "活动",
+    "deadline": "2026-11-29T07:00:00+08:00",
+    "url": "https://global-ai-builders-challenge.devpost.com/",
+    "source": "Devpost",
+    "summary": "据 Refactor The World 在 Devpost 上的官方黑客松页面，这是面向 13 岁以上学生的免费线上活动，公司或专业机构不得参赛。活动于 2026 年 11 月 21 日 00:00 太平洋时间开始，提交截止为 11 月 28 日 15:00 太平洋时间（北京时间 11 月 29 日 07:00）。符合条件的参赛者可获合作方平台额度：Momen 向合格参赛者提供 100 美元平台额度，仅 11 月 21 日至 28 日太平洋时间有效，须年满 18 岁，或 13 至 17 岁取得家长或监护人同意；Adaption Labs 向 18 岁及以上合格参赛者提供 500 美元平台额度和 3 个月 Adaption Plus，官方写明领取不需要支付卡。领取说明会另行发给合格参赛者。名次奖和 Best Use of Momen 的额外额度不属于全员报名即送。页面当前显示 Submissions open soon，可先在 Devpost 报名。",
+    "claim_steps": [
+      "打开 https://global-ai-builders-challenge.devpost.com/ ，确认自己符合学生参赛资格后点 Join hackathon 报名",
+      "按页面要求加入活动 Discord，并等待官方另行发送的 Momen / Adaption 领取说明，不要提前付款或绑卡",
+      "活动于 11 月 21 日太平洋时间开始，提交需在 11 月 28 日 15:00 太平洋时间前完成"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开黑客松页面",
+        "detail": "阅读参赛资格和合作方额度说明",
+        "url": "https://global-ai-builders-challenge.devpost.com/"
+      },
+      {
+        "step": "确认资格并报名",
+        "detail": "仅限 13 岁以上学生。若符合资格，点 Join hackathon，用 Devpost 账号报名。公司或专业机构不能参赛",
+        "url": "https://global-ai-builders-challenge.devpost.com/"
+      },
+      {
+        "step": "等待领取说明",
+        "detail": "官方写明 Momen 和 Adaption 的领取步骤会另行发给合格参赛者。先加入页面提到的 Discord，不要在没有官方说明时向第三方购买或填写支付卡"
+      },
+      {
+        "step": "按赛程提交",
+        "detail": "活动开始后按页面提交 GitHub 仓库、2 到 4 分钟演示视频和 Devpost 项目页。Momen 额度只在 11 月 21 日至 28 日太平洋时间内有效"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Global AI Builder’s Challenge",
+        "action_url": "https://global-ai-builders-challenge.devpost.com/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "hackathon"
+    ],
+    "barriers": [
+      "need_student",
+      "need_signup"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-12T20:17:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "只对学生开放，领取说明会另行通知，需本人在 Devpost 报名并决定是否参赛。本轮无法代报。",
+      "at": "2026-11-12T20:17:00+08:00"
+    }
+  },
+  {
+    "id": "volink-qwen3-embedding-4b-limited-free-20261112",
+    "title": "Volink：Qwen3 Embedding 4B 限时免费（2560 维向量）",
+    "platform": "Volink",
+    "product": "Volink API",
+    "model": "Qwen3 Embedding 4B",
+    "type": "限免",
+    "deadline": null,
+    "url": "https://x.com/volinkorg/status/2120530533780426888",
+    "source": "X",
+    "source_post_id": "2120530533780426888",
+    "post_time_bj": "2026-11-11 22:54",
+    "summary": "据 X 上的报道（Volink 官方账号 @volinkorg 在 2026-11-11 22:54 北京时间的帖子），Volink 限时免费提供 Qwen3 Embedding 4B（2560 维向量，用于检索、语义搜索和 RAG 排序）。帖子称使用已有 Volink API key 即可、无需新配置，但没有写额度、限速或截止日期。本轮未能从官网 https://volink.org/ 核出具体免费条款，公开文档页也没有可核对的额度说明，因此限额和截止时间目前未知。",
+    "claim_steps": [
+      "打开 https://volink.org/ ，按页面注册或登录，并创建或使用已有 API Key",
+      "按控制台或文档里实际列出的模型名调用 Qwen3 Embedding 4B；额度、截止和 base URL 以站点当时展示为准"
+    ],
+    "claim_guide": [
+      {
+        "step": "查看来源帖",
+        "detail": "可先看 Volink 官方账号的说明帖",
+        "url": "https://x.com/volinkorg/status/2120530533780426888"
+      },
+      {
+        "step": "打开官网",
+        "detail": "访问 Volink 官网，按页面提示注册、登录或进入控制台",
+        "url": "https://volink.org/"
+      },
+      {
+        "step": "创建或使用 API Key",
+        "detail": "已有账号就直接用现有 Key。新用户按页面创建密钥，自行保存，不要发到聊天或网页里。若要求绑卡或付款，先停下来"
+      },
+      {
+        "step": "按页面调用",
+        "detail": "帖子未给出 base URL 和准确模型字段，请以控制台或文档当时列出的名称为准，不要猜接口地址",
+        "note": "本轮未能从公开文档核出额度、截止时间和调用地址"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Volink",
+        "action_url": "https://volink.org/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Qwen3 Embedding 4B",
+        "action_url": "https://volink.org/"
+      }
+    ],
+    "scenes": [
+      "embedding"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-12T20:17:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "官网是应用页，本轮未能核出额度和截止时间，也无法代填登录。请你打开 https://volink.org/ 自行查看并领取；不要绑卡。",
+      "at": "2026-11-12T20:17:00+08:00"
     }
   }
 ]
