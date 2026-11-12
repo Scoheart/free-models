@@ -34576,5 +34576,94 @@
     ],
     "collected_at": "2026-11-12T09:20:00+08:00",
     "expired": false
+  },
+  {
+    "id": "scoutcode-desktop-free-models-20261112",
+    "title": "ScoutCode（Scout）：桌面编程 Agent 提供 4 个免费模型，无账号也能用",
+    "platform": "ScoutCode",
+    "product": "Scout 桌面客户端",
+    "model": "Qwen 3.8 27B / Nemotron 3 Ultra / MiniMax M3.1 Flash / Agnes 3.0 Flash",
+    "type": "免费档",
+    "deadline": null,
+    "url": "https://scoutcode.dev",
+    "source": "ScoutCode 官网首页与模型页；Hacker News（item 50458487，2026-11-12 04:50 北京）",
+    "summary": "Scout 是 Windows 和 Linux 上的开源桌面编程 Agent（当前 0.1.24，尚无 Mac 版）。据官网，它会把 ScoutCode 自家以及 Kilo Code、OpenCode、OVH Cloud 的免费档聚合在一起，某个模型触达限流时自动换下一个。模型页标明免费的 4 个模型是 Qwen 3.8 27B、Nemotron 3 Ultra、MiniMax M3.1 Flash、Agnes 3.0 Flash，按次 $0，免绑卡，也不是试用。不登录时每分钟 10 次、每天 200 次；免费账号提到每分钟 15 次、每天 400 次。用浏览器登录后，每周另有 $5 额度，任意 5 小时内最多用掉其中 $1。同一页上 GPT 6 Luna 和 DeepSeek v4.1 Flash 标了价格，要用这笔额度或自备 Key。也可接入 Claude Code、Codex、GitHub Copilot 等订阅，或自己的 OpenRouter Key。无截止日期。消息最早见于 Hacker News。",
+    "claim_steps": [
+      "打开 https://scoutcode.dev ，在 Windows 上下载安装包；Linux 可先阅读官网的 install.sh，再按页面说明安装",
+      "打开 Scout 客户端，不登录也可直接使用免费模型",
+      "若要更高限额或每周 $5 额度，在客户端或 https://scoutcode.dev/sign-in 用浏览器登录免费账号"
+    ],
+    "claim_guide": [
+      {
+        "step": "下载客户端",
+        "detail": "打开官网，Windows 点击下载安装包（可能提示「更多信息」后选择「仍要运行」）；Linux x64 / ARM64 先阅读 https://scoutcode.dev/install.sh ，确认无误后再按官网说明安装到用户目录",
+        "url": "https://scoutcode.dev",
+        "note": "目前没有 Mac 版；安装不需要管理员权限"
+      },
+      {
+        "step": "无账号试用",
+        "detail": "打开 Scout 客户端，直接选用免费模型开始对话，无需注册",
+        "url": "https://scoutcode.dev",
+        "note": "不登录时限速约为每分钟 10 次、每天 200 次"
+      },
+      {
+        "step": "登录免费账号",
+        "detail": "在客户端或打开 https://scoutcode.dev/sign-in ，按页面提示注册或登录免费账号",
+        "url": "https://scoutcode.dev/sign-in",
+        "note": "登录后免费模型限额约为每分钟 15 次、每天 400 次，并每周获得 $5 额度（任意 5 小时内最多用 $1）"
+      },
+      {
+        "step": "选择免费模型",
+        "detail": "在模型列表中选择 Qwen 3.8 27B、Nemotron 3 Ultra、MiniMax M3.1 Flash 或 Agnes 3.0 Flash",
+        "url": "https://scoutcode.dev/models",
+        "note": "GPT 6 Luna 和 DeepSeek v4.1 Flash 在模型页标了价格，会消耗每周额度或自备 Key"
+      },
+      {
+        "step": "可选：接入自有订阅或 Key",
+        "detail": "如需使用自己的 Claude Code、Codex、GitHub Copilot 等订阅，或自己的 OpenRouter Key，在客户端设置里按提示接入",
+        "url": "https://scoutcode.dev",
+        "note": ""
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Scout",
+        "action_url": "https://scoutcode.dev"
+      }
+    ],
+    "models": [
+      {
+        "name": "Qwen 3.8 27B",
+        "action_url": "https://scoutcode.dev/models"
+      },
+      {
+        "name": "Nemotron 3 Ultra",
+        "action_url": "https://scoutcode.dev/models"
+      },
+      {
+        "name": "MiniMax M3.1 Flash",
+        "action_url": "https://scoutcode.dev/models"
+      },
+      {
+        "name": "Agnes 3.0 Flash",
+        "action_url": "https://scoutcode.dev/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-12T12:20:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "免费模型在 Windows / Linux 桌面客户端里使用；每周 $5 额度需在客户端或官网用浏览器登录。本轮无法代填登录或完成 Google 授权，请你本机安装后自行登录",
+      "at": "2026-11-12 12:20 北京"
+    }
   }
 ]
