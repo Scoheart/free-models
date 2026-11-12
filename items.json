@@ -35412,9 +35412,9 @@
     "collected_at": "2026-11-13T04:30:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "needs_user",
-      "note": "待自动申请",
-      "at": "2026-11-13T04:30:00+08:00"
+      "status": "success",
+      "note": "你已有 Google AI Studio 账号和免费档 key，不用新领，直接用模型名 gemini-4-hydrogen 调用即可。",
+      "at": "2026-11-13T04:20:00+08:00"
     }
   },
   {
@@ -35484,9 +35484,9 @@
     "collected_at": "2026-11-13T04:30:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "needs_user",
-      "note": "待自动申请",
-      "at": "2026-11-13T04:30:00+08:00"
+      "status": "success",
+      "note": "你已有 OpenRouter 账号和 key，不用新领，现有 key 直接调用 apodex/apodex-1.1-mini:free 即可。",
+      "at": "2026-11-13T04:20:00+08:00"
     }
   },
   {
@@ -35565,8 +35565,8 @@
     "expired": false,
     "auto_claim": {
       "status": "needs_user",
-      "note": "待自动申请",
-      "at": "2026-11-13T04:30:00+08:00"
+      "note": "已用 Google 登录走到 Google 授权确认页「Sign in to numes.ai」，按规则不代你确认；请你本人在 https://numes.ai/ 用 Google 登录并点允许，然后到控制台建 API Key。",
+      "at": "2026-11-13T04:20:00+08:00"
     }
   },
   {
@@ -35638,8 +35638,8 @@
     "expired": false,
     "auto_claim": {
       "status": "needs_user",
-      "note": "待自动申请",
-      "at": "2026-11-13T04:30:00+08:00"
+      "note": "需要写项目提案、附 GitHub 仓库，申领表要填电话，审核后邮件发额度，不适合自动申请。",
+      "at": "2026-11-13T04:20:00+08:00"
     }
   },
   {
@@ -35709,8 +35709,8 @@
     "expired": false,
     "auto_claim": {
       "status": "needs_user",
-      "note": "待自动申请",
-      "at": "2026-11-13T04:30:00+08:00"
+      "note": "需在 ChatGPT 桌面 App 里用你的 OpenAI 账号切到 Codex，功能逐步开放，部分账号要验证手机号，没有 API Key 可建。",
+      "at": "2026-11-13T04:20:00+08:00"
     }
   }
 ]
