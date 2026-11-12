@@ -35123,5 +35123,218 @@
       "note": "官网是应用页，本轮未能核出额度和截止时间，也无法代填登录。请你打开 https://volink.org/ 自行查看并领取；不要绑卡。",
       "at": "2026-11-12T20:17:00+08:00"
     }
+  },
+  {
+    "id": "teleagent-v3-web-limited-free-3000-points-20261113",
+    "title": "中国电信星辰超级智能体 TeleAgent V3.0：网页端限时免费，新用户送 3000 积分",
+    "platform": "TeleAgent（中国电信）",
+    "product": "星辰超级智能体 TeleAgent 网页端",
+    "type": "限免",
+    "deadline": null,
+    "url": "https://www.teleai.com.cn/doc/IxaFWb5NsmbgdWG3lffl/Yk2rSh2YgON6Y5JHmoDz",
+    "source": "天翼AI开放平台",
+    "summary": "据天翼AI开放平台的官方文档，中国电信自研的星辰超级智能体 TeleAgent 在 11 月 6 日升级到 V3.0，新增网页端：任务在云端为你分配的专属 Windows 云电脑里执行，不占用本机资源。官方写明网页端目前处于限时免费体验期，各项功能均可免费使用，日后推出付费方案会提前公告，但没有给出免费期截止日。官方活动页另写新注册立赠 3000 积分（三个月有效），每月登录再赠 3000 积分（当月有效），每日打卡再送 100 积分（30 天有效）。账号以手机号为准，同一手机号只算一次新用户；高峰期云电脑可能要排队。这是产品内权益，没有可导出的 API Key。",
+    "claim_steps": [
+      "打开天翼AI开放平台的 TeleAgent 页面，进入星辰超级智能体网页端",
+      "用手机号注册并登录，新用户领取 3000 积分",
+      "直接在网页端下达任务，由云电脑执行；每月登录、每日打卡可再领积分"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开官方入口",
+        "detail": "进入天翼AI开放平台的 TeleAgent 页面，从这里进入星辰超级智能体网页端",
+        "url": "https://www.teleai.com.cn/teleagent"
+      },
+      {
+        "step": "手机号注册登录",
+        "detail": "按页面提示用手机号注册并登录。账号以手机号为准，同一手机号只算一次新用户",
+        "note": "需要手机号验证"
+      },
+      {
+        "step": "领取新用户积分",
+        "detail": "登录后在积分或福利入口领取新注册的 3000 积分，有效期三个月",
+        "url": "https://agent.teleai.com.cn/meter/teleagent/user/portal/invite-download"
+      },
+      {
+        "step": "在网页端使用",
+        "detail": "用自然语言下达任务，任务在云端专属云电脑中执行；本地文件要先上传，产出文件保存在云端工作空间，可随时下载",
+        "url": "https://www.teleai.com.cn/doc/IxaFWb5NsmbgdWG3lffl/Yk2rSh2YgON6Y5JHmoDz"
+      },
+      {
+        "step": "按月和每日续领",
+        "detail": "每月登录可再领 3000 积分（当月有效），每日打卡另送 100 积分（30 天有效）；免费期结束前官方会另行公告",
+        "note": "不要上传敏感文件或其他平台的密钥"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "星辰超级智能体 TeleAgent",
+        "action_url": "https://www.teleai.com.cn/teleagent"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "agent",
+      "cloud_desktop"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_phone"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-13T00:40:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要手机号注册（以手机号认定新用户），且为网页/客户端内权益、无 API Key；请你本人用手机号在 https://www.teleai.com.cn/teleagent 注册登录并领取 3000 积分。",
+      "at": "2026-11-13T00:40:00+08:00"
+    }
+  },
+  {
+    "id": "fumolab-fusion-5usd-starter-credit-20261113",
+    "title": "FUMO Lab：Fusion 融合模型新用户 $5 试用额度（需绑卡核资格）",
+    "platform": "FUMO Lab",
+    "product": "Fusion Model API",
+    "model": "Fusion Max 2.0 / Fusion Code 1.0",
+    "type": "注册送额度",
+    "deadline": null,
+    "url": "https://fumolab.ai/en/",
+    "source": "X",
+    "source_post_id": "2120875992143085750",
+    "post_time_bj": "2026-11-12 21:46",
+    "summary": "据 X 上的报道，并经 FUMO Lab 官网核对：新加坡公司 Fusion Lab Pte. Ltd. 推出的 Fusion 融合模型（Fusion Max 2.0、Fusion Code 1.0）由自家路由模型按任务挑选并组合多个模型作答，提供 OpenAI 兼容的 Chat Completions 和 Responses 接口。官网横幅写明新用户可用 $5 免费额度试用（1 credit = $0.005，即 1000 credits）；帖子按输入价换算约等于 167 万 token 的 Fusion Max 2.0，或 250 万 token 的 Fusion Code 1.0。Fusion Max 2.0 标价输入 $3、输出 $20 每百万 token，Fusion Code 1.0 为输入 $2、输出 $6。官方入门文档写明要先在账户里绑定支付卡，再查看是否符合新用户试用额度资格，所以这笔额度有绑卡门槛；没有写截止日期。",
+    "claim_steps": [
+      "打开 FUMO Lab 官网，用邮箱验证码或 Google / GitHub 注册",
+      "在 Account 页查看新用户试用额度资格（官方要求先绑定支付卡）",
+      "在控制台 API Keys 页创建 Key，调用 fusion-max-2.0 或 fusion-code-1.0"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开官网",
+        "detail": "进入 FUMO Lab 官网，点击 Sign in / Create an account",
+        "url": "https://fumolab.ai/en/"
+      },
+      {
+        "step": "注册账号",
+        "detail": "可用邮箱和验证码注册，也可以直接用 Google 或 GitHub 登录；没有销售代码就跳过",
+        "url": "https://fumolab.ai/en/login/"
+      },
+      {
+        "step": "查看试用额度资格",
+        "detail": "进入 Account 页查看 starter credit 是否已到账或是否符合资格。官方文档写明这一步要先绑定支付卡",
+        "note": "需要绑卡；只想白嫖可以在这一步停下"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在控制台 API Keys 页点 Create New Key，命名后创建并复制保存，不要发到聊天或网页里"
+      },
+      {
+        "step": "按文档调用",
+        "detail": "按入门文档填写 Base URL 和模型 ID（fusion-max-2.0 或 fusion-code-1.0），可接入 Claude Code、Codex、Cursor、OpenCode 等工具；在 Account 页查看余额",
+        "url": "https://fumolab.ai/en/docs/getting-started/"
+      }
+    ],
+    "providers": [
+      {
+        "name": "FUMO Lab",
+        "action_url": "https://fumolab.ai/en/dashboard/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Fusion Max 2.0",
+        "action_url": "https://fumolab.ai/en/pricing/"
+      },
+      {
+        "name": "Fusion Code 1.0",
+        "action_url": "https://fumolab.ai/en/pricing/"
+      }
+    ],
+    "scenes": [
+      "api",
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_card"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-13T00:40:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "官方入门文档要求先绑定支付卡才能核对和领取 $5 试用额度，按规则不代绑卡。如愿意绑卡，请你本人在 https://fumolab.ai/en/login/ （支持 Google 登录）注册后到 Account 页查看。",
+      "at": "2026-11-13T00:40:00+08:00"
+    }
+  },
+  {
+    "id": "devin-swe2-free-selfserve-desktop-cli-nov30-20261113",
+    "title": "Devin Desktop / CLI：SWE-2 自助付费套餐免费用到 11/30",
+    "platform": "Devin（Cognition）",
+    "product": "Devin Desktop / Devin CLI",
+    "model": "SWE-2",
+    "type": "限免",
+    "deadline": "2026-11-30T23:59:59+08:00",
+    "url": "https://docs.devin.ai/desktop/models",
+    "source": "Devin 官方文档",
+    "summary": "据 Devin 官方模型文档（docs.devin.ai），Cognition 自研的编码模型 SWE-2（含 Medium、High、Max 三档推理强度）在自助套餐（Pro、Max、Teams）的 Devin Desktop 和 Devin CLI 里免费使用到 2026 年 11 月 30 日，不含 Devin 云端会话；之后恢复标价，输入 $3、输出 $15、缓存输入 $0.30 每百万 token。官方没有写 11 月 30 日的具体时刻和时区，本站按北京时间当日 23:59 记录，请以客户端模型选择器为准。这一项要求已有付费自助套餐；免费版用户可用的是另一条 SWE-2 Flash（Medium 档，免费到 12 月 5 日 02:00 北京时间）。产品内权益，不提供 API Key。",
+    "claim_steps": [
+      "下载并登录 Devin Desktop 或安装 Devin CLI（需 Pro、Max 或 Teams 自助套餐）",
+      "在模型选择器里选 SWE-2（Medium / High / Max 任一档）",
+      "11 月 30 日前在 Desktop 或 CLI 使用；Devin 云端会话不在免费范围"
+    ],
+    "claim_guide": [
+      {
+        "step": "确认套餐",
+        "detail": "这项免费只对 Pro、Max、Teams 等自助付费套餐生效；免费版用户请改看 SWE-2 Flash 的免费条目",
+        "note": "需要已有付费自助套餐"
+      },
+      {
+        "step": "安装客户端",
+        "detail": "下载 Devin Desktop（原 Windsurf）或安装 Devin CLI，并用你的 Devin 账号登录",
+        "url": "https://devin.ai/"
+      },
+      {
+        "step": "选择 SWE-2",
+        "detail": "在模型选择器里选 SWE-2，可选 Medium、High 或 Max 推理强度；以选择器显示的当前价格为准",
+        "url": "https://docs.devin.ai/desktop/models"
+      },
+      {
+        "step": "注意使用范围",
+        "detail": "只在 Desktop 和 CLI 里免费，Devin 云端会话照常计费；11 月 30 日后按输入 $3、输出 $15 每百万 token 计费，记得到期前切换模型"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Devin Desktop",
+        "action_url": "https://devin.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "SWE-2",
+        "action_url": "https://docs.devin.ai/desktop/models"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_paid_plan"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-13T00:40:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "桌面客户端/CLI 内权益，且需 Pro/Max/Teams 付费自助套餐，没有 API Key 可建；如你已有付费套餐，本人在 Devin Desktop 或 CLI 里选 SWE-2 即可。",
+      "at": "2026-11-13T00:40:00+08:00"
+    }
   }
 ]
