@@ -2643,8 +2643,8 @@
   "type": "额度",
   "deadline": "2026-11-24T16:00:00+08:00",
   "url": "https://iteracompute.com/free",
-  "summary": "据 IteraCompute 官方免费页，现在的免费入口是 Auto 路由（请求时模型 ID 填 Auto），不再钉死某一个模型。官方说明会按空闲容量在当前开放的开源模型之间分配（页面举例包括 Qwen3.8-27B 和 DeepSeek V4.1，具体模型、版本和精度可能随容量变化，不保证每次回答或能力一致）。免费档无需绑卡或充值，每月 3000 万 tokens（计入输入和输出），128K 上下文，共享空闲容量，可能排队或变慢，无延迟 SLA；每个账户同时只能有 1 个排队或运行中的请求，官方写明没有 TPM 或按日次数上限。验证邮箱后即解锁完整 30M 月额度，也可用 Google 登录。累计净充值满 10 美元可升 Starter（每月 1 亿 tokens，128K），满 50 美元可升 Pro（每月 3 亿 tokens，256K），各档 Auto 的 token 费仍为 0 美元，充值档排队优先。官方问答写明本次免费促销截止于 2026 年 11 月 24 日 00:00 太平洋时间（北京时间 16:00）；已充值用户在截止后仍保留对应档位权益，未充值用户此后的模型访问、额度和限制不做保证，之后安排以官方届时说明为准。",
-  "source": "IteraCompute",
+  "summary": "据 IteraCompute 官方免费页，现在的免费入口是 Auto 路由（请求时模型 ID 填 Auto），不再钉死某一个模型。官方说明会按空闲容量在当前开放的开源模型之间分配（页面举例包括 Qwen3.8-27B 和 DeepSeek V4.1，具体模型、版本和精度可能随容量变化，不保证每次回答或能力一致）。免费档无需绑卡或充值，每月 3000 万 tokens（计入输入和输出），128K 上下文，共享空闲容量，可能排队或变慢，无延迟 SLA；每个账户同时只能有 1 个排队或运行中的请求，官方写明没有 TPM 或按日次数上限。验证邮箱后即解锁完整 30M 月额度，也可用 Google 登录。累计净充值满 10 美元可升 Starter（每月 1 亿 tokens，128K），满 50 美元可升 Pro（每月 3 亿 tokens，256K），各档 Auto 的 token 费仍为 0 美元，充值档排队优先。官方问答写明本次免费促销截止于 2026 年 11 月 24 日 00:00 太平洋时间（北京时间 16:00）；已充值用户在截止后仍保留对应档位权益，未充值用户此后的模型访问、额度和限制不做保证，之后安排以官方届时说明为准。 2026-11-13 复核补充：月额度在每月 1 日 00:00 UTC（北京 08:00）重置，不结转；输入、输出及推理 token 均计入，单次输出最多 8192 token。额度耗尽返回 429，不自动转为付费超额。官方首调指南以 choices[0].message.content 非空为完成激活的判断，注册成功或 HTTP 200 本身不足以证明；本目录未验证任何个人账号的调用或激活状态。",
+  "source": "2026-11-13 复核 IteraCompute 官方免费页 https://iteracompute.com/free；11/24 00:00 America/Los_Angeles = 11/24 16:00 Asia/Shanghai",
   "collected_at": "2026-10-12T00:43:01+08:00",
   "expired": false,
   "source_post_id": "2109316511026536956",
@@ -2667,8 +2667,8 @@
    "chat"
   ],
   "barriers": [
-   "need_key",
-   "zero_signup"
+   "need_signup",
+   "need_key"
   ],
   "platform": "IteraCompute",
   "claim_guide": [
@@ -2692,6 +2692,11 @@
     "detail": "OpenAI 兼容接口地址为 https://api.iteracompute.com/v1/chat/completions ，请求里的 model 填 Auto，不要再当成固定的 Qwen3.8-27B 线路",
     "url": "https://iteracompute.com/free",
     "note": "官方示例用 Authorization: Bearer 和 model 字段 Auto"
+   },
+   {
+    "step": "区分账号和实际可用性",
+    "detail": "官方首调示例要求模型返回非空正文才算完成激活；注册成功、已有 Key 或仅收到 HTTP 200 都不能替代实际结果。额度按每月 1 日 00:00 UTC 重置，耗尽返回 429。",
+    "url": "https://iteracompute.com/free"
    }
   ],
   "claim_steps": [
@@ -2701,11 +2706,7 @@
    "调用 https://api.iteracompute.com/v1/chat/completions ，Authorization 用 Bearer，model 填 Auto"
   ],
   "category": "providers",
-  "auto_claim": {
-   "status": "success",
-   "note": "已有 IteraCompute 账号，不必新注册。官网现改为用 Auto 路由领取每月 30M 免费额度；本轮未再新建 Key。",
-   "at": "2026-11-12T20:17:00+08:00"
-  }
+  "updated_at": "2026-11-13T09:10:00+08:00"
  },
  {
   "id": "workbuddy-deepseek-hy3-free-oct31-20261012",
@@ -14608,15 +14609,15 @@
  },
  {
   "id": "iteracompute-kimi-k3-free-route-20261021",
-  "title": "IteraCompute 上线 Kimi K3 Free：零 token 费调用 Kimi K3（需累计充值 $10，很慢）",
+  "title": "IteraCompute Kimi K3 Free：旧充值免费线路待复核，暂不推荐",
   "model": "Kimi K3 (moonshotai/kimi-k3-free)",
   "type": "API",
   "deadline": null,
   "url": "https://x.com/beingsalluu/status/2112850482435961126",
-  "summary": "据 IteraCompute 较早免费页整理：Kimi K3 Free 路由输入、缓存、输出都是 0 美元，1M 上下文，支持工具调用、推理、视觉和流式，OpenAI 兼容。开通这条线路的前提是账户累计净充值至少 10 美元（赠送额和手续费不算，退款后低于 10 美元会被停用）；官方明说这条免费线路特别慢、要排队，想要速度得用付费 Kimi K3。免绑卡的每月免费额度现已改在 Auto 路由上（每月 3000 万 tokens，128K 上下文），不再钉死 Qwen3.8-27B，官方写明该促销截止于 2026 年 11 月 24 日 00:00 太平洋时间（北京时间 16:00），详见 IteraCompute Auto 那条。",
-  "source": "X @beingsalluu；IteraCompute 免费页 https://iteracompute.com/free/ 核实",
+  "summary": "2026-11-13 复核：旧 Kimi K3 Free 模型页（带或不带末尾斜杠）均返回 404，当前官方模型目录未列出 moonshotai/kimi-k3-free。搜索缓存仍保留 2026-10-21 的“累计净充值至少 $10 后 token 费为 $0”旧说明，但不能据此保证当前可开通；本条暂从进行中活动隐藏，未认定所有旧账号已失效，也不建议为了旧线路充值。当前可核实的免费入口是 Auto：验证邮箱后每月 30M token、无需绑卡或充值，促销至 2026-11-24 00:00 太平洋时间（北京 16:00），详见单独的 Auto 条目。",
+  "source": "2026-11-13 官方模型页 HTTP 404；https://iteracompute.com/models 与 https://iteracompute.com/free；历史搜索缓存日期 2026-10-21",
   "collected_at": "2026-10-21T18:45:00+08:00",
-  "expired": false,
+  "expired": true,
   "source_post_id": "2112850482435961126",
   "post_time_bj": "2026-10-21T18:16:24+08:00",
   "product": "IteraCompute · moonshotai/kimi-k3-free",
@@ -14652,28 +14653,13 @@
   "platform": "IteraCompute",
   "claim_guide": [
    {
-    "step": "打开入口",
-    "detail": "打开该平台的官网、控制台或文档中给出的注册页。可用的官方入口包括：IteraCompute：https://platform.iteracompute.com/sign-up。API Keys：https://platform.iteracompute.com/api-keys。注册/登录入口：https://platform.iteracompute.com/",
-    "url": "https://platform.iteracompute.com/sign-up"
-   },
-   {
-    "step": "登录或注册",
-    "detail": "先完成注册（优先 Google，其次邮箱）。该优惠通常还要绑定付款方式才能激活免费额度或 API。是否绑卡请你自己决定。绑卡前看清是否会自动扣费",
-    "url": "https://platform.iteracompute.com/sign-up"
-   },
-   {
-    "step": "领取额度或创建 API Key",
-    "detail": "Kimi K3 Free 需累计净充值 ≥ $10，之后 token 免费但线路很慢、无 SLA。Qwen3.8-27B 免费档每月 30M tokens、无需绑卡。若界面没有这些选项，不要强行寻找隐藏开关，按页面实际能填的项创建即可。密钥通常只显示一次，请立刻复制并自行妥善保存，不要发到聊天、网页或截图里"
-   },
-   {
-    "step": "建议的密钥设置",
-    "detail": "能设过期时间就选大约一周，能设额度上限就设较低上限。若页面只有「永久」或没有限额选项，按实际界面创建，并尽快把密钥放到安全的地方，而不是聊天记录里"
-   },
-   {
-    "step": "验证是否成功",
-    "detail": "回到控制台查看免费额度、余额、模型列表或订单/密钥列表，确认对应项目已经出现。如果是 API，把密钥放到环境变量里，按官方文档发一条最小请求。能正常返回即表示领取成功"
+    "step": "不要按旧教程充值",
+    "detail": "旧线路当前资格未核实，不把历史 $10 充值门槛当作可用性保证。需要免付款体验时先核对当前 Auto 免费条款。",
+    "url": "https://iteracompute.com/free"
    }
-  ]
+  ],
+  "expired_reason": "旧官方模型页 404 且当前目录未列出，现行资格待核实；仅历史缓存不足以作为正在可领的免费活动。",
+  "updated_at": "2026-11-13T09:10:00+08:00"
  },
  {
   "id": "deepworks-open-signup-1000-credits-20261021",
@@ -29434,10 +29420,10 @@
   "type": "限免",
   "deadline": "2026-12-05T02:00:00+08:00",
   "url": "https://docs.devin.ai/desktop/models",
-  "source": "据 X 上的报道（@Whichaicoder，2026-11-11）；whichaicoder.com 转述 docs.devin.ai/desktop/models（2026-11-06 核对）",
+  "source": "2026-11-13 直接核实 Devin 官方模型文档 https://docs.devin.ai/desktop/models（self-serve 与 SWE-2 Flash 资格说明）；保留原 X / whichaicoder 发现线索",
   "collected_at": "2026-11-11T08:10:00+08:00",
   "expired": false,
-  "summary": "据 whichaicoder.com 转述 Devin 官方模型文档：SWE-2 Flash 在自助套餐（Free/Pro/Max/Teams）的 Devin Desktop 和 CLI 里免费到 2026-12-04 18:00 UTC（北京 12/5 02:00），之后 $0.10/$0.50 每百万输入/输出 token。Free 套餐可选 Medium 档，High/Max 需付费套餐；不含 Devin Cloud。产品内权益，非 API。下载 Devin Desktop 或 Devin CLI 并登录（Free 套餐即可）；模型选 SWE-2 Flash（Free 只能选 Medium）；免费至 12/5 02:00 北京；仅 Desktop/CLI，不含 Devin Cloud，非 API。截止北京时间 2026-12-05 02:00。",
+  "summary": "2026-11-13 直接核实 Devin 官方模型文档：SWE-2 Flash 在自助套餐（Free/Pro/Max/Teams）的 Devin Desktop 和 CLI 里免费到 2026-12-04 18:00 UTC（北京 12/5 02:00），之后 $0.10/$0.50 每百万输入/输出 token。Free 套餐可选 Medium 档，High/Max 需付费套餐；不含 Devin Cloud。产品内权益，非 API。下载 Devin Desktop 或 Devin CLI 并登录（Free 套餐即可）；模型选 SWE-2 Flash（Free 只能选 Medium）；免费至 12/5 02:00 北京；仅 Desktop/CLI，不含 Devin Cloud，非 API。截止北京时间 2026-12-05 02:00。",
   "claim_steps": [
    "到 devin.ai 注册或登录 Free 账号",
    "下载安装 Devin Desktop（原 Windsurf）或 Devin CLI",
@@ -29464,14 +29450,15 @@
    {
     "step": "留意截止",
     "detail": "免费期到 2026-12-04 18:00 UTC（北京 12/5 02:00），之后按 $0.10/$0.50 每百万 token 计费",
-    "url": "https://whichaicoder.com/devin-desktop-pricing/"
+    "url": "https://docs.devin.ai/desktop/models"
    }
   ],
   "auto_claim": {
    "status": "needs_user",
    "note": "桌面客户端/CLI 内权益，需本人在电脑上安装登录使用，无 API key 可建",
    "at": "2026-11-11T08:10:00+08:00"
-  }
+  },
+  "updated_at": "2026-11-13T09:10:00+08:00"
  },
  {
   "id": "minimax-code-h3-image-10-free-images-20261111",
@@ -33945,12 +33932,7 @@
   ],
   "category": "providers",
   "collected_at": "2026-11-12T04:35:00+08:00",
-  "expired": false,
-  "auto_claim": {
-   "status": "success",
-   "note": "已有 Respan 账号（11/11 Google 注册），免费线路直接可用；之前 key 明文未取回，本轮未实测。",
-   "at": "2026-11-12T04:25:00+08:00"
-  }
+  "expired": false
  },
  {
   "id": "jetbrains-junie-lite-free-coding-agent-20261112",
@@ -34741,17 +34723,17 @@
  },
  {
   "id": "miora-minimax-h3-image-free-week-nov17-20261112",
-  "title": "Miora：MiniMax H3-Image 限免一周（11/11–11/17），网页创作工作室可用",
+  "title": "Miora：MiniMax H3-Image 限免周至 11/17（时区与具体截止时刻待核实）",
   "platform": "Miora",
   "product": "Miora（Agentic Creative Studio）",
   "model": "MiniMax H3-Image",
   "type": "限免",
-  "deadline": "2026-11-17T23:59:59+08:00",
+  "deadline": null,
   "url": "https://miora.design/",
-  "source": "据 X 上的报道（@Miora_Design，2026-11-11 22:22 北京；官方账号 @MiniMax_AI 于 2026-11-12 02:51 北京回复确认）",
+  "source": "历史线索：Miora 官方 X 公告 https://x.com/Miora_Design/status/2120522643434778810；MiniMax 官方账号回复；2026-11-13 原帖读取受限，未核实额外时区信息",
   "source_post_id": "2120522643434778810",
   "post_time_bj": "2026-11-11T22:22:50+08:00",
-  "summary": "据 X 上的报道：Miora 官方账号 @Miora_Design 宣布 MiniMax H3-Image 先在 Miora 网页创作工作室上线，11 月 11 日至 17 日一周免费使用；MiniMax 官方账号 @MiniMax_AI 回复确认「Free through Nov 17」。帖中未写每天可生成张数、是否要绑卡，也未说明时区，本条把截止记为北京时间 2026-11-17 23:59，实际以产品内提示为准。这与已收录的 fal 渠道（至 11/23、每 24 小时最多 5 张、仅 Playground/Sandbox）以及 MiniMax Code 活动期内每人 10 张不是同一入口，也不是 MiniMax 开放平台 API。Miora 官网前端定价文案还写免费用户注册送 1000 积分（90 天有效，每用户一次），并估算约可出 50 张图，但这是站内常设新用户赠送，不能据此推断 H3-Image 限免周的张数。海外版登录入口文案包括 Google、GitHub、X 和邮箱；页面流程里可能出现邀请码或候补名单，遇到就停下。免费导出可能带平台水印。",
+  "summary": "据 X 上的报道：Miora 官方账号 @Miora_Design 宣布 MiniMax H3-Image 先在 Miora 网页创作工作室上线，11 月 11 日至 17 日一周免费使用；MiniMax 官方账号 @MiniMax_AI 回复确认「Free through Nov 17」。原公告转述仅给出 11/11–11/17，未明确时区、截止时刻、每日张数或绑卡要求；不换算成北京时间，也不据此设定精确的自动过期时刻。2026-11-13 原 X 帖抓取受限，检索到的官方账号回复镜像仍写 Free through Nov 17，但活动细则须以 Miora 产品内最新提示为准。这与已收录的 fal 渠道（至 11/23、每 24 小时最多 5 张、仅 Playground/Sandbox）以及 MiniMax Code 活动期内每人 10 张不是同一入口，也不是 MiniMax 开放平台 API。Miora 官网前端定价文案还写免费用户注册送 1000 积分（90 天有效，每用户一次），并估算约可出 50 张图，但这是站内常设新用户赠送，不能据此推断 H3-Image 限免周的张数。海外版登录入口文案包括 Google、GitHub、X 和邮箱；页面流程里可能出现邀请码或候补名单，遇到就停下。免费导出可能带平台水印。",
   "claim_steps": [
    "打开 https://miora.design/ ，按页面的 Sign up / Sign in 注册或登录（海外版可试 Google、GitHub、X 或邮箱）",
    "在工作室里选择 MiniMax H3-Image 生图或改图，活动窗口为 11/11–11/17"
@@ -34772,7 +34754,7 @@
     "step": "选择 H3-Image",
     "detail": "登录后在模型或工具列表中选择 MiniMax H3-Image，按画布提示进行文生图或改图",
     "url": "https://miora.design/",
-    "note": "按钮位置以页面为准；限免窗口为 11/11–11/17"
+    "note": "公告日期为 11/11–11/17，时区和具体截止时刻未确认；按产品内活动提示核实"
    },
    {
     "step": "可选：核对注册积分",
@@ -34802,11 +34784,7 @@
   "category": "agents",
   "collected_at": "2026-11-12T16:20:00+08:00",
   "expired": false,
-  "auto_claim": {
-   "status": "needs_user",
-   "note": "这是网页创作应用里的限免生图，没有 API key 可建。登录可能要 Google/GitHub/X 授权或邀请码，本轮无法完成需本人确认的授权，请你打开 https://miora.design/ 自行注册试用；不要绑卡付款。",
-   "at": "2026-11-12 16:20 北京"
-  }
+  "updated_at": "2026-11-13T09:10:00+08:00"
  },
  {
   "id": "flonno-1usd-promo-credit-qwen38-27b-20261112",
@@ -35272,15 +35250,15 @@
  },
  {
   "id": "devin-swe2-free-selfserve-desktop-cli-nov30-20261113",
-  "title": "Devin Desktop / CLI：SWE-2 自助付费套餐免费用到 11/30",
+  "title": "Devin Desktop / CLI：SWE-2 自助付费套餐限免至 11/30（时区与时刻未公布）",
   "platform": "Devin（Cognition）",
   "product": "Devin Desktop / Devin CLI",
   "model": "SWE-2",
   "type": "限免",
-  "deadline": "2026-11-30T23:59:59+08:00",
+  "deadline": null,
   "url": "https://docs.devin.ai/desktop/models",
-  "source": "Devin 官方文档",
-  "summary": "据 Devin 官方模型文档（docs.devin.ai），Cognition 自研的编码模型 SWE-2（含 Medium、High、Max 三档推理强度）在自助套餐（Pro、Max、Teams）的 Devin Desktop 和 Devin CLI 里免费使用到 2026 年 11 月 30 日，不含 Devin 云端会话；之后恢复标价，输入 $3、输出 $15、缓存输入 $0.30 每百万 token。官方没有写 11 月 30 日的具体时刻和时区，本站按北京时间当日 23:59 记录，请以客户端模型选择器为准。这一项要求已有付费自助套餐；免费版用户可用的是另一条 SWE-2 Flash（Medium 档，免费到 12 月 5 日 02:00 北京时间）。产品内权益，不提供 API Key。",
+  "source": "2026-11-13 复核 https://docs.devin.ai/desktop/models 与 https://devin.ai/pricing；11/30 仅日期，无时区或具体时刻",
+  "summary": "2026-11-13 复核 Devin 官方模型文档：SWE-2 在 self-serve 套餐的 Devin Desktop 和 CLI 中免费至 2026-11-30，不含 Devin Cloud 会话；此后标价为每百万输入 $3、输出 $15、缓存输入 $0.30。官方只给出截止日期，没有时区或具体时刻，因此不换算北京时间、不设置虚构的精确过期时刻。当前定价页明确把 Free use of SWE-2 列在 Pro 及继承其权益的 Max/Teams 中；Free 档仅承诺有限模型和轻量额度，不能仅凭 self-serve 一词保证 Free 档可用 SWE-2。实际资格和价格以客户端模型选择器为准。SWE-2 Flash 是另一项活动，官方明确 Free 档可选 Medium，免费至 2026-12-04 18:00 UTC（北京 12/5 02:00）。这是产品内模型权益，不是免费 API 额度。",
   "claim_steps": [
    "下载并登录 Devin Desktop 或安装 Devin CLI（需 Pro、Max 或 Teams 自助套餐）",
    "在模型选择器里选 SWE-2（Medium / High / Max 任一档）",
@@ -35288,9 +35266,9 @@
   ],
   "claim_guide": [
    {
-    "step": "确认套餐",
-    "detail": "这项免费只对 Pro、Max、Teams 等自助付费套餐生效；免费版用户请改看 SWE-2 Flash 的免费条目",
-    "note": "需要已有付费自助套餐"
+    "step": "确认套餐和模型资格",
+    "detail": "定价页把免费 SWE-2 列于 Pro 及继承其权益的 Max/Teams；Free 档资格不要自行推断，以实际模型选择器为准。",
+    "url": "https://devin.ai/pricing"
    },
    {
     "step": "安装客户端",
@@ -35304,7 +35282,7 @@
    },
    {
     "step": "注意使用范围",
-    "detail": "只在 Desktop 和 CLI 里免费，Devin 云端会话照常计费；11 月 30 日后按输入 $3、输出 $15 每百万 token 计费，记得到期前切换模型"
+    "detail": "仅 Desktop 和 CLI，Devin Cloud 不包含。官方说免费至 11/30，但未公布时区和具体时刻；临近日期请再核对模型选择器，不把北京 23:59 当作官方截止。"
    }
   ],
   "providers": [],
@@ -35335,7 +35313,8 @@
    "status": "needs_user",
    "note": "桌面客户端/CLI 内权益，且需 Pro/Max/Teams 付费自助套餐，没有 API Key 可建；如你已有付费套餐，本人在 Devin Desktop 或 CLI 里选 SWE-2 即可。",
    "at": "2026-11-13T00:40:00+08:00"
-  }
+  },
+  "updated_at": "2026-11-13T09:10:00+08:00"
  },
  {
   "id": "gemini-4-hydrogen-gemini-api-free-tier-20261113",
@@ -35410,12 +35389,7 @@
   ],
   "category": "providers",
   "collected_at": "2026-11-13T04:30:00+08:00",
-  "expired": false,
-  "auto_claim": {
-   "status": "success",
-   "note": "你已有 Google AI Studio 账号和免费档 key，不用新领，直接用模型名 gemini-4-hydrogen 调用即可。",
-   "at": "2026-11-13T04:20:00+08:00"
-  }
+  "expired": false
  },
  {
   "id": "openrouter-apodex-11-mini-free-20261113",
@@ -35482,12 +35456,7 @@
   ],
   "category": "providers",
   "collected_at": "2026-11-13T04:30:00+08:00",
-  "expired": false,
-  "auto_claim": {
-   "status": "success",
-   "note": "你已有 OpenRouter 账号和 key，不用新领，现有 key 直接调用 apodex/apodex-1.1-mini:free 即可。",
-   "at": "2026-11-13T04:20:00+08:00"
-  }
+  "expired": false
  },
  {
   "id": "numes-free-kimi-k31-glm53-deepseek-v41-flash-20261113",
@@ -35562,12 +35531,7 @@
   ],
   "category": "providers",
   "collected_at": "2026-11-13T04:30:00+08:00",
-  "expired": false,
-  "auto_claim": {
-   "status": "needs_user",
-   "note": "已用 Google 登录走到 Google 授权确认页「Sign in to numes.ai」，按规则不代你确认；请你本人在 https://numes.ai/ 用 Google 登录并点允许，然后到控制台建 API Key。",
-   "at": "2026-11-13T04:20:00+08:00"
-  }
+  "expired": false
  },
  {
   "id": "hackernoon-decentralize-ai-hackathon-70usd-nosana-gpu-20261113",
@@ -35777,12 +35741,7 @@
   ],
   "category": "providers",
   "collected_at": "2026-11-13T08:20:00+08:00",
-  "expired": false,
-  "auto_claim": {
-   "status": "success",
-   "note": "你已有 OpenRouter 账号和 key，不用新领，现有 key 直接调用 particle-ai/particle-1:free 即可。",
-   "at": "2026-11-13T08:20:00+08:00"
-  }
+  "expired": false
  },
  {
   "id": "routeway-free-tier-200-requests-daily-20261113",
@@ -35862,12 +35821,7 @@
   ],
   "category": "providers",
   "collected_at": "2026-11-13T08:20:00+08:00",
-  "expired": false,
-  "auto_claim": {
-   "status": "needs_user",
-   "note": "Gmail 里没有 Routeway 账号；注册要用邮箱密码或 Google 授权，这一轮没法代填密码或代你确认 Google 授权，未建 key。",
-   "at": "2026-11-13T08:20:00+08:00"
-  }
+  "expired": false
  },
  {
   "id": "kimi-open-platform-15yuan-new-user-voucher-20261113",
@@ -35939,11 +35893,117 @@
   ],
   "category": "providers",
   "collected_at": "2026-11-13T08:20:00+08:00",
-  "expired": false,
-  "auto_claim": {
-   "status": "needs_user",
-   "note": "需要你本人用国内手机号注册并做实名认证才会发券，按规则不代办；Gmail 只见 Kimi 国际版通知邮件，未见开放平台注册邮件。",
-   "at": "2026-11-13T08:20:00+08:00"
-  }
+  "expired": false
+ },
+ {
+  "id": "codiv-public-experiment-100m-decisions-10m-chat-20261113",
+  "title": "Codiv：免绑卡公测额度，1 亿决策 Token + 1000 万文本生成 Token（不承诺周期重置）",
+  "platform": "Codiv",
+  "product": "Codiv hosted API / Playground",
+  "model": "OpenJev / Laya / Verdict 等决策模型；DiffusionGemma 文本生成",
+  "type": "试用",
+  "deadline": null,
+  "url": "https://codiv.ai/docs/guides/rate-limits",
+  "source": "作者 GitHub 原项目 https://github.com/razorback16/openjev；Codiv 官方首页、Limits & quotas、Quickstart 与 Terms；2026-11-13 交叉核实",
+  "summary": "Codiv 官方公开实验为每个账号提供两笔独立额度：System One 决策 API 共 100M tokens（输入及启用 think 时的推理 token），文本生成共 10M tokens（输入加输出）。无需绑卡，需 Google/GitHub/邮箱账号；API 调用需自己的 Key，也可在网页 Playground 试用。官方未承诺每日或每月重置，也未公布统一到期日或完整地区清单，因此按公测试用而非永久免费或周期额度收录。默认每 Key 1200 RPM，文本生成全站共享 8 个并发及 32 个等候位；对应额度用完返回 429，不影响另一笔额度，服务忙时可返回 529。公测可变更或结束、无可用性 SLA；至少 16 岁且达到当地同意条款年龄，每人限一个账号。Codiv 是独立托管服务，不是 TypeSafe 官方服务；不应将机器决策作为重大个人权益决定的唯一依据。",
+  "providers": [
+   {
+    "name": "Codiv 官网与 Playground",
+    "action_url": "https://codiv.ai/"
+   },
+   {
+    "name": "官方额度和限流",
+    "action_url": "https://codiv.ai/docs/guides/rate-limits"
+   }
+  ],
+  "agents": [],
+  "models": [
+   {
+    "name": "OpenJev 作者原项目",
+    "action_url": "https://github.com/razorback16/openjev"
+   }
+  ],
+  "scenes": [
+   "chat",
+   "api"
+  ],
+  "barriers": [
+   "need_signup",
+   "need_key"
+  ],
+  "category": "providers",
+  "claim_guide": [
+   {
+    "step": "核对两笔独立额度",
+    "detail": "System One 的 100M 与文本生成的 10M 分开计量；没有周期自动续送承诺，先看控制台当前额度。",
+    "url": "https://codiv.ai/docs/guides/rate-limits"
+   },
+   {
+    "step": "了解资格后自行注册",
+    "detail": "可用 Google、GitHub 或邮箱；无需绑卡。每人一个账号，至少 16 岁并满足当地年龄要求。公测额度和模型可能调整。",
+    "url": "https://codiv.ai/terms"
+   },
+   {
+    "step": "选择网页或 API 体验",
+    "detail": "Playground 可直接用账号额度。若自行调用 API，按文档创建和保管 Key：决策接口 /v1/systemone 与文本生成 /v1/chat/completions 用量分开；遇额度耗尽不要循环重试。",
+    "url": "https://codiv.ai/docs/quickstart"
+   }
+  ],
+  "collected_at": "2026-11-13T09:20:00+08:00",
+  "expired": false
+ },
+ {
+  "id": "oceantoken-new-account-1usd-14day-trial-20261113",
+  "title": "OceanToken：新账号免绑卡送一次性 $1 API 额度（14 天有效）",
+  "platform": "OceanToken",
+  "product": "OceanToken API gateway",
+  "model": "Qwen 等目录模型，实际可用清单以控制台为准",
+  "type": "试用",
+  "deadline": null,
+  "url": "https://oceantoken.ai/qwen-api",
+  "source": "OceanToken 官方 Qwen API 页面与 FAQ（价格更新于 2026-11-13）、Terms（2026-10-31 更新）交叉核实",
+  "summary": "OceanToken 官方公开页确认：新账号通过 Google、GitHub 或邮箱登录可得一次性 $1 API 赠送余额，无需信用卡，赠送余额有效 14 天。不是月度免费层，也不是充值返赠；活动未公布统一结束日。FAQ 称免费余额可用于目录内任意模型，其中视频最多每 24 小时 3 次；具体 RPM/TPM 未明确。接口兼容 OpenAI（base URL 为 https://api.oceantoken.ai/v1）及 Anthropic Messages 格式。余额不足时拒绝新请求，不是无限额调用；后续充值是可选的美元预付费，不是本次免付款体验的条件。服务条款要求年满 18 岁，并遵守上游模型的地区和实体限制，不可用代理绕过。该服务为第三方聚合网关，路由、上游服务商和版本可动态变化，不代表模型原厂背书；赠送额度也可能调整或撤销。",
+  "providers": [
+   {
+    "name": "OceanToken 官方入口",
+    "action_url": "https://oceantoken.ai/"
+   },
+   {
+    "name": "注册赠送额度 FAQ",
+    "action_url": "https://oceantoken.ai/qwen-api"
+   }
+  ],
+  "agents": [],
+  "models": [],
+  "scenes": [
+   "chat",
+   "api",
+   "image",
+   "video"
+  ],
+  "barriers": [
+   "need_signup",
+   "need_key"
+  ],
+  "category": "providers",
+  "claim_guide": [
+   {
+    "step": "核对免费与有效期",
+    "detail": "FAQ 明确新账号 $1、免绑卡、14 天有效。不要把购买积分 12 个月有效或首次充值奖励误作免费赠送条件。",
+    "url": "https://oceantoken.ai/qwen-api"
+   },
+   {
+    "step": "自行注册并检查余额",
+    "detail": "用 Google、GitHub 或邮箱登录，确认赠送余额及实际到期日。若界面要求付款才能试用，应先停止并核对条款，而不是充值。",
+    "url": "https://oceantoken.ai/"
+   },
+   {
+    "step": "选择适用模型与额度",
+    "detail": "自行保管 API Key；调用前核对模型计费和地区资格，视频受每 24 小时 3 次限制。赠送用完或过期后不要把后续预充值当成仍然免费。",
+    "url": "https://oceantoken.ai/terms"
+   }
+  ],
+  "collected_at": "2026-11-13T09:20:00+08:00",
+  "expired": false
  }
 ]
