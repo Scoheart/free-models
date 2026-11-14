@@ -36759,9 +36759,9 @@
     "collected_at": "2026-11-15T00:15:00+08:00",
     "expired": false,
     "auto_claim": {
-      "status": "needs_user",
-      "note": "待浏览器领取（Gmail 未见 Rime 账号，需新注册并建 key）",
-      "at": "2026-11-15T00:15:00+08:00"
+      "status": "success",
+      "note": "已用 Google 账号注册 Rime 并建好 API key（已私存）；Rime 不支持给 key 设额度上限或过期时间，账号自带 $50 免费额度",
+      "at": "2026-11-15T00:16:00+08:00"
     }
   },
   {
