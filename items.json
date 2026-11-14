@@ -23334,7 +23334,7 @@
     "summary": "Vercel 官方 changelog：Humans& 的群聊模型 Ampersand（humansand/ampersand-v0.1，1M 上下文）在 AI Gateway 上免费到 2026-11-13。编码 Agent 可跑 npx vercel ai-gateway setup 后选该模型；需自定义 send_message/pass 工具，tool_choice 只能 auto/none；免费至 11/13（美西，约北京 11/14 16:00）；它每轮决定发言还是沉默，需调用方提供 send_message 和 pass 两个函数工具；支持 AI SDK、OpenAI 兼容 Chat Completions 及 Claude Code/Codex/Cursor。截止北京时间 2026-11-14 16:00。",
     "source": "X @engrbilalwaris；Vercel changelog 与 Humans& 模型页",
     "collected_at": "2026-11-07T21:50:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2119057286857634141",
     "providers": [
       {
@@ -28481,7 +28481,7 @@
       "need_key"
     ],
     "collected_at": "2026-11-11T04:05:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "success",
       "note": "OpenRouter 已有账号和 key，直接用现有 key 调 parallel/decisions-fast:free 即可，无需新领",
@@ -36335,6 +36335,636 @@
       "status": "needs_user",
       "note": "这是初创申请制，需要你本人介绍团队并提交申请，未代为申请。",
       "at": "2026-11-14T00:25:00+08:00"
+    }
+  },
+  {
+    "id": "openrouter-ling-32-flash-free-2weeks-20261115",
+    "title": "OpenRouter：蚂蚁百灵 Ling 3.2 Flash 免费线路上线（inclusionai/ling-3.2-flash:free，据报约两周）",
+    "platform": "OpenRouter",
+    "product": "OpenRouter",
+    "model": "inclusionai/ling-3.2-flash:free",
+    "type": "限免",
+    "deadline": "2026-11-28T03:27:00+08:00",
+    "url": "https://openrouter.ai/inclusionai/ling-3.2-flash:free",
+    "source": "OpenRouter 模型接口与模型页（2026-11-15 00:05 北京核对，标 Free，上线日期 11/13）；据 X 上的报道（OpenRouter 模型上新账号 @ModelsOnOR，帖子 2121324171099799604，2026-11-13 19:27 UTC）称免费两周",
+    "summary": "据 OpenRouter 模型页，蚂蚁 inclusionAI 的 Ling 3.2 Flash 新增免费线路 inclusionai/ling-3.2-flash:free，11 月 13 日上线，输入、输出价格均为 Free，由 Ant Digital 单一托管。这是混合推理模型，支持文本和图片输入（单次最多 200 张图），上下文 1,048,576 Token，最长输出 262,144 Token，支持工具调用和结构化输出，思考可按请求关闭。据 X 上的报道，OpenRouter 模型上新账号称这条线路免费两周；OpenRouter 模型页本身未写结束日，截止时间按发帖时间加两周推算。这与已收录的蚂蚁百灵官方 API 前两周限免（约至 11/19，需支付宝）是两条不同渠道。免费线路有速率限制：按 OpenRouter 免费模型规则，每分钟 20 次，累计充值不足 10 美元时每天 50 次，充值满 10 美元后每天 1000 次（所有免费模型共用）。不提供欧盟区域内路由，免费线路的提示和输出可能被用于改进模型。只需 OpenRouter 账号，不用绑卡。",
+    "claim_steps": [
+      "登录 OpenRouter，在 Keys 页面创建或使用已有 API Key（建议设低额度上限）",
+      "打开模型页确认 inclusionai/ling-3.2-flash:free 仍标 Free",
+      "用 OpenAI 兼容的 chat completions 调用，模型名填 inclusionai/ling-3.2-flash:free"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 OpenRouter",
+        "detail": "用已有账号登录 OpenRouter，没有就用 Google 账号注册",
+        "url": "https://openrouter.ai/",
+        "note": "已有账号无需重新注册"
+      },
+      {
+        "step": "创建或使用 API Key",
+        "detail": "进入 Keys 页面创建 Key，并给 Key 设一个很低的额度上限；已有 Key 也可直接用",
+        "url": "https://openrouter.ai/settings/keys",
+        "note": ""
+      },
+      {
+        "step": "确认免费线路仍在",
+        "detail": "打开 Ling 3.2 Flash (free) 模型页，确认价格仍显示 Free",
+        "url": "https://openrouter.ai/inclusionai/ling-3.2-flash:free",
+        "note": "据报约免费两周，结束日为推算"
+      },
+      {
+        "step": "调用模型",
+        "detail": "在任意 OpenAI 兼容客户端里选 OpenRouter，模型名填 inclusionai/ling-3.2-flash:free",
+        "url": "https://openrouter.ai/inclusionai/ling-3.2-flash:free",
+        "note": "免费线路有每分钟和每日次数限制"
+      }
+    ],
+    "providers": [
+      {
+        "name": "OpenRouter",
+        "action_url": "https://openrouter.ai/settings/keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "inclusionai/ling-3.2-flash:free",
+        "action_url": "https://openrouter.ai/inclusionai/ling-3.2-flash:free"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "vision"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-15T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "你已有 OpenRouter 账号和 key，不用新领，现有 key 直接把模型名换成 inclusionai/ling-3.2-flash:free 即可。",
+      "at": "2026-11-15T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "openrouter-recraft-v41-flash-v2-free-nov28-20261115",
+    "title": "OpenRouter：Recraft V4.1 Flash V2 文生图限时免费（recraft/recraft-v4.1-flash-v2:free，至 11/28）",
+    "platform": "OpenRouter",
+    "product": "OpenRouter",
+    "model": "recraft/recraft-v4.1-flash-v2:free",
+    "type": "限免",
+    "deadline": "2026-11-28T23:59:59+08:00",
+    "url": "https://openrouter.ai/recraft/recraft-v4.1-flash-v2:free",
+    "source": "OpenRouter 模型接口（2026-11-15 00:20 北京核对，expiration_date 2026-11-28）与模型页；据 X 上的报道（@ModelsOnOR，帖子 2121391098585379170，2026-11-13 23:53 UTC）",
+    "summary": "据 OpenRouter 模型页与模型接口，Recraft 的文生图模型 Recraft V4.1 Flash V2 新增免费线路 recraft/recraft-v4.1-flash-v2:free，11 月 13 日上线，价格标 Free，接口里写明到期日 2026-11-28（未写时区，暂按北京时间当天结束）。据 X 上的报道，OpenRouter 模型上新账号称它限时免费。这是 V4.1 Flash 的升级版，主打出图更快、图内文字渲染更好，适合快速迭代和批量出图。只支持文字生成图片，不支持图片输入、风格和风格参考；可设调色板和背景色。必须走 OpenRouter 的图片生成接口，不是聊天补全。免费线路有速率限制。只需 OpenRouter 账号，不用绑卡。",
+    "claim_steps": [
+      "登录 OpenRouter，在 Keys 页面创建或使用已有 API Key（建议设低额度上限）",
+      "打开模型页确认 recraft/recraft-v4.1-flash-v2:free 仍标 Free",
+      "用 OpenRouter 图片生成接口调用，模型名填 recraft/recraft-v4.1-flash-v2:free"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 OpenRouter",
+        "detail": "用已有账号登录 OpenRouter，没有就用 Google 账号注册",
+        "url": "https://openrouter.ai/",
+        "note": "已有账号无需重新注册"
+      },
+      {
+        "step": "创建或使用 API Key",
+        "detail": "进入 Keys 页面创建 Key，并设很低的额度上限；已有 Key 也可直接用",
+        "url": "https://openrouter.ai/settings/keys",
+        "note": ""
+      },
+      {
+        "step": "确认免费线路仍在",
+        "detail": "打开 Recraft V4.1 Flash V2 (free) 模型页，确认价格仍显示 Free",
+        "url": "https://openrouter.ai/recraft/recraft-v4.1-flash-v2:free",
+        "note": "接口写明 11/28 到期"
+      },
+      {
+        "step": "按图片生成文档调用",
+        "detail": "按 OpenRouter 图片生成文档发请求，模型名填 recraft/recraft-v4.1-flash-v2:free",
+        "url": "https://openrouter.ai/docs/features/multimodal/image-generation",
+        "note": "只支持文字生成图片"
+      }
+    ],
+    "providers": [
+      {
+        "name": "OpenRouter",
+        "action_url": "https://openrouter.ai/settings/keys"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "recraft/recraft-v4.1-flash-v2:free",
+        "action_url": "https://openrouter.ai/recraft/recraft-v4.1-flash-v2:free"
+      }
+    ],
+    "scenes": [
+      "image"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-15T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "你已有 OpenRouter 账号和 key，不用新领，现有 key 走图片生成接口即可。",
+      "at": "2026-11-15T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "vercel-ai-gateway-parallel-decisions-fast-free-nov23-20261115",
+    "title": "Vercel AI Gateway：Parallel Decisions Fast 联网决策模型免费到 11/23",
+    "platform": "Vercel AI Gateway",
+    "product": "Vercel AI Gateway",
+    "model": "parallel/parallel-decisions-fast",
+    "type": "限时",
+    "deadline": "2026-11-23T23:59:59+08:00",
+    "url": "https://vercel.com/changelog/parallel-decisions-now-available-on-ai-gateway-for-free",
+    "source": "Vercel 官方 Changelog（2026-11-13）",
+    "summary": "据 Vercel 官方 Changelog（11 月 13 日），Parallel 的联网决策模型 Parallel Decisions Fast 上线 Vercel AI Gateway，免费到 2026 年 11 月 23 日（官方未写时区，暂按北京时间当天结束）。不需要单独注册 Parallel 账号，用 AI Gateway 的 Key 即可。它不是聊天模型：会联网检索，回答关于公司、产品、政策等会变化的信息的结构化问题，返回是/否概率、多选项选择或量表评分，并附带引用出处；同一请求里的相关问题共享检索证据。要用 AI SDK 的 decide、TypeSafe 兼容接口或 Decisions 接口调用，不能用普通聊天补全。请求会计入 AI Gateway 的日志和预算。这与已收录的 OpenRouter 上同一模型的 7 天免费（已结束）是不同渠道。",
+    "claim_steps": [
+      "登录 Vercel，在 AI Gateway 页面创建或使用已有 API Key",
+      "按 Changelog 示例用 Decisions 接口或 AI SDK 的 decide 调用，模型名填 parallel/parallel-decisions-fast",
+      "在 AI Gateway 用量页确认这类请求没有扣费"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录 Vercel",
+        "detail": "用已有 Vercel 账号登录控制台",
+        "url": "https://vercel.com/",
+        "note": "已有账号无需重新注册"
+      },
+      {
+        "step": "准备 AI Gateway Key",
+        "detail": "进入 AI Gateway 的 API Keys 页面创建或使用已有 Key",
+        "url": "https://vercel.com/dashboard/ai-gateway",
+        "note": "建议给团队设支出预算"
+      },
+      {
+        "step": "按示例调用",
+        "detail": "参照官方 Changelog 的 Decisions 接口或 AI SDK 示例，模型名填 parallel/parallel-decisions-fast，传入 state 和 questions",
+        "url": "https://vercel.com/changelog/parallel-decisions-now-available-on-ai-gateway-for-free",
+        "note": "普通聊天补全接口调不了"
+      },
+      {
+        "step": "核对用量",
+        "detail": "在 AI Gateway 的日志与用量页确认请求未计费",
+        "url": "https://vercel.com/dashboard/ai-gateway",
+        "note": "免费到 11/23"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Vercel AI Gateway",
+        "action_url": "https://vercel.com/dashboard/ai-gateway"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "parallel/parallel-decisions-fast",
+        "action_url": "https://vercel.com/changelog/parallel-decisions-now-available-on-ai-gateway-for-free"
+      }
+    ],
+    "scenes": [
+      "classification",
+      "search",
+      "api"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-15T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "你已有 Vercel 账号和 AI Gateway key，不用新领，按 Changelog 的 Decisions 接口用现有 key 调用即可；本轮未实测调用。",
+      "at": "2026-11-15T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "tavily-keyless-search-extract-free-20261115",
+    "title": "Tavily：免注册、免 Key 的搜索 / 抽取接口（keyless 模式，限速免费）",
+    "platform": "Tavily",
+    "product": "Tavily API",
+    "model": null,
+    "type": "免费档",
+    "deadline": null,
+    "url": "https://docs.tavily.com/documentation/keyless",
+    "source": "Tavily 官方文档 Keyless 页（2026-11-15 核对）；据 X 上的报道（帖子 2121630233640276131）",
+    "summary": "据 Tavily 官方文档，Tavily 的 Search（联网搜索）和 Extract（网页正文抽取）接口提供 keyless 免费模式：不用注册、不用 API Key，只需在请求头里声明 keyless 访问即可，返回结果和带 Key 时完全相同。官方远程 MCP 服务器也支持这种模式，可直接给 Claude Code、Cursor 等加 tavily-search 和 tavily-extract 工具。限制：免费但限速，官方没公布具体次数；只开放 Search 和 Extract，Crawl、Map、Research 仍需 API Key；只能填 URL、不能加请求头的客户端用不了。限额用完后可注册免费账号拿 API Key（每月 1000 credits，不用绑卡）。没有账号，你就没有接受任何条款，也就没有合同约束；官方博客也提醒，敏感或私有数据别走 keyless。适合 Agent 冷启动和轻量试用。据 X 上的报道，有网友已实测能用；2026-11-15 本轮实测一次搜索请求返回正常。",
+    "claim_steps": [
+      "调用 Search 或 Extract 接口时，在请求头里加 X-Tavily-Access-Mode: keyless，不带 Authorization",
+      "或在 MCP 客户端里添加 Tavily 远程 MCP，并配上同样的请求头",
+      "超限后到 app.tavily.com 注册免费账号拿 API Key 继续用"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读 keyless 说明",
+        "detail": "打开官方 Keyless 文档，确认支持的接口和限制",
+        "url": "https://docs.tavily.com/documentation/keyless",
+        "note": "只支持 Search 和 Extract"
+      },
+      {
+        "step": "直接调用接口",
+        "detail": "向 Search 或 Extract 接口发请求，请求头加 X-Tavily-Access-Mode: keyless，不带 Key",
+        "url": "https://docs.tavily.com/documentation/keyless",
+        "note": "免费但限速"
+      },
+      {
+        "step": "接入 MCP（可选）",
+        "detail": "在支持自定义请求头的 MCP 客户端里添加 Tavily 远程 MCP，并加上同样的请求头",
+        "url": "https://docs.tavily.com/documentation/keyless",
+        "note": "只能填 URL 的客户端用不了"
+      },
+      {
+        "step": "超限后换成 Key",
+        "detail": "到 Tavily 控制台注册免费账号，生成 API Key 后以 Bearer 方式传入",
+        "url": "https://app.tavily.com/",
+        "note": "免费账号每月 1000 credits，不用绑卡"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Tavily",
+        "action_url": "https://docs.tavily.com/documentation/keyless"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "search",
+      "agent",
+      "api"
+    ],
+    "barriers": [
+      "zero_signup"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-15T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "无需账号和 key；本轮用 keyless 请求头实测一次搜索返回正常。你另有 Tavily 账号，超限后可用自己的 key。",
+      "at": "2026-11-15T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "xfyun-sparkaudio-1-personal-2m-tokens-20261115",
+    "title": "讯飞开放平台：SparkAudio 1.0 语音大模型 API，个人实名免费领 200 万 tokens（1 年有效）",
+    "platform": "讯飞",
+    "product": "讯飞开放平台 SparkAudio 1.0",
+    "model": "Spark-Audio-1.0",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://www.xfyun.cn/doc/spark/spark_audio.html",
+    "source": "涛哥 AI 工作站「免费 AI 额度日报 11/14」与 AI 潮汐（2026-11-12）转述讯飞官方价目页；官方 API 文档 xfyun.cn/doc/spark/spark_audio.html",
+    "summary": "据涛哥 AI 工作站与 AI 潮汐转述讯飞开放平台价目页，讯飞 11 月 12 日把语音基座大模型 SparkAudio 1.0 开放成 API：完成个人实名认证可免费领 200 万 tokens，1 路并发，领取起 1 年有效；企业认证可领 500 万 tokens。价目区写「限时特惠」但没给截止日。模型能做语音转写、多语言翻译（99 种语言、202 种方言）、环境音理解、说话人分离、情感分析和音频问答，输入语音或文本、只输出文本。限制：WebSocket 实时接口，不是 OpenAI 兼容格式；音频固定 16k、16bit、单声道 pcm/wav；单次会话累计最多 30 分钟音频、40 轮推理；没有自动断句；官方未公布音频时长与 token 的换算。门槛：讯飞开放平台账号（国内手机号）+ 个人实名认证。超出后要买预付费套餐（最低 2.5 亿 tokens 3000 元）。",
+    "claim_steps": [
+      "用国内手机号注册或登录讯飞开放平台，完成个人实名认证",
+      "进入 SparkAudio 1.0 购买页，选「个人认证免费包」免费领取 200 万 tokens",
+      "在控制台创建应用拿 APIKey，按官方 API 文档用 WebSocket 接口调用"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录讯飞开放平台",
+        "detail": "用国内手机号注册或登录讯飞开放平台",
+        "url": "https://www.xfyun.cn/",
+        "note": "需国内手机号"
+      },
+      {
+        "step": "完成个人实名认证",
+        "detail": "在账号中心完成个人实名认证",
+        "url": "https://console.xfyun.cn/",
+        "note": "不实名领不到免费包"
+      },
+      {
+        "step": "领取个人认证免费包",
+        "detail": "打开 SparkAudio 1.0 购买页，选个人认证免费包（200 万 tokens、1 路并发、1 年）免费下单",
+        "url": "https://console.xfyun.cn/sale/buy?wareId=9318&packageId=9318001&serviceName=Spark-Audio-1.0&businessId=spark-audio",
+        "note": "价格为 0，别选付费档"
+      },
+      {
+        "step": "创建应用并调用",
+        "detail": "在控制台创建应用拿 APIKey，按官方 API 文档用 WebSocket 接口上传音频",
+        "url": "https://www.xfyun.cn/doc/spark/spark_audio.html",
+        "note": "只输出文本，需自行切段"
+      }
+    ],
+    "providers": [
+      {
+        "name": "讯飞开放平台",
+        "action_url": "https://console.xfyun.cn/sale/buy?wareId=9318&packageId=9318001&serviceName=Spark-Audio-1.0&businessId=spark-audio"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Spark-Audio-1.0",
+        "action_url": "https://www.xfyun.cn/doc/spark/spark_audio.html"
+      }
+    ],
+    "scenes": [
+      "speech",
+      "api"
+    ],
+    "barriers": [
+      "need_key",
+      "cn_account",
+      "need_phone",
+      "need_realname"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-15T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要你用国内手机号登录讯飞开放平台并完成个人实名认证后，再在购买页领取免费包；实名不代办。",
+      "at": "2026-11-15T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "rime-stt-free-until-nov19-50usd-monthly-20261115",
+    "title": "Rime：语音转文字 Rime STT 全档免费到 11/19，另每月免费 $50 语音额度（免绑卡）",
+    "platform": "Rime",
+    "product": "Rime",
+    "model": "Rime STT",
+    "type": "限时",
+    "deadline": "2026-11-19T23:59:59+08:00",
+    "url": "https://www.rime.ai/pricing",
+    "source": "Rime 官方定价页（2026-11-15 核对）；据 X 上的报道（帖子 2121484973446480187）",
+    "summary": "据 Rime 官方定价页，语音转文字模型 Rime STT 在所有套餐上免费到 2026 年 11 月 19 日（官方未写时区，暂按北京时间当天结束），11 月 20 日起 Flex 档每分钟 0.002 美元；免费期内仍有并发限制。另外每个账号每月都有 50 美元免费用量，可用于 Prism 语音对语音、Mist v3 和 Coda v2 文本转语音及 Rime STT，每月重置、不累积，不用绑卡。Rime STT 支持英语和西班牙语，实时流式（WebSocket/gRPC）或文件转写。门槛：注册 Rime 账号拿 API Key；超出 50 美元要绑卡转 Flex 按量付费。面向语音 Agent 开发。",
+    "claim_steps": [
+      "打开 Rime 官网注册免费账号（不用绑卡）",
+      "在控制台创建 API Key",
+      "按文档调用 Rime STT（11/19 前免费）或用每月 $50 额度调 TTS / Prism"
+    ],
+    "claim_guide": [
+      {
+        "step": "查看定价与免费范围",
+        "detail": "打开 Rime 定价页，确认 STT 免费期和 Free 档每月 50 美元",
+        "url": "https://www.rime.ai/pricing",
+        "note": "STT 免费到 11/19"
+      },
+      {
+        "step": "注册免费账号",
+        "detail": "在 Rime 官网注册账号，选 Free 档",
+        "url": "https://www.rime.ai/",
+        "note": "不用绑卡"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在 Rime 控制台生成 API Key",
+        "url": "https://www.rime.ai/",
+        "note": ""
+      },
+      {
+        "step": "调用模型",
+        "detail": "按官方文档用 WebSocket 或 gRPC 调 Rime STT，或调 Mist v3 / Coda v2 / Prism",
+        "url": "https://www.rime.ai/pricing",
+        "note": "超出 50 美元需绑卡转 Flex，别绑"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Rime",
+        "action_url": "https://www.rime.ai/pricing"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Rime STT",
+        "action_url": "https://www.rime.ai/pricing"
+      }
+    ],
+    "scenes": [
+      "speech",
+      "api"
+    ],
+    "barriers": [
+      "need_key",
+      "need_signup"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-15T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待浏览器领取（Gmail 未见 Rime 账号，需新注册并建 key）",
+      "at": "2026-11-15T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "testmu-kanecli-hackathon-10000-credits-nov19-20261115",
+    "title": "KaneCLI 线上黑客松：TestMu AI 新账号送 10,000 Kane CLI 积分（1 个月有效，提交截止 11/19）",
+    "platform": "TestMu AI",
+    "product": "Kane CLI",
+    "model": null,
+    "type": "黑客松额度",
+    "deadline": "2026-11-20T02:29:00+08:00",
+    "url": "https://www.kaneclihack.sh/",
+    "source": "KaneCLI Online Hackathon 官方页 kaneclihack.sh（2026-11-15 核对）；that.promo 整理",
+    "summary": "据 KaneCLI Online Hackathon 官方页，TestMu AI 办的线上黑客松（11 月 12–19 日）要求用任意 AI 编程 Agent 做应用、用 Kane CLI 做验证；每个新注册的 TestMu AI 账号送 10,000 Kane CLI 免费积分，有效期一个月，不需要付费套餐，不够可在 Slack 里申请加额。Kane CLI 是用自然语言描述流程、在真实浏览器或 iOS/安卓模拟器里跑通过/失败测试的命令行工具，不是通用模型 API。参赛门槛：年满 18 岁、全球可参加、单人或最多 4 人组队；作品仓库须在 11/12 之后新建、公开 GitHub 仓库 + YouTube 演示视频 + 至少两条公开帖子。提交截止 11 月 19 日 23:59 IST（北京时间 11/20 02:29）。奖金共 3000 美元现金，第二、三名另有 250 美元 OpenAI 额度。官方未写是否要绑卡。",
+    "claim_steps": [
+      "在黑客松官网报名",
+      "用同一邮箱在 TestMu AI 注册新账号并领取 10,000 积分",
+      "用 npm 安装 Kane CLI 并跑通一个流程"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读规则并报名",
+        "detail": "打开黑客松官网，阅读规则后报名",
+        "url": "https://www.kaneclihack.sh/",
+        "note": "提交截止北京时间 11/20 02:29"
+      },
+      {
+        "step": "注册 TestMu AI 并领积分",
+        "detail": "用与报名相同的邮箱注册 TestMu AI 新账号，在 Kane CLI 页领取 10,000 积分",
+        "url": "https://www.testmuai.com/kane-cli/#creditOffer",
+        "note": "积分一个月有效"
+      },
+      {
+        "step": "安装 Kane CLI",
+        "detail": "按官网说明用 npm 全局安装 Kane CLI 并登录",
+        "url": "https://www.kaneclihack.sh/",
+        "note": ""
+      },
+      {
+        "step": "跑一个验证流程",
+        "detail": "用自然语言描述一个流程让 Kane CLI 在浏览器里跑一次",
+        "url": "https://www.kaneclihack.sh/",
+        "note": "参赛才需准备仓库、视频和两条公开帖子"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Kane CLI",
+        "action_url": "https://www.testmuai.com/kane-cli/#creditOffer"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "testing",
+      "hackathon"
+    ],
+    "barriers": [
+      "need_signup",
+      "new_user_only",
+      "hackathon"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-15T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待浏览器领取（Gmail 未见 TestMu AI 账号；是否参赛需你决定，仅领积分只需新注册）",
+      "at": "2026-11-15T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "hackglobal-2026-vultr-200usd-student-credits-20261115",
+    "title": "HackGlobal 2026 学生线上黑客松：每位参赛者送 $200 Vultr 云额度（11/15 结束）",
+    "platform": "Vultr",
+    "product": "HackGlobal 2026",
+    "model": null,
+    "type": "黑客松额度",
+    "deadline": "2026-11-16T02:00:00+08:00",
+    "url": "https://community.vultr.com/e/hackglobal-2026",
+    "source": "Vultr Community 官方活动页（2026-11-15 核对）",
+    "summary": "据 Vultr Community 官方活动页，Polaris School of Technology 主办、Vultr 赞助的全球学生线上黑客松 HackGlobal 2026 正在进行（UTC 11 月 13 日 15:00 至 15 日 18:00，即北京时间 11/16 02:00 结束），免费参加。每位参赛者可获得 200 美元免费 Vultr 额度（通过发给参赛者的 Gift code 领取，用于把后端部署到 Vultr），另有 1.25 万美元以上现金和额度奖池。门槛：仅限在校学生，任何专业均可，1–5 人组队，需在 Vultr Community 登录报名并加入 Discord；作品需部署在 Vultr Compute 实例上并提交公开 GitHub 仓库和演示视频。这是云服务器/算力额度，不是模型 API Key。活动已进行中，剩余时间很短。",
+    "claim_steps": [
+      "登录 Vultr Community，在活动页报名 HackGlobal 2026",
+      "按主办方发来的 Gift code 在 Vultr 账户里兑换额度",
+      "在 15 日结束前把项目部署到 Vultr 并在活动页提交"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开活动页",
+        "detail": "查看 HackGlobal 2026 规则与时间",
+        "url": "https://community.vultr.com/e/hackglobal-2026",
+        "note": "仅限在校学生"
+      },
+      {
+        "step": "登录并报名",
+        "detail": "用 Vultr 账号登录 Vultr Community，点报名保存名额",
+        "url": "https://community.vultr.com/e/hackglobal-2026",
+        "note": "北京时间 11/16 02:00 结束"
+      },
+      {
+        "step": "兑换 Gift code",
+        "detail": "用主办方发给参赛者的 Gift code 在 Vultr 控制台兑换 200 美元额度",
+        "url": "https://my.vultr.com/",
+        "note": "兑换问题可在活动页讨论区提问"
+      },
+      {
+        "step": "部署并提交",
+        "detail": "把后端部署到 Vultr Compute 实例，在活动页提交仓库与演示视频",
+        "url": "https://community.vultr.com/e/hackglobal-2026",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "Vultr",
+        "action_url": "https://community.vultr.com/e/hackglobal-2026"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "hackathon",
+      "cloud"
+    ],
+    "barriers": [
+      "need_student",
+      "hackathon"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-15T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "仅限在校学生且需本人报名参赛（你已有 Vultr 账号）；是否参加由你决定，剩余时间很短。",
+      "at": "2026-11-15T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "tsin-openai-codex-hackathon-100usd-credit-nov28-20261115",
+    "title": "TSIN × OpenAI Codex Hackathon（伦敦帝国理工，11/28）：每位学生参赛者送 $100 OpenAI API 额度",
+    "platform": "OpenAI",
+    "product": "Codex Hackathon（TSIN × OpenAI）",
+    "model": null,
+    "type": "黑客松额度",
+    "deadline": "2026-11-28T18:00:00+08:00",
+    "url": "https://tsin-openai-hackathon.vercel.app/",
+    "source": "Codex Hackathon 官方活动页（Thai Society Innovation Network，2026-11-15 核对）",
+    "summary": "据活动官方页，英国泰国学生组织 Thai Society Innovation Network 与 OpenAI 合办的 Codex Hackathon 于 2026 年 11 月 28 日在伦敦帝国理工学院线下举行（27 日线上开幕，有 OpenAI 工程师的 Codex 工作坊），免费参加，限 100 个名额。每位参赛者报名后可获得 100 美元 OpenAI API 额度；前三名另有 850/400/200 美元 OpenAI 额度和 ChatGPT Pro。门槛：所有队员须是在读大学生（任何专业、任何国籍），1–5 人一队，须到伦敦现场参赛，路费不报销；报名截止时间官方页未写，名额满即止，截止时间暂按活动开场（北京时间 11/28 18:00）。",
+    "claim_steps": [
+      "打开活动页，以在读大学生身份报名（可单人报名由主办方配队）",
+      "报名完成后按主办方说明领取 100 美元 OpenAI 额度",
+      "11/28 到伦敦帝国理工现场参赛"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读规则",
+        "detail": "打开活动页确认学生身份、名额与日程",
+        "url": "https://tsin-openai-hackathon.vercel.app/",
+        "note": "限 100 名在读大学生"
+      },
+      {
+        "step": "报名",
+        "detail": "按页面指引报名，单人也可报名由主办方配队",
+        "url": "https://tsin-openai-hackathon.vercel.app/",
+        "note": "名额满即止"
+      },
+      {
+        "step": "领取额度",
+        "detail": "报名完成后按主办方通知领取 100 美元 OpenAI API 额度",
+        "url": "https://tsin-openai-hackathon.vercel.app/",
+        "note": "具体发放方式以主办方通知为准"
+      },
+      {
+        "step": "现场参赛",
+        "detail": "27 日参加线上开幕与 Codex 工作坊，28 日到伦敦帝国理工现场参赛",
+        "url": "https://tsin-openai-hackathon.vercel.app/",
+        "note": "路费自理"
+      }
+    ],
+    "providers": [
+      {
+        "name": "OpenAI",
+        "action_url": "https://tsin-openai-hackathon.vercel.app/"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "hackathon",
+      "coding"
+    ],
+    "barriers": [
+      "need_student",
+      "hackathon"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-15T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "仅限在读大学生且需到伦敦现场参赛，需你本人报名；是否参加由你决定。",
+      "at": "2026-11-15T00:15:00+08:00"
     }
   }
 ]
