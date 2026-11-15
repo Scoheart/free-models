@@ -1,45 +1,125 @@
-# 免费模型 · Free Models
+# 免费 · Free
 
-汇总公开社区帖子（X、LinuxDo、V2EX 等）中的**免费 AI 模型额度与限时活动**。按 **Provider / Agent / Model** 分类，卡片上可一键跳转创建 API Key、下载 Agent 或查看模型页。
+模型、编程 Agent、VPS 的免费额度放在同一个静态站里。三个路径：
 
-## 在线页面
+| 路径 | 内容 |
+| --- | --- |
+| `/provider/` | 模型、网关、API 额度（原来的 Providers） |
+| `/agent/` | 编程 Agent、CLI、IDE 的免费额度（原来的 Agents） |
+| `/vps/` | 免费 VPS、DMIT / 搬瓦工补货、黑五优惠 |
 
-https://scoheart.github.io/free-models/
+`/` 打开 `/provider/`。手机上三个 tab 固定在顶部。
 
-## 功能
+页面标题是「免费 · 模型」「免费 · Agent」「免费 · VPS」。根页面是「免费 · Free」。
 
-- 顶部两个分类：**Providers**（模型、网关、API 额度）和 **Agents**（编程 Agent、CLI、IDE 里使用的免费额度，例如 Devin、Traycer、Claude、Claude Code、Cursor、MiniMax Code、Kiro）
-- 左侧按平台分栏，只显示当前分类里的活动：每项显示平台名、进行中的活动数量，以及自动领取状态点（绿 = 有成功，琥珀 = 需要本人操作，红 = 失败，未标记则无点）
-- 平台排序：离截止最近的在前，其余按名称
-- 搜索框在当前分类里过滤平台名和活动正文
-- 右侧是选中平台的活动：标题、截止时间（北京时间）、简介、免费条款、自动领取徽章、去领取，以及编号领取步骤
-- 地址栏 hash 记住分类和平台（例如 `#providers/groq`、`#agents/opencode`）。只写平台的旧链接（`#groq`）仍然可以打开
-- 手机上分类、搜索和平台筛选固定在顶部。平台可以用下拉框，也可以横向滑动标签条。过长的简介和领取步骤默认收起，点一下展开
+## 地址
 
-## 仓库根目录即站点
+- Netlify：https://scoheart-free.netlify.app/
+- GitHub Pages：仓库改名为 `free` 之后是 https://scoheart.github.io/free/
 
-- `index.html` / `data.js`（含 `const ITEMS = ...`）/ `app.js` / `items.json`
-- 生成源：`templates/app.js`、`templates/styles.css`、`build_index.py`、`build-site.sh`
+资源都用相对路径（`../styles.css`、`provider/`、`agent/`）。同一套文件可以放在域名根上，也可以放在 `/free/` 下面。
 
-## 本地重新生成
+## 平台链接
+
+选中的平台写在 **hash** 上，不写成多出来的路径（静态托管没有 `/provider/groq` 这个文件）：
+
+- `/provider/#groq`
+- `/agent/#opencode`
+
+带不带目录斜杠都可以。服务器如果把 `/provider` 补成 `/provider/`，hash 会留下来，结果一样。
+
+旧链接会自动换成上面的形式，并保持平台选中：
+
+| 旧 hash | 打开 |
+| --- | --- |
+| `#providers/groq` | `/provider/#groq` |
+| `#agents/opencode` | `/agent/#opencode` |
+| `#providers` | `/provider/` |
+| `#agents` | `/agent/` |
+| `#groq` | 这个平台所在的栏目。两边都有时进 `/provider/` |
+| `#opencode` | `/agent/#opencode` |
+
+写错栏目也会纠正：`/agent/#groq` 会到 `/provider/#groq`，因为 Groq 在模型页。`/vps/#providers/groq` 同样会离开 VPS 页。
+
+## 模型数据
+
+`items.json` 仍是目录源，页面读生成出来的 `data.js`（`const ITEMS`）。字段和原来一样：`claim_guide`、自动领取徽章、截止时间按北京时间显示、过期和被取代的条目隐藏、说明里的密钥打码。分类仍由 `category` / `kind` 决定，不写时按平台名和标题判断。
+
+## VPS 数据
+
+页面读 `vps-data.js`（`const VPS`），由 `vps.json` 生成。仓库里的 `vps.json` 带 `"sample": true`，页面会显示「示例数据，等待首次同步」。真实数据在本地用下面的脚本盖掉 `vps.json`，再重新构建。脚本写出的文件是 `"sample": false`。
+
+`vps.json` 顶层：
+
+| 字段 | 含义 |
+| --- | --- |
+| `schema_version` | 固定 `1` |
+| `sample` | `true` 时页面显示示例提示 |
+| `updated_at_beijing` | 页头的最后更新时间，取三份扫描时间里最晚的一个 |
+| `scanned_at_beijing` | `stock` / `black_friday` / `free_vps` 各自的扫描时间 |
+| `free_vps` | 免费 VPS 情报，只保留 `genuine: true` |
+| `stock.providers` | 固定两家：DMIT、搬瓦工 |
+| `stock.source_notes` | 监控源异常的短说明 |
+| `black_friday.official` | 各厂商官方状态 |
+| `black_friday.leads` | 第三方线索，页面标明「仅线索，未经官方确认」 |
+| `black_friday.date_note` | 日期说明 |
+
+免费条目：`id`、`provider`、`type`（`always_free` / `trial` / `student` / `paas` / `other`）、`type_label`（一直免费、试用额度、学生额度、非 root 的 PaaS）、`specs[]`（`label` + `value`）、`free_conditions`（`card_required`、`card_notes`、`region_limits`、`idle_reclaim`、`deadline`、`deadline_note`）、`official_url`、`posts[]`（`url`、`time_beijing`、`author`、`role`）、`notes`。X 上的帖子显示为「据 X 上的帖子」。
+
+补货套餐：`key`、`display_name`、`config`、`specs[]`、`price`、`stock`（`in_stock` 绿色「有货」，其他灰色「缺货」）、`limited`、`last_restock`、`order_urls[]`（`label` + `url`）。搬瓦工同时给 `bandwagonhost.com` 和 `bwh81.net`。对不上目录时价格和链接留空，页面不会编一个价格。
+
+厂商上还有 `checked_at_beijing`、`official_url`、`sources[]`（`name`、`url`、`checked_at_beijing`）。DMIT 看来源 `vpsrestock.com` 和 `t.me/dmitnews`，搬瓦工看 `vpsrestock.com` 和 `stock.bwg.la`。
+
+黑五官方：`provider`、`status`、`status_label`（现在能下单 / 预告未开卖 / 今年不办）、`status_kind`（`now` / `soon` / `off`）、`orderable_now`、`summary`、`sources[]`、`sale_hub`、`plans[]`（`name`、`price`、`specs`、`url`）。
+
+## 从监控目录生成 vps.json
+
+```bash
+python3 scripts/build_vps.py --in /path/to/vps-watch --out vps.json
+```
+
+`--in` 里只读这三个文件（`schema_version` 1，时间字段是北京时间 `*_beijing`）：
+
+- `stock-state.json`：`scanned_at_beijing`、`dmit`、`bandwagonhost`。套餐在 `watched_plans`。搬瓦工的价格和下单链接不在套餐上，脚本用 `pid`、`display_name`、`aliases` 去 `catalog_stock_bwg_la` 和 `catalog_vpsrestock` 里对。先对 `pid`，再对规范化后的名字。对不上就留空。
+- `bf-seen.json`：`official`、`leads_third_party_only`、`black_friday_2026_date_note`。
+- `free-vps-seen.json`：`items`。只输出 `genuine` 为 true 的条目。`dropped` 和 `watch_accounts` 不输出。
+
+同目录的 `signups.json` 不会被打开。缺字段就空着。邮箱、密码、密钥样式的字符串不会写进结果。
+
+然后：
 
 ```bash
 ./build-site.sh
-# 镜像 site/ → 仓库根目录后推送 main
 ```
 
-## 数据字段
+## 部署
 
-每条含：`providers[]` / `agents[]` / `models[]`（`name` + `action_url`）、`scenes[]`、`barriers[]`，以及标题、摘要、截止时间等。只收录真实公开帖子，不编造；免费额度、资格、范围与截止时间优先核对官方条款。第三方转接服务明确标注风险；无法确认的旧条目标记待核实，不臆造截止日。
+`./build-site.sh` 生成 `dist/`。把这个目录整个上传到 Netlify（站点 scoheart-free，手动部署，不是 Git 构建）。脚本也会把同样的文件抄到仓库根目录，方便 GitHub Pages 继续从 main 分支的根目录发布。
 
-平台名优先用 `platform`。没有该字段时，从领取链接的主机名推断（优先 `providers` / `models` / `agents` 的 `action_url`，跳过 x.com 等帖子来源），再退回条目 `url`。常见主机映射成可读名称，例如 `console.groq.com` → Groq，`aistudio.google.com` → Google AI Studio，`openrouter.ai` → OpenRouter，带 `ai-gateway` 的 vercel.com → Vercel AI Gateway。
+需要发布的文件就是 `dist/` 里的这些，不要带上 `templates/` 或 `scripts/`：
 
-领取步骤优先用 `claim_guide`：对象数组，每项含 `step`（短标题）、`detail`（可多句）、可选 `url`、可选 `note`（如需要手机号或绑卡，页面显示为提醒）。没有 `claim_guide` 时用 `claim_steps`（字符串，或字符串数组；字符串按换行拆，只有一行时再按 `；` / `;` 拆）。都没有时，若 `free_terms`（否则 `summary`）能拆成多步，或正文像领取说明，则用作步骤。步骤正文里如果要保留分号，写成数组，不要只放在一个字符串里。
+```
+index.html
+provider/index.html
+agent/index.html
+vps/index.html
+app.js
+styles.css
+data.js
+vps-data.js
+items.json
+vps.json
+_redirects
+.nojekyll
+```
 
-可选字段 `category`（或 `kind`）为 `providers` 或 `agents`，用来改自动分类。不写时，页面用平台名、标题开头和产品名判断：已知的编程 Agent、CLI、IDE 归入 Agents，名字像 `Code` / `CLI` / `IDE` / `Desktop` 的新工具也会归入 Agents，其余（包括之后每小时新增的网关）归入 Providers。
+`_redirects` 把 `/` 强制转到 `/provider/`，并把三个栏目补上斜杠。GitHub Pages 不读这个文件，根目录的 `index.html` 负责同一件事。`.nojekyll` 让 Pages 不要吞掉 `_redirects`。
 
-可选字段 `auto_claim` 记录自动领取结果：`status` 为 `success`、`failed` 或 `needs_user`，`note` 为简短中文说明，`at` 为北京时间字符串。有该字段时显示徽章：已自动领取（绿）、自动申请失败（红）、需要你本人操作（琥珀）；没有该字段则不显示徽章。`note` 与 `at` 跟在徽章后面。同一平台只要有一条成功，标签上的状态点就是绿色；否则有待操作则为琥珀，有失败则为红色。页面不展示任何 API Key，说明文字里看起来像密钥的字符串会被替换成 `[redacted]`。`expired` 为真、截止时间已过，或带 `superseded_by` 的条目不会出现。
+本地看：
 
-## 更新流程
+```bash
+./build-site.sh
+python3 -m http.server -d dist 8765
+```
 
-扫描 X / LinuxDo / V2EX 等社区 → 核对官方来源并去重 → 写入 `items.json` → 编辑运行 `build-site.sh` → 推送 `main` → Pages 自动更新
+要模拟 Pages 的 `/free/` 前缀，把 `dist` 放到一个叫 `free` 的目录下再开静态服务，然后打开 `/free/provider/`。

@@ -1,4 +1,4 @@
-/* free-models — platforms on the left, offer details on the right */
+/* free — /provider and /agent keep a platform in the hash (#groq). /vps is separate. */
 (function (root) {
   "use strict";
 
@@ -1395,11 +1395,501 @@
   }
 
   function kindLabel(kind) {
-    return kind === "agents" ? "Agents" : "Providers";
+    return kind === "agents" ? "Agent" : "模型";
   }
 
-  function boot() {
-    var tabsEl, detailEl, qEl, selectEl, statsEl, railEl, now, all, allGroups, byKind, state, initial, i;
+  function currentPage() {
+    var value = "";
+    if (typeof document !== "undefined" && document.body && document.body.getAttribute) {
+      value = document.body.getAttribute("data-page") || "";
+    }
+    if (value === "provider" || value === "agent" || value === "vps" || value === "home") return value;
+    return "home";
+  }
+
+  // Old hashes: #providers/groq, #agents/opencode, #providers, #agents.
+  // Current hashes: #groq on /provider, #opencode on /agent.
+  function parseRouteHash(raw) {
+    var match, key, slug, page, legacy;
+    raw = String(raw || "").trim().replace(/^\/+|\/+$/g, "");
+    if (!raw) return { page: "", slug: "", legacy: false };
+    match = raw.match(/^(providers|agents|provider|agent|vps)(?:\/(.*))?$/);
+    if (!match) return { page: "", slug: raw, legacy: false };
+    key = match[1];
+    slug = String(match[2] || "").replace(/^\/+|\/+$/g, "");
+    page = key === "agents" || key === "agent" ? "agent" : key === "vps" ? "vps" : "provider";
+    legacy = key === "providers" || key === "agents";
+    return { page: page, slug: slug, legacy: legacy };
+  }
+
+  function sectionUrl(page, slug, fromPage) {
+    var origin, dir, prefix, url;
+    origin = fromPage || currentPage();
+    dir = page === "agent" ? "agent/" : page === "vps" ? "vps/" : "provider/";
+    prefix = origin === "home" ? "" : "../";
+    url = prefix + dir;
+    if (slug) url += "#" + encodeURIComponent(slug);
+    return url;
+  }
+
+  function prepareCatalog() {
+    var now, all, allGroups;
+    now = Date.now();
+    all = typeof ITEMS !== "undefined" && Array.isArray(ITEMS) ? ITEMS : [];
+    allGroups = buildGroups(all, now);
+    return {
+      now: now,
+      all: all,
+      allGroups: allGroups,
+      byKind: {
+        providers: groupsInKind(allGroups, "providers"),
+        agents: groupsInKind(allGroups, "agents"),
+      },
+    };
+  }
+
+  function resolvePageForSlug(slug, byKind) {
+    if (!slug || !byKind) return "";
+    if (groupBySlug(byKind.providers || [], slug)) return "provider";
+    if (groupBySlug(byKind.agents || [], slug)) return "agent";
+    return "";
+  }
+
+  function decideRoute(parsed, byKind) {
+    var here, other, found;
+    parsed = parsed || { page: "", slug: "", legacy: false };
+    byKind = byKind || { providers: [], agents: [] };
+    if (parsed.page === "vps") return { page: "vps", slug: "" };
+    // An explicit section wins when that platform exists there. A hash that
+    // names the wrong section (for example #agents/groq) follows the platform.
+    // A bare slug prefers the model catalog when the name exists in both.
+    if (parsed.page === "provider" || parsed.page === "agent") {
+      here = parsed.page === "agent" ? "agents" : "providers";
+      other = parsed.page === "agent" ? "providers" : "agents";
+      if (parsed.slug && !groupBySlug(byKind[here] || [], parsed.slug) && groupBySlug(byKind[other] || [], parsed.slug)) {
+        return { page: other === "agents" ? "agent" : "provider", slug: parsed.slug };
+      }
+      return { page: parsed.page, slug: parsed.slug || "" };
+    }
+    if (parsed.slug) {
+      found = resolvePageForSlug(parsed.slug, byKind);
+      if (found) return { page: found, slug: parsed.slug };
+    }
+    return { page: "", slug: parsed.slug || "" };
+  }
+
+  // Where a hash should go once the visitor is already on a catalog page.
+  // A bare slug stays put when this page has that platform, so /agent/#opencode
+  // does not bounce just because OpenCode also has a provider offer.
+  function routeOnPage(parsed, pageName, byKind) {
+    var pageKind, decided, localHit, otherKind, otherHit, slug;
+    parsed = parsed || { page: "", slug: "", legacy: false };
+    byKind = byKind || { providers: [], agents: [] };
+    pageKind = pageName === "agent" ? "agents" : "providers";
+    if (parsed.page === "vps") return { redirect: "vps", slug: "" };
+    decided = decideRoute(parsed, byKind);
+    localHit = !!(parsed.slug && groupBySlug(byKind[pageKind] || [], parsed.slug));
+    if (parsed.page && parsed.page !== pageName) {
+      otherKind = parsed.page === "agent" ? "agents" : "providers";
+      otherHit = !!(parsed.slug && groupBySlug(byKind[otherKind] || [], parsed.slug));
+      if (!parsed.slug || otherHit || !localHit) {
+        if (decided.page && decided.page !== pageName) return { redirect: decided.page, slug: parsed.slug || "" };
+      }
+    } else if (parsed.page !== pageName && decided.page && decided.page !== pageName && !localHit) {
+      return { redirect: decided.page, slug: decided.slug || "" };
+    }
+    slug = "";
+    if (parsed.page === pageName || localHit) slug = parsed.slug || "";
+    else if (decided.page === pageName) slug = decided.slug || "";
+    if (slug && !groupBySlug(byKind[pageKind] || [], slug)) slug = "";
+    return { redirect: "", slug: slug };
+  }
+
+  function redactContact(s) {
+    return redactSecrets(String(s == null ? "" : s)).replace(
+      /[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}/g,
+      "[redacted]"
+    );
+  }
+
+  function textOf(value) {
+    var t = redactContact(value == null ? "" : value).replace(/\s+/g, " ").trim();
+    if (!t || t === "[redacted]") return "";
+    return t;
+  }
+
+  function typeLabelOf(item) {
+    var label, kind;
+    label = textOf(item && item.type_label);
+    if (label) return label;
+    kind = norm(item && item.type);
+    if (kind === "always_free" || kind === "always free") return "一直免费";
+    if (kind === "trial" || kind === "trial credit") return "试用额度";
+    if (kind === "student" || kind === "education") return "学生额度";
+    if (kind === "paas" || kind === "non root paas") return "非 root 的 PaaS";
+    label = textOf(item && item.type);
+    return label || "其他";
+  }
+
+  function statusView(entry) {
+    var label, kind, raw;
+    entry = entry || {};
+    label = textOf(entry.status_label);
+    kind = textOf(entry.status_kind);
+    raw = norm(entry.status).replace(/[\s-]+/g, "_");
+    if (!label) {
+      if (entry.orderable_now === true) label = "现在能下单";
+      else if (raw.indexOf("no_black_friday") !== -1 || raw.indexOf("not_this_year") !== -1) label = "今年不办";
+      else label = "预告未开卖";
+    }
+    if (kind !== "now" && kind !== "off" && kind !== "soon") {
+      kind = label === "现在能下单" ? "now" : label === "今年不办" ? "off" : "soon";
+    }
+    return { label: label, kind: kind };
+  }
+
+  function stockView(stock) {
+    if (stock === "in_stock") return { cls: "in", label: "有货" };
+    return { cls: "out", label: "缺货" };
+  }
+
+  function renderDefList(rows, className) {
+    var html, i;
+    if (!rows.length) return "";
+    html = '<dl class="' + className + '">';
+    for (i = 0; i < rows.length; i++) {
+      html += "<div><dt>" + escapeHtml(textOf(rows[i][0])) + "</dt><dd>" + escapeHtml(textOf(rows[i][1])) + "</dd></div>";
+    }
+    html += "</dl>";
+    return html;
+  }
+
+  function conditionRows(raw) {
+    var c, rows, card;
+    c = raw && typeof raw === "object" ? raw : {};
+    rows = [];
+    card = "";
+    if (c.card_required === true) card = "要绑卡";
+    else if (c.card_required === false) card = "不绑卡";
+    if (textOf(c.card_notes)) card = card ? card + " · " + textOf(c.card_notes) : textOf(c.card_notes);
+    if (card) rows.push(["绑卡", card]);
+    if (textOf(c.region_limits)) rows.push(["区域", c.region_limits]);
+    if (textOf(c.idle_reclaim)) rows.push(["闲置回收", c.idle_reclaim]);
+    if (textOf(c.deadline)) rows.push(["截止", c.deadline]);
+    if (textOf(c.deadline_note)) rows.push(["截止说明", c.deadline_note]);
+    return rows;
+  }
+
+  function postLabel(url) {
+    var host = hostnameOf(url);
+    if (host === "x.com" || host === "twitter.com" || host === "mobile.twitter.com") return "据 X 上的帖子";
+    return "来源帖子";
+  }
+
+  function renderPosts(posts) {
+    var html, i, post, href, bits;
+    posts = asList(posts);
+    html = "";
+    for (i = 0; i < posts.length; i++) {
+      post = posts[i] || {};
+      href = safeUrl(post.url);
+      if (!href) continue;
+      bits = postLabel(href);
+      if (textOf(post.time_beijing)) bits += " · " + textOf(post.time_beijing);
+      if (textOf(post.author)) bits += " · " + textOf(post.author);
+      html +=
+        '<a href="' +
+        escapeHtml(href) +
+        '" target="_blank" rel="noopener noreferrer">' +
+        escapeHtml(bits) +
+        "</a>";
+    }
+    if (!html) return "";
+    return '<div class="post-list">' + html + "</div>";
+  }
+
+  function renderOrderLinks(links) {
+    var html, i, link, href, label;
+    links = asList(links);
+    html = "";
+    for (i = 0; i < links.length; i++) {
+      link = links[i] || {};
+      href = safeUrl(link.url);
+      if (!href) continue;
+      label = textOf(link.label) || linkLabel(href);
+      html +=
+        '<a class="guide-link" href="' +
+        escapeHtml(href) +
+        '" target="_blank" rel="noopener noreferrer">' +
+        escapeHtml(label) +
+        "</a>";
+    }
+    if (!html) return "";
+    return '<p class="plan-links">' + html + "</p>";
+  }
+
+  function renderExternal(url, label, className) {
+    var href = safeUrl(url);
+    if (!href) return "";
+    return (
+      '<a class="' +
+      className +
+      '" href="' +
+      escapeHtml(href) +
+      '" target="_blank" rel="noopener noreferrer">' +
+      escapeHtml(label) +
+      "</a>"
+    );
+  }
+
+  function renderSpecRows(specs) {
+    var rows, i, spec, label, value;
+    rows = [];
+    specs = asList(specs);
+    for (i = 0; i < specs.length; i++) {
+      spec = specs[i] || {};
+      label = textOf(spec.label);
+      value = textOf(spec.value);
+      if (!label && !value) continue;
+      rows.push([label || "说明", value]);
+    }
+    return renderDefList(rows, "spec-grid");
+  }
+
+  function renderFreeItem(item) {
+    var html, href;
+    html = '<article class="offer vps-card">';
+    html += '<div class="offer-top"><div class="offer-heading">';
+    html += '<span class="type-pill">' + escapeHtml(typeLabelOf(item)) + "</span>";
+    html += '<h3 class="offer-title">' + escapeHtml(textOf(item.provider) || "未命名") + "</h3>";
+    html += "</div><div class=\"offer-actions\">";
+    href = renderExternal(item.official_url, "官网", "go");
+    if (href) html += href;
+    html += "</div></div>";
+    html += renderSpecRows(item.specs);
+    html += renderDefList(conditionRows(item.free_conditions), "cond-grid");
+    html += renderPosts(item.posts);
+    if (textOf(item.notes)) html += '<p class="body">' + escapeHtml(textOf(item.notes)) + "</p>";
+    html += "</article>";
+    return html;
+  }
+
+  function renderPlan(plan) {
+    var view, html, price, links;
+    view = stockView(plan.stock);
+    html = '<article class="plan">';
+    html += '<div class="plan-top">';
+    html += '<span class="stock-pill ' + view.cls + '">' + escapeHtml(view.label) + "</span>";
+    html += "<h4>" + escapeHtml(textOf(plan.display_name) || textOf(plan.key) || "套餐") + "</h4>";
+    if (plan.limited === true) html += '<span class="limited-pill">限量</span>';
+    html += "</div>";
+    if (textOf(plan.config)) html += '<p class="plan-config">' + escapeHtml(textOf(plan.config)) + "</p>";
+    else html += renderSpecRows(plan.specs);
+    price = textOf(plan.price);
+    links = renderOrderLinks(plan.order_urls);
+    if (price) html += '<p class="plan-price">' + escapeHtml(price) + "</p>";
+    if (textOf(plan.last_restock)) html += '<p class="plan-restock">最近补货 ' + escapeHtml(textOf(plan.last_restock)) + "</p>";
+    html += links;
+    if (!price && !links) html += '<p class="quiet-line">目录里没有对应的价格和下单链接</p>';
+    html += "</article>";
+    return html;
+  }
+
+  function renderSourceLine(provider) {
+    var html, i, src, href, bits, label;
+    html = "";
+    src = asList(provider.sources);
+    for (i = 0; i < src.length; i++) {
+      href = safeUrl(src[i] && src[i].url);
+      label = textOf(src[i] && src[i].name) || (href ? hostnameOf(href) : "");
+      if (!label && !href) continue;
+      if (html) html += "、";
+      if (href) {
+        html += '<a href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(label || href) + "</a>";
+      } else html += escapeHtml(label);
+    }
+    bits = textOf(provider.checked_at_beijing);
+    if (!html && !bits) return "";
+    return (
+      '<p class="source-line">数据来源 ' +
+      (html || "未标明") +
+      (bits ? " · 最近检查 " + escapeHtml(bits.indexOf("北京") === -1 ? bits + "（北京时间）" : bits) : "") +
+      "</p>"
+    );
+  }
+
+  function renderVendor(provider) {
+    var plans, html, i;
+    provider = provider || {};
+    plans = asList(provider.plans);
+    html = '<section class="offer vendor">';
+    html += '<div class="vendor-head"><h3>' + escapeHtml(textOf(provider.name) || "厂商") + "</h3>";
+    html += renderExternal(provider.official_url, "官网", "source");
+    html += "</div>";
+    html += renderSourceLine(provider);
+    if (!plans.length) html += '<p class="quiet-line">这次检查没有套餐记录。</p>';
+    else {
+      html += '<div class="plan-list">';
+      for (i = 0; i < plans.length; i++) html += renderPlan(plans[i] || {});
+      html += "</div>";
+    }
+    html += "</section>";
+    return html;
+  }
+
+  function renderBfPlan(plan) {
+    var html, href;
+    plan = plan || {};
+    html = '<li class="bf-plan">';
+    html += "<strong>" + escapeHtml(textOf(plan.name) || "套餐") + "</strong>";
+    if (textOf(plan.price)) html += "<span>" + escapeHtml(textOf(plan.price)) + "</span>";
+    if (textOf(plan.specs)) html += '<span class="plan-config">' + escapeHtml(textOf(plan.specs)) + "</span>";
+    href = safeUrl(plan.url);
+    if (href) {
+      html +=
+        '<a class="guide-link" href="' +
+        escapeHtml(href) +
+        '" target="_blank" rel="noopener noreferrer">下单</a>';
+    }
+    html += "</li>";
+    return html;
+  }
+
+  function renderOfficial(entry) {
+    var view, html, sources, i, href, plans, links;
+    view = statusView(entry);
+    html = '<article class="offer bf-card">';
+    html += '<div class="offer-top"><div class="offer-heading">';
+    html += '<span class="status-pill ' + view.kind + '">' + escapeHtml(view.label) + "</span>";
+    html += '<h3 class="offer-title">' + escapeHtml(textOf(entry.provider) || "厂商") + "</h3>";
+    html += "</div>";
+    if (safeUrl(entry.sale_hub)) html += '<div class="offer-actions">' + renderExternal(entry.sale_hub, "活动页", "go") + "</div>";
+    html += "</div>";
+    if (textOf(entry.summary)) html += '<p class="body">' + escapeHtml(textOf(entry.summary)) + "</p>";
+    sources = asList(entry.sources);
+    links = "";
+    for (i = 0; i < sources.length; i++) {
+      href = safeUrl(sources[i] && sources[i].url);
+      if (!href) continue;
+      links +=
+        '<a href="' +
+        escapeHtml(href) +
+        '" target="_blank" rel="noopener noreferrer">' +
+        escapeHtml(textOf(sources[i].title) || "官方来源") +
+        "</a>";
+    }
+    if (links) html += '<p class="source-links">' + links + "</p>";
+    plans = asList(entry.plans);
+    if (plans.length) {
+      html += '<p class="kicker block">可下单套餐</p><ul class="bf-list">';
+      for (i = 0; i < plans.length; i++) html += renderBfPlan(plans[i]);
+      html += "</ul>";
+    }
+    html += "</article>";
+    return html;
+  }
+
+  function renderLead(lead) {
+    var html, href;
+    lead = lead || {};
+    html = '<article class="lead">';
+    href = safeUrl(lead.url);
+    if (href) {
+      html +=
+        '<a href="' +
+        escapeHtml(href) +
+        '" target="_blank" rel="noopener noreferrer">' +
+        escapeHtml(textOf(lead.source) || "来源") +
+        "</a>";
+    } else if (textOf(lead.source)) html += "<strong>" + escapeHtml(textOf(lead.source)) + "</strong>";
+    if (textOf(lead.note)) html += "<p>" + escapeHtml(textOf(lead.note)) + "</p>";
+    html += "</article>";
+    return html;
+  }
+
+  function updatedLine(data) {
+    var t = "";
+    if (data && data.updated_at_beijing) t = textOf(data.updated_at_beijing);
+    if (!t && data && data.scanned_at_beijing && typeof data.scanned_at_beijing === "object") {
+      t = textOf(data.scanned_at_beijing.black_friday || data.scanned_at_beijing.stock || data.scanned_at_beijing.free_vps);
+    }
+    if (!t) return "最后更新时间未知";
+    if (t.indexOf("北京") === -1) t += "（北京时间）";
+    return "最后更新 " + t;
+  }
+
+  function renderVps(data) {
+    var html, items, stock, providers, i, bf, official, leads, notes;
+    data = data && typeof data === "object" ? data : {};
+    html = '<div class="detail-inner vps-inner">';
+    if (data.sample === true || String(data.sample).toLowerCase() === "true") {
+      html += '<p class="sample-banner" role="status">示例数据，等待首次同步</p>';
+    }
+    html += '<nav class="vps-jump" aria-label="本页"><a href="#free">免费方案</a><a href="#stock">补货监控</a><a href="#bf">黑五优惠</a></nav>';
+    items = asList(data.free_vps);
+    html += '<section class="vps-section" id="free"><header class="section-head"><p class="kicker">免费方案</p><h2>免费 VPS</h2>';
+    html += "<p>一直免费、试用额度、学生额度，以及没有完整 root 的 PaaS。</p></header>";
+    if (!items.length) html += '<p class="quiet-line">暂时没有免费 VPS 情报。</p>';
+    for (i = 0; i < items.length; i++) html += renderFreeItem(items[i] || {});
+    html += "</section>";
+
+    stock = data.stock && typeof data.stock === "object" ? data.stock : {};
+    providers = asList(stock.providers);
+    html += '<section class="vps-section" id="stock"><header class="section-head"><p class="kicker">库存</p><h2>补货监控</h2>';
+    html += "<p>DMIT 和搬瓦工。有货是绿色，缺货是灰色。</p></header>";
+    notes = asList(stock.source_notes);
+    for (i = 0; i < notes.length; i++) {
+      if (textOf(notes[i])) html += '<p class="source-note">' + escapeHtml(textOf(notes[i])) + "</p>";
+    }
+    if (!providers.length) html += '<p class="quiet-line">暂时没有补货记录。</p>';
+    for (i = 0; i < providers.length; i++) html += renderVendor(providers[i]);
+    html += "</section>";
+
+    bf = data.black_friday && typeof data.black_friday === "object" ? data.black_friday : {};
+    official = asList(bf.official);
+    leads = asList(bf.leads);
+    html += '<section class="vps-section" id="bf"><header class="section-head"><p class="kicker">优惠</p><h2>黑五优惠</h2>';
+    html += "<p>现在能下单、预告未开卖，或今年不办。可下单的套餐跟在官方来源后面。</p></header>";
+    if (textOf(bf.date_note)) html += '<p class="date-note">' + escapeHtml(textOf(bf.date_note)) + "</p>";
+    if (!official.length) html += '<p class="quiet-line">暂时没有官方黑五状态。</p>';
+    for (i = 0; i < official.length; i++) html += renderOfficial(official[i]);
+    html += '<section class="leads"><h3>第三方线索</h3><p class="disclaimer">仅线索，未经官方确认</p>';
+    if (!leads.length) html += '<p class="quiet-line">这次没有单独的第三方线索。</p>';
+    for (i = 0; i < leads.length; i++) html += renderLead(leads[i]);
+    html += "</section></section></div>";
+    return html;
+  }
+
+  function bootVps() {
+    var parsed, detail, stats, data;
+    parsed = parseRouteHash(readHash());
+    if ((parsed.page === "provider" || parsed.page === "agent") && typeof location !== "undefined") {
+      location.replace(sectionUrl(parsed.page, parsed.slug, "vps"));
+      return;
+    }
+    detail = document.getElementById("detail");
+    stats = document.getElementById("stats");
+    data = typeof VPS !== "undefined" && VPS && typeof VPS === "object" ? VPS : {};
+    if (detail) detail.innerHTML = renderVps(data);
+    if (stats) stats.textContent = updatedLine(data);
+    if (parsed.slug && document.getElementById(parsed.slug) && document.getElementById(parsed.slug).scrollIntoView) {
+      document.getElementById(parsed.slug).scrollIntoView();
+    }
+  }
+
+  function bootHome() {
+    var prepared, decided, page, slug;
+    prepared = prepareCatalog();
+    decided = decideRoute(parseRouteHash(readHash()), prepared.byKind);
+    page = decided.page || "provider";
+    slug = page === "provider" || page === "agent" ? decided.slug || "" : "";
+    if (slug && !resolvePageForSlug(slug, prepared.byKind)) slug = "";
+    if (typeof location !== "undefined") location.replace(sectionUrl(page, slug, "home"));
+  }
+
+  function bootCatalog() {
+    var tabsEl, detailEl, qEl, selectEl, statsEl, railEl, now, all, allGroups, byKind, state, i;
+    var pageName, pageKind, route, prepared;
 
     if (typeof document === "undefined") return;
     tabsEl = document.getElementById("tabs");
@@ -1410,40 +1900,34 @@
     railEl = document.getElementById("tab-rail");
     if (!tabsEl || !detailEl) return;
 
-    now = Date.now();
-    all = typeof ITEMS !== "undefined" && Array.isArray(ITEMS) ? ITEMS : [];
-    allGroups = buildGroups(all, now);
-    byKind = {
-      providers: groupsInKind(allGroups, "providers"),
-      agents: groupsInKind(allGroups, "agents"),
-    };
-    initial = parseHash(readHash());
+    prepared = prepareCatalog();
+    now = prepared.now;
+    all = prepared.all;
+    allGroups = prepared.allGroups;
+    byKind = prepared.byKind;
+    pageName = currentPage() === "agent" ? "agent" : "provider";
+    pageKind = pageName === "agent" ? "agents" : "providers";
+    route = routeOnPage(parseRouteHash(readHash()), pageName, byKind);
+    if (route.redirect && typeof location !== "undefined") {
+      location.replace(sectionUrl(route.redirect, route.slug, pageName));
+      return;
+    }
     state = {
       query: "",
-      slug: initial.slug,
-      kind: initial.kind === "agents" ? "agents" : "providers",
+      slug: route.slug || "",
+      kind: pageKind,
       rendered: "",
     };
 
-    function hashFor(kind, slug) {
-      return (kind === "agents" ? "agents" : "providers") + "/" + (slug || "");
-    }
-
-    function writeHash(kind, slug, mode) {
-      var url, next;
+    function writeHash(slug, mode) {
+      var url, next, current;
       if (typeof history === "undefined" || typeof location === "undefined") return;
-      next = hashFor(kind, slug);
-      if (readHash() === next) return;
-      url = location.pathname + location.search + "#" + next;
-      if (mode === "push" && history.pushState) history.pushState({ kind: kind, slug: slug }, "", url);
-      else if (history.replaceState) history.replaceState({ kind: kind, slug: slug }, "", url);
-    }
-
-    function inferKind(slug) {
-      if (slug && groupBySlug(byKind.agents, slug) && !groupBySlug(byKind.providers, slug)) return "agents";
-      if (slug && groupBySlug(byKind.providers, slug)) return "providers";
-      if (slug && groupBySlug(byKind.agents, slug)) return "agents";
-      return state.kind === "agents" ? "agents" : "providers";
+      next = slug ? "#" + encodeURIComponent(slug) : "";
+      current = location.hash || "";
+      if (current === next) return;
+      url = location.pathname + location.search + next;
+      if (mode === "push" && history.pushState) history.pushState({ slug: slug }, "", url);
+      else if (history.replaceState) history.replaceState({ slug: slug }, "", url);
     }
 
     function scopedGroups(kind) {
@@ -1451,33 +1935,25 @@
     }
 
     function otherKindHint(kind, query) {
-      var other, found, label;
+      var other, found, label, slug, href;
       if (!query) return "";
       other = kind === "agents" ? "providers" : "agents";
       found = filterGroups(scopedGroups(other), query);
       if (!found.length) return "";
       label = kindLabel(other);
+      slug = found.length === 1 ? found[0].slug : "";
+      href = sectionUrl(other === "agents" ? "agent" : "provider", slug, pageName);
       return (
         '<p class="empty-switch">' +
         escapeHtml(label) +
         " 里有 " +
         countOffers(found) +
-        ' 项匹配。<button type="button" class="jump-kind" data-kind="' +
-        other +
+        ' 项匹配。<a class="jump-kind" href="' +
+        escapeHtml(href) +
         '">切换到 ' +
         escapeHtml(label) +
-        "</button></p>"
+        "</a></p>"
       );
-    }
-
-    function syncKindButtons(kind) {
-      var buttons, i, on;
-      buttons = document.querySelectorAll ? document.querySelectorAll(".kind") : [];
-      for (i = 0; i < buttons.length; i++) {
-        on = buttons[i].getAttribute("data-kind") === kind;
-        buttons[i].setAttribute("aria-selected", on ? "true" : "false");
-        buttons[i].tabIndex = on ? 0 : -1;
-      }
     }
 
     function setKindCounts() {
@@ -1492,25 +1968,15 @@
 
     function render() {
       var groups, base, slug, group, btn, buttons, i, shown, hidden, kind;
-      if (state.slug && !initial.kind) state.kind = inferKind(state.slug);
-      initial = { kind: "set" };
-      kind = state.kind === "agents" ? "agents" : "providers";
+      kind = pageKind;
       state.kind = kind;
       base = scopedGroups(kind);
-      if (state.slug && !groupBySlug(base, state.slug) && !state.query) {
-        if (groupBySlug(scopedGroups(kind === "agents" ? "providers" : "agents"), state.slug)) {
-          kind = inferKind(state.slug);
-          state.kind = kind;
-          base = scopedGroups(kind);
-        }
-      }
       groups = filterGroups(base, state.query);
       slug = "";
       if (state.slug && groupBySlug(groups, state.slug)) slug = state.slug;
       else if (groups.length) slug = groups[0].slug;
       if (!state.query) state.slug = slug;
       group = groupBySlug(groups, slug);
-      syncKindButtons(kind);
       tabsEl.setAttribute("aria-label", kindLabel(kind) + " 平台");
       tabsEl.innerHTML = groups.length ? renderTabs(groups, slug) : '<p class="tabs-empty">没有匹配的平台</p>';
       if (selectEl) {
@@ -1640,23 +2106,11 @@
       }
     }
 
-    function chooseKind(kind, mode) {
-      var base;
-      if (kind !== "agents" && kind !== "providers") return;
-      state.kind = kind;
-      base = scopedGroups(kind);
-      if (!groupBySlug(base, state.slug)) state.slug = base.length ? base[0].slug : "";
-      state.query = qEl ? qEl.value : state.query;
-      state.rendered = "";
-      writeHash(state.kind, state.slug, mode || "push");
-      render();
-    }
-
     tabsEl.addEventListener("click", function (e) {
       var slug = slugFromEvent(e.target);
       if (!slug) return;
       state.slug = slug;
-      writeHash(state.kind, slug, "push");
+      writeHash(slug, "push");
       state.rendered = "";
       render();
     });
@@ -1680,7 +2134,7 @@
       e.preventDefault();
       buttons[i].focus();
       state.slug = buttons[i].getAttribute("data-slug");
-      writeHash(state.kind, state.slug, "push");
+      writeHash(state.slug, "push");
       state.rendered = "";
       render();
     });
@@ -1699,25 +2153,16 @@
     if (selectEl) {
       selectEl.addEventListener("change", function () {
         state.slug = selectEl.value;
-        writeHash(state.kind, state.slug, "push");
+        writeHash(state.slug, "push");
         state.rendered = "";
         render();
       });
     }
 
     document.addEventListener("click", function (e) {
-      var node, kind, textEl;
+      var node, textEl;
       node = e.target;
       while (node && node !== document) {
-        if (node.classList && node.classList.contains("kind") && node.getAttribute("data-kind")) {
-          kind = node.getAttribute("data-kind");
-          if (kind !== state.kind) chooseKind(kind, "push");
-          return;
-        }
-        if (node.classList && node.classList.contains("jump-kind")) {
-          chooseKind(node.getAttribute("data-kind"), "push");
-          return;
-        }
         if (node.classList && node.classList.contains("fold-toggle")) {
           textEl = node.previousSibling;
           while (textEl && textEl.nodeType !== 1) textEl = textEl.previousSibling;
@@ -1744,43 +2189,18 @@
       }, true);
     }
 
-    function onKindKey(e) {
-      var key, buttons, i, next;
-      key = e.key || e.which;
-      if (key !== "ArrowRight" && key !== "ArrowLeft" && key !== "Home" && key !== "End") return;
-      buttons = [];
-      var nodes = document.querySelectorAll(".kind");
-      for (i = 0; i < nodes.length; i++) buttons.push(nodes[i]);
-      if (!buttons.length) return;
-      i = state.kind === "agents" ? 1 : 0;
-      if (key === "Home") i = 0;
-      else if (key === "End") i = 1;
-      else if (key === "ArrowRight") i = Math.min(1, i + 1);
-      else i = Math.max(0, i - 1);
-      next = buttons[i];
-      if (!next) return;
-      e.preventDefault();
-      next.focus();
-      chooseKind(next.getAttribute("data-kind"), "push");
-    }
-
-    var kindButtons = document.querySelectorAll(".kind");
-    for (i = 0; i < kindButtons.length; i++) kindButtons[i].addEventListener("keydown", onKindKey);
-
     function onNavigate() {
-      var parsed, kindBase;
-      parsed = parseHash(readHash());
-      state.slug = parsed.slug;
-      if (parsed.kind) state.kind = parsed.kind;
-      else if (parsed.slug) state.kind = inferKind(parsed.slug);
-      kindBase = scopedGroups(state.kind);
-      if (parsed.slug && !groupBySlug(kindBase, parsed.slug) && groupBySlug(allGroups, parsed.slug)) {
-        state.query = "";
-        if (qEl) qEl.value = "";
-        state.kind = inferKind(parsed.slug);
+      var parsed, decided;
+      parsed = parseRouteHash(readHash());
+      decided = routeOnPage(parsed, pageName, byKind);
+      if (decided.redirect && typeof location !== "undefined") {
+        location.replace(sectionUrl(decided.redirect, decided.slug, pageName));
+        return;
       }
+      state.slug = decided.slug || "";
       state.rendered = "";
       render();
+      writeHash(state.slug, "replace");
     }
 
     if (typeof window !== "undefined") {
@@ -1805,9 +2225,17 @@
     }
 
     setKindCounts();
-    if (!initial.kind && initial.slug) state.kind = inferKind(initial.slug);
     render();
-    if (state.slug) writeHash(state.kind, state.slug, "replace");
+    writeHash(state.slug, "replace");
+  }
+
+  function boot() {
+    var page;
+    if (typeof document === "undefined") return;
+    page = currentPage();
+    if (page === "vps") return bootVps();
+    if (page === "home") return bootHome();
+    bootCatalog();
   }
 
   root.__FM = {
@@ -1831,6 +2259,13 @@
     goUrl: goUrl,
     safeUrl: safeUrl,
     fmtDeadlineBJ: fmtDeadlineBJ,
+    parseRouteHash: parseRouteHash,
+    sectionUrl: sectionUrl,
+    resolvePageForSlug: resolvePageForSlug,
+    decideRoute: decideRoute,
+    routeOnPage: routeOnPage,
+    renderVps: renderVps,
+    updatedLine: updatedLine,
   };
 
   boot();
