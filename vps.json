@@ -1,0 +1,362 @@
+{
+  "schema_version": 1,
+  "sample": true,
+  "updated_at_beijing": "2026-11-15 09:30",
+  "scanned_at_beijing": {
+    "stock": "2026-11-15 09:00",
+    "black_friday": "2026-11-15 09:30",
+    "free_vps": "2026-11-15 08:00"
+  },
+  "free_vps": [
+    {
+      "id": "oracle-cloud",
+      "provider": "Oracle Cloud",
+      "type": "always_free",
+      "type_label": "一直免费",
+      "specs": [
+        {"label": "CPU", "value": "最多 4 OCPU（ARM，示例）"},
+        {"label": "内存", "value": "24 GB"},
+        {"label": "硬盘", "value": "200 GB"}
+      ],
+      "free_conditions": {
+        "card_required": true,
+        "card_notes": "需要信用卡做验证，示例说明",
+        "region_limits": "可用区不固定，部分地区注册受限",
+        "idle_reclaim": "长期闲置的计算实例可能被回收",
+        "deadline": "",
+        "deadline_note": "Always Free 没有固定截止日期"
+      },
+      "official_url": "https://www.oracle.com/cloud/free/",
+      "posts": [
+        {
+          "url": "https://x.com/search?q=oracle%20cloud%20always%20free",
+          "time_beijing": "2026-11-01 12:00",
+          "author": "",
+          "role": ""
+        }
+      ],
+      "notes": "示例条目。容量和区域以 Oracle 官网当时显示为准。"
+    },
+    {
+      "id": "google-cloud",
+      "provider": "Google Cloud",
+      "type": "trial",
+      "type_label": "试用额度",
+      "specs": [
+        {"label": "额度", "value": "新用户试用金（示例）"},
+        {"label": "时长", "value": "90 天"}
+      ],
+      "free_conditions": {
+        "card_required": true,
+        "card_notes": "开通试用通常要绑卡",
+        "region_limits": "账单国家会影响能否开通",
+        "idle_reclaim": "",
+        "deadline": "",
+        "deadline_note": "试用期从开通当天起算"
+      },
+      "official_url": "https://cloud.google.com/free",
+      "posts": [
+        {
+          "url": "https://x.com/search?q=google%20cloud%20free%20trial",
+          "time_beijing": "2026-10-20 09:00",
+          "author": "",
+          "role": ""
+        }
+      ],
+      "notes": "示例条目，不是实时额度。"
+    },
+    {
+      "id": "github-education",
+      "provider": "GitHub Education",
+      "type": "student",
+      "type_label": "学生额度",
+      "specs": [
+        {"label": "对象", "value": "在校学生（示例）"},
+        {"label": "内容", "value": "Student Developer Pack 里的云额度"}
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "",
+        "region_limits": "需要通过学生身份验证",
+        "idle_reclaim": "",
+        "deadline": "",
+        "deadline_note": "身份过期后权益会停"
+      },
+      "official_url": "https://education.github.com/pack",
+      "posts": [],
+      "notes": "示例条目。学校邮箱和证明材料以 GitHub Education 为准。"
+    },
+    {
+      "id": "render",
+      "provider": "Render",
+      "type": "paas",
+      "type_label": "非 root 的 PaaS",
+      "specs": [
+        {"label": "形态", "value": "免费 Web Service（示例）"},
+        {"label": "权限", "value": "没有完整 root 机器"}
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "免费实例一般不用绑卡",
+        "region_limits": "",
+        "idle_reclaim": "一段时间没有访问会休眠",
+        "deadline": "",
+        "deadline_note": ""
+      },
+      "official_url": "https://render.com/pricing",
+      "posts": [],
+      "notes": "示例条目，用来和可以 root 的 VPS 区分开。"
+    }
+  ],
+  "stock": {
+    "source_notes": [],
+    "providers": [
+      {
+        "id": "dmit",
+        "name": "DMIT",
+        "checked_at_beijing": "2026-11-15 09:00",
+        "official_url": "https://www.dmit.io/",
+        "sources": [
+          {
+            "name": "vpsrestock.com",
+            "url": "https://vpsrestock.com/",
+            "checked_at_beijing": "2026-11-15 08:40"
+          },
+          {
+            "name": "t.me/dmitnews",
+            "url": "https://t.me/dmitnews",
+            "checked_at_beijing": "2026-11-14 21:00"
+          }
+        ],
+        "plans": [
+          {
+            "key": "LAX-PRO-SAMPLE",
+            "display_name": "LAX Pro（示例）",
+            "config": "1 vCPU / 1 GB / 20 GB SSD / 1 Gbps / 2 TB / Los Angeles",
+            "specs": [
+              {"label": "CPU", "value": "1 vCPU"},
+              {"label": "内存", "value": "1 GB"},
+              {"label": "硬盘", "value": "20 GB SSD"},
+              {"label": "端口", "value": "1 Gbps"},
+              {"label": "流量", "value": "2 TB"},
+              {"label": "位置", "value": "Los Angeles"}
+            ],
+            "price": "$6.90/月",
+            "stock": "in_stock",
+            "limited": false,
+            "last_restock": "2026-11-14 补过一小批（示例）",
+            "order_urls": [
+              {"label": "官网下单", "url": "https://www.dmit.io/"}
+            ]
+          },
+          {
+            "key": "HK-LITE-SAMPLE",
+            "display_name": "HK Lite（示例）",
+            "config": "2 vCPU / 2 GB / 40 GB SSD / Hong Kong",
+            "specs": [
+              {"label": "CPU", "value": "2 vCPU"},
+              {"label": "内存", "value": "2 GB"},
+              {"label": "硬盘", "value": "40 GB SSD"},
+              {"label": "位置", "value": "Hong Kong"}
+            ],
+            "price": "$12.90/月",
+            "stock": "out_of_stock",
+            "limited": false,
+            "last_restock": "近期没有补货记录（示例）",
+            "order_urls": [
+              {"label": "官网下单", "url": "https://www.dmit.io/"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bandwagonhost",
+        "name": "搬瓦工",
+        "checked_at_beijing": "2026-11-15 09:00",
+        "official_url": "https://bandwagonhost.com/",
+        "sources": [
+          {
+            "name": "vpsrestock.com",
+            "url": "https://vpsrestock.com/",
+            "checked_at_beijing": "2026-11-15 08:50"
+          },
+          {
+            "name": "stock.bwg.la",
+            "url": "https://stock.bwg.la/",
+            "checked_at_beijing": "2026-11-15 08:50"
+          }
+        ],
+        "plans": [
+          {
+            "key": "CN2-GIA-E-SAMPLE",
+            "display_name": "CN2 GIA-E（示例）",
+            "config": "2 核 / 1 GB / 20 GB / 1 Gbps / 1 TB/月",
+            "specs": [
+              {"label": "CPU", "value": "2 核"},
+              {"label": "内存", "value": "1 GB"},
+              {"label": "硬盘", "value": "20 GB"},
+              {"label": "端口", "value": "1 Gbps"},
+              {"label": "流量", "value": "1 TB/月"}
+            ],
+            "price": "$49.99/年",
+            "stock": "in_stock",
+            "limited": true,
+            "last_restock": "示例：今天上午短暂有货",
+            "order_urls": [
+              {"label": "bandwagonhost.com", "url": "https://bandwagonhost.com/"},
+              {"label": "bwh81.net", "url": "https://bwh81.net/"}
+            ]
+          },
+          {
+            "key": "UNMATCHED-SAMPLE",
+            "display_name": "目录未匹配（示例）",
+            "config": "1 核 / 512 MB",
+            "specs": [
+              {"label": "CPU", "value": "1 核"},
+              {"label": "内存", "value": "512 MB"}
+            ],
+            "price": "",
+            "stock": "out_of_stock",
+            "limited": false,
+            "last_restock": "",
+            "order_urls": []
+          }
+        ]
+      }
+    ]
+  },
+  "black_friday": {
+    "date_note": "2026 年黑色星期五是 11 月 27 日。下面的状态都是示例。",
+    "official": [
+      {
+        "provider": "GreenCloud",
+        "status": "orderable_now",
+        "status_label": "现在能下单",
+        "status_kind": "now",
+        "orderable_now": true,
+        "summary": "示例：年付套餐页面可以打开。",
+        "sources": [
+          {
+            "type": "official",
+            "url": "https://greencloudvps.com/",
+            "title": "GreenCloud",
+            "fetched_beijing": "2026-11-15 09:00"
+          }
+        ],
+        "sale_hub": "https://greencloudvps.com/",
+        "plans": [
+          {
+            "name": "KVM 1C 1G（示例）",
+            "price": "$18/年",
+            "specs": "1 vCPU / 1 GB / 20 GB",
+            "url": "https://greencloudvps.com/"
+          }
+        ]
+      },
+      {
+        "provider": "RackNerd",
+        "status": "orderable_now",
+        "status_label": "现在能下单",
+        "status_kind": "now",
+        "orderable_now": true,
+        "summary": "示例：官网年付列表里能看到低价套餐。",
+        "sources": [
+          {
+            "type": "official",
+            "url": "https://www.racknerd.com/",
+            "title": "RackNerd",
+            "fetched_beijing": "2026-11-15 09:00"
+          }
+        ],
+        "sale_hub": "https://www.racknerd.com/",
+        "plans": [
+          {
+            "name": "1C 1G（示例）",
+            "price": "$10.99/年",
+            "specs": "1 vCPU / 1 GB",
+            "url": "https://www.racknerd.com/"
+          }
+        ]
+      },
+      {
+        "provider": "Netcup",
+        "status": "official_preannouncement_no_skus_yet",
+        "status_label": "预告未开卖",
+        "status_kind": "soon",
+        "orderable_now": false,
+        "summary": "示例：官方预告了活动，还没有可下单的套餐。",
+        "sources": [
+          {
+            "type": "official",
+            "url": "https://www.netcup.com/",
+            "title": "Netcup",
+            "fetched_beijing": "2026-11-15 09:00"
+          }
+        ],
+        "sale_hub": "",
+        "plans": []
+      },
+      {
+        "provider": "DMIT",
+        "status": "official_preannouncement_no_skus_yet",
+        "status_label": "预告未开卖",
+        "status_kind": "soon",
+        "orderable_now": false,
+        "summary": "示例：黑五页面还没挂出套餐。补货监控仍看上面的库存。",
+        "sources": [
+          {
+            "type": "official",
+            "url": "https://www.dmit.io/",
+            "title": "DMIT",
+            "fetched_beijing": "2026-11-15 09:00"
+          }
+        ],
+        "sale_hub": "",
+        "plans": []
+      },
+      {
+        "provider": "OVH",
+        "status": "official_no_black_friday_this_year",
+        "status_label": "今年不办",
+        "status_kind": "off",
+        "orderable_now": false,
+        "summary": "示例：官方说明今年没有黑五活动。",
+        "sources": [
+          {
+            "type": "official",
+            "url": "https://www.ovhcloud.com/",
+            "title": "OVHcloud",
+            "fetched_beijing": "2026-11-15 09:00"
+          }
+        ],
+        "sale_hub": "",
+        "plans": []
+      },
+      {
+        "provider": "搬瓦工",
+        "status": "official_no_black_friday_this_year",
+        "status_label": "今年不办",
+        "status_kind": "off",
+        "orderable_now": false,
+        "summary": "示例：今年不单开黑五。平时库存看上面的补货监控。",
+        "sources": [
+          {
+            "type": "official",
+            "url": "https://bandwagonhost.com/",
+            "title": "BandwagonHost",
+            "fetched_beijing": "2026-11-15 09:00"
+          }
+        ],
+        "sale_hub": "",
+        "plans": []
+      }
+    ],
+    "leads": [
+      {
+        "source": "LowEndTalk 示例帖",
+        "url": "https://lowendtalk.com/",
+        "note": "有人说某家会在当周改价，还没看到对应的官方页面。"
+      }
+    ]
+  }
+}

@@ -1,3 +1,27 @@
+# 日常发布不是 Git 构建：运行 ./build-site.sh，把 dist/ 整个目录上传。
+# dist/_redirects 才是手动部署时生效的跳转。下面的 publish / redirects
+# 只在改回 Git 连接构建时使用，规则和 dist/_redirects 保持一致。
 [build]
-  command = "echo static"
-  publish = "."
+  command = "./build-site.sh"
+  publish = "dist"
+
+[[redirects]]
+  from = "/"
+  to = "/provider/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/provider"
+  to = "/provider/"
+  status = 301
+
+[[redirects]]
+  from = "/agent"
+  to = "/agent/"
+  status = 301
+
+[[redirects]]
+  from = "/vps"
+  to = "/vps/"
+  status = 301

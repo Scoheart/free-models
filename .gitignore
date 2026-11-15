@@ -1,2 +1,4 @@
+dist/
 site/
 .netlify
+__pycache__/

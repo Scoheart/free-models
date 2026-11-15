@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="description" content="正在进行的免费模型、网关和 API 额度，按平台汇总，附领取步骤。"/>
+<meta name="color-scheme" content="light"/>
+<title>免费 · 模型</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f6e62'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='16' font-family='Georgia' fill='%23ffffff'%3EF%3C/text%3E%3C/svg%3E"/>
+<link rel="stylesheet" href="../styles.css?v=11a7222168"/>
+</head>
+<body data-page="provider">
+<div class="app">
+<div class="chrome">
+<header class="top">
+<div class="brand">
+<p class="eyebrow">Free</p>
+<h1>免费</h1>
+<p class="lead">按平台查看还没过期的模型、网关和 API 额度。离截止最近的排在前面。</p>
+</div>
+<div class="top-side">
+<nav class="kind-switch" aria-label="栏目"><a class="kind" href="../provider/" aria-current="page">模型<span class="kind-count" data-kind-count="providers"></span></a><a class="kind" href="../agent/">Agent<span class="kind-count" data-kind-count="agents"></span></a><a class="kind" href="../vps/">VPS</a></nav>
+<p class="stats" id="stats" aria-live="polite"></p>
+</div>
+</header>
+<aside class="sidebar">
+<div class="search-wrap" role="search">
+<label class="sr" for="q">搜索平台或活动</label>
+<input id="q" type="search" placeholder="搜索平台、模型或条款" autocomplete="off" spellcheck="false"/>
+</div>
+<p class="legend" aria-hidden="true"><span class="dot success"></span>已领取<span class="dot needs-user"></span>待操作<span class="dot failed"></span>失败</p>
+<label class="sr" for="platform-select">选择平台</label>
+<select id="platform-select" class="platform-select"></select>
+<div class="tab-rail" id="tab-rail"><div id="tabs" class="tabs" role="tablist" aria-label="平台"></div></div>
+</aside>
+</div>
+<div class="layout">
+<main id="detail" class="detail"></main>
+<footer class="foot">数据来自公开帖子，领取前请自行核对官方条款。页面不展示 API Key。</footer>
+</div>
+</div>
+<script src="../data.js?v=11a7222168"></script>
+<script src="../app.js?v=11a7222168"></script>
+</body>
+</html>

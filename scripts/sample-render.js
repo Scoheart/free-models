@@ -225,7 +225,7 @@ var realBuilt = FM.buildGroups(real, realNow);
 var agentNames = FM.groupsInKind(realBuilt, "agents").map(function (g) { return g.name; });
 var providerNames = FM.groupsInKind(realBuilt, "providers").map(function (g) { return g.name; });
 check(agentNames.indexOf("OpenCode") !== -1 && agentNames.indexOf("Groq") === -1, "agent platforms " + agentNames.slice(0, 6).join(","));
-check(providerNames.indexOf("OpenRouter") !== -1 && providerNames.indexOf("OpenCode") === -1, "provider platforms");
+check(providerNames.indexOf("OpenRouter") !== -1 && providerNames.indexOf("Groq") !== -1, "provider platforms");
 var agentSearch = FM.filterGroups(FM.groupsInKind(realBuilt, "agents"), "opencode");
 check(agentSearch.length >= 1 && agentSearch[0].name === "OpenCode", "search stays inside agents");
 var kindCounts = { providers: 0, agents: 0 };
@@ -234,6 +234,69 @@ real.forEach(function (it) {
   kindCounts[FM.categoryOf(it)] += 1;
 });
 check(kindCounts.providers > 50 && kindCounts.agents > 10, "both kinds have offers " + JSON.stringify(kindCounts));
+
+check(FM.parseRouteHash("providers/groq").page === "provider" && FM.parseRouteHash("providers/groq").slug === "groq" && FM.parseRouteHash("providers/groq").legacy === true, "legacy providers hash");
+check(FM.parseRouteHash("agents/opencode").page === "agent" && FM.parseRouteHash("agents/opencode").slug === "opencode", "legacy agents hash");
+check(FM.parseRouteHash("groq").page === "" && FM.parseRouteHash("groq").slug === "groq", "bare platform hash");
+check(FM.parseRouteHash("").slug === "" && FM.parseRouteHash("providers").page === "provider" && FM.parseRouteHash("agents").page === "agent", "category-only hashes");
+var routeItems = items.concat([
+  { id: "oc", platform: "OpenCode", title: "OpenCode 免费额度", deadline: "2026-12-01T00:00:00+08:00", url: "https://opencode.ai" },
+]);
+var routeGroups = FM.buildGroups(routeItems, now);
+var routeKinds = {
+  providers: FM.groupsInKind(routeGroups, "providers"),
+  agents: FM.groupsInKind(routeGroups, "agents"),
+};
+check(FM.resolvePageForSlug("groq", routeKinds) === "provider", "groq resolves to provider");
+check(FM.resolvePageForSlug("opencode", routeKinds) === "agent", "opencode resolves to agent");
+check(FM.decideRoute(FM.parseRouteHash("providers/groq"), routeKinds).page === "provider", "decide legacy groq");
+check(FM.decideRoute(FM.parseRouteHash("agents/opencode"), routeKinds).page === "agent", "decide legacy opencode");
+check(FM.decideRoute(FM.parseRouteHash("groq"), routeKinds).page === "provider", "bare groq");
+check(FM.decideRoute(FM.parseRouteHash("opencode"), routeKinds).page === "agent", "bare opencode");
+check(FM.decideRoute(FM.parseRouteHash("agents/groq"), routeKinds).page === "provider", "wrong section still follows the platform");
+var bothKinds = {
+  providers: routeKinds.providers.concat([{ name: "OpenCode", slug: "opencode", offers: [{}], nearest: Infinity }]),
+  agents: routeKinds.agents,
+};
+check(FM.decideRoute(FM.parseRouteHash("agents/opencode"), bothKinds).page === "agent", "explicit agents hash stays when the platform exists there too");
+check(FM.decideRoute(FM.parseRouteHash("opencode"), bothKinds).page === "provider", "bare slug prefers provider when both sections have it");
+check(FM.routeOnPage(FM.parseRouteHash("opencode"), "agent", bothKinds).redirect === "" && FM.routeOnPage(FM.parseRouteHash("opencode"), "agent", bothKinds).slug === "opencode", "agent page keeps its own opencode");
+check(FM.routeOnPage(FM.parseRouteHash("agents/opencode"), "provider", bothKinds).redirect === "agent", "explicit agents hash leaves the provider page");
+check(FM.routeOnPage(FM.parseRouteHash("groq"), "agent", routeKinds).redirect === "provider", "agent page sends a provider-only slug away");
+check(FM.sectionUrl("provider", "groq", "home") === "provider/#groq", "home provider url");
+check(FM.sectionUrl("agent", "opencode", "provider") === "../agent/#opencode", "provider to agent url");
+check(FM.sectionUrl("vps", "", "agent") === "../vps/", "agent to vps url");
+
+var vps = JSON.parse(fs.readFileSync(path.join(root, "vps.json"), "utf8"));
+var vpsHtml = FM.renderVps(vps);
+check(vps.sample === true, "sample vps.json");
+check(vpsHtml.indexOf("示例数据，等待首次同步") !== -1, "sample banner");
+check(vpsHtml.indexOf("一直免费") !== -1 && vpsHtml.indexOf("试用额度") !== -1, "free type labels");
+check(vpsHtml.indexOf("学生额度") !== -1 && vpsHtml.indexOf("非 root 的 PaaS") !== -1, "student and paas labels");
+check(vpsHtml.indexOf("据 X 上的帖子") !== -1, "x post attribution");
+check(vpsHtml.indexOf("要绑卡") !== -1 && vpsHtml.indexOf("不绑卡") !== -1, "card conditions");
+check(vpsHtml.indexOf("有货") !== -1 && vpsHtml.indexOf("缺货") !== -1, "stock pills");
+check(vpsHtml.indexOf("bandwagonhost.com") !== -1 && vpsHtml.indexOf("bwh81.net") !== -1, "bandwagon order links");
+check(vpsHtml.indexOf("目录里没有对应的价格和下单链接") !== -1, "unmatched plan stays blank");
+check(vpsHtml.indexOf("现在能下单") !== -1 && vpsHtml.indexOf("预告未开卖") !== -1 && vpsHtml.indexOf("今年不办") !== -1, "black friday statuses");
+check(vpsHtml.indexOf("仅线索，未经官方确认") !== -1, "third-party disclaimer");
+check(vpsHtml.indexOf("t.me/dmitnews") !== -1 && vpsHtml.indexOf("stock.bwg.la") !== -1, "stock sources");
+check(vpsHtml.indexOf("<script") === -1, "vps html has no script");
+check(FM.updatedLine(vps).indexOf("2026-11-15 09:30") !== -1 && FM.updatedLine(vps).indexOf("北京时间") !== -1, "updated line");
+var evil = FM.renderVps({
+  sample: false,
+  free_vps: [{
+    provider: "<b>x</b>",
+    type_label: "一直免费",
+    notes: "mail evil@example.com sk-abcdefghijklmnopqrstuvwxyz",
+    official_url: "javascript:alert(1)",
+    posts: [{ url: "https://x.com/a/status/1" }],
+  }],
+});
+check(evil.indexOf("示例数据，等待首次同步") === -1, "non-sample has no banner");
+check(evil.indexOf("<b>") === -1 && evil.indexOf("&lt;b&gt;") !== -1, "vps escapes html");
+check(evil.indexOf("evil@example.com") === -1 && evil.indexOf("sk-abcdefghijklmnopqrstuvwxyz") === -1, "vps scrubs email and key");
+check(evil.indexOf("javascript:") === -1, "vps drops javascript url");
 
 if (failures.length) {
   console.error("SAMPLE RENDER FAILED");
