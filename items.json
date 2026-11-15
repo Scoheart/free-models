@@ -22626,7 +22626,7 @@
     "summary": "社区称腾讯将 WorkBuddy 内 Hy3 限免延至 11/15，Hy4 亦以 0.00× 提供并有每日免费额度上限。以客户端实际倍率与公告为准。有每日免费额度上限，用完需等刷新或改用积分；无需单独兑换码；同端还可看到 Kimi K3、GLM 5.3、DeepSeek V4.1 Flash 等。截止：约 11/15，北京时间 2026-11-15 23:59。",
     "source": "X @nex_ify / @shengliao8（社区汇总，待客户端核对）",
     "collected_at": "2026-11-07T17:45:05+08:00",
-    "expired": false,
+    "expired": true,
     "providers": [],
     "agents": [
       {
@@ -23808,7 +23808,7 @@
     "summary": "智谱 AutoClaw（澳龙）官方博客：北京时间 11/9 00:00 至 11/15 23:59，活动期间登录 AutoClaw 就能领 50M Tokens（App 弹窗显示约 5000 积分），每个账号限领一次，积分 11/15 23:59 过期。每号限一次，多设备登录不会多领；9 号前登录领不到；详见官方博客 M11W2；接在 M11W1（11/8 到期）之后；网传「100M」与官方不符，以官方 50M 为准。无需绑卡。截止北京时间 2026-11-15 23:59。",
     "source": "X @zsansan4 / @Clearance43；官方 https://autoclaw.zhipuai.cn/blog/news/M11W2/ 核实",
     "collected_at": "2026-11-08T02:45:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2119095305169989773",
     "providers": [],
     "agents": [
@@ -34391,7 +34391,7 @@
     ],
     "category": "agents",
     "collected_at": "2026-11-12T08:05:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "needs_user",
       "note": "只对已付费的 TRAE 会员生效，且需在本机 TRAE 桌面端 3.4.13+ 使用；未查到你的 TRAE 账号记录，是否开会员由你决定",
@@ -36965,6 +36965,427 @@
       "status": "needs_user",
       "note": "仅限在读大学生且需到伦敦现场参赛，需你本人报名；是否参加由你决定。",
       "at": "2026-11-15T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "amd-token-lab-free-api-10-credits-30days-20261116",
+    "title": "AMD Token Lab（Beta）：AI 开发者计划会员免费拿 API Key，10 点额度 30 天调 DeepSeek V4.1 Flash / Qwen3.8 / Gemma 4",
+    "platform": "AMD",
+    "product": "Token Lab",
+    "model": "DeepSeek-V4.1-Flash-1017",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://www.aipromonow.com/en/promos/amd-token-lab-free-api-key-open-models",
+    "source": "AI Promo Now 整理（2026-11-15 核对）；AMD 开发者社区文章；据 X 上的报道（@stretchcloud）",
+    "summary": "据 AI Promo Now 与 AMD 开发者社区文章，AMD 在全球版 AI Developer Program 里新增 Token Lab（Beta）：免费加入开发者计划后可领一个 API Key，跑在 AMD Instinct GPU 上的开源模型，接口兼容 OpenAI（也支持 Anthropic SDK）。每个 Key 含 10 点额度，自创建起 30 天有效，额度不按天重置；各模型按每百万 tokens 计点，DeepSeek-V4.1-Flash 入 0.28/出 0.56，DeepSeek-V4-Flash 入 0.14/出 0.28，Qwen3.8-27B、Gemma-4-31B-IT、MiniCPM 仅入 0.035/出 0.07，按输入粗算 10 点约够 DeepSeek-V4.1-Flash 3500 万 tokens 或 Qwen3.8-27B 近 3 亿 tokens；另有 d3、Clef 两个决策模型。限制：每 Key 20 RPM；额度用完或 30 天到期即拒绝请求；剩余 ≤2 点或最后 7 天可在页面申请加额度，最后 5 天可一次性延长 15 天。门槛：需注册 AMD AI Developer Program（全球版）账号，免费、无需绑卡。与国内站 Radeon Cloud Token Factory（已收录）是两个不同入口。",
+    "claim_steps": [
+      "免费加入 AMD AI Developer Program（全球版）并验证邮箱",
+      "打开 Token Lab 用开发者计划账号登录",
+      "点 Get my API key 生成 tl- 开头的 Key",
+      "在客户端填 Token Lab 的 Base URL 和 Key，按卡片上的模型名调用"
+    ],
+    "claim_guide": [
+      {
+        "step": "加入开发者计划",
+        "detail": "在 AMD AI Developer Program 页面免费注册并验证邮箱",
+        "url": "https://developer.amd.com/ai-developer-program/",
+        "note": "免费、无需绑卡"
+      },
+      {
+        "step": "登录 Token Lab",
+        "detail": "在会员权益 Free Credits & APIs 里进入 Token Lab，用同一账号登录",
+        "url": "https://developer.amd.com/ai-developer-program/",
+        "note": "全球版账号"
+      },
+      {
+        "step": "生成 Key",
+        "detail": "点 Get my API key，复制 tl- 开头的 Key",
+        "url": "https://developer.amd.com/ai-developer-program/",
+        "note": "Key 自创建起 30 天有效"
+      },
+      {
+        "step": "调用",
+        "detail": "按 OpenAI 兼容方式填 Base URL 与 Key，模型名用卡片上的名字（如 DeepSeek-V4.1-Flash-1017）",
+        "url": "https://www.aipromonow.com/en/promos/amd-token-lab-free-api-key-open-models",
+        "note": "每 Key 20 RPM"
+      },
+      {
+        "step": "续期（可选）",
+        "detail": "剩余 ≤2 点或最后 7 天可在页面申请加额度；最后 5 天可延长 15 天一次",
+        "url": "https://developer.amd.com/ai-developer-program/",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "AMD Token Lab",
+        "action_url": "https://developer.amd.com/ai-developer-program/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      "DeepSeek-V4.1-Flash-1017",
+      "Qwen3.8-27B",
+      "Gemma-4-31B-IT"
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-16T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待浏览器领取：需注册 AMD AI Developer Program（全球版）账号并在 Token Lab 点 Get my API key；Gmail 未见 AMD 开发者账号",
+      "at": "2026-11-16T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "mara-inference-5usd-free-credit-30days-20261116",
+    "title": "MARA Inference 新开发者送 $5 免费 API 额度（免绑卡，30 天有效）",
+    "platform": "MARA",
+    "product": "MARA Inference",
+    "model": null,
+    "type": "额度",
+    "deadline": null,
+    "url": "https://cloud.mara.com/plans",
+    "source": "MARA Inference 官方 Plans 页 cloud.mara.com（2026-11-15 核对）；据 X 上的报道（@MuseQiao）",
+    "summary": "据 MARA 官方 Plans 页，MARA（比特币矿企 MARA Holdings 旗下）推出的推理云 MARA Inference 的 Free 套餐给所有开发者 $5 免费 API 额度，可调用生产档开源模型，无需绑卡即可开始；初始额度 30 天后过期。官方页面免费档文案写的是“基于 SambaNova Cloud”；赛博鸡蛋整理称当前在售模型有 MiniMax-M2.7、MiniMax-M3、gpt-oss-120b、gemma-4-31B-it（以控制台为准）。接口为 OpenAI 兼容。限制：$5 一次性、30 天内用完；用完后需绑卡升级 Developer 按量付费；免费档无生产级限流。",
+    "claim_steps": [
+      "打开 MARA Inference Plans 页，在 Free 套餐点 Get Started",
+      "注册账号（无需信用卡），$5 自动到账",
+      "在控制台 API Keys 页创建 Key",
+      "在 30 天内通过 Playground 或 OpenAI 兼容 API 使用额度"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开套餐页",
+        "detail": "在 Free 套餐点 Get Started",
+        "url": "https://cloud.mara.com/plans",
+        "note": "无需信用卡"
+      },
+      {
+        "step": "注册",
+        "detail": "完成账号注册，$5 免费额度自动到账",
+        "url": "https://cloud.mara.com/plans",
+        "note": "额度 30 天有效"
+      },
+      {
+        "step": "创建 Key",
+        "detail": "进入控制台 API Keys 页生成 Key 并立即保存",
+        "url": "https://cloud.mara.com/plans",
+        "note": "Key 只显示一次"
+      },
+      {
+        "step": "调用",
+        "detail": "按 OpenAI 兼容方式调用，模型以控制台列表为准",
+        "url": "https://cloud.mara.com/plans",
+        "note": ""
+      }
+    ],
+    "providers": [
+      {
+        "name": "MARA Inference",
+        "action_url": "https://cloud.mara.com/plans"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-16T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待浏览器领取：需在 cloud.mara.com 注册账号后于控制台建 Key；Gmail 未见 MARA 账号",
+      "at": "2026-11-16T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "plamo-api-free-plan-31-prime-20261116",
+    "title": "PLaMo API Free 套餐：日本 PFN 的 PLaMo 3.1 Prime 输入输出 0 元（限额限速，数据会用于训练）",
+    "platform": "PLaMo（Preferred Networks）",
+    "product": "PLaMo API",
+    "model": "plamo-3.1-prime",
+    "type": "免费档",
+    "deadline": null,
+    "url": "https://plamo.preferredai.jp/api",
+    "source": "PLaMo 官方 API 页与文档 docs.plamo.preferredai.jp（2026-11-15 核对）；ainformation.jp；据 X 上的报道（@yedabinbinah）",
+    "summary": "据 PLaMo 官网与官方文档，日本 Preferred Networks（PFN）10 月底随 PLaMo 3.1 Prime 推出 PLaMo API 的 Free 套餐：注册后即可免费调用 plamo-3.1-prime 与 plamo-3.0-prime（每百万 tokens 输入、输出均 0 元），上下文 262,144 tokens、最大输出 20,480 tokens，支持推理模式与工具调用，接口为 OpenAI Chat Completions 兼容；金融试用模型 plamo-3.0-fin-beta 全套餐免费、每人 24 小时 50 次。Free 套餐另含 PLaMo Chat，Web 检索在 2026-11-30 前每天 60 次、每月 200 次免费（Deep Research 约每天 2 次）。限制：用量与速率有上限（具体数字官方未公开）；Free 套餐所有输入输出会被保存并用于模型训练，不可输入个人信息；plamo-3.0-prime 将于 2027-01-31 下线。主打日语，游戏/书籍翻译等场景常用。",
+    "claim_steps": [
+      "打开 PLaMo API 页选择 Free 套餐注册",
+      "登录控制台创建 API Key",
+      "按 OpenAI 兼容方式调用 plamo-3.1-prime"
+    ],
+    "claim_guide": [
+      {
+        "step": "选择 Free 套餐",
+        "detail": "在 PLaMo API 页面选择 Free 套餐并注册账号（可用 Google 账号）",
+        "url": "https://plamo.preferredai.jp/api",
+        "note": "免费套餐数据会用于训练"
+      },
+      {
+        "step": "创建 Key",
+        "detail": "登录控制台生成 API Key",
+        "url": "https://plamo.preferredai.jp/api",
+        "note": ""
+      },
+      {
+        "step": "调用",
+        "detail": "按 OpenAI Chat Completions 兼容格式调用，模型填 plamo-3.1-prime",
+        "url": "https://docs.plamo.preferredai.jp/ja/api",
+        "note": "不要输入个人信息或机密"
+      },
+      {
+        "step": "查看限额",
+        "detail": "在料金页查看 Free 套餐的检索次数与限制",
+        "url": "https://docs.plamo.preferredai.jp/ja/pricing",
+        "note": "检索免费额度至 11/30"
+      }
+    ],
+    "providers": [
+      {
+        "name": "PLaMo API",
+        "action_url": "https://plamo.preferredai.jp/api"
+      }
+    ],
+    "agents": [],
+    "models": [
+      "plamo-3.1-prime",
+      "plamo-3.0-prime",
+      "plamo-3.0-fin-beta"
+    ],
+    "scenes": [
+      "chat",
+      "translate"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-16T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待浏览器领取：需在 PLaMo 平台注册（社区称支持 Google 注册）后建 Key；Gmail 未见 PLaMo 账号",
+      "at": "2026-11-16T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "telnyx-pretrial-25usd-ai-credit-no-card-20261116",
+    "title": "Telnyx Pretrial 账号：邮箱注册送 $25 AI 额度（免绑卡，含 Inference 开源模型）",
+    "platform": "Telnyx",
+    "product": "Telnyx AI（Inference / AI Assistants）",
+    "model": null,
+    "type": "额度",
+    "deadline": null,
+    "url": "https://support.telnyx.com/en/articles/14327893-telnyx-pretrial-accounts",
+    "source": "Telnyx 官方帮助中心 Pretrial Accounts 与开发者文档（2026-11-15 核对）；AI 优惠雷达；据 X 上的报道（@KevinWwwrz）",
+    "summary": "据 Telnyx 官方帮助中心，通信与 AI 基础设施公司 Telnyx 推出 Pretrial（预试用）账号：用邮箱注册、通过魔法链接登录，无需信用卡和付款设置，自动获得 $25 AI 额度和一个免费美国本地号码，可用于 Telnyx Inference（GLM-5.3 Flash、DeepSeek V4.1 Flash、Kimi K3 等开放模型，OpenAI 兼容）、AI Assistants 等 AI 产品。额度有使用期限（后台显示剩余天数），用完即停，Pretrial 账号不能充值。注意：Telnyx 开发者文档另写 Pretrial 账号不能使用 Inference、不能创建 AI Assistants（需 Trial 或更高等级），两处官方说法不一致，以实际控制台为准；升级为完整账号需用 LinkedIn 或 GitHub 验证身份，升级后 $25 AI 额度会被换成 $5 通用额度。",
+    "claim_steps": [
+      "在 Telnyx 注册页用邮箱注册",
+      "在邮箱里点魔法链接登录，$25 AI 额度自动生效",
+      "在控制台创建 API Key 并试调 Inference"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册",
+        "detail": "在 Telnyx 注册页用邮箱注册 Pretrial 账号",
+        "url": "https://telnyx.com/sign-up",
+        "note": "无需信用卡"
+      },
+      {
+        "step": "登录",
+        "detail": "打开邮箱里的魔法链接登录，额度自动到账",
+        "url": "https://telnyx.com/sign-up",
+        "note": "无密码登录"
+      },
+      {
+        "step": "创建 Key 并试调",
+        "detail": "在 Portal 创建 API Key，调用 Inference 接口确认 Pretrial 是否可用",
+        "url": "https://support.telnyx.com/en/articles/14327893-telnyx-pretrial-accounts",
+        "note": "官方文档对 Pretrial 能否用 Inference 说法不一"
+      },
+      {
+        "step": "谨慎升级",
+        "detail": "想多用 AI 额度时先别升级完整账号",
+        "url": "https://support.telnyx.com/en/articles/14327893-telnyx-pretrial-accounts",
+        "note": "升级后 $25 变 $5"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Telnyx",
+        "action_url": "https://telnyx.com/sign-up"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "chat",
+      "voice"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_key",
+      "need_email"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-16T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待浏览器领取：需邮箱注册并点魔法链接登录 Telnyx；Gmail 未见 Telnyx 账号",
+      "at": "2026-11-16T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "ecloud-moma-newuser-25m-tokens-30days-dec31-20261116",
+    "title": "移动云 MoMA 模型服务平台：新用户实名领 2500 万 Tokens（限自营模型，30 天有效，活动至 12/31）",
+    "platform": "移动云",
+    "product": "MoMA 大模型服务平台",
+    "model": null,
+    "type": "额度",
+    "deadline": "2026-12-31T23:59:59+08:00",
+    "url": "https://ecloud.10086.cn/op-help-center/doc/article/92837",
+    "source": "移动云帮助中心《2500万Tokens免费试用指南》（经 AI 羊毛情报站整理，2026-11-06 核对）；iGetoken；据 X 上的报道（@jhl880617）",
+    "summary": "据 AI 羊毛情报站转述的移动云帮助中心《2500万Tokens免费试用指南》，中国移动旗下移动云的 MoMA 大模型服务平台对新用户开放 2500 万 Tokens 免费体验：活动时间 2026-02-15 至 2026-12-31，政企与互联网用户均可参加，同一身份信息下所有账号合计只能领一次；自领取起 30 天有效，用量或有效期先到者为准。仅限部分自营模型（官方点名自营 Qwen3.5-35B-A3B 不支持），合作模型与机密模型不在范围；每用户限流 3000 tokens/分钟；接口 OpenAI 兼容，模型名需带厂商前缀（如 zhipu/glm-5.3-flash）。体验期间不计费，额度用完后未订购的模型服务自动暂停。门槛：需移动云账号并完成实名认证（国内手机号）。与已收录的移动云 MobileClaw 客户端双 11 活动是不同入口。",
+    "claim_steps": [
+      "注册移动云账号并完成实名认证",
+      "进入 MoMA 管理控制台的模型广场",
+      "点右上方「新用户2500wTokens免费体验」领取",
+      "创建 API Key，调用支持的自营模型"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册实名",
+        "detail": "注册移动云账号并完成实名认证",
+        "url": "https://ecloud.10086.cn/",
+        "note": "需国内手机号与实名"
+      },
+      {
+        "step": "进入模型广场",
+        "detail": "打开 MoMA 管理控制台的模型广场",
+        "url": "https://ecloud.10086.cn/op-help-center/doc/article/92837",
+        "note": ""
+      },
+      {
+        "step": "领取额度",
+        "detail": "点页面右上方「新用户2500wTokens免费体验」确认领取",
+        "url": "https://ecloud.10086.cn/op-help-center/doc/article/92837",
+        "note": "自领取起 30 天有效；同一身份限领一次"
+      },
+      {
+        "step": "建 Key 调用",
+        "detail": "创建 API Key，选择支持的自营模型调用",
+        "url": "https://ecloud.10086.cn/op-help-center/doc/article/92837",
+        "note": "限流 3000 tokens/分钟"
+      }
+    ],
+    "providers": [
+      {
+        "name": "移动云 MoMA",
+        "action_url": "https://ecloud.10086.cn/op-help-center/doc/article/92837"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "cn_account",
+      "need_realname",
+      "need_phone",
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-16T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需你本人操作：移动云注册需国内手机号与实名认证，之后在 MoMA 模型广场手动点领取",
+      "at": "2026-11-16T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "greptile-starter-free-50-review-credits-monthly-20261116",
+    "title": "Greptile Starter 免费套餐：个人开发者每月 50 次 AI 代码审查额度（不限仓库）",
+    "platform": "Greptile",
+    "product": "Greptile Starter",
+    "model": null,
+    "type": "免费档",
+    "deadline": null,
+    "url": "https://www.greptile.com/pricing",
+    "source": "Greptile 官方定价页（2026-11-15 核对）；Perq 博客",
+    "summary": "据 Greptile 官方定价页，AI 代码审查工具 Greptile 的 Starter 套餐对个人开发者免费：1 名活跃开发者，每月 50 点免费额度，仓库数量不限。计费规则：基础审查 1 点、Plus 审查 3 点、Apex 审查 10 点、TREX 运行 3 点，按基础审查算每月约 50 次 PR 审查。Pro 套餐无席位费、每点 $1；学习与自定义上下文、知识库 MCP、跨仓库上下文、Jira/Linear 集成等仅 Pro 提供。限制：只限 1 名活跃开发者；额度按月发放。",
+    "claim_steps": [
+      "在 Greptile 官网用 GitHub 账号注册",
+      "选择 Starter 免费套餐",
+      "安装 Greptile GitHub App 并授权要审查的仓库",
+      "在 PR 上自动或手动触发审查"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册",
+        "detail": "在 Greptile 官网用 GitHub（或 GitLab）账号登录注册",
+        "url": "https://www.greptile.com/pricing",
+        "note": ""
+      },
+      {
+        "step": "选择 Starter",
+        "detail": "选择免费的 Starter 套餐",
+        "url": "https://www.greptile.com/pricing",
+        "note": "1 名活跃开发者"
+      },
+      {
+        "step": "接入仓库",
+        "detail": "安装 Greptile 的 GitHub App 并选择要审查的仓库",
+        "url": "https://www.greptile.com/pricing",
+        "note": "仓库不限"
+      },
+      {
+        "step": "开始审查",
+        "detail": "新开或更新 PR 时由 Greptile 自动审查",
+        "url": "https://www.greptile.com/pricing",
+        "note": "每月 50 点，基础审查 1 点/次"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Greptile",
+        "action_url": "https://www.greptile.com/pricing"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-16T00:15:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "待浏览器领取：需用 GitHub 账号登录 Greptile 并授权仓库（涉及仓库权限，需你决定授权哪些）；Gmail 未见 Greptile 账号",
+      "at": "2026-11-16T00:15:00+08:00"
     }
   }
 ]
