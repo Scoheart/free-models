@@ -7,39 +7,38 @@
 <meta name="color-scheme" content="light"/>
 <title>免费 · Agent</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f6e62'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='16' font-family='Georgia' fill='%23ffffff'%3EF%3C/text%3E%3C/svg%3E"/>
-<link rel="stylesheet" href="../styles.css?v=11a7222168"/>
+<link rel="stylesheet" href="../styles.css?v=e849170dc9"/>
 </head>
 <body data-page="agent">
 <div class="app">
 <div class="chrome">
 <header class="top">
-<div class="brand">
-<p class="eyebrow">Free</p>
-<h1>免费</h1>
-<p class="lead">编程 Agent、CLI 和 IDE 里还能用的免费额度，附领取步骤。</p>
-</div>
-<div class="top-side">
+<h1 class="brand"><a href="../provider/"><span class="brand-mark" aria-hidden="true">免</span><span class="brand-name">免费 · Free</span></a></h1>
 <nav class="kind-switch" aria-label="栏目"><a class="kind" href="../provider/">模型<span class="kind-count" data-kind-count="providers"></span></a><a class="kind" href="../agent/" aria-current="page">Agent<span class="kind-count" data-kind-count="agents"></span></a><a class="kind" href="../vps/">VPS</a></nav>
 <p class="stats" id="stats" aria-live="polite"></p>
-</div>
 </header>
+
 <aside class="sidebar">
+<p class="side-kicker">Agent</p>
+<p class="side-lead">编程 Agent、CLI 和 IDE 里还能用的免费额度，附领取步骤。</p>
 <div class="search-wrap" role="search">
-<label class="sr" for="q">搜索平台或活动</label>
+<label class="sr" for="q">搜索</label>
 <input id="q" type="search" placeholder="搜索平台、模型或条款" autocomplete="off" spellcheck="false"/>
 </div>
+<p class="filter-status" id="filter-status" aria-live="polite"></p>
 <p class="legend" aria-hidden="true"><span class="dot success"></span>已领取<span class="dot needs-user"></span>待操作<span class="dot failed"></span>失败</p>
 <label class="sr" for="platform-select">选择平台</label>
 <select id="platform-select" class="platform-select"></select>
-<div class="tab-rail" id="tab-rail"><div id="tabs" class="tabs" role="tablist" aria-label="平台"></div></div>
+<div class="tab-rail" id="tab-rail"><div id="tabs" class="tabs" role="tablist" aria-label="目录"></div></div>
 </aside>
+
 </div>
 <div class="layout">
 <main id="detail" class="detail"></main>
 <footer class="foot">数据来自公开帖子，领取前请自行核对官方条款。页面不展示 API Key。</footer>
 </div>
 </div>
-<script src="../data.js?v=11a7222168"></script>
-<script src="../app.js?v=11a7222168"></script>
+<script src="../data.js?v=e849170dc9"></script>
+<script src="../app.js?v=e849170dc9"></script>
 </body>
 </html>
