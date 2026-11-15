@@ -162,6 +162,9 @@ check(html.indexOf("自动申请失败") !== -1, "failed badge");
 check(html.indexOf("2026-11-10 09:00") !== -1, "auto_claim at");
 check(html.indexOf("北京时间") !== -1, "deadline in Beijing time");
 check(html.indexOf("去领取") !== -1 && html.indexOf('href="https://console.groq.com/keys"') !== -1, "claim link");
+check(html.indexOf('class="btn btn-primary"') !== -1, "claim control uses btn");
+check(html.indexOf("badge badge-ok") !== -1 && html.indexOf("badge badge-warn") !== -1 && html.indexOf("badge badge-bad") !== -1, "auto-claim badges share badge");
+check(html.indexOf('class="deadline') !== -1, "deadline class");
 check(html.indexOf("每日限额以控制台为准") !== -1, "free_terms");
 check(html.indexOf("新用户可领免费 token") !== -1, "summary");
 check(html.indexOf("&lt;live&gt;") !== -1 && html.indexOf("<live>") === -1, "html escaped");
@@ -276,6 +279,11 @@ check(vpsHtml.indexOf("学生额度") !== -1 && vpsHtml.indexOf("非 root 的 Pa
 check(vpsHtml.indexOf("据 X 上的帖子") !== -1, "x post attribution");
 check(vpsHtml.indexOf("要绑卡") !== -1 && vpsHtml.indexOf("不绑卡") !== -1, "card conditions");
 check(vpsHtml.indexOf("有货") !== -1 && vpsHtml.indexOf("缺货") !== -1, "stock pills");
+check(vpsHtml.indexOf("badge badge-ok") !== -1 && vpsHtml.indexOf("badge badge-muted") !== -1, "stock badges");
+check(vpsHtml.indexOf("badge badge-warn") !== -1 && vpsHtml.indexOf(">限量<") !== -1, "limited badge");
+check(vpsHtml.indexOf("badge badge-lead") !== -1, "lead badge");
+check(vpsHtml.indexOf('class="btn btn-primary"') !== -1 && vpsHtml.indexOf("官网下单") !== -1, "order button");
+check(vpsHtml.indexOf('class="deadline quiet"') !== -1, "vps deadline style");
 check(vpsHtml.indexOf("bandwagonhost.com") !== -1 && vpsHtml.indexOf("bwh81.net") !== -1, "bandwagon order links");
 check(vpsHtml.indexOf("目录里没有对应的价格和下单链接") !== -1, "unmatched plan stays blank");
 check(vpsHtml.indexOf("现在能下单") !== -1 && vpsHtml.indexOf("预告未开卖") !== -1 && vpsHtml.indexOf("今年不办") !== -1, "black friday statuses");
@@ -283,6 +291,7 @@ check(vpsHtml.indexOf("仅线索，未经官方确认") !== -1, "third-party dis
 check(vpsHtml.indexOf("t.me/dmitnews") !== -1 && vpsHtml.indexOf("stock.bwg.la") !== -1, "stock sources");
 check(vpsHtml.indexOf("<script") === -1, "vps html has no script");
 check(FM.updatedLine(vps).indexOf("2026-11-15 09:30") !== -1 && FM.updatedLine(vps).indexOf("北京时间") !== -1, "updated line");
+check(/最后更新 \d{4}-\d{2}-\d{2} \d{2}:\d{2}（北京时间）/.test(FM.catalogUpdatedLine(real)), "catalog updated line " + FM.catalogUpdatedLine(real));
 var evil = FM.renderVps({
   sample: false,
   free_vps: [{

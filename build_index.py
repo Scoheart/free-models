@@ -66,6 +66,54 @@ def nav(current: str) -> str:
     return "".join(parts)
 
 
+def header(current: str) -> str:
+    # Same chrome on /provider, /agent, and /vps. Only aria-current changes.
+    return f"""<header class="top">
+<h1 class="brand"><a href="../provider/"><span class="brand-mark" aria-hidden="true">免</span><span class="brand-name">免费 · Free</span></a></h1>
+{nav(current)}
+<p class="stats" id="stats" aria-live="polite"></p>
+</header>
+"""
+
+
+def sidebar(page: str) -> str:
+    meta = PAGES[page]
+    kicker = {"provider": "模型", "agent": "Agent", "vps": "VPS"}[page]
+    placeholder = "搜索厂商、套餐或说明" if page == "vps" else "搜索平台、模型或条款"
+    select_label = "选择厂商或分类" if page == "vps" else "选择平台"
+    if page == "vps":
+        legend = (
+            '<p class="legend" aria-hidden="true">'
+            '<span class="badge badge-ok">有货</span>'
+            '<span class="badge badge-muted">缺货</span>'
+            '<span class="badge badge-warn">限量</span>'
+            '<span class="badge badge-lead">仅线索</span>'
+            "</p>"
+        )
+    else:
+        legend = (
+            '<p class="legend" aria-hidden="true">'
+            '<span class="dot success"></span>已领取'
+            '<span class="dot needs-user"></span>待操作'
+            '<span class="dot failed"></span>失败'
+            "</p>"
+        )
+    return f"""<aside class="sidebar">
+<p class="side-kicker">{kicker}</p>
+<p class="side-lead">{meta["lead"]}</p>
+<div class="search-wrap" role="search">
+<label class="sr" for="q">搜索</label>
+<input id="q" type="search" placeholder="{placeholder}" autocomplete="off" spellcheck="false"/>
+</div>
+<p class="filter-status" id="filter-status" aria-live="polite"></p>
+{legend}
+<label class="sr" for="platform-select">{select_label}</label>
+<select id="platform-select" class="platform-select"></select>
+<div class="tab-rail" id="tab-rail"><div id="tabs" class="tabs" role="tablist" aria-label="目录"></div></div>
+</aside>
+"""
+
+
 def head(title: str, description: str, prefix: str, cache: str) -> str:
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -81,69 +129,24 @@ def head(title: str, description: str, prefix: str, cache: str) -> str:
 """
 
 
-def catalog_page(page: str, cache: str) -> str:
+def section_page(page: str, cache: str) -> str:
     meta = PAGES[page]
+    scripts = [f'<script src="../data.js?v={cache}"></script>']
+    if page == "vps":
+        scripts.append(f'<script src="../vps-data.js?v={cache}"></script>')
+    scripts.append(f'<script src="../app.js?v={cache}"></script>')
     return f"""{head(meta["title"], meta["description"], "../", cache)}<body data-page="{page}">
 <div class="app">
 <div class="chrome">
-<header class="top">
-<div class="brand">
-<p class="eyebrow">Free</p>
-<h1>免费</h1>
-<p class="lead">{meta["lead"]}</p>
-</div>
-<div class="top-side">
-{nav(page)}
-<p class="stats" id="stats" aria-live="polite"></p>
-</div>
-</header>
-<aside class="sidebar">
-<div class="search-wrap" role="search">
-<label class="sr" for="q">搜索平台或活动</label>
-<input id="q" type="search" placeholder="搜索平台、模型或条款" autocomplete="off" spellcheck="false"/>
-</div>
-<p class="legend" aria-hidden="true"><span class="dot success"></span>已领取<span class="dot needs-user"></span>待操作<span class="dot failed"></span>失败</p>
-<label class="sr" for="platform-select">选择平台</label>
-<select id="platform-select" class="platform-select"></select>
-<div class="tab-rail" id="tab-rail"><div id="tabs" class="tabs" role="tablist" aria-label="平台"></div></div>
-</aside>
+{header(page)}
+{sidebar(page)}
 </div>
 <div class="layout">
 <main id="detail" class="detail"></main>
 <footer class="foot">{meta["foot"]}</footer>
 </div>
 </div>
-<script src="../data.js?v={cache}"></script>
-<script src="../app.js?v={cache}"></script>
-</body>
-</html>
-"""
-
-
-def vps_page(cache: str) -> str:
-    meta = PAGES["vps"]
-    return f"""{head(meta["title"], meta["description"], "../", cache)}<body data-page="vps">
-<div class="app">
-<div class="chrome">
-<header class="top">
-<div class="brand">
-<p class="eyebrow">Free</p>
-<h1>免费</h1>
-<p class="lead">{meta["lead"]}</p>
-</div>
-<div class="top-side">
-{nav("vps")}
-<p class="stats" id="stats" aria-live="polite"></p>
-</div>
-</header>
-</div>
-<div class="layout">
-<main id="detail" class="detail"></main>
-<footer class="foot">{meta["foot"]}</footer>
-</div>
-</div>
-<script src="../vps-data.js?v={cache}"></script>
-<script src="../app.js?v={cache}"></script>
+{chr(10).join(scripts)}
 </body>
 </html>
 """
@@ -195,7 +198,7 @@ def home_page(cache: str) -> str:
     return opened + """<body data-page="home">
 <main class="home-wrap">
 <p class="eyebrow">Free</p>
-<h1>免费</h1>
+<h1>免费 · Free</h1>
 <p class="lead">正在打开模型、网关和 API 额度。</p>
 <p class="home-links"><a href="provider/">模型</a><a href="agent/">Agent</a><a href="vps/">VPS</a></p>
 <noscript><p>直接打开上面的链接。</p></noscript>
@@ -249,9 +252,9 @@ def main() -> None:
     (DIST / "agent").mkdir()
     (DIST / "vps").mkdir()
     (DIST / "index.html").write_text(home_page(cache), encoding="utf-8")
-    (DIST / "provider" / "index.html").write_text(catalog_page("provider", cache), encoding="utf-8")
-    (DIST / "agent" / "index.html").write_text(catalog_page("agent", cache), encoding="utf-8")
-    (DIST / "vps" / "index.html").write_text(vps_page(cache), encoding="utf-8")
+    (DIST / "provider" / "index.html").write_text(section_page("provider", cache), encoding="utf-8")
+    (DIST / "agent" / "index.html").write_text(section_page("agent", cache), encoding="utf-8")
+    (DIST / "vps" / "index.html").write_text(section_page("vps", cache), encoding="utf-8")
     (DIST / "app.js").write_text(app_js, encoding="utf-8")
     (DIST / "styles.css").write_text(css, encoding="utf-8")
     (DIST / "data.js").write_text(data_js, encoding="utf-8")

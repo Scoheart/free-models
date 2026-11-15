@@ -1,4 +1,6 @@
-/* free — /provider and /agent keep a platform in the hash (#groq). /vps is separate. */
+/* free — /provider, /agent, and /vps share one shell.
+   Catalog pages keep a platform in the hash (#groq, #opencode).
+   /vps keeps a section or vendor in the hash (#free, #stock, #bf, #dmit). */
 (function (root) {
   "use strict";
 
@@ -1146,6 +1148,53 @@
     }
   }
 
+  function fmtStampBJ(ms) {
+    var parts, map, i, p, hour;
+    try {
+      parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Shanghai",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hourCycle: "h23",
+      }).formatToParts(new Date(ms));
+    } catch (e) {
+      return "";
+    }
+    map = {};
+    for (i = 0; i < parts.length; i++) {
+      p = parts[i];
+      if (p.type !== "literal") map[p.type] = p.value;
+    }
+    if (!map.year || !map.month || !map.day || !map.hour || !map.minute) return "";
+    hour = map.hour;
+    if (hour.length === 1) hour = "0" + hour;
+    if (hour === "24") hour = "00";
+    return map.year + "-" + map.month + "-" + map.day + " " + hour + ":" + map.minute;
+  }
+
+  function catalogUpdatedLine(items) {
+    var best, i, it, fields, k, t, stamp;
+    best = 0;
+    fields = ["updated_at", "terms_updated_at", "collected_at"];
+    items = asList(items);
+    for (i = 0; i < items.length; i++) {
+      it = items[i];
+      if (!it || typeof it !== "object") continue;
+      for (k = 0; k < fields.length; k++) {
+        if (!it[fields[k]]) continue;
+        t = Date.parse(String(it[fields[k]]));
+        if (!Number.isNaN(t) && t > best) best = t;
+      }
+    }
+    if (!best) return "最后更新时间未知";
+    stamp = fmtStampBJ(best);
+    if (!stamp) return "最后更新时间未知";
+    return "最后更新 " + stamp + "（北京时间）";
+  }
+
   function daysUntil(iso, now) {
     var t = Date.parse(String(iso));
     if (Number.isNaN(t)) return Infinity;
@@ -1227,8 +1276,9 @@
   function renderAutoClaim(item) {
     var view = autoClaimView(item);
     if (!view) return "";
+    var tone = view.kind === "success" ? "badge-ok" : view.kind === "failed" ? "badge-bad" : "badge-warn";
     var html = '<div class="auto-claim-row">';
-    html += '<span class="auto-claim ' + view.kind + '">' + escapeHtml(view.label) + "</span>";
+    html += '<span class="badge ' + tone + '">' + escapeHtml(view.label) + "</span>";
     if (view.note || view.at) {
       html += '<p class="auto-claim-note">';
       if (view.note) html += '<span class="auto-claim-text">' + escapeHtml(view.note) + "</span>";
@@ -1256,7 +1306,7 @@
       href = safeUrl(st.url);
       if (href) {
         html +=
-          '<a class="guide-link" href="' +
+          '<a class="link" href="' +
           escapeHtml(href) +
           '" target="_blank" rel="noopener noreferrer">' +
           escapeHtml(linkLabel(href)) +
@@ -1294,26 +1344,26 @@
     source = safeUrl(item.url || item.link || item.source_url || "");
     same = source && href && source === href;
     guide = claimGuideOf(item);
-    var html = '<article class="offer" data-kind="' + categoryOf(item) + '">';
-    html += '<div class="offer-top">';
-    html += '<div class="offer-heading">';
-    html += "<h3 class=\"offer-title\">" + escapeHtml(title) + "</h3>";
+    var html = '<article class="card" data-kind="' + categoryOf(item) + '">';
+    html += '<div class="card-top">';
+    html += '<div class="card-heading">';
+    html += '<h3 class="card-title">' + escapeHtml(title) + "</h3>";
     if (md) {
       html += '<p class="deadline' + (soon ? " soon" : "") + '">截止 ' + escapeHtml(md) + "</p>";
     } else {
       html += '<p class="deadline quiet">未标明截止时间</p>';
     }
     html += "</div>";
-    html += '<div class="offer-actions">';
+    html += '<div class="card-actions">';
     if (href) {
       html +=
-        '<a class="go" href="' +
+        '<a class="btn btn-primary" href="' +
         escapeHtml(href) +
         '" target="_blank" rel="noopener noreferrer">去领取</a>';
     }
     if (source && !same) {
       html +=
-        '<a class="source" href="' +
+        '<a class="link" href="' +
         escapeHtml(source) +
         '" target="_blank" rel="noopener noreferrer">来源</a>';
     }
@@ -1343,7 +1393,7 @@
     html = '<div class="detail-inner">';
     html += '<header class="platform-head">';
     html += '<p class="kicker">平台</p>';
-    html += "<h2>" + escapeHtml(redactSecrets(group.name)) + "</h2>";
+    html += '<div class="platform-title-row"><h2>' + escapeHtml(redactSecrets(group.name)) + "</h2></div>";
     html += '<p class="platform-meta"><span>' + group.offers.length + " 项进行中</span>";
     if (label) html += renderDot(group.offers) + '<span class="dot-label">' + escapeHtml(label) + "</span>";
     html += "</p></header>";
@@ -1575,8 +1625,6 @@
     if (card) rows.push(["绑卡", card]);
     if (textOf(c.region_limits)) rows.push(["区域", c.region_limits]);
     if (textOf(c.idle_reclaim)) rows.push(["闲置回收", c.idle_reclaim]);
-    if (textOf(c.deadline)) rows.push(["截止", c.deadline]);
-    if (textOf(c.deadline_note)) rows.push(["截止说明", c.deadline_note]);
     return rows;
   }
 
@@ -1598,7 +1646,7 @@
       if (textOf(post.time_beijing)) bits += " · " + textOf(post.time_beijing);
       if (textOf(post.author)) bits += " · " + textOf(post.author);
       html +=
-        '<a href="' +
+        '<a class="link" href="' +
         escapeHtml(href) +
         '" target="_blank" rel="noopener noreferrer">' +
         escapeHtml(bits) +
@@ -1606,40 +1654,6 @@
     }
     if (!html) return "";
     return '<div class="post-list">' + html + "</div>";
-  }
-
-  function renderOrderLinks(links) {
-    var html, i, link, href, label;
-    links = asList(links);
-    html = "";
-    for (i = 0; i < links.length; i++) {
-      link = links[i] || {};
-      href = safeUrl(link.url);
-      if (!href) continue;
-      label = textOf(link.label) || linkLabel(href);
-      html +=
-        '<a class="guide-link" href="' +
-        escapeHtml(href) +
-        '" target="_blank" rel="noopener noreferrer">' +
-        escapeHtml(label) +
-        "</a>";
-    }
-    if (!html) return "";
-    return '<p class="plan-links">' + html + "</p>";
-  }
-
-  function renderExternal(url, label, className) {
-    var href = safeUrl(url);
-    if (!href) return "";
-    return (
-      '<a class="' +
-      className +
-      '" href="' +
-      escapeHtml(href) +
-      '" target="_blank" rel="noopener noreferrer">' +
-      escapeHtml(label) +
-      "</a>"
-    );
   }
 
   function renderSpecRows(specs) {
@@ -1656,14 +1670,65 @@
     return renderDefList(rows, "spec-grid");
   }
 
-  function renderFreeItem(item) {
+  function renderExternal(url, label, className) {
+    var href = safeUrl(url);
+    if (!href) return "";
+    return (
+      '<a class="' +
+      className +
+      '" href="' +
+      escapeHtml(href) +
+      '" target="_blank" rel="noopener noreferrer">' +
+      escapeHtml(label) +
+      "</a>"
+    );
+  }
+
+  function renderOrderButtons(links) {
+    var html, i, link, href, label, cls;
+    links = asList(links);
+    html = "";
+    for (i = 0; i < links.length; i++) {
+      link = links[i] || {};
+      href = safeUrl(link.url);
+      if (!href) continue;
+      label = textOf(link.label) || linkLabel(href);
+      cls = label === "官网下单" ? "btn btn-primary" : "btn";
+      html +=
+        '<a class="' +
+        cls +
+        '" href="' +
+        escapeHtml(href) +
+        '" target="_blank" rel="noopener noreferrer">' +
+        escapeHtml(label) +
+        "</a>";
+    }
+    return html;
+  }
+
+  function deadlineFromConditions(raw) {
+    var c, html, when, note;
+    c = raw && typeof raw === "object" ? raw : {};
+    html = "";
+    when = textOf(c.deadline);
+    note = textOf(c.deadline_note);
+    if (when) html += '<p class="deadline">截止 ' + escapeHtml(when) + "</p>";
+    if (note) html += '<p class="deadline quiet">' + escapeHtml(note) + "</p>";
+    return html;
+  }
+
+  function renderFreeItem(item, withTitle) {
     var html, href;
-    html = '<article class="offer vps-card">';
-    html += '<div class="offer-top"><div class="offer-heading">';
-    html += '<span class="type-pill">' + escapeHtml(typeLabelOf(item)) + "</span>";
-    html += '<h3 class="offer-title">' + escapeHtml(textOf(item.provider) || "未命名") + "</h3>";
-    html += "</div><div class=\"offer-actions\">";
-    href = renderExternal(item.official_url, "官网", "go");
+    item = item || {};
+    html = '<article class="card">';
+    html += '<div class="card-top"><div class="card-heading">';
+    html += '<div class="badge-row"><span class="badge badge-info">' + escapeHtml(typeLabelOf(item)) + "</span></div>";
+    if (withTitle !== false) {
+      html += '<h3 class="card-title">' + escapeHtml(textOf(item.provider) || "未命名") + "</h3>";
+    }
+    html += deadlineFromConditions(item.free_conditions);
+    html += '</div><div class="card-actions">';
+    href = renderExternal(item.official_url, "官网", "btn btn-primary");
     if (href) html += href;
     html += "</div></div>";
     html += renderSpecRows(item.specs);
@@ -1675,21 +1740,25 @@
   }
 
   function renderPlan(plan) {
-    var view, html, price, links;
-    view = stockView(plan.stock);
-    html = '<article class="plan">';
-    html += '<div class="plan-top">';
-    html += '<span class="stock-pill ' + view.cls + '">' + escapeHtml(view.label) + "</span>";
-    html += "<h4>" + escapeHtml(textOf(plan.display_name) || textOf(plan.key) || "套餐") + "</h4>";
-    if (plan.limited === true) html += '<span class="limited-pill">限量</span>';
+    var view, html, price, links, badge;
+    plan = plan || {};
+    view = stockView(plan);
+    badge = view.cls === "in" ? "badge-ok" : "badge-muted";
+    links = renderOrderButtons(plan.order_urls);
+    html = '<article class="card">';
+    html += '<div class="card-top"><div class="card-heading">';
+    html += '<div class="badge-row"><span class="badge ' + badge + '">' + escapeHtml(view.label) + "</span>";
+    if (plan.limited === true) html += '<span class="badge badge-warn">限量</span>';
     html += "</div>";
-    if (textOf(plan.config)) html += '<p class="plan-config">' + escapeHtml(textOf(plan.config)) + "</p>";
-    else html += renderSpecRows(plan.specs);
+    html += "<h3 class=\"card-title\">" + escapeHtml(textOf(plan.display_name) || textOf(plan.key) || "套餐") + "</h3>";
+    if (textOf(plan.config)) html += '<p class="meta-line">' + escapeHtml(textOf(plan.config)) + "</p>";
     price = textOf(plan.price);
-    links = renderOrderLinks(plan.order_urls);
-    if (price) html += '<p class="plan-price">' + escapeHtml(price) + "</p>";
-    if (textOf(plan.last_restock)) html += '<p class="plan-restock">最近补货 ' + escapeHtml(textOf(plan.last_restock)) + "</p>";
-    html += links;
+    if (price) html += '<p class="price">' + escapeHtml(price) + "</p>";
+    if (textOf(plan.last_restock)) html += '<p class="meta-line">最近补货 ' + escapeHtml(textOf(plan.last_restock)) + "</p>";
+    html += "</div>";
+    if (links) html += '<div class="card-actions">' + links + "</div>";
+    html += "</div>";
+    if (!textOf(plan.config)) html += renderSpecRows(plan.specs);
     if (!price && !links) html += '<p class="quiet-line">目录里没有对应的价格和下单链接</p>';
     html += "</article>";
     return html;
@@ -1705,7 +1774,7 @@
       if (!label && !href) continue;
       if (html) html += "、";
       if (href) {
-        html += '<a href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(label || href) + "</a>";
+        html += '<a class="link" href="' + escapeHtml(href) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(label || href) + "</a>";
       } else html += escapeHtml(label);
     }
     bits = textOf(provider.checked_at_beijing);
@@ -1718,52 +1787,75 @@
     );
   }
 
-  function renderVendor(provider) {
+  function renderVendorBody(provider) {
     var plans, html, i;
     provider = provider || {};
+    html = renderSourceLine(provider);
     plans = asList(provider.plans);
-    html = '<section class="offer vendor">';
-    html += '<div class="vendor-head"><h3>' + escapeHtml(textOf(provider.name) || "厂商") + "</h3>";
-    html += renderExternal(provider.official_url, "官网", "source");
-    html += "</div>";
-    html += renderSourceLine(provider);
     if (!plans.length) html += '<p class="quiet-line">这次检查没有套餐记录。</p>';
     else {
-      html += '<div class="plan-list">';
+      html += '<div class="stack">';
       for (i = 0; i < plans.length; i++) html += renderPlan(plans[i] || {});
       html += "</div>";
     }
-    html += "</section>";
     return html;
+  }
+
+  function renderVendor(provider) {
+    var name, link;
+    provider = provider || {};
+    name = textOf(provider.name) || "厂商";
+    link = renderExternal(provider.official_url, "官网", "link");
+    return (
+      '<section class="vendor"><header class="vendor-head"><h3 class="card-title">' +
+      escapeHtml(name) +
+      "</h3>" +
+      (link || "") +
+      "</header>" +
+      renderVendorBody(provider) +
+      "</section>"
+    );
+  }
+
+  function statusBadge(entry) {
+    var view, cls;
+    view = statusView(entry);
+    cls = view.kind === "now" ? "badge-ok" : view.kind === "off" ? "badge-muted" : "badge-warn";
+    return '<span class="badge ' + cls + '">' + escapeHtml(view.label) + "</span>";
   }
 
   function renderBfPlan(plan) {
     var html, href;
     plan = plan || {};
-    html = '<li class="bf-plan">';
-    html += "<strong>" + escapeHtml(textOf(plan.name) || "套餐") + "</strong>";
-    if (textOf(plan.price)) html += "<span>" + escapeHtml(textOf(plan.price)) + "</span>";
-    if (textOf(plan.specs)) html += '<span class="plan-config">' + escapeHtml(textOf(plan.specs)) + "</span>";
+    html = '<article class="card card-nested">';
+    html += '<div class="card-top"><div class="card-heading">';
+    html += '<h3 class="card-title">' + escapeHtml(textOf(plan.name) || "套餐") + "</h3>";
+    if (textOf(plan.price)) html += '<p class="price">' + escapeHtml(textOf(plan.price)) + "</p>";
+    if (textOf(plan.specs)) html += '<p class="meta-line">' + escapeHtml(textOf(plan.specs)) + "</p>";
+    html += "</div>";
     href = safeUrl(plan.url);
     if (href) {
       html +=
-        '<a class="guide-link" href="' +
+        '<div class="card-actions"><a class="btn" href="' +
         escapeHtml(href) +
-        '" target="_blank" rel="noopener noreferrer">下单</a>';
+        '" target="_blank" rel="noopener noreferrer">下单</a></div>';
     }
-    html += "</li>";
+    html += "</div></article>";
     return html;
   }
 
-  function renderOfficial(entry) {
-    var view, html, sources, i, href, plans, links;
-    view = statusView(entry);
-    html = '<article class="offer bf-card">';
-    html += '<div class="offer-top"><div class="offer-heading">';
-    html += '<span class="status-pill ' + view.kind + '">' + escapeHtml(view.label) + "</span>";
-    html += '<h3 class="offer-title">' + escapeHtml(textOf(entry.provider) || "厂商") + "</h3>";
+  function renderOfficial(entry, withTitle) {
+    var html, sources, i, href, plans, links, hub;
+    entry = entry || {};
+    html = '<article class="card">';
+    html += '<div class="card-top"><div class="card-heading">';
+    html += '<div class="badge-row">' + statusBadge(entry) + "</div>";
+    if (withTitle !== false) {
+      html += '<h3 class="card-title">' + escapeHtml(textOf(entry.provider) || "厂商") + "</h3>";
+    }
     html += "</div>";
-    if (safeUrl(entry.sale_hub)) html += '<div class="offer-actions">' + renderExternal(entry.sale_hub, "活动页", "go") + "</div>";
+    hub = safeUrl(entry.sale_hub) ? renderExternal(entry.sale_hub, "活动页", "btn btn-primary") : "";
+    if (hub) html += '<div class="card-actions">' + hub + "</div>";
     html += "</div>";
     if (textOf(entry.summary)) html += '<p class="body">' + escapeHtml(textOf(entry.summary)) + "</p>";
     sources = asList(entry.sources);
@@ -1772,18 +1864,18 @@
       href = safeUrl(sources[i] && sources[i].url);
       if (!href) continue;
       links +=
-        '<a href="' +
+        '<a class="link" href="' +
         escapeHtml(href) +
         '" target="_blank" rel="noopener noreferrer">' +
         escapeHtml(textOf(sources[i].title) || "官方来源") +
         "</a>";
     }
-    if (links) html += '<p class="source-links">' + links + "</p>";
+    if (links) html += '<div class="link-row">' + links + "</div>";
     plans = asList(entry.plans);
     if (plans.length) {
-      html += '<p class="kicker block">可下单套餐</p><ul class="bf-list">';
+      html += '<p class="block-label">可下单套餐</p><div class="stack stack-tight">';
       for (i = 0; i < plans.length; i++) html += renderBfPlan(plans[i]);
-      html += "</ul>";
+      html += "</div>";
     }
     html += "</article>";
     return html;
@@ -1792,18 +1884,33 @@
   function renderLead(lead) {
     var html, href;
     lead = lead || {};
-    html = '<article class="lead">';
+    html = '<article class="card">';
+    html += '<div class="badge-row"><span class="badge badge-lead">仅线索</span></div>';
     href = safeUrl(lead.url);
     if (href) {
       html +=
-        '<a href="' +
+        '<a class="link" href="' +
         escapeHtml(href) +
         '" target="_blank" rel="noopener noreferrer">' +
         escapeHtml(textOf(lead.source) || "来源") +
         "</a>";
-    } else if (textOf(lead.source)) html += "<strong>" + escapeHtml(textOf(lead.source)) + "</strong>";
-    if (textOf(lead.note)) html += "<p>" + escapeHtml(textOf(lead.note)) + "</p>";
+    } else if (textOf(lead.source)) {
+      html += '<h3 class="card-title">' + escapeHtml(textOf(lead.source)) + "</h3>";
+    }
+    if (textOf(lead.note)) html += '<p class="body">' + escapeHtml(textOf(lead.note)) + "</p>";
     html += "</article>";
+    return html;
+  }
+
+  function renderLeadsBlock(leads, withHeading) {
+    var html, i;
+    leads = asList(leads);
+    html = '<section class="leads">';
+    if (withHeading) html += "<h3>第三方线索</h3>";
+    html += '<p class="disclaimer">仅线索，未经官方确认</p>';
+    if (!leads.length) html += '<p class="quiet-line">这次没有单独的第三方线索。</p>';
+    for (i = 0; i < leads.length; i++) html += renderLead(leads[i]);
+    html += "</section>";
     return html;
   }
 
@@ -1818,64 +1925,638 @@
     return "最后更新 " + t;
   }
 
-  function renderVps(data) {
-    var html, items, stock, providers, i, bf, official, leads, notes;
-    data = data && typeof data === "object" ? data : {};
-    html = '<div class="detail-inner vps-inner">';
+  function sampleBanner(data) {
+    if (!data) return "";
     if (data.sample === true || String(data.sample).toLowerCase() === "true") {
-      html += '<p class="sample-banner" role="status">示例数据，等待首次同步</p>';
+      return '<p class="callout sample-banner" role="status">示例数据，等待首次同步</p>';
     }
-    html += '<nav class="vps-jump" aria-label="本页"><a href="#free">免费方案</a><a href="#stock">补货监控</a><a href="#bf">黑五优惠</a></nav>';
-    items = asList(data.free_vps);
-    html += '<section class="vps-section" id="free"><header class="section-head"><p class="kicker">免费方案</p><h2>免费 VPS</h2>';
-    html += "<p>一直免费、试用额度、学生额度，以及没有完整 root 的 PaaS。</p></header>";
-    if (!items.length) html += '<p class="quiet-line">暂时没有免费 VPS 情报。</p>';
-    for (i = 0; i < items.length; i++) html += renderFreeItem(items[i] || {});
-    html += "</section>";
+    return "";
+  }
 
-    stock = data.stock && typeof data.stock === "object" ? data.stock : {};
-    providers = asList(stock.providers);
-    html += '<section class="vps-section" id="stock"><header class="section-head"><p class="kicker">库存</p><h2>补货监控</h2>';
-    html += "<p>DMIT 和搬瓦工。有货是绿色，缺货是灰色。</p></header>";
-    notes = asList(stock.source_notes);
+  function detailWrap(inner) {
+    return '<div class="detail-inner">' + inner + "</div>";
+  }
+
+  function sectionHead(kicker, title, note, trailingHtml) {
+    var html = '<header class="platform-head">';
+    if (kicker) html += '<p class="kicker">' + escapeHtml(kicker) + "</p>";
+    html += '<div class="platform-title-row"><h2>' + escapeHtml(title) + "</h2>";
+    if (trailingHtml) html += '<div class="platform-actions">' + trailingHtml + "</div>";
+    html += "</div>";
+    if (note) html += '<p class="section-note">' + escapeHtml(note) + "</p>";
+    html += "</header>";
+    return html;
+  }
+
+  function renderFreeSection(items) {
+    var html, i;
+    html = sectionHead("免费方案", "免费 VPS", "一直免费、试用额度、学生额度，以及没有完整 root 的 PaaS。", "");
+    if (!items.length) html += '<p class="quiet-line">暂时没有免费 VPS 情报。</p>';
+    else {
+      html += '<div class="stack">';
+      for (i = 0; i < items.length; i++) html += renderFreeItem(items[i] || {});
+      html += "</div>";
+    }
+    return html;
+  }
+
+  function renderStockSection(stock, providers) {
+    var html, notes, i;
+    html = sectionHead("库存", "补货监控", "DMIT 和搬瓦工。有货是绿色，缺货是灰色。", "");
+    notes = asList(stock && stock.source_notes);
     for (i = 0; i < notes.length; i++) {
       if (textOf(notes[i])) html += '<p class="source-note">' + escapeHtml(textOf(notes[i])) + "</p>";
     }
     if (!providers.length) html += '<p class="quiet-line">暂时没有补货记录。</p>';
     for (i = 0; i < providers.length; i++) html += renderVendor(providers[i]);
-    html += "</section>";
+    return html;
+  }
 
+  function renderBfSection(bf, official, leads) {
+    var html, i;
+    html = sectionHead("优惠", "黑五优惠", "现在能下单、预告未开卖，或今年不办。可下单的套餐跟在官方来源后面。", "");
+    if (textOf(bf && bf.date_note)) html += '<p class="section-note">' + escapeHtml(textOf(bf.date_note)) + "</p>";
+    if (!official.length) html += '<p class="quiet-line">暂时没有官方黑五状态。</p>';
+    else {
+      html += '<div class="stack">';
+      for (i = 0; i < official.length; i++) html += renderOfficial(official[i] || {});
+      html += "</div>";
+    }
+    html += renderLeadsBlock(leads, true);
+    return html;
+  }
+
+  function renderVps(data) {
+    var items, stock, providers, bf, official, leads, html;
+    data = data && typeof data === "object" ? data : {};
+    items = asList(data.free_vps);
+    stock = data.stock && typeof data.stock === "object" ? data.stock : {};
+    providers = asList(stock.providers);
     bf = data.black_friday && typeof data.black_friday === "object" ? data.black_friday : {};
     official = asList(bf.official);
     leads = asList(bf.leads);
-    html += '<section class="vps-section" id="bf"><header class="section-head"><p class="kicker">优惠</p><h2>黑五优惠</h2>';
-    html += "<p>现在能下单、预告未开卖，或今年不办。可下单的套餐跟在官方来源后面。</p></header>";
-    if (textOf(bf.date_note)) html += '<p class="date-note">' + escapeHtml(textOf(bf.date_note)) + "</p>";
-    if (!official.length) html += '<p class="quiet-line">暂时没有官方黑五状态。</p>';
-    for (i = 0; i < official.length; i++) html += renderOfficial(official[i]);
-    html += '<section class="leads"><h3>第三方线索</h3><p class="disclaimer">仅线索，未经官方确认</p>';
-    if (!leads.length) html += '<p class="quiet-line">这次没有单独的第三方线索。</p>';
-    for (i = 0; i < leads.length; i++) html += renderLead(leads[i]);
-    html += "</section></section></div>";
+    html = '<div class="detail-inner">';
+    html += sampleBanner(data);
+    html += '<section id="free">' + renderFreeSection(items) + "</section>";
+    html += '<section id="stock">' + renderStockSection(stock, providers) + "</section>";
+    html += '<section id="bf">' + renderBfSection(bf, official, leads) + "</section>";
+    html += "</div>";
+    return html;
+  }
+
+  function renderVpsEmpty(query) {
+    var text = query && String(query).trim()
+      ? "没有匹配的厂商或套餐。换个关键词，或清空搜索。"
+      : "暂时没有 VPS 数据。";
+    return detailWrap('<div class="empty"><p>' + text + "</p></div>");
+  }
+
+  function hayOf(parts) {
+    var i, out;
+    out = [];
+    for (i = 0; i < parts.length; i++) {
+      if (textOf(parts[i])) out.push(textOf(parts[i]));
+    }
+    return norm(out.join(" "));
+  }
+
+  function freeHay(item) {
+    var bits, specs, i, cond;
+    item = item || {};
+    bits = [item.provider, item.type, item.type_label, item.notes, typeLabelOf(item)];
+    specs = asList(item.specs);
+    for (i = 0; i < specs.length; i++) {
+      bits.push(specs[i] && specs[i].label, specs[i] && specs[i].value);
+    }
+    cond = item.free_conditions && typeof item.free_conditions === "object" ? item.free_conditions : {};
+    bits.push(cond.card_notes, cond.region_limits, cond.idle_reclaim, cond.deadline, cond.deadline_note);
+    if (cond.card_required === true) bits.push("要绑卡");
+    else if (cond.card_required === false) bits.push("不绑卡");
+    return hayOf(bits);
+  }
+
+  function planHay(plan) {
+    var bits, specs, i, view;
+    plan = plan || {};
+    view = stockView(plan.stock);
+    bits = [plan.display_name, plan.key, plan.config, plan.price, plan.last_restock, view.label];
+    if (plan.limited === true) bits.push("限量");
+    specs = asList(plan.specs);
+    for (i = 0; i < specs.length; i++) bits.push(specs[i] && specs[i].label, specs[i] && specs[i].value);
+    return hayOf(bits);
+  }
+
+  function stockSignal(plans) {
+    var i, anyIn, anyLimited;
+    anyIn = false;
+    anyLimited = false;
+    plans = asList(plans);
+    for (i = 0; i < plans.length; i++) {
+      if (plans[i] && plans[i].stock === "in_stock") anyIn = true;
+      if (plans[i] && plans[i].limited === true) anyLimited = true;
+    }
+    if (anyIn) return { dot: "success", dotLabel: "有货" };
+    if (anyLimited) return { dot: "needs-user", dotLabel: "限量" };
+    return { dot: "", dotLabel: "" };
+  }
+
+  function bfSignal(entry) {
+    var view = statusView(entry);
+    if (view.kind === "now") return { dot: "success", dotLabel: view.label };
+    if (view.kind === "soon") return { dot: "needs-user", dotLabel: view.label };
+    return { dot: "", dotLabel: "" };
+  }
+
+  function preferDot(signals) {
+    var i, warn;
+    warn = null;
+    for (i = 0; i < signals.length; i++) {
+      if (signals[i] && signals[i].dot === "success") return signals[i];
+      if (signals[i] && signals[i].dot === "needs-user") warn = signals[i];
+    }
+    return warn || { dot: "", dotLabel: "" };
+  }
+
+  function takeSlug(used, base) {
+    var slug, next, n;
+    slug = slugify(base || "item");
+    next = slug;
+    n = 2;
+    while (used[next]) {
+      next = slug + "-" + n;
+      n += 1;
+    }
+    used[next] = 1;
+    return next;
+  }
+
+  function buildVpsEntries(data) {
+    var used, entries, freeItems, stock, providers, bf, official, leads;
+    var freeChildren, stockChildren, bfChildren, signals, i, item, name, slug, provider, plans, signal, entry, bits;
+    data = data && typeof data === "object" ? data : {};
+    used = { free: 1, stock: 1, bf: 1, leads: 1 };
+    entries = [];
+    freeItems = asList(data.free_vps);
+    stock = data.stock && typeof data.stock === "object" ? data.stock : {};
+    providers = asList(stock.providers);
+    bf = data.black_friday && typeof data.black_friday === "object" ? data.black_friday : {};
+    official = asList(bf.official);
+    leads = asList(bf.leads);
+
+    freeChildren = [];
+    for (i = 0; i < freeItems.length; i++) {
+      item = freeItems[i] || {};
+      name = textOf(item.provider) || "未命名";
+      slug = takeSlug(used, item.id || name);
+      freeChildren.push({
+        slug: slug,
+        name: name,
+        section: "free",
+        sectionLabel: "免费 VPS",
+        child: true,
+        count: 1,
+        hay: freeHay(item),
+        dot: "",
+        dotLabel: "",
+        render: (function (row, label) {
+          return function () {
+            return detailWrap(sampleBanner(data) + sectionHead("免费 VPS", label, typeLabelOf(row), "") + renderFreeItem(row, false));
+          };
+        })(item, name),
+      });
+    }
+    entries.push({
+      slug: "free",
+      name: "免费 VPS",
+      section: "free",
+      sectionLabel: "免费 VPS",
+      child: false,
+      count: freeItems.length,
+      hay: norm("免费 VPS"),
+      dot: "",
+      dotLabel: "",
+      render: function () {
+        return detailWrap(sampleBanner(data) + renderFreeSection(freeItems));
+      },
+    });
+    for (i = 0; i < freeChildren.length; i++) entries.push(freeChildren[i]);
+
+    stockChildren = [];
+    signals = [];
+    for (i = 0; i < providers.length; i++) {
+      provider = providers[i] || {};
+      plans = asList(provider.plans);
+      name = textOf(provider.name) || "厂商";
+      slug = takeSlug(used, provider.id || name);
+      signal = stockSignal(plans);
+      signals.push(signal);
+      bits = [name];
+      plans.forEach(function (plan) { bits.push(planHay(plan)); });
+      asList(provider.sources).forEach(function (src) { bits.push(src && src.name); });
+      stockChildren.push({
+        slug: slug,
+        name: name,
+        section: "stock",
+        sectionLabel: "补货监控",
+        child: true,
+        count: plans.length,
+        hay: hayOf(bits),
+        dot: signal.dot,
+        dotLabel: signal.dotLabel,
+        render: (function (row, label, planCount) {
+          return function () {
+            var link = renderExternal(row.official_url, "官网", "link");
+            return detailWrap(
+              sampleBanner(data) +
+              sectionHead("补货监控", label, planCount ? planCount + " 个套餐" : "", link) +
+              renderVendorBody(row)
+            );
+          };
+        })(provider, name, plans.length),
+      });
+    }
+    signal = preferDot(signals);
+    entries.push({
+      slug: "stock",
+      name: "补货监控",
+      section: "stock",
+      sectionLabel: "补货监控",
+      child: false,
+      count: providers.length,
+      hay: norm("补货监控 DMIT 搬瓦工"),
+      dot: signal.dot,
+      dotLabel: signal.dotLabel,
+      render: function () {
+        return detailWrap(sampleBanner(data) + renderStockSection(stock, providers));
+      },
+    });
+    for (i = 0; i < stockChildren.length; i++) entries.push(stockChildren[i]);
+
+    bfChildren = [];
+    signals = [];
+    for (i = 0; i < official.length; i++) {
+      entry = official[i] || {};
+      name = textOf(entry.provider) || "厂商";
+      slug = takeSlug(used, "bf-" + name);
+      signal = bfSignal(entry);
+      signals.push(signal);
+      bits = [name, signal.dotLabel, entry.summary];
+      asList(entry.plans).forEach(function (plan) {
+        bits.push(plan && plan.name, plan && plan.price, plan && plan.specs);
+      });
+      bfChildren.push({
+        slug: slug,
+        name: name,
+        section: "bf",
+        sectionLabel: "黑五优惠",
+        child: true,
+        count: asList(entry.plans).length,
+        hay: hayOf(bits),
+        dot: signal.dot,
+        dotLabel: signal.dotLabel,
+        render: (function (row, label) {
+          return function () {
+            return detailWrap(sampleBanner(data) + sectionHead("黑五优惠", label, "", "") + renderOfficial(row, false));
+          };
+        })(entry, name),
+      });
+    }
+    bits = [];
+    for (i = 0; i < leads.length; i++) bits.push(leads[i] && leads[i].source, leads[i] && leads[i].note);
+    bfChildren.push({
+      slug: "leads",
+      name: "第三方线索",
+      section: "bf",
+      sectionLabel: "黑五优惠",
+      child: true,
+      count: leads.length,
+      hay: hayOf(bits.concat(["仅线索", "未经官方确认"])),
+      dot: "",
+      dotLabel: "",
+      render: function () {
+        return detailWrap(sampleBanner(data) + sectionHead("黑五优惠", "第三方线索", "", "") + renderLeadsBlock(leads, false));
+      },
+    });
+    signal = preferDot(signals);
+    entries.push({
+      slug: "bf",
+      name: "黑五优惠",
+      section: "bf",
+      sectionLabel: "黑五优惠",
+      child: false,
+      count: official.length,
+      hay: norm("黑五优惠"),
+      dot: signal.dot,
+      dotLabel: signal.dotLabel,
+      render: function () {
+        return detailWrap(sampleBanner(data) + renderBfSection(bf, official, leads));
+      },
+    });
+    for (i = 0; i < bfChildren.length; i++) entries.push(bfChildren[i]);
+    return entries;
+  }
+
+  function filterVpsEntries(entries, query) {
+    var q, i, entry, childHit, sectionHit, sectionHasChild, out;
+    q = norm(query);
+    if (!q) return entries.slice();
+    childHit = {};
+    sectionHit = {};
+    for (i = 0; i < entries.length; i++) {
+      entry = entries[i];
+      if (norm(entry.name).indexOf(q) === -1 && String(entry.hay || "").indexOf(q) === -1) continue;
+      if (entry.child) childHit[entry.slug] = 1;
+      else sectionHit[entry.section] = 1;
+    }
+    sectionHasChild = {};
+    for (i = 0; i < entries.length; i++) {
+      entry = entries[i];
+      if (entry.child && childHit[entry.slug]) sectionHasChild[entry.section] = 1;
+    }
+    out = [];
+    for (i = 0; i < entries.length; i++) {
+      entry = entries[i];
+      if (!entry.child) {
+        if (sectionHit[entry.section] || sectionHasChild[entry.section]) out.push(entry);
+      } else if (sectionHit[entry.section] || childHit[entry.slug]) out.push(entry);
+    }
+    return out;
+  }
+
+  function renderNavDot(dot, label) {
+    if (!dot) return "";
+    return (
+      '<span class="dot ' +
+      dot +
+      '" title="' +
+      escapeHtml(label || "") +
+      '"><span class="sr">' +
+      escapeHtml(label || "") +
+      "</span></span>"
+    );
+  }
+
+  function renderVpsTabs(entries, slug) {
+    var html, i, entry, selected, cls;
+    html = "";
+    for (i = 0; i < entries.length; i++) {
+      entry = entries[i];
+      selected = entry.slug === slug;
+      cls = "tab " + (entry.child ? "tab-child" : "tab-section");
+      html +=
+        '<button type="button" class="' +
+        cls +
+        '" role="tab" data-slug="' +
+        escapeHtml(entry.slug) +
+        '" aria-selected="' +
+        (selected ? "true" : "false") +
+        '" aria-controls="detail" tabindex="' +
+        (selected ? "0" : "-1") +
+        '">';
+      html += '<span class="tab-name">' + escapeHtml(entry.name) + "</span>";
+      html += '<span class="tab-meta">';
+      if (!entry.child || entry.count > 1) html += '<span class="tab-count">' + entry.count + "</span>";
+      html += renderNavDot(entry.dot, entry.dotLabel);
+      html += "</span></button>";
+    }
+    return html;
+  }
+
+  function renderVpsOptions(entries, slug) {
+    var html, i, entry, group, label;
+    html = "";
+    group = "";
+    for (i = 0; i < entries.length; i++) {
+      entry = entries[i];
+      if (entry.sectionLabel !== group) {
+        if (group) html += "</optgroup>";
+        group = entry.sectionLabel;
+        html += '<optgroup label="' + escapeHtml(group) + '">';
+      }
+      label = entry.child ? entry.name : entry.name + "（" + entry.count + "）";
+      html +=
+        '<option value="' +
+        escapeHtml(entry.slug) +
+        '"' +
+        (entry.slug === slug ? " selected" : "") +
+        ">" +
+        escapeHtml(label) +
+        "</option>";
+    }
+    if (group) html += "</optgroup>";
     return html;
   }
 
   function bootVps() {
-    var parsed, detail, stats, data;
+    var tabsEl, detailEl, qEl, selectEl, statsEl, filterEl, railEl;
+    var data, entries, state, parsed;
+
+    if (typeof document === "undefined") return;
     parsed = parseRouteHash(readHash());
     if ((parsed.page === "provider" || parsed.page === "agent") && typeof location !== "undefined") {
       location.replace(sectionUrl(parsed.page, parsed.slug, "vps"));
       return;
     }
-    detail = document.getElementById("detail");
-    stats = document.getElementById("stats");
+    tabsEl = document.getElementById("tabs");
+    detailEl = document.getElementById("detail");
+    qEl = document.getElementById("q");
+    selectEl = document.getElementById("platform-select");
+    statsEl = document.getElementById("stats");
+    filterEl = document.getElementById("filter-status");
+    railEl = document.getElementById("tab-rail");
+    if (!tabsEl || !detailEl) return;
+
     data = typeof VPS !== "undefined" && VPS && typeof VPS === "object" ? VPS : {};
-    if (detail) detail.innerHTML = renderVps(data);
-    if (stats) stats.textContent = updatedLine(data);
-    if (parsed.slug && document.getElementById(parsed.slug) && document.getElementById(parsed.slug).scrollIntoView) {
-      document.getElementById(parsed.slug).scrollIntoView();
+    entries = buildVpsEntries(data);
+    state = { query: "", slug: parsed.slug || "", rendered: "" };
+    if (statsEl) statsEl.textContent = updatedLine(data);
+    if (document.querySelectorAll && typeof ITEMS !== "undefined") {
+      (function () {
+        var prepared, nodes, i, kind, groups;
+        prepared = prepareCatalog();
+        nodes = document.querySelectorAll("[data-kind-count]");
+        for (i = 0; i < nodes.length; i++) {
+          kind = nodes[i].getAttribute("data-kind-count");
+          groups = prepared.byKind[kind === "agents" ? "agents" : "providers"] || [];
+          nodes[i].textContent = String(countOffers(groups));
+        }
+      })();
     }
+
+    function findEntry(list, slug) {
+      var i;
+      for (i = 0; i < list.length; i++) if (list[i].slug === slug) return list[i];
+      return null;
+    }
+
+    function writeHash(slug, mode) {
+      var url, next, current;
+      if (typeof history === "undefined" || typeof location === "undefined") return;
+      next = slug ? "#" + encodeURIComponent(slug) : "";
+      current = location.hash || "";
+      if (current === next) return;
+      url = location.pathname + location.search + next;
+      if (mode === "push" && history.pushState) history.pushState({ slug: slug }, "", url);
+      else if (history.replaceState) history.replaceState({ slug: slug }, "", url);
+    }
+
+    function updateTabFades() {
+      var max, horizontal;
+      if (!railEl || !tabsEl) return;
+      max = tabsEl.scrollWidth - tabsEl.clientWidth;
+      horizontal = max > 8;
+      if (railEl.classList) {
+        railEl.classList.toggle("can-left", horizontal && tabsEl.scrollLeft > 6);
+        railEl.classList.toggle("can-right", horizontal && tabsEl.scrollLeft < max - 6);
+      }
+    }
+
+    function scrollTabIntoView(btn) {
+      var br, sr, horizontal;
+      if (!btn || !tabsEl.getBoundingClientRect) return;
+      horizontal = tabsEl.scrollWidth > tabsEl.clientWidth + 8;
+      br = btn.getBoundingClientRect();
+      sr = tabsEl.getBoundingClientRect();
+      if (horizontal) {
+        if (br.left < sr.left - 1 || br.right > sr.right + 1) tabsEl.scrollLeft += br.left - sr.left - 28;
+      } else if (br.top < sr.top) tabsEl.scrollTop -= sr.top - br.top;
+      else if (br.bottom > sr.bottom) tabsEl.scrollTop += br.bottom - sr.bottom;
+      updateTabFades();
+    }
+
+    function scrollPaneTop() {
+      var layout, narrow;
+      narrow = window.matchMedia && window.matchMedia("(max-width: 860px)").matches;
+      if (narrow && document.querySelector) {
+        layout = document.querySelector(".layout");
+        if (layout) layout.scrollTop = 0;
+      } else if (detailEl) detailEl.scrollTop = 0;
+    }
+
+    function slugFromEvent(target) {
+      var node = target;
+      while (node && node !== tabsEl) {
+        if (node.getAttribute && node.getAttribute("data-slug")) return node.getAttribute("data-slug");
+        node = node.parentNode;
+      }
+      return "";
+    }
+
+    function render() {
+      var list, slug, entry, shown, i, btn, buttons;
+      list = filterVpsEntries(entries, state.query);
+      slug = "";
+      if (state.slug && findEntry(list, state.slug)) slug = state.slug;
+      else if (list.length) slug = list[0].slug;
+      if (!state.query) state.slug = slug;
+      entry = findEntry(list, slug);
+      tabsEl.setAttribute("aria-label", "VPS 目录");
+      tabsEl.innerHTML = list.length ? renderVpsTabs(list, slug) : '<p class="tabs-empty">没有匹配的目录</p>';
+      if (selectEl) {
+        selectEl.innerHTML = renderVpsOptions(list, slug);
+        selectEl.disabled = !list.length;
+        if (slug) selectEl.value = slug;
+      }
+      detailEl.innerHTML = entry ? entry.render() : renderVpsEmpty(state.query);
+      detailEl.setAttribute("role", "tabpanel");
+      detailEl.setAttribute("aria-label", entry ? entry.name : "VPS");
+      if (filterEl) {
+        shown = 0;
+        for (i = 0; i < list.length; i++) if (list[i].child) shown += 1;
+        filterEl.textContent = state.query ? "找到 " + shown + " 项" : shown + " 项";
+      }
+      if (slug && slug !== state.rendered) {
+        buttons = tabsEl.querySelectorAll ? tabsEl.querySelectorAll("[role=tab]") : [];
+        btn = null;
+        for (i = 0; i < buttons.length; i++) {
+          if (buttons[i].getAttribute("aria-selected") === "true") btn = buttons[i];
+        }
+        if (btn) scrollTabIntoView(btn);
+        state.rendered = slug;
+        scrollPaneTop();
+      }
+      updateTabFades();
+    }
+
+    tabsEl.addEventListener("click", function (e) {
+      var slug = slugFromEvent(e.target);
+      if (!slug) return;
+      state.slug = slug;
+      writeHash(slug, "push");
+      state.rendered = "";
+      render();
+    });
+
+    tabsEl.addEventListener("keydown", function (e) {
+      var buttons, i, next, key;
+      key = e.key || e.which;
+      if (key !== "ArrowDown" && key !== "ArrowUp" && key !== "ArrowRight" && key !== "ArrowLeft" && key !== "Home" && key !== "End") return;
+      buttons = [];
+      var nodes = tabsEl.querySelectorAll("[role=tab]");
+      for (i = 0; i < nodes.length; i++) buttons.push(nodes[i]);
+      i = -1;
+      for (next = 0; next < buttons.length; next++) {
+        if (buttons[next] === document.activeElement) i = next;
+      }
+      if (i < 0) return;
+      if (key === "ArrowDown" || key === "ArrowRight") i = Math.min(buttons.length - 1, i + 1);
+      else if (key === "ArrowUp" || key === "ArrowLeft") i = Math.max(0, i - 1);
+      else if (key === "Home") i = 0;
+      else i = buttons.length - 1;
+      e.preventDefault();
+      buttons[i].focus();
+      state.slug = buttons[i].getAttribute("data-slug");
+      writeHash(state.slug, "push");
+      state.rendered = "";
+      render();
+    });
+
+    tabsEl.addEventListener("scroll", function () {
+      updateTabFades();
+    });
+
+    if (qEl) {
+      qEl.addEventListener("input", function () {
+        state.query = qEl.value;
+        render();
+      });
+    }
+
+    if (selectEl) {
+      selectEl.addEventListener("change", function () {
+        state.slug = selectEl.value;
+        writeHash(state.slug, "push");
+        state.rendered = "";
+        render();
+      });
+    }
+
+    function onNavigate() {
+      var next = parseRouteHash(readHash());
+      if ((next.page === "provider" || next.page === "agent") && typeof location !== "undefined") {
+        location.replace(sectionUrl(next.page, next.slug, "vps"));
+        return;
+      }
+      state.slug = next.slug || "";
+      state.rendered = "";
+      render();
+      writeHash(state.slug, "replace");
+    }
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("hashchange", onNavigate);
+      window.addEventListener("popstate", onNavigate);
+      window.addEventListener("resize", function () {
+        var btn = tabsEl.querySelector('[aria-selected="true"]');
+        updateTabFades();
+        if (btn) scrollTabIntoView(btn);
+      });
+    }
+
+    render();
+    writeHash(state.slug, "replace");
   }
+
 
   function bootHome() {
     var prepared, decided, page, slug;
@@ -1888,7 +2569,7 @@
   }
 
   function bootCatalog() {
-    var tabsEl, detailEl, qEl, selectEl, statsEl, railEl, now, all, allGroups, byKind, state, i;
+    var tabsEl, detailEl, qEl, selectEl, statsEl, filterEl, railEl, now, all, allGroups, byKind, state, i;
     var pageName, pageKind, route, prepared;
 
     if (typeof document === "undefined") return;
@@ -1897,6 +2578,7 @@
     qEl = document.getElementById("q");
     selectEl = document.getElementById("platform-select");
     statsEl = document.getElementById("stats");
+    filterEl = document.getElementById("filter-status");
     railEl = document.getElementById("tab-rail");
     if (!tabsEl || !detailEl) return;
 
@@ -1948,7 +2630,7 @@
         escapeHtml(label) +
         " 里有 " +
         countOffers(found) +
-        ' 项匹配。<a class="jump-kind" href="' +
+        ' 项匹配。<a class="btn jump-kind" href="' +
         escapeHtml(href) +
         '">切换到 ' +
         escapeHtml(label) +
@@ -1987,11 +2669,12 @@
       detailEl.innerHTML = group ? renderDetail(group, now) : renderEmpty(state.query, otherKindHint(kind, state.query));
       detailEl.setAttribute("role", "tabpanel");
       detailEl.setAttribute("aria-label", group ? group.name : "活动详情");
-      if (statsEl) {
+      if (statsEl) statsEl.textContent = catalogUpdatedLine(all);
+      if (filterEl) {
         if (state.query) {
-          statsEl.textContent = "找到 " + groups.length + " 个平台 · " + countOffers(groups) + " 项";
+          filterEl.textContent = "找到 " + groups.length + " 个平台 · " + countOffers(groups) + " 项";
         } else {
-          statsEl.textContent = countOffers(base) + " 项进行中 · " + base.length + " 个平台";
+          filterEl.textContent = countOffers(base) + " 项进行中 · " + base.length + " 个平台";
         }
       }
       applyFolds();
@@ -2266,6 +2949,7 @@
     routeOnPage: routeOnPage,
     renderVps: renderVps,
     updatedLine: updatedLine,
+    catalogUpdatedLine: catalogUpdatedLine,
   };
 
   boot();
