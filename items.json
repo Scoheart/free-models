@@ -32446,7 +32446,7 @@
     ],
     "category": "providers",
     "collected_at": "2026-11-11T21:20:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "needs_user",
       "note": "开通要绑信用卡，且你的 Google 账号此前已用过 Google Cloud，大概率不符合新客户条件，需你本人判断",
@@ -34171,7 +34171,7 @@
     ],
     "category": "providers",
     "collected_at": "2026-11-12T04:35:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "needs_user",
       "note": "需你本人在 itch.io 报名参赛（报名即视为参赛，11/12–11/15 要提交游戏），是否参加由你决定；额度码发到报名邮箱",
@@ -36148,7 +36148,7 @@
     ],
     "category": "agents",
     "collected_at": "2026-11-14T00:25:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "needs_user",
       "note": "需要在 ZCode 客户端里点左下角活动卡领取，并把供应商标到 Start Plan；无法在网页代领。",
@@ -36893,7 +36893,7 @@
     ],
     "category": "providers",
     "collected_at": "2026-11-15T00:15:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "needs_user",
       "note": "仅限在校学生且需本人报名参赛（你已有 Vultr 账号）；是否参加由你决定，剩余时间很短。",
@@ -37386,6 +37386,336 @@
       "status": "needs_user",
       "note": "待浏览器领取：需用 GitHub 账号登录 Greptile 并授权仓库（涉及仓库权限，需你决定授权哪些）；Gmail 未见 Greptile 账号",
       "at": "2026-11-16T00:15:00+08:00"
+    }
+  },
+  {
+    "id": "workbuddy-hy4-flash-free-nov30-20261117",
+    "title": "WorkBuddy：混元 Hy4 flash 限时免费至 11/30",
+    "platform": "WorkBuddy",
+    "product": "WorkBuddy",
+    "model": "Hy4 flash",
+    "type": "限免",
+    "deadline": "2026-11-30T23:59:59+08:00",
+    "url": "https://hy.tencent.com/research/hy4-flash",
+    "source": "腾讯混元官网 Hy4 flash 发布页（2026-11-16，作者 WorkBuddy 产品经理 Anne；英文页 https://hy.tencent.ai/research/hy4-flash）；IT之家 2026-11-16 13:09 转述",
+    "summary": "据腾讯混元官网 11 月 16 日发布页，新模型 Hy4 flash（总参 224B、激活 12B，支持多模态和 100 万 Token 上下文）已在 WorkBuddy、腾讯云 TokenHub、元宝等产品上线。官方写明：11 月 30 日前，用户可在 WorkBuddy 限时免费使用；同期腾讯云 TokenHub API 是限时 5 折，不是免费。官方没有公布每日或总量数字，也没有写截止时刻，本条截止按 11 月 30 日当天结束计；二手来源称免费额度按天发放，当天用完后会扣积分，具体数量以客户端提示为准。这与已于 11 月 15 日结束的 WorkBuddy Hy3/Hy4 限免不是同一条。需要 WorkBuddy 账号，登录后在模型列表选择 Hy4 flash。官方未写绑卡或实名要求。OpenRouter 上的 tencent/hy4-flash 是付费线路。",
+    "claim_steps": [
+      "打开 WorkBuddy 国际版或国内版并登录",
+      "更新到最新客户端后，在模型列表选择 Hy4 flash",
+      "确认客户端显示为免费或 0 倍率后再使用"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开 WorkBuddy",
+        "detail": "国际版打开 WorkBuddy 网站或客户端，国内版打开国内站点或客户端",
+        "url": "https://workbuddy.ai/",
+        "note": "国内版也可试 https://workbuddy.cn/"
+      },
+      {
+        "step": "登录账号",
+        "detail": "登录已有 WorkBuddy 账号；没有就先注册",
+        "url": "https://workbuddy.ai/",
+        "note": "官方未写绑卡要求"
+      },
+      {
+        "step": "选择 Hy4 flash",
+        "detail": "在模型列表里选 Hy4 flash，确认是限免或 0 倍率后再开始对话或布置任务",
+        "url": "https://hy.tencent.com/research/hy4-flash",
+        "note": "官方只写限时免费到 11 月 30 日前"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "WorkBuddy",
+        "action_url": "https://workbuddy.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Hy4 flash",
+        "action_url": "https://hy.tencent.com/research/hy4-flash"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-17T00:14:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在 WorkBuddy 客户端或网页登录后，在模型列表选择 Hy4 flash；注册表里没有 WorkBuddy 账号，本轮也无法代填登录。",
+      "at": "2026-11-17T00:14:00+08:00"
+    }
+  },
+  {
+    "id": "opencode-zen-hy4-flash-free-20261117",
+    "title": "OpenCode Zen：Hy4 flash Free 限时免费（hy4-flash-free）",
+    "platform": "OpenCode",
+    "product": "OpenCode Zen",
+    "model": "hy4-flash-free",
+    "type": "限免",
+    "deadline": "2026-11-30T23:59:59+08:00",
+    "url": "https://opencode.ai/docs/zen/",
+    "source": "OpenCode 官方 Zen 文档与模型目录 GET https://opencode.ai/zen/v1/models（2026-11-17 00:05 北京核对，hy4-flash-free 价格为 0，release_date 2026-11-16）；据 X 上的报道（OpenCode 官方账号 @opencode，帖子 2122231173720224224，2026-11-16 15:31 北京）称近乎不限用量、免费约两周",
+    "summary": "据 OpenCode 官方 Zen 文档和模型目录，腾讯混元 Hy4 flash 新增免费线路 Hy4 flash Free（模型 ID hy4-flash-free，canonical_id tencent/hy4-flash），11 月 16 日上线，输入、输出和缓存读取价格均为 0。支持文本和图片输入、工具调用，上下文 1,048,576 Token，最长输出 65,536 Token。官方文档写明这是限时免费，并称提供商零留存、不用你的数据训练；文档没有写截止日期。据 X 上的报道，OpenCode 官方账号称近乎不限用量、免费约两周，本条截止按发帖时间加两周计到 11 月 30 日。免费聊天模型必须在 OpenCode 客户端里用，不能把这条免费线路当普通外部 API 随便调。需要 OpenCode 账号，官方文档未写绑卡要求。这与 OpenRouter 上付费的 tencent/hy4-flash 不是同一条线路。",
+    "claim_steps": [
+      "打开 OpenCode 客户端并登录",
+      "用 /models 选择 Hy4 flash Free，或把模型名配成 hy4-flash-free",
+      "直接在 OpenCode 里对话或写代码"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开 OpenCode",
+        "detail": "安装或打开 OpenCode 客户端并登录已有账号",
+        "url": "https://opencode.ai/",
+        "note": "免费聊天模型必须走 OpenCode 客户端"
+      },
+      {
+        "step": "选择免费模型",
+        "detail": "在客户端运行 /models，选择 Hy4 flash Free",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": "模型 ID 为 hy4-flash-free"
+      },
+      {
+        "step": "开始使用",
+        "detail": "在 OpenCode 里直接对话或布置编程任务",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": "官方只写 limited time，结束日为按官方推文约两周推算"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "hy4-flash-free",
+        "action_url": "https://opencode.ai/docs/zen/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat",
+      "vision"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-17T00:14:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在你本机的 OpenCode 客户端里用 /models 选择 Hy4 flash Free；注册表里没有 OpenCode 账号，以前 Console 登录页也曾打不开，本轮未代登录。",
+      "at": "2026-11-17T00:14:00+08:00"
+    }
+  },
+  {
+    "id": "qwen4-max-1m-free-tokens-qianwen-platform-20261117",
+    "title": "千问 AI 平台：Qwen4-Max 正式上线，按量付费调用送 100 万 Token 免费额度",
+    "platform": "千问AI平台",
+    "product": "千问AI平台",
+    "model": "qwen4-max",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://platform.qianwenai.com/docs/developer-guides/getting-started/latest-model",
+    "source": "千问AI平台官方文档「最新模型」与「免费额度」（2026-11-17 00:10 北京核对）",
+    "summary": "据千问 AI 平台官方文档，阿里 11 月 16 日正式发布旗舰模型 Qwen4-Max（Model ID qwen4-max），按量付费调用提供 100 万 Token 免费额度，与 Token Plan Credits 相互独立。这是该模型自己的免费推理额度，不能和其他模型合并，也不能抵扣批量调用、内置工具、微调或部署。官方写明：完成实名认证并开通平台后自动发放，无需购买；对已开通账号的用户，新发布模型的额度有效期从模型发布日起算，通常为 90 天，过期不补发、不延期。额度用尽后继续调用会按量计费，可在控制台权益页开启「免费额度用尽即停」。必须实名；同一认证主体重新注册不能再领新人额度。官方未写绑卡要求。Token Plan 专属 API Key 不会消耗这笔免费额度，要用通用 API Key。这与已收录的 Qwen Studio 预览版免费试用、以及阿里云百炼新用户通用额度不是同一条。",
+    "claim_steps": [
+      "登录千问 AI 平台并完成实名认证、开通平台",
+      "在控制台创建通用 API Key（不要用 Token Plan 专属 Key）",
+      "用兼容模式调用，模型名填 qwen4-max",
+      "建议在权益页打开「免费额度用尽即停」"
+    ],
+    "claim_guide": [
+      {
+        "step": "登录并开通平台",
+        "detail": "打开千问 AI 平台，登录或注册后完成实名认证并开通平台，免费额度会自动发放",
+        "url": "https://platform.qianwenai.com/",
+        "note": "必须实名，无需购买"
+      },
+      {
+        "step": "创建通用 API Key",
+        "detail": "按官方准备文档创建通用 API Key，不要用 Token Plan 专属 Key",
+        "url": "https://platform.qianwenai.com/docs/api-reference/preparation/api-key",
+        "note": "专属 Key 会直接按量付费，用不到这笔免费额度"
+      },
+      {
+        "step": "调用 Qwen4-Max",
+        "detail": "用 OpenAI 兼容接口调用，模型名填 qwen4-max，base_url 填官方文档给出的兼容模式地址",
+        "url": "https://platform.qianwenai.com/docs/developer-guides/getting-started/latest-model",
+        "note": "base_url 为 https://maas.qianwenaiapi.com/compatible-mode/v1"
+      },
+      {
+        "step": "打开用尽即停",
+        "detail": "在控制台免费额度页的操作列打开「免费额度用尽即停」，避免额度过后再扣费",
+        "url": "https://platform.qianwenai.com/docs/resources/free-quota",
+        "note": "官方文档有该开关说明"
+      }
+    ],
+    "providers": [
+      {
+        "name": "千问AI平台",
+        "action_url": "https://platform.qianwenai.com/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "qwen4-max",
+        "action_url": "https://platform.qianwenai.com/docs/developer-guides/getting-started/latest-model"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding",
+      "vision"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_id",
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-17T00:14:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要你本人在千问 AI 平台完成实名认证并开通后，用通用 API Key 调用 qwen4-max；本轮不能代做实名。",
+      "at": "2026-11-17T00:14:00+08:00"
+    }
+  },
+  {
+    "id": "autoclaw-weekly-perks-m11w3-100m-tokens-20261117",
+    "title": "智谱 AutoClaw 一周福利 M11W3：登录领 100M Tokens（至 11/22 23:59）",
+    "platform": "智谱 AutoClaw",
+    "product": "AutoClaw",
+    "model": null,
+    "type": "额度",
+    "deadline": "2026-11-22T23:59:59+08:00",
+    "url": "https://autoclaw.zhipuai.cn/blog/news/M11W3/",
+    "source": "智谱 AutoClaw 官方博客《每周福利｜100M Tokens 等你领取！》（页面标注 2026-11-13 发布，活动期 11/16–11/22；2026-11-17 00:10 北京核对）",
+    "summary": "据智谱 AutoClaw（澳龙）官方博客，北京时间 11 月 16 日 00:00 至 11 月 22 日 23:59 登录 AutoClaw，即可领取 100M Tokens（相当于 10,000 积分），每个账号限领一次。奖励在 11 月 22 日 23:59 失效，越早领可用时间越长。这是接在 11 月 15 日到期的双十一福利之后的新一轮周福利，不是旧活动延期。需要安装并登录 AutoClaw 客户端；官方这篇是国内站活动说明，没有写国际站额度，也没有写绑卡要求。",
+    "claim_steps": [
+      "打开 AutoClaw 官网，下载或打开客户端",
+      "在 11 月 22 日 23:59 前登录国内站账号领取",
+      "到账后即可在 AutoClaw 里使用"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开客户端",
+        "detail": "打开 AutoClaw 官网，下载或启动国内站客户端",
+        "url": "https://autoclaw.zhipuai.cn/",
+        "note": "活动说明见国内站博客"
+      },
+      {
+        "step": "登录领取",
+        "detail": "在 11 月 16 日 00:00 至 11 月 22 日 23:59（北京时间）登录，100M Tokens 会到账",
+        "url": "https://autoclaw.zhipuai.cn/blog/news/M11W3/",
+        "note": "每账号限领一次，不用兑换码"
+      },
+      {
+        "step": "尽快使用",
+        "detail": "到账后在 AutoClaw 里使用，额度 11 月 22 日 23:59 失效",
+        "url": "https://autoclaw.zhipuai.cn/blog/news/M11W3/",
+        "note": "越早领可用时间越长"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "智谱 AutoClaw",
+        "action_url": "https://autoclaw.zhipuai.cn/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-17T00:14:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在 AutoClaw 客户端登录国内站领取，每账号一次，11/22 23:59 失效；本轮无法代登客户端。",
+      "at": "2026-11-17T00:14:00+08:00"
+    }
+  },
+  {
+    "id": "polyai-dialog-rsn1-100usd-new-account-20261117",
+    "title": "PolyAI Dialog-RSN-1：新账号限时送 $100 API 额度",
+    "platform": "PolyAI",
+    "product": "Dialog-RSN-1 API",
+    "model": "Dialog-RSN-1",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://poly.ai/pricing",
+    "source": "PolyAI 官方定价页（2026-11-17 00:10 北京核对）",
+    "summary": "据 PolyAI 官方定价页，语音对话模型 Dialog-RSN-1 的 API 已经上线，新账号限时获得 $100 免费额度。这是语音对话接口，不是文本大模型聊天。官方只写 for a limited time，没有公布具体截止日期。同一定价页的 Platform 方案另写起步赠送 $20 免费额度，与这条限时 $100 不是同一句话。官方定价页没有写必须绑卡才能拿到新账号额度。用尽规则和并发上限以控制台和官方 limits 文档为准。",
+    "claim_steps": [
+      "打开 PolyAI 定价页或 API 起始页注册新账号",
+      "在 Agent Studio 创建 API Key",
+      "按官方文档调用 Dialog-RSN-1"
+    ],
+    "claim_guide": [
+      {
+        "step": "注册新账号",
+        "detail": "打开 PolyAI 定价页或 API 起始页，注册一个新账号",
+        "url": "https://studio.poly.ai/start-building/api",
+        "note": "官方写的是新账号限时 $100"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在 Agent Studio 里生成 API Key",
+        "url": "https://studio.poly.ai/start-building/api",
+        "note": "定价页未写必须先绑卡"
+      },
+      {
+        "step": "调用模型",
+        "detail": "按官方文档调用 Dialog-RSN-1 语音对话接口",
+        "url": "https://poly.ai/pricing",
+        "note": "这是语音 API"
+      }
+    ],
+    "providers": [
+      {
+        "name": "PolyAI",
+        "action_url": "https://studio.poly.ai/start-building/api"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Dialog-RSN-1",
+        "action_url": "https://poly.ai/pricing"
+      }
+    ],
+    "scenes": [
+      "voice"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-17T00:14:00+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在 poly.ai 注册新账号并在 Agent Studio 建 Key；本轮不能代填登录或保存新密码。",
+      "at": "2026-11-17T00:14:00+08:00"
     }
   }
 ]
