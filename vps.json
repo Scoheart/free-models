@@ -1,111 +1,624 @@
 {
   "schema_version": 1,
-  "sample": true,
-  "updated_at_beijing": "2026-11-15 09:30",
+  "sample": false,
+  "updated_at_beijing": "2026-11-16 23:54",
   "scanned_at_beijing": {
-    "stock": "2026-11-15 09:00",
-    "black_friday": "2026-11-15 09:30",
-    "free_vps": "2026-11-15 08:00"
+    "stock": "2026-11-16 23:51:01",
+    "black_friday": "2026-11-16 23:51:01",
+    "free_vps": "2026-11-16 23:54"
   },
   "free_vps": [
     {
-      "id": "oracle-cloud",
+      "id": "oracle-cloud-always-free",
       "provider": "Oracle Cloud",
       "type": "always_free",
       "type_label": "一直免费",
       "specs": [
-        {"label": "CPU", "value": "最多 4 OCPU（ARM，示例）"},
-        {"label": "内存", "value": "24 GB"},
-        {"label": "硬盘", "value": "200 GB"}
+        {
+          "label": "as_claimed_updated",
+          "value": "Always Free ARM：2 OCPU + 12GB 内存（有帖称 2026 年 6 月从 4 OCPU/24GB 砍半）；另可有 2 台 AMD micro；合计约 200GB 存储；每月约 10TB 出站流量。"
+        },
+        {
+          "label": "conflicting_claim_still_circulating",
+          "value": "仍有帖写 4 核 24G / 200G，可能是旧额度，未在本轮打开官网核对。"
+        }
       ],
       "free_conditions": {
         "card_required": true,
-        "card_notes": "需要信用卡做验证，示例说明",
-        "region_limits": "可用区不固定，部分地区注册受限",
-        "idle_reclaim": "长期闲置的计算实例可能被回收",
+        "card_notes": "多条帖称需要可验证的实体信用卡/借记卡；有回复称不接受虚拟卡、预付卡或仅 PIN 卡（此点来自 X，未在本轮打开官网条款核对）。",
+        "region_limits": "注册时选择的 home region 之后不能改；热门区常年容量不足（Out of capacity）。有帖建议选美国区如 Ashburn/Phoenix，但是否还能开出取决于当时库存。",
+        "idle_reclaim": "有帖称机器闲置约 7 天可能被回收，需保活。",
         "deadline": "",
-        "deadline_note": "Always Free 没有固定截止日期"
+        "deadline_note": "官方定位为 Always Free / 不设到期日，但额度与容量政策可能调整。"
       },
       "official_url": "https://www.oracle.com/cloud/free/",
       "posts": [
         {
-          "url": "https://x.com/search?q=oracle%20cloud%20always%20free",
-          "time_beijing": "2026-11-01 12:00",
-          "author": "",
-          "role": ""
+          "url": "https://x.com/linhao722722/status/2120090089598620040",
+          "time_beijing": "2026-11-10 17:44:01",
+          "author": "@linhao722722",
+          "role": "primary_for_quota_cut_claim"
+        },
+        {
+          "url": "https://x.com/hodu382759/status/2120155768431227210",
+          "time_beijing": "2026-11-10 22:05:00",
+          "author": "@hodu382759",
+          "role": "mentions_4c24g_and_capacity_shortage"
+        },
+        {
+          "url": "https://x.com/grok/status/2120001161046487519",
+          "time_beijing": "2026-11-10 11:50:39",
+          "author": "@grok",
+          "role": "signup_conditions_and_official_link"
         }
       ],
-      "notes": "示例条目。容量和区域以 Oracle 官网当时显示为准。"
+      "notes": "常设免费档，不是限时活动。本轮未打开 Oracle 官网复核当前额度数字。"
     },
     {
-      "id": "google-cloud",
-      "provider": "Google Cloud",
-      "type": "trial",
-      "type_label": "试用额度",
+      "id": "cloady-free-tier",
+      "provider": "Cloady",
+      "type": "paas",
+      "type_label": "非 root 的 PaaS",
       "specs": [
-        {"label": "额度", "value": "新用户试用金（示例）"},
-        {"label": "时长", "value": "90 天"}
+        {
+          "label": "as_claimed_from_docs_post",
+          "value": "0.5 核 / 1GB 内存 / 5GB 硬盘，每月 10GB 流量 + 100 万次请求。"
+        },
+        {
+          "label": "as_claimed_from_test_post",
+          "value": "有实测帖写美西免费档 0.5 核 / 1G / 每月 10G，免绑卡。"
+        }
       ],
       "free_conditions": {
-        "card_required": true,
-        "card_notes": "开通试用通常要绑卡",
-        "region_limits": "账单国家会影响能否开通",
+        "card_required": false,
+        "card_notes": "多条帖称免绑卡，邮箱注册；有 2026-11-08 帖称对照官方文档：免费档没有到期日，此前“首月免费”是误读。",
+        "region_limits": "对照文档的帖称免费档只在德国、日本、美东，新加坡缺货；一账号一个免费 workspace。Grok 回复提到可选 USE1 或 EU1。另有实测帖称“美西免费刚回归”，区域说法不完全一致。",
+        "idle_reclaim": "7 天没有流量会暂停。",
+        "deadline": "",
+        "deadline_note": "帖称免费档无到期日；未在本轮打开官网条款核对。"
+      },
+      "official_url": "https://cloady.com",
+      "posts": [
+        {
+          "url": "https://x.com/daqiyun/status/2119364089076195524",
+          "time_beijing": "2026-11-08 17:39:09",
+          "author": "@daqiyun",
+          "role": "compares_against_official_docs"
+        },
+        {
+          "url": "https://x.com/Ylj158852/status/2120092678130213154",
+          "time_beijing": "2026-11-10 17:54:18",
+          "author": "@Ylj158852",
+          "role": "claims_tested_two_instances"
+        },
+        {
+          "url": "https://x.com/grok/status/2120134457063518543",
+          "time_beijing": "2026-11-10 20:40:19",
+          "author": "@grok",
+          "role": "clarifies_paas_not_root_vps"
+        }
+      ],
+      "notes": "不是带 root 的 VPS，是 PaaS/容器平台。"
+    },
+    {
+      "id": "simular-box-free-cloud-pc",
+      "provider": "Simular Box",
+      "type": "other",
+      "type_label": "free_cloud_pc_not_vps",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "约 4 核 / 7–7.7GB 内存 / 40GB 硬盘，Ubuntu 24.04（有帖还写 XFCE、kernel 6.8）。每天 1000 credits，00:00 UTC 重置。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "多条实测称 Google 邮箱登录即可，未绑卡、账单为 0。一账号一台免费 box。",
+        "region_limits": "未在帖中看到明确区域限制。",
+        "idle_reclaim": "有帖称闲置会休眠；另有帖称 14 天不用会被删除/清空。无固定公网入口/域名，不适合当网站服务器。",
+        "deadline": "",
+        "deadline_note": ""
+      },
+      "official_url": "https://box.simular.ai/",
+      "posts": [
+        {
+          "url": "https://x.com/jomagonmar/status/2120130235270353166",
+          "time_beijing": "2026-11-10 20:23:32",
+          "author": "@jomagonmar",
+          "role": "hands_on_specs_and_no_card"
+        },
+        {
+          "url": "https://x.com/TheSoloFactory/status/2120163865560305946",
+          "time_beijing": "2026-11-10 22:37:10",
+          "author": "@TheSoloFactory",
+          "role": "14-day_idle_wipe"
+        }
+      ],
+      "notes": "多条帖明确说这不是 VPS，是给 AI agent 用的云端桌面。"
+    },
+    {
+      "id": "instabox-free-cloud-pc",
+      "provider": "InstaBox",
+      "type": "other",
+      "type_label": "其他",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "常见说法：4 核 / 8G（或约 7.8G）/ 20G 数据盘；有帖细化为 Debian 13，系统盘 16G + 数据盘 20G。每月约 100G 出站流量。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "多条称不绑卡，有帖写标注 never billed。免费档通常 1 台。",
+        "region_limits": "未在本轮检索到明确区域限制。",
+        "idle_reclaim": "单次运行最长约 8 小时；闲置约 30 分钟自动暂停。",
+        "deadline": "",
+        "deadline_note": ""
+      },
+      "official_url": "",
+      "posts": [
+        {
+          "url": "https://x.com/songting2026/status/2120143893450924371",
+          "time_beijing": "2026-11-10 21:17:49",
+          "author": "@songting2026",
+          "role": "free_tier_specs_no_card"
+        },
+        {
+          "url": "https://x.com/cbirdliu1978/status/2120127750740521219",
+          "time_beijing": "2026-11-10 20:13:40",
+          "author": "@cbirdliu1978",
+          "role": "roundup_instabox_simular_cloady"
+        },
+        {
+          "url": "https://x.com/bldcampage/status/2120112312447336802",
+          "time_beijing": "2026-11-10 19:12:19",
+          "author": "@bldcampage",
+          "role": "tos_restriction"
+        }
+      ],
+      "notes": "多条帖提醒这不是完整公网 VPS；空闲会暂停。"
+    },
+    {
+      "id": "azure-student-credit",
+      "provider": "Microsoft Azure (学生认证)",
+      "type": "other",
+      "type_label": "student_cloud_credit",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "有汇总帖称 Azure 学生福利约 $100 云服务额度，可自建 VPS，每月约 100G 流量。同帖还提到 GitHub 学生包域名权益等，那些不是 VPS。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": null,
+        "card_notes": "需要学生认证。本轮未打开 Microsoft 学生/Azure 官方页核对额度、是否绑卡和流量数字。",
+        "region_limits": "未在该帖中写明。",
+        "idle_reclaim": "",
+        "deadline": "unknown",
+        "deadline_note": "学生资格通常有学年/认证有效期，帖中未给出具体截止日期。"
+      },
+      "official_url": "",
+      "posts": [
+        {
+          "url": "https://x.com/Lovislexus/status/2119950665992560767",
+          "time_beijing": "2026-11-10 08:30:00",
+          "author": "@Lovislexus",
+          "role": "student_benefits_roundup"
+        }
+      ],
+      "notes": "仅作为 X 上看到的学生向云额度线索，官方数字待下次用官网复核。"
+    },
+    {
+      "id": "gcp-always-free-e2-micro",
+      "provider": "Google Cloud",
+      "type": "always_free",
+      "type_label": "一直免费",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "有回复称 Google Cloud 免费档提供 1 台 e2-micro，仅限美国区域。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": null,
+        "card_notes": "GCP 账号常见需要绑卡，但本轮未打开官网确认 always-free e2-micro 的当前条款。另有大量帖在推销新用户 $300 / 90 天试用（明确要绑卡），那是试用不是 Always Free，不单独当作可长期白嫖 VPS。",
+        "region_limits": "帖称仅美国区域。",
         "idle_reclaim": "",
         "deadline": "",
-        "deadline_note": "试用期从开通当天起算"
+        "deadline_note": ""
       },
       "official_url": "https://cloud.google.com/free",
       "posts": [
         {
-          "url": "https://x.com/search?q=google%20cloud%20free%20trial",
-          "time_beijing": "2026-10-20 09:00",
-          "author": "",
-          "role": ""
+          "url": "https://x.com/grok/status/2120006675276976627",
+          "time_beijing": "2026-11-10 12:12:33",
+          "author": "@grok",
+          "role": "mentions_e2_micro_us_only"
         }
       ],
-      "notes": "示例条目，不是实时额度。"
+      "notes": "线索来自 X，官方条款未在本轮打开复核。"
     },
     {
-      "id": "github-education",
-      "provider": "GitHub Education",
-      "type": "student",
-      "type_label": "学生额度",
+      "id": "weeny-cloud-free",
+      "provider": "weeny.cloud",
+      "type": "always_free",
+      "type_label": "一直免费",
       "specs": [
-        {"label": "对象", "value": "在校学生（示例）"},
-        {"label": "内容", "value": "Student Developer Pack 里的云额度"}
+        {
+          "label": "as_claimed",
+          "value": "1 vCPU / 1GB 持久化 Linux 服务器，root+SSH；前 7 天 4GB 试用后回到 1GB 免费档；应用走 onweeny.com HTTPS 子域，带 made with weeny 徽章；自定义域名和常驻运行为付费档 $3/月起"
+        }
       ],
       "free_conditions": {
         "card_required": false,
         "card_notes": "",
-        "region_limits": "需要通过学生身份验证",
-        "idle_reclaim": "",
-        "deadline": "",
-        "deadline_note": "身份过期后权益会停"
-      },
-      "official_url": "https://education.github.com/pack",
-      "posts": [],
-      "notes": "示例条目。学校邮箱和证明材料以 GitHub Education 为准。"
-    },
-    {
-      "id": "render",
-      "provider": "Render",
-      "type": "paas",
-      "type_label": "非 root 的 PaaS",
-      "specs": [
-        {"label": "形态", "value": "免费 Web Service（示例）"},
-        {"label": "权限", "value": "没有完整 root 机器"}
-      ],
-      "free_conditions": {
-        "card_required": false,
-        "card_notes": "免费实例一般不用绑卡",
         "region_limits": "",
-        "idle_reclaim": "一段时间没有访问会休眠",
+        "idle_reclaim": "",
         "deadline": "",
         "deadline_note": ""
       },
-      "official_url": "https://render.com/pricing",
+      "official_url": "https://weeny.cloud/free",
+      "posts": [
+        {
+          "url": "https://x.com/Ylj158852/status/2120405029458977245",
+          "time_beijing": "2026-11-11 14:35:28",
+          "author": "@Ylj158852",
+          "role": ""
+        },
+        {
+          "url": "https://x.com/theo_mccabe/status/2122274860567347408",
+          "time_beijing": "2026-11-16 18:25:31",
+          "author": "@theo_mccabe",
+          "role": "capacity_drop_announcement"
+        },
+        {
+          "url": "https://weeny.cloud/countdown",
+          "time_beijing": "2026-11-16 19:55 核实",
+          "author": "official",
+          "role": "official_countdown"
+        }
+      ],
+      "notes": "用户自己发来链接；X 长文，关键词扫描漏掉；2026-11-16 19:55 核实官网倒计时：周一 16 日 13:00 UK（21:00 北京时间）开放更多免费服务器，名额有限。用户两份账号已注册并加入候补，本轮只提醒补货、不重复注册。"
+    },
+    {
+      "id": "vyce-cloud-vps-mini",
+      "provider": "Vyce",
+      "type": "always_free",
+      "type_label": "一直免费",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "Vps-Mini：1 核 / 2GB 内存 / 6GB 硬盘，root SSH，公网 IPv6，浏览器终端。另有 Vps-Plus $1.99/月、Vps-Pro $3.99/月（非免费）。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "官网 FAQ：免费档不收费、不用绑卡；用 GitHub 登录，且账号至少满 30 天。",
+        "region_limits": "2026-11-12 16:05 北京时间打开官网：Europe Full right now，Asia Full right now，USA Coming soon。帖称优先欧洲机房；社区另有亚洲/美国可选、亚洲为隧道 IPv6 延迟高的说法，以官网当时显示为准。",
+        "idle_reclaim": "",
+        "deadline": "",
+        "deadline_note": "无固定到期日，但依赖续期和库存。"
+      },
+      "official_url": "https://vyce.cloud/",
+      "posts": [
+        {
+          "url": "https://x.com/qqlin99/status/2120785634466115667",
+          "time_beijing": "2026-11-12 15:47:52",
+          "author": "@qqlin99",
+          "role": "primary_for_this_round"
+        }
+      ],
+      "notes": "本轮首次记入。官网条款已对照。限量且本轮查看时欧亚均满，适合注册后蹲库存。未把 @qqlin99 加入 watch_accounts（仅一条低互动帖）。"
+    },
+    {
+      "id": "redu-cloud-free-vm",
+      "provider": "redu.cloud",
+      "type": "always_free",
+      "type_label": "一直免费",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "免费常开 Ubuntu 虚拟机：1 vCPU / 2GB 内存 / 10GB 磁盘；另附免费 Postgres（独立常开虚拟机，1 vCPU / 1GB / 2GB，私有网络）。每月 5GB 出站流量。通过 MCP 由 Agent 创建和运维。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": true,
+        "card_notes": "官网：注册时不用绑卡，但须在 7 天内加卡，否则免费资源会被删除。有硬预算保证不加卡超流量时不会被扣费（硬预算下会删资源）。每账号一个免费档，受库存限制。2026-11-01 条款称原先 £200 额度与完全免卡试用已结束，自 2026-11-02 起统一为该免费档。",
+        "region_limits": "未在本轮页面看到明确机房列表。",
+        "idle_reclaim": "",
+        "deadline": "",
+        "deadline_note": "定位为免费档而非限时活动，但 7 天内不绑卡会被收回。"
+      },
+      "official_url": "https://redu.cloud/free",
       "posts": [],
-      "notes": "示例条目，用来和可以 root 的 VPS 区分开。"
+      "notes": "本轮网页/Product Hunt 补充首次记入。条款页写最后更新 2026-11-01。因 7 天内必须绑卡，标记为需要用户本人，本轮扫描任务不自动注册。"
+    },
+    {
+      "id": "vpsfree-io-free-nat",
+      "provider": "VPSFree.io",
+      "type": "other",
+      "type_label": "free_renewable_vps",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "1vCPU(20%)/192MB+256MB swap/3GB NVMe/30Mbps 共享IPv4 NAT，阿姆斯特丹，10天一续免费（需看赞助广告步骤）"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "",
+        "region_limits": "",
+        "idle_reclaim": "",
+        "deadline": "",
+        "deadline_note": ""
+      },
+      "official_url": "https://vpsfree.io/",
+      "posts": [],
+      "notes": ""
+    },
+    {
+      "id": "altare-always-free",
+      "provider": "Altare",
+      "type": "paas",
+      "type_label": "非 root 的 PaaS",
+      "specs": [
+        {
+          "label": "",
+          "value": "6GB/1.5核/10GB/最多4台服务器 + 10GB U3 + 1GB KV"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "",
+        "region_limits": "",
+        "idle_reclaim": "",
+        "deadline": "",
+        "deadline_note": ""
+      },
+      "official_url": "https://console.altare.gg",
+      "posts": [
+        {
+          "url": "https://x.com/i/status/2121574877220274177",
+          "time_beijing": "2026-11-14 20:04",
+          "author": "",
+          "role": ""
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "cloudzyro-launch-free",
+      "provider": "Cloudzyro",
+      "type": "paas",
+      "type_label": "非 root 的 PaaS",
+      "specs": [
+        {
+          "label": "",
+          "value": "1核/512MB/100GB月流量"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "",
+        "region_limits": "",
+        "idle_reclaim": "",
+        "deadline": "",
+        "deadline_note": ""
+      },
+      "official_url": "https://www.cloudzyro.com",
+      "posts": [
+        {
+          "url": "https://x.com/i/status/2121392676696121828",
+          "time_beijing": "2026-11-14 08:00",
+          "author": "",
+          "role": ""
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "vultr-free-tier",
+      "provider": "Vultr",
+      "type": "other",
+      "type_label": "free_vps_early_access",
+      "specs": [
+        {
+          "label": "",
+          "value": "1vCPU/512MB/10GB SSD/IPv4/2TB，迈阿密/西雅图/法兰克福"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "",
+        "region_limits": "",
+        "idle_reclaim": "",
+        "deadline": "",
+        "deadline_note": ""
+      },
+      "official_url": "https://www.vultr.com/free-tier-program/",
+      "posts": [],
+      "notes": ""
+    },
+    {
+      "id": "akamai-cloud-100-credit",
+      "provider": "Akamai Cloud (Linode)",
+      "type": "trial",
+      "type_label": "试用额度",
+      "specs": [],
+      "free_conditions": {
+        "card_required": true,
+        "card_notes": "",
+        "region_limits": "",
+        "idle_reclaim": "",
+        "deadline": "试用期内用完，具体天数官网未写",
+        "deadline_note": ""
+      },
+      "official_url": "https://www.linode.com/lp/free-credit-100/",
+      "posts": [
+        {
+          "url": "https://x.com/i/status/2121622187081953516",
+          "time_beijing": "2026-11-14 23:2x",
+          "author": "",
+          "role": ""
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "natbox-io-free-trial",
+      "provider": "natbox.io",
+      "type": "other",
+      "type_label": "free_trial_nat_vps",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "1 个月免费 NAT VPS：256MB 内存 / 3GB SSD / 共享 IPv4 转发 5 个端口（TCP+UDP）+ 路由 /80 IPv6；非特权 Incus LXC，Debian/Ubuntu/Alpine/AlmaLinux，root SSH；德国 Contabo KVM 宿主；封 25/465/587，不能跑 Docker"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "",
+        "region_limits": "",
+        "idle_reclaim": "",
+        "deadline": "试用 1 个月，不自动续费；到期 2 天后暂停、再 14 天删除。名额按 Telegram 不定期放（每次 2–3 个，几分钟抢光），开放前 10 分钟在 t.me/natboxio 预告，届时发图片领取码到 my.natbox.io/free-trial/claim 输入；需验证邮箱，一人一台，不收一次性邮箱",
+        "deadline_note": ""
+      },
+      "official_url": "https://my.natbox.io/products/nat-vps/free-trial",
+      "posts": [
+        {
+          "url": "https://www.lowendspirit.com/discussion/11606/natbox-io-free-1-month-nat-vps-trial-256-mb-ipv6-80-released-in-small-drops-on-telegram",
+          "time_beijing": "2026-11-10 13:51",
+          "author": "",
+          "role": ""
+        },
+        {
+          "url": "https://t.me/s/natboxio",
+          "time_beijing": "近几日（最近一次放号约 2–3 个，2 分钟抢光，称『明天再放』）",
+          "author": "",
+          "role": ""
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "orkestr-eu-starter-sandbox",
+      "provider": "orkestr",
+      "type": "paas",
+      "type_label": "非 root 的 PaaS",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "一套账号两个产品，数据在欧盟机房（德国纽伦堡/Falkenstein、芬兰赫尔辛基、法国斯特拉斯堡/鲁贝）。Platform Starter 永久免费、免绑卡：1 个项目、0.25 vCPU / 512MB 容器（闲置休眠）、1GB 盘、每月 100GB 流量、300 构建分钟；Git 部署 Node/Python/PHP 等，二级域名 *.orkestr.run，可绑自定义域名。Sandboxes：默认 small 为 1 vCPU / 1GB 隔离 Linux microVM，免费档同时最多 2 个，单次调用超时 30 分钟、最长连续运行 1 小时；邮箱验证送一次性 €5 计算额度（官网写绑卡后为 €25），额度用完即停、不会自动扣费。不是常驻 root VPS。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "",
+        "region_limits": "计算和数据仅在欧盟",
+        "idle_reclaim": "",
+        "deadline": "",
+        "deadline_note": "Starter 官方定位为 free forever；沙箱 €5 为一次性计算额度，用完需绑卡才能按量继续。官网博客曾写免费档 €10 且限一个月，与定价页 €5 不一致，以定价页 https://orkestr.eu/pricing 为准。"
+      },
+      "official_url": "https://orkestr.eu/",
+      "posts": [
+        {
+          "url": "https://x.com/taiyanghere/status/2122238431925563397",
+          "time_beijing": "2026-11-16 16:00:46",
+          "author": "@taiyanghere",
+          "role": ""
+        },
+        {
+          "url": "https://x.com/hodu382759/status/2122251905359626307",
+          "time_beijing": "2026-11-16 16:54:18",
+          "author": "@hodu382759",
+          "role": ""
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "abasthan-free-first-app",
+      "provider": "Abasthan",
+      "type": "paas",
+      "type_label": "非 root 的 PaaS",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "官网定价页：每个账号第一个应用免费，$0/月，512 MB RAM / 0.1 vCPU，免费 .abasthan.app 子域名，可绑自定义域名和自动 SSL，支持从 Git 自动部署。提供容器 SSH/SFTP（ssh -p 22021 [app-id]@connect.abasthan.com，公钥认证）。免费 PHP 介绍页曾写 0.5 vCPU，与定价页 0.1 vCPU 不一致，以定价页 https://abasthan.com/pricing 为准。不是完整 root VPS，SSH 进入的是应用容器。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "官网定价页写明无需信用卡即可开始；付费计划用预付额度、按秒计费。据 X 上的报道 @ai_fengshou 称国内可注册，并已实际开通演示站。",
+        "region_limits": "官网未写免费档机房限制；官网自称建于 Bengal、跑在裸金属上。@shenghouxuyao 帖提醒禁止在上面搭建代理。",
+        "idle_reclaim": "免费 Python 介绍页：无流量约 90 分钟后休眠，下次访问自动唤醒（首个访问者会看到短暂加载页）。付费档常开。",
+        "deadline": "",
+        "deadline_note": "官网将首个应用定位为 Free / $0/month，未写到期日。"
+      },
+      "official_url": "https://abasthan.com/",
+      "posts": [
+        {
+          "url": "https://x.com/shenghouxuyao/status/2122335969542324522",
+          "time_beijing": "2026-11-16 22:28:20",
+          "author": "@shenghouxuyao",
+          "role": "primary_zh_claim_ssh_no_card"
+        },
+        {
+          "url": "https://x.com/hodu382759/status/2122344031468536186",
+          "time_beijing": "2026-11-16 23:00:23",
+          "author": "@hodu382759",
+          "role": "watched_account_recommends"
+        },
+        {
+          "url": "https://x.com/rantikasari1337/status/2122340765213012124",
+          "time_beijing": "2026-11-16 22:47:24",
+          "author": "@rantikasari1337",
+          "role": "en_claim_links_pricing"
+        },
+        {
+          "url": "https://x.com/ai_fengshou/status/2122343936127598690",
+          "time_beijing": "2026-11-16 23:00:00",
+          "author": "@ai_fengshou",
+          "role": "claims_signed_up_from_china"
+        },
+        {
+          "url": "https://www.nodeloc.com/t/topic/118132",
+          "time_beijing": "2026-11-16 22:33:00",
+          "author": "NodeLoc @srv",
+          "role": "forum_thread"
+        }
+      ],
+      "notes": "不是带 root 的独立 VPS，是 PaaS/应用容器平台。"
+    },
+    {
+      "id": "zode-dev-free-credit",
+      "provider": "Zode",
+      "type": "other",
+      "type_label": "其他",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "给 coding agent 用的 Linux microVM（Cloud Hypervisor on KVM），有独立内核、root 和 Docker。免费档一次性 $10 额度、免绑卡，同时最多 2 台。未指定规格时为 small：2 vCPU / 4GB / 50GB 盘。文档价 small/default/large/xlarge 为 $0.0175/$0.035/$0.070/$0.140 每小时；官网首页写 $0.0225/$0.045/$0.09/$0.18，以文档 https://docs.zode.dev/ 为准。文档称 $10 大约可跑 440 小时 small。磁盘前 48 小时免费，之后 $0.10/GB/月。按秒计费，休眠后不算计算费。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "个人 workspace 开始即可得 $10，无需绑卡；额度用完后沙盒停止，继续用要在 Billing 加卡。Team workspace 初始为 $0，绑第一张卡后才给 $10。",
+        "region_limits": "目前仅 eu-central（Google Cloud europe-west1，比利时）。官网称 US East 即将推出。",
+        "idle_reclaim": "",
+        "deadline": "",
+        "deadline_note": "一次性 $10 额度，用完即止；官方 Quickstart 未写该额度本身的过期日。"
+      },
+      "official_url": "https://zode.dev/",
+      "posts": [
+        {
+          "url": "https://www.producthunt.com/products/zode",
+          "time_beijing": "2026-11-16",
+          "author": "Product Hunt / Jonathan Emmanuel",
+          "role": "product_hunt_launch_today"
+        }
+      ],
+      "notes": "是按量计费的 agent 沙盒/微虚拟机，不是永久免费常驻 VPS。免费档只有一次性额度。"
     }
   ],
   "stock": {
@@ -114,57 +627,142 @@
       {
         "id": "dmit",
         "name": "DMIT",
-        "checked_at_beijing": "2026-11-15 09:00",
+        "checked_at_beijing": "2026-11-16 23:51:01",
         "official_url": "https://www.dmit.io/",
         "sources": [
           {
             "name": "vpsrestock.com",
-            "url": "https://vpsrestock.com/",
-            "checked_at_beijing": "2026-11-15 08:40"
+            "url": "https://vpsrestock.com/dmit/",
+            "checked_at_beijing": "2026-11-16 23:48"
           },
           {
             "name": "t.me/dmitnews",
-            "url": "https://t.me/dmitnews",
-            "checked_at_beijing": "2026-11-14 21:00"
+            "url": "https://t.me/s/dmitnews",
+            "checked_at_beijing": "2026-11-16 23:51:01"
           }
         ],
         "plans": [
           {
-            "key": "LAX-PRO-SAMPLE",
-            "display_name": "LAX Pro（示例）",
-            "config": "1 vCPU / 1 GB / 20 GB SSD / 1 Gbps / 2 TB / Los Angeles",
+            "key": "LAX.AS3.EB.TINY",
+            "display_name": "LAX.AS3.EB.TINY",
+            "config": "1 vCores / 2.0GB / 20GB SSD / 2Gbps / 1500G / 美国 • 洛杉矶 · CMIN2，Eyeball",
             "specs": [
-              {"label": "CPU", "value": "1 vCPU"},
-              {"label": "内存", "value": "1 GB"},
-              {"label": "硬盘", "value": "20 GB SSD"},
-              {"label": "端口", "value": "1 Gbps"},
-              {"label": "流量", "value": "2 TB"},
-              {"label": "位置", "value": "Los Angeles"}
+              {
+                "label": "CPU",
+                "value": "1 vCores"
+              },
+              {
+                "label": "内存",
+                "value": "2.0GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB SSD"
+              },
+              {
+                "label": "端口",
+                "value": "2Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1500G"
+              },
+              {
+                "label": "位置",
+                "value": "美国 • 洛杉矶 · CMIN2，Eyeball"
+              }
             ],
-            "price": "$6.90/月",
-            "stock": "in_stock",
+            "price": "$10.90 USD / 月",
+            "stock": "out_of_stock",
             "limited": false,
-            "last_restock": "2026-11-14 补过一小批（示例）",
+            "last_restock": "缺货中",
             "order_urls": [
-              {"label": "官网下单", "url": "https://www.dmit.io/"}
+              {
+                "label": "官网下单",
+                "url": "https://www.dmit.io/cart.php?a=add&pid=259"
+              }
             ]
           },
           {
-            "key": "HK-LITE-SAMPLE",
-            "display_name": "HK Lite（示例）",
-            "config": "2 vCPU / 2 GB / 40 GB SSD / Hong Kong",
+            "key": "LAX.AS3.Pro.TINY",
+            "display_name": "LAX.AS3.Pro.TINY",
+            "config": "1 vCores / 2.0GB / 20GB SSD / 1Gbps / 1000G / 美国 • 洛杉矶 · CN2 GIA，Premium",
             "specs": [
-              {"label": "CPU", "value": "2 vCPU"},
-              {"label": "内存", "value": "2 GB"},
-              {"label": "硬盘", "value": "40 GB SSD"},
-              {"label": "位置", "value": "Hong Kong"}
+              {
+                "label": "CPU",
+                "value": "1 vCores"
+              },
+              {
+                "label": "内存",
+                "value": "2.0GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB SSD"
+              },
+              {
+                "label": "端口",
+                "value": "1Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1000G"
+              },
+              {
+                "label": "位置",
+                "value": "美国 • 洛杉矶 · CN2 GIA，Premium"
+              }
             ],
-            "price": "$12.90/月",
+            "price": "$10.90 USD / 月",
             "stock": "out_of_stock",
             "limited": false,
-            "last_restock": "近期没有补货记录（示例）",
+            "last_restock": "上次补货 53 天前",
             "order_urls": [
-              {"label": "官网下单", "url": "https://www.dmit.io/"}
+              {
+                "label": "官网下单",
+                "url": "https://www.dmit.io/cart.php?a=add&pid=253"
+              }
+            ]
+          },
+          {
+            "key": "LAX.AS3.T1.WEE",
+            "display_name": "LAX.AS3.T1.WEE",
+            "config": "1 vCores / 1.0GB / 20GB SSD / 4Gbps / 1000G / 美国 • 洛杉矶 · Tier 1",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "1 vCores"
+              },
+              {
+                "label": "内存",
+                "value": "1.0GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB SSD"
+              },
+              {
+                "label": "端口",
+                "value": "4Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1000G"
+              },
+              {
+                "label": "位置",
+                "value": "美国 • 洛杉矶 · Tier 1"
+              }
+            ],
+            "price": "$36.90 USD / 年",
+            "stock": "out_of_stock",
+            "limited": false,
+            "last_restock": "上次补货 53 天前",
+            "order_urls": [
+              {
+                "label": "官网下单",
+                "url": "https://www.dmit.io/cart.php?a=add&pid=270"
+              }
             ]
           }
         ]
@@ -172,111 +770,1293 @@
       {
         "id": "bandwagonhost",
         "name": "搬瓦工",
-        "checked_at_beijing": "2026-11-15 09:00",
-        "official_url": "https://bandwagonhost.com/",
+        "checked_at_beijing": "2026-11-16 23:51:01",
+        "official_url": "",
         "sources": [
           {
             "name": "vpsrestock.com",
-            "url": "https://vpsrestock.com/",
-            "checked_at_beijing": "2026-11-15 08:50"
+            "url": "https://vpsrestock.com/bandwagonhost/",
+            "checked_at_beijing": "2026-11-16 23:48"
           },
           {
             "name": "stock.bwg.la",
             "url": "https://stock.bwg.la/",
-            "checked_at_beijing": "2026-11-15 08:50"
+            "checked_at_beijing": ""
+          },
+          {
+            "name": "stock.bwg.la",
+            "url": "https://stock.bwg.la/events",
+            "checked_at_beijing": ""
           }
         ],
         "plans": [
           {
-            "key": "CN2-GIA-E-SAMPLE",
-            "display_name": "CN2 GIA-E（示例）",
-            "config": "2 核 / 1 GB / 20 GB / 1 Gbps / 1 TB/月",
+            "key": "MINICHICKEN",
+            "display_name": "MINICHICKEN 限量版",
+            "config": "1核 / 1GB / 20GB / 1Gbps / 1000GB",
             "specs": [
-              {"label": "CPU", "value": "2 核"},
-              {"label": "内存", "value": "1 GB"},
-              {"label": "硬盘", "value": "20 GB"},
-              {"label": "端口", "value": "1 Gbps"},
-              {"label": "流量", "value": "1 TB/月"}
+              {
+                "label": "CPU",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "1Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1000GB"
+              }
             ],
-            "price": "$49.99/年",
-            "stock": "in_stock",
+            "price": "$19.00 USD / 年",
+            "stock": "out_of_stock",
             "limited": true,
-            "last_restock": "示例：今天上午短暂有货",
+            "last_restock": "缺货中",
             "order_urls": [
-              {"label": "bandwagonhost.com", "url": "https://bandwagonhost.com/"},
-              {"label": "bwh81.net", "url": "https://bwh81.net/"}
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=158"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=158"
+              }
             ]
           },
           {
-            "key": "UNMATCHED-SAMPLE",
-            "display_name": "目录未匹配（示例）",
-            "config": "1 核 / 512 MB",
+            "key": "The_DC9_Plan",
+            "display_name": "DC9 CN2 GIA 限量版",
+            "config": "1核 / 768MB / 15GB / 1.5Gbps / 750GB",
             "specs": [
-              {"label": "CPU", "value": "1 核"},
-              {"label": "内存", "value": "512 MB"}
+              {
+                "label": "CPU",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "768MB"
+              },
+              {
+                "label": "硬盘",
+                "value": "15GB"
+              },
+              {
+                "label": "端口",
+                "value": "1.5Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "750GB"
+              }
             ],
-            "price": "",
+            "price": "$38.00 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=145"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=145"
+              },
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=143"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=143"
+              },
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=112"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=112"
+              }
+            ]
+          },
+          {
+            "key": "BIGGERBOX-PRO",
+            "display_name": "BiggerBox Pro 限量版",
+            "config": "1核AMD / 1GB / 20GB / 2.5Gbps / 1000GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "1核AMD"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "2.5Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1000GB"
+              }
+            ],
+            "price": "$39.00 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=156"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=156"
+              }
+            ]
+          },
+          {
+            "key": "POWERBOX",
+            "display_name": "POWERBOX 限量版",
+            "config": "1核 / 1536MB / 30GB / 2.5Gbps / 1500GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1536MB"
+              },
+              {
+                "label": "硬盘",
+                "value": "30GB"
+              },
+              {
+                "label": "端口",
+                "value": "2.5Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1500GB"
+              }
+            ],
+            "price": "$45.00 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=153"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=153"
+              }
+            ]
+          },
+          {
+            "key": "MEGABOX-PRO",
+            "display_name": "MegaBox Pro 限量版",
+            "config": "2核AMD / 2GB / 30GB / 2.5Gbps / 2000GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "2核AMD"
+              },
+              {
+                "label": "内存",
+                "value": "2GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "30GB"
+              },
+              {
+                "label": "端口",
+                "value": "2.5Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "2000GB"
+              }
+            ],
+            "price": "$49.00 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=157"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=157"
+              }
+            ]
+          },
+          {
+            "key": "The_DC6_Plan",
+            "display_name": "THE DC6 PLAN 限量版",
+            "config": "1核 / 1GB / 20GB / 2.5Gbps / 1000GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "2.5Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1000GB"
+              }
+            ],
+            "price": "$53.00 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=149"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=149"
+              }
+            ]
+          },
+          {
+            "key": "The_Tokyo_Plan",
+            "display_name": "日本东京限量版 The Tokyo Plan",
+            "config": "1核AMD / 1GB / 20GB / 2.5Gbps / 500GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "1核AMD"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "2.5Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "500GB"
+              }
+            ],
+            "price": "$79.00 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=162"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=162"
+              }
+            ]
+          },
+          {
+            "key": "DC9_CN2_GIA_LE",
+            "display_name": "DC9 CN2 GIA 限量版",
+            "config": "1核 / 1GB / 20GB / 1Gbps / 1000GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "1Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1000GB"
+              }
+            ],
+            "price": "$79.99 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=112"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=112"
+              },
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=145"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=145"
+              },
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=143"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=143"
+              }
+            ]
+          },
+          {
+            "key": "CN2_GIA-E_20G_LE",
+            "display_name": "CN2 GIA-E 20G 限量版",
+            "config": "1核 / 1GB / 20GB / 1Gbps / 500GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "1Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "500GB"
+              }
+            ],
+            "price": "$89.99 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=105"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=105"
+              }
+            ]
+          },
+          {
+            "key": "THE_PLAN",
+            "display_name": "THE PLAN 限量版",
+            "config": "2核 / 2GB / 40GB / 1Gbps / 1TB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "2核"
+              },
+              {
+                "label": "内存",
+                "value": "2GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "40GB"
+              },
+              {
+                "label": "端口",
+                "value": "1Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1TB"
+              }
+            ],
+            "price": "$99.00 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=147"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=147"
+              }
+            ]
+          },
+          {
+            "key": "The_Tokyo_Plan_v2",
+            "display_name": "日本东京限量版 The Tokyo Plan v2",
+            "config": "2核AMD / 2GB / 40GB / 5Gbps / 1000GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "2核AMD"
+              },
+              {
+                "label": "内存",
+                "value": "2GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "40GB"
+              },
+              {
+                "label": "端口",
+                "value": "5Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1000GB"
+              }
+            ],
+            "price": "$99.00 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=163"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=163"
+              }
+            ]
+          },
+          {
+            "key": "THE_PLAN_v2",
+            "display_name": "THE PLAN v2 限量版",
+            "config": "2核 / 2GB / 40GB / 1Gbps / 2TB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "2核"
+              },
+              {
+                "label": "内存",
+                "value": "2GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "40GB"
+              },
+              {
+                "label": "端口",
+                "value": "1Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "2TB"
+              }
+            ],
+            "price": "$119.00 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=131"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=131"
+              }
+            ]
+          },
+          {
+            "key": "THE_CHICKEN_LE",
+            "display_name": "THE CHICKEN 限量版",
+            "config": "1核 / 1 GB / 20 GB SSD / 2.5 Gbps / 1000 GB",
+            "specs": [
+              {
+                "label": "处理器",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1 GB"
+              },
+              {
+                "label": "存储",
+                "value": "20 GB SSD"
+              },
+              {
+                "label": "端口",
+                "value": "2.5 Gbps"
+              },
+              {
+                "label": "月流量",
+                "value": "1000 GB"
+              }
+            ],
+            "price": "$39.99/年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=130"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=130"
+              }
+            ]
+          },
+          {
+            "key": "FREEDOM_PLAN_LE",
+            "display_name": "FREEDOM PLAN 限量版",
+            "config": "2核 / 2 GB / 40 GB / 2.5 Gbps / 2000 GB",
+            "specs": [
+              {
+                "label": "处理器",
+                "value": "2核"
+              },
+              {
+                "label": "内存",
+                "value": "2 GB"
+              },
+              {
+                "label": "存储",
+                "value": "40 GB"
+              },
+              {
+                "label": "端口",
+                "value": "2.5 Gbps"
+              },
+              {
+                "label": "月流量",
+                "value": "2000 GB"
+              }
+            ],
+            "price": "$89/年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=133"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=133"
+              }
+            ]
+          },
+          {
+            "key": "Dubai_LE",
+            "display_name": "迪拜限量版Dubai LE",
+            "config": "1核 / 1 GB / 20 GB SSD / 1 Gbps / 250 GB",
+            "specs": [
+              {
+                "label": "处理器",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1 GB"
+              },
+              {
+                "label": "存储",
+                "value": "20 GB SSD"
+              },
+              {
+                "label": "端口",
+                "value": "1 Gbps"
+              },
+              {
+                "label": "月流量",
+                "value": "250 GB"
+              }
+            ],
+            "price": "$99.99/年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=113"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=113"
+              }
+            ]
+          },
+          {
+            "key": "Osaka_Softbank_10G_LE",
+            "display_name": "日本大阪软银 10G 限量版",
+            "config": "1核 / 512 MB / 10 GB SSD / 1 Gbps / 500 GB",
+            "specs": [
+              {
+                "label": "处理器",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "512 MB"
+              },
+              {
+                "label": "存储",
+                "value": "10 GB SSD"
+              },
+              {
+                "label": "端口",
+                "value": "1 Gbps"
+              },
+              {
+                "label": "月流量",
+                "value": "500 GB"
+              }
+            ],
+            "price": "$69.99/年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=104"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=104"
+              }
+            ]
+          },
+          {
+            "key": "Osaka_Softbank_40G_LE",
+            "display_name": "日本大阪软银 40G 限量版",
+            "config": "1核 / 2 GB / 40 GB SSD / 2.5 Gbps / 2000 GB",
+            "specs": [
+              {
+                "label": "处理器",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "2 GB"
+              },
+              {
+                "label": "存储",
+                "value": "40 GB SSD"
+              },
+              {
+                "label": "端口",
+                "value": "2.5 Gbps"
+              },
+              {
+                "label": "月流量",
+                "value": "2000 GB"
+              }
+            ],
+            "price": "$79.99/年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=146"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=146"
+              }
+            ]
+          },
+          {
+            "key": "CN2_GIA-E_40G_LE",
+            "display_name": "CN2 GIA-E 40G 限量版",
+            "config": "2核 / 2 GB / 40 GB SSD / 2.5 Gbps / 1000 GB",
+            "specs": [
+              {
+                "label": "处理器",
+                "value": "2核"
+              },
+              {
+                "label": "内存",
+                "value": "2 GB"
+              },
+              {
+                "label": "存储",
+                "value": "40 GB SSD"
+              },
+              {
+                "label": "端口",
+                "value": "2.5 Gbps"
+              },
+              {
+                "label": "月流量",
+                "value": "1000 GB"
+              }
+            ],
+            "price": "$89.9/月",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=132"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=132"
+              }
+            ]
+          },
+          {
+            "key": "CN2_GIA-E_10G_LE",
+            "display_name": "CN2 GIA-E 10G 限量版",
+            "config": "1核 / 512 MB / 10 GB SSD / 1 Gbps / 500 GB",
+            "specs": [
+              {
+                "label": "处理器",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "512 MB"
+              },
+              {
+                "label": "存储",
+                "value": "10 GB SSD"
+              },
+              {
+                "label": "端口",
+                "value": "1 Gbps"
+              },
+              {
+                "label": "月流量",
+                "value": "500 GB"
+              }
+            ],
+            "price": "$49.99/年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=94"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=94"
+              }
+            ]
+          },
+          {
+            "key": "SAKURABOX_LE",
+            "display_name": "SAKURABOX 限量版",
+            "config": "1核 / 1 GB / 30 GB / 1 Gbps / 500 GB",
+            "specs": [
+              {
+                "label": "处理器",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1 GB"
+              },
+              {
+                "label": "存储",
+                "value": "30 GB"
+              },
+              {
+                "label": "端口",
+                "value": "1 Gbps"
+              },
+              {
+                "label": "月流量",
+                "value": "500 GB"
+              }
+            ],
+            "price": "$79/年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=154"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=154"
+              }
+            ]
+          },
+          {
+            "key": "HK85_LE",
+            "display_name": "中国香港 HK85 限量版",
+            "config": "1核 / 1 GB / 20 GB SSD / 1 Gbps / 500 GB",
+            "specs": [
+              {
+                "label": "处理器",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1 GB"
+              },
+              {
+                "label": "存储",
+                "value": "20 GB SSD"
+              },
+              {
+                "label": "端口",
+                "value": "1 Gbps"
+              },
+              {
+                "label": "月流量",
+                "value": "500 GB"
+              }
+            ],
+            "price": "$79.99/年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=121"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=121"
+              }
+            ]
+          },
+          {
+            "key": "Sydney_LE",
+            "display_name": "悉尼Sydney LE限量版",
+            "config": "1核 / 1 GB / 20 GB SSD / 1 Gbps / 500 GB",
+            "specs": [
+              {
+                "label": "处理器",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1 GB"
+              },
+              {
+                "label": "存储",
+                "value": "20 GB SSD"
+              },
+              {
+                "label": "端口",
+                "value": "1 Gbps"
+              },
+              {
+                "label": "月流量",
+                "value": "500 GB"
+              }
+            ],
+            "price": "$99.99/年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=126"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=126"
+              }
+            ]
+          },
+          {
+            "key": "DC9_CN2_GIA_LE_pid143",
+            "display_name": "DC9 CN2 GIA 限量版",
+            "config": "1核 / 1GB / 20GB / 1Gbps / 1000GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "1Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1000GB"
+              }
+            ],
+            "price": "$79.99 USD / 年",
+            "stock": "out_of_stock",
+            "limited": true,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=143"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=143"
+              },
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=145"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=145"
+              },
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=112"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=112"
+              }
+            ]
+          },
+          {
+            "key": "KVM_20G",
+            "display_name": "KVM 20G",
+            "config": "2核 / 1GB / 20GB / 1Gbps / 1TB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "2核"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "1Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1TB"
+              }
+            ],
+            "price": "$49.99 USD / 年",
             "stock": "out_of_stock",
             "limited": false,
-            "last_restock": "",
-            "order_urls": []
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=44"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=44"
+              }
+            ]
+          },
+          {
+            "key": "CN2_GIA-E_20G",
+            "display_name": "CN2 GIA-E 20G",
+            "config": "2核 / 1GB / 20GB / 2.5Gbps / 1TB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "2核"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "2.5Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1TB"
+              }
+            ],
+            "price": "$49.99 USD / 季",
+            "stock": "out_of_stock",
+            "limited": false,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=87"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=87"
+              }
+            ]
+          },
+          {
+            "key": "SLA_20G",
+            "display_name": "SLA 20G",
+            "config": "2核AMD独享 / 1GB / 20GB / 2.5Gbps / 1TB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "2核AMD独享"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "2.5Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1TB"
+              }
+            ],
+            "price": "$65.89 USD / 季",
+            "stock": "out_of_stock",
+            "limited": false,
+            "last_restock": "缺货中",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=164"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=164"
+              }
+            ]
+          },
+          {
+            "key": "The_Amsterdam_Plan",
+            "display_name": "荷兰 The Amsterdam Plan",
+            "config": "1核AMD / 1GB / 20GB / 2.5Gbps / 1000GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "1核AMD"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "2.5Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1000GB"
+              }
+            ],
+            "price": "$39.00 USD / 年",
+            "stock": "in_stock",
+            "limited": true,
+            "last_restock": "持续有货",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=159"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=159"
+              }
+            ]
+          },
+          {
+            "key": "MINIBOX-10-512",
+            "display_name": "MINIBOX-10-512",
+            "config": "1核 / 512MB / 10GB / 1Gbps / 500GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "512MB"
+              },
+              {
+                "label": "硬盘",
+                "value": "10GB"
+              },
+              {
+                "label": "端口",
+                "value": "1Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "500GB"
+              }
+            ],
+            "price": "$29.00 USD / 年",
+            "stock": "in_stock",
+            "limited": true,
+            "last_restock": "持续有货",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=151"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=151"
+              }
+            ]
+          },
+          {
+            "key": "BIGGERBOX-20-1024",
+            "display_name": "BIGGERBOX-20-1024",
+            "config": "1核 / 1GB / 20GB / 1Gbps / 1000GB",
+            "specs": [
+              {
+                "label": "CPU",
+                "value": "1核"
+              },
+              {
+                "label": "内存",
+                "value": "1GB"
+              },
+              {
+                "label": "硬盘",
+                "value": "20GB"
+              },
+              {
+                "label": "端口",
+                "value": "1Gbps"
+              },
+              {
+                "label": "流量",
+                "value": "1000GB"
+              }
+            ],
+            "price": "$37.00 USD / 年",
+            "stock": "in_stock",
+            "limited": true,
+            "last_restock": "持续有货",
+            "order_urls": [
+              {
+                "label": "bandwagonhost.com",
+                "url": "https://bandwagonhost.com/cart.php?a=add&pid=152"
+              },
+              {
+                "label": "bwh81.net",
+                "url": "https://bwh81.net/cart.php?a=add&pid=152"
+              }
+            ]
           }
         ]
       }
     ]
   },
   "black_friday": {
-    "date_note": "2026 年黑色星期五是 11 月 27 日。下面的状态都是示例。",
+    "date_note": "今年黑五为 2026-11-27。今天是 2026-11-16，多数商家尚未开卖。",
     "official": [
       {
         "provider": "GreenCloud",
-        "status": "orderable_now",
-        "status_label": "现在能下单",
-        "status_kind": "now",
-        "orderable_now": true,
-        "summary": "示例：年付套餐页面可以打开。",
+        "status": "official_no_black_friday_this_year",
+        "status_label": "今年不办",
+        "status_kind": "off",
+        "orderable_now": false,
+        "summary": "官方 LowEndTalk 帖（发布者 NDTN，Patron Provider）明确：GreenCloud will NOT be holding a Black Friday sale this year。十三周年庆是本季唯一大促，活动窗口 2026-10-26 至 2026-10-31（UTC+0），现已结束。本轮官网首页本机 curl HTTP 200，标题仍是 “GreenCloud - Affordable KVM and Windows VPS”，未见黑五或周年庆。https://greencloudvps.com/blackfriday 本轮本机 curl HTTP 404。周年庆店面 https://greencloudvps.com/billing/store/13th-birthday-sale 本机 curl 为 HTTP 403（Cloudflare）。按官方时间窗口，活动应已于 10 月 31 日结束，现无可下单套餐。",
         "sources": [
           {
-            "type": "official",
+            "type": "official_account_post",
+            "url": "https://lowendtalk.com/discussion/222534",
+            "title": "GreenCloud is Turning 13! | Exclusive Deals, Giveaways, Quizzes & Games!",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
             "url": "https://greencloudvps.com/",
-            "title": "GreenCloud",
-            "fetched_beijing": "2026-11-15 09:00"
+            "title": "GreenCloud - Affordable KVM and Windows VPS",
+            "fetched_beijing": "2026-11-16 23:51:01"
           }
         ],
-        "sale_hub": "https://greencloudvps.com/",
-        "plans": [
-          {
-            "name": "KVM 1C 1G（示例）",
-            "price": "$18/年",
-            "specs": "1 vCPU / 1 GB / 20 GB",
-            "url": "https://greencloudvps.com/"
-          }
-        ]
-      },
-      {
-        "provider": "RackNerd",
-        "status": "orderable_now",
-        "status_label": "现在能下单",
-        "status_kind": "now",
-        "orderable_now": true,
-        "summary": "示例：官网年付列表里能看到低价套餐。",
-        "sources": [
-          {
-            "type": "official",
-            "url": "https://www.racknerd.com/",
-            "title": "RackNerd",
-            "fetched_beijing": "2026-11-15 09:00"
-          }
-        ],
-        "sale_hub": "https://www.racknerd.com/",
-        "plans": [
-          {
-            "name": "1C 1G（示例）",
-            "price": "$10.99/年",
-            "specs": "1 vCPU / 1 GB",
-            "url": "https://www.racknerd.com/"
-          }
-        ]
+        "sale_hub": "https://greencloudvps.com/billing/store/13th-birthday-sale",
+        "plans": []
       },
       {
         "provider": "Netcup",
@@ -284,13 +2064,91 @@
         "status_label": "预告未开卖",
         "status_kind": "soon",
         "orderable_now": false,
-        "summary": "示例：官方预告了活动，还没有可下单的套餐。",
+        "summary": "官网 Black Friday 页标题仍写 “Black Week 2025 | Black Friday offers at netcup”，正文仍有 “Black Friday 2026 / Stay tuned about what we have in store for you on Black Friday”，未见 Add to cart / Order now / Buy now，页面内也没有可下单的欧元套餐标价（仅见 newsletter 的 5 € 欢迎券）。FAQ 称 Black Week 为 11 月 24–28 日，每天 8:00 a.m. CET 至次日 8:00 a.m. CET，Black Friday 当天持续到 8 pm CET。https://www.netcup.com/en/deals 是日常优惠页，有常规标价，不是黑五专场。",
         "sources": [
           {
-            "type": "official",
-            "url": "https://www.netcup.com/",
-            "title": "Netcup",
-            "fetched_beijing": "2026-11-15 09:00"
+            "type": "official_page",
+            "url": "https://www.netcup.com/en/deals/black-friday",
+            "title": "Black Week 2025 | Black Friday offers at netcup",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://www.netcup.com/en/deals",
+            "title": "netcup Deals | Cheap servers, web hosting and domains",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          }
+        ],
+        "sale_hub": "",
+        "plans": []
+      },
+      {
+        "provider": "OVHcloud",
+        "status": "official_preannouncement_plus_stale_hero",
+        "status_label": "预告未开卖",
+        "status_kind": "soon",
+        "orderable_now": false,
+        "summary": "官方 FAQ 写：OVHcloud Black Friday 2026 在 11 月底举行，具体日期和折扣在开卖时公布；折扣自动生效、无需码；不适用于续费；Cyber Monday 是同一场活动的一部分。主视觉仍写 “Black Friday is over... Our Black Friday promotions are no longer available.”（法文页为 “Le Black Friday est terminé... Nos promotions Black Friday ne sont plus disponibles.”），并多处显示 “Coming soon”（为产品路线图用语，不是黑五开卖）。页面没有具体套餐价、也没有 Add to cart / Buy now，未见任何 2026 可下单套餐。",
+        "sources": [
+          {
+            "type": "official_page",
+            "url": "https://www.ovhcloud.com/en/black-friday/",
+            "title": "OVHcloud Black Friday 2026: VPS, servers and domains on sale | OVHcloud Worldwide",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://www.ovhcloud.com/en-gb/black-friday/",
+            "title": "OVHcloud Black Friday 2026: VPS, servers and domains on sale | OVHcloud UK",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://www.ovhcloud.com/fr/black-friday/",
+            "title": "Black Friday OVHcloud 2026 : VPS, serveurs et domaines en promo | OVHcloud France",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          }
+        ],
+        "sale_hub": "",
+        "plans": []
+      },
+      {
+        "provider": "RackNerd",
+        "status": "no_official_black_friday_page_found",
+        "status_label": "预告未开卖",
+        "status_kind": "soon",
+        "orderable_now": false,
+        "summary": "https://www.racknerd.com/blackfriday 本机 curl HTTP 200，连续重定向到常规 Specials 页（标题 “RackNerd | VPS Specials”），不是黑五专页。Specials 现价年付阶梯 $21.99 / $35.99 / $59.99 / $89.99 / $119.99，页面未出现 Black Friday 字样，属于日常特价而非官宣黑五。https://blog.racknerd.com/ 最新文章仍是 2026-11-13 的 “HAProxy vs Nginx: Choosing the Right Load Balancer”，全文未见 Black Friday。https://my.racknerd.com/index.php?rp=/store/black-friday 本轮本机 curl HTTP 403；WebFetch 跟随重定向后打开 Shared Hosting 常规页，不是黑五店面。https://my.racknerd.com/index.php?rp=/store/special-promos 本轮本机 curl HTTP 403；WebFetch 打开后价格与官网 Specials 日常价一致，未见 Black Friday。",
+        "sources": [
+          {
+            "type": "official_page",
+            "url": "https://www.racknerd.com/specials/",
+            "title": "RackNerd | VPS Specials",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://www.racknerd.com/blackfriday",
+            "title": "RackNerd | VPS Specials",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://blog.racknerd.com/",
+            "title": "RackNerd Blog - Introducing Infrastructure Stability",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://my.racknerd.com/index.php?rp=/store/black-friday",
+            "title": "Shopping Cart - RackNerd LLC",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://my.racknerd.com/index.php?rp=/store/special-promos",
+            "title": "Shopping Cart - RackNerd LLC",
+            "fetched_beijing": "2026-11-16 23:51:01"
           }
         ],
         "sale_hub": "",
@@ -298,53 +2156,69 @@
       },
       {
         "provider": "DMIT",
-        "status": "official_preannouncement_no_skus_yet",
+        "status": "no_official_announcement_found",
         "status_label": "预告未开卖",
         "status_kind": "soon",
         "orderable_now": false,
-        "summary": "示例：黑五页面还没挂出套餐。补货监控仍看上面的库存。",
+        "summary": "本机 curl 访问官网首页被 Cloudflare 403 拦截。WebFetch 能打开 https://www.dmit.io/ 常规首页，未见黑五或促销入口。公告页 https://www.dmit.io/index.php?rp=/announcements 本轮本机 curl HTTP 200，显示 “No announcements to display”；促销页 https://www.dmit.io/index.php?rp=/store/promotions 本机 curl HTTP 404；https://www.dmit.io/black-friday 本机 curl Cloudflare 403，WebFetch 为 HTTP 404。官方 Telegram @dmitnews 最新仍是 https://t.me/dmitnews/482（2026-11-16 12:35 北京时间），宣布因扩容滞后、网络攻击与 AS9929 不稳定，暂时暂停原定补充新购订单；不是补货公告，也不是黑五公告。本轮无新帖。",
         "sources": [
           {
-            "type": "official",
+            "type": "official_page",
             "url": "https://www.dmit.io/",
-            "title": "DMIT",
-            "fetched_beijing": "2026-11-15 09:00"
+            "title": "DMIT - High Performance VM in DMIT.IO Cloud Infrastructure Services",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://www.dmit.io/index.php?rp=/announcements",
+            "title": "No announcements to display",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://www.dmit.io/index.php?rp=/store/promotions",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://www.dmit.io/black-friday",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_account",
+            "url": "https://t.me/s/dmitnews",
+            "title": "DMIT活动推送 – Telegram",
+            "fetched_beijing": "2026-11-16 23:51:01"
           }
         ],
         "sale_hub": "",
         "plans": []
       },
       {
-        "provider": "OVH",
-        "status": "official_no_black_friday_this_year",
-        "status_label": "今年不办",
-        "status_kind": "off",
+        "provider": "BandwagonHost",
+        "status": "no_official_announcement_found",
+        "status_label": "预告未开卖",
+        "status_kind": "soon",
         "orderable_now": false,
-        "summary": "示例：官方说明今年没有黑五活动。",
+        "summary": "官网 https://bandwagonhost.com/ 与国内镜像 https://bwh81.net/ 本轮均为 HTTP 200，标题仍是 “Mass VPS hosting on Enterprise equipment - BandwagonHost VPS”。页面可见的是常规套餐价，没有 2026 黑五专页或可下单优惠。源码 HTML 注释里仍有旧活动码（BWH2021BF 等），都已注释掉，不是现行活动。https://bandwagonhost.com/blackfriday 本轮本机 curl HTTP 404。",
         "sources": [
           {
-            "type": "official",
-            "url": "https://www.ovhcloud.com/",
-            "title": "OVHcloud",
-            "fetched_beijing": "2026-11-15 09:00"
-          }
-        ],
-        "sale_hub": "",
-        "plans": []
-      },
-      {
-        "provider": "搬瓦工",
-        "status": "official_no_black_friday_this_year",
-        "status_label": "今年不办",
-        "status_kind": "off",
-        "orderable_now": false,
-        "summary": "示例：今年不单开黑五。平时库存看上面的补货监控。",
-        "sources": [
-          {
-            "type": "official",
+            "type": "official_page",
             "url": "https://bandwagonhost.com/",
-            "title": "BandwagonHost",
-            "fetched_beijing": "2026-11-15 09:00"
+            "title": "Mass VPS hosting on Enterprise equipment - BandwagonHost VPS",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://bwh81.net/",
+            "title": "Mass VPS hosting on Enterprise equipment - BandwagonHost VPS",
+            "fetched_beijing": "2026-11-16 23:51:01"
+          },
+          {
+            "type": "official_page",
+            "url": "https://bandwagonhost.com/blackfriday",
+            "title": "404 Not Found",
+            "fetched_beijing": "2026-11-16 23:51:01"
           }
         ],
         "sale_hub": "",
@@ -353,9 +2227,14 @@
     ],
     "leads": [
       {
-        "source": "LowEndTalk 示例帖",
-        "url": "https://lowendtalk.com/",
-        "note": "有人说某家会在当周改价，还没看到对应的官方页面。"
+        "source": "https://topvpslist.com/best/black-friday-vps-deals-2026/",
+        "note": "第三方汇总，提到 GreenCloud 不做黑五、RackNerd 日常 specials、搬瓦工/DMIT 在 10 月检查时没有官方黑五页。只作线索，不当作官宣。",
+        "url": "https://topvpslist.com/best/black-friday-vps-deals-2026/"
+      },
+      {
+        "source": "https://gkmix.com/black-friday-vps-deals-2026/",
+        "note": "第三方汇总（2026-11-10 记录）：RackNerd specials 仍是常规 5 档，搬瓦工官网无活动、旧码 expired。只作线索，不当作官宣。",
+        "url": "https://gkmix.com/black-friday-vps-deals-2026/"
       }
     ]
   }
