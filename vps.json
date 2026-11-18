@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "sample": false,
-  "updated_at_beijing": "2026-11-16 23:54",
+  "updated_at_beijing": "2026-11-18 23:59",
   "scanned_at_beijing": {
-    "stock": "2026-11-16 23:51:01",
-    "black_friday": "2026-11-16 23:51:01",
-    "free_vps": "2026-11-16 23:54"
+    "stock": "2026-11-18 23:56:07",
+    "black_friday": "2026-11-18 23:56:07",
+    "free_vps": "2026-11-18 23:59"
   },
   "free_vps": [
     {
@@ -108,14 +108,14 @@
       "specs": [
         {
           "label": "as_claimed",
-          "value": "约 4 核 / 7–7.7GB 内存 / 40GB 硬盘，Ubuntu 24.04（有帖还写 XFCE、kernel 6.8）。每天 1000 credits，00:00 UTC 重置。"
+          "value": "约 4 核 / 7–7.7GB 内存 / 40GB 硬盘，Ubuntu 24.04（有帖还写 XFCE、kernel 6.8）。官网 2026-11-18 00:02 北京时间确认：免费档是一次性 5,000 credits（约 50 小时；100 credits/小时，1,000 credits=$1），90 天内有效，不再每日重置。此前帖文所称「每天 1000 credits，00:00 UTC 重置」已过时。付费档 S $19/月含 5,000 credits/月（闲置休眠）；M $39/月含 10,000 credits/月（不休眠）。定价见 https://box.simular.ai/billing"
         }
       ],
       "free_conditions": {
         "card_required": false,
         "card_notes": "多条实测称 Google 邮箱登录即可，未绑卡、账单为 0。一账号一台免费 box。",
         "region_limits": "未在帖中看到明确区域限制。",
-        "idle_reclaim": "有帖称闲置会休眠；另有帖称 14 天不用会被删除/清空。无固定公网入口/域名，不适合当网站服务器。",
+        "idle_reclaim": "官网确认：闲置会休眠（M 档除外）；连续 14 天休眠会删机及文件/存档，任意一次唤醒会重置该计数。无固定公网入口/域名，不适合当网站服务器。",
         "deadline": "",
         "deadline_note": ""
       },
@@ -132,9 +132,21 @@
           "time_beijing": "2026-11-10 22:37:10",
           "author": "@TheSoloFactory",
           "role": "14-day_idle_wipe"
+        },
+        {
+          "url": "https://x.com/Xxxxx0803/status/2122689707851276526",
+          "time_beijing": "2026-11-17 21:53:00",
+          "author": "@Xxxxx0803",
+          "role": "claimed_rule_change_5000_credits"
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50521067",
+          "time_beijing": "2026-11-17 02:32:36",
+          "author": "Show HN / founder taro666",
+          "role": "founder_comment_5_usd_50_hours"
         }
       ],
-      "notes": "多条帖明确说这不是 VPS，是给 AI agent 用的云端桌面。"
+      "notes": "多条帖明确说这不是 VPS，是给 AI agent 用的云端桌面。2026-11-18 00:02 北京时间已对照官网确认免费额度规则变更（见 specs），用户此前已注册，本轮不作为新项目提醒。"
     },
     {
       "id": "instabox-free-cloud-pc",
@@ -619,6 +631,78 @@
         }
       ],
       "notes": "是按量计费的 agent 沙盒/微虚拟机，不是永久免费常驻 VPS。免费档只有一次性额度。"
+    },
+    {
+      "id": "railway-free-vm-no-signup",
+      "provider": "Railway",
+      "type": "other",
+      "type_label": "free_ephemeral_linux_vm",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "官网 https://railway.com/free-vm ：一条命令 ssh railway.new 即可获得 Linux VM，约 1.4 秒就绪，就近区域。配置 2 vCPU / 2GB 内存；自带预览 URL（在 $PORT/8080 跑应用即接管）。预装 Railway Agent、Claude Code、Codex、OpenCode、Cursor CLI、Grok、pi，以及 Node、Python、gh、mise、Railway CLI、带 Playwright 的 Chromium，并有起步 AI 预算。也可用浏览器试用 https://dev.new 。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "官网写明未领取的机器计算免费，无需账号、无需信用卡；用 SSH 公钥识别，同一把密钥会回到同一台。要保留机器需打开欢迎信息里的领取链接并注册、选择 workspace，机器连同文件和 URL 转入该账号。转入后走 Railway 试用（一次性 $5、最多 30 天）和之后的 Free 计划（每月 $1 额度、不结转），官方未承诺领取后永久免费常开。",
+        "region_limits": "分配到离你最近的区域；需求高时分区会限制匿名试用，提示 Anonymous trials are temporarily disabled，该次不计入每日上限。目前仅 IPv4。每 IP 每天最多 3 台，AI 预算按 IP 共享。未领取前，预览 URL 只对创建时的 IP 开放。",
+        "idle_reclaim": "60 分钟构建窗口，随后 24 小时内领取；未领取则机器和文件一并删除。",
+        "deadline": "",
+        "deadline_note": "匿名试用本身无活动截止日期；单台有 60 分钟构建 + 24 小时领取时限。该功能自 2026-09-25 起在官方 changelog 公布。"
+      },
+      "official_url": "https://railway.com/free-vm",
+      "posts": [
+        {
+          "url": "https://x.com/linkeverythingy/status/2122892165265408079",
+          "time_beijing": "2026-11-18 11:18:28",
+          "author": "@linkeverythingy",
+          "role": "daily_roundup_links_official_free_vm"
+        },
+        {
+          "url": "https://x.com/linkeverythingy/status/2122892345821769944",
+          "time_beijing": "2026-11-18 11:19:11",
+          "author": "@linkeverythingy",
+          "role": "source_comment_official_url"
+        }
+      ],
+      "notes": "不是永久免费常驻 VPS，是免注册的短时 Linux 开发机/Agent 沙盒。本轮首次记入（此前多轮检索写 no_railway_hits）。已对照官网。"
+    },
+    {
+      "id": "hoody-free-machine",
+      "provider": "Hoody",
+      "type": "other",
+      "type_label": "其他",
+      "specs": [
+        {
+          "label": "as_claimed_from_official",
+          "value": "免费档 1 台 Free Machine（与其他免费用户共享硬件和内核）：总额度 2 核 / 3 GB 内存 / 20 GB 存储 / 双向各 10 Mbit/s，最多 3 台 Debian 13 Linux 电脑（含已停止的）共享该额度，不是每台各有一份。每台电脑 2 个快照，5 个 Bot URL，5 个 Realm，默认 3 个代理别名。可通过浏览器桌面/终端/VS Code 或 ssh hoody.com 使用，服务带 HTTPS 链接。免费档不含嵌套虚拟机（需裸金属）。Free/Plus/Pro 流量不按量计费、无月度配额。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "官网定价页与服务条款写明无需银行卡、没有试用期、没有固定到期日。文档写 It never expires。电脑本身不按用量计费。触及电脑/别名上限会拒绝创建而不是扣费；CPU/网速超限会变慢；内存不足可能杀进程；磁盘满则写入失败。付费 AI 模型只从单独充值的 AI Balance 扣，Free Machine 不含预付 AI 余额。条款 §1.1(f-8)：除非用户主动选择付费方案并同意付费，否则不会扣费或划扣余额；既不作为、也不因已保存支付方式而视为同意扣费。",
+        "region_limits": "免费档领取时可通过 API 请求首选地域，取决于容量和回退，不能保证。Plus/Pro 可选法国、德国、芬兰、新加坡、孟买、加拿大、美东、美西。",
+        "idle_reclaim": "条款 §1.1(f-2)：当前没有固定到期；若将来有闲置回收政策，须按条款变更程序先公布再生效。主机可能因维护、安全或容量被重启、迁移或重新编号，可能几乎不提前通知。",
+        "deadline": "",
+        "deadline_note": "官方定位无固定到期、不是试用。但条款明确：不承诺免费档会一直存在、限额不变或永远免费。厂商可关闭或改为付费方案；关闭或转换时，除非用户主动选择付费方案，否则不扣费，未选择则按关闭处理并可导出。EEA/英国/瑞士消费者关闭或转换至少提前 30 天通知（不可抗力等例外除外）。每人仅限 1 台 Free Machine，禁止为多领而开多个免费账号。须符合资格并视容量。出站 SMTP 默认封锁，IP/性能不保证，非生产用途。不得承诺厂商永不改规则。"
+      },
+      "official_url": "https://hoody.com/pricing/",
+      "posts": [
+        {
+          "url": "https://x.com/SwordXyj/status/2123069886695907822",
+          "time_beijing": "2026-11-18 23:04",
+          "author": "@SwordXyj",
+          "role": "first_seen_accurate_shared_limits"
+        },
+        {
+          "url": "https://x.com/jackluos3lpo/status/2123028121347928494",
+          "time_beijing": "2026-11-18 20:18",
+          "author": "@jackluos3lpo",
+          "role": "earlier_mention_incorrect_per_machine_limits"
+        }
+      ],
+      "notes": "据 X 上的报道。不是传统独立公网 root VPS，是托管在共享主机上的 Linux 电脑。已对照官网定价、文档和条款，符合长期免费且不自动转付费或超额扣费的申请标准（不绑卡、不充值）。条款禁止同一顾客为多领免费机开多个账号，自动申请最多尝试一份。"
     }
   ],
   "stock": {
@@ -627,18 +711,18 @@
       {
         "id": "dmit",
         "name": "DMIT",
-        "checked_at_beijing": "2026-11-16 23:51:01",
+        "checked_at_beijing": "2026-11-18 23:56:07",
         "official_url": "https://www.dmit.io/",
         "sources": [
           {
             "name": "vpsrestock.com",
             "url": "https://vpsrestock.com/dmit/",
-            "checked_at_beijing": "2026-11-16 23:48"
+            "checked_at_beijing": "2026-11-18 23:52"
           },
           {
             "name": "t.me/dmitnews",
             "url": "https://t.me/s/dmitnews",
-            "checked_at_beijing": "2026-11-16 23:51:01"
+            "checked_at_beijing": "2026-11-18 23:56:07"
           }
         ],
         "plans": [
@@ -716,7 +800,7 @@
             "price": "$10.90 USD / 月",
             "stock": "out_of_stock",
             "limited": false,
-            "last_restock": "上次补货 53 天前",
+            "last_restock": "上次补货 55 天前",
             "order_urls": [
               {
                 "label": "官网下单",
@@ -757,7 +841,7 @@
             "price": "$36.90 USD / 年",
             "stock": "out_of_stock",
             "limited": false,
-            "last_restock": "上次补货 53 天前",
+            "last_restock": "上次补货 55 天前",
             "order_urls": [
               {
                 "label": "官网下单",
@@ -770,13 +854,13 @@
       {
         "id": "bandwagonhost",
         "name": "搬瓦工",
-        "checked_at_beijing": "2026-11-16 23:51:01",
+        "checked_at_beijing": "2026-11-18 23:56:07",
         "official_url": "",
         "sources": [
           {
             "name": "vpsrestock.com",
             "url": "https://vpsrestock.com/bandwagonhost/",
-            "checked_at_beijing": "2026-11-16 23:48"
+            "checked_at_beijing": "2026-11-18 23:52"
           },
           {
             "name": "stock.bwg.la",
@@ -2032,7 +2116,7 @@
     ]
   },
   "black_friday": {
-    "date_note": "今年黑五为 2026-11-27。今天是 2026-11-16，多数商家尚未开卖。",
+    "date_note": "今年黑五为 2026-11-27。今天是 2026-11-18。OVHcloud 官方黑五已于 2026-11-17 13:00 GMT（北京时间 21:00）开卖，至 2026-12-01 13:00 GMT（北京时间 21:00）。其余五家本轮仍无可下单官方黑五套餐。",
     "official": [
       {
         "provider": "GreenCloud",
@@ -2040,19 +2124,19 @@
         "status_label": "今年不办",
         "status_kind": "off",
         "orderable_now": false,
-        "summary": "官方 LowEndTalk 帖（发布者 NDTN，Patron Provider）明确：GreenCloud will NOT be holding a Black Friday sale this year。十三周年庆是本季唯一大促，活动窗口 2026-10-26 至 2026-10-31（UTC+0），现已结束。本轮官网首页本机 curl HTTP 200，标题仍是 “GreenCloud - Affordable KVM and Windows VPS”，未见黑五或周年庆。https://greencloudvps.com/blackfriday 本轮本机 curl HTTP 404。周年庆店面 https://greencloudvps.com/billing/store/13th-birthday-sale 本机 curl 为 HTTP 403（Cloudflare）。按官方时间窗口，活动应已于 10 月 31 日结束，现无可下单套餐。",
+        "summary": "官方 LowEndTalk 帖（发布者 NDTN，Patron Provider）明确：GreenCloud will NOT be holding a Black Friday sale this year。十三周年庆是本季唯一大促，活动窗口 2026-10-26 至 2026-10-31（UTC+0），现已结束。本轮官网首页本机 curl HTTP 200，标题仍是 “GreenCloud - Affordable KVM and Windows VPS”，未见黑五或周年庆。https://greencloudvps.com/blackfriday 本轮本机 curl HTTP 404。周年庆店面 https://greencloudvps.com/billing/store/13th-birthday-sale 本轮本机 curl Cloudflare 403。按官方时间窗口，活动应已于 10 月 31 日结束，现无可下单官方黑五套餐。",
         "sources": [
           {
             "type": "official_account_post",
             "url": "https://lowendtalk.com/discussion/222534",
             "title": "GreenCloud is Turning 13! | Exclusive Deals, Giveaways, Quizzes & Games!",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
             "url": "https://greencloudvps.com/",
             "title": "GreenCloud - Affordable KVM and Windows VPS",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           }
         ],
         "sale_hub": "https://greencloudvps.com/billing/store/13th-birthday-sale",
@@ -2070,13 +2154,13 @@
             "type": "official_page",
             "url": "https://www.netcup.com/en/deals/black-friday",
             "title": "Black Week 2025 | Black Friday offers at netcup",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
             "url": "https://www.netcup.com/en/deals",
             "title": "netcup Deals | Cheap servers, web hosting and domains",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           }
         ],
         "sale_hub": "",
@@ -2084,33 +2168,244 @@
       },
       {
         "provider": "OVHcloud",
-        "status": "official_preannouncement_plus_stale_hero",
-        "status_label": "预告未开卖",
-        "status_kind": "soon",
-        "orderable_now": false,
-        "summary": "官方 FAQ 写：OVHcloud Black Friday 2026 在 11 月底举行，具体日期和折扣在开卖时公布；折扣自动生效、无需码；不适用于续费；Cyber Monday 是同一场活动的一部分。主视觉仍写 “Black Friday is over... Our Black Friday promotions are no longer available.”（法文页为 “Le Black Friday est terminé... Nos promotions Black Friday ne sont plus disponibles.”），并多处显示 “Coming soon”（为产品路线图用语，不是黑五开卖）。页面没有具体套餐价、也没有 Add to cart / Buy now，未见任何 2026 可下单套餐。",
+        "status": "official_sale_live",
+        "status_label": "现在能下单",
+        "status_kind": "now",
+        "orderable_now": true,
+        "summary": "官方英文黑五页已切换为 2026 开卖页（标题 “OVHcloud Black Friday 2026: discounted dedicated servers, domain names and hosting plans”），此前 “Black Friday is over / promotions are no longer available” 的过期主视觉已消失。FAQ 写明：活动从 2026-11-17 13:00 GMT（北京时间 21:00）持续到 2026-12-01 13:00 GMT（北京时间 21:00）；Cyber Monday 并入同一场，折扣不变。多数折扣下单时自动生效、无需码；例外是 Public Cloud 试用码 FREETRIAL（仅从未创建过 Public Cloud 项目的账号），以及 Public VCF as-a-Service 首月免费码 VCFTRIAL。折扣只适用于活动期间的新购，不适用于续费，续费按当时官网价。限量独立服务器（KS-LE / SYS-LE / Rise-LE 等）标明 while stocks last，卖得快。VPS 本身未见黑五折价，但任意 VPS 订单的备份选项最长免 3 个月（FAQ：需 12 个月订阅）；VPS 2027 起价 $4.54/月。独立服务器有最高 20% off 或免安装费。域名最高 69% off，虚拟主机最高 79% off，Hosted Exchange 首月 15% off，Public Cloud 提供 US$200 试用额度。本轮本机 curl 英文页 HTTP 200；KS-LE-1、SYS-2、VPS 产品页均为 HTTP 200 且展示对应标价。页面价格未含 GST。",
         "sources": [
           {
             "type": "official_page",
             "url": "https://www.ovhcloud.com/en/black-friday/",
-            "title": "OVHcloud Black Friday 2026: VPS, servers and domains on sale | OVHcloud Worldwide",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "title": "OVHcloud Black Friday 2026: discounted dedicated servers, domain names and hosting plans | OVHcloud Worldwide",
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
-            "url": "https://www.ovhcloud.com/en-gb/black-friday/",
-            "title": "OVHcloud Black Friday 2026: VPS, servers and domains on sale | OVHcloud UK",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "url": "https://eco.ovhcloud.com/en/kimsufi/ks-le-1/",
+            "title": "Kimsufi Limited Edition 1 server | Dedicated Server | OVHcloud ECO",
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
-            "url": "https://www.ovhcloud.com/fr/black-friday/",
-            "title": "Black Friday OVHcloud 2026 : VPS, serveurs et domaines en promo | OVHcloud France",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "url": "https://eco.ovhcloud.com/en/soyoustart/sys-2/",
+            "title": "SYS-2",
+            "fetched_beijing": "2026-11-18 23:56:07"
+          },
+          {
+            "type": "official_page",
+            "url": "https://www.ovhcloud.com/en/vps/",
+            "title": "VPS - Your virtual private server in the cloud | OVHcloud Worldwide",
+            "fetched_beijing": "2026-11-18 23:56:07"
           }
         ],
-        "sale_hub": "",
-        "plans": []
+        "sale_hub": "https://www.ovhcloud.com/en/black-friday/",
+        "plans": [
+          {
+            "name": "KS-LE-1",
+            "price": "$16.60/month",
+            "specs": "Intel Xeon E3-1245v2 4c/8t 3.4/3.8GHz，RAM 16–32GB DDR3，存储 2x480GB SSD SATA 至 3x2TB HDD，500Mbps 公网",
+            "url": "https://eco.ovhcloud.com/en/kimsufi/ks-le-1/"
+          },
+          {
+            "name": "KS-LE-2",
+            "price": "$18.90/month",
+            "specs": "Intel Xeon E5-1620v2 4c/8t 3.7/3.9GHz，RAM 32–64GB DDR3 ECC，存储 2x450GB 至 2x4TB，500Mbps 公网",
+            "url": "https://eco.ovhcloud.com/en/kimsufi/ks-le-2/"
+          },
+          {
+            "name": "KS-LE-3",
+            "price": "$23.60/month",
+            "specs": "Intel Xeon E-2274G 4c/8t 4/4.9GHz，RAM 32GB DDR4 ECC，存储 2x4TB 至 2x480GB + 2x8TB，500Mbps 公网",
+            "url": "https://eco.ovhcloud.com/en/kimsufi/ks-le-3/"
+          },
+          {
+            "name": "KS-LE-4",
+            "price": "$26/month",
+            "specs": "Intel Xeon E3-1270v6 4c/8t 3.8/4.2GHz，RAM 32–64GB DDR4 ECC，存储 2x1.92TB 至 2x450GB + 2x4TB，500Mbps 公网",
+            "url": "https://eco.ovhcloud.com/en/kimsufi/ks-le-4/"
+          },
+          {
+            "name": "KS-LE-5",
+            "price": "$29.50/month",
+            "specs": "Intel Xeon E5-1650v4 6c/12t 3.6/4GHz，RAM 64–128GB DDR4 ECC，存储 2x450GB 至 2x450GB + 2x4TB，500Mbps 公网",
+            "url": "https://eco.ovhcloud.com/en/kimsufi/ks-le-5/"
+          },
+          {
+            "name": "KS-LE-6",
+            "price": "$31.90/month",
+            "specs": "AMD EPYC 7351P 16c/32t 2.4/2.9GHz，RAM 128GB，存储 3x1TB 至 2x512GB + 2x4TB，500Mbps 公网",
+            "url": "https://eco.ovhcloud.com/en/kimsufi/ks-le-6/"
+          },
+          {
+            "name": "SYS-LE-1",
+            "price": "$40.20/month",
+            "specs": "Intel Xeon E-2236 6c/12t 3.4/4.8GHz，RAM 64GB，存储 2x960GB，1Gbps 公网/私网",
+            "url": "https://eco.ovhcloud.com/en/soyoustart/sys-le-1/"
+          },
+          {
+            "name": "SYS-LE-2",
+            "price": "$71/month",
+            "specs": "Intel Xeon E-2288G 8c/16t 3.7/5GHz，RAM 128GB，存储 3x1.92TB，1Gbps 公网/私网",
+            "url": "https://eco.ovhcloud.com/en/soyoustart/sys-le-2/"
+          },
+          {
+            "name": "SYS-STOR-LE-1",
+            "price": "$39/month",
+            "specs": "Intel Xeon D-2141I 8c/16t 2.2/3GHz，RAM 32GB，存储 1x512GB + 4x12TB 至 4x14TB + 1x512GB，1Gbps 公网/私网",
+            "url": "https://eco.ovhcloud.com/en/soyoustart/sys-stor-le-1/"
+          },
+          {
+            "name": "Rise-LE-1",
+            "price": "$41.30/month",
+            "specs": "AMD Ryzen 7 PRO 3700 8c/16t 3.6/4.4GHz，RAM 32–64GB，存储 2x960GB 至 3x4TB，1Gbps 公网/私网",
+            "url": "https://eco.ovhcloud.com/en/rise/rise-le-1/"
+          },
+          {
+            "name": "Rise-LE-2",
+            "price": "$47.20/month",
+            "specs": "AMD Ryzen 5 5600X 6c/12t 3.7/4.6GHz，RAM 32–128GB，存储 2x512GB 至 2x1.92TB，1Gbps 公网/私网",
+            "url": "https://eco.ovhcloud.com/en/rise/rise-le-2/"
+          },
+          {
+            "name": "Rise-LE-3",
+            "price": "$59/month",
+            "specs": "AMD Ryzen 7 5800X 8c/16t 3.8/4.7GHz，RAM 32GB，存储 2x960GB，1Gbps 公网/私网",
+            "url": "https://eco.ovhcloud.com/en/rise/rise-le-3/"
+          },
+          {
+            "name": "Rise-2",
+            "price": "$72/month",
+            "specs": "Intel Xeon-E 2388G 8c/16t 3.2/4.6GHz，RAM 32–128GB DDR4 ECC，存储 2x512GB 至 4x3.84TB SSD NVMe，1Gbps 公网/私网",
+            "url": "https://eco.ovhcloud.com/en/rise/rise-2/"
+          },
+          {
+            "name": "Rise-4",
+            "price": "$150.45/month the first year (was $177)",
+            "specs": "AMD EPYC 7313 16c/32t 3/3.7GHz，RAM 64GB–1TB DDR4 ECC，存储 2x960GB 至 4x3.84TB SSD NVMe，1Gbps 公网/私网",
+            "url": "https://eco.ovhcloud.com/en/rise/rise-4/"
+          },
+          {
+            "name": "Rise-STOR",
+            "price": "$183/month",
+            "specs": "AMD Ryzen 7 Pro 3700 8c/16t 3.6/4.4GHz，RAM 32–128GB DDR4 ECC，存储 4x14TB 至 6x14TB HDD SAS，1Gbps 公网/私网",
+            "url": "https://eco.ovhcloud.com/en/rise/rise-stor/"
+          },
+          {
+            "name": "SYS-2",
+            "price": "$33.68/month the first year (was $42.10)",
+            "specs": "Intel Xeon-D 2141I 8c/16t 2.2/3GHz，RAM 32–128GB DDR4 ECC，存储 2x512GB 至 2x1.92TB SSD NVMe，1Gbps 公网 / 500Mbps 私网",
+            "url": "https://eco.ovhcloud.com/en/soyoustart/sys-2/"
+          },
+          {
+            "name": "SYS-3",
+            "price": "$39.53/month the first year (was $46.50)",
+            "specs": "Intel Xeon-E 2288G 8c/16t 3.7/5GHz，RAM 32–128GB DDR4 ECC，存储 2x960GB 至 3x1.92TB SSD NVMe，1Gbps 公网 / 500Mbps 私网",
+            "url": "https://eco.ovhcloud.com/en/soyoustart/sys-3/"
+          },
+          {
+            "name": "SYS-GAME-1",
+            "price": "$47.01/month the first year (was $55.30)",
+            "specs": "AMD Ryzen 5 3600X 6c/12t 3.8/4.4GHz，RAM 32–64GB DDR4 ECC，存储 2x512GB SSD NVMe，500Mbps 公网",
+            "url": "https://eco.ovhcloud.com/en/soyoustart/sys-game-1/"
+          },
+          {
+            "name": "Game-1 (2026)",
+            "price": "From $281.35/month the first year (was $331)",
+            "specs": "AMD Ryzen 7 9800X3D 8c/16t 4.7/5.2GHz，RAM 64–256GB DDR5，存储 2x960GB SSD NVMe，1Gbps 公网",
+            "url": "https://www.ovhcloud.com/en/bare-metal/game/game-1/"
+          },
+          {
+            "name": "Game-2 (2026)",
+            "price": "From $315.35/month the first year (was $371)",
+            "specs": "AMD Ryzen 9 9950X3D 16c/32t 4.3/5.7GHz，RAM 64–256GB DDR5，存储 2x960GB SSD NVMe，1Gbps 公网",
+            "url": "https://www.ovhcloud.com/en/bare-metal/game/game-2/"
+          },
+          {
+            "name": "Advance-5 (2026)",
+            "price": "From $677/month",
+            "specs": "Intel Xeon 6527P 24c/48t 3/4.2GHz，RAM 128GB–1TB DDR5 ECC，存储 2x960GB 至 2x960GB + 2x15.36TB SSD NVMe，3Gbps 公网 / 25Gbps 私网",
+            "url": "https://www.ovhcloud.com/en/bare-metal/advance/adv-5-new-gen/"
+          },
+          {
+            "name": "Advance-5 (2024)",
+            "price": "From $467/month",
+            "specs": "AMD EPYC 8224P 24c/48t 2.55/3GHz，RAM 96–576GB DDR5 ECC，存储 2x960GB 至 8x7.68TB SSD NVMe，3Gbps 公网 / 25Gbps 私网",
+            "url": "https://www.ovhcloud.com/en/bare-metal/advance/adv-5/"
+          },
+          {
+            "name": "Scale range - 2024",
+            "price": "From $638/month",
+            "specs": "精选 Scale 2024 独立服务器；5Gbps 公网 / 50Gbps 私网",
+            "url": "https://www.ovhcloud.com/en/bare-metal/prices/#filterType=range_element&filterValue=scale"
+          },
+          {
+            "name": "VPS 2027 + 备份选项最长免 3 个月",
+            "price": "From $4.54/month；备份选项原价从 $0.40 / $1.40 起，现最长免 3 个月",
+            "specs": "不限流量；最多 8 vCores / 24GB RAM / 200GB NVMe；带宽最高 3Gbps；28 个地点",
+            "url": "https://www.ovhcloud.com/en/vps/"
+          },
+          {
+            "name": "Public Cloud US$200 free credit",
+            "price": "US$200 free credit",
+            "specs": "适用于 Public Cloud 各产品线（AI、Object Storage、Kubernetes、Savings Plans 等）",
+            "url": "https://www.ovhcloud.com/en/public-cloud/ai-machine-learning/"
+          },
+          {
+            "name": "Public VCF as-a-Service Starter/Advanced",
+            "price": "$334/month；Starter/Advanced 首月免费",
+            "specs": "16 vCPU / 64GB RAM / 1TB storage / 16 public IPs",
+            "url": "https://www.ovhcloud.com/en/public-vcf-aas/"
+          },
+          {
+            "name": ".com + .net",
+            "price": "$14.26 for the 1st year (was $22.18)",
+            "specs": "同时注册这两个后缀；含 DNS / DNSSEC",
+            "url": "https://order.ca.ovhcloud.com/us/order/webcloud/#/webCloud/domain/select?selection=~()"
+          },
+          {
+            "name": ".io",
+            "price": "$19.16 for the 1st year (was $62.99)",
+            "specs": "1 年注册；含 DNS / DNSSEC",
+            "url": "https://order.ca.ovhcloud.com/us/order/webcloud/#/webCloud/domain/select?selection=~()"
+          },
+          {
+            "name": "Starter Web Hosting",
+            "price": "$1.89/month ($22.68 for 12 months)",
+            "specs": "1 个免费域名*，1GB 磁盘，2 个邮箱，1x250MB 数据库，一键 CMS，Quantum SSL",
+            "url": "https://www.ovhcloud.com/en/web-hosting/eco/"
+          },
+          {
+            "name": "Personal web hosting",
+            "price": "$3.59/month ($43.08 for 12 months)",
+            "specs": "1 个免费域名*，100GB 磁盘，10 个邮箱，5x1GB 数据库，一键 CMS，Quantum SSL",
+            "url": "https://www.ovhcloud.com/en/web-hosting/eco/"
+          },
+          {
+            "name": "Professional web hosting",
+            "price": "$2.39/month ($28.68 for 12 months)",
+            "specs": "1 个免费域名*，250GB 磁盘，100 个邮箱，10x2GB 数据库，一键 CMS，Quantum SSL",
+            "url": "https://www.ovhcloud.com/en/web-hosting/business/"
+          },
+          {
+            "name": "Performance web hosting",
+            "price": "$8.29/month ($99.48 for 12 months)",
+            "specs": "1 个免费域名*，500GB 磁盘，1000 个邮箱，20x2GB 数据库，含 CDN，一键 CMS，Quantum SSL",
+            "url": "https://www.ovhcloud.com/en/web-hosting/business/"
+          },
+          {
+            "name": "50 GB Hosted Exchange",
+            "price": "$6.20/month/account the first month (was $7.29；首月 15% off)",
+            "specs": "法国托管，每账户 50GB，99.99% 可用性",
+            "url": "https://www.ovhcloud.com/en/emails-exchange/"
+          },
+          {
+            "name": "300 GB Hosted Exchange",
+            "price": "$13.25/month/account the first month (was $15.59；首月 15% off)",
+            "specs": "法国托管，每账户 300GB，99.99% 可用性",
+            "url": "https://www.ovhcloud.com/en/emails-exchange/"
+          }
+        ]
       },
       {
         "provider": "RackNerd",
@@ -2118,37 +2413,37 @@
         "status_label": "预告未开卖",
         "status_kind": "soon",
         "orderable_now": false,
-        "summary": "https://www.racknerd.com/blackfriday 本机 curl HTTP 200，连续重定向到常规 Specials 页（标题 “RackNerd | VPS Specials”），不是黑五专页。Specials 现价年付阶梯 $21.99 / $35.99 / $59.99 / $89.99 / $119.99，页面未出现 Black Friday 字样，属于日常特价而非官宣黑五。https://blog.racknerd.com/ 最新文章仍是 2026-11-13 的 “HAProxy vs Nginx: Choosing the Right Load Balancer”，全文未见 Black Friday。https://my.racknerd.com/index.php?rp=/store/black-friday 本轮本机 curl HTTP 403；WebFetch 跟随重定向后打开 Shared Hosting 常规页，不是黑五店面。https://my.racknerd.com/index.php?rp=/store/special-promos 本轮本机 curl HTTP 403；WebFetch 打开后价格与官网 Specials 日常价一致，未见 Black Friday。",
+        "summary": "https://www.racknerd.com/blackfriday 本机 curl HTTP 200，连续重定向到常规 Specials 页（标题 “RackNerd | VPS Specials”），不是黑五专页。Specials 现价年付阶梯 $21.99 / $35.99 / $59.99 / $89.99 / $119.99，页面未出现 Black Friday 字样，属于日常特价而非官宣黑五。https://blog.racknerd.com/ 最新文章仍是 2026-11-13 的 “HAProxy vs Nginx: Choosing the Right Load Balancer”，未见黑五公告。https://my.racknerd.com/index.php?rp=/store/black-friday 本轮本机 curl HTTP 200，实际重定向到 Shared Hosting（$5.59 / $9.59 / $15.59 起），不是黑五 VPS 专场。https://my.racknerd.com/index.php?rp=/store/special-promos 本轮本机 curl HTTP 200，价格仍是 $21.99 起年付五档，未见 Black Friday。",
         "sources": [
           {
             "type": "official_page",
             "url": "https://www.racknerd.com/specials/",
             "title": "RackNerd | VPS Specials",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
             "url": "https://www.racknerd.com/blackfriday",
             "title": "RackNerd | VPS Specials",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
             "url": "https://blog.racknerd.com/",
             "title": "RackNerd Blog - Introducing Infrastructure Stability",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
             "url": "https://my.racknerd.com/index.php?rp=/store/black-friday",
             "title": "Shopping Cart - RackNerd LLC",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
             "url": "https://my.racknerd.com/index.php?rp=/store/special-promos",
             "title": "Shopping Cart - RackNerd LLC",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           }
         ],
         "sale_hub": "",
@@ -2160,35 +2455,37 @@
         "status_label": "预告未开卖",
         "status_kind": "soon",
         "orderable_now": false,
-        "summary": "本机 curl 访问官网首页被 Cloudflare 403 拦截。WebFetch 能打开 https://www.dmit.io/ 常规首页，未见黑五或促销入口。公告页 https://www.dmit.io/index.php?rp=/announcements 本轮本机 curl HTTP 200，显示 “No announcements to display”；促销页 https://www.dmit.io/index.php?rp=/store/promotions 本机 curl HTTP 404；https://www.dmit.io/black-friday 本机 curl Cloudflare 403，WebFetch 为 HTTP 404。官方 Telegram @dmitnews 最新仍是 https://t.me/dmitnews/482（2026-11-16 12:35 北京时间），宣布因扩容滞后、网络攻击与 AS9929 不稳定，暂时暂停原定补充新购订单；不是补货公告，也不是黑五公告。本轮无新帖。",
+        "summary": "本轮官网首页本机 curl Cloudflare 403，WebFetch 打开常规首页（标题 “DMIT - High Performance VM in DMIT.IO Cloud Infrastructure Services”），未见黑五或促销。公告页显示 “No announcements to display”；促销页 HTTP 404；https://www.dmit.io/black-friday WebFetch HTTP 404。官方 Telegram @dmitnews 最新帖仍是 483（2026-11-17 19:28 北京时间），154 段 IP 费用提醒，不是补货或黑五公告。本轮没有新帖。",
         "sources": [
           {
             "type": "official_page",
             "url": "https://www.dmit.io/",
             "title": "DMIT - High Performance VM in DMIT.IO Cloud Infrastructure Services",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
             "url": "https://www.dmit.io/index.php?rp=/announcements",
-            "title": "No announcements to display",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "title": "Announcements - DMIT, Inc.",
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
             "url": "https://www.dmit.io/index.php?rp=/store/promotions",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "title": "404 - Page Not Found - DMIT, Inc.",
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
             "url": "https://www.dmit.io/black-friday",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "title": "404 Not Found",
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_account",
             "url": "https://t.me/s/dmitnews",
             "title": "DMIT活动推送 – Telegram",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           }
         ],
         "sale_hub": "",
@@ -2206,19 +2503,19 @@
             "type": "official_page",
             "url": "https://bandwagonhost.com/",
             "title": "Mass VPS hosting on Enterprise equipment - BandwagonHost VPS",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
             "url": "https://bwh81.net/",
             "title": "Mass VPS hosting on Enterprise equipment - BandwagonHost VPS",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           },
           {
             "type": "official_page",
             "url": "https://bandwagonhost.com/blackfriday",
             "title": "404 Not Found",
-            "fetched_beijing": "2026-11-16 23:51:01"
+            "fetched_beijing": "2026-11-18 23:56:07"
           }
         ],
         "sale_hub": "",
