@@ -23739,7 +23739,7 @@
     "summary": "阶跃星辰开放平台的 StepAudio 3 系列 4 个 preview 模型（实时语音 Realtime、语音对话 Chat（Chat Completions 接口）、综合音频生成 Gen、音乐生成 Music）计费标注「限时免费」。限免截至 11/17 11:59:59（北京时间），之后按新价计费；TTS/ASR 不免费，别选错模型；受速率限制；官方定价页写明限免到北京时间 2026-11-17 11:59:59，12:00 起改按新价收费，preview 版本下线换成正式付费版；StepAudio 3 TTS、ASR 已经收费，不在免费范围内。截止北京时间 2026-11-17 11:59。",
     "source": "X @FAatc168 / @GouGeHSLU；官方定价 https://platform.stepfun.com/docs/zh/guides/pricing/details 核实",
     "collected_at": "2026-11-08T02:45:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2119127822723920367",
     "related_post_urls": [
       "https://x.com/GouGeHSLU/status/2119130220578103495"
@@ -23866,7 +23866,7 @@
     "summary": "Antigravity 官方模型页已改为：Claude Sonnet 4.6、Claude Opus 4.6（thinking）与 GPT-OSS-120b「将于 2026-11-18 移除」（原定 11/2）。Free & Google AI Plus 档目前可用 Claude 4.6 两款、GPT-OSS-120b 和 Gemini 3.8 Flash；Claude/GPT 与 Gemini 分别有 5 小时与每周额度。官方只写了日期，没写时区，按 11/18 当天估算截止。额度按 5 小时和每周刷新，/usage 可查；11/18 后这三款从免费档移除；不要用 Antigravity 登录态接第三方工具，可能违反条款。无需绑卡。截止：官方只写了日期，没写时区，按 11/18 当天估算截止，北京时间 2026-11-18 23:59。",
     "source": "X @Clearance43；官方 https://antigravity.google/docs/models/ 核实（Will be removed on November 18, 2026）",
     "collected_at": "2026-11-08T02:45:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2119136526504460603",
     "providers": [
       {
@@ -26153,7 +26153,7 @@
       "按仪表盘查看当日剩余次数，基础每天 20 次，00:00 UTC 重置"
     ],
     "collected_at": "2026-11-11T00:40:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": null,
     "platform": "Itzi",
     "claim_guide": [
@@ -27372,7 +27372,7 @@
     "barriers": [
       "need_subscription"
     ],
-    "expired": false,
+    "expired": true,
     "collected_at": "2026-11-11T02:06:00+08:00",
     "auto_claim": {
       "status": "needs_user",
@@ -28415,7 +28415,7 @@
       "need_key"
     ],
     "collected_at": "2026-11-11T04:05:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "needs_user",
       "note": "已用 Google 登录建好账号，但进控制台前必须填手机号，需你本人在 api.onysoft.com/complete-profile 填手机号后再建 key",
@@ -34801,7 +34801,7 @@
     ],
     "category": "agents",
     "collected_at": "2026-11-12T16:20:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "needs_user",
       "note": "这是网页创作应用里的限免生图，没有 API key 可建。登录可能要 Google/GitHub/X 授权或邀请码，本轮无法完成需本人确认的授权，请你打开 https://miora.design/ 自行注册试用；不要绑卡付款。",
@@ -37716,6 +37716,561 @@
       "status": "needs_user",
       "note": "需在 poly.ai 注册新账号并在 Agent Studio 建 Key；本轮不能代填登录或保存新密码。",
       "at": "2026-11-17T00:14:00+08:00"
+    }
+  },
+  {
+    "id": "deepseek-model-triggered-search-fetch-unbilled-20261119",
+    "title": "DeepSeek：自 11/18 12:00 起，调用模型时触发的服务端搜索/网页抓取不再计费",
+    "platform": "DeepSeek API",
+    "product": "DeepSeek API · 联网工具 / web_search",
+    "model": "deepseek-flash / deepseek-v4-pro（经 web tools / web_search 触发）",
+    "type": "免费层",
+    "deadline": null,
+    "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "source": "DeepSeek 官方中文定价页（2026-11-19 00:15 北京核对；英文定价页同步）",
+    "summary": "据 DeepSeek 官方定价页，自北京时间 2026 年 11 月 18 日 12:00 起，在调用模型时通过联网工具、Anthropic API 的 web_search 工具或 Responses API 的 web_search 工具触发的服务端搜索和网页抓取不再单独计费，只收模型 Token 费用。独立的 Search API 与 Fetch API 仍按次收费，每 1,000 次成功请求 5 元（英文页为 0.75 美元）。官方未公布这项免计费的结束日，并保留调价权。这不是新的 Token 赠额，也不是此前已于 11 月 1 日结束的 Harness / Claude Code / Codex 限免续期。使用已有 DeepSeek API 账号即可，无需另领券；模型调用本身仍按量从余额扣费。",
+    "claim_steps": [
+      "打开 DeepSeek 开放平台，使用已有 API Key（没有则先创建）",
+      "按官方文档用 OpenAI 或 Anthropic 兼容接口调用模型",
+      "在请求里启用联网工具，或使用 Anthropic / Responses 的 web_search 工具"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开开放平台",
+        "detail": "登录 DeepSeek 开放平台。已有账号直接使用，不必重新注册。",
+        "url": "https://platform.deepseek.com/api_keys",
+        "note": "用户已有 DeepSeek 账号"
+      },
+      {
+        "step": "准备 API Key",
+        "detail": "在 API Keys 页面使用已有 Key，或新建一把。不必另领优惠券。",
+        "url": "https://platform.deepseek.com/api_keys"
+      },
+      {
+        "step": "设置接口地址",
+        "detail": "OpenAI 兼容基址为 https://api.deepseek.com；Anthropic 兼容基址为 https://api.deepseek.com/anthropic。模型名可用 deepseek-flash 或 deepseek-v4-pro。",
+        "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+      },
+      {
+        "step": "启用联网搜索",
+        "detail": "在模型调用中启用联网工具，或走 Anthropic API / Responses API 的 web_search 工具，这样触发的服务端搜索和抓取按官方定价不再单独计费。",
+        "url": "https://api-docs.deepseek.com/guides/search/",
+        "note": "不要把这条理解成直接调用独立 Search/Fetch API 也免费"
+      },
+      {
+        "step": "注意独立接口仍计费",
+        "detail": "自己直接调用 Search API 或 Fetch API 仍按次收费。以官方定价页为准。",
+        "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+      }
+    ],
+    "providers": [
+      {
+        "name": "DeepSeek 开放平台",
+        "action_url": "https://platform.deepseek.com/api_keys"
+      },
+      {
+        "name": "DeepSeek 定价页",
+        "action_url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "deepseek-flash",
+        "action_url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+      },
+      {
+        "name": "deepseek-v4-pro",
+        "action_url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-19T00:16:12+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "已有 DeepSeek 账号，无需另领；在模型调用里启用 web tools 或 web_search 即可，独立 Search/Fetch API 仍按次收费。",
+      "at": "2026-11-19T00:16:12+08:00"
+    }
+  },
+  {
+    "id": "antigravity-1st-anniversary-all-model-quota-reset-20261119",
+    "title": "Google Antigravity 一周年：全员重置全部模型配额",
+    "platform": "Google Antigravity",
+    "product": "Google Antigravity",
+    "model": "Antigravity 内全部模型",
+    "type": "额度",
+    "deadline": null,
+    "url": "https://x.com/_mohansolo/status/2122836883877347836",
+    "source": "据 X 上的报道（产品负责人 @_mohansolo；官方站点未见同期博客）",
+    "summary": "据 X 上的报道，Antigravity 负责人 Varun Mohan 于北京时间 2026 年 11 月 18 日 07:38 发帖称，为庆祝 Antigravity 一周年，给所有人重置全部模型配额。这是一次性配额回血，不是新的持续赠送；官方未公布免费档或付费档是否全覆盖、回了多少，以及能用多久。LINUX DO 和 V2EX 上有用户确认已经回血。官方首页、博客和 changelog 截至本轮核对仍无同期公告。这次重置不能理解为延长已于北京时间 11 月 18 日 23:59 结束的 Claude 4.6 限免。需要已有 Google 账号登录 Antigravity 客户端查看用量。",
+    "claim_steps": [
+      "打开并登录已安装的 Google Antigravity 客户端",
+      "在设置或模型用量里查看配额是否已重置",
+      "无需另领券"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开客户端",
+        "detail": "使用已安装的 Google Antigravity 桌面客户端、IDE 插件或官方应用。如未安装，从官方站点下载。",
+        "url": "https://antigravity.google/download"
+      },
+      {
+        "step": "登录 Google 账号",
+        "detail": "在应用内用已有 Google 账号登录。这是一次性全员重置，无需优惠码。",
+        "url": "https://antigravity.google"
+      },
+      {
+        "step": "查看用量",
+        "detail": "在设置或模型用量页面确认各模型配额是否已回血。官方未说明具体回血量和有效期，以客户端显示为准。",
+        "url": "https://antigravity.google/docs/models/"
+      },
+      {
+        "step": "注意限免已结束",
+        "detail": "目录里写到 11 月 18 日 23:59 的 Claude 4.6 免费档已到期，重置帖没有宣布延期。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Google Antigravity 套餐与额度",
+        "action_url": "https://antigravity.google/pricing"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Antigravity 下载",
+        "action_url": "https://antigravity.google/download"
+      }
+    ],
+    "models": [
+      {
+        "name": "Antigravity 模型文档",
+        "action_url": "https://antigravity.google/docs/models/"
+      }
+    ],
+    "scenes": [
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-19T00:16:12+08:00",
+    "expired": false,
+    "source_post_id": "2122836883877347836",
+    "post_time_bj": "2026-11-18T07:38:48+08:00",
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "请登录已有 Antigravity 客户端查看用量，确认全部模型配额是否已重置；本轮不能代为登录客户端。",
+      "at": "2026-11-19T00:16:12+08:00"
+    }
+  },
+  {
+    "id": "tencent-hy4-flash-open-weights-20261119",
+    "title": "腾讯 Hy4 flash 开源权重上线（HF / ModelScope / GitCode）",
+    "platform": "开源权重",
+    "product": "腾讯混元 Hy4 flash",
+    "model": "Hy4-flash",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://huggingface.co/tencent/Hy4-flash",
+    "source": "Hugging Face tencent/Hy4-flash；ModelScope Tencent-Hunyuan/Hy4-flash；据 X 上 @TencentHunyuan 报道",
+    "summary": "腾讯混元已公开 Hy4 flash 开源权重，Hugging Face 仓库 tencent/Hy4-flash 未设门禁，ModelScope、GitCode 和 GitHub 同步可下，并有 FP8、base 与 GGUF 等格式。据仓库信息，约 220B 总参、每 token 约 12B 激活，多模态，上下文约 1M。这是可本地或自建部署的权重，不是新的云端 API 赠额；WorkBuddy 限免至 11 月 30 日、OpenCode Zen 的 hy4-flash-free 已另有条目。许可证是 Tencent Hy License：个人和内部自用一般可按仓库条款使用，年收入超过 5000 万美元或单月超过 1 亿 MAU 的大型 MaaS 需要另行签约，商用以仓库 LICENSE 为准。自托管需要相应硬件，成本自理。",
+    "claim_steps": [
+      "打开 Hugging Face、ModelScope 或 GitHub 上的官方仓库",
+      "阅读 Tencent Hy License 后下载权重",
+      "按模型卡用推荐的推理框架在本地或自建环境加载"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开模型页",
+        "detail": "官方权重入口包括 Hugging Face、ModelScope 和 GitHub，仓库未 gated，一般可以直接下载。",
+        "url": "https://huggingface.co/tencent/Hy4-flash"
+      },
+      {
+        "step": "也可在魔搭下载",
+        "detail": "ModelScope 同步仓库为 Tencent-Hunyuan/Hy4-flash。",
+        "url": "https://modelscope.cn/models/Tencent-Hunyuan/Hy4-flash"
+      },
+      {
+        "step": "查看许可证",
+        "detail": "先阅读仓库中的 Tencent Hy License。大型 MaaS 可能需要另行签约，不要跳过许可页。",
+        "url": "https://huggingface.co/tencent/Hy4-flash"
+      },
+      {
+        "step": "下载权重",
+        "detail": "用网页下载、huggingface-cli / hf download，或 ModelScope 对应命令。不要用不明第三方镜像。GGUF 等量化版只在官方仓库明确提供时再使用。",
+        "url": "https://github.com/Tencent-Hunyuan/Hy4-flash"
+      },
+      {
+        "step": "本地运行",
+        "detail": "按模型卡或 GitHub 说明，用其写明的推理框架加载，并对照自己的显存和 GPU。本地运行通常不需要 API Key，也不绑卡。"
+      },
+      {
+        "step": "验证",
+        "detail": "权重文件完整，并能按官方或模型卡推荐方式成功加载或完成一次推理，即完成。开放权重免费下载不等于某家托管 API 也免费。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Hugging Face（tencent）",
+        "action_url": "https://huggingface.co/tencent/Hy4-flash"
+      },
+      {
+        "name": "ModelScope 魔搭",
+        "action_url": "https://modelscope.cn/models/Tencent-Hunyuan/Hy4-flash"
+      },
+      {
+        "name": "GitHub Tencent-Hunyuan",
+        "action_url": "https://github.com/Tencent-Hunyuan/Hy4-flash"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Hy4-flash（HF）",
+        "action_url": "https://huggingface.co/tencent/Hy4-flash"
+      },
+      {
+        "name": "Hy4-flash（魔搭）",
+        "action_url": "https://modelscope.cn/models/Tencent-Hunyuan/Hy4-flash"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-19T00:16:12+08:00",
+    "expired": false,
+    "source_post_id": "2122912575302119554",
+    "auto_claim": {
+      "status": "success",
+      "note": "无需注册领取，直接从官方 Hugging Face 或 ModelScope 下载开源权重。",
+      "at": "2026-11-19T00:16:12+08:00"
+    }
+  },
+  {
+    "id": "packetai-token-factory-launch-free-20261119",
+    "title": "packet.ai Token Factory：三款开源模型启动期免费（官方称约一个月）",
+    "platform": "packet.ai",
+    "product": "Token Factory",
+    "model": "DeepSeek V4.1 Flash NVFP4 / MiniMax M3.1 Flash / Qwen2.5 1.5B Instruct",
+    "type": "限时免费",
+    "deadline": null,
+    "url": "https://packet.ai/token-factory",
+    "source": "packet.ai 官方产品页与 11/17 博客；据 X 上 @packet_ai 报道",
+    "summary": "据 packet.ai 官方产品页和 11 月 17 日博客，Token Factory 已上线 OpenAI 兼容推理接口，当前三款开放权重模型 DeepSeek V4.1 Flash（NVFP4，1M 上下文）、MiniMax M3.1 Flash（1M 上下文）和 Qwen2.5 1.5B Instruct 在启动期免费。产品页写明 Free at launch (one month), then billed per 1M tokens；博客则称暂无公布结束日、后续再决定商业化，因此不能写成精确截止日期。官方称注册免绑卡，但 agent 文档要求每个账号做一次手机短信验证。这是开源模型托管，不是转售官方闭源模型名。本轮未能从控制台或公开模型列表交叉确认现价是否为零，请以控制台标价为准。用尽后按 token 从钱包扣费。",
+    "claim_steps": [
+      "打开 packet.ai Token Factory 或控制台 Serverless 页注册账号",
+      "完成手机短信验证后创建 API Key",
+      "将基址设为 https://api.packet.ai/v1，调用官方给出的模型名"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开产品页或控制台",
+        "detail": "打开 Token Factory 产品页，或直接进入控制台的 Serverless 模型页。",
+        "url": "https://packet.ai/token-factory"
+      },
+      {
+        "step": "注册或登录",
+        "detail": "没有账号就先注册。官方博客写免绑卡，但文档要求做一次手机短信验证。",
+        "url": "https://dash.packet.ai/serverless",
+        "note": "需要短信，本轮不能代为完成"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在控制台生成 Token Factory / Serverless 的 API Key。",
+        "url": "https://dash.packet.ai/serverless"
+      },
+      {
+        "step": "设置接口地址",
+        "detail": "官方产品页给出的 OpenAI 兼容基址是 https://api.packet.ai/v1。",
+        "url": "https://packet.ai/token-factory"
+      },
+      {
+        "step": "选择模型",
+        "detail": "官方产品页给出的模型名为 nvidia/DeepSeek-V4.1-Flash-NVFP4、MiniMaxAI/MiniMax-M3.1-Flash、Qwen/Qwen2.5-1.5B-Instruct。调用前在控制台确认标价是否仍为免费。",
+        "url": "https://dash.packet.ai/serverless"
+      }
+    ],
+    "providers": [
+      {
+        "name": "packet.ai Token Factory",
+        "action_url": "https://packet.ai/token-factory"
+      },
+      {
+        "name": "控制台 Serverless",
+        "action_url": "https://dash.packet.ai/serverless"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "nvidia/DeepSeek-V4.1-Flash-NVFP4",
+        "action_url": "https://packet.ai/token-factory"
+      },
+      {
+        "name": "MiniMaxAI/MiniMax-M3.1-Flash",
+        "action_url": "https://packet.ai/token-factory"
+      },
+      {
+        "name": "Qwen/Qwen2.5-1.5B-Instruct",
+        "action_url": "https://packet.ai/token-factory"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_key",
+      "need_phone"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-19T00:16:12+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需要手机短信验证，本轮不能代为完成；控制台现价也尚未交叉确认为零。",
+      "at": "2026-11-19T00:16:12+08:00"
+    }
+  },
+  {
+    "id": "axforge-3m-tokens-every-30-days-20261119",
+    "title": "AxForge：新账号每 30 天 300 万 serverless Token（免绑卡，开源模型）",
+    "platform": "AxForge",
+    "product": "AxForge Serverless API",
+    "model": "qwen3.8-27b / glm-5.3-flash / mimo-v2.6-flash 等",
+    "type": "免费层",
+    "deadline": null,
+    "url": "https://axforge.ai/pricing/",
+    "source": "AxForge 官方定价页与 quickstart 文档（awesome-free-llm-apis 11/17 收录后核到）",
+    "summary": "据 AxForge 官方定价页和文档，每个新账号包含每 30 天 300 万免费 serverless tokens，无需绑卡；用完后从预付余额按量计费。官方条款写明这是 launch offer，可能随定价页通知变更，条款变更日志显示 2026 年 9 月已有该项，因此更像常驻免费档，而不是这两天新开的限时活动。可调用的是开源或开放权重模型，如 Qwen3.8 27B、GLM-5.3-Flash、MiMo-V2.6-Flash 等，推理在瑞典斯德哥尔摩机房。不是转售官方闭源模型名。官方未要求绑卡或实名；公开模型列表需要 Key，本轮未实际发请求核账。",
+    "claim_steps": [
+      "打开 https://console.axforge.ai/ 注册账号",
+      "在控制台左侧 API Keys 创建 Key",
+      "将基址设为 https://api.axforge.ai/v1，调用官方模型名"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开控制台注册",
+        "detail": "打开 AxForge 控制台注册账号。官方写新账号即含每 30 天免费额度，无需绑卡。",
+        "url": "https://console.axforge.ai/"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在控制台左侧打开 API Keys，再点 + New key，命名后创建。完整密钥只显示一次，请自行保存，不要发给任何人。",
+        "url": "https://dev.axforge.ai/docs/connect/api-key/"
+      },
+      {
+        "step": "设置接口地址",
+        "detail": "官方文档给出的 OpenAI 兼容基址是 https://api.axforge.ai/v1。密钥前缀官方写为 orx_live_。",
+        "url": "https://dev.axforge.ai/docs/quickstart/"
+      },
+      {
+        "step": "选择模型",
+        "detail": "文档示例和常用模型名为 qwen3.8-27b、glm-5.3-flash、mimo-v2.6-flash。也可用官方定价页列出的其他 serverless 模型。",
+        "url": "https://axforge.ai/pricing/"
+      },
+      {
+        "step": "发送测试请求",
+        "detail": "用 OpenAI SDK 或 curl 调用 /v1/chat/completions，看到正常回复即表示 Key 可用。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "AxForge 定价页",
+        "action_url": "https://axforge.ai/pricing/"
+      },
+      {
+        "name": "AxForge 控制台",
+        "action_url": "https://console.axforge.ai/"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "qwen3.8-27b",
+        "action_url": "https://dev.axforge.ai/docs/connect/api-key/"
+      },
+      {
+        "name": "glm-5.3-flash",
+        "action_url": "https://dev.axforge.ai/docs/connect/api-key/"
+      },
+      {
+        "name": "mimo-v2.6-flash",
+        "action_url": "https://dev.axforge.ai/docs/connect/api-key/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "coding"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-19T00:16:12+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在 console.axforge.ai 注册新账号并创建 API Key；本轮不能代填登录或保存新密码。",
+      "at": "2026-11-19T00:16:12+08:00"
+    }
+  },
+  {
+    "id": "mistral-vibe-pro-lechonk-europe-3mo-20261119",
+    "title": "Mistral Vibe Pro：欧洲开发者优惠码 LECHONK 免 3 个月（官方已补码）",
+    "platform": "Mistral Vibe",
+    "product": "Mistral Vibe Pro",
+    "model": "Mistral Vibe（聊天与编程 Agent）",
+    "type": "Agent",
+    "deadline": null,
+    "url": "https://x.com/MistralAI/status/2123073168659141119",
+    "source": "据 X 上的报道（官方账号 @MistralAI）",
+    "summary": "据 X 上的报道，官方认证账号 @MistralAI 于北京时间 11 月 17 日 23:28 宣布，为庆祝 Mistral Vibe 与 Le Chonk，向欧洲开发者限时、先到先得提供 Vibe Pro 前 3 个月免费，优惠码为 LECHONK，并写明 Terms apply。当晚官方称名额已发完；北京时间 11 月 18 日 23:17 官方再次发帖称已补码，桌面端已上 Mac 和 Windows。官方产品页只区分免费档和 Pro（Pro 含 agents、长程任务与全天编程），并未刊登该码或截止日期。这是有限名额的产品优惠码，不是开放 API 额度；不在欧洲或不满足开发者条件则不可用。补码后是否仍有余量需当场验证。",
+    "claim_steps": [
+      "打开官方领取链接 https://bit.ly/VibeProLimitedOffer",
+      "在符合欧洲开发者条件时使用优惠码 LECHONK",
+      "按页面提示登录或注册并完成兑换，需要可到产品页下载桌面端"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开官方领取页",
+        "detail": "使用官方线程给出的领取链接，不要用不明第三方转短链。",
+        "url": "https://bit.ly/VibeProLimitedOffer"
+      },
+      {
+        "step": "确认地区条件",
+        "detail": "官方写明面向欧洲开发者，先到先得，Terms apply。若不在欧洲或不符合开发者条件，不要强行兑换。",
+        "url": "https://mistral.ai/products/vibe",
+        "note": "产品页本身未刊登该码"
+      },
+      {
+        "step": "填写优惠码",
+        "detail": "在领取页使用优惠码 LECHONK，并按页面提示登录或注册 Mistral 账号完成兑换。"
+      },
+      {
+        "step": "打开 Vibe",
+        "detail": "兑换成功后，可在产品页下载 Mac 或 Windows 桌面端，或按官方说明使用网页/CLI/IDE 入口。",
+        "url": "https://mistral.ai/products/vibe"
+      },
+      {
+        "step": "若提示发完",
+        "detail": "这是有限名额。若页面显示已领完或地区不符，即无法再领，不要反复提交。"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "Mistral Vibe 产品页",
+        "action_url": "https://mistral.ai/products/vibe"
+      },
+      {
+        "name": "官方领取链接",
+        "action_url": "https://bit.ly/VibeProLimitedOffer"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_region"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-19T00:16:12+08:00",
+    "expired": false,
+    "source_post_id": "2123073168659141119",
+    "post_time_bj": "2026-11-18T23:17:42+08:00",
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "仅限欧洲开发者，需在官方领取页用优惠码 LECHONK 自行兑换；余量未知，本轮不能代为登录领取。",
+      "at": "2026-11-19T00:16:12+08:00"
+    }
+  },
+  {
+    "id": "reson8-rumble-2-flash-open-weights-20261119",
+    "title": "Reson8 Rumble-2-Flash：Apache 2.0 开源语音识别权重",
+    "platform": "开源权重",
+    "product": "Reson8 Rumble-2-Flash",
+    "model": "Rumble-2-Flash",
+    "type": "模型",
+    "deadline": null,
+    "url": "https://huggingface.co/blog/rumble-2-flash",
+    "source": "Hugging Face 官方博客（Published November 18, 2026）；仓库 Reson8/Rumble-2-Flash",
+    "summary": "据 Hugging Face 官方博客 2026 年 11 月 18 日宣布，Rumble-2-Flash 已以 Apache 2.0 开源。这是约 0.5B 参数、支持 40 余种语言的语音识别模型，可用 Transformers 与 vLLM 加载，权重在 Hugging Face 仓库 Reson8/Rumble-2-Flash，未设门禁。这是可下载的开源权重，不是新的云端赠额；Reson8 自己的托管 API 仍按小时计费。仓库 10 月已经存在，11 月 16 日有过许可相关提交，但官方开源声明出现在 11 月 18 日的 HF 博客。本地或自建部署需要相应硬件，成本自理。",
+    "claim_steps": [
+      "打开 Hugging Face 仓库 Reson8/Rumble-2-Flash",
+      "按官方博客用 Transformers 或 vLLM 下载并加载权重"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开官方介绍",
+        "detail": "先看 Hugging Face 官方博客中的说明和快速开始。",
+        "url": "https://huggingface.co/blog/rumble-2-flash"
+      },
+      {
+        "step": "打开权重仓库",
+        "detail": "仓库 Reson8/Rumble-2-Flash 未 gated，许可证为 Apache 2.0，一般可直接下载。",
+        "url": "https://huggingface.co/Reson8/Rumble-2-Flash"
+      },
+      {
+        "step": "下载并运行",
+        "detail": "按博客示例安装 torch、transformers、accelerate，用 AutoProcessor 与 AutoModelForMultimodalLM 加载 Reson8/Rumble-2-Flash，或按说明使用 vLLM。不要用不明第三方镜像。",
+        "url": "https://huggingface.co/blog/rumble-2-flash"
+      },
+      {
+        "step": "验证",
+        "detail": "权重完整并能完成一次转写，即完成。开放权重免费下载不等于官方托管 API 也免费；托管价格以 Reson8 定价页为准。",
+        "url": "https://www.reson8.dev/pricing"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Hugging Face 博客",
+        "action_url": "https://huggingface.co/blog/rumble-2-flash"
+      },
+      {
+        "name": "Hugging Face 仓库",
+        "action_url": "https://huggingface.co/Reson8/Rumble-2-Flash"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Reson8/Rumble-2-Flash",
+        "action_url": "https://huggingface.co/Reson8/Rumble-2-Flash"
+      }
+    ],
+    "scenes": [
+      "voice"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-19T00:16:12+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "无需注册领取，直接从 Hugging Face 下载 Apache 2.0 开源权重。",
+      "at": "2026-11-19T00:16:12+08:00"
     }
   }
 ]
