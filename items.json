@@ -22911,7 +22911,7 @@
     "summary": "蚂蚁百灵 11/5 上线原生多模态 Ling-3.2-flash（560B 总参/25B 激活，1M 上下文，支持图文视频）。上线日起约两周免费，到期恢复原价；已签代扣者可能自动转付费；需中国支付宝/账号；官方定价页与 Changelog 写明「上线前 2 周限时免费」，按上线日推算约至 11/19（精确时刻未官宣）；结束后恢复按量计费，请盯账户余额；兼容 OpenAI/Anthropic 协议。截止北京时间 2026-11-19 23:59。",
     "source": "X @shengliao8；官方定价页 developer.ant-ling.com/zh-CN/docs/models/price/ 与 Changelog（2026-11-05）",
     "collected_at": "2026-11-07T19:45:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2119032646684868979",
     "providers": [
       {
@@ -22974,7 +22974,10 @@
       "官方文档 https://developer.ant-ling.com/zh-CN/docs/getting-started/prerequisites/",
       "官方文档 https://api.ant-ling.com/v1",
       "②API：读 完成支付宝绑定与开通，控制台创建 Token，base，model=Ling-3.2-flash"
-    ]
+    ],
+    "expired_at": "2026-11-20T00:21:30+08:00",
+    "expired_reason": "条目原按官方「上线前 2 周限时免费」推算截止为 2026-11-19 23:59 北京时间，现已过点。2026-11-20 核验时官方 changelog 仍只有 11/5 该表述，未见结束或延期公告，官方 API 是否已恢复原价未获独立确认。",
+    "updated_at": "2026-11-20T00:21:30+08:00"
   },
   {
     "id": "kiroween-4000-credits-20261107",
@@ -23731,15 +23734,15 @@
   },
   {
     "id": "stepfun-stepaudio3-preview-free-until-nov17-20261108",
-    "title": "阶跃星辰 StepAudio 3：4 个 preview 语音模型 API 限时免费（至 11/17 11:59 北京时间）",
+    "title": "阶跃星辰 StepAudio 3：官方将限免截止延至 11/23 11:59 北京时间",
     "model": "stepaudio-3-realtime-preview / stepaudio-3-chat-preview / stepaudio-3-gen-preview / stepaudio-3-music-preview",
     "type": "限时",
-    "deadline": "2026-11-17T11:59:59+08:00",
+    "deadline": "2026-11-23T11:59:59+08:00",
     "url": "https://x.com/FAatc168/status/2119127822723920367",
-    "summary": "阶跃星辰开放平台的 StepAudio 3 系列 4 个 preview 模型（实时语音 Realtime、语音对话 Chat（Chat Completions 接口）、综合音频生成 Gen、音乐生成 Music）计费标注「限时免费」。限免截至 11/17 11:59:59（北京时间），之后按新价计费；TTS/ASR 不免费，别选错模型；受速率限制；官方定价页写明限免到北京时间 2026-11-17 11:59:59，12:00 起改按新价收费，preview 版本下线换成正式付费版；StepAudio 3 TTS、ASR 已经收费，不在免费范围内。截止北京时间 2026-11-17 11:59。",
+    "summary": "阶跃星辰开放平台官方 API 定价页（2026-11-20 核验）写明：适用限时免费政策的模型限免至北京时间 2026 年 11 月 23 日上午 11:59:59；自当天中午 12:00:00 起按新价格计费，已收费的模型及服务在生效前继续按原标准计费。原先目录里的截止是 11/17 11:59:59，现已按官方页延期。本轮定价页列出了 12:00 起的新价（如 stepaudio-3-realtime、tts、gen、music、asr-max 等），但没有再点名 stepaudio-3-*-preview 这些预览接口 ID，仍在限免的具体模型以官方页面当时标注为准。TTS/ASR 等已收费项不在免费范围内。使用需注册开放平台并完成个人实名、创建 API Key。受速率限制。",
     "source": "X @FAatc168 / @GouGeHSLU；官方定价 https://platform.stepfun.com/docs/zh/guides/pricing/details 核实",
     "collected_at": "2026-11-08T02:45:00+08:00",
-    "expired": true,
+    "expired": false,
     "source_post_id": "2119127822723920367",
     "related_post_urls": [
       "https://x.com/GouGeHSLU/status/2119130220578103495"
@@ -23796,7 +23799,10 @@
     ],
     "claim_steps": [
       "打开 https://platform.stepfun.com 注册/登录（手机号）→「API Key」页 https://platform.stepfun.com/interface-key 新建 Key → 调用时模型名填 stepaudio-3-realtime-preview / stepaudio-3-chat-preview / stepaudio-3-gen-preview / stepaudio-3-music-preview（base https://api.stepfun.com/v1），不用兑换码，官网没说要绑卡。"
-    ]
+    ],
+    "official_url": "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+    "updated_at": "2026-11-20T00:21:30+08:00",
+    "update_note": "2026-11-20 官方定价页将「适用限时免费政策的模型」截止改为北京时间 2026-11-23 11:59:59，新价自当天 12:00:00 起生效。本轮定价页未再列出 realtime/chat/gen/music 的 preview 模型 ID。"
   },
   {
     "id": "autoclaw-double11-50m-tokens-nov9-15-20261108",
@@ -25538,13 +25544,16 @@
       "模型页 https://openrouter.ai/thinkingmachines/inkling-2-small:free"
     ],
     "collected_at": "2026-11-11T00:10:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "success",
       "note": "已有 OpenRouter 账号，:free 模型无需另外领取，用现有账号的 key 直接调用即可",
       "at": "2026-11-11T00:10:00+08:00"
     },
-    "platform": "OpenRouter"
+    "platform": "OpenRouter",
+    "expired_at": "2026-11-20T00:21:30+08:00",
+    "expired_reason": "2026-11-20 OpenRouter 官方 GET /api/v1/models 中 thinkingmachines/inkling-2-small:free 已不在免费列表，同名付费线路仍在且 prompt 单价非 0；endpoints 已空。",
+    "updated_at": "2026-11-20T00:21:30+08:00"
   },
   {
     "id": "modelscope-amd-100h-gpu-notebook-20261111",
@@ -36019,7 +36028,9 @@
       "status": "success",
       "note": "你已有 OpenRouter 账号和 key，不用新领，现有 key 直接调用 Decisions 接口即可。",
       "at": "2026-11-14T00:25:00+08:00"
-    }
+    },
+    "updated_at": "2026-11-20T00:21:30+08:00",
+    "update_note": "原目录截止 2026-11-19 23:59 北京时间已过，但 2026-11-20 00:15 核验时 OpenRouter 模型页仍标 Free、endpoints 单价仍为 0，官方未见结束公告，故暂不标过期。"
   },
   {
     "id": "envato-minimax-h3-unlimited-24h-nov19-20261114",
@@ -36762,7 +36773,9 @@
       "status": "success",
       "note": "已用 Google 账号注册 Rime 并建好 API key（已私存）；Rime 不支持给 key 设额度上限或过期时间，账号自带 $50 免费额度",
       "at": "2026-11-15T00:16:00+08:00"
-    }
+    },
+    "updated_at": "2026-11-20T00:21:30+08:00",
+    "update_note": "官方定价页仍写 Rime STT Free until Nov 19，时区未写明。2026-11-20 00:16 北京时美东仍是 11/19，故暂不标过期；每月 $50 免绑卡额度另行有效。"
   },
   {
     "id": "testmu-kanecli-hackathon-10000-credits-nov19-20261115",
@@ -38271,6 +38284,710 @@
       "status": "success",
       "note": "无需注册领取，直接从 Hugging Face 下载 Apache 2.0 开源权重。",
       "at": "2026-11-19T00:16:12+08:00"
+    }
+  },
+  {
+    "id": "vercel-ai-gateway-parallel-web-search-fast-free-jan31-20261120",
+    "title": "Vercel AI Gateway：Parallel 网页搜索 fast 模式限免至 2027-01-31",
+    "platform": "Vercel AI Gateway",
+    "product": "AI Gateway Parallel web search",
+    "model": "Parallel web search（fast mode）",
+    "type": "限时免费",
+    "deadline": "2027-01-31T23:59:59+08:00",
+    "url": "https://vercel.com/changelog/parallel-web-search-is-free-on-ai-gateway-and-eve-through-january-31",
+    "source": "Vercel 官方 Changelog（Published: November 18, 2026）",
+    "summary": "Vercel 官方 Changelog（2026 年 11 月 18 日发布）宣布：AI Gateway 上 Parallel 网页搜索的 fast 模式免费至 2027 年 1 月 31 日，并成为 eve agent 的默认网页搜索。可与任一 AI Gateway 模型一起用，不必再申请单独的 Parallel API Key；返回链接和短摘录，可按网站或发布日期过滤。官方写明只覆盖 fast 模式，默认开启 Zero Data Retention；其他模式按标准定价计费。配套用法是显式设置 mode 为 fast，未设时文档写明默认 basic（付费）；eve 在走 AI Gateway 时未单独配置则默认 fast 并免费。限速和次数官方未给数字。是否必须绑卡，changelog 未写。截止日期官方只写 January 31, 2027，未标时区，本条按北京时间当天结束记，实际以官方为准。这与已收录的「Parallel Decisions Fast 联网决策模型免费到 11/23」不是同一产品。",
+    "claim_steps": [
+      "登录已有 Vercel 账号，打开 AI Gateway 使用已有 API Key",
+      "在 AI SDK 里把工具配成 gateway.tools.parallelSearch({ mode: 'fast' })",
+      "若用 eve 且模型走 AI Gateway，内置 web_search 默认即 fast 模式，不必再改"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开官方说明",
+        "detail": "阅读 Vercel Changelog，确认是 Parallel 网页搜索的 fast 模式限免，而不是 Parallel Decisions 决策模型。",
+        "url": "https://vercel.com/changelog/parallel-web-search-is-free-on-ai-gateway-and-eve-through-january-31"
+      },
+      {
+        "step": "进入 AI Gateway",
+        "detail": "登录 Vercel 控制台，打开 AI Gateway，使用已有或新建的 Gateway API Key。",
+        "url": "https://vercel.com/dashboard/ai-gateway"
+      },
+      {
+        "step": "按文档接入网页搜索",
+        "detail": "打开 AI Gateway 的 Web Search 文档，按说明接入 Parallel 搜索工具。",
+        "url": "https://vercel.com/docs/ai-gateway/models-and-providers/web-search"
+      },
+      {
+        "step": "显式打开 fast 模式",
+        "detail": "在 AI SDK 中把工具写成 gateway.tools.parallelSearch({ mode: 'fast' })。官方示例还配了 generateText 与 stepCountIs。",
+        "url": "https://vercel.com/changelog/parallel-web-search-is-free-on-ai-gateway-and-eve-through-january-31",
+        "note": "必须带 mode: 'fast' 才走免费档"
+      },
+      {
+        "step": "用 eve 时的默认行为",
+        "detail": "若在 eve 里使用、且模型由 AI Gateway 提供，内置 web_search 会自动走 Parallel fast 模式。",
+        "url": "https://vercel.com/changelog/parallel-web-search-is-free-on-ai-gateway-and-eve-through-january-31"
+      },
+      {
+        "step": "核对用量",
+        "detail": "在 AI Gateway 日志和用量页确认该次搜索未按付费模式计费。",
+        "url": "https://vercel.com/dashboard/ai-gateway",
+        "note": "其他 mode 仍会按标准价计费"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Vercel AI Gateway",
+        "action_url": "https://vercel.com/dashboard/ai-gateway"
+      }
+    ],
+    "agents": [
+      {
+        "name": "eve",
+        "action_url": "https://vercel.com/changelog/parallel-web-search-is-free-on-ai-gateway-and-eve-through-january-31"
+      }
+    ],
+    "models": [
+      {
+        "name": "Parallel web search fast",
+        "action_url": "https://vercel.com/docs/ai-gateway/models-and-providers/web-search"
+      }
+    ],
+    "scenes": [
+      "search",
+      "api"
+    ],
+    "barriers": [
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-20T00:21:30+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "你已有 Vercel 账号和 AI Gateway key，不用新领；按 Changelog 把搜索工具设为 mode: 'fast' 即可。本轮未实测调用。",
+      "at": "2026-11-20T00:21:30+08:00"
+    }
+  },
+  {
+    "id": "v0-for-students-20usd-monthly-1year-20261120",
+    "title": "v0 for Students：指定 15 所合作院校在读学生每月 $20 额度，连送 1 年",
+    "platform": "v0",
+    "product": "v0 for Students",
+    "model": "",
+    "type": "学生计划",
+    "deadline": null,
+    "url": "https://v0.app/students",
+    "source": "v0 官方学生计划页",
+    "summary": "v0 官方学生计划页写明：在 active school 验证学生身份后，可获得 1 年 complimentary v0 access。FAQ 原文：验证通过后每月领取 20 美元 credits，连续免费 1 年。资格是当前就读于官方名单中的合作院校，并提供有效学生邮箱。页面列出的 15 所学校为 Stanford、Harvard、MIT、Princeton、UC Berkeley、San Francisco State、Arizona State、Georgia Institute of Technology、University of Waterloo、NYU、Grand Canyon University、Northwestern、University of Washington、Cornell、University of Southern California。官方未写是否需要绑卡，也未写计划总截止日；额度为验证后起算 1 年。本条为库存补录，页面称其为新计划，但未给出上线日期。",
+    "claim_steps": [
+      "打开 https://v0.app/students，确认自己在官方 15 所合作院校名单中",
+      "用有效的学生邮箱验证在读身份",
+      "验证通过后按页面提示领取每月 $20 的 v0 额度"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开学生计划页",
+        "detail": "打开 v0 for Students 页面，先核对自己的学校是否在当前 active schools 名单里。",
+        "url": "https://v0.app/students"
+      },
+      {
+        "step": "准备学生邮箱",
+        "detail": "官方要求 currently enrolled at one of our active schools，并提供有效学生邮箱。",
+        "url": "https://v0.app/students",
+        "note": "不在这 15 所院校的无法领"
+      },
+      {
+        "step": "验证学生身份",
+        "detail": "在页面上按提示用学生邮箱完成在读身份验证。",
+        "url": "https://v0.app/students"
+      },
+      {
+        "step": "领取额度",
+        "detail": "验证通过后按页面提示领取complimentary 访问；官方写明是每月 $20 credits，持续 1 年。",
+        "url": "https://v0.app/students"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "v0",
+        "action_url": "https://v0.app/students"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "app"
+    ],
+    "barriers": [
+      "need_student"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-20T00:21:30+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需指定 15 所合作院校的在读学生邮箱完成验证，本轮无法代领。",
+      "at": "2026-11-20T00:21:30+08:00"
+    }
+  },
+  {
+    "id": "openai-chatgpt-academic-researchers-plus-50k-nov23-20261120",
+    "title": "OpenAI ChatGPT 学术研究人员计划：11/23 开放申请，5 万份 Plus 名额",
+    "platform": "OpenAI",
+    "product": "ChatGPT for Academic Researchers",
+    "model": "ChatGPT Plus",
+    "type": "申请制赠送",
+    "deadline": null,
+    "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/",
+    "source": "OpenAI 官方博文（November 16, 2026）",
+    "summary": "OpenAI 官方博文（2026 年 11 月 16 日）宣布扩大 ChatGPT for Academic Researchers，目标最多 20 万名研究人员免费使用 ChatGPT。下一轮申请于 Monday, November 23 开放，将按先到先得向合格申请者发放 5 万份新资助。每份资助给申请人及最多两名合作者免费使用 ChatGPT Plus，最长约 12 个月；合作者须为同校且通过验证。合格对象为受支持国家合格高校的研究教职或博士后，近三年有相关学科已发表研究，并计划用于学术研究。学科包括 Biological Sciences、Chemistry and Materials、Computer Science、Earth and Planetary Sciences、Engineering、Mathematics、Physics。默认不将项目中分享的数据用于训练。官方帮助中心写明该优惠不含 OpenAI API 额度。申请通道在公告发布时仍关闭，已在 waitlist 且合格者会在开放前收到邮件。本条为库存补录，申请将于 11/23 开放。",
+    "claim_steps": [
+      "阅读官方博文，确认自己是否属于合格研究教职或博士后",
+      "若尚未登记，先按官网提示加入 waitlist",
+      "11 月 23 日申请通道开放后，按邮件或官网指引提交申请"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读官方公告",
+        "detail": "打开 OpenAI 博文，了解下一轮 11 月 23 日开放申请、5 万份名额先到先得，以及 Plus 席位规则。",
+        "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/"
+      },
+      {
+        "step": "核对资格",
+        "detail": "确认自己是受支持国家合格高校的研究教职或博士后，近三年有相关已发表研究，并计划用于学术研究。",
+        "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/",
+        "note": "不含 OpenAI API 额度"
+      },
+      {
+        "step": "加入 waitlist（如尚未登记）",
+        "detail": "若当前申请通道仍关闭，按官网或帮助中心提示加入 informational waitlist。已在名单且合格者，官方会在开放前发邮件。",
+        "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/"
+      },
+      {
+        "step": "在 11 月 23 日提交申请",
+        "detail": "申请开放后按邮件或页面指引提交；名额 5 万份，先到先得。",
+        "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/"
+      },
+      {
+        "step": "邀请合作者",
+        "detail": "获批后可为最多两名同校合作者开通 Plus 席位，合作者也需通过验证。",
+        "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "ChatGPT",
+        "action_url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/"
+      }
+    ],
+    "models": [
+      {
+        "name": "ChatGPT Plus",
+        "action_url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers/"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "research"
+    ],
+    "barriers": [
+      "need_academic",
+      "application"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-20T00:21:30+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "11/23 才开放申请，且需合格高校研究教职或博士后身份；该计划不含 API 额度，未代申请。",
+      "at": "2026-11-20T00:21:30+08:00"
+    }
+  },
+  {
+    "id": "nous-portal-qwen4-max-free-5days-20261120",
+    "title": "Nous Portal × Inferact：Qwen4-Max 限时免费 5 天",
+    "platform": "Nous Portal",
+    "product": "Nous Portal",
+    "model": "Qwen4-Max",
+    "type": "限时免费",
+    "deadline": "2026-11-24T03:25:00+08:00",
+    "url": "https://x.com/NousResearch/status/2123135537087181191",
+    "source": "据 X 上的报道（@NousResearch 官方账号，2026-11-18 19:25 UTC）；@inferact、@Alibaba_Qwen 同步转发",
+    "summary": "据 X 上的报道，Nous Research 官方账号于 2026-11-18 19:25 UTC（约北京时间 11/19 03:25）宣布，阿里旗舰模型 Qwen4-Max 在 Nous Portal 限时免费 5 天，由 Inferact 与 Alibaba Qwen 合作；官方称适合长程任务，原生视觉、1M 上下文。Inferact 同步称在其 Platform 与 vLLM 上提供 5 天免费 tokens。原文未写额度上限、是否绑卡，也未给出精确截止时刻；若从发帖起算 5 天，大约到北京时间 2026-11-24 03:25，此截止为推断，非原文写明。这与千问平台新用户 Token 赠送、Qwen Studio 免费账号试用不是同一活动。使用需 Nous Portal 账号。",
+    "claim_steps": [
+      "打开 Nous Portal 登录已有账号或注册",
+      "在模型列表中选择 Qwen4-Max（免费期内）",
+      "在网页对话，或在仍能创建 Key 的前提下用 API 调用"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读官方帖",
+        "detail": "打开 Nous Research 官方帖，确认是 Qwen4-Max 在 Nous Portal 限时免费 5 天。",
+        "url": "https://x.com/NousResearch/status/2123135537087181191"
+      },
+      {
+        "step": "打开 Portal",
+        "detail": "进入 Nous Portal，登录已有账号或注册。",
+        "url": "https://portal.nousresearch.com"
+      },
+      {
+        "step": "选择 Qwen4-Max",
+        "detail": "在模型或聊天页选择 Qwen4-Max，确认当前仍显示免费。",
+        "url": "https://portal.nousresearch.com"
+      },
+      {
+        "step": "网页使用",
+        "detail": "可直接在 Portal 网页对话试用。若账户余额为 0，过去可能无法创建 API key，只能先用网页。",
+        "url": "https://portal.nousresearch.com",
+        "note": "此前有账号因余额 $0 无法建 key"
+      },
+      {
+        "step": "Inferact 侧（可选）",
+        "detail": "Inferact 官方同步称其 Platform 与 vLLM 上也提供 5 天免费 tokens，入口以 Inferact 当时页面为准。",
+        "url": "https://x.com/NousResearch/status/2123135537087181191"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Nous Portal",
+        "action_url": "https://portal.nousresearch.com"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Qwen4-Max",
+        "action_url": "https://portal.nousresearch.com"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "vision",
+      "api"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-20T00:21:30+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "你已有 Nous Portal 账号；此前余额为 $0 时无法创建 API key，免费模型多半只能在网页用。本轮无法在自动化里使用已保存登录，未代为打开 Portal 确认。",
+      "at": "2026-11-20T00:21:30+08:00"
+    }
+  },
+  {
+    "id": "opencode-zen-tidepool-alpha-free-20261120",
+    "title": "OpenCode Zen：隐身模型 Tidepool Alpha Free 限时免费（tidepool-alpha-free）",
+    "platform": "OpenCode",
+    "product": "OpenCode Zen",
+    "model": "tidepool-alpha-free",
+    "type": "限时免费",
+    "deadline": null,
+    "url": "https://opencode.ai/docs/zen/",
+    "source": "OpenCode Zen 公开模型目录 https://opencode.ai/zen/v1/models（release_date 2026-11-18）；另有据 X 上的报道",
+    "summary": "OpenCode Zen 公开模型目录在 2026-11-18 上架 id 为 tidepool-alpha-free 的模型，名称 Tidepool Alpha Free，说明为 Stealth reasoning model, free for a limited time；输入、输出和缓存读取价格均为 0，约 1M 上下文，支持工具与 reasoning。官方未公布开发实验室，也未写截止日期。按 OpenCode 既有规则，免费聊天模型通常须在 OpenCode 客户端中使用。这与已收录的 Hy4 flash Free、Inkling 2 Small Free 等是不同模型。",
+    "claim_steps": [
+      "打开 OpenCode 客户端并登录",
+      "用 /models 选择 Tidepool Alpha Free，或把模型名配成 tidepool-alpha-free",
+      "在 OpenCode 里直接对话或布置任务"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开 OpenCode",
+        "detail": "安装或打开 OpenCode 客户端并登录已有账号。",
+        "url": "https://opencode.ai/",
+        "note": "免费聊天模型通常必须走 OpenCode 客户端"
+      },
+      {
+        "step": "打开模型列表",
+        "detail": "在客户端运行 /models，找到 Tidepool Alpha Free。",
+        "url": "https://opencode.ai/docs/zen/"
+      },
+      {
+        "step": "选中免费模型",
+        "detail": "选择 Tidepool Alpha Free，模型 ID 为 tidepool-alpha-free。",
+        "url": "https://opencode.ai/docs/zen/"
+      },
+      {
+        "step": "开始使用",
+        "detail": "在 OpenCode 里直接对话或布置编程、推理任务。",
+        "url": "https://opencode.ai/docs/zen/",
+        "note": "官方只写 limited time，未公布结束日"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "OpenCode",
+        "action_url": "https://opencode.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "tidepool-alpha-free",
+        "action_url": "https://opencode.ai/docs/zen/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "chat"
+    ],
+    "barriers": [
+      "need_signup"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-20T00:21:30+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在你本机的 OpenCode 客户端里用 /models 选择 Tidepool Alpha Free；注册表里没有 OpenCode 账号，本轮未代登录。",
+      "at": "2026-11-20T00:21:30+08:00"
+    }
+  },
+  {
+    "id": "blockrun-free-oss-models-no-key-20261120",
+    "title": "BlockRun：免 Key、免注册调用 9 个开源模型（每 IP 30 RPM / 300 RPH）",
+    "platform": "BlockRun",
+    "product": "BlockRun Free",
+    "model": "Muse Glimmer 30B / Nemotron 3.5 Lightning / Nemotron 3 Ultra / Nemotron 3 Nano Omni / GPT-OSS 20B 等",
+    "type": "免费层",
+    "deadline": null,
+    "url": "https://blockrun.ai/free",
+    "source": "BlockRun 官方免费页与速率文档；GitHub 合集 mvalentsev/awesome-free-ai-coding 于 2026-11-19 23:19 北京时间收录",
+    "summary": "BlockRun 官方免费页写明提供 9 个开源模型的免费调用，无需 API Key、无需钱包、无需注册。页面点名的模型包括 Meta Muse Glimmer 30B（131K 上下文）、Nemotron 3.5 Lightning（131K，思考模式）、Nemotron 3 Ultra 550B（550B 总参/55B 激活）、Nemotron 3 Nano Omni（31B/3.2B，256K，可图/视频/音频）、GPT-OSS 20B（128K）等；并称 nvidia/mistral-* 上游不可用时仍会返回 200，改由其他免费模型兜底。官方速率文档写明免费聊天模型按 IP 限制 30 次/分钟、300 次/小时，付费请求不计入该桶。官网提醒免费容量是借用而非预留，点名模型忙碌时可能改由其他免费模型应答，需看响应里的 model 字段；免费档条款可能允许上游用 prompt 改进服务，不要发送敏感数据。无公布截止日期。",
+    "claim_steps": [
+      "无需注册，直接向 https://blockrun.ai/api/v1/chat/completions 发送 Chat Completions 请求",
+      "在 JSON 里填写 model 与 messages，不要加 Authorization 头",
+      "注意每 IP 30 次/分钟、300 次/小时，并核对响应里实际返回的 model 字段"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开免费页",
+        "detail": "打开 BlockRun 免费模型页，查看当前点名的免费模型与示例。",
+        "url": "https://blockrun.ai/free",
+        "note": "无需注册、无需 Key、无需钱包"
+      },
+      {
+        "step": "准备请求",
+        "detail": "向 OpenAI 兼容接口 https://blockrun.ai/api/v1/chat/completions 发送 POST，Header 只需 Content-Type: application/json，不要加 Authorization。",
+        "url": "https://blockrun.ai/free"
+      },
+      {
+        "step": "填写模型名",
+        "detail": "在 JSON 的 model 字段填官方示例或免费页给出的模型名，例如 nvidia/nemotron-3.5-lightning，messages 按普通聊天格式填写。",
+        "url": "https://blockrun.ai/free"
+      },
+      {
+        "step": "查看速率限制",
+        "detail": "免费聊天模型按 IP 限制 30 次/分钟、300 次/小时，详见速率文档。",
+        "url": "https://blockrun.ai/docs/api-reference/rate-limits"
+      },
+      {
+        "step": "核对实际模型",
+        "detail": "看响应里的 model 字段。官方写明点名模型忙碌或上游不可用时，可能由其他免费模型兜底，但仍返回 200。",
+        "url": "https://blockrun.ai/free",
+        "note": "不要在免费档发送敏感数据"
+      }
+    ],
+    "providers": [
+      {
+        "name": "BlockRun",
+        "action_url": "https://blockrun.ai/free"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "nvidia/nemotron-3.5-lightning",
+        "action_url": "https://blockrun.ai/free"
+      },
+      {
+        "name": "Muse Glimmer 30B",
+        "action_url": "https://blockrun.ai/free"
+      },
+      {
+        "name": "Nemotron 3 Ultra",
+        "action_url": "https://blockrun.ai/free"
+      },
+      {
+        "name": "Nemotron 3 Nano Omni",
+        "action_url": "https://blockrun.ai/free"
+      },
+      {
+        "name": "GPT-OSS 20B",
+        "action_url": "https://blockrun.ai/free"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "api",
+      "vision"
+    ],
+    "barriers": [],
+    "category": "providers",
+    "collected_at": "2026-11-20T00:21:30+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "无需注册和 API Key，直接调用公开接口即可；没有 key 可保存。本轮未做完整调用实测。",
+      "at": "2026-11-20T00:21:30+08:00"
+    }
+  },
+  {
+    "id": "merkium-current-models-permanently-free-api-20261120",
+    "title": "Merkium：当前 7 个自研模型 API 永久免费（免绑卡）",
+    "platform": "Merkium",
+    "product": "Merkium API",
+    "model": "ganymede-1.1 / pluto-1.2-flash / pluto-1.2-pro / ceres-1.0 / ceres-1.0-pro / pluto-1.1-flash / pluto-1.1-pro",
+    "type": "免费层",
+    "deadline": null,
+    "url": "https://www.merkium.nl/docs/pricing",
+    "source": "Merkium 官方定价文档与 Pricing 页（文档页注明 Last verified against the live API on October 20, 2026）；据 X 上的报道于 11/19 提醒",
+    "summary": "Merkium 官方 API 定价文档写明：当前模型通过 API 永久免费使用，按请求或按 token 均不收费，不是试用、也没有到期日；不需要信用卡或账单账户。免费档模型 ID 为 ganymede-1.1、pluto-1.2-flash、pluto-1.2-pro、ceres-1.0、ceres-1.0-pro、pluto-1.1-flash、pluto-1.1-pro。每个 API Key 限制 30 次/分钟（约每 2 秒一次请求）。文档同时写明以后发布的新模型可能收费，但不会改变上述已列出模型的价格。公开 Pricing 页另有一句 pricing may change，请以文档当时页为准。团队自称荷兰独立小组、尚未注册公司。本条为库存补录（官方文档称 2026-10-20 已对照过线上 API）。",
+    "claim_steps": [
+      "打开 chat.merkium.nl 注册或登录",
+      "在 Console 的 API 标签页创建免费 API Key",
+      "将基址设为 https://chat.merkium.nl/api/v1，用 Bearer Token 调用上表模型 ID"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读定价说明",
+        "detail": "打开官方定价文档，确认当前列出的模型仍为 Free，且不需要信用卡。",
+        "url": "https://www.merkium.nl/docs/pricing"
+      },
+      {
+        "step": "注册或登录",
+        "detail": "打开 chat.merkium.nl，登录或创建账号。官方写创建 Key 免费、没有账单步骤。",
+        "url": "https://chat.merkium.nl",
+        "note": "不要勾选营销订阅"
+      },
+      {
+        "step": "打开 Console",
+        "detail": "进入 Console 的 API 标签页，这里有密钥、接口地址和速率限制说明。",
+        "url": "https://chat.merkium.nl"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "新建一把 Key 并自行保存。若控制台能设额度上限或过期时间，尽量设较小额度、约 7 天过期。",
+        "url": "https://www.merkium.nl/docs/authentication"
+      },
+      {
+        "step": "设置接口地址",
+        "detail": "OpenAI 兼容基址为 https://chat.merkium.nl/api/v1，请求头使用 Authorization: Bearer <key>。列出模型的 GET /models 也要带 Key，否则会 401。",
+        "url": "https://www.merkium.nl/docs/authentication"
+      },
+      {
+        "step": "选择模型并注意速率",
+        "detail": "model 字段使用文档列出的 ID，例如 ganymede-1.1 或 ceres-1.0。每个 Key 30 次/分钟，超限返回 429 和 Retry-After。",
+        "url": "https://www.merkium.nl/docs/pricing"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Merkium",
+        "action_url": "https://chat.merkium.nl"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "ganymede-1.1",
+        "action_url": "https://www.merkium.nl/docs/pricing"
+      },
+      {
+        "name": "pluto-1.2-flash",
+        "action_url": "https://www.merkium.nl/docs/pricing"
+      },
+      {
+        "name": "pluto-1.2-pro",
+        "action_url": "https://www.merkium.nl/docs/pricing"
+      },
+      {
+        "name": "ceres-1.0",
+        "action_url": "https://www.merkium.nl/docs/pricing"
+      },
+      {
+        "name": "ceres-1.0-pro",
+        "action_url": "https://www.merkium.nl/docs/pricing"
+      },
+      {
+        "name": "pluto-1.1-flash",
+        "action_url": "https://www.merkium.nl/docs/pricing"
+      },
+      {
+        "name": "pluto-1.1-pro",
+        "action_url": "https://www.merkium.nl/docs/pricing"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "api"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_key"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-20T00:21:30+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "官网称免绑卡，注册后可在 Console 建 Key；本轮自动化无法代填已保存登录或密码，尚未代为注册。",
+      "at": "2026-11-20T00:21:30+08:00"
+    }
+  },
+  {
+    "id": "infomaniak-ai-services-1m-credits-first-month-20261120",
+    "title": "Infomaniak AI Services：首月 100 万免费 credits（开通 API 需绑卡）",
+    "platform": "Infomaniak",
+    "product": "AI Services",
+    "model": "开源模型（官方未在本页逐一枚举）",
+    "type": "新用户赠送",
+    "deadline": null,
+    "url": "https://www.infomaniak.com/en/support/faq/2845/getting-started-guide-ai-services-sovereign-ai-services",
+    "source": "Infomaniak 官方知识库「Getting Started Guide: AI Services」；产品页 https://www.infomaniak.com/en/hosting/ai-services",
+    "summary": "瑞士云厂商 Infomaniak 官方入门指南写明：AI Services 按用量计费，同时提供 100 万免费 credits，可在一个月内无承诺试用。API 按 credit 计费，每次请求消耗 1 个 credit 或 1 个 LLM token。开通 API 必须登记信用卡；未付账单会导致服务暂停。可在组织内为该产品设置消费上限。服务还提供网页应用，官方称开放 OpenAI 兼容接口，数据留在欧洲、不存储查询。官方未在该页写清 credits 与 token 的全部换算细节，也未写活动总截止日；免费额度为开通后一个月。本条为库存补录。",
+    "claim_steps": [
+      "打开 Infomaniak AI Services 产品页注册或登录",
+      "在 Manager 里开通 AI Services；按官方说明登记信用卡后才能用 API",
+      "创建 API token，再按 developer.infomaniak.com 文档调用"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读官方说明",
+        "detail": "打开入门指南，确认首月 100 万免费 credits，以及「A credit card is required to start using the API」。",
+        "url": "https://www.infomaniak.com/en/support/faq/2845/getting-started-guide-ai-services-sovereign-ai-services"
+      },
+      {
+        "step": "打开产品页",
+        "detail": "进入 AI Services 产品页，注册或登录 Infomaniak 账号。",
+        "url": "https://www.infomaniak.com/en/hosting/ai-services"
+      },
+      {
+        "step": "开通产品",
+        "detail": "在 Infomaniak Manager 中开通 AI Services。一个 Organization 只能有一个该产品，但可以有多把 API token。",
+        "url": "https://www.infomaniak.com/en/support/faq/2845/getting-started-guide-ai-services-sovereign-ai-services"
+      },
+      {
+        "step": "登记支付方式（需本人操作）",
+        "detail": "官方写明开通 API 必须绑信用卡。不想绑卡就停在这一步，不要继续。",
+        "url": "https://www.infomaniak.com/en/support/faq/2845/getting-started-guide-ai-services-sovereign-ai-services",
+        "note": "本轮不代绑卡"
+      },
+      {
+        "step": "创建 API token",
+        "detail": "在控制台创建 API token。文档在 https://developer.infomaniak.com/docs/api 。",
+        "url": "https://developer.infomaniak.com/docs/api"
+      },
+      {
+        "step": "设置消费上限",
+        "detail": "有账单权限的用户可在产品里设置 spending limit，避免超出免费额度后扣费。",
+        "url": "https://www.infomaniak.com/en/support/faq/2845/getting-started-guide-ai-services-sovereign-ai-services"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Infomaniak AI Services",
+        "action_url": "https://www.infomaniak.com/en/hosting/ai-services"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "chat",
+      "api"
+    ],
+    "barriers": [
+      "need_signup",
+      "need_key",
+      "need_card"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-20T00:21:30+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "官方要求登记信用卡才能开通 API，未代办、不绑卡。网页应用是否能免绑卡试用，本轮未登录核实。",
+      "at": "2026-11-20T00:21:30+08:00"
+    }
+  },
+  {
+    "id": "cloudflare-clairic-open-weights-20261120",
+    "title": "Cloudflare Clairic / Clairic-flash：开源权重上线（HF Apache-2.0），并接入 Workers AI",
+    "platform": "开源权重",
+    "product": "Clairic",
+    "model": "Clairic / Clairic-flash",
+    "type": "开源权重",
+    "deadline": null,
+    "url": "https://blog.cloudflare.com/open-clairic/",
+    "source": "Cloudflare 官方博客（Published November 18, 2026，页面 dateModified 2026-11-19）；权重页 Hugging Face Cloudflare/clairic 与 Cloudflare/clairic-flash；据 X 上 @Cloudflare 报道",
+    "summary": "Cloudflare 官方博客宣布 Clairic 结束预览、Clairic-flash 加入 Workers AI，并发布两款信息抽取模型的完整开源权重，托管在 Hugging Face 的 Cloudflare/clairic 与 Cloudflare/clairic-flash，模型卡标注 Apache-2.0。这是开源权重，可自托管免费使用，并不是新的免费 API 额度。Workers AI 上的端点为 @cf/cloudflare/clairic 与 @cf/cloudflare/clairic-flash；官方写明至 2026 年 12 月 1 日两款模型输入均为促销价每百万 token 0.10 美元，12 月 1 日起 Clairic 恢复为每百万输入 token 0.24 美元（只收输入、官方承担输出）。调用 Workers AI 仍按定价计费，可走账号已有的 Workers AI 免费档 Neurons，但不等于本次新赠额度。",
+    "claim_steps": [
+      "在 Hugging Face 打开 Cloudflare/clairic 或 Cloudflare/clairic-flash 下载开源权重",
+      "若要用托管接口，在 Cloudflare Workers AI 中调用 @cf/cloudflare/clairic 或 @cf/cloudflare/clairic-flash"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读官方博客",
+        "detail": "打开 Cloudflare 博客，了解开源权重发布和 Workers AI 端点、促销价说明。",
+        "url": "https://blog.cloudflare.com/open-clairic/"
+      },
+      {
+        "step": "下载 Clairic 权重",
+        "detail": "打开 Hugging Face 上的 Cloudflare/clairic 模型页下载权重，模型卡标注 Apache-2.0。",
+        "url": "https://huggingface.co/Cloudflare/clairic"
+      },
+      {
+        "step": "下载 Clairic-flash 权重",
+        "detail": "打开 Cloudflare/clairic-flash 模型页下载较小的 flash 变体，模型卡同样标注 Apache-2.0。",
+        "url": "https://huggingface.co/Cloudflare/clairic-flash"
+      },
+      {
+        "step": "可选：用 Workers AI 调用",
+        "detail": "在 Cloudflare 控制台的 Workers AI 中调用 @cf/cloudflare/clairic 或 @cf/cloudflare/clairic-flash。这是付费推理（至 12/1 为促销价），不是免费赠额。",
+        "url": "https://dash.cloudflare.com",
+        "note": "不要把促销价当成免费额度"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Hugging Face",
+        "action_url": "https://huggingface.co/Cloudflare/clairic"
+      },
+      {
+        "name": "Cloudflare Workers AI",
+        "action_url": "https://dash.cloudflare.com"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Cloudflare/clairic",
+        "action_url": "https://huggingface.co/Cloudflare/clairic"
+      },
+      {
+        "name": "Cloudflare/clairic-flash",
+        "action_url": "https://huggingface.co/Cloudflare/clairic-flash"
+      }
+    ],
+    "scenes": [
+      "extraction",
+      "self-host"
+    ],
+    "barriers": [],
+    "category": "providers",
+    "collected_at": "2026-11-20T00:21:30+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "开源权重可直接在 Hugging Face 下载，无需领取 Key。Workers AI 上是付费促销价，不是免费赠额；你已有 Cloudflare 账号，要用托管接口时自行在控制台调用即可。",
+      "at": "2026-11-20T00:21:30+08:00"
     }
   }
 ]

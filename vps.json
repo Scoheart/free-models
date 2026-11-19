@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "sample": false,
-  "updated_at_beijing": "2026-11-18 23:59",
+  "updated_at_beijing": "2026-11-19 23:58:25",
   "scanned_at_beijing": {
-    "stock": "2026-11-18 23:56:07",
-    "black_friday": "2026-11-18 23:56:07",
-    "free_vps": "2026-11-18 23:59"
+    "stock": "2026-11-19 23:58:25",
+    "black_friday": "2026-11-19 23:58:25",
+    "free_vps": "2026-11-19 20:06"
   },
   "free_vps": [
     {
@@ -188,7 +188,7 @@
           "role": "tos_restriction"
         }
       ],
-      "notes": "多条帖提醒这不是完整公网 VPS；空闲会暂停。"
+      "notes": "多条帖提醒这不是完整公网 VPS；空闲会暂停。 据 X 上的报道 @bldcampage 2026-11-18 19:12 北京时间：新 run 显示 120 min max runtime 不是降配，每次免费 run 从 120 分钟起、随使用延长到 480；空闲机显示的是 480 上限。与已记录的单次最长约 8 小时一致。"
     },
     {
       "id": "azure-student-credit",
@@ -703,6 +703,168 @@
         }
       ],
       "notes": "据 X 上的报道。不是传统独立公网 root VPS，是托管在共享主机上的 Linux 电脑。已对照官网定价、文档和条款，符合长期免费且不自动转付费或超额扣费的申请标准（不绑卡、不充值）。条款禁止同一顾客为多领免费机开多个账号，自动申请最多尝试一份。"
+    },
+    {
+      "id": "1free-eu-vps-s-trial",
+      "provider": "1Free.eu",
+      "type": "trial",
+      "type_label": "试用额度",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "官网 VPS S：1 vCPU（最多约 60% 单核）/ 1 GB 内存 / 20 GB SSD；完整 root，浏览器控制台和 SSH；5 个开放端口、1 份备份。官方写明是 LXC 而非完整虚拟机，仅 Linux（Debian/Ubuntu/AlmaLinux/Rocky/Alpine 等），不能装 Windows 或自定义内核；IPv4 与同机其他服务器共享，分配独立端口（第一个为 SSH），公共独立 IPv4 需另购。封 SMTP 25 端口。X 帖另写波兰原生 IP、风险评分 12%、IPv4+IPv6，后两点未在本轮官网 VPS 页看到，以官网「共享 IPv4」为准。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "官网英文页与 VPS 页写明：30 天免费测试，不绑卡、不用 Stripe。付费下单才走 Stripe。",
+        "region_limits": "",
+        "idle_reclaim": "",
+        "deadline": "免费测试 30 天；活动写到 2026-11-30。测试结束前会发邮件提醒；之后可一次性支付 5,00 PLN/月或 60,00 PLN/年保留（官网写 one-time payment, no subscription）。不续费则服务器被封锁，再过 30 天删除。",
+        "deadline_note": "这是限时试用，不是长期免费档。同一站点另有永久免费共享虚拟主机（1 GB、2 个域名、无广告、免绑卡），免费档官网未写 SSH（SSH 在奖金码 Premium 档），不是独立 VPS。"
+      },
+      "official_url": "https://1free.eu/en",
+      "posts": [
+        {
+          "url": "https://x.com/gaoyy9/status/2123087025285054942",
+          "time_beijing": "2026-11-19 00:12:46",
+          "author": "@gaoyy9",
+          "role": "primary_zh_post_links_official"
+        },
+        {
+          "url": "https://x.com/jackluos3lpo/status/2123110276325343668",
+          "time_beijing": "2026-11-19 01:45:00",
+          "author": "@jackluos3lpo",
+          "role": "repeats_30d_trial_no_card_claim"
+        },
+        {
+          "url": "https://x.com/jackluos3lpo/status/2123130756579066180",
+          "time_beijing": "2026-11-19 03:06:32",
+          "author": "@jackluos3lpo",
+          "role": "reply_confirms_no_card"
+        }
+      ],
+      "notes": "限时 30 天试用，不是可自动申请的长期免费机。已对照官网。X 帖把免费共享主机的域名/邮箱/SSL/MySQL 与 VPS 试用写在一起，官网这两项是分开的产品。"
+    },
+    {
+      "id": "infrlo-free-paas",
+      "provider": "Infrlo",
+      "type": "paas",
+      "type_label": "非 root 的 PaaS",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "官网 https://www.infrlo.com/ ：从 GitHub 部署 Python/Node.js/Go/Rust 应用到 your-app.infrlo.com（HTTPS）。免费档 1 个应用、512 MB 内存、0.5 vCPU、3 GB 存储，$0/月，免绑卡。不是带 root 的独立 VPS，是 PaaS/应用容器。其 GitHub 介绍页曾写存储 2 GB，与官网首页定价卡 3 GB 不一致，以官网首页定价卡为准。登录：Google 后安装 Infrlo GitHub App。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "官网写 Credit card Not required；付费档需联系 [redacted]，不是自助绑卡升级。",
+        "region_limits": "官网未写机房地区。限制一人一个免费账号。",
+        "idle_reclaim": "",
+        "deadline": "",
+        "deadline_note": "官网写 The free plan stays free / $0/month。但官方控制台 https://dash.infrlo.com/pricing 当前显示 Plans are being updated，称正在重做套餐以把限额写清楚，故本轮不把计费与限额视为已完全冻结，不自动申请。社区（NodeLoc 2026-09）有过无说明封号与不稳定的讨论。"
+      },
+      "official_url": "https://www.infrlo.com/",
+      "posts": [
+        {
+          "url": "https://baipiao.org/free/server/",
+          "time_beijing": "2026-11-19 07:57 本轮网页补充发现该聚合页收录",
+          "author": "白嫖 BaiPiao",
+          "role": "aggregator_lists_always_free_paas"
+        }
+      ],
+      "notes": "不是独立 VPS。官网首页称长期免费免绑卡，但控制台定价页正在更新，本轮不自动申请。不得承诺厂商永不改规则。"
+    },
+    {
+      "id": "pandastack-free-credit",
+      "provider": "PandaStack",
+      "type": "other",
+      "type_label": "其他",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "官方定价页 https://www.pandastack.ai/pricing/ ：Free 档 $0 forever，每月 $5.40 使用额度（约 77 小时 1 vCPU + 1 GiB 满载），免绑卡。沙盒最多 4 GiB RAM、8 vCPU（免费档持续最多 2 核）、同时 5 个、每小时最多创建 60 个；免费档沙盒创建后 1 小时删除（官方写明不适合长期托管）。Apps 与托管数据库不受这 1 小时限制，但 2026-11-04 及之后的新账号在 Free 档不能创建 Apps（需付费计划），沙盒和数据库仍可用免费额度。按秒计费，休眠不算计算费。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": false,
+        "card_notes": "官方写免绑卡。额度用尽后工作区暂停（应用/沙盒/数据库停止，数据保留），不会自动扣费；下月额度重置或升级后恢复。超额不会产生意外账单。",
+        "region_limits": "官网定价页本轮未写明机房限制。",
+        "idle_reclaim": "免费档沙盒创建 1 小时后删除，需提前存快照或 volume。Apps/数据库不受该时限；额度用尽则全部暂停而非删除。",
+        "deadline": "",
+        "deadline_note": "官方写 $0 forever 的免费计划，但是月度额度 + 1 小时沙盒寿命，不是常驻免费 VPS。新账号不能在 Free 档托管 Apps。不自动申请。"
+      },
+      "official_url": "https://www.pandastack.ai/",
+      "posts": [
+        {
+          "url": "https://baipiao.org/free/server/",
+          "time_beijing": "2026-11-19 07:57 本轮网页补充发现该聚合页收录",
+          "author": "白嫖 BaiPiao",
+          "role": "aggregator_lists_monthly_credit_microvm"
+        }
+      ],
+      "notes": "月度额度制 agent 沙盒/微虚拟机，免费沙盒仅 1 小时，不是永久免费常驻 VPS。已对照官网。不自动申请。"
+    },
+    {
+      "id": "omc-cloud-30d-trial",
+      "provider": "OMC Cloud",
+      "type": "trial",
+      "type_label": "试用额度",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "官网试用页 https://omc.cloud/30-day-free-trial ：新账户 30 天免费试用一台价值最高 $100 的云服务器，含 1 TB 出站流量、完整平台功能，可在该价值内升降配；可选 Linux 或 Windows，25 个机房。GPU 或更大配置须询问客户经理。FAQ（Last updated: 15 November 2026）称付费档云服务器起步 $4.00/月（1 vCPU / 1 GB / 20 GB NVMe / 5,000 GB 流量，2026 年 11 月报价）。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": null,
+        "card_notes": "试用页写用邮箱和密码注册，不必先销售通话；试用页与 FAQ 均未出现 credit card required 或 no credit card required。是否隐式要求支付方式，本轮未注册、未核对完整 ToS，故标为不明。",
+        "region_limits": "试用可选全部 25 个机房（FAQ：以色列 5、欧洲 7、北美 9、亚太 4）。",
+        "idle_reclaim": "",
+        "deadline": "30 天试用。到期前须在控制台转付费计划，否则服务器被删除。",
+        "deadline_note": "这是限时试用，不是长期免费档。官网写 If you want to keep the server, continue on a paid plan from the cloud console before the trial ends; otherwise the server is removed。"
+      },
+      "official_url": "https://omc.cloud/30-day-free-trial",
+      "posts": [
+        {
+          "url": "https://omc.cloud/30-day-free-trial",
+          "time_beijing": "2026-11-19 12:10 本轮网页补充对照官网试用页",
+          "author": "official",
+          "role": "official_trial_page"
+        }
+      ],
+      "notes": "限时 30 天试用，到期须转付费否则删机，不是可自动申请的长期免费机。已对照官网。本窗口未见论坛/ X 首发，由网页检索发现。不得承诺厂商永不改规则。"
+    },
+    {
+      "id": "vuexec-free-vps-launch",
+      "provider": "Vuexec",
+      "type": "trial",
+      "type_label": "试用额度",
+      "specs": [
+        {
+          "label": "as_claimed",
+          "value": "官网首页活动数据（计划代码 FREE-VPS，下单 plan=PLAN-HVU3SWF2P8&promo=FREEVPS）：1 vCPU / 1024 MB 内存 / 5 GB 磁盘；bandwidth 字段为 2000（与付费档同字段，付费档该字段为每月 GB 流量，故按 2000 GB/月 理解，未在未登录结账页看到纯文本确认）；网络上限 500 Mbps；CPU 时间上限 50%。价格 0.00。站点付费目录与机房页仅列出荷兰阿姆斯特丹，免费档未在未登录页单独写机房，按同一平台目录理解。"
+        }
+      ],
+      "free_conditions": {
+        "card_required": null,
+        "card_notes": "下单页会跳到登录 /auth/login?redirect=/order?plan=PLAN-HVU3SWF2P8&promo=FREEVPS，至少要先注册。本轮未注册，没有看到结账表单是否要绑卡。能引用的公开说法是官网页「30 days free · No paid renewal」、价格 0.00。服务条款（Version 4，Published 18/11/2026）里自动扣款是针对付费月付服务、须在首笔付款后另行授权，不能直接等同于免费档到期行为。",
+        "region_limits": "站点目录目前可见机房为荷兰阿姆斯特丹；免费档未在未登录页单独确认。",
+        "idle_reclaim": "",
+        "deadline": "官方文案：30 days free · No paid renewal。活动代码 FREEVPS，kind: free，freeDays=30。领取窗口 startsAt 2026-11-19T07:00:00.000Z（2026-11-19 15:00 北京时间）至 endsAt 2026-12-19T23:59:00.000Z（2026-12-20 07:59 北京时间）。名额上限 50；2026-11-19 20:04 北京时间首页仍显示 40 claims left。",
+        "deadline_note": "这是限时 30 天试用，不是长期免费档。到期后机器是删除、挂起还是保留，公开页没有写清；条款仅有终止后活数据最多保留 30 天等一般性规定。"
+      },
+      "official_url": "https://vuexec.com",
+      "posts": [
+        {
+          "url": "https://vuexec.com",
+          "time_beijing": "2026-11-19 15:00 活动开始；本轮 20:04 北京时间对照官网首页",
+          "author": "official",
+          "role": "official_campaign_page"
+        }
+      ],
+      "notes": "限时 30 天试用，有 50 个名额和领取截止时间，不是可自动申请的长期免费机。已对照官网。结账是否要绑卡、到期后如何处置机器，公开页未完全写清。官网正公告免费机开通故障。不得承诺厂商永不改规则。"
     }
   ],
   "stock": {
@@ -711,18 +873,18 @@
       {
         "id": "dmit",
         "name": "DMIT",
-        "checked_at_beijing": "2026-11-18 23:56:07",
+        "checked_at_beijing": "2026-11-19 23:58:25",
         "official_url": "https://www.dmit.io/",
         "sources": [
           {
             "name": "vpsrestock.com",
             "url": "https://vpsrestock.com/dmit/",
-            "checked_at_beijing": "2026-11-18 23:52"
+            "checked_at_beijing": "2026-11-19 23:52"
           },
           {
             "name": "t.me/dmitnews",
             "url": "https://t.me/s/dmitnews",
-            "checked_at_beijing": "2026-11-18 23:56:07"
+            "checked_at_beijing": "2026-11-19 23:58:25"
           }
         ],
         "plans": [
@@ -800,7 +962,7 @@
             "price": "$10.90 USD / 月",
             "stock": "out_of_stock",
             "limited": false,
-            "last_restock": "上次补货 55 天前",
+            "last_restock": "上次补货 56 天前",
             "order_urls": [
               {
                 "label": "官网下单",
@@ -841,7 +1003,7 @@
             "price": "$36.90 USD / 年",
             "stock": "out_of_stock",
             "limited": false,
-            "last_restock": "上次补货 55 天前",
+            "last_restock": "上次补货 56 天前",
             "order_urls": [
               {
                 "label": "官网下单",
@@ -854,13 +1016,13 @@
       {
         "id": "bandwagonhost",
         "name": "搬瓦工",
-        "checked_at_beijing": "2026-11-18 23:56:07",
+        "checked_at_beijing": "2026-11-19 23:58:25",
         "official_url": "",
         "sources": [
           {
             "name": "vpsrestock.com",
             "url": "https://vpsrestock.com/bandwagonhost/",
-            "checked_at_beijing": "2026-11-18 23:52"
+            "checked_at_beijing": "2026-11-19 23:52"
           },
           {
             "name": "stock.bwg.la",
@@ -2116,7 +2278,7 @@
     ]
   },
   "black_friday": {
-    "date_note": "今年黑五为 2026-11-27。今天是 2026-11-18。OVHcloud 官方黑五已于 2026-11-17 13:00 GMT（北京时间 21:00）开卖，至 2026-12-01 13:00 GMT（北京时间 21:00）。其余五家本轮仍无可下单官方黑五套餐。",
+    "date_note": "今年黑五为 2026-11-27。今天是 2026-11-19。OVHcloud 官方黑五已于 2026-11-17 13:00 GMT（北京时间 21:00）开卖，至 2026-12-01 13:00 GMT（北京时间 21:00）。本轮本机 curl 成功打开英文黑五页 https://www.ovhcloud.com/en/black-friday/（HTTP 200，标题 “OVHcloud Black Friday 2026: discounted dedicated servers, domain names and hosting plans | OVHcloud Worldwide”）；https://www.ovhcloud.com/en/deals/black-friday/ 本轮 HTTP 404。英文黑五页 HTML 仍未见 KS-LE-4、KS-LE-6、SYS-LE-1、SYS-LE-2、SYS-STOR-LE-1。https://us.ovhcloud.com/deals/ 本轮本机 curl HTTP 200，标题仍是 “Black Friday 2026: Up to 20% Off Servers”。本轮该页 4 张限量橱窗卡按钮变为禁用的 “Sold out”，且卡片带 odss-card--out-of-stock：KS-LE-4（$26/month）、KS-LE-6（$32/month）、SYS-LE-2（$70/month）、SYS-STOR-LE-1（$39/month）。KS-LE-1…3、KS-LE-5、Rise-LE-1…3 仍有带标价橱窗卡和 View offer；SYS-LE-1 仍只在条款文本中被点名，未见带标价橱窗卡，也未见 sold out，故不改记为售罄。因这四款是已记录套餐售罄、不是新的可下单套餐，也不是售罄后再补货，本轮不提醒。",
     "official": [
       {
         "provider": "GreenCloud",
@@ -2124,19 +2286,19 @@
         "status_label": "今年不办",
         "status_kind": "off",
         "orderable_now": false,
-        "summary": "官方 LowEndTalk 帖（发布者 NDTN，Patron Provider）明确：GreenCloud will NOT be holding a Black Friday sale this year。十三周年庆是本季唯一大促，活动窗口 2026-10-26 至 2026-10-31（UTC+0），现已结束。本轮官网首页本机 curl HTTP 200，标题仍是 “GreenCloud - Affordable KVM and Windows VPS”，未见黑五或周年庆。https://greencloudvps.com/blackfriday 本轮本机 curl HTTP 404。周年庆店面 https://greencloudvps.com/billing/store/13th-birthday-sale 本轮本机 curl Cloudflare 403。按官方时间窗口，活动应已于 10 月 31 日结束，现无可下单官方黑五套餐。",
+        "summary": "官方 LowEndTalk 帖（发布者 NDTN，Patron Provider）明确：GreenCloud will NOT be holding a Black Friday sale this year。十三周年庆是本季唯一大促，活动窗口 2026-10-26 至 2026-10-31（UTC+0），现已结束。本轮官网首页本机 curl HTTP 200（上轮曾超时），标题仍是 “GreenCloud - Affordable KVM and Windows VPS”，未见黑五或周年庆。https://greencloudvps.com/blackfriday 本轮本机 curl HTTP 404。周年庆店面 https://greencloudvps.com/billing/store/13th-birthday-sale 本轮本机 curl 与 WebFetch 均为 HTTP 403。按官方时间窗口，活动应已于 10 月 31 日结束，现无可下单官方黑五套餐。",
         "sources": [
           {
             "type": "official_account_post",
             "url": "https://lowendtalk.com/discussion/222534",
             "title": "GreenCloud is Turning 13! | Exclusive Deals, Giveaways, Quizzes & Games!",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://greencloudvps.com/",
             "title": "GreenCloud - Affordable KVM and Windows VPS",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           }
         ],
         "sale_hub": "https://greencloudvps.com/billing/store/13th-birthday-sale",
@@ -2148,19 +2310,19 @@
         "status_label": "预告未开卖",
         "status_kind": "soon",
         "orderable_now": false,
-        "summary": "官网 Black Friday 页标题仍写 “Black Week 2025 | Black Friday offers at netcup”，正文仍有 “Black Friday 2026 / Stay tuned about what we have in store for you on Black Friday”，未见 Add to cart / Order now / Buy now，页面内也没有可下单的欧元套餐标价（仅见 newsletter 的 5 € 欢迎券）。FAQ 称 Black Week 为 11 月 24–28 日，每天 8:00 a.m. CET 至次日 8:00 a.m. CET，Black Friday 当天持续到 8 pm CET。https://www.netcup.com/en/deals 是日常优惠页，有常规标价，不是黑五专场。",
+        "summary": "官方 Black Friday 页 https://www.netcup.com/en/deals/black-friday 本轮本机 curl HTTP 200，标题仍是 “Black Week 2025 | Black Friday offers at netcup”，正文 H1 为 “Black Friday 2026”，写 “Stay tuned about what we have in store for you on Black Friday”，未见可下单 SKU 或 Add to cart。FAQ 仍写 Black Week 为 11/24–28，每天 8:00 CET 开卖。Deals 页只有常规折扣（如 VPS 500 G12.5），不是黑五专场套餐。现无可下单官方黑五套餐。",
         "sources": [
           {
             "type": "official_page",
             "url": "https://www.netcup.com/en/deals/black-friday",
             "title": "Black Week 2025 | Black Friday offers at netcup",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://www.netcup.com/en/deals",
             "title": "netcup Deals | Cheap servers, web hosting and domains",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           }
         ],
         "sale_hub": "",
@@ -2172,31 +2334,37 @@
         "status_label": "现在能下单",
         "status_kind": "now",
         "orderable_now": true,
-        "summary": "官方英文黑五页已切换为 2026 开卖页（标题 “OVHcloud Black Friday 2026: discounted dedicated servers, domain names and hosting plans”），此前 “Black Friday is over / promotions are no longer available” 的过期主视觉已消失。FAQ 写明：活动从 2026-11-17 13:00 GMT（北京时间 21:00）持续到 2026-12-01 13:00 GMT（北京时间 21:00）；Cyber Monday 并入同一场，折扣不变。多数折扣下单时自动生效、无需码；例外是 Public Cloud 试用码 FREETRIAL（仅从未创建过 Public Cloud 项目的账号），以及 Public VCF as-a-Service 首月免费码 VCFTRIAL。折扣只适用于活动期间的新购，不适用于续费，续费按当时官网价。限量独立服务器（KS-LE / SYS-LE / Rise-LE 等）标明 while stocks last，卖得快。VPS 本身未见黑五折价，但任意 VPS 订单的备份选项最长免 3 个月（FAQ：需 12 个月订阅）；VPS 2027 起价 $4.54/月。独立服务器有最高 20% off 或免安装费。域名最高 69% off，虚拟主机最高 79% off，Hosted Exchange 首月 15% off，Public Cloud 提供 US$200 试用额度。本轮本机 curl 英文页 HTTP 200；KS-LE-1、SYS-2、VPS 产品页均为 HTTP 200 且展示对应标价。页面价格未含 GST。",
+        "summary": "官方活动窗口仍是 2026-11-17 13:00 GMT 至 2026-12-01 13:00 GMT（北京时间 21:00–21:00），Cyber Monday 并入同一场。本轮本机 curl 成功打开英文黑五页 https://www.ovhcloud.com/en/black-friday/（HTTP 200）；https://www.ovhcloud.com/en/deals/black-friday/ 本轮 HTTP 404。英文页仍列出 KS-LE-1、KS-LE-2、KS-LE-3、KS-LE-5、Rise-LE-1…3 等限量橱窗卡，价格与上次记录一致（如 KS-LE-1 $16.60/month）；HTML 仍未见 KS-LE-4、KS-LE-6、SYS-LE-1、SYS-LE-2、SYS-STOR-LE-1。https://us.ovhcloud.com/deals/ 本轮本机 curl HTTP 200，标题仍是 “Black Friday 2026: Up to 20% Off Servers”。本轮该页 4 款限量橱窗卡按钮变为禁用的 “Sold out”（卡片 class 含 odss-card--out-of-stock）：KS-LE-4 $26/month、KS-LE-6 $32/month、SYS-LE-2 $70/month、SYS-STOR-LE-1 $39/month。已将这四款库存改为 sold_out。KS-LE-1…3、KS-LE-5、Rise-LE-1…3 仍有带标价橱窗卡和 View offer；SYS-LE-1 仍只在条款文本中被点名，未见带标价橱窗卡也未见 sold out，故仍不改记为售罄。这四款是已记录套餐售罄，不是新的可下单套餐，也不是售罄后再补货，本轮不提醒。限量独立服务器标明 while stocks last，卖得快。多数折扣下单自动生效、无需码；例外是 Public Cloud 试用码 FREETRIAL，以及 Public VCF as-a-Service 首月免费码：英文页仍是 VCFTRIAL，美国 deals 页写 VCFBF26TRIAL（限前 40 名新客户、Standard Starter Pack）。折扣只适用于活动期间新购，不适用于续费。",
         "sources": [
           {
             "type": "official_page",
             "url": "https://www.ovhcloud.com/en/black-friday/",
             "title": "OVHcloud Black Friday 2026: discounted dedicated servers, domain names and hosting plans | OVHcloud Worldwide",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://eco.ovhcloud.com/en/kimsufi/ks-le-1/",
             "title": "Kimsufi Limited Edition 1 server | Dedicated Server | OVHcloud ECO",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://eco.ovhcloud.com/en/soyoustart/sys-2/",
             "title": "SYS-2",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://www.ovhcloud.com/en/vps/",
             "title": "VPS - Your virtual private server in the cloud | OVHcloud Worldwide",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
+          },
+          {
+            "type": "official_page",
+            "url": "https://us.ovhcloud.com/deals/",
+            "title": "Black Friday 2026: Up to 20% Off Servers",
+            "fetched_beijing": "2026-11-19 23:58:25"
           }
         ],
         "sale_hub": "https://www.ovhcloud.com/en/black-friday/",
@@ -2413,37 +2581,37 @@
         "status_label": "预告未开卖",
         "status_kind": "soon",
         "orderable_now": false,
-        "summary": "https://www.racknerd.com/blackfriday 本机 curl HTTP 200，连续重定向到常规 Specials 页（标题 “RackNerd | VPS Specials”），不是黑五专页。Specials 现价年付阶梯 $21.99 / $35.99 / $59.99 / $89.99 / $119.99，页面未出现 Black Friday 字样，属于日常特价而非官宣黑五。https://blog.racknerd.com/ 最新文章仍是 2026-11-13 的 “HAProxy vs Nginx: Choosing the Right Load Balancer”，未见黑五公告。https://my.racknerd.com/index.php?rp=/store/black-friday 本轮本机 curl HTTP 200，实际重定向到 Shared Hosting（$5.59 / $9.59 / $15.59 起），不是黑五 VPS 专场。https://my.racknerd.com/index.php?rp=/store/special-promos 本轮本机 curl HTTP 200，价格仍是 $21.99 起年付五档，未见 Black Friday。",
+        "summary": "本轮 https://www.racknerd.com/blackfriday 跟随重定向到 https://www.racknerd.com/specials/（HTTP 200，标题 “RackNerd | VPS Specials”），价格仍是 $21.99 / $35.99 / $59.99 / $89.99 / $119.99 年付五档，页面未见 Black Friday。商店 https://my.racknerd.com/index.php?rp=/store/black-friday 跟随重定向到 Shared Hosting。https://my.racknerd.com/index.php?rp=/store/special-promos 本机 curl HTTP 200，仍是上述五档 Special Promos，未见黑五。博客最新可见文章仍是 2026-11-13 的 HAProxy vs Nginx: Choosing the Right Load Balancer，未见黑五公告。现无可下单官方黑五套餐。",
         "sources": [
           {
             "type": "official_page",
             "url": "https://www.racknerd.com/specials/",
             "title": "RackNerd | VPS Specials",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://www.racknerd.com/blackfriday",
             "title": "RackNerd | VPS Specials",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://blog.racknerd.com/",
             "title": "RackNerd Blog - Introducing Infrastructure Stability",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://my.racknerd.com/index.php?rp=/store/black-friday",
             "title": "Shopping Cart - RackNerd LLC",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://my.racknerd.com/index.php?rp=/store/special-promos",
             "title": "Shopping Cart - RackNerd LLC",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           }
         ],
         "sale_hub": "",
@@ -2455,37 +2623,37 @@
         "status_label": "预告未开卖",
         "status_kind": "soon",
         "orderable_now": false,
-        "summary": "本轮官网首页本机 curl Cloudflare 403，WebFetch 打开常规首页（标题 “DMIT - High Performance VM in DMIT.IO Cloud Infrastructure Services”），未见黑五或促销。公告页显示 “No announcements to display”；促销页 HTTP 404；https://www.dmit.io/black-friday WebFetch HTTP 404。官方 Telegram @dmitnews 最新帖仍是 483（2026-11-17 19:28 北京时间），154 段 IP 费用提醒，不是补货或黑五公告。本轮没有新帖。",
+        "summary": "本机 curl 访问 https://www.dmit.io/ 与 https://www.dmit.io/black-friday 均为 Cloudflare 403；本轮 WebFetch 打开常规首页，未见黑五或促销。公告页 https://www.dmit.io/index.php?rp=/announcements 本机 curl HTTP 200，显示 “No announcements to display”。促销页 https://www.dmit.io/index.php?rp=/store/promotions 本机 curl HTTP 404。官方 Telegram @dmitnews 最新仍是 https://t.me/dmitnews/483（2026-11-17 19:28 北京时间，关于自购 IP 与 154 段收费），本轮无新帖，也不是补货或黑五公告。现无可下单官方黑五套餐。",
         "sources": [
           {
             "type": "official_page",
             "url": "https://www.dmit.io/",
             "title": "DMIT - High Performance VM in DMIT.IO Cloud Infrastructure Services",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://www.dmit.io/index.php?rp=/announcements",
             "title": "Announcements - DMIT, Inc.",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://www.dmit.io/index.php?rp=/store/promotions",
             "title": "404 - Page Not Found - DMIT, Inc.",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://www.dmit.io/black-friday",
             "title": "404 Not Found",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_account",
             "url": "https://t.me/s/dmitnews",
             "title": "DMIT活动推送 – Telegram",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           }
         ],
         "sale_hub": "",
@@ -2497,25 +2665,25 @@
         "status_label": "预告未开卖",
         "status_kind": "soon",
         "orderable_now": false,
-        "summary": "官网 https://bandwagonhost.com/ 与国内镜像 https://bwh81.net/ 本轮均为 HTTP 200，标题仍是 “Mass VPS hosting on Enterprise equipment - BandwagonHost VPS”。页面可见的是常规套餐价，没有 2026 黑五专页或可下单优惠。源码 HTML 注释里仍有旧活动码（BWH2021BF 等），都已注释掉，不是现行活动。https://bandwagonhost.com/blackfriday 本轮本机 curl HTTP 404。",
+        "summary": "官网 https://bandwagonhost.com/ 与国内镜像 https://bwh81.net/ 本轮本机 curl HTTP 200，标题仍是常规首页；页面里的 Black Friday 字样只出现在往年优惠码的 HTML 注释中（BWH2021BF），不是 2026 黑五公告。https://bandwagonhost.com/blackfriday 与 https://bwh81.net/blackfriday 本轮均为 HTTP 404。现无可下单官方黑五套餐。",
         "sources": [
           {
             "type": "official_page",
             "url": "https://bandwagonhost.com/",
             "title": "Mass VPS hosting on Enterprise equipment - BandwagonHost VPS",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://bwh81.net/",
             "title": "Mass VPS hosting on Enterprise equipment - BandwagonHost VPS",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           },
           {
             "type": "official_page",
             "url": "https://bandwagonhost.com/blackfriday",
             "title": "404 Not Found",
-            "fetched_beijing": "2026-11-18 23:56:07"
+            "fetched_beijing": "2026-11-19 23:58:25"
           }
         ],
         "sale_hub": "",
