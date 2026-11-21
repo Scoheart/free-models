@@ -23189,7 +23189,7 @@
     "summary": "Perch 官方文档：免费 Starter（免绑卡，每月约 20000 PT≈$20）自 10/25 起将 Qwen 3.8 Max 纳入可选模型，至 2026-11-20 美东中午（北京约 11/21 01:00）。Desktop/Web 模型选择器选 Qwen 3.8 Max，或 CLI 执行 /model qwen-3.8-max；用量计入每月约 20000 PT；Pro/Ultra 另有 DeepSeek V4.1 Flash 周末不限量（付费档，不计入本卡）；用量计入 Starter 月额度；同期 Starter 阵容还有 Laguna S 2.1、DeepSeek V4.1 Flash、GLM 5.3 Flash；非公开 API。截止：美东 11/20 12:00，到期移出 Starter，北京时间 2026-11-21 01:00。",
     "source": "X @anya_yfa7；官方 docs perchai.app/docs/plans/model-promotions 与 Starter/Models",
     "collected_at": "2026-11-07T20:45:00+08:00",
-    "expired": false,
+    "expired": true,
     "source_post_id": "2119007163159138502",
     "providers": [
       {
@@ -25654,7 +25654,7 @@
       "模型页 https://openrouter.ai/cohere/north-mini-code:free"
     ],
     "collected_at": "2026-11-11T00:40:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": null,
     "platform": "OpenRouter",
     "claim_guide": [
@@ -25702,7 +25702,10 @@
     ],
     "barriers": [
       "need_key"
-    ]
+    ],
+    "expired_reason": "2026-11-21 核对 OpenRouter GET /api/v1/models：cohere/north-mini-code:free 已不在列表；对该模型 ID 的查询返回 404。",
+    "expired_at": "2026-11-21T00:20:29+08:00",
+    "updated_at": "2026-11-21T00:20:29+08:00"
   },
   {
     "id": "openrouter-nemotron3-nano-omni-free-20261111",
@@ -27315,7 +27318,7 @@
     "barriers": [
       "need_key"
     ],
-    "expired": false,
+    "expired": true,
     "collected_at": "2026-11-11T02:06:00+08:00",
     "auto_claim": {
       "status": "needs_user",
@@ -27363,7 +27366,10 @@
         "step": "注意事项",
         "detail": "Clocked 不是通用聊天模型，而是返回决策、证据位置和置信度的结构化 API。参赛需年满 18 岁，古巴、伊朗、朝鲜、叙利亚、俄罗斯、白俄罗斯、魁北克等地区不能参赛"
       }
-    ]
+    ],
+    "expired_reason": "活动兑换截止为 2026-11-20 07:59:59 北京时间，现已过点。",
+    "expired_at": "2026-11-21T00:20:29+08:00",
+    "updated_at": "2026-11-21T00:20:29+08:00"
   },
   {
     "agents": [
@@ -35957,15 +35963,15 @@
   },
   {
     "id": "openrouter-perplexity-decider-v13-free-nov19-20261114",
-    "title": "OpenRouter：Perplexity Decider V1.3 / Flash V1.3 限时免费（决策模型，至 11/19）",
+    "title": "OpenRouter：Perplexity Decider V1.3 / Flash V1.3 限时免费再延长约三周（决策模型）",
     "platform": "OpenRouter",
     "product": "OpenRouter",
     "model": "perplexity/pplx-decider-v1.3:free",
     "type": "限免",
-    "deadline": "2026-11-19T23:59:59+08:00",
+    "deadline": "2026-12-10T23:59:59+08:00",
     "url": "https://openrouter.ai/perplexity/pplx-decider-v1.3:free",
-    "source": "据 X 上的报道（Perplexity 官方开发者账号 @perplexitydevs，帖子 2120948253105795428，2026-11-12 18:34 UTC）；2026-11-14 00:20 北京核对其 OpenRouter 模型页仍标 Free",
-    "summary": "据 X 上的报道，Perplexity 官方开发者账号宣布，决策模型 Decider V1.3 和更小的 Decider Flash V1.3 在 OpenRouter 上免费到 11 月 19 日（官方未写时区，暂按北京时间当天结束）。2026-11-14 核对其模型页，输入、输出价格仍为 Free，上下文 262,144 Token，2026 年 11 月 12 日上线，由 Perplexity 单一托管。这是结构化决策和抽取模型，不是聊天生成：对传入内容（文本、JSON 或图片）一次回答多个具名问题，返回是/否概率、最多 255 项的多选项概率，或有序量表分数；V1.3 还可以抽取带出处的字段。必须走 OpenRouter 的 Decisions 接口，普通聊天补全调用不了。免费线路有速率限制。不提供欧盟区域内路由。只需 OpenRouter 账号，不用绑卡。",
+    "source": "据 X 上的报道（OpenRouter 官方账号、Perplexity CEO @AravSrinivas）；OpenRouter 模型页",
+    "summary": "据 X 上的报道，Perplexity CEO 于 2026-11-19 宣布，已决定将决策模型 Decider V1.3 及其 Flash 在 OpenRouter 上的免费期再延长约三周；OpenRouter 官方账号同日转发并写明 “3 more weeks of free Perplexity Decider-v1.3”。官方只说 another 3 weeks，没有精确日历截止日，本条暂按发帖日加三周记到 2026 年 12 月 10 日，实际以模型页是否仍标 Free 为准。这是结构化决策和抽取模型，不是聊天生成：对传入内容一次回答多个具名问题，须走 OpenRouter 的 Decisions 接口，普通聊天补全调用不了。免费线路有速率限制，不提供欧盟区域内路由。只需 OpenRouter 账号，不用绑卡。更早的条目曾把免费期写到 11 月 19 日，此次为同一活动的延期。",
     "claim_steps": [
       "登录 OpenRouter，在 Keys 页面创建或使用已有 API Key（建议设低额度上限）",
       "打开模型页确认 perplexity/pplx-decider-v1.3:free 或 perplexity/pplx-decider-flash-v1.3:free 价格仍为 Free",
@@ -36029,8 +36035,8 @@
       "note": "你已有 OpenRouter 账号和 key，不用新领，现有 key 直接调用 Decisions 接口即可。",
       "at": "2026-11-14T00:25:00+08:00"
     },
-    "updated_at": "2026-11-20T00:21:30+08:00",
-    "update_note": "原目录截止 2026-11-19 23:59 北京时间已过，但 2026-11-20 00:15 核验时 OpenRouter 模型页仍标 Free、endpoints 单价仍为 0，官方未见结束公告，故暂不标过期。"
+    "updated_at": "2026-11-21T00:20:29+08:00",
+    "update_note": "据 X 上的报道，Perplexity CEO 与 OpenRouter 官方于 2026-11-19 宣布再免费约三周；官方未给精确日历日，截止暂按发帖日加三周记为 12 月 10 日。"
   },
   {
     "id": "envato-minimax-h3-unlimited-24h-nov19-20261114",
@@ -36088,12 +36094,15 @@
     ],
     "category": "agents",
     "collected_at": "2026-11-14T00:25:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "needs_user",
       "note": "请先在 Envato Elements 注册或登录免费账号；活动要到北京时间 11/19 21:00 才开始，届时到 AI Video 页选 MiniMax H3。",
       "at": "2026-11-14T00:25:00+08:00"
-    }
+    },
+    "expired_reason": "Envato 写明 MiniMax H3 不限量免费窗口为 24 小时（自 11/19 8AM EST 起），截止 2026-11-20 21:00 北京时间，现已过点。",
+    "expired_at": "2026-11-21T00:20:29+08:00",
+    "updated_at": "2026-11-21T00:20:29+08:00"
   },
   {
     "id": "zcode-weekend-build-9-500m-glm53-flash-20261114",
@@ -36768,14 +36777,16 @@
     ],
     "category": "providers",
     "collected_at": "2026-11-15T00:15:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "success",
       "note": "已用 Google 账号注册 Rime 并建好 API key（已私存）；Rime 不支持给 key 设额度上限或过期时间，账号自带 $50 免费额度",
       "at": "2026-11-15T00:16:00+08:00"
     },
-    "updated_at": "2026-11-20T00:21:30+08:00",
-    "update_note": "官方定价页仍写 Rime STT Free until Nov 19，时区未写明。2026-11-20 00:16 北京时美东仍是 11/19，故暂不标过期；每月 $50 免绑卡额度另行有效。"
+    "updated_at": "2026-11-21T00:20:29+08:00",
+    "update_note": "官方定价页仍写 Rime STT Free until Nov 19，时区未写明。2026-11-20 00:16 北京时美东仍是 11/19，故暂不标过期；每月 $50 免绑卡额度另行有效。",
+    "expired_reason": "官方写明 Rime STT 全档免费到 2026-11-19，该限免已结束。",
+    "expired_at": "2026-11-21T00:20:29+08:00"
   },
   {
     "id": "testmu-kanecli-hackathon-10000-credits-nov19-20261115",
@@ -36839,12 +36850,15 @@
     ],
     "category": "agents",
     "collected_at": "2026-11-15T00:15:00+08:00",
-    "expired": false,
+    "expired": true,
     "auto_claim": {
       "status": "needs_user",
       "note": "待浏览器领取（Gmail 未见 TestMu AI 账号；是否参赛需你决定，仅领积分只需新注册）",
       "at": "2026-11-15T00:15:00+08:00"
-    }
+    },
+    "expired_reason": "KaneCLI 黑客松提交截止为 2026-11-20 02:29 北京时间，现已过点。",
+    "expired_at": "2026-11-21T00:20:29+08:00",
+    "updated_at": "2026-11-21T00:20:29+08:00"
   },
   {
     "id": "hackglobal-2026-vultr-200usd-student-credits-20261115",
@@ -37668,15 +37682,15 @@
   },
   {
     "id": "polyai-dialog-rsn1-100usd-new-account-20261117",
-    "title": "PolyAI Dialog-RSN-1：新账号限时送 $100 API 额度",
+    "title": "PolyAI Dialog-RSN-1：12 月 1 日前注册送 $100 API 额度，语音输出同步限免",
     "platform": "PolyAI",
     "product": "Dialog-RSN-1 API",
     "model": "Dialog-RSN-1",
     "type": "额度",
-    "deadline": null,
+    "deadline": "2026-12-01T23:59:59+08:00",
     "url": "https://poly.ai/pricing",
     "source": "PolyAI 官方定价页（2026-11-17 00:10 北京核对）",
-    "summary": "据 PolyAI 官方定价页，语音对话模型 Dialog-RSN-1 的 API 已经上线，新账号限时获得 $100 免费额度。这是语音对话接口，不是文本大模型聊天。官方只写 for a limited time，没有公布具体截止日期。同一定价页的 Platform 方案另写起步赠送 $20 免费额度，与这条限时 $100 不是同一句话。官方定价页没有写必须绑卡才能拿到新账号额度。用尽规则和并发上限以控制台和官方 limits 文档为准。",
+    "summary": "据 PolyAI 官方定价页，语音对话模型 Dialog-RSN-1 的 API 已上线，新账号限时获得 $100 免费额度，现写明须在 12 月 1 日前注册（原文 $100 for sign-ups before 1 Dec）。同一页将 Voice output 标为 Free until 1 Dec，文本输出仍按 output tokens 计费。这是语音对话接口，不是文本大模型聊天。官网只写 1 Dec，未标明时区，本条截止暂按北京时间 2026 年 12 月 1 日当天结束。并发：未绑卡 2 路，加卡后含 10 路；官方定价页没有写必须绑卡才能拿到新账号额度。用尽规则以控制台和官方 limits 文档为准。",
     "claim_steps": [
       "打开 PolyAI 定价页或 API 起始页注册新账号",
       "在 Agent Studio 创建 API Key",
@@ -37729,7 +37743,9 @@
       "status": "needs_user",
       "note": "需在 poly.ai 注册新账号并在 Agent Studio 建 Key；本轮不能代填登录或保存新密码。",
       "at": "2026-11-17T00:14:00+08:00"
-    }
+    },
+    "updated_at": "2026-11-21T00:20:29+08:00",
+    "update_note": "2026-11-21 核对官网定价页，已写明 $100 for sign-ups before 1 Dec，且 Voice output 限免至 12 月 1 日；官方未标明时区，暂按北京时间当天结束。"
   },
   {
     "id": "deepseek-model-triggered-search-fetch-unbilled-20261119",
@@ -38988,6 +39004,826 @@
       "status": "success",
       "note": "开源权重可直接在 Hugging Face 下载，无需领取 Key。Workers AI 上是付费促销价，不是免费赠额；你已有 Cloudflare 账号，要用托管接口时自行在控制台调用即可。",
       "at": "2026-11-20T00:21:30+08:00"
+    }
+  },
+  {
+    "id": "tencent-tokenhub-deepseek-search-fetch-unbilled-20261121",
+    "title": "腾讯云 TokenHub：DeepSeek 原厂直供模型的服务端 Search/Fetch 不再计费",
+    "platform": "腾讯云",
+    "product": "TokenHub",
+    "model": "DeepSeek 原厂直供",
+    "type": "计费政策",
+    "deadline": null,
+    "url": "https://cloud.tencent.com/announce/detail/2586",
+    "source": "腾讯云公告",
+    "summary": "腾讯云于北京时间 2026 年 11 月 20 日 15:29 发布 TokenHub 公告：自北京时间 2026 年 11 月 18 日 12:00:00 起，调用名称中带「原厂直供」标识的 DeepSeek 模型时，触发的服务端搜索（Search）、网页抓取（Fetch）不再计费，只按模型 Token 用量计费。公告写明会触发服务端搜索的接口为 Anthropic API 的 web_search 工具、Responses API 的 web_search 工具。对 11 月 18 日 12:00 之后已产生的这类联网搜索费用，将启动退费，并于 11 月 30 日 23:59:59 前统一退还，无需单独申请。这是平台计费政策变更，公告未写该免费政策本身的结束日期。开通并使用腾讯云 TokenHub 通常需要腾讯云账号和实名认证。这与 DeepSeek 官方 API 自 11 月 18 日起的同类不计费政策不是同一平台。",
+    "claim_steps": [
+      "打开腾讯云公告核对适用范围",
+      "登录已有腾讯云账号并进入 TokenHub 控制台",
+      "调用名称带「原厂直供」标识的 DeepSeek 模型，通过 Anthropic API 或 Responses API 的 web_search 触发服务端搜索"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读官方公告",
+        "detail": "打开腾讯云公告，确认适用范围是模型名称带「原厂直供」标识的 DeepSeek 模型，以及会触发服务端搜索的接口。",
+        "url": "https://cloud.tencent.com/announce/detail/2586"
+      },
+      {
+        "step": "登录 TokenHub",
+        "detail": "使用已有腾讯云账号登录大模型服务平台 TokenHub 控制台。若尚未开通，按控制台提示开通（通常需要实名认证）。",
+        "url": "https://console.cloud.tencent.com/"
+      },
+      {
+        "step": "选用原厂直供模型",
+        "detail": "在模型列表中选择名称带「原厂直供」标识的 DeepSeek 模型，不要选错成其他托管线路。",
+        "url": "https://console.cloud.tencent.com/"
+      },
+      {
+        "step": "按公告接口调用",
+        "detail": "通过 Anthropic API 的 web_search 工具，或 Responses API 的 web_search 工具触发服务端搜索。公告另指向「DeepSeek 原厂联网搜索使用指引」和 TokenHub 模型价格页。",
+        "note": "公告正文未列出具体模型 ID 或 base_url，以控制台和指引为准"
+      },
+      {
+        "step": "核对退费",
+        "detail": "若在 11 月 18 日 12:00 之后已产生过服务端联网搜索费用，无需单独申请，等待 11 月 30 日 23:59:59 前统一退还，并在账单中核对。",
+        "url": "https://cloud.tencent.com/announce/detail/2586"
+      }
+    ],
+    "providers": [
+      {
+        "name": "腾讯云 TokenHub",
+        "action_url": "https://cloud.tencent.com/announce/detail/2586"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "DeepSeek 原厂直供",
+        "action_url": "https://cloud.tencent.com/announce/detail/2586"
+      }
+    ],
+    "scenes": [
+      "api",
+      "search"
+    ],
+    "barriers": [
+      "need_realname"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-21T00:20:29+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "这是已有 TokenHub 账号的计费政策变更，不用另领券；开通腾讯云通常要实名，注册表里未见该平台账号，本轮未代办。",
+      "at": "2026-11-21T00:20:29+08:00"
+    }
+  },
+  {
+    "id": "autoclaw-weekly-perks-m11w4-100m-tokens-20261121",
+    "title": "智谱 AutoClaw 一周福利 M11W4：登录领 100M Tokens（11/23–11/29）",
+    "platform": "智谱 AutoClaw",
+    "product": "AutoClaw 一周福利",
+    "model": null,
+    "type": "登录领取",
+    "deadline": "2026-11-29T23:59:59+08:00",
+    "url": "https://autoclaw.z.ai/cn/blog/news/M11W4/",
+    "source": "智谱 AutoClaw 官方博客",
+    "summary": "智谱 AutoClaw 官方博客于 2026 年 11 月 20 日（页面标注 2026-11-20T05:36:29Z，约北京时间 13:36）发布下一周福利 M11W4：北京时间 11 月 23 日 00:00 至 11 月 29 日 23:59 期间登录 AutoClaw，可领取 100M Tokens（公告写明相当于 10,000 积分），每个账号限领一次；奖励于 11 月 29 日 23:59 失效。这是应用内登录领取，不是对外 API 额度。同源页面 autoclaw.zhipuai.cn 正文一致。与此前 11 月 16 日至 22 日的 M11W3 不是同一期。官方未写绑卡要求。",
+    "claim_steps": [
+      "打开 AutoClaw 官网，下载或打开国内站客户端",
+      "在 11 月 23 日 00:00 至 11 月 29 日 23:59 期间登录领取",
+      "到账后在 AutoClaw 里使用，额度 11 月 29 日 23:59 失效"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开客户端",
+        "detail": "打开 AutoClaw 官网，下载或启动国内站客户端。",
+        "url": "https://autoclaw.zhipuai.cn/",
+        "note": "活动说明也发布在 https://autoclaw.z.ai/cn/blog/news/M11W4/"
+      },
+      {
+        "step": "在活动窗口登录",
+        "detail": "在北京时间 11 月 23 日 00:00 至 11 月 29 日 23:59 登录 AutoClaw，100M Tokens 会到账。",
+        "url": "https://autoclaw.zhipuai.cn/blog/news/M11W4/",
+        "note": "每账号限领一次，不用兑换码；11 月 23 日 0 点前还领不到这一期"
+      },
+      {
+        "step": "尽快使用",
+        "detail": "到账后在 AutoClaw 里使用，奖励于 11 月 29 日 23:59 失效。",
+        "url": "https://autoclaw.zhipuai.cn/blog/news/M11W4/",
+        "note": "越早领可用时间越长"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "智谱 AutoClaw",
+        "action_url": "https://autoclaw.zhipuai.cn/"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "agent"
+    ],
+    "barriers": [],
+    "category": "agents",
+    "collected_at": "2026-11-21T00:20:29+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在 11 月 23 日 00:00 至 29 日 23:59 登录 AutoClaw 国内站客户端领取，每账号一次；本轮无法代登客户端。",
+      "at": "2026-11-21T00:20:29+08:00"
+    }
+  },
+  {
+    "id": "kimi-file-extract-limited-free-20261121",
+    "title": "Kimi 开放平台：文件解析（file-extract）官方文档写明限时免费",
+    "platform": "Kimi 开放平台",
+    "product": "文件解析 file-extract",
+    "model": null,
+    "type": "限时免费",
+    "deadline": null,
+    "url": "https://platform.kimi.com/docs/api/files-upload",
+    "source": "Kimi 开放平台文档",
+    "summary": "月之暗面 Kimi 开放平台官方「上传文件」文档当前写明：文件解析服务限时免费，请求高峰期可能会限流。单文件大小上限 100 MiB；文件个数改为按组织总存储量限制，默认 10 GiB。purpose=file-extract 用于文本内容抽取，结果为 Markdown，可再放入对话消息；图片文件不再支持 file-extract，图片理解需改用 purpose=image。官方未公布这项限时免费的开始日或截止日期。该免费只覆盖文件解析本身，随后的对话或模型调用仍按普通 API 计费。无法从公开页确认该表述是否就在过去 24 小时内才写入文档，只确认此刻官方文档仍如此写，且现有目录中原先没有这一条。",
+    "claim_steps": [
+      "打开 Kimi 开放平台文档「上传文件」",
+      "登录或注册开放平台并创建 API Key",
+      "向 https://api.moonshot.cn/v1/files 上传文件，purpose 设为 file-extract，再用 files.content 取文本"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读官方文档",
+        "detail": "打开「上传文件」文档，核对 file-extract 的用途、大小和存储限制。",
+        "url": "https://platform.kimi.com/docs/api/files-upload"
+      },
+      {
+        "step": "登录开放平台",
+        "detail": "打开 Kimi 开放平台，登录或注册后创建 API Key。文档示例使用环境变量 MOONSHOT_API_KEY。",
+        "url": "https://platform.kimi.com/"
+      },
+      {
+        "step": "上传并抽取",
+        "detail": "调用 https://api.moonshot.cn/v1/files ，上传时将 purpose 设为 file-extract，再用 files.content 接口取出 Markdown 文本。",
+        "url": "https://platform.kimi.com/docs/api/files-upload",
+        "note": "图片不要再用 file-extract，文档要求改用 purpose=image"
+      },
+      {
+        "step": "再用于对话（可选）",
+        "detail": "抽取结果可放入后续对话消息。文档示例里的对话模型名为 kimi-k3.1-pro，对话本身按普通 API 计费，不在这次文件解析限免里。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Kimi 开放平台",
+        "action_url": "https://platform.kimi.com/docs/api/files-upload"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "api"
+    ],
+    "barriers": [],
+    "category": "providers",
+    "collected_at": "2026-11-21T00:20:29+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需登录或注册 Kimi 开放平台并创建 API Key；注册表里未见该平台账号，本轮自动化不能代填登录或保存新密码。",
+      "at": "2026-11-21T00:20:29+08:00"
+    }
+  },
+  {
+    "id": "mozilla-tabstack-10000-free-credits-20261121",
+    "title": "Mozilla Tabstack：新账号送 10,000 免费 API credits（免绑卡）",
+    "platform": "Tabstack",
+    "product": "Tabstack API",
+    "model": null,
+    "type": "免费层",
+    "deadline": null,
+    "url": "https://tabstack.ai/pricing",
+    "source": "Tabstack 官方定价页与文档；Product Hunt 本周再次发布",
+    "summary": "Mozilla 的 Tabstack 是给模型或 Agent 用的托管网页 API（研究、抽取、生成、浏览器自动化），不是大模型本身。官方定价页写明每个新账号含 10,000 free credits，无需信用卡；文档称 Trial 用尽免费 credits 后请求停止且从不扣费。Trial 速率限制为每账号每分钟 10 次请求（按账号而不是按 key 或端点），官方未写每日或每小时请求上限。官方定价 FAQ 按公布单价举例：10,000 credits 约合 1,000 次 Markdown 抽取，或 40 次 Fast Research，或二者混合；Extract/Generate 按次固定消耗，Automate 与 Research 按任务实际 action 数计费。官方未写明这 10,000 credits 是否会过期。该产品 2026 年已多次在 Product Hunt 发布（页面写 This is the 7th launch），此次更像再次推广既有免费试用，而非全新限时活动；现有目录里原先没有该平台。",
+    "claim_steps": [
+      "打开 https://console.tabstack.ai/signup 注册（定价页 Get an API key / Start free 指向此处）",
+      "登录控制台，在 API Keys 中 Create New API Key",
+      "按文档调用 https://api.tabstack.ai/v1/ 下的接口，请求头 Authorization: Bearer $TABSTACK_API_KEY"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开定价页",
+        "detail": "先看官方定价，确认新账号 10,000 credits、免绑卡。",
+        "url": "https://tabstack.ai/pricing"
+      },
+      {
+        "step": "注册账号",
+        "detail": "打开控制台注册页创建账号，优先用「使用 Google 登录」；不支持再用邮箱注册。不要勾选营销订阅，遇到绑卡或付款就停下。",
+        "url": "https://console.tabstack.ai/signup"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "登录 https://console.tabstack.ai ，在 API Keys 中 Create New API Key。能设过期就选大约一周，能设额度上限就设较低上限。密钥通常只显示一次，请自行妥善保存，不要发到聊天或网页里。",
+        "url": "https://console.tabstack.ai"
+      },
+      {
+        "step": "按文档调用",
+        "detail": "官方 Quickstart 示例使用 https://api.tabstack.ai/v1/extract/markdown 与 https://api.tabstack.ai/v1/research ，请求头为 Authorization: Bearer $TABSTACK_API_KEY。也可用 npm 包 @tabstack/sdk 或 PyPI 包 tabstack。",
+        "url": "https://docs.tabstack.ai/getting-started/quick-start/"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Tabstack",
+        "action_url": "https://tabstack.ai/pricing"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "api",
+      "search",
+      "browser"
+    ],
+    "barriers": [],
+    "category": "providers",
+    "collected_at": "2026-11-21T00:20:29+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "需在 console.tabstack.ai 注册新账号并创建 API Key；本轮自动化不能代填登录或保存新密码。",
+      "at": "2026-11-21T00:20:29+08:00"
+    }
+  },
+  {
+    "id": "exa-startups-15k-credits-student-100-20261121",
+    "title": "Exa for Startups：合格初创最高 1.5 万美元 API 额度，学生可申 100 美元",
+    "platform": "Exa",
+    "product": "Exa for Startups",
+    "model": null,
+    "type": "初创/学生计划",
+    "deadline": null,
+    "url": "https://exa.ai/startups",
+    "source": "Exa 官网；据 X 上的报道（@ExaAILabs 官方帖）",
+    "summary": "据 X 上的报道，Exa 官方账号于 2026-11-19（世界时 18:40，北京时间 11 月 20 日 02:40）宣布 Startups 计划。官网写明：合格初创最高可获得 15,000 美元 Exa credits；获批后先到账 2,500 美元 starting credits（用于 Search、Contents、Agent、Websets、Monitors、Snapshot，发放后 6 个月过期）；获批后对充值 1:1 匹配、最高再匹配 5,000 美元（须在加入后 12 个月内解锁，匹配额度在加入后 12 个月过期）。资格：pre-seed 至 Series A、在做 AI、且尚未使用 Exa 付费计划，每公司一份，由 Exa 审核。同一页 FAQ：学生可改申 100 美元额度；educators and researchers 最高 1,000 美元，由团队审核。不能与其他优惠叠加（包括定价页上的标准赠额）；Zero data retention 与 HIPAA 不含在内，属于 Enterprise。无公开报名截止日。这与已有的 Exa 每月 10 美元免费层、以及优惠码赠额不是同一项。",
+    "claim_steps": [
+      "打开 https://exa.ai/startups 阅读资格与额度说明",
+      "按身份提交初创、学生或教育/研究者申请",
+      "获批后在 Exa Dashboard 查看 credits，并用已有或新建的 API Key 调用"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开计划页",
+        "detail": "阅读 Exa for Startups 的额度拆分、过期规则和资格要求。",
+        "url": "https://exa.ai/startups"
+      },
+      {
+        "step": "选择身份并申请",
+        "detail": "初创按页面表单提交；学生申请 100 美元额度，教育或研究者可申请最高 1,000 美元。按页面实际字段填写，不要同时叠用定价页上的其他赠额。",
+        "url": "https://exa.ai/startups",
+        "note": "每公司一份，须通过 Exa 审核"
+      },
+      {
+        "step": "获批后使用",
+        "detail": "到账后在 Exa Dashboard 查看 credits，使用已有或新建的 API Key。Credits 覆盖 Search、Contents、Agent、Websets、Monitors、Snapshot。",
+        "url": "https://dashboard.exa.ai/api-keys",
+        "note": "starting credits 发放后 6 个月过期；匹配额度须在加入后 12 个月内解锁"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Exa",
+        "action_url": "https://exa.ai/startups"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "api",
+      "search"
+    ],
+    "barriers": [
+      "need_application"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-21T00:20:29+08:00",
+    "expired": false,
+    "source_post_id": "2123486577607479657",
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "你已有 Exa 账号，但这项是审核制申请（初创最高 1.5 万美元，或学生 100 美元 / 教育研究者最高 1,000 美元），需本人在 https://exa.ai/startups 提交，本轮未代填申请表。",
+      "at": "2026-11-21T00:20:29+08:00"
+    }
+  },
+  {
+    "id": "tencent-hy4-flagship-open-weights-20261121",
+    "title": "腾讯混元 Hy4 旗舰开源权重上线（770B/49B 激活，1M 上下文）",
+    "platform": "开源权重",
+    "product": "Hy4",
+    "model": "Hy4",
+    "type": "开源权重",
+    "deadline": null,
+    "url": "https://huggingface.co/tencent/Hy4",
+    "source": "据 X 上的报道（@TencentHunyuan 官方账号）；Hugging Face 模型页 tencent/Hy4",
+    "summary": "据 X 上的报道，腾讯混元官方账号于 2026-11-20（世界时 03:52，北京时间 11:52）宣布释放 Hy4 开源权重：原生多模态旗舰 MoE，总参数 770B、每 token 激活 49B、1M 上下文，并同时发布 Hy4 System Card。Hugging Face 仓库 tencent/Hy4 可公开访问（未设门禁）。许可证在仓库中标为 tencent-hy-license（license: other），具体条款以仓库 LICENSE 为准。这是可本地或自建部署的权重，不是新的云端 API 赠额；与已收录的 Hy4 flash 开源权重（tencent/Hy4-flash）不是同一模型。Together AI 同日宣布可托管运行 Hy4，并未声称免费。自托管需要相应硬件，成本自理。",
+    "claim_steps": [
+      "打开 Hugging Face 官方仓库 tencent/Hy4",
+      "阅读 Tencent Hy License 后下载权重",
+      "按模型卡用推荐的推理框架在本地或自建环境加载"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开模型页",
+        "detail": "官方权重入口是 Hugging Face 仓库 tencent/Hy4，仓库未 gated，一般可以直接下载。",
+        "url": "https://huggingface.co/tencent/Hy4"
+      },
+      {
+        "step": "查看许可证",
+        "detail": "先阅读仓库中的 LICENSE（tencent-hy-license）。不要跳过许可页。",
+        "url": "https://huggingface.co/tencent/Hy4/blob/main/LICENSE"
+      },
+      {
+        "step": "下载权重",
+        "detail": "用网页下载或 huggingface-cli / hf download 从官方仓库获取。不要用不明第三方镜像。",
+        "url": "https://huggingface.co/tencent/Hy4"
+      },
+      {
+        "step": "本地运行",
+        "detail": "按模型卡说明，用其写明的推理框架加载，并对照自己的显存和 GPU。本地运行通常不需要 API Key，也不绑卡。"
+      },
+      {
+        "step": "验证",
+        "detail": "权重文件完整，并能按官方或模型卡推荐方式成功加载或完成一次推理，即完成。开放权重免费下载不等于某家托管 API 也免费。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Hugging Face",
+        "action_url": "https://huggingface.co/tencent/Hy4"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Hy4",
+        "action_url": "https://huggingface.co/tencent/Hy4"
+      }
+    ],
+    "scenes": [
+      "local",
+      "weights"
+    ],
+    "barriers": [],
+    "category": "providers",
+    "collected_at": "2026-11-21T00:20:29+08:00",
+    "expired": false,
+    "source_post_id": "2123625549147070538",
+    "auto_claim": {
+      "status": "success",
+      "note": "无需注册领取，直接从官方 Hugging Face 仓库下载开源权重。",
+      "at": "2026-11-21T00:20:29+08:00"
+    }
+  },
+  {
+    "id": "thinkingmachines-inkling-2-mini-open-weights-20261122",
+    "title": "Thinking Machines Inkling 2 Mini：Apache 2.0 开源权重上线（约 26.4B/3.4B 激活，1M 上下文）",
+    "platform": "开源权重",
+    "product": "Inkling 2 Mini",
+    "model": "Inkling 2 Mini",
+    "type": "开源权重",
+    "deadline": null,
+    "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+    "source": "Thinking Machines 官方博客与模型卡；Hugging Face thinkingmachines/Inkling-2-Mini",
+    "summary": "Thinking Machines Lab 于 2026 年 11 月 20 日发布 Inkling 2 Mini：循环 Transformer + MoE，官方写明总参数约 26.4B、每 token 激活约 3.4B（三轮循环后有效激活约 5.4B），支持文本和图像输入，最长 1M 上下文，权重约 20GB（NVFP4/MXFP8 混合精度）。官方模型卡与 Hugging Face 页面均写许可证为 Apache 2.0，权重可免费下载，用于研究、微调和下游集成。本轮未发现官方免费托管推理 API：Tinker 提供推理和微调接入，但按 token 计费；OpenRouter 于 2026-11-20 21:19 ET 上架的 thinkingmachines/inkling-2-mini 也是付费（约 $0.10/$0.40 per 1M tokens），不是 0 价。本地推理官方建议 Apple silicon 32GB 及以上内存，或约 32GB 显存的 GPU。",
+    "claim_steps": [
+      "打开 Hugging Face 仓库 thinkingmachines/Inkling-2-Mini 下载权重（Apache 2.0）",
+      "按官方博客或模型卡用 SGLang、vLLM、Ollama、llama.cpp（GGUF）等本地运行",
+      "不要把 Tinker 或 OpenRouter 上的托管调用当成免费额度"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读官方发布说明",
+        "detail": "先看官方博客，确认模型规格、许可证和本地运行建议。",
+        "url": "https://thinkingmachines.ai/news/inkling-2-mini/"
+      },
+      {
+        "step": "对照模型卡",
+        "detail": "官方模型卡写明发布日 2026-11-20、许可证 Apache 2.0，以及硬件和推理框架说明。",
+        "url": "https://thinkingmachines.ai/model-card/inkling-2-mini/"
+      },
+      {
+        "step": "下载开源权重",
+        "detail": "到 Hugging Face 仓库 thinkingmachines/Inkling-2-Mini 下载权重，许可证为 Apache 2.0。",
+        "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+      },
+      {
+        "step": "本地运行",
+        "detail": "官方列出的本地/开源推理栈包括 SGLang、vLLM、Ollama、llama.cpp（量化 GGUF）、Unsloth、NVIDIA Dynamo、TokenSpeed、Llama App 等。Apple silicon 建议 32GB 及以上内存。",
+        "note": "Tinker 与 OpenRouter 上的托管调用是付费接口，模型 ID 为 thinkingmachines/inkling-2-mini，不是本次免费项。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "开源权重",
+        "action_url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "Inkling 2 Mini",
+        "action_url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+      }
+    ],
+    "scenes": [
+      "local",
+      "coding"
+    ],
+    "barriers": [],
+    "category": "providers",
+    "collected_at": "2026-11-22T00:24:27+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "开源权重可直接下载，无需注册或创建 API Key。",
+      "at": "2026-11-22T00:24:27+08:00"
+    }
+  },
+  {
+    "id": "aws-bedrock-agentcore-web-search-free-5000-20261122",
+    "title": "Amazon Bedrock AgentCore：网页搜索每月免费查询额度",
+    "platform": "Amazon Bedrock AgentCore",
+    "product": "Web Search API / Web Search Tool",
+    "model": null,
+    "type": "免费层",
+    "deadline": null,
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/bedrock-agentcore-free-web-search-queries/",
+    "source": "AWS What's New（2026-11-17）与 AgentCore 开发者文档",
+    "summary": "AWS 官方 What's New（2026-11-17）写明：通过 AgentCore Gateway 的 Web Search Tool 与 Web Search API，每月提供 5,000 次免费网页搜索查询。开发者指南确认存在每月免费查询，对每个 AWS 账号自动生效、不必单独开通；Tool 与 API 共用额度，在支持的商业区之间共享，组织内各账号按 AWS Free Tier 口径共享，每个日历月开始时按 UTC 重置，未用完不结转。超出后按标准价格计费，不会中断请求。支持区域包括 us-east-1、us-east-2、us-west-2、eu-west-1、ap-southeast-2、ap-northeast-1；不适用于 AWS GovCloud（US）的 API。本轮核验时定价页正文只写 Web Search 为 $7 / 1,000 queries，未再展示 5,000 这个免费数量，具体免费次数以 What's New 为准，超量单价以定价页为准。这不是聊天模型额度，也未公布活动结束日。",
+    "claim_steps": [
+      "对照 AWS What's New 与 Web Search API 文档核对规则",
+      "使用已有或新建的 AWS 账号，在支持区域通过 InvokeWebSearch API 或把 Web Search Tool 加到 AgentCore Gateway",
+      "在 AWS Billing 查看用量；建议先设零支出预算，避免超出后按定价计费"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读官方公告",
+        "detail": "打开 AWS What's New，核对每月免费查询的说明和适用区域。",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/bedrock-agentcore-free-web-search-queries/"
+      },
+      {
+        "step": "阅读开发者文档",
+        "detail": "查看 Web Search API 文档，确认自动生效、共用额度、按 UTC 每月重置等规则。",
+        "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/web-search-api.html"
+      },
+      {
+        "step": "用 AWS 账号调用",
+        "detail": "使用已有或新建的 AWS 账号，在支持区域通过 InvokeWebSearch API 调用，或把 Web Search Tool 加到 AgentCore Gateway。官方称免费额度自动生效，不必另外领取。",
+        "note": "需要 IAM（API）或 Gateway/JWT（Tool）。旧路径 web-search-tool.html 会落到指南根路径，不要用。"
+      },
+      {
+        "step": "查看用量并设预算",
+        "detail": "用量可在 AWS Billing 查看；免费查询显示为无费用。建议按官方文档创建零支出预算，避免超出后按定价页的 $7 / 1,000 次计费。",
+        "url": "https://aws.amazon.com/bedrock/agentcore/pricing/"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Amazon Bedrock AgentCore",
+        "action_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/bedrock-agentcore-free-web-search-queries/"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "search",
+      "api"
+    ],
+    "barriers": [
+      "aws_account"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-22T00:24:27+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "success",
+      "note": "官方写明对每个 AWS 账号自动生效，不必单独领取；你已有 AWS 账号。本轮未登录控制台核实用量。超额会按次计费，建议先设零支出预算。",
+      "at": "2026-11-22T00:24:27+08:00"
+    }
+  },
+  {
+    "id": "kyrune-mini-free-tier-20261122",
+    "title": "Kyrune Mini：Roleplay API 免费档自研模型，免绑卡",
+    "platform": "Kyrune",
+    "product": "Kyrune Mini / Roleplay API",
+    "model": "kyrune-mini-1.0-free",
+    "type": "免费层",
+    "deadline": null,
+    "url": "https://kyrune.com/pricing",
+    "source": "Kyrune 官方定价页与新闻（kyrune-mini-a-free-model-on-the-roleplay-api、new-free-limits-and-a-simpler-pricing-page）",
+    "summary": "Kyrune 官方定价页写明可以免费开始，无需银行卡。Free 档 Roleplay API 提供自研模型 Kyrune Mini：每天 100 次请求、28K 上下文；另可每天调用其他模型 10 次；K Agent 试用 3 条消息；图片积分先给 10，随后每天 3；每天 20 次免费 batch。11/1 新闻中的模型 ID 为 kyrune-mini-1.0-free，面向 JanitorAI / SillyTavern / Chub 等角色扮演场景，不是通用编码平台。今日定价页数字已覆盖 11/13 新闻里的部分旧数据（例如图片积分曾写起步 50、每天 5；11/1 新闻曾写 Mini 300 次/天）。付费档 Mini 限额更高。免费档一次只能一条回复。未公布免费档结束日期；11/1 新闻写 Mini 每天次数在 00:00 UTC 重置，今日定价页未再次写重置时刻。",
+    "claim_steps": [
+      "打开 https://kyrune.com/pricing，选择 Free，点 Start free 注册或登录",
+      "在 Developers / Roleplay API 或控制台 API 页取得 API key",
+      "调用时使用模型 ID kyrune-mini-1.0-free"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开定价页",
+        "detail": "先看官方定价，确认 Free 档（$0，页面写免绑卡）和当前限额。",
+        "url": "https://kyrune.com/pricing"
+      },
+      {
+        "step": "注册或登录",
+        "detail": "在定价页选择 Free，点 Start free 注册或登录。优先用已有方式登录；不要勾选营销订阅。",
+        "url": "https://kyrune.com/pricing"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "登录后到 Developers / Roleplay API 或控制台 API 页创建 key。能设过期就选大约一周，能设额度上限就设较低上限。密钥通常只显示一次，请自行妥善保存，不要发到聊天或网页里。",
+        "url": "https://kyrune.com/api/"
+      },
+      {
+        "step": "按模型名调用",
+        "detail": "调用时使用模型 ID kyrune-mini-1.0-free（见官方新闻页）。",
+        "url": "https://kyrune.com/news/kyrune-mini-a-free-model-on-the-roleplay-api",
+        "note": "面向角色扮演场景；接口说明以控制台和文档为准。"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Kyrune",
+        "action_url": "https://kyrune.com/pricing"
+      }
+    ],
+    "agents": [],
+    "models": [
+      {
+        "name": "kyrune-mini-1.0-free",
+        "action_url": "https://kyrune.com/news/kyrune-mini-a-free-model-on-the-roleplay-api"
+      }
+    ],
+    "scenes": [
+      "chat",
+      "roleplay"
+    ],
+    "barriers": [],
+    "category": "providers",
+    "collected_at": "2026-11-22T00:24:27+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "账号已用 bot inbox 注册并完成 onboarding；控制台当时显示 Free、API 每日 10 次（与定价页 Mini 100 次/天不一致，以控制台为准）。尚未创建 API key，需你在 https://kyrune.com/api/ 自行创建。",
+      "at": "2026-11-22T00:24:27+08:00"
+    }
+  },
+  {
+    "id": "baichuan-new-user-80yuan-credits-20261122",
+    "title": "百川智能开放平台：新用户注册送 80 元赠送金（约 3 个月）",
+    "platform": "百川智能开放平台",
+    "product": "开放平台赠送金",
+    "model": null,
+    "type": "新用户赠送",
+    "deadline": null,
+    "url": "https://platform.baichuan-ai.com/prices",
+    "source": "百川智能开放平台官方价格页「赠送金说明」",
+    "summary": "百川智能开放平台官方价格页「赠送金说明」写明：自 2024 年 5 月 22 日下午起，新注册用户的免费赠送金由 8 元提升至 80 元，相当于 Baichuan2-Turbo 1000 万 Tokens，有效期 3 个月，账号注册后生效。这是一次性新用户赠金，过期作废；等价 Token 数按 Baichuan2-Turbo 估算，调用更贵模型会更快耗尽。官方价格页只写「新注册的用户」「账号注册后生效」，没有写必须绑卡，也没有在该段写实名。国内平台注册页通常要手机号或微信，是否还要实名以控制台实际提示为准。未公布该新用户政策的下线日期，实际到期日需在控制台查看。",
+    "claim_steps": [
+      "打开 https://platform.baichuan-ai.com/ 注册或登录",
+      "到价格页核对赠送金说明，并在控制台查看余额与到期时间",
+      "按官方文档创建 API Key"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开开放平台",
+        "detail": "打开 https://platform.baichuan-ai.com/ 注册或登录（通常会转到 /homePage）。官方价格页写赠金在账号注册后生效。",
+        "url": "https://platform.baichuan-ai.com/",
+        "note": "国内平台注册页通常要 +86 手机号或微信验证，遇到短信、实名或人脸就停下，由本人完成。"
+      },
+      {
+        "step": "核对赠金说明",
+        "detail": "到官方价格页查看「赠送金说明」，并在控制台确认余额和到期时间。",
+        "url": "https://platform.baichuan-ai.com/prices"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "按官方文档创建 API Key。模型名和调用地址以控制台及官方文档为准，不要使用未经官方确认的第三方地址。",
+        "url": "https://platform.baichuan-ai.com/docs"
+      }
+    ],
+    "providers": [
+      {
+        "name": "百川智能开放平台",
+        "action_url": "https://platform.baichuan-ai.com/prices"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "api",
+      "chat"
+    ],
+    "barriers": [
+      "phone"
+    ],
+    "category": "providers",
+    "collected_at": "2026-11-22T00:24:27+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "注册页要求 +86 手机号短信验证并同意条款；未代填手机号，未注册。需你本人完成注册后在控制台查看 80 元赠金并创建 Key。",
+      "at": "2026-11-22T00:24:27+08:00"
+    }
+  },
+  {
+    "id": "smallest-ai-payg-10usd-free-credits-20261122",
+    "title": "Smallest.ai：Pay As You Go 注册起步送 $10 免费 credits",
+    "platform": "Smallest.ai",
+    "product": "Pay As You Go",
+    "model": null,
+    "type": "新用户赠送",
+    "deadline": null,
+    "url": "https://www.smallest.ai/pricing",
+    "source": "Smallest.ai 官方定价页与文档 Subscription & Plans、API Keys",
+    "summary": "Smallest.ai 是语音 Agent 与语音模型平台（Lightning TTS、Pulse STT、Hydra 语音到语音等）。官方定价页和文档都写明 Pay As You Go 起步送 $10 免费 credits，并可使用其 API 和模型；文档还写无月度承诺。官方页未写这 $10 是否会过期，也未写领取时是否必须先绑信用卡；文档把支付方式放在 Billing 里，用于额外扣费和自动充值。同一把 API key 可用于语音 Agent 平台以及 TTS/STT/S2S 等模型接口。文档中的自研 LLM Electron 在 Pay As You Go 表里标为不可用，仅 Enterprise 可访问，因此这 $10 不能当成通用对话大模型额度。未公布该赠额政策的下线日期。",
+    "claim_steps": [
+      "打开 https://www.smallest.ai/pricing 后注册登录控制台",
+      "在 app.smallest.ai/dashboard/api-keys 创建 API Key",
+      "用 Authorization: Bearer 调用 https://api.smallest.ai/ 下的接口"
+    ],
+    "claim_guide": [
+      {
+        "step": "查看官方定价",
+        "detail": "打开定价页，确认 Pay As You Go 写明起步 $10 免费 credits。",
+        "url": "https://www.smallest.ai/pricing"
+      },
+      {
+        "step": "注册或登录",
+        "detail": "按官网入口注册或登录控制台（文档指向 app.smallest.ai/dashboard）。优先用「使用 Google 登录」；不支持再用邮箱。不要勾选营销订阅，遇到绑卡或付款就停下。",
+        "url": "https://app.smallest.ai/dashboard"
+      },
+      {
+        "step": "创建 API Key",
+        "detail": "在控制台左侧 Developer 中打开 API Keys，或直接打开 https://app.smallest.ai/dashboard/api-keys ，点 Create an API key / Create API Key，起名后创建。密钥以 sk_ 开头，只显示一次，请自行保存，不要发到聊天或网页里。",
+        "url": "https://app.smallest.ai/dashboard/api-keys",
+        "note": "文档写只有 Owner 和 Admin 能创建或删除 key。"
+      },
+      {
+        "step": "按文档调用",
+        "detail": "请求头使用 Authorization: Bearer $SMALLEST_API_KEY。文档示例：语音 Agent 为 https://api.smallest.ai/atoms/v1/agent ；TTS 为 POST https://api.smallest.ai/waves/v1/tts 。",
+        "url": "https://docs.smallest.ai/overview/administration/api-keys"
+      }
+    ],
+    "providers": [
+      {
+        "name": "Smallest.ai",
+        "action_url": "https://www.smallest.ai/pricing"
+      }
+    ],
+    "agents": [],
+    "models": [],
+    "scenes": [
+      "tts",
+      "stt",
+      "voice"
+    ],
+    "barriers": [],
+    "category": "providers",
+    "collected_at": "2026-11-22T00:24:27+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "未注册该平台；本轮自动化不能代填登录或保存新密码。需你在 app.smallest.ai 注册并创建 API Key。官方未写清是否必须绑卡。",
+      "at": "2026-11-22T00:24:27+08:00"
+    }
+  },
+  {
+    "id": "zcode-weekend-build-10-500m-glm53-flash-20261122",
+    "title": "智谱 ZCode 本轮 Weekend Build：再送 5 亿 GLM-5.3-Flash Tokens（至 11/23 09:00 北京）",
+    "platform": "智谱 ZCode",
+    "product": "ZCode Weekend Build",
+    "model": "GLM-5.3-Flash",
+    "type": "限时免费",
+    "deadline": "2026-11-23T09:00:00+08:00",
+    "url": "https://zcode.z.ai/",
+    "source": "据 X 上的报道；交叉来源 aipromonow 与 LINUX DO 社区帖。本时间窗内未抓到 @zcode_ai 官方帖。",
+    "summary": "多条社区帖与优惠聚合站称，智谱桌面编程 Agent ZCode 本轮 Weekend Build 再次向每个账号（含免费档、免绑卡）发放 5 亿 GLM-5.3-Flash Tokens。额度自北京时间 11 月 20 日 23:00 生效，未用完部分在 11 月 23 日（周一）09:00 作废。只能在 ZCode 客户端内使用，不能导出 API Key；需把供应商切到 Start Plan 再选 GLM-5.3-Flash，高峰可能排队，上下文据称 100 万并支持图片。这是既有每日 3 亿领取之外的周末加码，与已过期的第八、九轮不是同一期。本轮未见到官方账号发帖，请以客户端领取页为准。",
+    "claim_steps": [
+      "打开 https://zcode.z.ai/ 下载或更新 ZCode 客户端并登录",
+      "在客户端领取 Weekend Build 额度",
+      "把供应商切换为 Start Plan，模型选 GLM-5.3-Flash"
+    ],
+    "claim_guide": [
+      {
+        "step": "打开官方站点",
+        "detail": "到 ZCode 官网下载或更新 macOS / Windows / Linux beta 客户端。",
+        "url": "https://zcode.z.ai/"
+      },
+      {
+        "step": "登录客户端",
+        "detail": "用智谱账号在最新版 ZCode 客户端里登录。这一条只能在客户端领取，不能开 API Key。",
+        "url": "https://zcode.z.ai/"
+      },
+      {
+        "step": "领取 Weekend Build",
+        "detail": "在应用内找到 Weekend Build 活动卡并领取。社区称免费档、免绑卡也可领。",
+        "note": "本轮未见官方账号公告，请以客户端实际领取页为准。"
+      },
+      {
+        "step": "切换模型",
+        "detail": "在模型设置里把供应商切换为 Start Plan，模型选 GLM-5.3-Flash 后再使用。",
+        "note": "未用完的额度于北京时间 11 月 23 日 09:00 作废。"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "智谱 ZCode",
+        "action_url": "https://zcode.z.ai/"
+      }
+    ],
+    "models": [
+      {
+        "name": "GLM-5.3-Flash",
+        "action_url": "https://zcode.z.ai/"
+      }
+    ],
+    "scenes": [
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_client"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-22T00:24:27+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "只能在最新版 ZCode 客户端里领取，并把供应商标到 Start Plan；无法在网页代领。",
+      "at": "2026-11-22T00:24:27+08:00"
+    }
+  },
+  {
+    "id": "boxes-dev-yc-launch-pro-3mo-20261122",
+    "title": "Boxes.dev YC 上线：新团队绑卡可免 3 个月 Pro（官方写到 11/21，每月 300 box-hours）",
+    "platform": "boxes.dev",
+    "product": "launch-yc Pro 优惠",
+    "model": null,
+    "type": "限时免费",
+    "deadline": "2026-11-21T23:59:59-08:00",
+    "url": "https://boxes.dev/help/billing-and-usage",
+    "source": "boxes.dev 官方 Billing 文档；领取入口 boxes.dev/launch-yc；另有据 X 上的报道",
+    "summary": "YC 公司 boxes.dev 为编码 Agent（Claude Code / Codex 等）提供云端 Linux 开发机。官方 Billing 文档写明：经 boxes.dev/launch-yc 新建团队可获 3 个月 Pro，首个 Pro 席位每月含 300 box-hours；该入口要求绑卡以防滥用，但官方称加卡不会自动开通续费或超额扣款，Pro 在优惠结束时停止，除非在 Billing 里手动打开续费。不绑卡可改领更小的 20 box-hours 试用。模型 Token 需自带 Claude 或 ChatGPT 套餐/Key，平台不卖模型额度。优惠明确写到 November 21，时区未标明；本轮收录时仍是 11 月 21 日美国太平洋时间白天。已有团队或账号不能用此优惠改计费。官方称加卡后仍可随时在 Billing 里删卡，优惠期内 Pro 会保留到结束。",
+    "claim_steps": [
+      "打开 https://boxes.dev/launch-yc ，用 Google 等账号注册并创建新 Team",
+      "按页面提示绑定银行卡领取 3 个月 Pro，或选择 Continue without a card 领取 20 box-hours 试用",
+      "在 Billing 确认计划与额度；模型仍走你自己的 Claude Code 或 Codex 订阅/API Key"
+    ],
+    "claim_guide": [
+      {
+        "step": "阅读官方说明",
+        "detail": "先看 Billing 文档里的 Signup offers，确认 3 个月 Pro、每月 300 box-hours，以及「直到 November 21」的截止表述（时区未标明）。",
+        "url": "https://boxes.dev/help/billing-and-usage"
+      },
+      {
+        "step": "走指定入口创建新团队",
+        "detail": "必须通过 https://boxes.dev/launch-yc 新建团队。用 Google 等账号注册。已有团队或账号不能用此优惠改计费。",
+        "url": "https://boxes.dev/launch-yc"
+      },
+      {
+        "step": "完成领取",
+        "detail": "按页面提示绑定银行卡领取 3 个月 Pro。官方写加卡是为防滥用，不会自动开通续费或超额扣款。若不想绑卡，可点 Continue without a card 领取 20 box-hours 的较小试用。",
+        "note": "本轮不代为绑卡。优惠结束后除非在 Billing 里手动打开续费，否则 Pro 会停止。"
+      },
+      {
+        "step": "确认计划并接入自己的模型",
+        "detail": "在 Billing 确认计划与 300 box-hours。模型仍走你自己的 Claude Code 或 Codex 订阅/API Key，平台不提供模型额度。",
+        "url": "https://boxes.dev/help/billing-and-usage"
+      }
+    ],
+    "providers": [],
+    "agents": [
+      {
+        "name": "boxes.dev",
+        "action_url": "https://boxes.dev/launch-yc"
+      }
+    ],
+    "models": [],
+    "scenes": [
+      "coding",
+      "agent"
+    ],
+    "barriers": [
+      "need_card"
+    ],
+    "category": "agents",
+    "collected_at": "2026-11-22T00:24:27+08:00",
+    "expired": false,
+    "auto_claim": {
+      "status": "needs_user",
+      "note": "3 个月 Pro 需经 launch-yc 新建团队并绑卡；官方写加卡不会自动续费或超额扣款。本轮不代为绑卡。不想绑卡可自行点 Continue without a card 领 20 box-hours 试用。官方截止写到 November 21（时区未标明）。",
+      "at": "2026-11-22T00:24:27+08:00"
     }
   }
 ]
