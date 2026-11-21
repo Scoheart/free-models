@@ -1,6 +1,6 @@
 # Manual Netlify deploys upload dist/ and do not see the repo netlify.toml.
 # Browsers keep the URL hash across these redirects. Legacy hashes such as
-# #providers/groq are rewritten by app.js on the destination page.
+# #providers/groq are resolved by the frontend on the destination page.
 /  /provider/  302!
 /provider  /provider/  301
 /agent  /agent/  301

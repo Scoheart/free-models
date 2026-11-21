@@ -7,47 +7,13 @@
 <meta name="color-scheme" content="light"/>
 <title>免费 · Free</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f6e62'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='16' font-family='Georgia' fill='%23ffffff'%3EF%3C/text%3E%3C/svg%3E"/>
-<link rel="stylesheet" href="./styles.css?v=a9d58a0bff"/>
-<script>
-(function () {
-  var raw = (location.hash || "").replace(/^#/, "");
-  try { raw = decodeURIComponent(raw); } catch (e) {}
-  raw = String(raw || "").replace(/^\/+|\/+$/g, "");
-  function go(page, slug) {
-    var dir = page === "agent" ? "agent/" : page === "vps" ? "vps/" : "provider/";
-    location.replace(dir + (slug ? "#" + encodeURIComponent(slug) : ""));
-  }
-  var match = raw.match(/^(providers|agents|provider|agent|vps)(?:\/(.*))?$/);
-  if (!raw) return go("provider", "");
-  if (match) {
-    var key = match[1];
-    var slug = String(match[2] || "").replace(/^\/+|\/+$/g, "");
-    var page = key === "agents" || key === "agent" ? "agent" : key === "vps" ? "vps" : "provider";
-    return go(page, slug);
-  }
-  function load() {
-    var data = document.createElement("script");
-    data.src = "./data.js?v=a9d58a0bff";
-    data.onload = function () {
-      var app = document.createElement("script");
-      app.src = "./app.js?v=a9d58a0bff";
-      document.body.appendChild(app);
-    };
-    document.body.appendChild(data);
-  }
-  if (document.body) load();
-  else document.addEventListener("DOMContentLoaded", load);
-})();
-</script>
+  <script type="module" crossorigin src="./site-assets/text-D4ofNSP3.js"></script>
+  <script type="module" crossorigin src="./site-assets/shared-DETLJdjI.js"></script>
+  <script type="module" crossorigin src="./site-assets/main-DuEb46nY.js"></script>
+  <link rel="stylesheet" crossorigin href="./site-assets/main-C7g4q3Ek.css">
 </head>
-
 <body data-page="home">
-<main class="home-wrap">
-<p class="eyebrow">Free</p>
-<h1>免费</h1>
-<p class="lead">正在打开模型、网关和 API 额度。</p>
-<p class="home-links"><a href="provider/">模型</a><a href="agent/">Agent</a><a href="vps/">VPS</a></p>
-<noscript><p>直接打开上面的链接。</p></noscript>
-</main>
+<div id="root"></div>
+<noscript><nav aria-label="栏目"><a href="provider/">模型</a> · <a href="agent/">Agent</a> · <a href="vps/">VPS</a></nav></noscript>
 </body>
 </html>

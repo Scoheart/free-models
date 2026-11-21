@@ -1,24 +1,31 @@
-#!/usr/bin/env node
-"use strict";
+import { readFileSync } from "node:fs";
+import { Tabs } from "radix-ui";
+import { renderToStaticMarkup } from "react-dom/server";
+import {
+  buildGroups, categoryOf, filterGroups, groupsInKind, isExpired, isSuperseded, platformOf,
+  summaryStatus, type Offer, type PlatformGroup,
+} from "../web/src/catalog";
+import { PlatformTabs } from "../web/src/catalog-page";
+import { CatalogDetail } from "../web/src/offer-components";
+import { decideRoute, parseRouteHash, resolvePageForSlug, routeOnPage, sectionUrl } from "../web/src/routes";
+import { updatedLine, VpsContent, type VpsData } from "../web/src/vps-page";
 
-var fs = require("fs");
-var path = require("path");
-var vm = require("vm");
-
-var root = path.resolve(__dirname, "..");
-var appPath = path.join(root, "templates", "app.js");
-var sandbox = { console: console };
-vm.createContext(sandbox);
-vm.runInContext(fs.readFileSync(appPath, "utf8"), sandbox, { filename: appPath });
-
-var FM = sandbox.__FM;
-if (!FM) {
-  console.error("app.js did not expose __FM");
-  process.exit(1);
+function renderDetail(group: PlatformGroup, now: number): string {
+  return renderToStaticMarkup(<CatalogDetail group={group} now={now} />);
 }
 
-var now = Date.parse("2026-11-10T12:00:00+08:00");
-var items = [
+function renderTabs(groups: PlatformGroup[], slug: string): string {
+  return renderToStaticMarkup(
+    <Tabs.Root value={slug}><PlatformTabs groups={groups} slug={slug} label="平台" onSelect={() => {}} /></Tabs.Root>,
+  );
+}
+
+function renderVps(data: VpsData): string {
+  return renderToStaticMarkup(<VpsContent data={data} />);
+}
+
+const now = Date.parse("2026-11-10T12:00:00+08:00");
+const items: Offer[] = [
   {
     id: "groq-guide",
     platform: "Groq",
@@ -114,39 +121,38 @@ var items = [
   },
 ];
 
-var failures = [];
+const failures: string[] = [];
 
-function check(cond, message) {
+function check(cond: unknown, message: string) {
   if (!cond) failures.push(message);
 }
 
-var groups = FM.buildGroups(items, now);
-var names = groups.map(function (g) { return g.name; });
-var slugs = groups.map(function (g) { return g.slug; });
+const groups = buildGroups(items, now);
+const names = groups.map(function (g) { return g.name; });
+const slugs = groups.map(function (g) { return g.slug; });
 check(names.join(" > ") === "Groq > Vercel AI Gateway > OpenRouter > Google AI Studio > Cohere", "platform order " + names.join(" > "));
 check(slugs[0] === "groq" && slugs.indexOf("google-ai-studio") !== -1 && slugs.indexOf("vercel-ai-gateway") !== -1, "slugs " + slugs.join(","));
 
-var groq = groups[0];
+const groq = groups[0];
 check(groq.offers.length === 1 && groq.offers[0].id === "groq-guide", "expired groq rows hidden");
-check(FM.summaryStatus(groq.offers) === "success", "groq dot success");
+check(summaryStatus(groq.offers) === "success", "groq dot success");
 
-var cohere = groups.filter(function (g) { return g.name === "Cohere"; })[0];
-var openrouter = groups.filter(function (g) { return g.name === "OpenRouter"; })[0];
-var google = groups.filter(function (g) { return g.name === "Google AI Studio"; })[0];
-check(cohere && FM.summaryStatus(cohere.offers) === "needs-user", "cohere needs_user");
-check(openrouter && FM.summaryStatus(openrouter.offers) === "failed", "openrouter failed");
-check(google && FM.summaryStatus(google.offers) === "", "google unmarked");
+const cohere = groups.filter(function (g) { return g.name === "Cohere"; })[0];
+const openrouter = groups.filter(function (g) { return g.name === "OpenRouter"; })[0];
+const google = groups.filter(function (g) { return g.name === "Google AI Studio"; })[0];
+check(cohere && summaryStatus(cohere.offers) === "needs-user", "cohere needs_user");
+check(openrouter && summaryStatus(openrouter.offers) === "failed", "openrouter failed");
+check(google && summaryStatus(google.offers) === "", "google unmarked");
 check(google && google.offers.length === 1, "google derived from hostname");
 
-var tabs = FM.renderTabs(groups, "groq");
+const tabs = renderTabs(groups, "groq");
 check(tabs.indexOf('class="dot success"') !== -1, "green dot");
 check(tabs.indexOf('class="dot needs-user"') !== -1, "amber dot");
 check(tabs.indexOf('class="dot failed"') !== -1, "red dot");
-var googleTab = tabs.split('data-slug="google-ai-studio"')[1] || "";
-googleTab = googleTab.split("</button>")[0];
+const googleTab = (tabs.split('data-slug="google-ai-studio"')[1] ?? "").split("</button>")[0];
 check(googleTab.indexOf('class="dot') === -1, "unmarked platform has no dot");
 
-var html = groups.map(function (g) { return FM.renderDetail(g, now); }).join("\n");
+const html = groups.map(function (g) { return renderDetail(g, now); }).join("\n");
 check(html.indexOf("已过期的 Groq 活动不应出现") === -1, "expired title hidden");
 check(html.indexOf("截止日期已过的条目") === -1, "past deadline hidden");
 check(html.indexOf("已被取代的 Cohere 活动") === -1, "superseded hidden");
@@ -172,15 +178,15 @@ check(html.indexOf("sk-live-should-not-leak") === -1, "bearer secret scrubbed");
 check(html.indexOf("[redacted]") !== -1, "redaction marker present");
 check(html.indexOf("地区可能受限") !== -1 && html.indexOf("无需信用卡即可创建密钥") !== -1, "leftover free_terms appear in 详情介绍");
 
-var filtered = FM.filterGroups(groups, "试用");
+const filtered = filterGroups(groups, "试用");
 check(filtered.length === 1 && filtered[0].name === "Cohere", "search matches offer text");
-var byName = FM.filterGroups(groups, "groq");
+const byName = filterGroups(groups, "groq");
 check(byName.length === 1 && byName[0].offers.length === 1, "search matches platform");
 
-var realPath = path.join(root, "items.json");
-var real = JSON.parse(fs.readFileSync(realPath, "utf8"));
-var realGroups = FM.buildGroups(real, Date.now());
-var realHtml = realGroups.map(function (g) { return FM.renderDetail(g, Date.now()); }).join("\n");
+const realPath = new URL("../items.json", import.meta.url);
+const real: Offer[] = JSON.parse(readFileSync(realPath, "utf8"));
+const realGroups = buildGroups(real, Date.now());
+const realHtml = realGroups.map(function (g) { return renderDetail(g, Date.now()); }).join("\n");
 check(realHtml.indexOf("qoder-deepseek-v41-flash-1017-free-oct24-20261020") === -1, "real superseded id not rendered");
 check(realGroups.length > 5 && realHtml.indexOf("去领取") !== -1, "real catalog renders");
 check(realHtml.indexOf("<script") === -1, "real render has no script tag");
@@ -190,86 +196,115 @@ check(html.indexOf("详情介绍") !== -1 && html.indexOf('class="fold-text"') !
 check(html.indexOf("免费条款") === -1, "no 免费条款 label");
 check(html.indexOf("简介") === -1, "简介 renamed");
 
-function itemWhere(pred) {
-  var i;
-  for (i = 0; i < real.length; i++) if (pred(real[i])) return real[i];
-  return null;
+function itemWhere(pred: (offer: Offer) => boolean) {
+  return real.find(pred);
 }
-var groqItem = itemWhere(function (it) { return FM.platformOf(it) === "Groq" && !FM.isExpired(it, Date.now()); });
-var openrouterItem = itemWhere(function (it) { return FM.platformOf(it) === "OpenRouter" && FM.categoryOf(it) === "providers"; });
-var vercelItem = itemWhere(function (it) { return FM.platformOf(it) === "Vercel AI Gateway"; });
-var opencodeItem = itemWhere(function (it) { return FM.platformOf(it) === "OpenCode"; });
-var kiroItem = itemWhere(function (it) { return FM.platformOf(it) === "AWS Kiro"; });
-var traycerItem = itemWhere(function (it) { return FM.platformOf(it) === "Traycer"; });
-var devinItem = itemWhere(function (it) { return /Devin/.test(FM.platformOf(it)); });
-var cursorItem = itemWhere(function (it) { return /^Cursor/.test(it.title || ""); });
-var minimaxCodeItem = itemWhere(function (it) { return /MiniMax Code/.test(it.title || ""); });
-var claudeApiItem = itemWhere(function (it) { return FM.platformOf(it) === "Anthropic" && /API 额度/.test(it.title || ""); });
-check(groqItem && FM.categoryOf(groqItem) === "providers", "groq is a provider");
-check(openrouterItem && FM.categoryOf(openrouterItem) === "providers", "openrouter is a provider");
-check(vercelItem && FM.categoryOf(vercelItem) === "providers", "vercel gateway is a provider");
-check(opencodeItem && FM.categoryOf(opencodeItem) === "agents", "opencode is an agent");
-check(kiroItem && FM.categoryOf(kiroItem) === "agents", "kiro is an agent");
-check(traycerItem && FM.categoryOf(traycerItem) === "agents", "traycer is an agent");
-check(devinItem && FM.categoryOf(devinItem) === "agents", "devin is an agent");
-check(cursorItem && FM.categoryOf(cursorItem) === "agents", "cursor title is an agent");
-check(minimaxCodeItem && FM.categoryOf(minimaxCodeItem) === "agents", "minimax code is an agent");
-check(claudeApiItem && FM.categoryOf(claudeApiItem) === "providers", "anthropic api credits stay providers");
-check(FM.categoryOf({ title: "Anything", platform: "Cursor", category: "providers" }) === "providers", "explicit category wins");
-check(FM.categoryOf({ title: "Brand new gateway", platform: "ZyxwGateway" }) === "providers", "unknown gateway falls back to providers");
-check(FM.categoryOf({ title: "Foo IDE 免费", platform: "Foo IDE" }) === "agents", "ide pattern is an agent");
-check(FM.categoryOf(items[0]) === "providers", "sample groq row is a provider");
+const groqItem = itemWhere(function (it) { return platformOf(it) === "Groq" && !isExpired(it, Date.now()); });
+const openrouterItem = itemWhere(function (it) { return platformOf(it) === "OpenRouter" && categoryOf(it) === "providers"; });
+const vercelItem = itemWhere(function (it) { return platformOf(it) === "Vercel AI Gateway"; });
+const opencodeItem = itemWhere(function (it) { return platformOf(it) === "OpenCode"; });
+const kiroItem = itemWhere(function (it) { return platformOf(it) === "AWS Kiro"; });
+const traycerItem = itemWhere(function (it) { return platformOf(it) === "Traycer"; });
+const devinItem = itemWhere(function (it) { return /Devin/.test(platformOf(it)); });
+const cursorItem = itemWhere(function (it) { return /^Cursor/.test(it.title || ""); });
+const minimaxCodeItem = itemWhere(function (it) { return /MiniMax Code/.test(it.title || ""); });
+const claudeApiItem = itemWhere(function (it) { return platformOf(it) === "Anthropic" && /API 额度/.test(it.title || ""); });
+check(groqItem && categoryOf(groqItem) === "providers", "groq is a provider");
+check(openrouterItem && categoryOf(openrouterItem) === "providers", "openrouter is a provider");
+check(vercelItem && categoryOf(vercelItem) === "providers", "vercel gateway is a provider");
+check(opencodeItem && categoryOf(opencodeItem) === "agents", "opencode is an agent");
+check(kiroItem && categoryOf(kiroItem) === "agents", "kiro is an agent");
+check(traycerItem && categoryOf(traycerItem) === "agents", "traycer is an agent");
+check(devinItem && categoryOf(devinItem) === "agents", "devin is an agent");
+check(cursorItem && categoryOf(cursorItem) === "agents", "cursor title is an agent");
+check(minimaxCodeItem && categoryOf(minimaxCodeItem) === "agents", "minimax code is an agent");
+check(claudeApiItem && categoryOf(claudeApiItem) === "providers", "anthropic api credits stay providers");
+check(categoryOf({ title: "Anything", platform: "Cursor", category: "providers" }) === "providers", "explicit category wins");
+check(categoryOf({ title: "Brand new gateway", platform: "ZyxwGateway" }) === "providers", "unknown gateway falls back to providers");
+check(categoryOf({ title: "Foo IDE 免费", platform: "Foo IDE" }) === "agents", "ide pattern is an agent");
+check(categoryOf(items[0]) === "providers", "sample groq row is a provider");
 
-var realNow = Date.now();
-var realBuilt = FM.buildGroups(real, realNow);
-var agentNames = FM.groupsInKind(realBuilt, "agents").map(function (g) { return g.name; });
-var providerNames = FM.groupsInKind(realBuilt, "providers").map(function (g) { return g.name; });
+const realNow = Date.now();
+const realBuilt = buildGroups(real, realNow);
+const agentNames = groupsInKind(realBuilt, "agents").map(function (g) { return g.name; });
+const providerNames = groupsInKind(realBuilt, "providers").map(function (g) { return g.name; });
 check(agentNames.indexOf("OpenCode") !== -1 && agentNames.indexOf("Groq") === -1, "agent platforms " + agentNames.slice(0, 6).join(","));
 check(providerNames.indexOf("OpenRouter") !== -1 && providerNames.indexOf("Groq") !== -1, "provider platforms");
-var agentSearch = FM.filterGroups(FM.groupsInKind(realBuilt, "agents"), "opencode");
+const agentSearch = filterGroups(groupsInKind(realBuilt, "agents"), "opencode");
 check(agentSearch.length >= 1 && agentSearch[0].name === "OpenCode", "search stays inside agents");
-var kindCounts = { providers: 0, agents: 0 };
+const kindCounts = { providers: 0, agents: 0 };
 real.forEach(function (it) {
-  if (FM.isExpired(it, realNow) || FM.isSuperseded(it)) return;
-  kindCounts[FM.categoryOf(it)] += 1;
+  if (isExpired(it, realNow) || isSuperseded(it)) return;
+  kindCounts[categoryOf(it)] += 1;
 });
 check(kindCounts.providers > 50 && kindCounts.agents > 10, "both kinds have offers " + JSON.stringify(kindCounts));
 
-check(FM.parseRouteHash("providers/groq").page === "provider" && FM.parseRouteHash("providers/groq").slug === "groq" && FM.parseRouteHash("providers/groq").legacy === true, "legacy providers hash");
-check(FM.parseRouteHash("agents/opencode").page === "agent" && FM.parseRouteHash("agents/opencode").slug === "opencode", "legacy agents hash");
-check(FM.parseRouteHash("groq").page === "" && FM.parseRouteHash("groq").slug === "groq", "bare platform hash");
-check(FM.parseRouteHash("").slug === "" && FM.parseRouteHash("providers").page === "provider" && FM.parseRouteHash("agents").page === "agent", "category-only hashes");
-var routeItems = items.concat([
+check(parseRouteHash("providers/groq").page === "provider" && parseRouteHash("providers/groq").slug === "groq" && parseRouteHash("providers/groq").legacy === true, "legacy providers hash");
+check(parseRouteHash("agents/opencode").page === "agent" && parseRouteHash("agents/opencode").slug === "opencode", "legacy agents hash");
+check(parseRouteHash("groq").page === "" && parseRouteHash("groq").slug === "groq", "bare platform hash");
+check(parseRouteHash("").slug === "" && parseRouteHash("providers").page === "provider" && parseRouteHash("agents").page === "agent", "category-only hashes");
+const routeItems = items.concat([
   { id: "oc", platform: "OpenCode", title: "OpenCode 免费额度", deadline: "2026-12-01T00:00:00+08:00", url: "https://opencode.ai" },
 ]);
-var routeGroups = FM.buildGroups(routeItems, now);
-var routeKinds = {
-  providers: FM.groupsInKind(routeGroups, "providers"),
-  agents: FM.groupsInKind(routeGroups, "agents"),
+const routeGroups = buildGroups(routeItems, now);
+const routeKinds = {
+  providers: groupsInKind(routeGroups, "providers"),
+  agents: groupsInKind(routeGroups, "agents"),
 };
-check(FM.resolvePageForSlug("groq", routeKinds) === "provider", "groq resolves to provider");
-check(FM.resolvePageForSlug("opencode", routeKinds) === "agent", "opencode resolves to agent");
-check(FM.decideRoute(FM.parseRouteHash("providers/groq"), routeKinds).page === "provider", "decide legacy groq");
-check(FM.decideRoute(FM.parseRouteHash("agents/opencode"), routeKinds).page === "agent", "decide legacy opencode");
-check(FM.decideRoute(FM.parseRouteHash("groq"), routeKinds).page === "provider", "bare groq");
-check(FM.decideRoute(FM.parseRouteHash("opencode"), routeKinds).page === "agent", "bare opencode");
-check(FM.decideRoute(FM.parseRouteHash("agents/groq"), routeKinds).page === "provider", "wrong section still follows the platform");
-var bothKinds = {
+check(resolvePageForSlug("groq", routeKinds) === "provider", "groq resolves to provider");
+check(resolvePageForSlug("opencode", routeKinds) === "agent", "opencode resolves to agent");
+check(decideRoute(parseRouteHash("providers/groq"), routeKinds).page === "provider", "decide legacy groq");
+check(decideRoute(parseRouteHash("agents/opencode"), routeKinds).page === "agent", "decide legacy opencode");
+check(decideRoute(parseRouteHash("groq"), routeKinds).page === "provider", "bare groq");
+check(decideRoute(parseRouteHash("opencode"), routeKinds).page === "agent", "bare opencode");
+check(decideRoute(parseRouteHash("agents/groq"), routeKinds).page === "provider", "wrong section still follows the platform");
+const bothKinds = {
   providers: routeKinds.providers.concat([{ name: "OpenCode", slug: "opencode", offers: [{}], nearest: Infinity }]),
   agents: routeKinds.agents,
 };
-check(FM.decideRoute(FM.parseRouteHash("agents/opencode"), bothKinds).page === "agent", "explicit agents hash stays when the platform exists there too");
-check(FM.decideRoute(FM.parseRouteHash("opencode"), bothKinds).page === "provider", "bare slug prefers provider when both sections have it");
-check(FM.routeOnPage(FM.parseRouteHash("opencode"), "agent", bothKinds).redirect === "" && FM.routeOnPage(FM.parseRouteHash("opencode"), "agent", bothKinds).slug === "opencode", "agent page keeps its own opencode");
-check(FM.routeOnPage(FM.parseRouteHash("agents/opencode"), "provider", bothKinds).redirect === "agent", "explicit agents hash leaves the provider page");
-check(FM.routeOnPage(FM.parseRouteHash("groq"), "agent", routeKinds).redirect === "provider", "agent page sends a provider-only slug away");
-check(FM.sectionUrl("provider", "groq", "home") === "provider/#groq", "home provider url");
-check(FM.sectionUrl("agent", "opencode", "provider") === "../agent/#opencode", "provider to agent url");
-check(FM.sectionUrl("vps", "", "agent") === "../vps/", "agent to vps url");
+check(decideRoute(parseRouteHash("agents/opencode"), bothKinds).page === "agent", "explicit agents hash stays when the platform exists there too");
+check(decideRoute(parseRouteHash("opencode"), bothKinds).page === "provider", "bare slug prefers provider when both sections have it");
+check(routeOnPage(parseRouteHash("opencode"), "agent", bothKinds).redirect === "" && routeOnPage(parseRouteHash("opencode"), "agent", bothKinds).slug === "opencode", "agent page keeps its own opencode");
+check(routeOnPage(parseRouteHash("agents/opencode"), "provider", bothKinds).redirect === "agent", "explicit agents hash leaves the provider page");
+check(routeOnPage(parseRouteHash("groq"), "agent", routeKinds).redirect === "provider", "agent page sends a provider-only slug away");
+check(sectionUrl("provider", "groq", "home") === "provider/#groq", "home provider url");
+check(sectionUrl("agent", "opencode", "provider") === "../agent/#opencode", "provider to agent url");
+check(sectionUrl("vps", "", "agent") === "../vps/", "agent to vps url");
 
-var vps = JSON.parse(fs.readFileSync(path.join(root, "vps.json"), "utf8"));
-var vpsHtml = FM.renderVps(vps);
-check(vps.sample === true, "sample vps.json");
+const deployedVps: VpsData = JSON.parse(readFileSync(new URL("../vps.json", import.meta.url), "utf8"));
+check(renderVps(deployedVps).includes("补货监控"), "repository VPS feed renders");
+const vps: VpsData = {
+  sample: true,
+  updated_at_beijing: "2026-11-15 09:30",
+  free_vps: [
+    { id: "always", provider: "Always", type: "always_free", free_conditions: { card_required: false }, posts: [{ url: "https://x.com/fixture/status/1" }] },
+    { id: "trial", provider: "Trial", type: "trial", free_conditions: { card_required: true } },
+    { id: "student", provider: "Student", type: "student" },
+    { id: "paas", provider: "PaaS", type: "paas" },
+  ],
+  stock: {
+    providers: [
+      { name: "DMIT", sources: [{ url: "https://t.me/dmitnews" }], plans: [{ key: "missing", stock: "out_of_stock" }] },
+      {
+        name: "搬瓦工",
+        sources: [{ url: "https://stock.bwg.la" }],
+        plans: [{
+          key: "found", stock: "in_stock", price: "10 USD",
+          order_urls: [{ url: "https://bandwagonhost.com" }, { url: "https://bwh81.net" }],
+        }],
+      },
+    ],
+  },
+  black_friday: {
+    official: [
+      { provider: "Ordering", orderable_now: true },
+      { provider: "Announced" },
+      { provider: "Off", status: "not_this_year" },
+    ],
+    leads: [{ source: "Monitor", note: "Check vendor." }],
+  },
+};
+const vpsHtml = renderVps(vps);
 check(vpsHtml.indexOf("示例数据，等待首次同步") !== -1, "sample banner");
 check(vpsHtml.indexOf("一直免费") !== -1 && vpsHtml.indexOf("试用额度") !== -1, "free type labels");
 check(vpsHtml.indexOf("学生额度") !== -1 && vpsHtml.indexOf("非 root 的 PaaS") !== -1, "student and paas labels");
@@ -282,8 +317,8 @@ check(vpsHtml.indexOf("现在能下单") !== -1 && vpsHtml.indexOf("预告未开
 check(vpsHtml.indexOf("仅线索，未经官方确认") !== -1, "third-party disclaimer");
 check(vpsHtml.indexOf("t.me/dmitnews") !== -1 && vpsHtml.indexOf("stock.bwg.la") !== -1, "stock sources");
 check(vpsHtml.indexOf("<script") === -1, "vps html has no script");
-check(FM.updatedLine(vps).indexOf("2026-11-15 09:30") !== -1 && FM.updatedLine(vps).indexOf("北京时间") !== -1, "updated line");
-var evil = FM.renderVps({
+check(updatedLine(vps).indexOf("2026-11-15 09:30") !== -1 && updatedLine(vps).indexOf("北京时间") !== -1, "updated line");
+const evil = renderVps({
   sample: false,
   free_vps: [{
     provider: "<b>x</b>",
@@ -307,6 +342,3 @@ if (failures.length) {
 console.log("SAMPLE RENDER OK");
 console.log("platforms: " + names.join(" > "));
 console.log("real platforms: " + realGroups.length + " offers shown: " + realGroups.reduce(function (n, g) { return n + g.offers.length; }, 0));
-console.log("--- groq detail excerpt ---");
-var excerpt = FM.renderDetail(groq, now).replace(/\s+/g, " ").slice(0, 500);
-console.log(excerpt);

@@ -1,0 +1,29 @@
+{
+  "name": "scoheart-free",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && node scripts/package-site.mjs --check && vite build && node scripts/package-site.mjs",
+    "preview": "vite preview",
+    "test": "tsx scripts/sample-render.tsx && python3 scripts/test_build_vps.py"
+  },
+  "dependencies": {
+    "radix-ui": "1.8.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.12.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "vite": "8.3.8"
+  }
+}

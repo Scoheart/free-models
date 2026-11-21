@@ -17,7 +17,7 @@
 - Netlify：https://scoheart-free.netlify.app/
 - GitHub Pages：仓库改名为 `free` 之后是 https://scoheart.github.io/free/
 
-资源都用相对路径（`../styles.css`、`provider/`、`agent/`）。同一套文件可以放在域名根上，也可以放在 `/free/` 下面。
+Vite 使用相对资源路径。同一份构建产物支持域名根路径和 `/free/` 子路径。
 
 ## 平台链接
 
@@ -43,11 +43,11 @@
 
 ## 模型数据
 
-`items.json` 仍是目录源，页面读生成出来的 `data.js`（`const ITEMS`）。字段和原来一样：`claim_guide`、自动领取徽章、截止时间按北京时间显示、过期和被取代的条目隐藏、说明里的密钥打码。分类仍由 `category` / `kind` 决定，不写时按平台名和标题判断。
+`items.json` 是目录源。浏览器直接加载 JSON。字段和原来一样：`claim_guide`、自动领取徽章、截止时间按北京时间显示、过期和被取代的条目隐藏、说明里的密钥打码。分类仍由 `category` / `kind` 决定，不写时按平台名和标题判断。
 
 ## VPS 数据
 
-页面读 `vps-data.js`（`const VPS`），由 `vps.json` 生成。仓库里的 `vps.json` 带 `"sample": true`，页面会显示「示例数据，等待首次同步」。真实数据在本地用下面的脚本盖掉 `vps.json`，再重新构建。脚本写出的文件是 `"sample": false`。
+浏览器直接加载 `vps.json`。当 `"sample": true` 时，页面会显示「示例数据，等待首次同步」。下面的生成脚本写入 `"sample": false` 的监控数据。
 
 `vps.json` 顶层：
 
@@ -92,34 +92,31 @@ python3 scripts/build_vps.py --in /path/to/vps-watch --out vps.json
 ./build-site.sh
 ```
 
+## 开发
+
+前端使用 React、TypeScript、Vite 和 Radix UI。页面入口及组件位于 `web/`，CSS 和数据处理逻辑在 `web/src/`。Radix UI 负责平台标签页和领取步骤的折叠交互。
+
+安装 Node.js 22.12 或更新版本，执行以下命令。Python 3 用于 VPS 数据生成和测试。
+
+```bash
+npm ci
+npm run dev
+```
+
+运行 `npm test` 可以验证目录渲染、哈希链接和 VPS 数据生成。
+
+`./build-site.sh` 构建后，把站点 HTML 和带内容哈希的 `site-assets/` 同步到仓库根目录。修改页面时，请编辑 `web/` 下的源文件，再运行构建。
+
 ## 部署
-
-`./build-site.sh` 生成 `dist/`。把这个目录整个上传到 Netlify（站点 scoheart-free，手动部署，不是 Git 构建）。脚本也会把同样的文件抄到仓库根目录，方便 GitHub Pages 继续从 main 分支的根目录发布。
-
-需要发布的文件就是 `dist/` 里的这些，不要带上 `templates/` 或 `scripts/`：
-
-```
-index.html
-provider/index.html
-agent/index.html
-vps/index.html
-app.js
-styles.css
-data.js
-vps-data.js
-items.json
-vps.json
-_redirects
-.nojekyll
-```
-
-`_redirects` 把 `/` 强制转到 `/provider/`，并把三个栏目补上斜杠。GitHub Pages 不读这个文件，根目录的 `index.html` 负责同一件事。`.nojekyll` 让 Pages 不要吞掉 `_redirects`。
-
-本地看：
 
 ```bash
 ./build-site.sh
-python3 -m http.server -d dist 8765
+npm run preview
 ```
 
-要模拟 Pages 的 `/free/` 前缀，把 `dist` 放到一个叫 `free` 的目录下再开静态服务，然后打开 `/free/provider/`。
+- GitHub Pages 从 `main` 根目录发布。构建脚本更新根目录的页面和资源文件。
+- Netlify 手动发布时，上传整个 `dist/` 目录。关联 Git 的构建使用 `netlify.toml` 配置。
+
+两种部署都提供 `items.json` 和 `vps.json`，并保留 `data.js` 和 `vps-data.js` 供已有消费者加载。根页和栏目跳转使用相对路径，保留原有 hash 链接。Netlify 的 `_redirects` 保留根页跳转和目录斜杠规则。
+
+仅构建 `dist/` 时，可运行 `npm run build` 或兼容入口 `python3 build_index.py`。

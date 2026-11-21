@@ -624,6 +624,11 @@ a.kind { color: var(--muted); text-decoration: none; }
 
 .steps-summary {
   display: flex;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
   align-items: center;
   gap: 0.45rem;
   margin: 0 0 0.35rem;
@@ -635,8 +640,7 @@ a.kind { color: var(--muted); text-decoration: none; }
   cursor: pointer;
 }
 
-.steps-summary::-webkit-details-marker { display: none; }
-.steps-summary::marker { content: ""; }
+.steps-summary:disabled { cursor: default; }
 
 .steps-count {
   letter-spacing: 0;
@@ -653,7 +657,7 @@ a.kind { color: var(--muted); text-decoration: none; }
   transform: translateY(-0.1rem) rotate(45deg);
 }
 
-.steps[open] > .steps-summary::after {
+.steps[data-state="open"] > .steps-summary::after {
   transform: translateY(0.1rem) rotate(225deg);
 }
 
@@ -946,7 +950,7 @@ a.kind { color: var(--muted); text-decoration: none; }
     letter-spacing: 0;
   }
 
-  .steps[open] > .steps-summary { margin-bottom: 0.45rem; }
+  .steps[data-state="open"] > .steps-summary { margin-bottom: 0.45rem; }
 
   .foot { border-top: 0; padding-top: 0.2rem; }
 }
