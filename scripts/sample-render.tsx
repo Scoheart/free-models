@@ -3,7 +3,7 @@ import { Tabs } from "radix-ui";
 import { renderToStaticMarkup } from "react-dom/server";
 import {
   buildGroups, categoryOf, filterGroups, groupsInKind, isExpired, isSuperseded, platformOf,
-  summaryStatus, type Offer, type PlatformGroup,
+  offersByDeadline, summaryStatus, type Offer, type PlatformGroup,
 } from "../web/src/catalog";
 import { PlatformTabs } from "../web/src/catalog-page";
 import { CatalogDetail } from "../web/src/offer-components";
@@ -16,7 +16,7 @@ function renderDetail(group: PlatformGroup, now: number): string {
 
 function renderTabs(groups: PlatformGroup[], slug: string): string {
   return renderToStaticMarkup(
-    <Tabs.Root value={slug}><PlatformTabs groups={groups} slug={slug} label="平台" onSelect={() => {}} /></Tabs.Root>,
+    <Tabs.Root value={slug}><PlatformTabs groups={groups} slug={slug} label="平台" /></Tabs.Root>,
   );
 }
 
@@ -127,6 +127,18 @@ function check(cond: unknown, message: string) {
   if (!cond) failures.push(message);
 }
 
+const timelineGroups = buildGroups([
+  { id: "alpha-first", platform: "Alpha", deadline: "2026-11-11T10:00:00+08:00" },
+  { id: "alpha-later", platform: "Alpha", deadline: "2026-11-14T10:00:00+08:00" },
+  { id: "beta-middle", platform: "Beta", expires_at: "2026-11-12T10:00:00+08:00" },
+  { id: "no-deadline", platform: "Beta" },
+  { id: "expired", platform: "Alpha", deadline: "2026-11-09T10:00:00+08:00" },
+], now);
+const timeline = offersByDeadline(timelineGroups);
+check(timeline.map(({ offer }) => offer.id).join(",") === "alpha-first,beta-middle,alpha-later,no-deadline",
+  "timeline orders active offers across platforms and puts missing deadlines last");
+check(timeline[1].platform === "Beta", "timeline keeps each offer's platform");
+
 const groups = buildGroups(items, now);
 const names = groups.map(function (g) { return g.name; });
 const slugs = groups.map(function (g) { return g.slug; });
@@ -145,6 +157,8 @@ check(openrouter && summaryStatus(openrouter.offers) === "failed", "openrouter f
 check(google && summaryStatus(google.offers) === "", "google unmarked");
 check(google && google.offers.length === 1, "google derived from hostname");
 
+const allTabs = renderTabs(groups, "");
+check(allTabs.includes("全部平台") && allTabs.indexOf("全部平台") < allTabs.indexOf("Groq"), "all-platform tab is first");
 const tabs = renderTabs(groups, "groq");
 check(tabs.indexOf('class="dot success"') !== -1, "green dot");
 check(tabs.indexOf('class="dot needs-user"') !== -1, "amber dot");
@@ -251,6 +265,8 @@ const routeKinds = {
   providers: groupsInKind(routeGroups, "providers"),
   agents: groupsInKind(routeGroups, "agents"),
 };
+check(routeOnPage(parseRouteHash(""), "provider", routeKinds).slug === "", "empty hash keeps all platforms");
+check(routeOnPage(parseRouteHash("groq"), "provider", routeKinds).slug === "groq", "explicit hash selects a platform");
 check(resolvePageForSlug("groq", routeKinds) === "provider", "groq resolves to provider");
 check(resolvePageForSlug("opencode", routeKinds) === "agent", "opencode resolves to agent");
 check(decideRoute(parseRouteHash("providers/groq"), routeKinds).page === "provider", "decide legacy groq");

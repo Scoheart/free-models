@@ -3,7 +3,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
   countOffers, filterGroups, groupBySlug, summaryStatus, type CatalogGroups, type PlatformGroup,
 } from "./catalog";
-import { CatalogDetail, StatusDot } from "./offer-components";
+import { CatalogDetail, CatalogTimeline, StatusDot } from "./offer-components";
 import { PageFooter, PageHeader, useMobileLayout } from "./shared";
 import { kindFor, otherCatalog, parseRouteHash, routeOnPage, sectionUrl, type CatalogPage as Section } from "./routes";
 import { redactSecrets } from "./text";
@@ -18,11 +18,10 @@ function writePlatformHash(slug: string, push: boolean) {
   else window.history.replaceState({ slug }, "", url);
 }
 
-export function PlatformTabs({ groups, slug, label, onSelect }: {
+export function PlatformTabs({ groups, slug, label }: {
   groups: PlatformGroup[];
   slug: string;
   label: string;
-  onSelect: (slug: string) => void;
 }) {
   const list = useRef<HTMLDivElement>(null);
   const [fades, setFades] = useState("");
@@ -64,29 +63,35 @@ export function PlatformTabs({ groups, slug, label, onSelect }: {
   return (
     <div className={"tab-rail" + fades} id="tab-rail">
       <Tabs.List ref={list} className="tabs" id="tabs" loop={false} aria-label={label} onScroll={updateFades}>
-        {groups.length ? groups.map((group) => (
-          <Tabs.Trigger className="tab" key={group.slug} value={group.slug} data-slug={group.slug}
-            onClick={() => onSelect(group.slug)}>
+        <Tabs.Trigger className="tab" value="">
+          <span className="tab-name">全部平台</span>
+        </Tabs.Trigger>
+        {groups.map((group) => (
+          <Tabs.Trigger className="tab" key={group.slug} value={group.slug} data-slug={group.slug}>
             <span className="tab-name">{redactSecrets(group.name)}</span>
             <span className="tab-meta"><span className="tab-count">{group.offers.length}</span>
               <StatusDot status={summaryStatus(group.offers)} />
             </span>
           </Tabs.Trigger>
-        )) : <p className="tabs-empty">没有匹配的平台</p>}
+        ))}
       </Tabs.List>
     </div>
   );
 }
 
-function CatalogEmpty({ query, matchPage, found }: {
+function CatalogEmpty({ query, matchPage, found, clearPlatform }: {
   query: string;
   matchPage: Section;
   found: PlatformGroup[];
+  clearPlatform?: () => void;
 }) {
   const slug = found.length === 1 ? found[0].slug : "";
   return (
     <div className="empty">
-      <p>{query.trim() ? "没有匹配的平台或活动。换个关键词，或清空搜索。" : "暂时没有进行中的免费活动。"}</p>
+      <p>{clearPlatform ? "此平台没有匹配的活动。" : query.trim()
+        ? "没有匹配的平台或活动。换个关键词，或清空搜索。"
+        : "暂时没有进行中的免费活动。"}</p>
+      {clearPlatform && <button type="button" className="jump-kind" onClick={clearPlatform}>查看全部平台</button>}
       {found.length > 0 && (
         <p className="empty-switch">
           {titles[matchPage]} 里有 {countOffers(found)} 项匹配。
@@ -99,22 +104,23 @@ function CatalogEmpty({ query, matchPage, found }: {
 
 export function CatalogPage({ page, catalog, now }: { page: Section; catalog: CatalogGroups; now: number }) {
   const base = catalog[kindFor(page)];
-  const initial = base[0]?.slug ?? "";
   const [selected, setSelected] = useState(
-    () => routeOnPage(parseRouteHash(window.location.hash), page, catalog).slug || initial,
+    () => routeOnPage(parseRouteHash(window.location.hash), page, catalog).slug,
   );
   const [query, setQuery] = useState("");
   const mobile = useMobileLayout();
   const groups = useMemo(() => filterGroups(base, query), [base, query]);
-  const group = groupBySlug(groups, selected) ?? groups[0];
-  const slug = group?.slug ?? "";
+  const platform = groupBySlug(base, selected);
+  const match = groupBySlug(groups, selected);
+  const options = platform && !match ? [{ ...platform, offers: [] }, ...groups] : groups;
+  const visible = platform ? (match ? [match] : []) : groups;
   const other = otherCatalog(page);
-  const matches = !group && query.trim() ? filterGroups(catalog[kindFor(other)], query) : [];
+  const matches = !groups.length && query.trim() ? filterGroups(catalog[kindFor(other)], query) : [];
   const counts = useMemo(() => ({
     provider: countOffers(catalog.providers),
     agent: countOffers(catalog.agents),
   }), [catalog]);
-  const stats = query ? "找到 " + groups.length + " 个平台 · " + countOffers(groups) + " 项"
+  const stats = query.trim() ? "找到 " + visible.length + " 个平台 · " + countOffers(visible) + " 项"
     : counts[page] + " 项进行中 · " + base.length + " 个平台";
 
   useEffect(() => {
@@ -124,9 +130,8 @@ export function CatalogPage({ page, catalog, now }: { page: Section; catalog: Ca
         window.location.replace(sectionUrl(route.redirect, route.slug, page));
         return;
       }
-      const next = route.slug || initial;
-      setSelected(next);
-      writePlatformHash(next, false);
+      setSelected(route.slug);
+      writePlatformHash(route.slug, false);
     };
     onNavigate();
     window.addEventListener("hashchange", onNavigate);
@@ -135,7 +140,7 @@ export function CatalogPage({ page, catalog, now }: { page: Section; catalog: Ca
       window.removeEventListener("hashchange", onNavigate);
       window.removeEventListener("popstate", onNavigate);
     };
-  }, [catalog, initial, page]);
+  }, [catalog, page]);
 
   function select(next: string) {
     setSelected(next);
@@ -143,7 +148,7 @@ export function CatalogPage({ page, catalog, now }: { page: Section; catalog: Ca
   }
 
   return (
-    <Tabs.Root className="app" value={slug} onValueChange={select}
+    <Tabs.Root className="app" value={selected} onValueChange={select}
       orientation={mobile ? "horizontal" : "vertical"}>
       <div className="chrome">
         <PageHeader page={page} stats={stats} counts={counts} />
@@ -156,9 +161,10 @@ export function CatalogPage({ page, catalog, now }: { page: Section; catalog: Ca
           <p className="legend" aria-hidden="true"><span className="dot success" />已领取
             <span className="dot needs-user" />待操作<span className="dot failed" />失败</p>
           <label className="sr" htmlFor="platform-select">选择平台</label>
-          <select id="platform-select" className="platform-select" value={slug} disabled={!groups.length}
+          <select id="platform-select" className="platform-select" value={selected}
             onChange={(event) => select(event.currentTarget.value)}>
-            {groups.map((entry) => {
+            <option value="">全部平台</option>
+            {options.map((entry) => {
               const status = summaryStatus(entry.offers);
               const badge = status === "success" ? "● " : status === "needs-user" ? "◐ " : status === "failed" ? "○ " : "";
               return <option key={entry.slug} value={entry.slug}>
@@ -166,17 +172,20 @@ export function CatalogPage({ page, catalog, now }: { page: Section; catalog: Ca
               </option>;
             })}
           </select>
-          <PlatformTabs groups={groups} slug={slug} label={titles[page] + " 平台"} onSelect={select} />
+          <PlatformTabs groups={options} slug={selected} label={titles[page] + " 平台"} />
         </aside>
       </div>
       <div className="layout">
-        {group ? (
-          <Tabs.Content value={slug} key={slug} asChild>
-            <main className="detail" aria-label={redactSecrets(group.name)}><CatalogDetail group={group} now={now} /></main>
-          </Tabs.Content>
-        ) : (
-          <main className="detail" aria-label="活动详情"><CatalogEmpty query={query} matchPage={other} found={matches} /></main>
-        )}
+        <Tabs.Content value={selected} key={selected} asChild>
+          <main className="detail" aria-label={platform ? redactSecrets(platform.name) : "全部活动"}>
+            {match && <CatalogDetail group={match} now={now} />}
+            {!platform && groups.length > 0 && <CatalogTimeline groups={groups} now={now} key={query} />}
+            {visible.length === 0 && (
+              <CatalogEmpty query={query} matchPage={other} found={matches}
+                clearPlatform={platform && groups.length > 0 ? () => select("") : undefined} />
+            )}
+          </main>
+        </Tabs.Content>
         <PageFooter page={page} />
       </div>
     </Tabs.Root>

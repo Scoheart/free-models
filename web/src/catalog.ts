@@ -278,6 +278,18 @@ function haystack(item: Offer): string {
   return normalize(redactSecrets(fields.filter(Boolean).join("\n")));
 }
 
+function compareOffers(a: Offer, b: Offer): number {
+  const first = deadlineMs(a);
+  const second = deadlineMs(b);
+  return first === second ? compareNames(titleOf(a), titleOf(b)) : first - second;
+}
+
+export function offersByDeadline(groups: readonly PlatformGroup[]) {
+  return groups
+    .flatMap(({ name, offers }) => offers.map((offer) => ({ offer, platform: name })))
+    .sort((a, b) => compareOffers(a.offer, b.offer));
+}
+
 function compareGroups(a: PlatformGroup, b: PlatformGroup): number {
   return a.nearest === b.nearest ? compareNames(a.name, b.name) : a.nearest - b.nearest;
 }
@@ -300,11 +312,7 @@ export function buildGroups(items: readonly Offer[], now: number): PlatformGroup
   const used = new Set<string>();
   const groups = [...grouped.values()].sort(compareGroups);
   for (const group of groups) {
-    group.offers.sort((a, b) => {
-      const first = deadlineMs(a);
-      const second = deadlineMs(b);
-      return first === second ? compareNames(titleOf(a), titleOf(b)) : first - second;
-    });
+    group.offers.sort(compareOffers);
     const base = slugify(group.name);
     let slug = base;
     for (let i = 2; used.has(slug); i++) slug = base + "-" + i;

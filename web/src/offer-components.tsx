@@ -1,8 +1,8 @@
 import { Collapsible } from "radix-ui";
-import { Fragment, useLayoutEffect, useRef, useState } from "react";
+import { Fragment, useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
   autoClaimView, categoryOf, claimGuideOf, deadlineOf, fmtDeadlineBJ, goUrl, itemUrl,
-  statusLabels, summaryStatus, titleOf, type ClaimStatus, type GuideStep, type Offer, type PlatformGroup,
+  offersByDeadline, statusLabels, summaryStatus, titleOf, type ClaimStatus, type GuideStep, type Offer, type PlatformGroup,
 } from "./catalog";
 import { ExternalLink, useMobileLayout } from "./shared";
 import { linkLabel, normalize, redactSecrets, safeUrl } from "./text";
@@ -103,7 +103,7 @@ function ClaimSteps({ steps }: { steps: GuideStep[] }) {
   );
 }
 
-function OfferCard({ offer, now }: { offer: Offer; now: number }) {
+function OfferCard({ offer, now, platform }: { offer: Offer; now: number; platform?: string }) {
   const summary = redactSecrets(offer.summary).trim();
   const rawTerms = redactSecrets(offer.free_terms).trim();
   const terms = normalize(rawTerms) === normalize(summary) ? "" : rawTerms;
@@ -118,6 +118,7 @@ function OfferCard({ offer, now }: { offer: Offer; now: number }) {
     <article className="offer" data-kind={categoryOf(offer)}>
       <div className="offer-top">
         <div className="offer-heading">
+          {platform && <p className="offer-platform">{redactSecrets(platform)}</p>}
           <h3 className="offer-title">{redactSecrets(titleOf(offer))}</h3>
           {beijing ? <p className={urgent ? "deadline soon" : "deadline"}>截止 {beijing}</p>
             : <p className="deadline quiet">未标明截止时间</p>}
@@ -148,6 +149,29 @@ export function CatalogDetail({ group, now }: { group: PlatformGroup; now: numbe
         </p>
       </header>
       {group.offers.map((offer, index) => <OfferCard key={offer.id ? offer.id + "-" + index : index} offer={offer} now={now} />)}
+    </div>
+  );
+}
+
+const offersPerBatch = 30;
+
+export function CatalogTimeline({ groups, now }: { groups: PlatformGroup[]; now: number }) {
+  const offers = useMemo(() => offersByDeadline(groups), [groups]);
+  const [limit, setLimit] = useState(offersPerBatch);
+  return (
+    <div className="detail-inner">
+      <header className="platform-head">
+        <h2>全部活动</h2>
+        <p className="platform-meta">按截止时间排序</p>
+      </header>
+      {offers.slice(0, limit).map(({ offer, platform }, index) => (
+        <OfferCard key={offer.id ? offer.id + "-" + index : index} offer={offer} now={now} platform={platform} />
+      ))}
+      {offers.length > limit && (
+        <button type="button" className="jump-kind timeline-more" onClick={() => setLimit((shown) => shown + offersPerBatch)}>
+          加载更多活动
+        </button>
+      )}
     </div>
   );
 }

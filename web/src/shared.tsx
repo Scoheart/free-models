@@ -25,7 +25,7 @@ const sections = [
 ] as const;
 
 const leads: Record<Section, string> = {
-  provider: "按平台查看还没过期的模型、网关和 API 额度。离截止最近的排在前面。",
+  provider: "查看还没过期的模型、网关和 API 额度。离截止最近的排在前面。",
   agent: "编程 Agent、CLI 和 IDE 里还能用的免费额度，附领取步骤。",
   vps: "免费机器、两家补货监控，以及黑五优惠。价格和库存以下单页为准。",
 };
